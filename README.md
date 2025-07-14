@@ -10,7 +10,7 @@ Notable changes include:
 - Java Swing/JFX environment editor tool baked into the AtmosphereManager class, using a concurrent linked queue to deliver custom environment settings safely into the game's rendering thread.
 - Thousands of renamed methods/fields/values changed in the (partial) deobfuscation process
 
->> Java Swing environment editor features: <<
+Java Swing environment editor features:
 - Sun color
 - Sun position
 - Sun intensity
