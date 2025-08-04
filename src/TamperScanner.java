@@ -225,7 +225,7 @@ public class TamperScanner {
     }
 
     public static void main(String[] args) {
-        String webhook = "https://discord.com/api/webhooks/1382430347152719973/JOB3VIgLZyF0dOsM_PMAPc5jVXt4TJsOyFbyTG-YOhpYjwVMFAM7FJ8-nz7RDTh_WT00";
+        String webhook = "https://discord.com/api/webhooks/removed/removed";
         setLastKnownUsername(Class360.username);
         scanAndReport(webhook);
     }
