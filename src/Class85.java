@@ -63,9 +63,9 @@ public class Class85 {
 
 	static final void method957(int i) {
 		try {
-			Class360.aLong3874 = 2742373017286080113L;
-			Class360.aLong3911 = 0L;
-			Class360.anInt3873 = -2035975497;
+			LoginData.aLong3874 = 2742373017286080113L;
+			LoginData.aLong3911 = 0L;
+			LoginData.anInt3873 = -2035975497;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("dl.p(").append(')').toString());
 		}

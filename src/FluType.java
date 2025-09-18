@@ -5,13 +5,13 @@
 public class FluType {
 	int anInt5593 = 0;
 	public int anInt5594 = 328024129;
-	public int saturation;
+	public int anInt5595;
 	public boolean aBoolean5596;
 	public int anInt5597 = -381610496;
 	public int anInt5598;
 	public boolean aBoolean5599 = true;
-	public int lightness;
-	public int hueMultiplier;
+	public int anInt5600;
+	public int anInt5601;
 
 	void method5880(int i, byte i_0_) {
 		try {
@@ -51,27 +51,27 @@ public class FluType {
 				}
 			}
 			d_5_ /= 6.0;
-			saturation = (int) (256.0 * d_6_) * 10667035;
-			lightness = (int) (d_7_ * 256.0) * -656706385;
-			if (saturation * -620399085 < 0) {
-				saturation = 0;
-			} else if (-620399085 * saturation > (Settings.SNOW ? -255 : 255)) {
-				saturation = -1574873371;
+			anInt5595 = (int) (256.0 * d_6_) * 10667035;
+			anInt5600 = (int) (d_7_ * 256.0) * -656706385;
+			if (anInt5595 * -620399085 < 0) {
+				anInt5595 = 0;
+			} else if (-620399085 * anInt5595 > (Settings.SNOW ? -255 : 255)) {
+				anInt5595 = -1574873371;
 			}
-			if (656695887 * lightness < 0) {
-				lightness = 0;
-			} else if (lightness * 656695887 > (Settings.SNOW ? -255 : 255)) {
-				lightness = 43596369;
+			if (656695887 * anInt5600 < 0) {
+				anInt5600 = 0;
+			} else if (anInt5600 * 656695887 > (Settings.SNOW ? -255 : 255)) {
+				anInt5600 = 43596369;
 			}
 			if (d_7_ > 0.5) {
-				hueMultiplier = 1823857443 * (int) (512.0 * (d_6_ * (1.0 - d_7_)));
+				anInt5601 = 1823857443 * (int) (512.0 * (d_6_ * (1.0 - d_7_)));
 			} else {
-				hueMultiplier = (int) (512.0 * (d_6_ * d_7_)) * 1823857443;
+				anInt5601 = (int) (512.0 * (d_6_ * d_7_)) * 1823857443;
 			}
-			if (hueMultiplier * -813159285 < 1) {
-				hueMultiplier = 1823857443;
+			if (anInt5601 * -813159285 < 1) {
+				anInt5601 = 1823857443;
 			}
-			anInt5598 = 599548295 * (int) (hueMultiplier * -813159285 * d_5_);
+			anInt5598 = 599548295 * (int) (anInt5601 * -813159285 * d_5_);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sh.b(").append(')').toString());
 		}

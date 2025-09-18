@@ -47,7 +47,7 @@ public class Class80 {
 
 	public static Class158 method853(Packet class298_sub53, short i) {
 		try {
-			int i_10_ = class298_sub53.gSmart2or4n();
+			int i_10_ = class298_sub53.readBigSmart();
 			Class139 class139 = (Class491.method6176((byte) 44)[class298_sub53.readUnsignedByte()]);
 			Class133 class133 = (Huffman.method1255(126968516)[class298_sub53.readUnsignedByte()]);
 			int i_11_ = class298_sub53.readShort(1556136554);

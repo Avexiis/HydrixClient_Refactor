@@ -49,28 +49,28 @@ public class Class237 implements Interface24 {
 		return Class463.aClass463_5684;
 	}
 
-	public static MapKeys method2192(Js5 class243, String string, boolean bool, int i) {
+	public static Class296 method2192(Js5 class243, String string, boolean bool, int i) {
 		try {
 			int i_0_ = class243.getArchiveIdByName(string, -912375473);
 			if (-1 == i_0_)
-				return new MapKeys(0);
+				return new Class296(0);
 			int[] is = class243.getFileIds(i_0_, -2131857689);
-			MapKeys mapKeys = new MapKeys(is.length);
+			Class296 class296 = new Class296(is.length);
 			int i_1_ = 0;
 			int i_2_ = 0;
-			while (i_1_ < mapKeys.anInt3169 * -1407078377) {
+			while (i_1_ < class296.anInt3169 * -1407078377) {
 				Packet class298_sub53 = new Packet(class243.getFileFromArchive(i_0_, is[i_2_++], (byte) -34));
 				int i_3_ = class298_sub53.readUnsignedInt();
 				int i_4_ = class298_sub53.readUnsignedShort();
 				int i_5_ = class298_sub53.readUnsignedByte();
 				if (bool || i_5_ != 1) {
-					mapKeys.anIntArray3168[i_1_] = i_3_;
-					mapKeys.anIntArray3170[i_1_] = i_4_;
+					class296.anIntArray3168[i_1_] = i_3_;
+					class296.anIntArray3170[i_1_] = i_4_;
 					i_1_++;
 				} else
-					mapKeys.anInt3169 -= 526813095;
+					class296.anInt3169 -= 526813095;
 			}
-			return mapKeys;
+			return class296;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jz.a(").append(')').toString());
 		}

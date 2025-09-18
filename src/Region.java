@@ -3,807 +3,689 @@
  */
 
 public class Region {
-	public static int anInt3105 = 2883872;
-	static int anInt3106 = 2;
-	static int anInt3107 = 4;
-	static int anInt3108 = 8;
-	static int anInt3109 = 67108864;
-	static int anInt3110 = 32;
-	static int anInt3111 = 64;
-	static int anInt3112 = 128;
-	static int anInt3113 = 1109655552;
-	static int anInt3114 = 512;
-	static int anInt3115 = 1675886592;
-	static int anInt3116 = 2048;
-	static int anInt3117 = 4096;
-	static int anInt3118 = 1134821376;
-	static int anInt3119 = 16384;
-	static int anInt3120 = 32768;
-	static int anInt3121 = 65536;
-	static int anInt3122 = 2116288512;
-	public static int anInt3123 = 262144;
-	static int anInt3124 = 524288;
-	static int anInt3125 = 1625554944;
-	static int anInt3126 = 256;
-	public static int anInt3127 = 8388608;
-	static int anInt3128 = 16777216;
-	static int anInt3129 = 131072;
-	static int anInt3130 = 8192;
-	public static int anInt3131 = 536870912;
-	static int anInt3132 = 1084489728;
-	static int anInt3133 = 1612972032;
-	public static int anInt3134 = 1073741824;
-	public static int anInt3135 = 2883842;
-	public static int anInt3136 = 2883848;
-	static int anInt3137 = 1024;
-	public static int anInt3138 = 2883968;
-	static int anInt3139 = 268435456;
-	public static int anInt3140 = 33554432;
-	public static int anInt3141 = 134217728;
-	static int anInt3142 = 16;
-	static int anInt3143 = 1310982144;
-	public static int anInt3144 = 2097152;
-	static int anInt3145 = 2015625216;
-	static int anInt3146 = 1;
-	static int anInt3147 = 2028208128;
-	static int anInt3148 = 1336147968;
-	static int anInt3149 = 4194304;
-	static int anInt3150 = 1210318848;
-	public int anInt3151;
-	public int anInt3152;
-	int anInt3153;
-	int anInt3154;
-	public int[][] anIntArrayArray3155;
+	public int regionBaseX;
+	public int regionBaseY;
+	int regionX;
+	int regionY;
+	public int[][] masks;
 
-	public void method2731(int i) {
+	public void reset(int i) {
 		try {
-			for (int i_0_ = 0; i_0_ < ((Region) this).anInt3153 * 843157589; i_0_++) {
-				for (int i_1_ = 0; i_1_ < -16196483 * ((Region) this).anInt3154; i_1_++) {
-					if (i_0_ == 0 || i_1_ == 0 || i_0_ >= ((Region) this).anInt3153 * 843157589 - 5 || i_1_ >= -16196483 * ((Region) this).anInt3154 - 5)
-						anIntArrayArray3155[i_0_][i_1_] = -1;
+			for (int x = 0; x < regionX * 843157589; x++) {
+				for (int y = 0; y < -16196483 * regionY; y++) {
+					if (x == 0 || y == 0 || x >= regionX * 843157589 - 5 || y >= -16196483 * regionY - 5)
+						masks[x][y] = -1;
 					else
-						anIntArrayArray3155[i_0_][i_1_] = 2097152;
+						masks[x][y] = 2097152;
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.reset()");
 		}
 	}
 
-	public void method2732(int i, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_, byte i_6_) {
+	public void addWall(int x, int y, int type, int rotation, boolean solid, boolean unknown) {
 		try {
-			i -= 1487776559 * anInt3151;
-			i_2_ -= anInt3152 * 1415525851;
-			if (i_3_ == 0) {
-				if (i_4_ == 0) {
-					method2735(i, i_2_, 128, -1042521454);
-					method2735(i - 1, i_2_, 8, 1975526490);
+			x -= 1487776559 * regionBaseX;
+			y -= regionBaseY * 1415525851;
+			if (type == 0) {
+				if (rotation == 0) {
+					addMask(x, y, 128);
+					addMask(x - 1, y, 8);
+				} if (1 == rotation) {
+					addMask(x, y, 2);
+					addMask(x, y + 1, 32);
+				} if (2 == rotation) {
+					addMask(x, y, 8);
+					addMask(x + 1, y, 128);
+				} if (rotation == 3) {
+					addMask(x, y, 32);
+					addMask(x, y - 1, 2);
 				}
-				if (1 == i_4_) {
-					method2735(i, i_2_, 2, 1615298449);
-					method2735(i, i_2_ + 1, 32, -1090831475);
+			} if (type == 1 || 3 == type) {
+				if (0 == rotation) {
+					addMask(x, y, 1);
+					addMask(x - 1, 1 + y, 16);
+				} if (rotation == 1) {
+					addMask(x, y, 4);
+					addMask(1 + x, 1 + y, 64);
+				} if (rotation == 2) {
+					addMask(x, y, 16);
+					addMask(1 + x, y - 1, 1);
+				} if (rotation == 3) {
+					addMask(x, y, 64);
+					addMask(x - 1, y - 1, 4);
 				}
-				if (2 == i_4_) {
-					method2735(i, i_2_, 8, -807916897);
-					method2735(i + 1, i_2_, 128, 1020755534);
+			} if (2 == type) {
+				if (0 == rotation) {
+					addMask(x, y, 130);
+					addMask(x - 1, y, 8);
+					addMask(x, y + 1, 32);
+				} if (1 == rotation) {
+					addMask(x, y, 10);
+					addMask(x, y + 1, 32);
+					addMask(1 + x, y, 128);
+				} if (2 == rotation) {
+					addMask(x, y, 40);
+					addMask(x + 1, y, 128);
+					addMask(x, y - 1, 2);
+				} if (rotation == 3) {
+					addMask(x, y, 160);
+					addMask(x, y - 1, 2);
+					addMask(x - 1, y, 8);
 				}
-				if (i_4_ == 3) {
-					method2735(i, i_2_, 32, 1108581466);
-					method2735(i, i_2_ - 1, 2, -1801098216);
-				}
-			}
-			if (i_3_ == 1 || 3 == i_3_) {
-				if (0 == i_4_) {
-					method2735(i, i_2_, 1, -10556195);
-					method2735(i - 1, 1 + i_2_, 16, 1839392519);
-				}
-				if (i_4_ == 1) {
-					method2735(i, i_2_, 4, -1867058614);
-					method2735(1 + i, 1 + i_2_, 64, 1914117352);
-				}
-				if (i_4_ == 2) {
-					method2735(i, i_2_, 16, -247629730);
-					method2735(1 + i, i_2_ - 1, 1, 1013576008);
-				}
-				if (i_4_ == 3) {
-					method2735(i, i_2_, 64, -1124572932);
-					method2735(i - 1, i_2_ - 1, 4, 1892546696);
-				}
-			}
-			if (2 == i_3_) {
-				if (0 == i_4_) {
-					method2735(i, i_2_, 130, -1051181631);
-					method2735(i - 1, i_2_, 8, 477434855);
-					method2735(i, i_2_ + 1, 32, -572198250);
-				}
-				if (1 == i_4_) {
-					method2735(i, i_2_, 10, -793198954);
-					method2735(i, i_2_ + 1, 32, -523767496);
-					method2735(1 + i, i_2_, 128, 337648584);
-				}
-				if (2 == i_4_) {
-					method2735(i, i_2_, 40, -1529569840);
-					method2735(i + 1, i_2_, 128, -37825090);
-					method2735(i, i_2_ - 1, 2, 1713925250);
-				}
-				if (i_4_ == 3) {
-					method2735(i, i_2_, 160, -2113348130);
-					method2735(i, i_2_ - 1, 2, -796571658);
-					method2735(i - 1, i_2_, 8, -1813504580);
-				}
-			}
-			if (bool) {
-				if (i_3_ == 0) {
-					if (i_4_ == 0) {
-						method2735(i, i_2_, 65536, 270651632);
-						method2735(i - 1, i_2_, 4096, 1117923632);
+			} if (solid) {
+				if (type == 0) {
+					if (rotation == 0) {
+						addMask(x, y, 65536);
+						addMask(x - 1, y, 4096);
+					} if (1 == rotation) {
+						addMask(x, y, 1024);
+						addMask(x, y + 1, 16384);
+					} if (2 == rotation) {
+						addMask(x, y, 4096);
+						addMask(x + 1, y, 65536);
+					} if (rotation == 3) {
+						addMask(x, y, 16384);
+						addMask(x, y - 1, 1024);
 					}
-					if (1 == i_4_) {
-						method2735(i, i_2_, 1024, 332662493);
-						method2735(i, i_2_ + 1, 16384, -34799266);
+				} if (type == 1 || type == 3) {
+					if (0 == rotation) {
+						addMask(x, y, 512);
+						addMask(x - 1, 1 + y, 8192);
+					} if (1 == rotation) {
+						addMask(x, y, 2048);
+						addMask(x + 1, y + 1, 32768);
+					} if (2 == rotation) {
+						addMask(x, y, 8192);
+						addMask(x + 1, y - 1, 512);
+					} if (3 == rotation) {
+						addMask(x, y, 32768);
+						addMask(x - 1, y - 1, 2048);
 					}
-					if (2 == i_4_) {
-						method2735(i, i_2_, 4096, -1355552414);
-						method2735(i + 1, i_2_, 65536, -965543728);
-					}
-					if (i_4_ == 3) {
-						method2735(i, i_2_, 16384, 1838981871);
-						method2735(i, i_2_ - 1, 1024, -84490113);
-					}
-				}
-				if (i_3_ == 1 || i_3_ == 3) {
-					if (0 == i_4_) {
-						method2735(i, i_2_, 512, 1154206794);
-						method2735(i - 1, 1 + i_2_, 8192, 1783227876);
-					}
-					if (1 == i_4_) {
-						method2735(i, i_2_, 2048, 407329062);
-						method2735(i + 1, i_2_ + 1, 32768, 693643788);
-					}
-					if (2 == i_4_) {
-						method2735(i, i_2_, 8192, -559170136);
-						method2735(i + 1, i_2_ - 1, 512, 1135401378);
-					}
-					if (3 == i_4_) {
-						method2735(i, i_2_, 32768, -2138252025);
-						method2735(i - 1, i_2_ - 1, 2048, -1526325758);
-					}
-				}
-				if (i_3_ == 2) {
-					if (0 == i_4_) {
-						method2735(i, i_2_, 66560, 246239500);
-						method2735(i - 1, i_2_, 4096, -1798504629);
-						method2735(i, 1 + i_2_, 16384, 469277356);
-					}
-					if (i_4_ == 1) {
-						method2735(i, i_2_, 5120, -644288660);
-						method2735(i, i_2_ + 1, 16384, -672805993);
-						method2735(i + 1, i_2_, 65536, 1011283510);
-					}
-					if (i_4_ == 2) {
-						method2735(i, i_2_, 20480, -2135869248);
-						method2735(1 + i, i_2_, 65536, -660763031);
-						method2735(i, i_2_ - 1, 1024, 53790200);
-					}
-					if (i_4_ == 3) {
-						method2735(i, i_2_, 81920, -1242086458);
-						method2735(i, i_2_ - 1, 1024, -921740680);
-						method2735(i - 1, i_2_, 4096, -704699869);
+				} if (type == 2) {
+					if (0 == rotation) {
+						addMask(x, y, 66560);
+						addMask(x - 1, y, 4096);
+						addMask(x, 1 + y, 16384);
+					} if (rotation == 1) {
+						addMask(x, y, 5120);
+						addMask(x, y + 1, 16384);
+						addMask(x + 1, y, 65536);
+					} if (rotation == 2) {
+						addMask(x, y, 20480);
+						addMask(1 + x, y, 65536);
+						addMask(x, y - 1, 1024);
+					} if (rotation == 3) {
+						addMask(x, y, 81920);
+						addMask(x, y - 1, 1024);
+						addMask(x - 1, y, 4096);
 					}
 				}
-			}
-			if (bool_5_) {
-				if (0 == i_3_) {
-					if (i_4_ == 0) {
-						method2735(i, i_2_, 536870912, 105188977);
-						method2735(i - 1, i_2_, 33554432, -1557461646);
+			} if (unknown) {
+				if (0 == type) {
+					if (rotation == 0) {
+						addMask(x, y, 536870912);
+						addMask(x - 1, y, 33554432);
+					} if (rotation == 1) {
+						addMask(x, y, 8388608);
+						addMask(x, y + 1, 134217728);
+					} if (2 == rotation) {
+						addMask(x, y, 33554432);
+						addMask(1 + x, y, 536870912);
+					} if (3 == rotation) {
+						addMask(x, y, 134217728);
+						addMask(x, y - 1, 8388608);
 					}
-					if (i_4_ == 1) {
-						method2735(i, i_2_, 8388608, 378184094);
-						method2735(i, i_2_ + 1, 134217728, -581903657);
+				} if (type == 1 || type == 3) {
+					if (rotation == 0) {
+						addMask(x, y, 4194304);
+						addMask(x - 1, y + 1, 67108864);
+					} if (rotation == 1) {
+						addMask(x, y, 16777216);
+						addMask(1 + x, y + 1, 268435456);
+					} if (2 == rotation) {
+						addMask(x, y, 67108864);
+						addMask(x + 1, y - 1, 4194304);
+					} if (3 == rotation) {
+						addMask(x, y, 268435456);
+						addMask(x - 1, y - 1, 16777216);
 					}
-					if (2 == i_4_) {
-						method2735(i, i_2_, 33554432, 17287891);
-						method2735(1 + i, i_2_, 536870912, 1366614715);
-					}
-					if (3 == i_4_) {
-						method2735(i, i_2_, 134217728, -259723125);
-						method2735(i, i_2_ - 1, 8388608, 1673528275);
-					}
-				}
-				if (i_3_ == 1 || i_3_ == 3) {
-					if (i_4_ == 0) {
-						method2735(i, i_2_, 4194304, -827204996);
-						method2735(i - 1, i_2_ + 1, 67108864, 1483620152);
-					}
-					if (i_4_ == 1) {
-						method2735(i, i_2_, 16777216, 1148972070);
-						method2735(1 + i, i_2_ + 1, 268435456, 192304498);
-					}
-					if (2 == i_4_) {
-						method2735(i, i_2_, 67108864, -1069320096);
-						method2735(i + 1, i_2_ - 1, 4194304, 665627788);
-					}
-					if (3 == i_4_) {
-						method2735(i, i_2_, 268435456, -165102103);
-						method2735(i - 1, i_2_ - 1, 16777216, -1103853791);
-					}
-				}
-				if (2 == i_3_) {
-					if (i_4_ == 0) {
-						method2735(i, i_2_, 545259520, 1336024317);
-						method2735(i - 1, i_2_, 33554432, 1060346989);
-						method2735(i, 1 + i_2_, 134217728, 924194268);
-					}
-					if (i_4_ == 1) {
-						method2735(i, i_2_, 41943040, 904733021);
-						method2735(i, 1 + i_2_, 134217728, -213082013);
-						method2735(1 + i, i_2_, 536870912, -844475745);
-					}
-					if (i_4_ == 2) {
-						method2735(i, i_2_, 167772160, 1177840791);
-						method2735(i + 1, i_2_, 536870912, 455577522);
-						method2735(i, i_2_ - 1, 8388608, 867277877);
-					}
-					if (i_4_ == 3) {
-						method2735(i, i_2_, 671088640, -1868687626);
-						method2735(i, i_2_ - 1, 8388608, -1057716925);
-						method2735(i - 1, i_2_, 33554432, 301167292);
+				} if (2 == type) {
+					if (rotation == 0) {
+						addMask(x, y, 545259520);
+						addMask(x - 1, y, 33554432);
+						addMask(x, 1 + y, 134217728);
+					} if (rotation == 1) {
+						addMask(x, y, 41943040);
+						addMask(x, 1 + y, 134217728);
+						addMask(1 + x, y, 536870912);
+					} if (rotation == 2) {
+						addMask(x, y, 167772160);
+						addMask(x + 1, y, 536870912);
+						addMask(x, y - 1, 8388608);
+					} if (rotation == 3) {
+						addMask(x, y, 671088640);
+						addMask(x, y - 1, 8388608);
+						addMask(x - 1, y, 33554432);
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.addWall()");
 		}
 	}
 
-	public void addClip(int i, int i_7_, byte i_8_) {
+	public void addClip(int x, int y) {
 		try {
-			i -= 1487776559 * anInt3151;
-			i_7_ -= 1415525851 * anInt3152;
-			anIntArrayArray3155[i][i_7_] |= 0x200000;
+			x -= 1487776559 * regionBaseX;
+			y -= 1415525851 * regionBaseY;
+			masks[x][y] |= 0x200000;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.i(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.addClip()");
 		}
 	}
 
-	public void method2734(int i, int i_9_, byte i_10_) {
+	public void addFloor(int x, int y) {
 		try {
-			i -= anInt3151 * 1487776559;
-			i_9_ -= anInt3152 * 1415525851;
-			anIntArrayArray3155[i][i_9_] |= 0x40000;
+			x -= regionBaseX * 1487776559;
+			y -= regionBaseY * 1415525851;
+			masks[x][y] |= 0x40000;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.k(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.addFloor()");
 		}
 	}
 
-	void method2735(int i, int i_11_, int i_12_, int i_13_) {
+	void addMask(int x, int y, int mask) {
 		try {
-			anIntArrayArray3155[i][i_11_] |= i_12_;
+			masks[x][y] |= mask;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.d(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.addMask()");
 		}
 	}
 
-	public void method2736(int i, int i_14_, int i_15_, int i_16_, int i_17_, boolean bool, boolean bool_18_, byte i_19_) {
+	public void removeObject(int x, int y, int sizeX, int sizeY, int rotation, boolean projectileClipped, boolean solid) {
 		try {
-			int i_20_ = 256;
-			if (bool)
-				i_20_ |= 0x20000;
-			if (bool_18_)
-				i_20_ |= 0x40000000;
-			i -= anInt3151 * 1487776559;
-			i_14_ -= anInt3152 * 1415525851;
-			if (1 == i_17_ || 3 == i_17_) {
-				int i_21_ = i_15_;
-				i_15_ = i_16_;
-				i_16_ = i_21_;
+			int mask = 256;
+			if (projectileClipped)
+				mask |= 0x20000;
+			if (solid)
+				mask |= 0x40000000;
+			x -= regionBaseX * 1487776559;
+			y -= regionBaseY * 1415525851;
+			if (1 == rotation || 3 == rotation) {
+				int rotatedSize = sizeX;
+				sizeX = sizeY;
+				sizeY = rotatedSize;
 			}
-			for (int i_22_ = i; i_22_ < i + i_15_; i_22_++) {
-				if (i_22_ >= 0 && i_22_ < 843157589 * ((Region) this).anInt3153) {
-					for (int i_23_ = i_14_; i_23_ < i_14_ + i_16_; i_23_++) {
-						if (i_23_ >= 0 && i_23_ < ((Region) this).anInt3154 * -16196483)
-							method2737(i_22_, i_23_, i_20_, (byte) -13);
+			for (int tileX = x; tileX < x + sizeX; tileX++) {
+				if (tileX >= 0 && tileX < 843157589 * regionX) {
+					for (int tileY = y; tileY < y + sizeY; tileY++) {
+						if (tileY >= 0 && tileY < regionY * -16196483)
+							removeMask(tileX, tileY, mask);
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.x(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.removeObject()");
 		}
 	}
 
-	void method2737(int i, int i_24_, int i_25_, byte i_26_) {
+	void removeMask(int x, int y, int mask) {
 		try {
-			anIntArrayArray3155[i][i_24_] &= i_25_ ^ 0xffffffff;
+			masks[x][y] &= mask ^ 0xffffffff;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.r(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.removeMask()");
 		}
 	}
 
-	public void method2738(int i, int i_27_, int i_28_) {
+	public void removeFloor(int x, int y) {
 		try {
-			i -= anInt3151 * 1487776559;
-			i_27_ -= 1415525851 * anInt3152;
-			anIntArrayArray3155[i][i_27_] &= ~0x40000;
+			x -= regionBaseX * 1487776559;
+			y -= 1415525851 * regionBaseY;
+			masks[x][y] &= ~0x40000;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.n(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.removeFloor()");
 		}
 	}
 
-	public boolean method2739(int i, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
+	public boolean canReachArea(int sourceX, int sourceY, int sourceSize, int destX, int destY, int destW, int destH, int destApproachMask) {
 		try {
-			if (i_30_ > 1) {
-				if (Class287.method2720(i, i_29_, i_30_, i_30_, i_31_, i_32_, i_33_, i_34_, -173263894))
+			if (sourceSize > 1) {
+				if (Class287.method2720(sourceX, sourceY, sourceSize, sourceSize, destX, destY, destW, destH, -173263894))
 					return true;
-				return method2740(i, i_29_, i_30_, i_30_, i_31_, i_32_, i_33_, i_34_, i_35_, (byte) -47);
+				return canReachNextArea(sourceX, sourceY, sourceSize, sourceSize, destX, destY, destW, destH, destApproachMask);
 			}
-			int i_37_ = i_33_ + i_31_ - 1;
-			int i_38_ = i_34_ + i_32_ - 1;
-			if (i >= i_31_ && i <= i_37_ && i_29_ >= i_32_ && i_29_ <= i_38_)
+			int destMaxX = destW + destX - 1;
+			int destMaxY = destH + destY - 1;
+			if (sourceX >= destX
+					&& sourceX <= destMaxX
+					&& sourceY >= destY
+					&& sourceY <= destMaxY
+			)
 				return true;
-			if (i == i_31_ - 1 && i_29_ >= i_32_ && i_29_ <= i_38_ && 0 == ((anIntArrayArray3155[i - 1487776559 * anInt3151][i_29_ - 1415525851 * anInt3152]) & 0x8) && (i_35_ & 0x8) == 0)
+			if (sourceX == destX - 1
+					&& sourceY >= destY
+					&& sourceY <= destMaxY
+					&& 0 == ((masks[sourceX - 1487776559 * regionBaseX][sourceY - 1415525851 * regionBaseY]) & 0x8)
+					&& (destApproachMask & 0x8) == 0
+			)
 				return true;
-			if (1 + i_37_ == i && i_29_ >= i_32_ && i_29_ <= i_38_ && ((anIntArrayArray3155[i - anInt3151 * 1487776559][i_29_ - anInt3152 * 1415525851]) & 0x80) == 0 && (i_35_ & 0x2) == 0)
+			if (1 + destMaxX == sourceX
+					&& sourceY >= destY
+					&& sourceY <= destMaxY
+					&& ((masks[sourceX - regionBaseX * 1487776559][sourceY - regionBaseY * 1415525851]) & 0x80) == 0
+					&& (destApproachMask & 0x2) == 0
+			)
 				return true;
-			if (i_32_ - 1 == i_29_ && i >= i_31_ && i <= i_37_ && ((anIntArrayArray3155[i - anInt3151 * 1487776559][i_29_ - 1415525851 * anInt3152]) & 0x2) == 0 && 0 == (i_35_ & 0x4))
+			if (destY - 1 == sourceY
+					&& sourceX >= destX
+					&& sourceX <= destMaxX
+					&& ((masks[sourceX - regionBaseX * 1487776559][sourceY - 1415525851 * regionBaseY]) & 0x2) == 0
+					&& 0 == (destApproachMask & 0x4)
+			)
 				return true;
-			if (i_29_ == i_38_ + 1 && i >= i_31_ && i <= i_37_ && 0 == ((anIntArrayArray3155[i - anInt3151 * 1487776559][i_29_ - 1415525851 * anInt3152]) & 0x20) && (i_35_ & 0x1) == 0)
+			if (sourceY == destMaxY + 1
+					&& sourceX >= destX
+					&& sourceX <= destMaxX
+					&& 0 == ((masks[sourceX - regionBaseX * 1487776559][sourceY - 1415525851 * regionBaseY]) & 0x20)
+					&& (destApproachMask & 0x1) == 0
+			)
 				return true;
 			return false;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.z(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.canReachArea()");
 		}
 	}
 
-	public boolean method2740(int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, byte i_47_) {
+	public boolean canReachNextArea(int sourceX, int sourceY, int sourceW, int sourceH, int destX, int destY, int destW, int destH, int destApproachMask) {
 		try {
-			int i_48_ = i + i_40_;
-			int i_49_ = i_41_ + i_39_;
-			int i_50_ = i_42_ + i_44_;
-			int i_51_ = i_43_ + i_45_;
-			if (i_50_ == i && 0 == (i_46_ & 0x2)) {
-				int i_52_ = i_39_ > i_43_ ? i_39_ : i_43_;
-				for (int i_53_ = i_49_ < i_51_ ? i_49_ : i_51_; i_52_ < i_53_; i_52_++) {
-					if (((anIntArrayArray3155[i_50_ - 1 - 1487776559 * anInt3151][i_52_ - anInt3152 * 1415525851]) & 0x8) == 0)
+			int sourceMaxX = sourceX + sourceW;
+			int sourceMaxY = sourceH + sourceY;
+			int destMaxX = destX + destW;
+			int destMaxY = destY + destH;
+			if (destMaxX == sourceX && 0 == (destApproachMask & 0x2)) {
+				int overlapYStart = sourceY > destY ? sourceY : destY;
+				for (int overlapYEnd = sourceMaxY < destMaxY ? sourceMaxY : destMaxY; overlapYStart < overlapYEnd; overlapYStart++) {
+					if (((masks[destMaxX - 1 - 1487776559 * regionBaseX][overlapYStart - regionBaseY * 1415525851]) & 0x8) == 0)
 						return true;
 				}
-			} else if (i_42_ == i_48_ && 0 == (i_46_ & 0x8)) {
-				int i_54_ = i_39_ > i_43_ ? i_39_ : i_43_;
-				for (int i_55_ = i_49_ < i_51_ ? i_49_ : i_51_; i_54_ < i_55_; i_54_++) {
-					if (0 == ((anIntArrayArray3155[i_42_ - 1487776559 * anInt3151][i_54_ - anInt3152 * 1415525851]) & 0x80))
+			} else if (destX == sourceMaxX && 0 == (destApproachMask & 0x8)) {
+				int overlapYStart = sourceY > destY ? sourceY : destY;
+				for (int overlapYEnd = sourceMaxY < destMaxY ? sourceMaxY : destMaxY; overlapYStart < overlapYEnd; overlapYStart++) {
+					if (0 == ((masks[destX - 1487776559 * regionBaseX][overlapYStart - regionBaseY * 1415525851]) & 0x80))
 						return true;
 				}
-			} else if (i_51_ == i_39_ && (i_46_ & 0x1) == 0) {
-				int i_56_ = i > i_42_ ? i : i_42_;
-				for (int i_57_ = i_48_ < i_50_ ? i_48_ : i_50_; i_56_ < i_57_; i_56_++) {
-					if (((anIntArrayArray3155[i_56_ - 1487776559 * anInt3151][i_51_ - 1 - 1415525851 * anInt3152]) & 0x2) == 0)
+			} else if (destMaxY == sourceY && (destApproachMask & 0x1) == 0) {
+				int overlapXStart = sourceX > destX ? sourceX : destX;
+				for (int overlapXEnd = sourceMaxX < destMaxX ? sourceMaxX : destMaxX; overlapXStart < overlapXEnd; overlapXStart++) {
+					if (((masks[overlapXStart - 1487776559 * regionBaseX][destMaxY - 1 - 1415525851 * regionBaseY]) & 0x2) == 0)
 						return true;
 				}
-			} else if (i_43_ == i_49_ && (i_46_ & 0x4) == 0) {
-				int i_58_ = i > i_42_ ? i : i_42_;
-				for (int i_59_ = i_48_ < i_50_ ? i_48_ : i_50_; i_58_ < i_59_; i_58_++) {
-					if (((anIntArrayArray3155[i_58_ - 1487776559 * anInt3151][i_43_ - anInt3152 * 1415525851]) & 0x20) == 0)
+			} else if (destY == sourceMaxY && (destApproachMask & 0x4) == 0) {
+				int overlapXStart = sourceX > destX ? sourceX : destX;
+				for (int overlapXEnd = sourceMaxX < destMaxX ? sourceMaxX : destMaxX; overlapXStart < overlapXEnd; overlapXStart++) {
+					if (((masks[overlapXStart - 1487776559 * regionBaseX][destY - regionBaseY * 1415525851]) & 0x20) == 0)
 						return true;
 				}
 			}
 			return false;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.y(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.canReachNextArea()");
 		}
 	}
 
-	public void method2741(int i, int i_60_, int i_61_, int i_62_, boolean bool, boolean bool_63_, byte i_64_) {
+	public void addObject(int x, int y, int sizeX, int sizeY, boolean solid, boolean unknown) {
 		try {
-			int i_65_ = 256;
-			if (bool)
-				i_65_ |= 0x20000;
-			if (bool_63_)
-				i_65_ |= 0x40000000;
-			i -= anInt3151 * 1487776559;
-			i_60_ -= 1415525851 * anInt3152;
-			for (int i_66_ = i; i_66_ < i_61_ + i; i_66_++) {
-				if (i_66_ >= 0 && i_66_ < 843157589 * ((Region) this).anInt3153) {
-					for (int i_67_ = i_60_; i_67_ < i_62_ + i_60_; i_67_++) {
-						if (i_67_ >= 0 && i_67_ < -16196483 * ((Region) this).anInt3154)
-							method2735(i_66_, i_67_, i_65_, 1009782178);
+			int mask = 256;
+			if (solid)
+				mask |= 0x20000;
+			if (unknown)
+				mask |= 0x40000000;
+			x -= regionBaseX * 1487776559;
+			y -= 1415525851 * regionBaseY;
+			for (int tileX = x; tileX < sizeX + x; tileX++) {
+				if (tileX >= 0 && tileX < 843157589 * regionX) {
+					for (int tileY = y; tileY < sizeY + y; tileY++) {
+						if (tileY >= 0 && tileY < -16196483 * regionY)
+							addMask(tileX, tileY, mask);
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.p(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.addObject()");
 		}
 	}
 
-	public boolean method2742(int i, int i_68_, int i_69_, int i_70_, int i_71_, int i_72_, int i_73_, int i_74_) {
+	public boolean canReachLoc(int sourceX, int sourceY, int sourceSize, int locX, int locY, int locType, int locOrient) {
 		try {
-			if (1 == i_69_) {
-				if (i_70_ == i && i_71_ == i_68_)
+			if (1 == sourceSize) {
+				if (locX == sourceX && locY == sourceY)
 					return true;
-			} else if (i_70_ >= i && i_70_ <= i_69_ + i - 1 && i_71_ >= i_71_ && i_71_ <= i_71_ + i_69_ - 1)
+			} else if (locX >= sourceX && locX <= sourceSize + sourceX - 1 && locY >= locY && locY <= locY + sourceSize - 1)
 				return true;
-			i -= 1487776559 * anInt3151;
-			i_68_ -= anInt3152 * 1415525851;
-			i_70_ -= anInt3151 * 1487776559;
-			i_71_ -= anInt3152 * 1415525851;
-			if (1 == i_69_) {
-				if (i_72_ == 0) {
-					if (0 == i_73_) {
-						if (i == i_70_ - 1 && i_71_ == i_68_)
-							return true;
-						if (i == i_70_ && 1 + i_71_ == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x2c0120) == 0)
-							return true;
-						if (i == i_70_ && i_68_ == i_71_ - 1 && (anIntArrayArray3155[i][i_68_] & 0x2c0102) == 0)
-							return true;
-					} else if (1 == i_73_) {
-						if (i_70_ == i && i_68_ == 1 + i_71_)
-							return true;
-						if (i_70_ - 1 == i && i_68_ == i_71_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0108))
-							return true;
-						if (1 + i_70_ == i && i_71_ == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x2c0180) == 0)
-							return true;
-					} else if (2 == i_73_) {
-						if (1 + i_70_ == i && i_71_ == i_68_)
-							return true;
-						if (i == i_70_ && i_68_ == 1 + i_71_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0120))
-							return true;
-						if (i == i_70_ && i_68_ == i_71_ - 1 && (anIntArrayArray3155[i][i_68_] & 0x2c0102) == 0)
-							return true;
-					} else if (i_73_ == 3) {
-						if (i == i_70_ && i_71_ - 1 == i_68_)
-							return true;
-						if (i_70_ - 1 == i && i_68_ == i_71_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0108))
-							return true;
-						if (i == 1 + i_70_ && i_71_ == i_68_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0180))
-							return true;
+			sourceX -= 1487776559 * regionBaseX;
+			sourceY -= regionBaseY * 1415525851;
+			locX -= regionBaseX * 1487776559;
+			locY -= regionBaseY * 1415525851;
+			if (1 == sourceSize) {
+				if (locType == 0) {
+					if (0 == locOrient) {
+						if (sourceX == locX - 1 && locY == sourceY) return true;
+						if (sourceX == locX && 1 + locY == sourceY && (masks[sourceX][sourceY] & 0x2c0120) == 0) return true;
+						if (sourceX == locX && sourceY == locY - 1 && (masks[sourceX][sourceY] & 0x2c0102) == 0) return true;
+					} else if (1 == locOrient) {
+						if (locX == sourceX && sourceY == 1 + locY) return true;
+						if (locX - 1 == sourceX && sourceY == locY && 0 == (masks[sourceX][sourceY] & 0x2c0108)) return true;
+						if (1 + locX == sourceX && locY == sourceY && (masks[sourceX][sourceY] & 0x2c0180) == 0) return true;
+					} else if (2 == locOrient) {
+						if (1 + locX == sourceX && locY == sourceY) return true;
+						if (sourceX == locX && sourceY == 1 + locY && 0 == (masks[sourceX][sourceY] & 0x2c0120)) return true;
+						if (sourceX == locX && sourceY == locY - 1 && (masks[sourceX][sourceY] & 0x2c0102) == 0) return true;
+					} else if (locOrient == 3) {
+						if (sourceX == locX && locY - 1 == sourceY) return true;
+						if (locX - 1 == sourceX && sourceY == locY && 0 == (masks[sourceX][sourceY] & 0x2c0108)) return true;
+						if (sourceX == 1 + locX && locY == sourceY && 0 == (masks[sourceX][sourceY] & 0x2c0180)) return true;
 					}
 				}
-				if (i_72_ == 2) {
-					if (0 == i_73_) {
-						if (i_70_ - 1 == i && i_68_ == i_71_)
-							return true;
-						if (i == i_70_ && 1 + i_71_ == i_68_)
-							return true;
-						if (i == i_70_ + 1 && i_71_ == i_68_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0180))
-							return true;
-						if (i == i_70_ && i_71_ - 1 == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x2c0102) == 0)
-							return true;
-					} else if (i_73_ == 1) {
-						if (i_70_ - 1 == i && i_71_ == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x2c0108) == 0)
-							return true;
-						if (i == i_70_ && 1 + i_71_ == i_68_)
-							return true;
-						if (i == 1 + i_70_ && i_68_ == i_71_)
-							return true;
-						if (i == i_70_ && i_71_ - 1 == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x2c0102) == 0)
-							return true;
-					} else if (2 == i_73_) {
-						if (i_70_ - 1 == i && i_68_ == i_71_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0108))
-							return true;
-						if (i == i_70_ && i_68_ == 1 + i_71_ && (anIntArrayArray3155[i][i_68_] & 0x2c0120) == 0)
-							return true;
-						if (i == i_70_ + 1 && i_71_ == i_68_)
-							return true;
-						if (i == i_70_ && i_68_ == i_71_ - 1)
-							return true;
-					} else if (3 == i_73_) {
-						if (i_70_ - 1 == i && i_68_ == i_71_)
-							return true;
-						if (i == i_70_ && i_71_ + 1 == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x2c0120) == 0)
-							return true;
-						if (1 + i_70_ == i && i_71_ == i_68_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x2c0180))
-							return true;
-						if (i == i_70_ && i_71_ - 1 == i_68_)
-							return true;
+				if (locType == 2) {
+					if (0 == locOrient) {
+						if (locX - 1 == sourceX && sourceY == locY) return true;
+						if (sourceX == locX && 1 + locY == sourceY) return true;
+						if (sourceX == locX + 1 && locY == sourceY && 0 == (masks[sourceX][sourceY] & 0x2c0180)) return true;
+						if (sourceX == locX && locY - 1 == sourceY && (masks[sourceX][sourceY] & 0x2c0102) == 0) return true;
+					} else if (locOrient == 1) {
+						if (locX - 1 == sourceX && locY == sourceY && (masks[sourceX][sourceY] & 0x2c0108) == 0) return true;
+						if (sourceX == locX && 1 + locY == sourceY) return true;
+						if (sourceX == 1 + locX && sourceY == locY) return true;
+						if (sourceX == locX && locY - 1 == sourceY && (masks[sourceX][sourceY] & 0x2c0102) == 0) return true;
+					} else if (2 == locOrient) {
+						if (locX - 1 == sourceX && sourceY == locY && 0 == (masks[sourceX][sourceY] & 0x2c0108)) return true;
+						if (sourceX == locX && sourceY == 1 + locY && (masks[sourceX][sourceY] & 0x2c0120) == 0) return true;
+						if (sourceX == locX + 1 && locY == sourceY) return true;
+						if (sourceX == locX && sourceY == locY - 1) return true;
+					} else if (3 == locOrient) {
+						if (locX - 1 == sourceX && sourceY == locY) return true;
+						if (sourceX == locX && locY + 1 == sourceY && (masks[sourceX][sourceY] & 0x2c0120) == 0) return true;
+						if (1 + locX == sourceX && locY == sourceY && 0 == (masks[sourceX][sourceY] & 0x2c0180)) return true;
+						if (sourceX == locX && locY - 1 == sourceY) return true;
 					}
 				}
-				if (9 == i_72_) {
-					if (i_70_ == i && 1 + i_71_ == i_68_ && 0 == (anIntArrayArray3155[i][i_68_] & 0x20))
-						return true;
-					if (i == i_70_ && i_68_ == i_71_ - 1 && (anIntArrayArray3155[i][i_68_] & 0x2) == 0)
-						return true;
-					if (i_70_ - 1 == i && i_71_ == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x8) == 0)
-						return true;
-					if (i == 1 + i_70_ && i_71_ == i_68_ && (anIntArrayArray3155[i][i_68_] & 0x80) == 0)
-						return true;
+				if (9 == locType) {
+					if (locX == sourceX && 1 + locY == sourceY && 0 == (masks[sourceX][sourceY] & 0x20)) return true;
+					if (sourceX == locX && sourceY == locY - 1 && (masks[sourceX][sourceY] & 0x2) == 0) return true;
+					if (locX - 1 == sourceX && locY == sourceY && (masks[sourceX][sourceY] & 0x8) == 0) return true;
+					return sourceX == 1 + locX && locY == sourceY && (masks[sourceX][sourceY] & 0x80) == 0;
 				}
 			} else {
-				int i_75_ = i_69_ + i - 1;
-				int i_76_ = i_69_ + i_68_ - 1;
-				if (0 == i_72_) {
-					if (i_73_ == 0) {
-						if (i_70_ - i_69_ == i && i_71_ >= i_68_ && i_71_ <= i_76_)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == i_71_ + 1 && 0 == (anIntArrayArray3155[i_70_][i_68_] & 0x2c0120))
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == i_71_ - i_69_ && 0 == (anIntArrayArray3155[i_70_][i_76_] & 0x2c0102))
-							return true;
-					} else if (i_73_ == 1) {
-						if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == 1 + i_71_)
-							return true;
-						if (i_70_ - i_69_ == i && i_71_ >= i_68_ && i_71_ <= i_76_ && ((anIntArrayArray3155[i_75_][i_71_] & 0x2c0108) == 0))
-							return true;
-						if (i_70_ + 1 == i && i_71_ >= i_68_ && i_71_ <= i_76_ && (anIntArrayArray3155[i][i_71_] & 0x2c0180) == 0)
-							return true;
-					} else if (i_73_ == 2) {
-						if (i == 1 + i_70_ && i_71_ >= i_68_ && i_71_ <= i_76_)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ + 1 == i_68_ && ((anIntArrayArray3155[i_70_][i_68_] & 0x2c0120) == 0))
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ - i_69_ == i_68_ && 0 == (anIntArrayArray3155[i_70_][i_76_] & 0x2c0102))
-							return true;
-					} else if (3 == i_73_) {
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ - i_69_ == i_68_)
-							return true;
-						if (i_70_ - i_69_ == i && i_71_ >= i_68_ && i_71_ <= i_76_ && ((anIntArrayArray3155[i_75_][i_71_] & 0x2c0108) == 0))
-							return true;
-						if (i == i_70_ + 1 && i_71_ >= i_68_ && i_71_ <= i_76_ && 0 == (anIntArrayArray3155[i][i_71_] & 0x2c0180))
-							return true;
+				int sourceMaxX = sourceSize + sourceX - 1;
+				int sourceMaxY = sourceSize + sourceY - 1;
+				if (0 == locType) {
+					if (locOrient == 0) {
+						if (locX - sourceSize == sourceX && locY >= sourceY && locY <= sourceMaxY) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && sourceY == locY + 1 && 0 == (masks[locX][sourceY] & 0x2c0120)) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && sourceY == locY - sourceSize && 0 == (masks[locX][sourceMaxY] & 0x2c0102)) return true;
+					} else if (locOrient == 1) {
+						if (locX >= sourceX && locX <= sourceMaxX && sourceY == 1 + locY) return true;
+						if (locX - sourceSize == sourceX && locY >= sourceY && locY <= sourceMaxY && ((masks[sourceMaxX][locY] & 0x2c0108) == 0)) return true;
+						if (locX + 1 == sourceX && locY >= sourceY && locY <= sourceMaxY && (masks[sourceX][locY] & 0x2c0180) == 0) return true;
+					} else if (locOrient == 2) {
+						if (sourceX == 1 + locX && locY >= sourceY && locY <= sourceMaxY) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && locY + 1 == sourceY && ((masks[locX][sourceY] & 0x2c0120) == 0)) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && locY - sourceSize == sourceY && 0 == (masks[locX][sourceMaxY] & 0x2c0102)) return true;
+					} else if (3 == locOrient) {
+						if (locX >= sourceX && locX <= sourceMaxX && locY - sourceSize == sourceY) return true;
+						if (locX - sourceSize == sourceX && locY >= sourceY && locY <= sourceMaxY && ((masks[sourceMaxX][locY] & 0x2c0108) == 0)) return true;
+						if (sourceX == locX + 1 && locY >= sourceY && locY <= sourceMaxY && 0 == (masks[sourceX][locY] & 0x2c0180)) return true;
 					}
 				}
-				if (2 == i_72_) {
-					if (0 == i_73_) {
-						if (i == i_70_ - i_69_ && i_71_ >= i_68_ && i_71_ <= i_76_)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == 1 + i_71_)
-							return true;
-						if (i_70_ + 1 == i && i_71_ >= i_68_ && i_71_ <= i_76_ && 0 == (anIntArrayArray3155[i][i_71_] & 0x2c0180))
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == i_71_ - i_69_ && 0 == (anIntArrayArray3155[i_70_][i_76_] & 0x2c0102))
-							return true;
-					} else if (i_73_ == 1) {
-						if (i == i_70_ - i_69_ && i_71_ >= i_68_ && i_71_ <= i_76_ && 0 == (anIntArrayArray3155[i_75_][i_71_] & 0x2c0108))
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && 1 + i_71_ == i_68_)
-							return true;
-						if (i == 1 + i_70_ && i_71_ >= i_68_ && i_71_ <= i_76_)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == i_71_ - i_69_ && ((anIntArrayArray3155[i_70_][i_76_] & 0x2c0102) == 0))
-							return true;
-					} else if (i_73_ == 2) {
-						if (i_70_ - i_69_ == i && i_71_ >= i_68_ && i_71_ <= i_76_ && 0 == (anIntArrayArray3155[i_75_][i_71_] & 0x2c0108))
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ + 1 == i_68_ && ((anIntArrayArray3155[i_70_][i_68_] & 0x2c0120) == 0))
-							return true;
-						if (i == i_70_ + 1 && i_71_ >= i_68_ && i_71_ <= i_76_)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ - i_69_ == i_68_)
-							return true;
-					} else if (3 == i_73_) {
-						if (i == i_70_ - i_69_ && i_71_ >= i_68_ && i_71_ <= i_76_)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ + 1 == i_68_ && 0 == (anIntArrayArray3155[i_70_][i_68_] & 0x2c0120))
-							return true;
-						if (1 + i_70_ == i && i_71_ >= i_68_ && i_71_ <= i_76_ && (anIntArrayArray3155[i][i_71_] & 0x2c0180) == 0)
-							return true;
-						if (i_70_ >= i && i_70_ <= i_75_ && i_71_ - i_69_ == i_68_)
-							return true;
+				if (2 == locType) {
+					if (0 == locOrient) {
+						if (sourceX == locX - sourceSize && locY >= sourceY && locY <= sourceMaxY) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && sourceY == 1 + locY) return true;
+						if (locX + 1 == sourceX && locY >= sourceY && locY <= sourceMaxY && 0 == (masks[sourceX][locY] & 0x2c0180)) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && sourceY == locY - sourceSize && 0 == (masks[locX][sourceMaxY] & 0x2c0102)) return true;
+					} else if (locOrient == 1) {
+						if (sourceX == locX - sourceSize && locY >= sourceY && locY <= sourceMaxY && 0 == (masks[sourceMaxX][locY] & 0x2c0108)) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && 1 + locY == sourceY) return true;
+						if (sourceX == 1 + locX && locY >= sourceY && locY <= sourceMaxY) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && sourceY == locY - sourceSize && ((masks[locX][sourceMaxY] & 0x2c0102) == 0)) return true;
+					} else if (locOrient == 2) {
+						if (locX - sourceSize == sourceX && locY >= sourceY && locY <= sourceMaxY && 0 == (masks[sourceMaxX][locY] & 0x2c0108)) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && locY + 1 == sourceY && ((masks[locX][sourceY] & 0x2c0120) == 0)) return true;
+						if (sourceX == locX + 1 && locY >= sourceY && locY <= sourceMaxY) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && locY - sourceSize == sourceY) return true;
+					} else if (3 == locOrient) {
+						if (sourceX == locX - sourceSize && locY >= sourceY && locY <= sourceMaxY) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && locY + 1 == sourceY && 0 == (masks[locX][sourceY] & 0x2c0120)) return true;
+						if (1 + locX == sourceX && locY >= sourceY && locY <= sourceMaxY && (masks[sourceX][locY] & 0x2c0180) == 0) return true;
+						if (locX >= sourceX && locX <= sourceMaxX && locY - sourceSize == sourceY) return true;
 					}
 				}
-				if (9 == i_72_) {
-					if (i_70_ >= i && i_70_ <= i_75_ && i_71_ + 1 == i_68_ && 0 == (anIntArrayArray3155[i_70_][i_68_] & 0x2c0120))
-						return true;
-					if (i_70_ >= i && i_70_ <= i_75_ && i_68_ == i_71_ - i_69_ && 0 == (anIntArrayArray3155[i_70_][i_76_] & 0x2c0102))
-						return true;
-					if (i_70_ - i_69_ == i && i_71_ >= i_68_ && i_71_ <= i_76_ && 0 == (anIntArrayArray3155[i_75_][i_71_] & 0x2c0108))
-						return true;
-					if (1 + i_70_ == i && i_71_ >= i_68_ && i_71_ <= i_76_ && (anIntArrayArray3155[i][i_71_] & 0x2c0180) == 0)
-						return true;
+				if (9 == locType) {
+					if (locX >= sourceX && locX <= sourceMaxX && locY + 1 == sourceY && 0 == (masks[locX][sourceY] & 0x2c0120)) return true;
+					if (locX >= sourceX && locX <= sourceMaxX && sourceY == locY - sourceSize && 0 == (masks[locX][sourceMaxY] & 0x2c0102)) return true;
+					if (locX - sourceSize == sourceX && locY >= sourceY && locY <= sourceMaxY && 0 == (masks[sourceMaxX][locY] & 0x2c0108)) return true;
+					return 1 + locX == sourceX && locY >= sourceY && locY <= sourceMaxY && (masks[sourceX][locY] & 0x2c0180) == 0;
 				}
 			}
 			return false;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.s(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.canReachLoc()");
 		}
 	}
 
-	public void method2743(int i, int i_77_, int i_78_, int i_79_, boolean bool, boolean bool_80_, byte i_81_) {
+	public void removeWall(int x, int y, int type, int rotation, boolean projectileClipped, boolean isSolid) {
 		try {
-			i -= 1487776559 * anInt3151;
-			i_77_ -= anInt3152 * 1415525851;
-			if (0 == i_78_) {
-				if (i_79_ == 0) {
-					method2737(i, i_77_, 128, (byte) -26);
-					method2737(i - 1, i_77_, 8, (byte) -13);
+			x -= 1487776559 * regionBaseX;
+			y -= regionBaseY * 1415525851;
+			if (0 == type) {
+				if (rotation == 0) {
+					removeMask(x, y, 128);
+					removeMask(x - 1, y, 8);
 				}
-				if (i_79_ == 1) {
-					method2737(i, i_77_, 2, (byte) 23);
-					method2737(i, i_77_ + 1, 32, (byte) -16);
+				if (rotation == 1) {
+					removeMask(x, y, 2);
+					removeMask(x, y + 1, 32);
 				}
-				if (i_79_ == 2) {
-					method2737(i, i_77_, 8, (byte) 5);
-					method2737(i + 1, i_77_, 128, (byte) -42);
+				if (rotation == 2) {
+					removeMask(x, y, 8);
+					removeMask(x + 1, y, 128);
 				}
-				if (i_79_ == 3) {
-					method2737(i, i_77_, 32, (byte) -12);
-					method2737(i, i_77_ - 1, 2, (byte) 81);
-				}
-			}
-			if (i_78_ == 1 || 3 == i_78_) {
-				if (i_79_ == 0) {
-					method2737(i, i_77_, 1, (byte) 93);
-					method2737(i - 1, i_77_ + 1, 16, (byte) -43);
-				}
-				if (i_79_ == 1) {
-					method2737(i, i_77_, 4, (byte) 92);
-					method2737(1 + i, i_77_ + 1, 64, (byte) 48);
-				}
-				if (i_79_ == 2) {
-					method2737(i, i_77_, 16, (byte) 13);
-					method2737(1 + i, i_77_ - 1, 1, (byte) -84);
-				}
-				if (i_79_ == 3) {
-					method2737(i, i_77_, 64, (byte) -11);
-					method2737(i - 1, i_77_ - 1, 4, (byte) -50);
+				if (rotation == 3) {
+					removeMask(x, y, 32);
+					removeMask(x, y - 1, 2);
 				}
 			}
-			if (i_78_ == 2) {
-				if (0 == i_79_) {
-					method2737(i, i_77_, 130, (byte) -105);
-					method2737(i - 1, i_77_, 8, (byte) -47);
-					method2737(i, i_77_ + 1, 32, (byte) 4);
+			if (type == 1 || 3 == type) {
+				if (rotation == 0) {
+					removeMask(x, y, 1);
+					removeMask(x - 1, y + 1, 16);
 				}
-				if (i_79_ == 1) {
-					method2737(i, i_77_, 10, (byte) 53);
-					method2737(i, i_77_ + 1, 32, (byte) -27);
-					method2737(i + 1, i_77_, 128, (byte) 3);
+				if (rotation == 1) {
+					removeMask(x, y, 4);
+					removeMask(1 + x, y + 1, 64);
 				}
-				if (i_79_ == 2) {
-					method2737(i, i_77_, 40, (byte) -72);
-					method2737(i + 1, i_77_, 128, (byte) 86);
-					method2737(i, i_77_ - 1, 2, (byte) -21);
+				if (rotation == 2) {
+					removeMask(x, y, 16);
+					removeMask(1 + x, y - 1, 1);
 				}
-				if (i_79_ == 3) {
-					method2737(i, i_77_, 160, (byte) -31);
-					method2737(i, i_77_ - 1, 2, (byte) -20);
-					method2737(i - 1, i_77_, 8, (byte) -49);
+				if (rotation == 3) {
+					removeMask(x, y, 64);
+					removeMask(x - 1, y - 1, 4);
 				}
 			}
-			if (bool) {
-				if (0 == i_78_) {
-					if (0 == i_79_) {
-						method2737(i, i_77_, 65536, (byte) 13);
-						method2737(i - 1, i_77_, 4096, (byte) 51);
+			if (type == 2) {
+				if (0 == rotation) {
+					removeMask(x, y, 130);
+					removeMask(x - 1, y, 8);
+					removeMask(x, y + 1, 32);
+				}
+				if (rotation == 1) {
+					removeMask(x, y, 10);
+					removeMask(x, y + 1, 32);
+					removeMask(x + 1, y, 128);
+				}
+				if (rotation == 2) {
+					removeMask(x, y, 40);
+					removeMask(x + 1, y, 128);
+					removeMask(x, y - 1, 2);
+				}
+				if (rotation == 3) {
+					removeMask(x, y, 160);
+					removeMask(x, y - 1, 2);
+					removeMask(x - 1, y, 8);
+				}
+			}
+			if (projectileClipped) {
+				if (0 == type) {
+					if (0 == rotation) {
+						removeMask(x, y, 65536);
+						removeMask(x - 1, y, 4096);
 					}
-					if (1 == i_79_) {
-						method2737(i, i_77_, 1024, (byte) -68);
-						method2737(i, 1 + i_77_, 16384, (byte) -15);
+					if (1 == rotation) {
+						removeMask(x, y, 1024);
+						removeMask(x, 1 + y, 16384);
 					}
-					if (2 == i_79_) {
-						method2737(i, i_77_, 4096, (byte) 76);
-						method2737(i + 1, i_77_, 65536, (byte) -79);
+					if (2 == rotation) {
+						removeMask(x, y, 4096);
+						removeMask(x + 1, y, 65536);
 					}
-					if (i_79_ == 3) {
-						method2737(i, i_77_, 16384, (byte) -30);
-						method2737(i, i_77_ - 1, 1024, (byte) -32);
+					if (rotation == 3) {
+						removeMask(x, y, 16384);
+						removeMask(x, y - 1, 1024);
 					}
 				}
-				if (1 == i_78_ || 3 == i_78_) {
-					if (i_79_ == 0) {
-						method2737(i, i_77_, 512, (byte) 109);
-						method2737(i - 1, i_77_ + 1, 8192, (byte) -18);
+				if (1 == type || 3 == type) {
+					if (rotation == 0) {
+						removeMask(x, y, 512);
+						removeMask(x - 1, y + 1, 8192);
 					}
-					if (1 == i_79_) {
-						method2737(i, i_77_, 2048, (byte) 20);
-						method2737(i + 1, i_77_ + 1, 32768, (byte) 8);
+					if (1 == rotation) {
+						removeMask(x, y, 2048);
+						removeMask(x + 1, y + 1, 32768);
 					}
-					if (i_79_ == 2) {
-						method2737(i, i_77_, 8192, (byte) -7);
-						method2737(i + 1, i_77_ - 1, 512, (byte) -35);
+					if (rotation == 2) {
+						removeMask(x, y, 8192);
+						removeMask(x + 1, y - 1, 512);
 					}
-					if (i_79_ == 3) {
-						method2737(i, i_77_, 32768, (byte) 23);
-						method2737(i - 1, i_77_ - 1, 2048, (byte) 85);
+					if (rotation == 3) {
+						removeMask(x, y, 32768);
+						removeMask(x - 1, y - 1, 2048);
 					}
 				}
-				if (2 == i_78_) {
-					if (0 == i_79_) {
-						method2737(i, i_77_, 66560, (byte) -97);
-						method2737(i - 1, i_77_, 4096, (byte) 4);
-						method2737(i, i_77_ + 1, 16384, (byte) 9);
+				if (2 == type) {
+					if (0 == rotation) {
+						removeMask(x, y, 66560);
+						removeMask(x - 1, y, 4096);
+						removeMask(x, y + 1, 16384);
 					}
-					if (1 == i_79_) {
-						method2737(i, i_77_, 5120, (byte) -23);
-						method2737(i, 1 + i_77_, 16384, (byte) 24);
-						method2737(i + 1, i_77_, 65536, (byte) -1);
+					if (1 == rotation) {
+						removeMask(x, y, 5120);
+						removeMask(x, 1 + y, 16384);
+						removeMask(x + 1, y, 65536);
 					}
-					if (i_79_ == 2) {
-						method2737(i, i_77_, 20480, (byte) 83);
-						method2737(i + 1, i_77_, 65536, (byte) -79);
-						method2737(i, i_77_ - 1, 1024, (byte) -98);
+					if (rotation == 2) {
+						removeMask(x, y, 20480);
+						removeMask(x + 1, y, 65536);
+						removeMask(x, y - 1, 1024);
 					}
-					if (i_79_ == 3) {
-						method2737(i, i_77_, 81920, (byte) 13);
-						method2737(i, i_77_ - 1, 1024, (byte) -67);
-						method2737(i - 1, i_77_, 4096, (byte) 75);
+					if (rotation == 3) {
+						removeMask(x, y, 81920);
+						removeMask(x, y - 1, 1024);
+						removeMask(x - 1, y, 4096);
 					}
 				}
 			}
-			if (bool_80_) {
-				if (0 == i_78_) {
-					if (0 == i_79_) {
-						method2737(i, i_77_, 536870912, (byte) 79);
-						method2737(i - 1, i_77_, 33554432, (byte) -26);
+			if (isSolid) {
+				if (0 == type) {
+					if (0 == rotation) {
+						removeMask(x, y, 536870912);
+						removeMask(x - 1, y, 33554432);
 					}
-					if (1 == i_79_) {
-						method2737(i, i_77_, 8388608, (byte) 91);
-						method2737(i, i_77_ + 1, 134217728, (byte) -32);
+					if (1 == rotation) {
+						removeMask(x, y, 8388608);
+						removeMask(x, y + 1, 134217728);
 					}
-					if (i_79_ == 2) {
-						method2737(i, i_77_, 33554432, (byte) 78);
-						method2737(i + 1, i_77_, 536870912, (byte) 6);
+					if (rotation == 2) {
+						removeMask(x, y, 33554432);
+						removeMask(x + 1, y, 536870912);
 					}
-					if (i_79_ == 3) {
-						method2737(i, i_77_, 134217728, (byte) -27);
-						method2737(i, i_77_ - 1, 8388608, (byte) -52);
-					}
-				}
-				if (i_78_ == 1 || 3 == i_78_) {
-					if (i_79_ == 0) {
-						method2737(i, i_77_, 4194304, (byte) 12);
-						method2737(i - 1, 1 + i_77_, 67108864, (byte) -38);
-					}
-					if (i_79_ == 1) {
-						method2737(i, i_77_, 16777216, (byte) 33);
-						method2737(1 + i, i_77_ + 1, 268435456, (byte) 71);
-					}
-					if (2 == i_79_) {
-						method2737(i, i_77_, 67108864, (byte) -69);
-						method2737(i + 1, i_77_ - 1, 4194304, (byte) -66);
-					}
-					if (3 == i_79_) {
-						method2737(i, i_77_, 268435456, (byte) -29);
-						method2737(i - 1, i_77_ - 1, 16777216, (byte) -32);
+					if (rotation == 3) {
+						removeMask(x, y, 134217728);
+						removeMask(x, y - 1, 8388608);
 					}
 				}
-				if (i_78_ == 2) {
-					if (0 == i_79_) {
-						method2737(i, i_77_, 545259520, (byte) -72);
-						method2737(i - 1, i_77_, 33554432, (byte) 62);
-						method2737(i, 1 + i_77_, 134217728, (byte) 17);
+				if (type == 1 || 3 == type) {
+					if (rotation == 0) {
+						removeMask(x, y, 4194304);
+						removeMask(x - 1, 1 + y, 67108864);
 					}
-					if (1 == i_79_) {
-						method2737(i, i_77_, 41943040, (byte) -58);
-						method2737(i, 1 + i_77_, 134217728, (byte) -18);
-						method2737(1 + i, i_77_, 536870912, (byte) 95);
+					if (rotation == 1) {
+						removeMask(x, y, 16777216);
+						removeMask(1 + x, y + 1, 268435456);
 					}
-					if (i_79_ == 2) {
-						method2737(i, i_77_, 167772160, (byte) 9);
-						method2737(1 + i, i_77_, 536870912, (byte) -34);
-						method2737(i, i_77_ - 1, 8388608, (byte) 51);
+					if (2 == rotation) {
+						removeMask(x, y, 67108864);
+						removeMask(x + 1, y - 1, 4194304);
 					}
-					if (3 == i_79_) {
-						method2737(i, i_77_, 671088640, (byte) 71);
-						method2737(i, i_77_ - 1, 8388608, (byte) -23);
-						method2737(i - 1, i_77_, 33554432, (byte) 1);
+					if (3 == rotation) {
+						removeMask(x, y, 268435456);
+						removeMask(x - 1, y - 1, 16777216);
+					}
+				}
+				if (type == 2) {
+					if (0 == rotation) {
+						removeMask(x, y, 545259520);
+						removeMask(x - 1, y, 33554432);
+						removeMask(x, 1 + y, 134217728);
+					}
+					if (1 == rotation) {
+						removeMask(x, y, 41943040);
+						removeMask(x, 1 + y, 134217728);
+						removeMask(1 + x, y, 536870912);
+					}
+					if (rotation == 2) {
+						removeMask(x, y, 167772160);
+						removeMask(1 + x, y, 536870912);
+						removeMask(x, y - 1, 8388608);
+					}
+					if (3 == rotation) {
+						removeMask(x, y, 671088640);
+						removeMask(x, y - 1, 8388608);
+						removeMask(x - 1, y, 33554432);
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.u(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.removeWall()");
 		}
 	}
 
-	public void removeClip(int i, int i_82_, int i_83_) {
+	public void removeClip(int x, int y) {
 		try {
-			i -= 1487776559 * anInt3151;
-			i_82_ -= 1415525851 * anInt3152;
-			anIntArrayArray3155[i][i_82_] &= ~0x200000;
+			x -= 1487776559 * regionBaseX;
+			y -= 1415525851 * regionBaseY;
+			masks[x][y] &= ~0x200000;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.q(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.removeClip()");
 		}
 	}
 
-	Region() {
-		/* empty */
-	}
+	Region() {}
 
-	static final void method2745(ClientScript2 class403, int i) {
+	static final void method2745(ClientScript2 class403, int i) { //my clean file is tainted by these stupid cs2 methods. sigh.
 		try {
 			((ClientScript2) class403).anInt5245 -= -1365138610;
-			if ((((ClientScript2) class403).aLongArray5251[1685767703 * ((ClientScript2) class403).anInt5245]) < (((ClientScript2) class403).aLongArray5251[1685767703 * ((ClientScript2) class403).anInt5245 + 1]))
-				((ClientScript2) class403).integerPos += ((((ClientScript2) class403).integerstack[1883543357 * ((ClientScript2) class403).integerPos]) * 286750741);
+			if ((((ClientScript2) class403).aLongArray5251[1685767703
+					* ((ClientScript2) class403).anInt5245])
+					< (((ClientScript2) class403).aLongArray5251[1685767703
+					* ((ClientScript2) class403).anInt5245 + 1]))
+				((ClientScript2) class403).integerPos
+						+= ((((ClientScript2) class403).integerstack[1883543357
+						* ((ClientScript2) class403).integerPos]) * 286750741);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.bo(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.CS2_Method2745()");
 		}
 	}
 
@@ -814,11 +696,10 @@ public class Region {
 			int i_85_ = (((ClientScript2) class403).anIntArray5244[1 + ((ClientScript2) class403).anInt5239 * 681479919]);
 			EnumType class483 = Class51.aClass475_506.getClientScriptMap(i_84_, 1528209569);
 			if ('s' == class483.aChar6037) {
-				/* empty */
 			}
 			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = class483.method6122(i_85_, (byte) -30);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lz.vy(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "Region.CS2_Method2746()");
 		}
 	}
 }

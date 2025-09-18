@@ -176,7 +176,7 @@ public class Class216 implements Interface24 {
 			else {
 				Class439.method5851(19, -244529723);
 				try {
-					Class466.method6021(EnumType.mainApplet, "loggedout", (short) 24145);
+					AppletJsBridge.callJsFunction(EnumType.mainApplet, "loggedout", (short) 24145);
 				} catch (Throwable throwable) {
 					/* empty */
 				}

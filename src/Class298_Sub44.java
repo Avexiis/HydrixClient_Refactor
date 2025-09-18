@@ -265,7 +265,7 @@ public class Class298_Sub44 extends Node {
 						class298_sub53.writeLEInt((272393713 * (((Class472) class472).anInt5964)), -487042280);
 						class298_sub53.writeLEInt((634425393 * (((Class472) class472).anInt5963)), 164405285);
 						class298_sub53.pos = 0;
-						((Class298_Sub44) this).aString7496 = class298_sub53.gstr();
+						((Class298_Sub44) this).aString7496 = class298_sub53.getString();
 					}
 					Class472 class472_13_ = (Class472) hashmap.get(Integer.valueOf(1));
 					if (null != class472_13_) {
@@ -289,7 +289,7 @@ public class Class298_Sub44 extends Node {
 						}
 					}
 					class298_sub53.pos = 0;
-					((Class298_Sub44) this).aString7511 = class298_sub53.gstr();
+					((Class298_Sub44) this).aString7511 = class298_sub53.getString();
 				}
 				String[][] strings = HardwareInfo.getDXDiagDisplayDevicesProps();
 				if (null != strings && strings.length > 0 && null != strings[0]) {

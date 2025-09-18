@@ -40,17 +40,17 @@ public final class Class418 {
 
 	static void method5598(byte i) {
 		try {
-			Class360.anInt3868 = 471358088;
-			Class360.aClass25_3905 = GameClient.gameConnection;
+			LoginData.anInt3868 = 471358088;
+			LoginData.aClass25_3905 = GameClient.gameConnection;
 			if (null != GameClient.aByteArray8843) {
 				Packet class298_sub53 = new Packet(GameClient.aByteArray8843);
-				Class360.aLong3874 = (class298_sub53.readLong((short) 16837) * -2742373017286080113L);
-				Class360.aLong3911 = (class298_sub53.readLong((short) 3310) * 3207425516430892907L);
+				LoginData.aLong3874 = (class298_sub53.readLong((short) 16837) * -2742373017286080113L);
+				LoginData.aLong3911 = (class298_sub53.readLong((short) 3310) * 3207425516430892907L);
 			}
-			if (Class360.aLong3874 * 122690138525332847L < 0L)
+			if (LoginData.aLong3874 * 122690138525332847L < 0L)
 				Class78.method845(35, 1368689895);
 			else
-				Class460.method5981(false, true, "", "", Class360.aLong3874 * 122690138525332847L);
+				LoginPacket.method5981(false, true, "", "", LoginData.aLong3874 * 122690138525332847L);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ri.h(").append(')').toString());
 		}

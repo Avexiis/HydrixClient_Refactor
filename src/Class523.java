@@ -42,7 +42,7 @@ final class Class523 implements Interface17 {
 
 	public static final void method6330(IComponentDefinition class105, int i, int i_2_, int i_3_) {
 		try {
-			if (GameClient.aClass105_8850 == null && !ContextMenu.menuOpen && (null != class105 && Class419.method5603(class105, 1470456512))) {
+			if (GameClient.aClass105_8850 == null && !ContextMenu.menuOpen && (null != class105 && ConsoleCommands.method5603(class105, 1470456512))) {
 				GameClient.aClass105_8850 = class105;
 				GameClient.aClass105_8712 = SceneGraph.method4063(class105, (byte) -122);
 				GameClient.anInt8734 = -344812543 * i;
@@ -61,8 +61,8 @@ final class Class523 implements Interface17 {
 				return RSInterface.method1297(class105.parentId * 1573706803, (short) 8481);
 			if (!RSInterface.aBoolean1403) {
 				int i_4_ = class105.interfacehash * -440872681 >>> 16;
-				Class460 class460 = new Class460(GameClient.aClass437_8841);
-				for (Interface class298_sub51 = (Interface) class460.method5979(-2012602178); null != class298_sub51; class298_sub51 = (Interface) class460.next()) {
+				LoginPacket loginPacket = new LoginPacket(GameClient.aClass437_8841);
+				for (Interface class298_sub51 = (Interface) loginPacket.method5979(-2012602178); null != class298_sub51; class298_sub51 = (Interface) loginPacket.next()) {
 					if (-1617025021 * class298_sub51.interfaceId == i_4_)
 						return Class50.getIComponentDefinitions((int) (7051297995265073167L * (class298_sub51.aLong3188)), (byte) -3);
 				}

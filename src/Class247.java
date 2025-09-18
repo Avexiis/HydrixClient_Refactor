@@ -240,9 +240,9 @@ public abstract class Class247 {
 				return true;
 			} catch (Exception exception) {
 				WorldTile worldTile = GameClient.map.getRegionStart(681479919);
-				String string = new StringBuilder().append(((Class25) class25).INCOMMING_PACKET != null ? (2075990793 * ((Class25) class25).INCOMMING_PACKET.packetId) : -1).append(Class26.COMMA).append(((Class25) class25).aClass202_345 != null ? (2075990793 * ((Class25) class25).aClass202_345.packetId) : -1).append(Class26.COMMA).append(null != ((Class25) class25).aClass202_348 ? (2075990793 * ((Class25) class25).aClass202_348.packetId) : -1).append(" ").append(((Class25) class25).anInt336 * -866602563).append(Class26.COMMA).append(-1760580017 * worldTile.x + (Class287.myPlayer.scenePositionXQueue[0])).append(Class26.COMMA).append(283514611 * worldTile.y + (Class287.myPlayer.scenePositionYQueue[0])).append(" ").toString();
+				String string = new StringBuilder().append(((Class25) class25).INCOMMING_PACKET != null ? (2075990793 * ((Class25) class25).INCOMMING_PACKET.packetId) : -1).append(Symbol.COMMA).append(((Class25) class25).aClass202_345 != null ? (2075990793 * ((Class25) class25).aClass202_345.packetId) : -1).append(Symbol.COMMA).append(null != ((Class25) class25).aClass202_348 ? (2075990793 * ((Class25) class25).aClass202_348.packetId) : -1).append(" ").append(((Class25) class25).anInt336 * -866602563).append(Symbol.COMMA).append(-1760580017 * worldTile.x + (Class287.myPlayer.scenePositionXQueue[0])).append(Symbol.COMMA).append(283514611 * worldTile.y + (Class287.myPlayer.scenePositionYQueue[0])).append(" ").toString();
 				for (int i_8_ = 0; (i_8_ < -866602563 * ((Class25) class25).anInt336 && i_8_ < 50); i_8_++)
-					string = new StringBuilder().append(string).append(((Class25) class25).aClass298_Sub53_Sub2_333.payload[i_8_]).append(Class26.COMMA).toString();
+					string = new StringBuilder().append(string).append(((Class25) class25).aClass298_Sub53_Sub2_333.payload[i_8_]).append(Symbol.COMMA).toString();
 				IPAddress.method6062(string, exception, (short) -6614);
 				Class216.method2001(false, (byte) 71);
 				return true;
@@ -255,7 +255,7 @@ public abstract class Class247 {
 
 	public static void method2371(byte i) {
 		try {
-			Class360.method4300(-1349846936);
+			LoginData.method4300(-1349846936);
 			ClientScriptsExecutor.aClass374_Sub1_4125.method4626(2074664377);
 			ClientScriptsExecutor.aClass374_Sub2_4121.method4626(2003457775);
 			if (-1625219821 * GameClient.anInt8687 > 0) {

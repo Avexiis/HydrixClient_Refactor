@@ -51,7 +51,7 @@ public class Class335 {
 				OverlayType.activeToolkit.method5003(Class52_Sub2_Sub1.aCanvas9079, (byte) -92);
 			} else
 				ClanSettings.method4578(GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-644336063), false, 622850291);
-			Class360.method4301(-103765582);
+			LoginData.method4301(-103765582);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ny.fx(").append(')').toString());
 		}

@@ -459,7 +459,7 @@ public class Class249 implements Interface_ma {
 				CachingHashMap.method4198(class403, 762547962);
 				break;
 			case 317:
-				MapKeys.method2833(class403, (byte) 36);
+				Class296.method2833(class403, (byte) 36);
 				break;
 			case 689:
 				Class365_Sub1_Sub5_Sub1.method4526(class403, -1558788446);
@@ -639,7 +639,7 @@ public class Class249 implements Interface_ma {
 				Class230.method2126(class403, 97341898);
 				break;
 			case 921:
-				Class360.method4297(class403, -2117013943);
+				LoginData.method4297(class403, -2117013943);
 				break;
 			case 463:
 				Class298_Sub35.method3399(class403, (byte) 0);
@@ -672,7 +672,7 @@ public class Class249 implements Interface_ma {
 				Class228.method2116(class403, -569391443);
 				break;
 			case 634:
-				Class419.method5604(class403, 1824559253);
+				ConsoleCommands.method5604(class403, 1824559253);
 				break;
 			case 90:
 				Class_v.method3671(class403, 629926500);
@@ -681,7 +681,7 @@ public class Class249 implements Interface_ma {
 				OverlayType.method4609(class403, -2139639407);
 				break;
 			case 553:
-				Class360.method4298(class403, (byte) 24);
+				LoginData.method4298(class403, (byte) 24);
 				break;
 			case 31:
 				Class136.method1501(class403, (byte) 124);
@@ -822,7 +822,7 @@ public class Class249 implements Interface_ma {
 				Class85.method956(class403, (byte) -111);
 				break;
 			case 676:
-				Class360.method4299(class403, (byte) 99);
+				LoginData.method4299(class403, (byte) 99);
 				break;
 			case 228:
 				Class474.method6073(class403, (short) 21540);
@@ -1344,7 +1344,7 @@ public class Class249 implements Interface_ma {
 				BASType.method4213(class403, 1204781466);
 				break;
 			case 37:
-				MapKeys.method2829(class403, (byte) -58);
+				Class296.method2829(class403, (byte) -58);
 				break;
 			case 73:
 				Class21.method368(class403, 414231437);
@@ -1722,7 +1722,7 @@ public class Class249 implements Interface_ma {
 				Class371.method4583(class403, -743929031);
 				break;
 			case 172:
-				MapKeys.method2831(class403, 1539423531);
+				Class296.method2831(class403, 1539423531);
 				break;
 			case 935:
 				Class498.method6211(class403, 202864030);
@@ -2313,7 +2313,7 @@ public class Class249 implements Interface_ma {
 				Class272.method2554(class403, -766298444);
 				break;
 			case 990:
-				Class26.method399(class403, 1552766611);
+				Symbol.method399(class403, 1552766611);
 				break;
 			case 885:
 				VarClientString.method6280(class403, 2080573625);
@@ -2460,7 +2460,7 @@ public class Class249 implements Interface_ma {
 				Class293.method2819(class403, 432669795);
 				break;
 			case 471:
-				MapIconTypeList.method6164(class403, -254589789);
+				Class487.method6164(class403, -254589789);
 				break;
 			case 191:
 				Class442.method5875(class403, (byte) -26);
@@ -3182,7 +3182,7 @@ public class Class249 implements Interface_ma {
 				Class298_Sub32_Sub11.method3208(class403, 1456302474);
 				break;
 			case 163:
-				MapKeys.method2832(class403, (byte) 13);
+				Class296.method2832(class403, (byte) 13);
 				break;
 			case 793:
 				Class234.method2179(class403, (short) 205);
@@ -3239,7 +3239,7 @@ public class Class249 implements Interface_ma {
 				Class127_Sub3.method1432(class403, -1776680288);
 				break;
 			case 239:
-				Class26.method396(class403, (short) 25267);
+				Symbol.method396(class403, (short) 25267);
 				break;
 			case 450:
 				Class275.method2572(class403, 1241977323);

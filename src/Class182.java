@@ -1,4 +1,4 @@
-/* Class182 - Decompiled by JODE
+/* ParticleEmitterRaw - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -272,9 +272,9 @@ public class Class182 {
 				int i_20_ = Class10.anInt129 * 1168366243;
 				int[] is = Class10.anIntArray135;
 				for (int i_21_ = 0; i_21_ < i_20_; i_21_++) {
-					Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[is[i_21_]]);
-					if (class365_sub1_sub1_sub2_sub2 != null)
-						class365_sub1_sub1_sub2_sub2.method4441(i, i_13_, i_14_, i_15_, i_16_, i_17_, i_18_, (byte) 12);
+					Player player = (GameClient.players[is[i_21_]]);
+					if (player != null)
+						player.method4441(i, i_13_, i_14_, i_15_, i_16_, i_17_, i_18_, (byte) 12);
 				}
 				for (int i_22_ = 0; i_22_ < -1230451913 * GameClient.npcCount; i_22_++) {
 					int i_23_ = GameClient.npcIndicies[i_22_];

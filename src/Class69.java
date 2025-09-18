@@ -98,8 +98,8 @@ public class Class69 {
 			int[] is = Class10.anIntArray135;
 			boolean bool = false;
 			for (int i_12_ = 0; i_12_ < i_11_; i_12_++) {
-				Player class365_sub1_sub1_sub2_sub2 = GameClient.players[is[i_12_]];
-				if (null != class365_sub1_sub1_sub2_sub2 && (Class287.myPlayer != class365_sub1_sub1_sub2_sub2) && class365_sub1_sub1_sub2_sub2.username != null && class365_sub1_sub1_sub2_sub2.username.equalsIgnoreCase(string)) {
+				Player player = GameClient.players[is[i_12_]];
+				if (null != player && (Class287.myPlayer != player) && player.username != null && player.username.equalsIgnoreCase(string)) {
 					OutgoingPacket class198 = null;
 					if (i == 1)
 						class198 = OutgoingPacket.ATTACK_PLAYER_PACKET;

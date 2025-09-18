@@ -62,24 +62,24 @@ public class BASType {
 
 	public void decode(Packet buffer, int opcode) {
 		if (1 == opcode) {
-			anInt3711 = get_sequence_id(buffer.gSmart2or4n()) * -512849763;
-			anInt3717 = get_sequence_id(buffer.gSmart2or4n()) * -1216995793;
+			anInt3711 = get_sequence_id(buffer.readBigSmart()) * -512849763;
+			anInt3717 = get_sequence_id(buffer.readBigSmart()) * -1216995793;
 		} else if (2 == opcode) {
-			anInt3755 = get_sequence_id(buffer.gSmart2or4n()) * -1201368129;
+			anInt3755 = get_sequence_id(buffer.readBigSmart()) * -1201368129;
 		} else if (opcode == 3) {
-			anInt3722 = get_sequence_id(buffer.gSmart2or4n()) * 1316025001;
+			anInt3722 = get_sequence_id(buffer.readBigSmart()) * 1316025001;
 		} else if (4 == opcode) {
-			anInt3727 = get_sequence_id(buffer.gSmart2or4n()) * -1511636755;
+			anInt3727 = get_sequence_id(buffer.readBigSmart()) * -1511636755;
 		} else if (5 == opcode) {
-			anInt3728 = get_sequence_id(buffer.gSmart2or4n()) * 1034489103;
+			anInt3728 = get_sequence_id(buffer.readBigSmart()) * 1034489103;
 		} else if (opcode == 6) {
-			anInt3721 = get_sequence_id(buffer.gSmart2or4n()) * -1261244237;
+			anInt3721 = get_sequence_id(buffer.readBigSmart()) * -1261244237;
 		} else if (opcode == 7) {
-			anInt3749 = get_sequence_id(buffer.gSmart2or4n()) * -1711775317;
+			anInt3749 = get_sequence_id(buffer.readBigSmart()) * -1711775317;
 		} else if (opcode == 8) {
-			anInt3746 = get_sequence_id(buffer.gSmart2or4n()) * -1593946535;
+			anInt3746 = get_sequence_id(buffer.readBigSmart()) * -1593946535;
 		} else if (9 == opcode) {
-			anInt3724 = get_sequence_id(buffer.gSmart2or4n()) * 1566713043;
+			anInt3724 = get_sequence_id(buffer.readBigSmart()) * 1566713043;
 		} else if (26 == opcode) {
 			anInt3735 = (short) (buffer.readUnsignedByte() * 4) * 1013056483;
 			anInt3736 = (short) (buffer.readUnsignedByte() * 4) * -1453025501;
@@ -120,39 +120,39 @@ public class BASType {
 		} else if (37 == opcode) {
 			anInt3752 = buffer.readUnsignedByte() * 1083720273;
 		} else if (38 == opcode) {
-			anInt3715 = get_sequence_id(buffer.gSmart2or4n()) * 241536037;
+			anInt3715 = get_sequence_id(buffer.readBigSmart()) * 241536037;
 		} else if (39 == opcode) {
-			anInt3733 = get_sequence_id(buffer.gSmart2or4n()) * -1442268255;
+			anInt3733 = get_sequence_id(buffer.readBigSmart()) * -1442268255;
 		} else if (opcode == 40) {
-			anInt3741 = get_sequence_id(buffer.gSmart2or4n()) * 564296781;
+			anInt3741 = get_sequence_id(buffer.readBigSmart()) * 564296781;
 		} else if (opcode == 41) {
-			anInt3719 = get_sequence_id(buffer.gSmart2or4n()) * -1440097851;
+			anInt3719 = get_sequence_id(buffer.readBigSmart()) * -1440097851;
 		} else if (42 == opcode) {
-			anInt3723 = get_sequence_id(buffer.gSmart2or4n()) * 1270333873;
+			anInt3723 = get_sequence_id(buffer.readBigSmart()) * 1270333873;
 		} else if (opcode == 43) {
-			anInt3738 = get_sequence_id(buffer.gSmart2or4n()) * 697230329;
+			anInt3738 = get_sequence_id(buffer.readBigSmart()) * 697230329;
 		} else if (44 == opcode) {
-			anInt3754 = get_sequence_id(buffer.gSmart2or4n()) * -853635893;
+			anInt3754 = get_sequence_id(buffer.readBigSmart()) * -853635893;
 		} else if (opcode == 45) {
 			anInt3716 = buffer.readUnsignedShort() * -928434405;
 		} else if (46 == opcode) {
-			anInt3729 = get_sequence_id(buffer.gSmart2or4n()) * 537960313;
+			anInt3729 = get_sequence_id(buffer.readBigSmart()) * 537960313;
 		} else if (opcode == 47) {
-			anInt3743 = get_sequence_id(buffer.gSmart2or4n()) * 1019547381;
+			anInt3743 = get_sequence_id(buffer.readBigSmart()) * 1019547381;
 		} else if (48 == opcode) {
-			anInt3731 = get_sequence_id(buffer.gSmart2or4n()) * -1402060193;
+			anInt3731 = get_sequence_id(buffer.readBigSmart()) * -1402060193;
 		} else if (opcode == 49) {
-			anInt3739 = get_sequence_id(buffer.gSmart2or4n()) * -549936551;
+			anInt3739 = get_sequence_id(buffer.readBigSmart()) * -549936551;
 		} else if (50 == opcode) {
-			anInt3737 = get_sequence_id(buffer.gSmart2or4n()) * -71356649;
+			anInt3737 = get_sequence_id(buffer.readBigSmart()) * -71356649;
 		} else if (opcode == 51) {
-			anInt3730 = get_sequence_id(buffer.gSmart2or4n()) * -1236000399;
+			anInt3730 = get_sequence_id(buffer.readBigSmart()) * -1236000399;
 		} else if (52 == opcode) {
 			int i_5_ = buffer.readUnsignedByte();
 			anIntArray3712 = new int[i_5_];
 			anIntArray3713 = new int[i_5_];
 			for (int i_6_ = 0; i_6_ < i_5_; i_6_++) {
-				anIntArray3712[i_6_] = get_sequence_id(buffer.gSmart2or4n());
+				anIntArray3712[i_6_] = get_sequence_id(buffer.readBigSmart());
 				int i_7_ = buffer.readUnsignedByte();
 				anIntArray3713[i_6_] = i_7_;
 				anInt3714 += i_7_ * 81529747;
@@ -542,7 +542,7 @@ public class BASType {
 			}
 			GameClient.anInt8894 = 0;
 			GameClient.anInt8687 = 0;
-			Class360.method4301(2005471811);
+			LoginData.method4301(2005471811);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("op.u(").append(')').toString());
 		}

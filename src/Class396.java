@@ -24,7 +24,7 @@ public final class Class396 {
 						string_2_ = new StringBuilder().append(string_2_).append("; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0").toString();
 					else
 						string_2_ = new StringBuilder().append(string_2_).append("; Expires=").append(Class304.method3742(TimeUtils.getTime((byte) 1) + 94608000000L)).append("; Max-Age=").append(94608000L).toString();
-					Class466.method6020(EnumType.mainApplet, new StringBuilder().append("document.cookie=\"").append(string_2_).append("\"").toString(), -1926451476);
+					AppletJsBridge.evalJs(EnumType.mainApplet, new StringBuilder().append("document.cookie=\"").append(string_2_).append("\"").toString(), -1926451476);
 				} catch (Throwable throwable) {
 					/* empty */
 				}

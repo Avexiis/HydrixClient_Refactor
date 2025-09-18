@@ -115,9 +115,9 @@ public final class Class298_Sub38 extends Node {
 
 	public static final void method3503(int i) {
 		try {
-			Class360.anInt3896 = -395862839;
-			Class360.anInt3871 = -988354658;
-			Class360.anInt3892 = -946395782;
+			LoginData.anInt3896 = -395862839;
+			LoginData.anInt3871 = -988354658;
+			LoginData.anInt3892 = -946395782;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("abw.b(").append(')').toString());
 		}

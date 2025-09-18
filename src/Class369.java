@@ -98,7 +98,7 @@ public class Class369 {
 			} else if (15 == i)
 				anInt4006 = class298_sub53.readUnsignedShort() * 96808193;
 			else if (i == 17)
-				anInt4028 = class298_sub53.gSmart2or4n() * 301919677;
+				anInt4028 = class298_sub53.readBigSmart() * 301919677;
 			else if (i == 18) {
 				int i_12_ = class298_sub53.readUnsignedByte();
 				anIntArray4019 = new int[i_12_];
@@ -109,7 +109,7 @@ public class Class369 {
 					anIntArray4019[i_13_] = class298_sub53.readUnsignedInt();
 					((Class369) this).anIntArray4020[i_13_] = class298_sub53.readUnsignedInt();
 					((Class369) this).anIntArray4013[i_13_] = class298_sub53.readUnsignedInt();
-					aStringArray4022[i_13_] = class298_sub53.gstr();
+					aStringArray4022[i_13_] = class298_sub53.getString();
 				}
 			} else if (i == 19) {
 				int i_14_ = class298_sub53.readUnsignedByte();
@@ -121,7 +121,7 @@ public class Class369 {
 					anIntArray4023[i_15_] = class298_sub53.readUnsignedInt();
 					((Class369) this).anIntArray4024[i_15_] = class298_sub53.readUnsignedInt();
 					((Class369) this).anIntArray4009[i_15_] = class298_sub53.readUnsignedInt();
-					aStringArray4026[i_15_] = class298_sub53.gstr();
+					aStringArray4026[i_15_] = class298_sub53.getString();
 				}
 			} else if (i == 249) {
 				int i_16_ = class298_sub53.readUnsignedByte();
@@ -134,7 +134,7 @@ public class Class369 {
 					int i_19_ = class298_sub53.g3();
 					Node node;
 					if (bool)
-						node = new LinkableObject(class298_sub53.gstr());
+						node = new LinkableObject(class298_sub53.getString());
 					else
 						node = new Class298_Sub35(class298_sub53.readUnsignedInt());
 					((Class369) this).aClass437_4018.method5817(node, (long) i_19_);

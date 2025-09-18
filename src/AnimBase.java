@@ -23,6 +23,9 @@ public class AnimBase extends Node {
 
 	AnimBase(int i, byte[] data, boolean osrs) {
 		this.osrs = osrs;
+		if (osrs) {
+			//System.out.println("Base OSRS: " + i);
+		}
 		anInt7276 = 1362718155 * i;
 		Packet packet = new Packet(data);
 		numTransforms = packet.readUnsignedByte() * -1914825713;

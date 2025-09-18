@@ -23,7 +23,7 @@ public class TimeUtils {
 
 	public static Class151 method1318(Packet class298_sub53, byte i) {
 		try {
-			String string = class298_sub53.gstr();
+			String string = class298_sub53.getString();
 			Class139 class139 = (Class491.method6176((byte) 112)[class298_sub53.readUnsignedByte()]);
 			Class133 class133 = (Huffman.method1255(722680550)[class298_sub53.readUnsignedByte()]);
 			int i_0_ = class298_sub53.readShort(1872216088);
@@ -33,7 +33,7 @@ public class TimeUtils {
 			int i_4_ = class298_sub53.readUnsignedByte();
 			int i_5_ = class298_sub53.readUnsignedShort();
 			int i_6_ = class298_sub53.readUnsignedShort();
-			int i_7_ = class298_sub53.gSmart2or4n();
+			int i_7_ = class298_sub53.readBigSmart();
 			int i_8_ = class298_sub53.readUnsignedInt();
 			int i_9_ = class298_sub53.readUnsignedInt();
 			return new Class151(string, class139, class133, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_);

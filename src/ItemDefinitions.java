@@ -588,10 +588,10 @@ public class ItemDefinitions {
 	void method6038(Packet stream, int opcode, boolean oldItems) {
 		try {
 			if (1 == opcode)
-				((ItemDefinitions) this).anInt5738 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * -1019082089;// model
+				((ItemDefinitions) this).anInt5738 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * -1019082089;// model
 																																					// id
 			else if (2 == opcode)
-				itemName = stream.gstr();// name
+				itemName = stream.getString();// name
 			else if (opcode == 4)
 				anInt5713 = stream.readUnsignedShort() * -1885125181;
 			else if (5 == opcode)
@@ -619,19 +619,19 @@ public class ItemDefinitions {
 			else if (18 == opcode)
 				anInt5720 = stream.readUnsignedShort() * -1741576309;
 			else if (opcode == 23)
-				anInt5724 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * -1612514031;
+				anInt5724 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * -1612514031;
 			else if (opcode == 24)
-				((ItemDefinitions) this).anInt5737 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * 582597415;
+				((ItemDefinitions) this).anInt5737 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * 582597415;
 			else if (25 == opcode)
-				anInt5747 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * -1430077763;
+				anInt5747 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * -1430077763;
 			else if (26 == opcode)
-				((ItemDefinitions) this).anInt5746 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * -336299543;
+				((ItemDefinitions) this).anInt5746 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * -336299543;
 			else if (opcode == 27)
 				anInt5735 = stream.readUnsignedByte() * -1438605935;
 			else if (opcode >= 30 && opcode < 35)
-				aStringArray5723[opcode - 30] = stream.gstr();
+				aStringArray5723[opcode - 30] = stream.getString();
 			else if (opcode >= 35 && opcode < 40)
-				aStringArray5732[opcode - 35] = stream.gstr();
+				aStringArray5732[opcode - 35] = stream.getString();
 			else if (40 == opcode) {
 				int i_65_ = stream.readUnsignedByte();
 				((ItemDefinitions) this).aShortArray5754 = new short[i_65_];
@@ -687,17 +687,17 @@ public class ItemDefinitions {
 			} else if (65 == opcode)
 				aBoolean5734 = true;
 			else if (78 == opcode)
-				((ItemDefinitions) this).anInt5759 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * 756401161;
+				((ItemDefinitions) this).anInt5759 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * 756401161;
 			else if (opcode == 79)
-				((ItemDefinitions) this).anInt5741 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * 2098680761;
+				((ItemDefinitions) this).anInt5741 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * 2098680761;
 			else if (opcode == 90)
-				((ItemDefinitions) this).anInt5760 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * 1319962769;
+				((ItemDefinitions) this).anInt5760 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * 1319962769;
 			else if (opcode == 91)
-				((ItemDefinitions) this).anInt5750 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * 1598907469;
+				((ItemDefinitions) this).anInt5750 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * 1598907469;
 			else if (opcode == 92)
-				((ItemDefinitions) this).anInt5749 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * -1935344449;
+				((ItemDefinitions) this).anInt5749 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * -1935344449;
 			else if (93 == opcode)
-				((ItemDefinitions) this).anInt5764 = (oldItems ? stream.readCustomUnsignedShort() : stream.gSmart2or4n()) * -1194369871;
+				((ItemDefinitions) this).anInt5764 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart()) * -1194369871;
 			else if (95 == opcode)
 				anInt5716 = stream.readUnsignedShort() * -883520799;
 			else if (96 == opcode)
@@ -784,7 +784,7 @@ public class ItemDefinitions {
 					int i_76_ = stream.g3();
 					Node node;
 					if (bool)
-						node = new LinkableObject(stream.gstr());
+						node = new LinkableObject(stream.getString());
 					else
 						node = new Class298_Sub35(stream.readUnsignedInt());
 					((ItemDefinitions) this).aClass437_5766.method5817(node, (long) i_76_);

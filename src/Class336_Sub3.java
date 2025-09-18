@@ -6,19 +6,19 @@ public class Class336_Sub3 extends Class336 {
 	int anInt7715;
 
 	public boolean method4089(int i, int i_0_, int i_1_, Region region) {
-		return region.method2740(i_0_, i_1_, i, i, -1331662251 * toX, 1517720743 * toY, -1900284579 * sizeX, sizeY * 772610897, (((Class336_Sub3) this).anInt7715 * -1547195715), (byte) -126);
+		return region.canReachNextArea(i_0_, i_1_, i, i, -1331662251 * toX, 1517720743 * toY, -1900284579 * sizeX, sizeY * 772610897, (((Class336_Sub3) this).anInt7715 * -1547195715));
 	}
 
 	public boolean method4090(int i, int i_2_, int i_3_, Region region, int i_4_) {
 		try {
-			return region.method2740(i_2_, i_3_, i, i, -1331662251 * toX, 1517720743 * toY, -1900284579 * sizeX, sizeY * 772610897, (((Class336_Sub3) this).anInt7715 * -1547195715), (byte) -108);
+			return region.canReachNextArea(i_2_, i_3_, i, i, -1331662251 * toX, 1517720743 * toY, -1900284579 * sizeX, sizeY * 772610897, (((Class336_Sub3) this).anInt7715 * -1547195715));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("acg.a(").append(')').toString());
 		}
 	}
 
 	public boolean method4091(int i, int i_5_, int i_6_, Region region) {
-		return region.method2740(i_5_, i_6_, i, i, -1331662251 * toX, 1517720743 * toY, -1900284579 * sizeX, sizeY * 772610897, (((Class336_Sub3) this).anInt7715 * -1547195715), (byte) -11);
+		return region.canReachNextArea(i_5_, i_6_, i, i, -1331662251 * toX, 1517720743 * toY, -1900284579 * sizeX, sizeY * 772610897, (((Class336_Sub3) this).anInt7715 * -1547195715));
 	}
 
 	Class336_Sub3() {

@@ -33,7 +33,7 @@ public abstract class Class82 {
 
 	static void method871(GraphicsToolkit class_ra, LocType class432, int i, int i_0_, int i_1_, byte i_2_) {
 		try {
-			Class496 class496 = Js5ConfigGroup.aMapIconTypeList_1463.method6159((class432.anInt5400 * -1204256389), -2141345299);
+			Class496 class496 = Js5ConfigGroup.aClass487_1463.method6159((class432.anInt5400 * -1204256389), -2141345299);
 			if (1690480405 * class496.anInt6097 != -1) {
 				if (class432.aBoolean5401) {
 					i += -1382013163 * class432.anInt5402;

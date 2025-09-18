@@ -91,9 +91,9 @@ public class Class510 {
 					IncomingPacket.RICH_PRESENCE,
 					};
 			/*
-			 * aClass202_2305 = new IncomingPacket(155, 8);
-		aClass202_2306 = new IncomingPacket(156, 3);
-		aClass202_2307 = new IncomingPacket(157, 5);
+			 * CAMERA_SCRIPT_PACKET_4 = new IncomingPacket(155, 8);
+		VARBIT_BULK_TOGGLE_PACKET = new IncomingPacket(156, 3);
+		GRAPHICS_OPTION_PACKET = new IncomingPacket(157, 5);
 		WORLD_TILE_PACKET = new IncomingPacket(158, 3);
 		SHOW_FULL_NPC = new IncomingPacket(160, -2);
 		SPIN_MYSTERY_BOX = new IncomingPacket(161, -2);

@@ -14,7 +14,7 @@ public class Class86 {
 	int anInt791;
 
 	Class86(Packet class298_sub53) {
-		((Class86) this).anInt786 = class298_sub53.gSmart2or4n() * 368471857;
+		((Class86) this).anInt786 = class298_sub53.readBigSmart() * 368471857;
 		((Class86) this).aClass424_787 = ((Class424) CompressionType.method5701(Class336_Sub6.method4108(114624527), class298_sub53.readUnsignedByte(), (byte) 2));
 	}
 
@@ -60,7 +60,7 @@ public class Class86 {
 	}
 
 	public static DiskFile getPreferenceFile(String id, String prefix, boolean read) {
-		File preferencesFile = new File(GameShell.aFile6500, new StringBuilder().append("hydrix_preferences").append(id).append(".dat").toString());
+		File preferencesFile = new File(GameShell.aFile6500, new StringBuilder().append("nexus_preferences").append(id).append(".dat").toString());
 		do {
 			if (preferencesFile.exists()) {
 				DiskFile file;
@@ -77,7 +77,7 @@ public class Class86 {
 			suffix = "_rc";
 		else if (Class139.anInt1548 * -518493991 == 34)
 			suffix = "_wip";
-		File preferencesOther = new File(Class83.aString765, new StringBuilder().append("hydrix_").append(prefix).append("_preferences").append(id).append(suffix).append(".dat").toString());
+		File preferencesOther = new File(Class83.aString765, new StringBuilder().append("nexus_").append(prefix).append("_preferences").append(id).append(suffix).append(".dat").toString());
 		do {
 			if (!read && preferencesOther.exists()) {
 				DiskFile class476;
@@ -223,9 +223,9 @@ public class Class86 {
 
 	static void method966(String string, String string_27_, short i) {
 		try {
-			Class360.anInt3868 = 471358088;
-			Class360.aClass25_3905 = GameClient.gameConnection;
-			Class460.method5981(false, false, string, string_27_, -1L);
+			LoginData.anInt3868 = 471358088;
+			LoginData.aClass25_3905 = GameClient.gameConnection;
+			LoginPacket.method5981(false, false, string, string_27_, -1L);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("dm.t(").append(')').toString());
 		}

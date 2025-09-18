@@ -177,10 +177,10 @@ public class Class173 {
 			Class247.method2376(-1483926701);
 			if (!bool_14_ && GameClient.WINDOW_PANE_ID * -257444687 != -1)
 				Class82_Sub10.method903(-257444687 * GameClient.WINDOW_PANE_ID, 1, -80338519);
-			Class460 class460 = new Class460(GameClient.aClass437_8841);
-			for (Interface class298_sub51_17_ = (Interface) class460.method5979(-2012602178); null != class298_sub51_17_; class298_sub51_17_ = (Interface) class460.next()) {
+			LoginPacket loginPacket = new LoginPacket(GameClient.aClass437_8841);
+			for (Interface class298_sub51_17_ = (Interface) loginPacket.method5979(-2012602178); null != class298_sub51_17_; class298_sub51_17_ = (Interface) loginPacket.next()) {
 				if (!class298_sub51_17_.method2840(-629325116)) {
-					class298_sub51_17_ = (Interface) class460.method5979(-2012602178);
+					class298_sub51_17_ = (Interface) loginPacket.method5979(-2012602178);
 					if (null == class298_sub51_17_) {
 						if (i == -113822480)
 							break;

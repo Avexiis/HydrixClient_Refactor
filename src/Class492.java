@@ -12,7 +12,7 @@ public class Class492 {
 	void method6179(Packet class298_sub53, int i, byte i_0_) {
 		try {
 			if (i == 1)
-				((Class492) this).anInt6083 = class298_sub53.gSmart2or4n() * -1732871629;
+				((Class492) this).anInt6083 = class298_sub53.readBigSmart() * -1732871629;
 			else if (2 == i) {
 				anInt6084 = class298_sub53.readUnsignedByte() * -1845194875;
 				anInt6081 = class298_sub53.readUnsignedByte() * -1430050043;

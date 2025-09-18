@@ -67,11 +67,11 @@ public class WorldMapLabel {
 	void method4235(Packet class298_sub53, int i, short i_1_) {
 		try {
 			if (1 == i)
-				anInt3785 = class298_sub53.gSmart2or4n() * -1126107561;
+				anInt3785 = class298_sub53.readBigSmart() * -1126107561;
 			else if (i == 2)
-				anInt3779 = class298_sub53.gSmart2or4n() * -1006024925;
+				anInt3779 = class298_sub53.readBigSmart() * -1006024925;
 			else if (3 == i)
-				aString3792 = class298_sub53.gstr();
+				aString3792 = class298_sub53.getString();
 			else if (4 == i)
 				anInt3781 = class298_sub53.g3() * 1851662915;
 			else if (5 == i)
@@ -96,7 +96,7 @@ public class WorldMapLabel {
 				((WorldMapLabel) this).anInt3795 = class298_sub53.readUnsignedInt() * -166802393;
 				((WorldMapLabel) this).anInt3796 = class298_sub53.readUnsignedInt() * -1288246043;
 			} else if (i >= 10 && i <= 14)
-				click_options[i - 10] = class298_sub53.gstr();
+				click_options[i - 10] = class298_sub53.getString();
 			else if (i == 15) {
 				int i_3_ = class298_sub53.readUnsignedByte();
 				anIntArray3803 = new int[2 * i_3_];
@@ -113,9 +113,9 @@ public class WorldMapLabel {
 			} else if (i == 16)
 				aBoolean3816 = false;
 			else if (17 == i)
-				aString3789 = class298_sub53.gstr();
+				aString3789 = class298_sub53.getString();
 			else if (18 == i)
-				((WorldMapLabel) this).anInt3794 = class298_sub53.gSmart2or4n() * -1998808761;
+				((WorldMapLabel) this).anInt3794 = class298_sub53.readBigSmart() * -1998808761;
 			else if (19 == i)
 				anInt3817 = class298_sub53.readUnsignedShort() * -1012984825;
 			else if (20 == i) {
@@ -149,7 +149,7 @@ public class WorldMapLabel {
 					int i_11_ = class298_sub53.g3();
 					Node node;
 					if (bool)
-						node = new LinkableObject(class298_sub53.gstr());
+						node = new LinkableObject(class298_sub53.getString());
 					else
 						node = new Class298_Sub35(class298_sub53.readUnsignedInt());
 					((WorldMapLabel) this).aClass437_3811.method5817(node, (long) i_11_);
@@ -352,7 +352,7 @@ public class WorldMapLabel {
 			Class298_Sub32_Sub14.aClass477_9400.method6091((byte) -85);
 			Class298_Sub32_Sub14.aClass477_9400.method6089(-1524552538);
 			Class15.aClass507_224.method6273((byte) 14);
-			Class360.method4301(658986741);
+			LoginData.method4301(658986741);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("or.afg(").append(')').toString());
 		}

@@ -43,8 +43,8 @@ public class Class82_Sub12 extends Class82 {
 				int i_0_ = 1168366243 * Class10.anInt129;
 				int[] is = Class10.anIntArray135;
 				for (int i_1_ = 0; i_1_ < i_0_; i_1_++) {
-					Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[is[i_1_]]);
-					if (class365_sub1_sub1_sub2_sub2.username != null && class365_sub1_sub1_sub2_sub2.username.equalsIgnoreCase(string) && (((class365_sub1_sub1_sub2_sub2 == Class287.myPlayer) && 0 != (Node.anInt3192 * -112110875 & 0x10)) || 0 != (-112110875 * Node.anInt3192 & 0x8))) {
+					Player player = (GameClient.players[is[i_1_]]);
+					if (player.username != null && player.username.equalsIgnoreCase(string) && (((player == Class287.myPlayer) && 0 != (Node.anInt3192 * -112110875 & 0x10)) || 0 != (-112110875 * Node.anInt3192 & 0x8))) {
 						Class298_Sub36 class298_sub36 = Class18.method359(OutgoingPacket.INTERFACE_ON_PLAYER, (GameClient.gameConnection.aClass449_330), (byte) 25);
 						class298_sub36.buffer.writeShort(GameClient.c92 * 1408085039, 16711935);
 						class298_sub36.buffer.writeShort(is[i_1_], 16711935);
@@ -52,8 +52,8 @@ public class Class82_Sub12 extends Class82 {
 						class298_sub36.buffer.writeShortLE128(GameClient.anInt8836 * 392084321);
 						class298_sub36.buffer.write128Byte(0, (byte) 1);
 						GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte) -11);
-						int i_2_ = class365_sub1_sub1_sub2_sub2.getSize();
-						Class82_Sub21.method938(class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0], class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0], true, Class325.method3963((class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0]), (class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0]), i_2_, i_2_, 0, (byte) -117), -263181253);
+						int i_2_ = player.getSize();
+						Class82_Sub21.method938(player.scenePositionXQueue[0], player.scenePositionYQueue[0], true, Class325.method3963((player.scenePositionXQueue[0]), (player.scenePositionYQueue[0]), i_2_, i_2_, 0, (byte) -117), -263181253);
 						bool = true;
 						break;
 					}

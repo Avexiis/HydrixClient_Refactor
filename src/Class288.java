@@ -46,7 +46,7 @@ public abstract class Class288 implements Runnable {
 
 	static final void method2727(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = -1372893999 * Class360.anInt3871;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = -1372893999 * LoginData.anInt3871;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ly.ahs(").append(')').toString());
 		}

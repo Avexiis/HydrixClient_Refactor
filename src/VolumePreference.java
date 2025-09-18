@@ -90,7 +90,7 @@ public class VolumePreference extends IntegerPreferenceField {
 			int i_3_ = i & 0xff;
 			if (i_3_ == 0)
 				return false;
-			if (i_3_ >= 128 && i_3_ < 160 && '\0' == Class419.aCharArray5340[i_3_ - 128])
+			if (i_3_ >= 128 && i_3_ < 160 && '\0' == ConsoleCommands.aCharArray5340[i_3_ - 128])
 				return false;
 			return true;
 		} catch (RuntimeException runtimeexception) {

@@ -136,7 +136,7 @@ public final class HashTable
   {
     try
     {
-      return new Class460(this);
+      return new LoginPacket(this);
     }
     catch (RuntimeException runtimeexception)
     {

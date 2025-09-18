@@ -55,10 +55,10 @@ public class Class78 {
 
 	static void method845(int i, int i_7_) {
 		try {
-			if (!Loader.LOBBY_ENABLED || 136 == Class360.anInt3868 * -122629167)
-				Class360.anInt3892 = i * -1674285757;
-			else if (Loader.LOBBY_ENABLED && 264 == Class360.anInt3868 * -122629167)
-				Class360.anInt3871 = i * -1653306319;
+			if (!Loader.LOBBY_ENABLED || 136 == LoginData.anInt3868 * -122629167)
+				LoginData.anInt3892 = i * -1674285757;
+			else if (Loader.LOBBY_ENABLED && 264 == LoginData.anInt3868 * -122629167)
+				LoginData.anInt3871 = i * -1653306319;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("dd.j(").append(')').toString());
 		}

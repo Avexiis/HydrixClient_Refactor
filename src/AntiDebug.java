@@ -2,19 +2,10 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.regex.*;
- /**
- * This class uses PowerShell to detect process names against the following list of disallowed programs.
- * It makes no attempt to block or notify the suspected user, nor does it do anything less than friendly.
- * It simply captures the data and sends a webhook to Discord for review by server staff.
- * Obviously, because it uses PowerShell, this makes the client only run properly on Windows.
- * 
- * If you do not wish to force Windows, disable this class and its executor in Loader.java, as well as the single call in RichPresence.java.
- * 
- * @author Xeon
- */
-public class TamperScanner {
 
-	private static final String[] BLACKLIST_PATTERNS = { //not all of these will apply to RSPS, add or remove as needed
+public class AntiDebug {
+
+	private static final String[] BLACKLIST_PATTERNS = {
 		"fiddler",
 		"dnspy",
 		"ollydbg",
@@ -121,7 +112,6 @@ public class TamperScanner {
 				String[] tokens = line.trim().split("\\s+");
 				if (tokens.length == 0) continue;
 				String processName = tokens[0];
-
 				for (Pattern pattern : COMPILED_BLACKLIST) {
 					if (pattern.matcher(processName).find()) {
 						reported.add(processName.toLowerCase());
@@ -132,7 +122,6 @@ public class TamperScanner {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		try {
 			String powershellCmd =
 				"powershell -Command \"Get-Process | Where-Object {$_.MainWindowTitle} | " +
@@ -167,20 +156,13 @@ public class TamperScanner {
             con.addRequestProperty("Content-Type", "application/json");
             con.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0");
             con.setDoOutput(true);
-
-            String safeContent = content.replace("\\", "\\\\")
-                                        .replace("\"", "\\\"")
-                                        .replace("\n", "\\n")
-                                        .replace("\r", "");
+            String safeContent = content.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n").replace("\r", "");
             String payload = "{\"content\": \"" + safeContent + "\"}";
-
             OutputStream os = con.getOutputStream();
             os.write(payload.getBytes("UTF-8"));
             os.flush();
             os.close();
-
             int code = con.getResponseCode();
-         
             if (code >= 400) {
                 BufferedReader err = new BufferedReader(new InputStreamReader(con.getErrorStream()));
                 String line;
@@ -201,17 +183,16 @@ public class TamperScanner {
         String detected = scanForBlacklistedProcesses();
         if (detected != null) {
             String mac = MacAddress.getMacAddress();
-
+			String hwid = HardwareFingerprint.computeHex();
             if (username == null || username.isEmpty())
                 username = getLastKnownUsername();
-
             if (username == null || username.isEmpty())
                 username = "Unknown";
-
             String content =
                 "__**Possible Tampering detected!**__\n" +
                 "Program: `" + detected + "`\n" +
                 "MAC: || " + mac + " ||\n" +
+				"HWID: || " + hwid + " ||\n" +
                 "Username: `" + username + "`\n" +
                 "Timestamp: <t:" + (System.currentTimeMillis()/1000L) + ">";
             sendDiscordWebhook(webhookUrl, content);
@@ -226,7 +207,7 @@ public class TamperScanner {
 
     public static void main(String[] args) {
         String webhook = "https://discord.com/api/webhooks/removed/removed";
-        setLastKnownUsername(Class360.username);
+        setLastKnownUsername(LoginData.username);
         scanAndReport(webhook);
     }
 }

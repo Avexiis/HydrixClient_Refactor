@@ -2,12 +2,12 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class MapKeys {
+public class Class296 {
 	public int[] anIntArray3168;
 	public int anInt3169;
 	public int[] anIntArray3170;
 
-	public MapKeys(int i) {
+	public Class296(int i) {
 		anInt3169 = 526813095 * i;
 		anIntArray3168 = new int[anInt3169 * -1407078377];
 		anIntArray3170 = new int[anInt3169 * -1407078377];

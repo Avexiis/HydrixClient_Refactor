@@ -8,10 +8,10 @@ public class OverlayType {
 	int anInt4053;
 	public int anInt4054;
 	public int anInt4055;
-	public int color = 0;
+	public int anInt4056 = 0;
 	public int anInt4057 = -473139963;
 	static int anInt4058 = 1190717;
-	public int minimapColor;
+	public int anInt4059;
 	public int anInt4060;
 	public boolean aBoolean4061;
 	public boolean aBoolean4062 = true;
@@ -27,7 +27,7 @@ public class OverlayType {
 	public static ChecksumTableEntry[] aChecksumTableEntryArray4072;
 
 	OverlayType() {
-		minimapColor = 1749423345;
+		anInt4059 = 1749423345;
 		anInt4060 = 99235328;
 		aBoolean4061 = true;
 		anInt4055 = 1206519288;
@@ -51,7 +51,7 @@ public class OverlayType {
 	void method4604(Packet class298_sub53, int i, short i_0_) {
 		try {
 			if (i == 1) {
-				color = Class112.method1240(class298_sub53.g3(), (byte) 66) * -1294090885;
+				anInt4056 = Class112.method1240(class298_sub53.g3(), (byte) 66) * -1294090885;
 			} else if (i == 2) {
 				anInt4057 = class298_sub53.readUnsignedByte() * 473139963;
 			} else if (3 == i) {
@@ -62,7 +62,7 @@ public class OverlayType {
 			} else if (5 == i) {
 				aBoolean4062 = false;
 			} else if (i == 7) {
-				minimapColor = Class112.method1240(class298_sub53.g3(), (byte) 71) * -1749423345;
+				anInt4059 = Class112.method1240(class298_sub53.g3(), (byte) 71) * -1749423345;
 			} else if (i == 8) {
 				this.aClass375_4065.anInt4080 = 1023752851 * this.anInt4053;
 			} else if (i == 9) {
@@ -180,7 +180,7 @@ public class OverlayType {
 			Class99.aVarClanTypeList_951.method6306((byte) 119);
 			Class299.aClanSettings_3199.method4575(242474592);
 			Class94.aClass349_913.method4201((byte) -124);
-			Js5ConfigGroup.aMapIconTypeList_1463.method6162((byte) 81);
+			Js5ConfigGroup.aClass487_1463.method6162((byte) 81);
 			Class363.aWorldMapLabelList_3931.method4120(758365461);
 			Class92.aClass504_905.method6248(2090718480);
 			VarBitType.aClass317_3472.method3848(-1350735214);

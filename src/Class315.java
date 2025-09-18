@@ -203,7 +203,7 @@ public final class Class315 {
 				int i_73_ = class298_sub53_sub2.readUnsignedShort();
 				int i_74_ = class298_sub53_sub2.readUnsignedByte();
 				int i_75_ = class298_sub53_sub2.g3();
-				String string = class298_sub53_sub2.gstr();
+				String string = class298_sub53_sub2.getString();
 				if (GameClient.map.method2674(1533260419) != Class266.aClass266_2846)
 					Class300.method3687(-191892109 * FloTypeList.basePlane, i_71_, i_72_, i_74_, i_73_, i_75_, string, 1332190940);
 			} else if (class206 == SubIncommingPacket.SPAWN_OBJECT_PACKET) {
@@ -527,7 +527,7 @@ public final class Class315 {
 
 	public static final boolean method3837(byte i) {
 		try {
-			return Class360.anInt3896 * -707576455 != 1;
+			return LoginData.anInt3896 * -707576455 != 1;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("nd.k(").append(')').toString());
 		}

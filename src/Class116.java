@@ -142,9 +142,9 @@ public class Class116 {
 							i_15_ = ((int) sceneObjectPosition.z - (256 + ((i_18_ - 283514611 * worldTile.y) * 512)));
 						} else if ((i_11_ & 0x8000) != 0) {
 							int i_19_ = i_11_ & 0x7fff;
-							Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[i_19_]);
-							if (null != class365_sub1_sub1_sub2_sub2) {
-								SceneObjectPosition sceneObjectPosition_20_ = (class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
+							Player player = (GameClient.players[i_19_]);
+							if (null != player) {
+								SceneObjectPosition sceneObjectPosition_20_ = (player.method4337().aSceneObjectPosition_2599);
 								i_14_ = ((int) sceneObjectPosition.x - (int) sceneObjectPosition_20_.x);
 								i_15_ = ((int) sceneObjectPosition.z - (int) sceneObjectPosition_20_.z);
 							} else {

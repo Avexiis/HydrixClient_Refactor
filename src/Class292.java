@@ -46,10 +46,10 @@ public class Class292 {
 
 	public static Class481 method2815(String string, int i, int i_5_) {
 		try {
-			Class481_Sub1 class481_sub1 = new Class481_Sub1();
-			((Class481) class481_sub1).aString6034 = string;
-			((Class481) class481_sub1).anInt6033 = 1609563993 * i;
-			return class481_sub1;
+			ConnectionTunnel connectionTunnel = new ConnectionTunnel();
+			((Class481) connectionTunnel).CONNECT_ADDRESS = string;
+			((Class481) connectionTunnel).connectPort = 1609563993 * i;
+			return connectionTunnel;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("md.a(").append(')').toString());
 		}

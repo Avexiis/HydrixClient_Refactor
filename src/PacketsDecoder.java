@@ -229,14 +229,14 @@ public class PacketsDecoder {
 				String string = "";
 				String string_83_ = string;
 				if ((i_82_ & 0x1) != 0) {
-					string = stream.gstr();
+					string = stream.getString();
 					if (0 != (i_82_ & 0x2)) {
-						string_83_ = stream.gstr();
+						string_83_ = stream.getString();
 					} else {
 						string_83_ = string;
 					}
 				}
-				String string_84_ = stream.gstr();
+				String string_84_ = stream.getString();
 				if (i_80_ == 99) {
 					Class255.sendDevConsoleMsg(string_84_, 1055145979);
 				} else if (i_80_ == 98) {
@@ -392,14 +392,14 @@ public class PacketsDecoder {
 					}
 				} else if (targetHash >> 28 != 0) {
 					int i_114_ = targetHash & 0xffff;
-					Player class365_sub1_sub1_sub2_sub2;
+					Player player;
 					if (i_114_ == -442628795 * GameClient.playerIndex) {
-						class365_sub1_sub1_sub2_sub2 = Class287.myPlayer;
+						player = Class287.myPlayer;
 					} else {
-						class365_sub1_sub1_sub2_sub2 = GameClient.players[i_114_];
+						player = GameClient.players[i_114_];
 					}
-					if (class365_sub1_sub1_sub2_sub2 != null) {
-						SpotAnimation class56 = class365_sub1_sub1_sub2_sub2.currentGraphics[slotId];
+					if (player != null) {
+						SpotAnimation class56 = player.currentGraphics[slotId];
 						if (65535 == graphicsId) {
 							graphicsId = -1;
 						}
@@ -485,7 +485,7 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (IncomingPacket.GLOBAL_STRING_PACKET_2 == class25.INCOMMING_PACKET) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				int i_133_ = stream.readUnsignedShort();
 				Class343.method4162(1879133917);
 				Class501.method6230(i_133_, string, -1961104888);
@@ -511,11 +511,11 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (IncomingPacket.aClass202_2199 == class25.INCOMMING_PACKET) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				boolean bool = stream.readUnsignedByte() == 1;
 				String string_136_;
 				if (bool) {
-					string_136_ = stream.gstr();
+					string_136_ = stream.getString();
 				} else {
 					string_136_ = string;
 				}
@@ -548,7 +548,7 @@ public class PacketsDecoder {
 						Class82_Sub6.aClass7Array6846[Class489.anInt6071 * -1801543887] = null;
 					}
 				} else {
-					String string_142_ = stream.gstr();
+					String string_142_ = stream.getString();
 					Class7 class7 = new Class7();
 					class7.aString92 = string;
 					class7.aString93 = string_136_;
@@ -669,7 +669,7 @@ public class PacketsDecoder {
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.aClass202_2236) {
 				int i_156_ = stream.readUnsignedByte();
-				int i_157_ = stream.gSmart2or4n();
+				int i_157_ = stream.readBigSmart();
 				if (null != GameClient.aClass299Array8671[i_156_]) {
 					GameClient.aClass299Array8671[i_156_].method3677(GameClient.map.method2675(-1611682495), -1127737066);
 					GameClient.aClass299Array8671[i_156_] = null;
@@ -690,7 +690,7 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.SET_MOUSE_PACKET) {
-				Class82_Sub6.aString6845 = -866602563 * class25.anInt336 > 2 ? stream.gstr() : LocalizedString.ACTION_WALK_HERE.getText(Class321.ACTIVE_LANGUAGE, -875414210);
+				Class82_Sub6.aString6845 = -866602563 * class25.anInt336 > 2 ? stream.getString() : LocalizedString.ACTION_WALK_HERE.getText(Class321.ACTIVE_LANGUAGE, -875414210);
 				GameClient.anInt8822 = (class25.anInt336 * -866602563 > 0 ? stream.readUnsignedShort() : -1) * 812630591;
 				if (GameClient.anInt8822 * -1471730241 == 65535) {
 					GameClient.anInt8822 = -812630591;
@@ -715,7 +715,7 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.unknown == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				long l = stream.readUnsignedShort();
 				long l_166_ = stream.g3();
 				int i_167_ = stream.readUnsignedByte();
@@ -790,7 +790,7 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.SEND_FRIEND_QUICK_CHAT_MESSAGE_PACKET) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				int i_179_ = stream.readUnsignedShort();
 				String string_180_ = Class447.aClass469_5618.method6045(i_179_, (short) -5033).method3459(stream, -734708119);
 				Class25.method393(19, 0, string, string, string, string_180_, null, i_179_, 1446000206);
@@ -865,29 +865,30 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.PUBLIC_MESSAGE_PACKET == class25.INCOMMING_PACKET) {
 				int i_198_ = stream.readUnsignedShort();
-				Player class365_sub1_sub1_sub2_sub2;
+				Player player;
 				if (GameClient.playerIndex * -442628795 == i_198_) {
-					class365_sub1_sub1_sub2_sub2 = Class287.myPlayer;
+					player = Class287.myPlayer;
 				} else {
-					class365_sub1_sub1_sub2_sub2 = GameClient.players[i_198_];
+					player = GameClient.players[i_198_];
 				}
-				if (class365_sub1_sub1_sub2_sub2 == null) {
+				if (player == null) {
 					class25.INCOMMING_PACKET = null;
 					return true;
 				}
 				int i_199_ = stream.readUnsignedShort();
 				int crown = stream.readUnsignedByte();
-				if (crown == 2 && class365_sub1_sub1_sub2_sub2.username.equalsIgnoreCase("Xeon") || class365_sub1_sub1_sub2_sub2.username.equalsIgnoreCase("not_puragen")) {
+				if (crown == 2 && player.username.equalsIgnoreCase(Settings.SERVER_OWNER1)
+						|| player.username.equalsIgnoreCase(Settings.SERVER_OWNER2)) {
 					crown = 21;
 				}
 				int rights = crown;
 				boolean bool = (i_199_ & 0x8000) != 0;
-				if (class365_sub1_sub1_sub2_sub2.username != null && class365_sub1_sub1_sub2_sub2.appearance != null) {
+				if (player.username != null && player.appearance != null) {
 					boolean bool_201_ = false;
 					if (rights != 2) {
 						if (!bool && (GameClient.aBoolean8811 && !GameClient.aBoolean8812 || GameClient.aBoolean8802)) {
 							bool_201_ = true;
-						} else if (Class287.method2722(class365_sub1_sub1_sub2_sub2.username, -1965589466)) {
+						} else if (Class287.method2722(player.username, -1965589466)) {
 							bool_201_ = true;
 						}
 					}
@@ -903,7 +904,7 @@ public class PacketsDecoder {
 							string = Class248.decryptStringMessage(
 								Class127_Sub1.huffManDecryption(stream, -1331458039), -446542687);
 						}
-						class365_sub1_sub1_sub2_sub2.method4474(string.trim(), i_199_ >> 8, i_199_ & 0xff, 1232670584);
+						player.method4474(string.trim(), i_199_ >> 8, i_199_ & 0xff, 1232670584);
 						int i_203_;
 						if (rights == 1 || rights == 2) {
 							i_203_ = bool ? 17 : 1;
@@ -912,24 +913,24 @@ public class PacketsDecoder {
 						}
 						if (rights == 2) {
 							Class25.method393(i_203_, 0,
-								Class247.method2368(1, -278777595) + class365_sub1_sub1_sub2_sub2.getFullName(true, -1687851032),
-								Class247.method2368(1, -278777595) + class365_sub1_sub1_sub2_sub2.getDisplayName(false, (byte)-97),
-								class365_sub1_sub1_sub2_sub2.displayName, string, null, i_202_, 1446000206);
+								Class247.method2368(1, -278777595) + player.getFullName(true, -1687851032),
+								Class247.method2368(1, -278777595) + player.getDisplayName(false, (byte)-97),
+								player.displayName, string, null, i_202_, 1446000206);
 						} else if (rights == 1) {
 							Class25.method393(i_203_, 0,
-								Class247.method2368(0, -278777595) + class365_sub1_sub1_sub2_sub2.getFullName(true, -1640003201),
-								Class247.method2368(0, -278777595) + class365_sub1_sub1_sub2_sub2.getDisplayName(false, (byte)-113),
-								class365_sub1_sub1_sub2_sub2.displayName, string, null, i_202_, 1446000206);
+								Class247.method2368(0, -278777595) + player.getFullName(true, -1640003201),
+								Class247.method2368(0, -278777595) + player.getDisplayName(false, (byte)-113),
+								player.displayName, string, null, i_202_, 1446000206);
 						} else if (rights != 0) {
 							Class25.method393(i_203_, 0,
-								"<img=" + rights + ">" + class365_sub1_sub1_sub2_sub2.getFullName(true, -1755073777),
-								"<img=" + rights + ">" + class365_sub1_sub1_sub2_sub2.getDisplayName(false, (byte)-103),
-								class365_sub1_sub1_sub2_sub2.displayName, string, null, i_202_, 1446000206);
+								"<img=" + rights + ">" + player.getFullName(true, -1755073777),
+								"<img=" + rights + ">" + player.getDisplayName(false, (byte)-103),
+								player.displayName, string, null, i_202_, 1446000206);
 						} else {
 							Class25.method393(i_203_, 0,
-								class365_sub1_sub1_sub2_sub2.getFullName(true, -1755073777),
-								class365_sub1_sub1_sub2_sub2.getDisplayName(false, (byte)-103),
-								class365_sub1_sub1_sub2_sub2.displayName, string, null, i_202_, 1446000206);
+								player.getFullName(true, -1755073777),
+								player.getDisplayName(false, (byte)-103),
+								player.displayName, string, null, i_202_, 1446000206);
 						}
 					}
 				}
@@ -959,7 +960,7 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (IncomingPacket.aClass202_2178 == class25.INCOMMING_PACKET) {
-				Class396.method4908(stream.gstr(), 2117221193);
+				Class396.method4908(stream.getString(), 2117221193);
 				class25.INCOMMING_PACKET = null;
 				return true;
 			}
@@ -979,9 +980,7 @@ public class PacketsDecoder {
 				class25.INCOMMING_PACKET = null;
 				return true;
 			}
-			if (class25.INCOMMING_PACKET == IncomingPacket.INTERFACE_PACKET) { // interface
-																							// definitions
-																							// way
+			if (class25.INCOMMING_PACKET == IncomingPacket.INTERFACE_PACKET) { // interface definitions way
 				int interfaceId = stream.readUnsignedShort();
 				int key1 = stream.readUnsignedInt();
 				int key2 = stream.readIntV2((byte) 113);
@@ -995,11 +994,11 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.RUN_SCRIPT_PACKET) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				Object[] objects = new Object[string.length() + 1];
 				for (int i_216_ = string.length() - 1; i_216_ >= 0; i_216_--) {
 					if (string.charAt(i_216_) == 's') {
-						objects[i_216_ + 1] = stream.gstr();
+						objects[i_216_ + 1] = stream.getString();
 					} else {
 						objects[i_216_ + 1] = new Integer(stream.readUnsignedInt());
 					}
@@ -1010,9 +1009,9 @@ public class PacketsDecoder {
 				scriptContext.arguments = objects;
 
 				ClientScript class298_sub37_sub17 = Class216.getClientScript((Integer) objects[0], (byte) 1);
-				System.out.println("i " + class298_sub37_sub17.anInt9679 * -1516159487);
-				System.out.println("s " + class298_sub37_sub17.anInt9680 * 1787035509);
-				System.out.println("l " + 1679522843 * class298_sub37_sub17.anInt9681);
+				//System.out.println("i " + class298_sub37_sub17.anInt9679 * -1516159487);
+				//System.out.println("s " + class298_sub37_sub17.anInt9680 * 1787035509);
+				//System.out.println("l " + 1679522843 * class298_sub37_sub17.anInt9681);
 
 				ClientBuild.execute(scriptContext, (byte) 58);
 				class25.INCOMMING_PACKET = null;
@@ -1046,7 +1045,7 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.LOBBY_LOGOUT_PACKET == class25.INCOMMING_PACKET) {
 				// Lobby logout
-				Class216.method2001(Class360.aBoolean3912, (byte) 110);
+				Class216.method2001(LoginData.aBoolean3912, (byte) 110);
 				class25.INCOMMING_PACKET = null;
 				return false;
 			}
@@ -1066,7 +1065,7 @@ public class PacketsDecoder {
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.PLAYER_OPTION_PACKET) {
 				int slot = stream.readUnsignedByte128(-1014855659);
-				String optionName = stream.gstr();
+				String optionName = stream.getString();
 				int cursor = stream.readUnsignedShortLE128(1478539457);
 				if (65535 == cursor) {
 					cursor = -1;
@@ -1119,10 +1118,10 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.RECEIVE_PRIVATE_QUICK_CHAT_MESSAGE_PACKET == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_233_ = string;
 				if (bool) {
-					string_233_ = stream.gstr();
+					string_233_ = stream.getString();
 				}
 				long l = stream.readUnsignedShort();
 				long l_234_ = stream.g3();
@@ -1268,10 +1267,10 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.RECEIVE_FRIEND_CHAT_QUICK_MESSAGE_PACKET == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_260_ = string;
 				if (bool) {
-					string_260_ = stream.gstr();
+					string_260_ = stream.getString();
 				}
 				long l = stream.readLong((short) 2948);
 				long l_261_ = stream.readUnsignedShort();
@@ -1318,15 +1317,15 @@ public class PacketsDecoder {
 			if (class25.INCOMMING_PACKET == IncomingPacket.FRIENDS_PACKET) {
 				while (stream.pos * 385051775 < class25.anInt336 * -866602563) {
 					boolean bool = stream.readUnsignedByte() == 1;
-					String string = stream.gstr();
-					String string_269_ = stream.gstr();
+					String string = stream.getString();
+					String string_269_ = stream.getString();
 					int i_270_ = stream.readUnsignedShort();
 					int i_271_ = stream.readUnsignedByte();
 					boolean bool_272_ = stream.readUnsignedByte() == 1;
 					String string_273_ = "";
 					boolean bool_274_ = false;
 					if (i_270_ > 0) {
-						string_273_ = stream.gstr();
+						string_273_ = stream.getString();
 						bool_274_ = stream.readUnsignedByte() == 1;
 					}
 					for (int i_275_ = 0; i_275_ < GameClient.anInt8941 * -1054937867; i_275_++) {
@@ -1530,7 +1529,7 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.SEND_PRIVATE_MESSAGE_PACKET) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_305_ = Class248.decryptStringMessage(Class127_Sub1.huffManDecryption(stream, 1133530682), 882285799);
 				ChecksumTableEntry.method2282(6, 0, string, string, string, string_305_, -109686251);
 				class25.INCOMMING_PACKET = null;
@@ -1771,10 +1770,10 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.RECEIVE_PERSONAL_MESSAGE_PACKET == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_366_ = string;
 				if (bool) {
-					string_366_ = stream.gstr();
+					string_366_ = stream.getString();
 				}
 				int rights = stream.readUnsignedByte();
 				boolean bool_368_ = false;
@@ -1936,13 +1935,13 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.CLIENT_CONSOLE_COMMAND_PACKET) {
-				String string = stream.gstr();
-				Class419.method5605(string, false, false, 1722466628);
+				String string = stream.getString();
+				ConsoleCommands.method5605(string, false, false, 1722466628);
 				class25.INCOMMING_PACKET = null;
 				return true;
 			}
 			if (IncomingPacket.ICOMPONENT_TEXT_PACKET == class25.INCOMMING_PACKET) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				int i_393_ = stream.readUnsignedInt();
 				Class343.method4162(1866229286);
 				Class98.method1058(i_393_, string, (byte) 66);
@@ -1951,7 +1950,7 @@ public class PacketsDecoder {
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.RECEIVE_QUICK_PRIVATE_MESSAGE) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				long l = stream.readUnsignedShort();
 				long l_394_ = stream.g3();
 				int rights = stream.readUnsignedByte();
@@ -1995,10 +1994,10 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.aClass202_2174 == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_402_ = string;
 				if (bool) {
-					string_402_ = stream.gstr();
+					string_402_ = stream.getString();
 				}
 				int i_403_ = stream.readUnsignedByte();
 				int i_404_ = stream.readUnsignedShort();
@@ -2130,7 +2129,7 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.GLOBAL_STRING_PACKET == class25.INCOMMING_PACKET) {
 				int i_431_ = stream.readUnsignedShort();
-				String string = stream.gstr();
+				String string = stream.getString();
 				Class343.method4162(1777124419);
 				Class501.method6230(i_431_, string, -2125607456);
 				class25.INCOMMING_PACKET = null;
@@ -2184,7 +2183,7 @@ public class PacketsDecoder {
 			if (IncomingPacket.aClass202_2158 == class25.INCOMMING_PACKET) {
 				// seems to switch world
 				int i_439_ = stream.readUnsignedShort();
-				String string = stream.gstr();
+				String string = stream.getString();
 				boolean bool = stream.readUnsignedByte() == 1;
 				Class474.aClass471_5972 = Class474.aClass471_5979;
 				Class474.aBoolean5973 = bool;
@@ -2221,10 +2220,10 @@ public class PacketsDecoder {
 					class25.INCOMMING_PACKET = null;
 					return true;
 				}
-				GameClient.aString8919 = stream.gstr();
+				GameClient.aString8919 = stream.getString();
 				boolean bool = stream.readUnsignedByte() == 1;
 				if (bool) {
-					stream.gstr();
+					stream.getString();
 				}
 				long l = stream.readLong((short) 6221);
 				GameClient.aString8804 = Class377.method4664(l);
@@ -2238,10 +2237,10 @@ public class PacketsDecoder {
 				Class7[] class7s = new Class7[100];
 				for (int i_446_ = 0; i_446_ < Class489.anInt6071 * -1801543887; i_446_++) {
 					class7s[i_446_] = new Class7();
-					class7s[i_446_].aString92 = stream.gstr();
+					class7s[i_446_].aString92 = stream.getString();
 					bool = stream.readUnsignedByte() == 1;
 					if (bool) {
-						class7s[i_446_].aString93 = stream.gstr();
+						class7s[i_446_].aString93 = stream.getString();
 					} else {
 						class7s[i_446_].aString93 = class7s[i_446_].aString92;
 					}
@@ -2256,7 +2255,7 @@ public class PacketsDecoder {
 						? 21
 						: rawRank
 					);
-					class7s[i_446_].aString96 = stream.gstr();
+					class7s[i_446_].aString96 = stream.getString();
 					if (class7s[i_446_].aString93.equals(Class287.myPlayer.username)) {
 						Class173.aByte1759 = class7s[i_446_].aByte97;
 					}
@@ -2366,7 +2365,7 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.aClass202_2247 == class25.INCOMMING_PACKET) {
 				int i_454_ = stream.readUnsignedShort();
-				String string = stream.gstr();
+				String string = stream.getString();
 				if (null == Class313.anObjectArray3298) {
 					Class313.anObjectArray3298 = new Object[2143828057 * Class99.aVarClanTypeList_951.anInt6268];
 				}
@@ -2377,7 +2376,8 @@ public class PacketsDecoder {
 			}
 			if (class25.INCOMMING_PACKET == IncomingPacket.LOAD_MAP_SCENE_DYNAMIC_PACKET) {
 				RsBitsBuffer class298_sub53_sub2_455_ = new RsBitsBuffer(class25.anInt336 * -866602563);
-				System.arraycopy(class25.aClass298_Sub53_Sub2_333.payload, class25.aClass298_Sub53_Sub2_333.pos * 385051775, class298_sub53_sub2_455_.payload, 0, class25.anInt336 * -866602563);
+				System.arraycopy(class25.aClass298_Sub53_Sub2_333.payload, class25.aClass298_Sub53_Sub2_333.pos * 385051775,
+						class298_sub53_sub2_455_.payload, 0, class25.anInt336 * -866602563);
 				RSInterface.method1304(1849823335);
 				if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -70) == 1) {
 					overheadString.aClass248_612.method2385(new Class267(Class266.LOAD_MAP_SCENE_DYNAMIC, class298_sub53_sub2_455_), 1563574437);
@@ -2427,17 +2427,20 @@ public class PacketsDecoder {
 				boolean bool = stream.readUnsignedByte() == 1;
 				stream.method3662(is, 0, class25.anInt336 * -866602563 - 1, (byte) 1);
 				Packet class298_sub53 = new Packet(is);
-				String string = class298_sub53.gstr();
+				String string = class298_sub53.getString();
 				if (bool) {
-					String string_466_ = class298_sub53.gstr();
+					String string_466_ = class298_sub53.getString();
 					if (string_466_.length() == 0) {
 						string_466_ = string;
 					}
-					if (!GameClient.aBoolean8638 || Class82_Sub8.aString6856.startsWith("mac") || !Class65.method762(string, 1, Class212.aClass212_2424.method1951(-1209858466), -1999887910)) {
-						ErrorContext.method4172(string_466_, true, GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-2008340671) == 5, GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 13);
+					if (!GameClient.aBoolean8638 || Class82_Sub8.aString6856.startsWith("mac")
+							|| !Class65.method762(string, 1, Class212.aClass212_2424.method1951(-1209858466), -1999887910)) {
+						ErrorContext.method4172(string_466_, true, GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-2008340671) == 5,
+								GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 13);
 					}
 				} else {
-					ErrorContext.method4172(string, true, GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-389602471) == 5, GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 54);
+					ErrorContext.method4172(string, true, GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-389602471) == 5,
+							GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 54);
 				}
 				class25.INCOMMING_PACKET = null;
 				return true;
@@ -2471,18 +2474,20 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.RECEIVE_FRIEND_CHAT_MESSAGE_PACKET == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_473_ = string;
 				if (bool) {
-					string_473_ = stream.gstr();
+					string_473_ = stream.getString();
 				}
 				long l = stream.readLong((short) 19447);
 				long l_474_ = stream.readUnsignedShort();
 				long l_475_ = stream.g3();
 				int rawRights = stream.readUnsignedByte();
-				int rights = ("Xeon".equalsIgnoreCase(string) || "not_puragen".equalsIgnoreCase(string))
-							 ? 21
-							 : rawRights;
+				int rights =
+						(Settings.SERVER_OWNER1.equalsIgnoreCase(string)
+						|| Settings.SERVER_OWNER2.equalsIgnoreCase(string))
+						? 21
+						: rawRights;
 				long l_477_ = l_475_ + (l_474_ << 32);
 				boolean bool_478_ = false;
 				while_92_: do {
@@ -2566,13 +2571,13 @@ public class PacketsDecoder {
 			if (IncomingPacket.IGNORES_PACKET == class25.INCOMMING_PACKET) {
 				GameClient.anInt8952 = stream.readUnsignedByte() * -765637727;
 				for (int i_483_ = 0; i_483_ < GameClient.anInt8952 * -548972447; i_483_++) {
-					GameClient.aStringArray8859[i_483_] = stream.gstr();
-					GameClient.aStringArray8954[i_483_] = stream.gstr();
+					GameClient.aStringArray8859[i_483_] = stream.getString();
+					GameClient.aStringArray8954[i_483_] = stream.getString();
 					if (GameClient.aStringArray8954[i_483_].equals("")) {
 						GameClient.aStringArray8954[i_483_] = GameClient.aStringArray8859[i_483_];
 					}
-					GameClient.aStringArray8955[i_483_] = stream.gstr();
-					GameClient.aStringArray8773[i_483_] = stream.gstr();
+					GameClient.aStringArray8955[i_483_] = stream.getString();
+					GameClient.aStringArray8773[i_483_] = stream.getString();
 					if (GameClient.aStringArray8773[i_483_].equals("")) {
 						GameClient.aStringArray8773[i_483_] = GameClient.aStringArray8955[i_483_];
 					}
@@ -2612,10 +2617,10 @@ public class PacketsDecoder {
 			}
 			if (IncomingPacket.RECEIVE_PRIVATE_MESSAGE_PACKET == class25.INCOMMING_PACKET) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				String string = stream.gstr();
+				String string = stream.getString();
 				String string_488_ = string;
 				if (bool) {
-					string_488_ = stream.gstr();
+					string_488_ = stream.getString();
 				}
 				long l = stream.readUnsignedShort();
 				long l_489_ = stream.g3();
@@ -2657,13 +2662,13 @@ public class PacketsDecoder {
 			if (class25.INCOMMING_PACKET == IncomingPacket.IGNORE_PACKET) {
 				int i_495_ = stream.readUnsignedByte();
 				boolean bool = (i_495_ & 0x1) == 1;
-				String string = stream.gstr();
-				String string_496_ = stream.gstr();
+				String string = stream.getString();
+				String string_496_ = stream.getString();
 				if (string_496_.equals("")) {
 					string_496_ = string;
 				}
-				String string_497_ = stream.gstr();
-				String string_498_ = stream.gstr();
+				String string_497_ = stream.getString();
+				String string_498_ = stream.getString();
 				if (string_498_.equals("")) {
 					string_498_ = string_497_;
 				}
@@ -2689,7 +2694,7 @@ public class PacketsDecoder {
 				class25.INCOMMING_PACKET = null;
 				return true;
 			}
-			IPAddress.method6062((class25.INCOMMING_PACKET != null ? 2075990793 * class25.INCOMMING_PACKET.packetId : -1) + Class26.COMMA + (null != class25.aClass202_345 ? class25.aClass202_345.packetId * 2075990793 : -1) + Class26.COMMA + (null != class25.aClass202_348 ? class25.aClass202_348.packetId * 2075990793 : -1) + " " + class25.anInt336 * -866602563, new RuntimeException(), (short) -18255);
+			IPAddress.method6062((class25.INCOMMING_PACKET != null ? 2075990793 * class25.INCOMMING_PACKET.packetId : -1) + Symbol.COMMA + (null != class25.aClass202_345 ? class25.aClass202_345.packetId * 2075990793 : -1) + Symbol.COMMA + (null != class25.aClass202_348 ? class25.aClass202_348.packetId * 2075990793 : -1) + " " + class25.anInt336 * -866602563, new RuntimeException(), (short) -18255);
 			Class216.method2001(false, (byte) 69);
 			return true;
 		} catch (RuntimeException runtimeexception) {

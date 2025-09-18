@@ -17,7 +17,7 @@ public class Class142 {
 		try {
 			if (Class8.aString101.length() != 0) {
 				Class255.sendDevConsoleMsg(new StringBuilder().append("--> ").append(Class8.aString101).toString(), 1401138202);
-				Class419.method5605(Class8.aString101, false, bool, 1788237828);
+				ConsoleCommands.method5605(Class8.aString101, false, bool, 1788237828);
 				Class8.anInt105 = 0;
 				if (!bool) {
 					Class8.anInt99 = 0;

@@ -10,7 +10,7 @@ public class FloTypeList {
 	static int basePlane;
 	public static Class298_Sub25 aClass298_Sub25_4084;
 
-	public OverlayType getOverlayDefinition(int i, int i_0_) {
+	public OverlayType method4645(int i, int i_0_) {
 		try {
 			OverlayType class373;
 			synchronized (this.aClass348_4079) {
@@ -122,17 +122,17 @@ public class FloTypeList {
 		}
 	}
 
-	static int method4652(Player class365_sub1_sub1_sub2_sub2, int i) {
+	static int method4652(Player player, int i) {
 		try {
-			int i_6_ = 1899133595 * class365_sub1_sub1_sub2_sub2.walkAnimation;
-			BASType class350 = class365_sub1_sub1_sub2_sub2.getDefinition(657972326);
-			int i_7_ = class365_sub1_sub1_sub2_sub2.spotAnimAnimator.method5823(1741170329);
-			if (-1 == i_7_ || class365_sub1_sub1_sub2_sub2.outlineDirty) {
-				i_6_ = 1728220219 * class365_sub1_sub1_sub2_sub2.lastAnimationDelay;
+			int i_6_ = 1899133595 * player.walkAnimation;
+			BASType class350 = player.getDefinition(657972326);
+			int i_7_ = player.spotAnimAnimator.method5823(1741170329);
+			if (-1 == i_7_ || player.outlineDirty) {
+				i_6_ = 1728220219 * player.lastAnimationDelay;
 			} else if (class350.anInt3721 * 230243963 == i_7_ || i_7_ == class350.anInt3749 * 491753731 || class350.anInt3724 * -783166629 == i_7_ || i_7_ == class350.anInt3746 * -2054940183) {
-				i_6_ = class365_sub1_sub1_sub2_sub2.runAnimation * -978842273;
+				i_6_ = player.runAnimation * -978842273;
 			} else if (i_7_ == class350.anInt3755 * 328817727 || -1238642279 * class350.anInt3722 == i_7_ || 124010991 * class350.anInt3728 == i_7_ || -907666203 * class350.anInt3727 == i_7_) {
-				i_6_ = class365_sub1_sub1_sub2_sub2.standAnimation * -1304250511;
+				i_6_ = player.standAnimation * -1304250511;
 			}
 			return i_6_;
 		} catch (RuntimeException runtimeexception) {

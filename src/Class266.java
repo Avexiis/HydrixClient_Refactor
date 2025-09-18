@@ -57,12 +57,12 @@ public class Class266 {
 	public static Class128 method2524(Packet class298_sub53, byte i) {
 		try {
 			Class128 class128 = SpotAnimation.method608(class298_sub53, -2082890426);
-			int i_1_ = class298_sub53.gSmart2or4n();
-			int i_2_ = class298_sub53.gSmart2or4n();
-			int i_3_ = class298_sub53.gSmart2or4n();
-			int i_4_ = class298_sub53.gSmart2or4n();
-			int i_5_ = class298_sub53.gSmart2or4n();
-			int i_6_ = class298_sub53.gSmart2or4n();
+			int i_1_ = class298_sub53.readBigSmart();
+			int i_2_ = class298_sub53.readBigSmart();
+			int i_3_ = class298_sub53.readBigSmart();
+			int i_4_ = class298_sub53.readBigSmart();
+			int i_5_ = class298_sub53.readBigSmart();
+			int i_6_ = class298_sub53.readBigSmart();
 			return new Class128_Sub3(class128.aClass139_6322, class128.aClass133_6323, -39975161 * class128.anInt6327, class128.anInt6325 * 1886882435, class128.anInt6326 * -944287579, class128.anInt6330 * -1387457793, -684094775 * class128.anInt6328, class128.anInt6329 * 955568089, class128.anInt6324 * 782326281, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lb.i(").append(')').toString());
@@ -90,10 +90,10 @@ public class Class266 {
 				}
 			}
 			if (class365_sub1_sub1_sub2 instanceof Player) {
-				Player class365_sub1_sub1_sub2_sub2 = (Player) class365_sub1_sub1_sub2;
-				if (-1 != class365_sub1_sub1_sub2_sub2.chatIcon * 1208589843 && (0 == (class365_sub1_sub1_sub2_sub2.moveQueueSize * 2050671733) || (-1531994851 * class365_sub1_sub1_sub2_sub2.anInt10124) > 0)) {
-					class365_sub1_sub1_sub2_sub2.method4414(1208589843 * class365_sub1_sub1_sub2_sub2.chatIcon, (byte) 1);
-					class365_sub1_sub1_sub2_sub2.chatIcon = 1530078181;
+				Player player = (Player) class365_sub1_sub1_sub2;
+				if (-1 != player.chatIcon * 1208589843 && (0 == (player.moveQueueSize * 2050671733) || (-1531994851 * player.anInt10124) > 0)) {
+					player.method4414(1208589843 * player.chatIcon, (byte) 1);
+					player.chatIcon = 1530078181;
 				}
 			} else if (class365_sub1_sub1_sub2 instanceof NPC) {
 				NPC class365_sub1_sub1_sub2_sub1 = (NPC) class365_sub1_sub1_sub2;

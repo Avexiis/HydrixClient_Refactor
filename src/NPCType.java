@@ -109,11 +109,11 @@ public class NPCType {
 				modelIds[i_55_] = buffer.readUnsignedShort() + OSRSData.MODELS_OFFSET;
 			}
 		} else if (opcode == 2) {
-			name = buffer.gstr();
+			name = buffer.getString();
 		} else if (opcode == 12) {
 			size = buffer.readUnsignedByte() * -1690840619;
 		} else if (opcode >= 30 && opcode < 35) {
-			options[opcode - 30] = buffer.gstr();
+			options[opcode - 30] = buffer.getString();
 			if (options[opcode - 30].equalsIgnoreCase("Hidden")) {
 				options[opcode - 30] = null;
 			}
@@ -205,7 +205,7 @@ public class NPCType {
 				int i_75_ = buffer.g3();
 				Node node;
 				if (bool) {
-					node = new LinkableObject(buffer.gstr());
+					node = new LinkableObject(buffer.getString());
 				} else {
 					node = new Class298_Sub35(buffer.readUnsignedInt());
 				}
@@ -763,14 +763,14 @@ public class NPCType {
 				int i_54_ = buffer.readUnsignedByte();
 				modelIds = new int[i_54_];
 				for (int i_55_ = 0; i_55_ < i_54_; i_55_++) {
-					modelIds[i_55_] = buffer.gSmart2or4n();
+					modelIds[i_55_] = buffer.readBigSmart();
 				}
 			} else if (opcode == 2) {
-				name = buffer.gstr();
+				name = buffer.getString();
 			} else if (12 == opcode) {
 				size = buffer.readUnsignedByte() * -1690840619;
 			} else if (opcode >= 30 && opcode < 35) {
-				options[opcode - 30] = buffer.gstr();
+				options[opcode - 30] = buffer.getString();
 			} else if (opcode == 40) {
 				int i_56_ = buffer.readUnsignedByte();
 				originalModelColors = new short[i_56_];
@@ -829,7 +829,7 @@ public class NPCType {
 				int i_62_ = buffer.readUnsignedByte();
 				chatHeads = new int[i_62_];
 				for (int i_63_ = 0; i_63_ < i_62_; i_63_++) {
-					chatHeads[i_63_] = buffer.gSmart2or4n();
+					chatHeads[i_63_] = buffer.readBigSmart();
 				}
 			} else if (opcode == 93) {
 				visibleOnMap = false;
@@ -899,7 +899,7 @@ public class NPCType {
 					is[2] = buffer.readByte();
 				}
 			} else if (opcode == 122) {
-				anInt6167 = buffer.gSmart2or4n() * 1506883587;
+				anInt6167 = buffer.readBigSmart() * 1506883587;
 			} else if (opcode == 123) {
 				anInt6143 = buffer.readUnsignedShort() * 1816293685;
 			} else if (opcode == 125) {
@@ -933,7 +933,7 @@ public class NPCType {
 			} else if (opcode == 137) {
 				anInt6147 = buffer.readUnsignedShort() * 1737724111;
 			} else if (opcode == 138) {
-				anInt6178 = buffer.gSmart2or4n() * -537547649;
+				anInt6178 = buffer.readBigSmart() * -537547649;
 			} else if (opcode == 140) {
 				anInt6179 = buffer.readUnsignedByte() * -462121541;
 			} else if (opcode == 141) {
@@ -943,7 +943,7 @@ public class NPCType {
 			} else if (143 == opcode) {
 				aBoolean6155 = true;
 			} else if (opcode >= 150 && opcode < 155) {
-				options[opcode - 150] = buffer.gstr();
+				options[opcode - 150] = buffer.getString();
 				if (!aClass507_6125.aBoolean6209) {
 					options[opcode - 150] = null;
 				}
@@ -996,7 +996,7 @@ public class NPCType {
 					int i_75_ = buffer.g3();
 					Node node;
 					if (bool) {
-						node = new LinkableObject(buffer.gstr());
+						node = new LinkableObject(buffer.getString());
 					} else {
 						node = new Class298_Sub35(buffer.readUnsignedInt());
 					}

@@ -44,17 +44,17 @@ public class HitType {
 	void method4278(Packet class298_sub53, int i, int i_1_) {
 		try {
 			if (1 == i)
-				anInt3864 = class298_sub53.gSmart2or4n() * -1438416545;
+				anInt3864 = class298_sub53.readBigSmart() * -1438416545;
 			else if (i == 2)
 				anInt3853 = class298_sub53.g3() * 728095375;
 			else if (i == 3)
-				((HitType) this).anInt3855 = class298_sub53.gSmart2or4n() * 315680607;
+				((HitType) this).anInt3855 = class298_sub53.readBigSmart() * 315680607;
 			else if (i == 4)
-				((HitType) this).anInt3857 = class298_sub53.gSmart2or4n() * -1871987079;
+				((HitType) this).anInt3857 = class298_sub53.readBigSmart() * -1871987079;
 			else if (i == 5)
-				((HitType) this).anInt3860 = class298_sub53.gSmart2or4n() * -1006502127;
+				((HitType) this).anInt3860 = class298_sub53.readBigSmart() * -1006502127;
 			else if (i == 6)
-				((HitType) this).anInt3858 = class298_sub53.gSmart2or4n() * -818871601;
+				((HitType) this).anInt3858 = class298_sub53.readBigSmart() * -818871601;
 			else if (i == 7)
 				anInt3859 = class298_sub53.readShort(1738296677) * -1393539651;
 			else if (8 == i)

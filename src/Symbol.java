@@ -1,36 +1,37 @@
-/* Class26 - Decompiled by JODE
+/* Symbol - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class26 {
-	static String aString349;
-	public static String aString350;
-	static String aString351;
-	static String aString352;
+public class Symbol {
+	static String OPEN_PARENTHESES;
+	public static String LINE_BREAK;
+	static String RIGHT_ARROW;
+	static String CLOSE_PARENTHESES;
 	static String COMMA;
 	static String IP;
 	static String STRING_TRUE = "true";
-	static String aString356;
+	static String CLOSE_COL_TAG;
 
-	Class26() throws Throwable {
+	Symbol() throws Throwable {
 		throw new Error();
 	}
 
 	static {
 		COMMA = ",";
-		aString349 = " (";
-		aString352 = ")";
-		aString351 = "->";
-		IP = Loader.IP;// "127.0.0.1";
-		aString350 = "<br>";
-		aString356 = "</col>";
+		OPEN_PARENTHESES = " (";
+		CLOSE_PARENTHESES = ")";
+		RIGHT_ARROW = "->";
+		IP = Loader.CONNECT_URL;// "127.0.0.1";
+		LINE_BREAK = "<br>";
+		CLOSE_COL_TAG = "</col>";
 	}
 
 	static final void method396(ClientScript2 class403, short i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = ((ClientScript2) class403).aClass365_Sub1_Sub1_Sub2_5242.method4363((byte) 51);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239
+					+= -391880689) * 681479919 - 1)] = ((ClientScript2) class403).aClass365_Sub1_Sub1_Sub2_5242.method4363((byte) 51);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("b.apg(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "b.apg(" + ')');
 		}
 	}
 
@@ -106,7 +107,7 @@ public class Class26 {
 			}
 			return 0;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("b.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "b.a(" + ')');
 		}
 	}
 
@@ -119,16 +120,17 @@ public class Class26 {
 			}
 			return null;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("b.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "b.f(" + ')');
 		}
 	}
 
 	static final void method399(ClientScript2 class403, int i) {
 		try {
 			int i_18_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions(i_18_).aBoolean5731) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)]
+					= (Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions(i_18_).aBoolean5731) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("b.aak(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "b.aak(" + ')');
 		}
 	}
 }

@@ -159,7 +159,7 @@ public class Class297 {
 			if ((mask & 0x40000) != 0)
 				player.isInCombat = stream.readUnsignedByteC((short) -25952) == 1;
 			if ((mask & 0x20000) != 0) {
-				String string = stream.gstr();
+				String string = stream.getString();
 				int i_40_ = stream.readUnsignedByte();
 				if ((i_40_ & 0x1) != 0)
 					ChecksumTableEntry.method2282(2, i_40_, player.getFullName(true, -2017419584), player.getDisplayName(false, (byte) -87), player.displayName, string, 252423564);
@@ -204,7 +204,7 @@ public class Class297 {
 				int[] is_43_ = new int[i_42_];
 				int[] is_44_ = new int[i_42_];
 				for (int i_45_ = 0; i_45_ < i_42_; i_45_++) {
-					is[i_45_] = stream.gSmart2or4n();
+					is[i_45_] = stream.readBigSmart();
 					is_43_[i_45_] = stream.readUnsignedByte128(-1014855659);
 					is_44_[i_45_] = stream.readUnsignedShortLE128(1478539457);
 				}
@@ -213,7 +213,7 @@ public class Class297 {
 			if (0 != (mask & 0x20)) { // emotes
 				int[] is = new int[Class522.method6325((byte) -10).length];
 				for (int i_46_ = 0; i_46_ < Class522.method6325((byte) 0).length; i_46_++)
-					is[i_46_] = stream.gSmart2or4n();
+					is[i_46_] = stream.readBigSmart();
 				int i_47_ = stream.readUnsignedByte();
 				Class431.method5768(player, is, i_47_, false, (byte) -1);
 			}
@@ -243,7 +243,7 @@ public class Class297 {
 				}
 			}
 			if (0 != (mask & 0x100)) { // forcetalk
-				String string = stream.gstr();
+				String string = stream.getString();
 				if (player == Class287.myPlayer)
 					ChecksumTableEntry.method2282(2, 0, player.getFullName(true, -1880046656), player.getDisplayName(false, (byte) -103), player.displayName, string, -588173673);
 				player.method4474(string, 0, 0, -1278251821);

@@ -33,14 +33,14 @@ public abstract class Class52_Sub1 extends Class52 {
 				try {
 					String string = EnumType.mainApplet.getParameter(AppletParam.aAppletParam_2382.aString2395);
 					int i_0_ = ((int) (TimeUtils.getTime((byte) 1) / 86400000L) - 11745);
-					String string_1_ = new StringBuilder().append("usrdob=").append(i_0_).append("; version=1; path=/; domain=").append(string).toString();
-					Class466.method6020(EnumType.mainApplet, new StringBuilder().append("document.cookie=\"").append(string_1_).append("\"").toString(), -1921482054);
+					String string_1_ = "usrdob=" + i_0_ + "; version=1; path=/; domain=" + string;
+					AppletJsBridge.evalJs(EnumType.mainApplet, "document.cookie=\"" + string_1_ + "\"", -1921482054);
 				} catch (Throwable throwable) {
 					/* empty */
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("we.ni(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "we.ni(" + ')');
 		}
 	}
 
@@ -48,14 +48,16 @@ public abstract class Class52_Sub1 extends Class52 {
 		try {
 			if (null == Class301_Sub1.aLinkedNodeList_3236 || Class301_Sub1.aClass446_7634 == null)
 				return null;
-			for (WorldMapArea worldMapArea = (WorldMapArea) Class301_Sub1.aClass446_7634.next(); worldMapArea != null; worldMapArea = (WorldMapArea) Class301_Sub1.aClass446_7634.next()) {
+			for (WorldMapArea worldMapArea = (WorldMapArea) Class301_Sub1.aClass446_7634.next();
+				 worldMapArea != null;
+				 worldMapArea = (WorldMapArea) Class301_Sub1.aClass446_7634.next()) {
 				WorldMapLabel worldMapLabel = Class301_Sub1.aWorldMapLabelList_3251.method4116(((worldMapArea.mapAreaId) * -530122905), -616779677);
 				if (worldMapLabel != null && worldMapLabel.aBoolean3816 && worldMapLabel.method4237(Class301_Sub1.anInterface23_3223, 1789313805))
 					return worldMapArea;
 			}
 			return null;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("we.ch(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "we.ch(" + ')');
 		}
 	}
 }

@@ -58,7 +58,7 @@ public final class Class285 {
 	static final void method2712(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		try {
 			if (i - i_3_ >= Class372_Sub1.anInt4051 * -1424479739 && i + i_3_ <= Class372_Sub1.anInt4048 * 1135094847 && i_2_ - i_3_ >= Class372_Sub1.anInt4049 * 1155384281 && i_3_ + i_2_ <= -1062447355 * Class372_Sub1.anInt4050)
-				MapIconTypeList.method6165(i, i_2_, i_3_, i_4_, i_5_, i_6_, 1691112571);
+				Class487.method6165(i, i_2_, i_3_, i_4_, i_5_, i_6_, 1691112571);
 			else
 				Class315.method3836(i, i_2_, i_3_, i_4_, i_5_, i_6_, (byte) 55);
 		} catch (RuntimeException runtimeexception) {

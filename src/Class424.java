@@ -1,4 +1,4 @@
-/* Class424 - Decompiled by JODE
+/* ObjectMapType - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 

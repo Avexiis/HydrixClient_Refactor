@@ -37,12 +37,12 @@ public class Class462 {
 
 	static final void method5992(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class360.anInt3894 * 235445649;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 508782749 * Class360.anInt3888;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1800450029 * Class360.anInt3906;
-			Class360.anInt3894 = -1908115170;
-			Class360.anInt3888 = 599892555;
-			Class360.anInt3906 = 930150939;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = LoginData.anInt3894 * 235445649;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 508782749 * LoginData.anInt3888;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1800450029 * LoginData.anInt3906;
+			LoginData.anInt3894 = -1908115170;
+			LoginData.anInt3888 = 599892555;
+			LoginData.anInt3906 = 930150939;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("t.ahz(").append(')').toString());
 		}

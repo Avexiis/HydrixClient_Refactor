@@ -44,7 +44,7 @@ public class Class125 {
 			} else if (4 == i)
 				anInt1491 = class298_sub53.readUnsignedByte() * 1941395261;
 			else if (5 == i)
-				anInt1488 = class298_sub53.gSmart2or4n() * 372664533;
+				anInt1488 = class298_sub53.readBigSmart() * 372664533;
 			else if (i == 6)
 				anInt1487 = class298_sub53.g3() * -1508681825;
 			else if (i == 7) {
@@ -353,7 +353,7 @@ public class Class125 {
 				GameClient.map.method2645(Class463.aClass433_5689, -18361497);
 				overheadString.aClass248_612.method2379(new ObjectTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class354.aClass243_3826, WorldTile.js5_models), 681479919);
 				Class363.aWorldMapLabelList_3931 = new WorldMapLabelList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
-				Js5ConfigGroup.aMapIconTypeList_1463 = new MapIconTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
+				Js5ConfigGroup.aClass487_1463 = new Class487(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
 				Class15.aClass507_224 = new Class507(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class133.aClass243_1512, WorldTile.js5_models);
 				Class298_Sub32_Sub14.aClass477_9400 = new Class477(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class92.aClass504_905, Class92.aClass243_904, WorldTile.js5_models);
 				Class316.aClass362_3318 = new Class362(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, true);
@@ -382,7 +382,7 @@ public class Class125 {
 				overheadString.method727(WorldTile.js5_models, Class253.anInterface_ma2785, 2043056803);
 				Huffman huffman = new Huffman(TimeUtils.js5_huffman.method2301("huffman", "", 1988047685));
 				Class336_Sub6.method4107(huffman, -1778895275);
-				GameShell.aClass309_6492 = Class360.method4302(-1239681225);
+				GameShell.aClass309_6492 = LoginData.method4302(-1239681225);
 				Class12.aClass298_Sub44_9946 = new Class298_Sub44(true);
 			}
 			if (Class227.aClass227_2540 == Class82_Sub6.aClass227_6843) {
@@ -392,7 +392,7 @@ public class Class125 {
 					return i_27_ * 100 / i_28_;
 			}
 			if (Class227.aClass227_2542 == Class82_Sub6.aClass227_6843)
-				WorldMap.method3690(Class_v.index_23_worldMap, Class504.aClass375_6196, Class151.aClass451_6358, GameClient.map.method2641(-1404290651), Class363.aWorldMapLabelList_3931, Js5ConfigGroup.aMapIconTypeList_1463, Class128.aClass148_6331);
+				WorldMap.method3690(Class_v.index_23_worldMap, Class504.aClass375_6196, Class151.aClass451_6358, GameClient.map.method2641(-1404290651), Class363.aWorldMapLabelList_3931, Js5ConfigGroup.aClass487_1463, Class128.aClass148_6331);
 			if (Class82_Sub6.aClass227_6843 == Class227.aClass227_2554) {
 				Class374.anIntArray4078 = new int[-2088092255 * Class320.aVarClientTypeList_6550.files_count];
 				Class254.aBooleanArray2790 = (new boolean[Class320.aVarClientTypeList_6550.files_count * -2088092255]);

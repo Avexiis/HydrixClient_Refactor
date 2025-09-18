@@ -50,7 +50,7 @@ public class ReferenceTable implements Interface21 {
 		return ((ReferenceTable) this).anInt6551 * -504243339;
 	}
 
-	public static final int composeColor(int i, int i_1_, int i_2_, int i_3_) {
+	public static final int method4933(int i, int i_1_, int i_2_, int i_3_) {
 		try {
 			if (i_2_ > 243)
 				i_1_ >>= 4;
@@ -105,23 +105,23 @@ public class ReferenceTable implements Interface21 {
 			boolean bool_6_ = (i_4_ & 0x4) != 0;
 			boolean bool_7_ = 0 != (i_4_ & 0x8);
 			if (bool) {
-				class464.anIntArray5694[0] = class298_sub53.gSmart2or4n();
-				class464.anIntArray5695[0] = class298_sub53.gSmart2or4n();
+				class464.anIntArray5694[0] = class298_sub53.readBigSmart();
+				class464.anIntArray5695[0] = class298_sub53.readBigSmart();
 				if (-1 != 34210967 * ((ItemDefinitions) class468).anInt5737 || -1 != -1284247975 * ((ItemDefinitions) class468).anInt5746) {
-					class464.anIntArray5694[1] = class298_sub53.gSmart2or4n();
-					class464.anIntArray5695[1] = class298_sub53.gSmart2or4n();
+					class464.anIntArray5694[1] = class298_sub53.readBigSmart();
+					class464.anIntArray5695[1] = class298_sub53.readBigSmart();
 				}
 				if (((ItemDefinitions) class468).anInt5759 * 1313278521 != -1 || -1767718263 * ((ItemDefinitions) class468).anInt5741 != -1) {
-					class464.anIntArray5694[2] = class298_sub53.gSmart2or4n();
-					class464.anIntArray5695[2] = class298_sub53.gSmart2or4n();
+					class464.anIntArray5694[2] = class298_sub53.readBigSmart();
+					class464.anIntArray5695[2] = class298_sub53.readBigSmart();
 				}
 			}
 			if (bool_5_) {
-				class464.anIntArray5690[0] = class298_sub53.gSmart2or4n();
-				class464.anIntArray5697[0] = class298_sub53.gSmart2or4n();
+				class464.anIntArray5690[0] = class298_sub53.readBigSmart();
+				class464.anIntArray5697[0] = class298_sub53.readBigSmart();
 				if (86274879 * ((ItemDefinitions) class468).anInt5749 != -1 || ((ItemDefinitions) class468).anInt5764 * 1578724433 != -1) {
-					class464.anIntArray5690[1] = class298_sub53.gSmart2or4n();
-					class464.anIntArray5697[1] = class298_sub53.gSmart2or4n();
+					class464.anIntArray5690[1] = class298_sub53.readBigSmart();
+					class464.anIntArray5697[1] = class298_sub53.readBigSmart();
 				}
 			}
 			if (bool_6_) {
@@ -542,7 +542,7 @@ public class ReferenceTable implements Interface21 {
 
 	static final void method4940(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = -1372893999 * Class360.anInt3871;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = -1372893999 * LoginData.anInt3871;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qq.aho(").append(')').toString());
 		}

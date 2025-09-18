@@ -886,14 +886,14 @@ public abstract class GraphicsToolkit {
 					int i_502_ = i_498_ / 128 + 48;
 					int i_503_ = (48 + GameClient.map.upperY(789210081) * 4 - i_499_ / 128);
 					Class384.aClass57_4127.method659(((float) i + (float) (class105.width * -2093041337) / 2.0F), ((float) i_496_ + (float) (457937409 * class105.height) / 2.0F), (float) i_502_, (float) i_503_, i_501_, i_500_ << 2, class_ta, i, i_496_);
-					MapKeys mapKeys = GameClient.map.method2631(-337725639);
+					Class296 class296 = GameClient.map.method2631(-337725639);
 					for (Class298_Sub35 class298_sub35 = ((Class298_Sub35) Class3.aLinkedNodeList_61.method5939(1766612795)); class298_sub35 != null; class298_sub35 = ((Class298_Sub35) Class3.aLinkedNodeList_61.method5944(49146))) {
 						int i_504_ = class298_sub35.anInt7394 * -774922497;
-						int i_505_ = ((mapKeys.anIntArray3168[i_504_] >> 14 & 0x3fff) - -1760580017 * worldTile.x);
-						int i_506_ = ((mapKeys.anIntArray3168[i_504_] & 0x3fff) - 283514611 * worldTile.y);
+						int i_505_ = ((class296.anIntArray3168[i_504_] >> 14 & 0x3fff) - -1760580017 * worldTile.x);
+						int i_506_ = ((class296.anIntArray3168[i_504_] & 0x3fff) - 283514611 * worldTile.y);
 						int i_507_ = 2 + 4 * i_505_ - i_498_ / 128;
 						int i_508_ = 2 + 4 * i_506_ - i_499_ / 128;
-						Class248.method2389(class_ra, class_ta, class105, i, i_496_, i_507_, i_508_, mapKeys.anIntArray3170[i_504_], (byte) 0);
+						Class248.method2389(class_ra, class_ta, class105, i, i_496_, i_507_, i_508_, class296.anIntArray3170[i_504_], (byte) 0);
 					}
 					for (int i_509_ = 0; i_509_ < 1659101557 * Class3.anInt67; i_509_++) {
 						int i_510_ = (2 + Class3.anIntArray58[i_509_] * 4 - i_498_ / 128);

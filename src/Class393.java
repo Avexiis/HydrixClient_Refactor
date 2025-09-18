@@ -111,7 +111,7 @@ final class Class393 implements Runnable {
 
 	public static Class165 method4896(Packet class298_sub53, byte i) {
 		try {
-			int i_7_ = class298_sub53.gSmart2or4n();
+			int i_7_ = class298_sub53.readBigSmart();
 			return new Class165(i_7_);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qg.a(").append(')').toString());

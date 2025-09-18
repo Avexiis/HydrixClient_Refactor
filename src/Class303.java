@@ -72,15 +72,15 @@ public class Class303 {
 		}
 	}
 
-	public static final void method3737(Player class365_sub1_sub1_sub2_sub2, int i, int i_7_, byte i_8_, byte i_9_) {
+	public static final void method3737(Player player, int i, int i_7_, byte i_8_, byte i_9_) {
 		try {
-			int i_10_ = class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0];
-			int i_11_ = class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0];
+			int i_10_ = player.scenePositionXQueue[0];
+			int i_11_ = player.scenePositionYQueue[0];
 			if (i_10_ >= 0 && i_10_ < GameClient.map.upperX(-2022633621) && i_11_ >= 0 && i_11_ < GameClient.map.upperY(211521322) && (i >= 0 && i < GameClient.map.upperX(-2074801405) && i_7_ >= 0 && i_7_ < GameClient.map.upperY(1180671988))) {
-				int i_12_ = (Class298_Sub37.calculateRoute(i_10_, i_11_, class365_sub1_sub1_sub2_sub2.getSize(), BASType.method4214(i, i_7_, (short) 808), (GameClient.map.getSceneClipDataPlane(class365_sub1_sub1_sub2_sub2.plane)), true, GameClient.calculatedScenePositionXs, GameClient.calculatedScenePositionYs));
+				int i_12_ = (Class298_Sub37.calculateRoute(i_10_, i_11_, player.getSize(), BASType.method4214(i, i_7_, (short) 808), (GameClient.map.getSceneClipDataPlane(player.plane)), true, GameClient.calculatedScenePositionXs, GameClient.calculatedScenePositionYs));
 				if (i_12_ >= 1 && i_12_ <= 3) {
 					for (int i_13_ = 0; i_13_ < i_12_ - 1; i_13_++)
-						class365_sub1_sub1_sub2_sub2.step(GameClient.calculatedScenePositionXs[i_13_], GameClient.calculatedScenePositionYs[i_13_], i_8_, (byte) 55);
+						player.step(GameClient.calculatedScenePositionXs[i_13_], GameClient.calculatedScenePositionYs[i_13_], i_8_, (byte) 55);
 				}
 			}
 		} catch (RuntimeException runtimeexception) {

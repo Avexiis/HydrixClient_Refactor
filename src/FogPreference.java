@@ -92,9 +92,9 @@ public class FogPreference extends IntegerPreferenceField {
 		try {
 			int[] is = Class10.anIntArray135;
 			for (int i_2_ = 0; i_2_ < Class10.anInt129 * 1168366243; i_2_++) {
-				Player class365_sub1_sub1_sub2_sub2 = GameClient.players[is[i_2_]];
-				if (class365_sub1_sub1_sub2_sub2 != null)
-					class365_sub1_sub1_sub2_sub2.method4428(-586581534);
+				Player player = GameClient.players[is[i_2_]];
+				if (player != null)
+					player.method4428(-586581534);
 			}
 			for (int i_3_ = 0; i_3_ < -1230451913 * GameClient.npcCount; i_3_++) {
 				long l = (long) GameClient.npcIndicies[i_3_];

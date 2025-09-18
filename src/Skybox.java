@@ -107,7 +107,7 @@ public class Skybox {
 							((Skybox) this).aClass276Array2953[((((Skybox) this).anInt2945 += 400255599) * 1858024591) - 1] = class276;
 						}
 					}
-					Class419.method5602(is, ((Skybox) this).aClass276Array2953, 0, (1858024591 * ((Skybox) this).anInt2945) - 1, -641027314);
+					ConsoleCommands.method5602(is, ((Skybox) this).aClass276Array2953, 0, (1858024591 * ((Skybox) this).anInt2945) - 1, -641027314);
 				}
 				((Skybox) this).aBoolean2954 = true;
 			}

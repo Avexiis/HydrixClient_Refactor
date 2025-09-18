@@ -168,7 +168,7 @@ public abstract class Ground {
 			int i_170_ = (((ClientScript2) class403).anIntArray5244[681479919 * ((ClientScript2) class403).anInt5239]);
 			int i_171_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 1]);
 			int i_172_ = (((ClientScript2) class403).anIntArray5244[2 + ((ClientScript2) class403).anInt5239 * 681479919]);
-			long l = MapKeys.method2830(0, 0, 12, i_170_, i_171_, i_172_, (byte) 67);
+			long l = Class296.method2830(0, 0, 12, i_170_, i_171_, i_172_, (byte) 67);
 			int i_173_ = Class408.method4966(l);
 			if (i_172_ < 1970)
 				i_173_--;

@@ -57,26 +57,26 @@ public class Class500 {
 				Class10.anIntArray140[(Class10.anInt139 += 867608709) * -1281683379 - 1] = i;
 			}
 			int i_2_ = class298_sub53_sub2.readBits(2);
-			Player class365_sub1_sub1_sub2_sub2 = GameClient.players[i];
+			Player player = GameClient.players[i];
 			if (0 == i_2_) {
 				if (bool) {
-					class365_sub1_sub1_sub2_sub2.isTeleporting = false;
+					player.isTeleporting = false;
 				} else {
 					if (-442628795 * GameClient.playerIndex == i) {
 						throw new RuntimeException();
 					}
 					Class410 class410 = Class10.aClass410Array138[i] = new Class410();
-					class410.anInt5288 = (1896571807 * (((class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0] + worldTile.y * 283514611) >> 6) + ((class365_sub1_sub1_sub2_sub2.plane << 28) + ((-1760580017 * worldTile.x + (class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0])) >> 6 << 14))));
-					if (-1 != (class365_sub1_sub1_sub2_sub2.chatIcon * 1208589843)) {
-						class410.anInt5286 = (class365_sub1_sub1_sub2_sub2.chatIcon * 1714576017);
+					class410.anInt5288 = (1896571807 * (((player.scenePositionYQueue[0] + worldTile.y * 283514611) >> 6) + ((player.plane << 28) + ((-1760580017 * worldTile.x + (player.scenePositionXQueue[0])) >> 6 << 14))));
+					if (-1 != (player.chatIcon * 1208589843)) {
+						class410.anInt5286 = (player.chatIcon * 1714576017);
 					} else {
-						class410.anInt5286 = class365_sub1_sub1_sub2_sub2.primaryAnim.method4719((byte) 0) * 481306955;
+						class410.anInt5286 = player.primaryAnim.method4719((byte) 0) * 481306955;
 					}
-					class410.anInt5285 = class365_sub1_sub1_sub2_sub2.anInt10090 * 1969382475;
-					class410.aBoolean5287 = class365_sub1_sub1_sub2_sub2.isClickable;
-					class410.aBoolean5289 = class365_sub1_sub1_sub2_sub2.isInCombat;
-					if (class365_sub1_sub1_sub2_sub2.turnLeftAnimation * 780357347 > 0) {
-						Class_v.method3670(class365_sub1_sub1_sub2_sub2, (byte) -66);
+					class410.anInt5285 = player.anInt10090 * 1969382475;
+					class410.aBoolean5287 = player.isClickable;
+					class410.aBoolean5289 = player.isInCombat;
+					if (player.turnLeftAnimation * 780357347 > 0) {
+						Class_v.method3670(player, (byte) -66);
 					}
 					GameClient.players[i] = null;
 					if (class298_sub53_sub2.readBits(1) != 0) {
@@ -85,8 +85,8 @@ public class Class500 {
 				}
 			} else if (i_2_ == 1) {
 				int i_3_ = class298_sub53_sub2.readBits(3);
-				int i_4_ = class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0];
-				int i_5_ = class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0];
+				int i_4_ = player.scenePositionXQueue[0];
+				int i_5_ = player.scenePositionYQueue[0];
 				if (i_3_ == 0) {
 					i_4_--;
 					i_5_--;
@@ -109,16 +109,16 @@ public class Class500 {
 					i_5_++;
 				}
 				if (bool) {
-					class365_sub1_sub1_sub2_sub2.teleportX = i_4_ * -586951847;
-					class365_sub1_sub1_sub2_sub2.teleportY = i_5_ * -682750645;
-					class365_sub1_sub1_sub2_sub2.isTeleporting = true;
+					player.teleportX = i_4_ * -586951847;
+					player.teleportY = i_5_ * -682750645;
+					player.isTeleporting = true;
 				} else {
-					class365_sub1_sub1_sub2_sub2.resetPosition(i_4_, i_5_, (Class10.playersMovementTypes[i]), -2105155066);
+					player.resetPosition(i_4_, i_5_, (Class10.playersMovementTypes[i]), -2105155066);
 				}
 			} else if (2 == i_2_) {
 				int i_6_ = class298_sub53_sub2.readBits(4);
-				int i_7_ = class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0];
-				int i_8_ = class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0];
+				int i_7_ = player.scenePositionXQueue[0];
+				int i_8_ = player.scenePositionYQueue[0];
 				if (0 == i_6_) {
 					i_7_ -= 2;
 					i_8_ -= 2;
@@ -165,11 +165,11 @@ public class Class500 {
 					i_8_ += 2;
 				}
 				if (bool) {
-					class365_sub1_sub1_sub2_sub2.teleportX = i_7_ * -586951847;
-					class365_sub1_sub1_sub2_sub2.teleportY = i_8_ * -682750645;
-					class365_sub1_sub1_sub2_sub2.isTeleporting = true;
+					player.teleportX = i_7_ * -586951847;
+					player.teleportY = i_8_ * -682750645;
+					player.isTeleporting = true;
 				} else {
-					class365_sub1_sub1_sub2_sub2.resetPosition(i_7_, i_8_, (Class10.playersMovementTypes[i]), -2092850777);
+					player.resetPosition(i_7_, i_8_, (Class10.playersMovementTypes[i]), -2092850777);
 				}
 			} else {
 				int i_9_ = class298_sub53_sub2.readBits(1);
@@ -184,42 +184,42 @@ public class Class500 {
 					if (i_13_ > 15) {
 						i_13_ -= 32;
 					}
-					int i_14_ = (class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0] + i_12_);
-					int i_15_ = (class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0] + i_13_);
+					int i_14_ = (player.scenePositionXQueue[0] + i_12_);
+					int i_15_ = (player.scenePositionYQueue[0] + i_13_);
 					if (bool) {
-						class365_sub1_sub1_sub2_sub2.teleportX = -586951847 * i_14_;
-						class365_sub1_sub1_sub2_sub2.teleportY = i_15_ * -682750645;
-						class365_sub1_sub1_sub2_sub2.isTeleporting = true;
+						player.teleportX = -586951847 * i_14_;
+						player.teleportY = i_15_ * -682750645;
+						player.isTeleporting = true;
 					} else {
-						class365_sub1_sub1_sub2_sub2.resetPosition(i_14_, i_15_, (Class10.playersMovementTypes[i]), -2123912900);
+						player.resetPosition(i_14_, i_15_, (Class10.playersMovementTypes[i]), -2123912900);
 					}
-					class365_sub1_sub1_sub2_sub2.plane = class365_sub1_sub1_sub2_sub2.aByte7724 = (byte) ((class365_sub1_sub1_sub2_sub2.plane + i_11_) & 0x3);
+					player.plane = player.aByte7724 = (byte) ((player.plane + i_11_) & 0x3);
 					if (GameClient.map.method2654(-232228879).method2320(i_14_, i_15_, 1039567132)) {
-						class365_sub1_sub1_sub2_sub2.aByte7724++;
+						player.aByte7724++;
 					}
-					if (-442628795 * GameClient.playerIndex == i && (Class99.anInt952 * 1855729883 != class365_sub1_sub1_sub2_sub2.plane)) {
-						Class99.anInt952 = (-85701805 * class365_sub1_sub1_sub2_sub2.plane);
+					if (-442628795 * GameClient.playerIndex == i && (Class99.anInt952 * 1855729883 != player.plane)) {
+						Class99.anInt952 = (-85701805 * player.plane);
 					}
 				} else {
 					int i_16_ = class298_sub53_sub2.readBits(30);
 					int i_17_ = i_16_ >> 28;
 					int i_18_ = i_16_ >> 14 & 0x3fff;
 					int i_19_ = i_16_ & 0x3fff;
-					int i_20_ = ((i_18_ + (-1760580017 * worldTile.x + (class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0])) & 0x3fff) - worldTile.x * -1760580017);
-					int i_21_ = ((i_19_ + (worldTile.y * 283514611 + (class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0])) & 0x3fff) - worldTile.y * 283514611);
+					int i_20_ = ((i_18_ + (-1760580017 * worldTile.x + (player.scenePositionXQueue[0])) & 0x3fff) - worldTile.x * -1760580017);
+					int i_21_ = ((i_19_ + (worldTile.y * 283514611 + (player.scenePositionYQueue[0])) & 0x3fff) - worldTile.y * 283514611);
 					if (bool) {
-						class365_sub1_sub1_sub2_sub2.teleportX = -586951847 * i_20_;
-						class365_sub1_sub1_sub2_sub2.teleportY = -682750645 * i_21_;
-						class365_sub1_sub1_sub2_sub2.isTeleporting = true;
+						player.teleportX = -586951847 * i_20_;
+						player.teleportY = -682750645 * i_21_;
+						player.isTeleporting = true;
 					} else {
-						class365_sub1_sub1_sub2_sub2.resetPosition(i_20_, i_21_, (Class10.playersMovementTypes[i]), -2073670245);
+						player.resetPosition(i_20_, i_21_, (Class10.playersMovementTypes[i]), -2073670245);
 					}
-					class365_sub1_sub1_sub2_sub2.plane = class365_sub1_sub1_sub2_sub2.aByte7724 = (byte) ((i_17_ + class365_sub1_sub1_sub2_sub2.plane) & 0x3);
+					player.plane = player.aByte7724 = (byte) ((i_17_ + player.plane) & 0x3);
 					if (GameClient.map.method2654(934483887).method2320(i_20_, i_21_, 624472586)) {
-						class365_sub1_sub1_sub2_sub2.aByte7724++;
+						player.aByte7724++;
 					}
 					if (i == GameClient.playerIndex * -442628795) {
-						Class99.anInt952 = (-85701805 * class365_sub1_sub1_sub2_sub2.plane);
+						Class99.anInt952 = (-85701805 * player.plane);
 					}
 				}
 			}

@@ -1,23 +1,20 @@
 
 public class BuildInstance {
-
-	public static Build build;
+	public static Build BUILD;
 
 	public BuildInstance(String string) {
 		if ("LIVE".equals(string)) {
-			build = Build.Live;
+			BUILD = Build.LIVE;
 		} else if ("BETA".equals(string)) {
-			build = Build.Beta;
+			BUILD = Build.BETA;
 		} else if ("LOCAL".equals(string)) {
-			build = Build.Local;
+			BUILD = Build.LOCAL;
 		} else {
-			build = Build.Live;
+			BUILD = Build.LIVE;
 		}
 	}
 
 	public Build getBuild() {
-		return build;
-
+		return BUILD;
 	}
-
 }

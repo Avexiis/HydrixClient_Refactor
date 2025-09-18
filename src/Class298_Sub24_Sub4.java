@@ -31,10 +31,10 @@ public class Class298_Sub24_Sub4 extends Class298_Sub24 {
 							throw new IllegalStateException();
 						Packet class298_sub53_1_ = new Packet(16);
 						class298_sub53.readBytes((class298_sub53_1_.payload), 0, 16, -953523806);
-						((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_1_.gstr();
+						((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_1_.getString();
 						class298_sub53_1_.pos = 0;
 						class298_sub53.readBytes((class298_sub53_1_.payload), 0, 16, -953523806);
-						((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_1_.gstr();
+						((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_1_.getString();
 					}
 				} else {
 					if (0 == i_0_) {
@@ -110,10 +110,10 @@ public class Class298_Sub24_Sub4 extends Class298_Sub24 {
 						throw new IllegalStateException();
 					Packet class298_sub53_5_ = new Packet(16);
 					class298_sub53.readBytes(class298_sub53_5_.payload, 0, 16, -953523806);
-					((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_5_.gstr();
+					((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_5_.getString();
 					class298_sub53_5_.pos = 0;
 					class298_sub53.readBytes(class298_sub53_5_.payload, 0, 16, -953523806);
-					((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_5_.gstr();
+					((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_5_.getString();
 				}
 			} else {
 				if (0 == i) {
@@ -150,10 +150,10 @@ public class Class298_Sub24_Sub4 extends Class298_Sub24 {
 						throw new IllegalStateException();
 					Packet class298_sub53_9_ = new Packet(16);
 					class298_sub53.readBytes(class298_sub53_9_.payload, 0, 16, -953523806);
-					((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_9_.gstr();
+					((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_9_.getString();
 					class298_sub53_9_.pos = 0;
 					class298_sub53.readBytes(class298_sub53_9_.payload, 0, 16, -953523806);
-					((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_9_.gstr();
+					((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_9_.getString();
 				}
 			} else {
 				if (0 == i) {
@@ -194,10 +194,10 @@ public class Class298_Sub24_Sub4 extends Class298_Sub24 {
 						throw new IllegalStateException();
 					Packet class298_sub53_13_ = new Packet(16);
 					class298_sub53.readBytes((class298_sub53_13_.payload), 0, 16, -953523806);
-					((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_13_.gstr();
+					((Class298_Sub24_Sub4) this).aString9304 = class298_sub53_13_.getString();
 					class298_sub53_13_.pos = 0;
 					class298_sub53.readBytes((class298_sub53_13_.payload), 0, 16, -953523806);
-					((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_13_.gstr();
+					((Class298_Sub24_Sub4) this).aString9305 = class298_sub53_13_.getString();
 				}
 			} else {
 				if (0 == i) {

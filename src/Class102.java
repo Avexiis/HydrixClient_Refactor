@@ -54,7 +54,7 @@ public class Class102 {
 
 	static final void method1084(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1243777389 * Class360.anInt3866;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1243777389 * LoginData.anInt3866;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ed.ahj(").append(')').toString());
 		}

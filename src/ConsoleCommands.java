@@ -1,29 +1,30 @@
-/* Class419 - Decompiled by JODE
+/* ConsoleCommands - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-public class Class419 {
+public class ConsoleCommands {
 	static char[] aCharArray5340 = { '\u20ac', '\0', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020', '\u2021', '\u02c6', '\u2030', '\u0160', '\u2039', '\u0152', '\0', '\u017d', '\0', '\0', '\u2018', '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161', '\u203a', '\u0153', '\0', '\u017e', '\u0178' };
 	static int anInt5341;
 	private static final String[] DEV_COMMANDS = {
-		"THESE COMMANDS ARE MEANT FOR THIS CONSOLE AND ARE",
-		"SEPARATE FROM THE SERVER COMMANDS YOU MAY BE USED TO!",
-		"USE THE :: OR ;; METHOD TO RUN NORMAL COMMANDS!",
-		"commands - List all commands",
-		"help - Alias for commands",
-		"cls - Clear console",
-		"displayfps - Toggle FPS and diagnostic info",
-		"renderer - Print graphics renderer details",
-		"heap - Print Java heap usage",
-		"getcamerapos - Print camera position & direction",
-		"discordstatus (on/off) - Enable or disable Discord status",
-		"setdiscordstatus - Set custom text to appear on your profile while playing!",
-		"atmo/atmos/atmosphere - Open the EnvEditor to change sun & fog colors or set presets"
+			"THESE COMMANDS ARE MEANT FOR THIS CONSOLE AND ARE",
+			"SEPARATE FROM THE SERVER COMMANDS YOU MAY BE USED TO!",
+			"USE THE :: OR ;; METHOD TO RUN NORMAL COMMANDS!",
+			"commands - List all commands",
+			"help - Alias for commands",
+			"cls - Clear console",
+			"displayfps - Toggle FPS and diagnostic info",
+			"renderer - Print graphics renderer details",
+			"heap - Print Java heap usage",
+			"getcamerapos - Print camera position & direction",
+			"discordstatus (on/off) - Enable or disable Discord status",
+			"setdiscordstatus - Set custom text to appear on your profile while playing!",
+			"atmo/atmos/atmosphere - Open the EnvEditor to change sun & fog colors or set presets",
+			//"snow - puts snow on the ground!"
 	};
-	Class419() throws Throwable {
+	ConsoleCommands() throws Throwable {
 		throw new Error();
 	}
 
@@ -124,7 +125,37 @@ public class Class419 {
 							Class255.sendDevConsoleMsg("Discord Status not initialized.", 0);
 						}
 						return;
-					} else if (cmd.toLowerCase().startsWith("setdiscordstatus ")) {
+					}
+					else if (
+							cmd.equalsIgnoreCase("snow") || cmd.equalsIgnoreCase("snow on") || cmd.equalsIgnoreCase("snow off") || cmd.equalsIgnoreCase("snowoff")) {
+						boolean desiredOn = !(cmd.equalsIgnoreCase("snow off") || cmd.equalsIgnoreCase("snowoff"));
+						if (Settings.SNOW == desiredOn) {
+							if (desiredOn) {
+								Class255.sendDevConsoleMsg("Snow is already enabled.", 0);
+							} else {
+								Class255.sendDevConsoleMsg("Snow is already disabled.", 0);
+							}
+							return;
+						}
+						Settings.SNOW = desiredOn;
+						ClanSettings.method4578(1, false, 622850291);
+						if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-957568446) == 1) { //reload toolkit, opengl as it's what most use.
+							if (desiredOn) {        															//they can set directx again by hand if they really care
+								Class255.sendDevConsoleMsg("Snow Activated! You may need to adjust your graphics settings!", 1271200712);
+							} else {
+								Class255.sendDevConsoleMsg("Snow Deactivated! You may need to adjust your graphics settings!", 1271200712);
+							}
+							GraphicsAutoSetup.clientPreferences.method3540(
+									GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570, 1, -72348841
+							);
+							Class3.writePreferences();
+							GameClient.aBoolean8666 = false;
+						} else {
+							Class255.sendDevConsoleMsg("Error", 1851865795);
+							return;
+						}
+					}
+					else if (cmd.toLowerCase().startsWith("setdiscordstatus ")) {
 						String customState = cmd.substring("setdiscordstatus ".length()).trim();
 						if (Loader.RICH_PRESENCE != null) {
 							Loader.RICH_PRESENCE.setCustomState(customState);
@@ -149,21 +180,21 @@ public class Class419 {
 						return;
 					} else if (cmd.equals("renderer")) {
 						Class58 class58 = OverlayType.activeToolkit.method4987();
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Toolkit ID: ").append(GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-481266690)).toString(), 1038434697);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Vendor: ").append(class58.anInt574 * 267107087).toString(), 212944002);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Name: ").append(class58.aString582).toString(), 723527437);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Version: ").append(class58.anInt581 * 1959468245).toString(), 1382813939);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Device: ").append(class58.aString577).toString(), 536857078);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Driver Version: ").append(class58.aLong583 * 703334160035735425L).toString(), 1218429557);
+						Class255.sendDevConsoleMsg("Toolkit ID: " + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-481266690), 1038434697);
+						Class255.sendDevConsoleMsg("Vendor: " + class58.anInt574 * 267107087, 212944002);
+						Class255.sendDevConsoleMsg("Name: " + class58.aString582, 723527437);
+						Class255.sendDevConsoleMsg("Version: " + class58.anInt581 * 1959468245, 1382813939);
+						Class255.sendDevConsoleMsg("Device: " + class58.aString577, 536857078);
+						Class255.sendDevConsoleMsg("Driver Version: " + class58.aLong583 * 703334160035735425L, 1218429557);
 					} else if (cmd.equals("heap")) {
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Heap: ").append(GameShell.maximumMemory * 1126040225).append("MB").toString(), 170718628);
+						Class255.sendDevConsoleMsg("Heap: " + GameShell.maximumMemory * 1126040225 + "MB", 170718628);
 					} else {
 						if (!cmd.equalsIgnoreCase("getcamerapos")) {
 							break;
 						}
 						WorldTile worldTile = GameClient.map.getRegionStart(681479919);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Pos: ").append(Class287.myPlayer.plane).append(",").append((-1740717447 * Class367.anInt4000 >> 9) + worldTile.x * -1760580017 >> 6).append(",").append((Class146.anInt1575 * -299812095 >> 9) + 283514611 * worldTile.y >> 6).append(",").append(-1760580017 * worldTile.x + (-1740717447 * Class367.anInt4000 >> 9) & 0x3f).append(",").append(worldTile.y * 283514611 + (-299812095 * Class146.anInt1575 >> 9) & 0x3f).append(" Height: ").append(Class356.method4271(Class367.anInt4000 * -1740717447, Class146.anInt1575 * -299812095, Class287.myPlayer.plane, -1453034846) - Class110.anInt6403 * 1449634147).toString(), 306448697);
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Look: ").append(Class287.myPlayer.plane).append(",").append(-1125224763 * Ground.anInt6292 + worldTile.x * -1760580017 >> 6).append(",").append(283514611 * worldTile.y + IPAddress.anInt5959 * -1758389953 >> 6).append(",").append(worldTile.x * -1760580017 + -1125224763 * Ground.anInt6292 & 0x3f).append(",").append(283514611 * worldTile.y + -1758389953 * IPAddress.anInt5959 & 0x3f).append(" Height: ").append(Class356.method4271(Ground.anInt6292 * -1125224763, -1758389953 * IPAddress.anInt5959, Class287.myPlayer.plane, -860898067) - 771695069 * Class18.anInt255).toString(), 1171744016);
+						Class255.sendDevConsoleMsg("Pos: " + Class287.myPlayer.plane + "," + ((-1740717447 * Class367.anInt4000 >> 9) + worldTile.x * -1760580017 >> 6) + "," + ((Class146.anInt1575 * -299812095 >> 9) + 283514611 * worldTile.y >> 6) + "," + (-1760580017 * worldTile.x + (-1740717447 * Class367.anInt4000 >> 9) & 0x3f) + "," + (worldTile.y * 283514611 + (-299812095 * Class146.anInt1575 >> 9) & 0x3f) + " Height: " + (Class356.method4271(Class367.anInt4000 * -1740717447, Class146.anInt1575 * -299812095, Class287.myPlayer.plane, -1453034846) - Class110.anInt6403 * 1449634147), 306448697);
+						Class255.sendDevConsoleMsg("Look: " + Class287.myPlayer.plane + "," + (-1125224763 * Ground.anInt6292 + worldTile.x * -1760580017 >> 6) + "," + (283514611 * worldTile.y + IPAddress.anInt5959 * -1758389953 >> 6) + "," + (worldTile.x * -1760580017 + -1125224763 * Ground.anInt6292 & 0x3f) + "," + (283514611 * worldTile.y + -1758389953 * IPAddress.anInt5959 & 0x3f) + " Height: " + (Class356.method4271(Ground.anInt6292 * -1125224763, -1758389953 * IPAddress.anInt5959, Class287.myPlayer.plane, -860898067) - 771695069 * Class18.anInt255), 1171744016);
 					}
 				} catch (Exception exception) {
 					Class255.sendDevConsoleMsg(LocalizedString.MESSAGE_COMMAND_EXECUTION_ERROR.getText(Class321.ACTIVE_LANGUAGE, -875414210), 247216384);
@@ -199,7 +230,7 @@ public class Class419 {
 						}
 						return;
 					}
-					if (cmd.equalsIgnoreCase("tk0")) {
+					if (cmd.equalsIgnoreCase("safemode")) {
 						ClanSettings.method4578(0, false, 622850291);
 						if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1547826526) == 0) {
 							Class255.sendDevConsoleMsg("Success", 267543271);
@@ -211,7 +242,7 @@ public class Class419 {
 						}
 						return;
 					}
-					if (cmd.equalsIgnoreCase("tk1")) {
+					if (cmd.equalsIgnoreCase("opengl")) {
 						ClanSettings.method4578(1, false, 622850291);
 						if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-957568446) == 1) {
 							Class255.sendDevConsoleMsg("Success", 1271200712);
@@ -235,7 +266,7 @@ public class Class419 {
 						}
 						return;
 					}
-					if (cmd.equalsIgnoreCase("tk3")) {
+					if (cmd.equalsIgnoreCase("directx")) {
 						ClanSettings.method4578(3, false, 622850291);
 						if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1899485997) == 3) {
 							Class255.sendDevConsoleMsg("Success", 2073339182);
@@ -279,12 +310,12 @@ public class Class419 {
 					}
 					if (cmd.startsWith("getclientvarpbit")) {
 						int i_11_ = Integer.parseInt(cmd.substring(17));
-						Class255.sendDevConsoleMsg(new StringBuilder().append("varpbit=").append(Class128.aClass148_6331.method250(i_11_, (byte) 49)).toString(), 812809440);
+						Class255.sendDevConsoleMsg("varpbit=" + Class128.aClass148_6331.method250(i_11_, (byte) 49), 812809440);
 						return;
 					}
 					if (cmd.startsWith("getclientvarp")) {
 						int i_12_ = Integer.parseInt(cmd.substring(14));
-						Class255.sendDevConsoleMsg(new StringBuilder().append("varp=").append(Class128.aClass148_6331.method252(i_12_, (byte) 25)).toString(), 1156644577);
+						Class255.sendDevConsoleMsg("varp=" + Class128.aClass148_6331.method252(i_12_, (byte) 25), 1156644577);
 						return;
 					}
 					if (cmd.startsWith("directlogin")) {
@@ -303,7 +334,7 @@ public class Class419 {
 					if (cmd.startsWith("setoutput ")) {
 						File file = new File(cmd.substring(10));
 						if (file.exists()) {
-							file = new File(new StringBuilder().append(cmd.substring(10)).append(".").append(TimeUtils.getTime((byte) 1)).append(".log").toString());
+							file = new File(cmd.substring(10) + "." + TimeUtils.getTime((byte) 1) + ".log");
 							if (file.exists()) {
 								Class255.sendDevConsoleMsg("file already exists!", 1609687254);
 								return;
@@ -316,9 +347,9 @@ public class Class419 {
 						try {
 							Class78.aFileOutputStream731 = new FileOutputStream(file);
 						} catch (FileNotFoundException filenotfoundexception) {
-							Class255.sendDevConsoleMsg(new StringBuilder().append("Could not create ").append(file.getName()).toString(), 2057720306);
+							Class255.sendDevConsoleMsg("Could not create " + file.getName(), 2057720306);
 						} catch (SecurityException securityexception) {
-							Class255.sendDevConsoleMsg(new StringBuilder().append("Cannot write to ").append(file.getName()).toString(), 651886745);
+							Class255.sendDevConsoleMsg("Cannot write to " + file.getName(), 651886745);
 						}
 						return;
 					}
@@ -357,10 +388,10 @@ public class Class419 {
 				}
 			}
 			if (GameClient.anInt8752 * -1233866115 != 0) {
-				Class255.sendDevConsoleMsg(new StringBuilder().append(LocalizedString.MESSAGE_UNKNOWN_DEV_COMMAND_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(cmd).toString(), 276776266);
+				Class255.sendDevConsoleMsg(LocalizedString.MESSAGE_UNKNOWN_DEV_COMMAND_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210) + cmd, 276776266);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rj.t(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "rj.t(" + ')');
 		}
 	}
 }

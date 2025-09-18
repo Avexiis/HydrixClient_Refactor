@@ -13,7 +13,7 @@ public class Class82_Sub20 extends Class82 {
 		super(class298_sub53);
 		((Class82_Sub20) this).anInt6900 = class298_sub53.readUnsignedShort() * -1972913347;
 		((Class82_Sub20) this).anInt6896 = class298_sub53.readUnsignedShort() * 1250113173;
-		((Class82_Sub20) this).aString6898 = class298_sub53.gstr();
+		((Class82_Sub20) this).aString6898 = class298_sub53.getString();
 		((Class82_Sub20) this).anInt6897 = class298_sub53.readUnsignedInt() * -1423918679;
 		((Class82_Sub20) this).anInt6899 = class298_sub53.readUnsignedShort() * 1154354255;
 	}

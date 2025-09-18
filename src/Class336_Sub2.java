@@ -7,12 +7,12 @@ public class Class336_Sub2 extends Class336 {
 	int anInt7714;
 
 	public boolean method4089(int i, int i_0_, int i_1_, Region region) {
-		return region.method2742(i_0_, i_1_, i, -1331662251 * toX, toY * 1517720743, ((Class336_Sub2) this).aClass424_7713.method242(694163818), (((Class336_Sub2) this).anInt7714 * -472184325), 1632228208);
+		return region.canReachLoc(i_0_, i_1_, i, -1331662251 * toX, toY * 1517720743, ((Class336_Sub2) this).aClass424_7713.method242(694163818), (((Class336_Sub2) this).anInt7714 * -472184325));
 	}
 
 	public boolean method4090(int i, int i_2_, int i_3_, Region region, int i_4_) {
 		try {
-			return region.method2742(i_2_, i_3_, i, -1331662251 * toX, toY * 1517720743, ((Class336_Sub2) this).aClass424_7713.method242(694163818), (((Class336_Sub2) this).anInt7714 * -472184325), 2085306850);
+			return region.canReachLoc(i_2_, i_3_, i, -1331662251 * toX, toY * 1517720743, ((Class336_Sub2) this).aClass424_7713.method242(694163818), (((Class336_Sub2) this).anInt7714 * -472184325));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ace.a(").append(')').toString());
 		}
@@ -23,7 +23,7 @@ public class Class336_Sub2 extends Class336 {
 	}
 
 	public boolean method4091(int i, int i_5_, int i_6_, Region region) {
-		return region.method2742(i_5_, i_6_, i, -1331662251 * toX, toY * 1517720743, ((Class336_Sub2) this).aClass424_7713.method242(694163818), (((Class336_Sub2) this).anInt7714 * -472184325), 1073937483);
+		return region.canReachLoc(i_5_, i_6_, i, -1331662251 * toX, toY * 1517720743, ((Class336_Sub2) this).aClass424_7713.method242(694163818), (((Class336_Sub2) this).anInt7714 * -472184325));
 	}
 
 	static final void method4096(ClientScript2 class403, int i) {

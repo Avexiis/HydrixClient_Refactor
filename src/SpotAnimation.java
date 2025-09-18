@@ -24,7 +24,7 @@ public class SpotAnimation {
 			int i_2_ = class298_sub53.readUnsignedShort();
 			int i_3_ = class298_sub53.readUnsignedShort();
 			int i_4_ = class298_sub53.readShort(1992026897);
-			int i_5_ = class298_sub53.gSmart2or4n();
+			int i_5_ = class298_sub53.readBigSmart();
 			int i_6_ = class298_sub53.readUnsignedInt();
 			return new Class128(class139, class133, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_);
 		} catch (RuntimeException runtimeexception) {

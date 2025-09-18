@@ -119,15 +119,15 @@ public class Class228 {
 			int i_17_ = 0;
 			Class285.routeFinderXArray[i_16_] = i_10_;
 			Class285.routeFinderYArray[i_16_++] = i_11_;
-			int[][] is = region.anIntArrayArray3155;
+			int[][] is = region.masks;
 			while (i_17_ != i_16_) {
 				i_10_ = Class285.routeFinderXArray[i_17_];
 				i_11_ = Class285.routeFinderYArray[i_17_];
 				i_17_ = i_17_ + 1 & 0xfff;
 				i_12_ = i_10_ - i_14_;
 				i_13_ = i_11_ - i_15_;
-				int i_18_ = i_10_ - region.anInt3151 * 1487776559;
-				int i_19_ = i_11_ - 1415525851 * region.anInt3152;
+				int i_18_ = i_10_ - region.regionBaseX * 1487776559;
+				int i_19_ = i_11_ - 1415525851 * region.regionBaseY;
 				if (class336.method4090(2, i_10_, i_11_, region, -16711936)) {
 					Class285.anInt3078 = 1021042197 * i_10_;
 					Class163.anInt1684 = -575994451 * i_11_;

@@ -11,13 +11,13 @@ public interface Interface14 {
 
 	public void supplyApplet(Applet applet);
 
-	public void method192();
+	public void stop();
 
-	public void method193();
+	public void destroy();
 
 	public void method194(Graphics graphics);
 
-	public void method195(Graphics graphics);
+	public void paint(Graphics graphics);
 
 	public void method196();
 

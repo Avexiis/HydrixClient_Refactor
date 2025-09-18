@@ -172,11 +172,11 @@ public final class Class501 {
 				Class397.method4912((short) 255);
 				GameClient.WINDOW_PANE_ID = 62030331 * HashTable.aClass371_5520.anInt4042;
 				Class257.method2453(false, (byte) 8);
-				Class360.method4301(-960032596);
+				LoginData.method4301(-960032596);
 				Class14.method341(-257444687 * GameClient.WINDOW_PANE_ID, null, 2019085039);
 			}
 			AppletParam.method1939(-2068735860);
-			Class360.aBoolean3912 = false;
+			LoginData.aBoolean3912 = false;
 			VarBitType.method3983(1449725764);
 			GameClient.anInt8937 = 280458557;
 			Class518.method6314(GameClient.anInt8831 * 1203044105, 614001892);
@@ -221,12 +221,12 @@ public final class Class501 {
 				if (null != GameClient.players[i])
 					throw new RuntimeException();
 				Class410 class410 = Class10.aClass410Array138[i];
-				Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[i] = (new Player(GameClient.map.method2675(-1611682495))));
-				class365_sub1_sub1_sub2_sub2.entityIndex = i * 1714292119;
+				Player player = (GameClient.players[i] = (new Player(GameClient.map.method2675(-1611682495))));
+				player.entityIndex = i * 1714292119;
 				if (null != Class10.aClass298_Sub53Array133[i])
-					class365_sub1_sub1_sub2_sub2.sendAppearence(Class10.aClass298_Sub53Array133[i], (byte) 3);
-				class365_sub1_sub1_sub2_sub2.method4415(-1000138653 * ((Class410) class410).anInt5286, true, 1449559817);
-				class365_sub1_sub1_sub2_sub2.anInt10090 = -790543005 * ((Class410) class410).anInt5285;
+					player.sendAppearence(Class10.aClass298_Sub53Array133[i], (byte) 3);
+				player.method4415(-1000138653 * ((Class410) class410).anInt5286, true, 1449559817);
+				player.anInt10090 = -790543005 * ((Class410) class410).anInt5285;
 				int i_18_ = ((Class410) class410).anInt5288 * 1966930015;
 				int i_19_ = i_18_ >> 28;
 				int i_20_ = i_18_ >> 14 & 0xff;
@@ -234,14 +234,14 @@ public final class Class501 {
 				WorldTile worldTile = GameClient.map.getRegionStart(681479919);
 				int i_22_ = (i_20_ << 6) + i_16_ - worldTile.x * -1760580017;
 				int i_23_ = (i_21_ << 6) + i_17_ - 283514611 * worldTile.y;
-				class365_sub1_sub1_sub2_sub2.isClickable = ((Class410) class410).aBoolean5287;
-				class365_sub1_sub1_sub2_sub2.isInCombat = ((Class410) class410).aBoolean5289;
-				class365_sub1_sub1_sub2_sub2.moveDir[0] = Class10.playersMovementTypes[i];
-				class365_sub1_sub1_sub2_sub2.plane = class365_sub1_sub1_sub2_sub2.aByte7724 = (byte) i_19_;
+				player.isClickable = ((Class410) class410).aBoolean5287;
+				player.isInCombat = ((Class410) class410).aBoolean5289;
+				player.moveDir[0] = Class10.playersMovementTypes[i];
+				player.plane = player.aByte7724 = (byte) i_19_;
 				if (GameClient.map.method2654(1040339757).method2320(i_22_, i_23_, -937818147))
-					class365_sub1_sub1_sub2_sub2.aByte7724++;
-				class365_sub1_sub1_sub2_sub2.method4472(i_22_, i_23_, -2040915654);
-				class365_sub1_sub1_sub2_sub2.isTeleporting = false;
+					player.aByte7724++;
+				player.method4472(i_22_, i_23_, -2040915654);
+				player.isTeleporting = false;
 				Class10.aClass410Array138[i] = null;
 				return true;
 			}

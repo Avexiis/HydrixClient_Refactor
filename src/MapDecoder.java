@@ -9,20 +9,20 @@ public class MapDecoder {
 	protected SceneGraph aSceneGraph_2619;
 	static int anInt2620 = 1;
 	public int anInt2621 = 0;
-	public boolean sceneryShadows = false;
+	public boolean aBoolean2622 = false;
 	int[] anIntArray2623;
-	public boolean groundBlending;
+	public boolean aBoolean2624;
 	public boolean aBoolean2625;
-	public int planesHeight;
+	public int anInt2626;
 	protected int anInt2627;
 	protected int anInt2628;
-	public boolean isUnderwater;
+	public boolean aBoolean2629;
 	static int anInt2630 = 512;
 	public byte[][][] aByteArrayArrayArray2631;
 	protected boolean aBoolean2632;
 	static int anInt2633 = 64;
 	static int[][] anIntArrayArray2634;
-	protected TileFlags tile_flags;
+	protected TileFlags aTileFlags_2635;
 	short[][][] overlays;
 	protected byte[][][] aByteArrayArrayArray2637;
 	static int[][] anIntArrayArray2638;
@@ -84,7 +84,7 @@ public class MapDecoder {
 	boolean aBoolean2694;
 	static boolean[][] aBooleanArrayArray2695;
 	boolean aBoolean2696;
-	public boolean highDetailWater = false;
+	public boolean aBoolean2697 = false;
 	byte[][][] shapes;
 	int numFloFaces;
 	int[] anIntArray2700;
@@ -102,7 +102,7 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.u(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.u(").append(')').toString());
 		}
 	}
 
@@ -110,103 +110,103 @@ public class MapDecoder {
 		try {
 			aBoolean2632 = true;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.a(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.a(").append(')').toString());
 		}
 	}
 
-	public final void calculateMapHeightPlanes(int y, int x, int minY, int minX, byte i_7_) {
+	public final void method2213(int i, int i_4_, int i_5_, int i_6_, byte i_7_) {
 		try {
-			for (int plane = 0; plane < planesHeight * 1551623871; plane++) {
-				calculateMapHeights(plane, y, x, minY, minX);
+			for (int i_8_ = 0; i_8_ < anInt2626 * 1551623871; i_8_++) {
+				method2214(i_8_, i, i_4_, i_5_, i_6_, -994484260);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.b(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.b(").append(')').toString());
 		}
 	}
 
-	public final void calculateMapHeights(int plane, int sizeY, int sizeX, int minY, int minX) {
+	public final void method2214(int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
 		try {
-			for (int x = sizeX; x < minX + sizeX; x++) {
-				for (int y = sizeY; y < minY + sizeY; y++) {
-					if (y >= 0 && y < anInt2627 * -954368823 && x >= 0 && x < anInt2628 * 181474463) {
-						heights[plane][y][x] = plane > 0 ? heights[plane - 1][y][x] - 960 : 0;
+			for (int i_14_ = i_10_; i_14_ < i_12_ + i_10_; i_14_++) {
+				for (int i_15_ = i_9_; i_15_ < i_11_ + i_9_; i_15_++) {
+					if (i_15_ >= 0 && i_15_ < anInt2627 * -954368823 && i_14_ >= 0 && i_14_ < anInt2628 * 181474463) {
+						heights[i][i_15_][i_14_] = i > 0 ? heights[i - 1][i_15_][i_14_] - 960 : 0;
 					}
 				}
 			}
-			if (sizeY > 0 && sizeY < anInt2627 * -954368823) {
-				for (int x = 1 + sizeX; x < sizeX + minX; x++) {
-					if (x >= 0 && x < 181474463 * anInt2628) {
-						heights[plane][sizeY][x] = heights[plane][sizeY - 1][x];
+			if (i_9_ > 0 && i_9_ < anInt2627 * -954368823) {
+				for (int i_16_ = 1 + i_10_; i_16_ < i_10_ + i_12_; i_16_++) {
+					if (i_16_ >= 0 && i_16_ < 181474463 * anInt2628) {
+						heights[i][i_9_][i_16_] = heights[i][i_9_ - 1][i_16_];
 					}
 				}
 			}
-			if (sizeX > 0 && sizeX < 181474463 * anInt2628) {
-				for (int y = 1 + sizeY; y < minY + sizeY; y++) {
-					if (y >= 0 && y < -954368823 * anInt2627) {
-						heights[plane][y][sizeX] = heights[plane][y][sizeX - 1];
+			if (i_10_ > 0 && i_10_ < 181474463 * anInt2628) {
+				for (int i_17_ = 1 + i_9_; i_17_ < i_11_ + i_9_; i_17_++) {
+					if (i_17_ >= 0 && i_17_ < -954368823 * anInt2627) {
+						heights[i][i_17_][i_10_] = heights[i][i_17_][i_10_ - 1];
 					}
 				}
 			}
-			if (sizeY >= 0 && sizeX >= 0 && sizeY < anInt2627 * -954368823 && sizeX < anInt2628 * 181474463) {
-				if (plane == 0) {
-					if (sizeY > 0 && heights[plane][sizeY - 1][sizeX] != 0) {
-						heights[plane][sizeY][sizeX] = heights[plane][sizeY - 1][sizeX];
-					} else if (sizeX > 0 && 0 != heights[plane][sizeY][sizeX - 1]) {
-						heights[plane][sizeY][sizeX] = heights[plane][sizeY][sizeX - 1];
-					} else if (sizeY > 0 && sizeX > 0 && 0 != heights[plane][sizeY - 1][sizeX - 1]) {
-						heights[plane][sizeY][sizeX] = heights[plane][sizeY - 1][sizeX - 1];
+			if (i_9_ >= 0 && i_10_ >= 0 && i_9_ < anInt2627 * -954368823 && i_10_ < anInt2628 * 181474463) {
+				if (i == 0) {
+					if (i_9_ > 0 && heights[i][i_9_ - 1][i_10_] != 0) {
+						heights[i][i_9_][i_10_] = heights[i][i_9_ - 1][i_10_];
+					} else if (i_10_ > 0 && 0 != heights[i][i_9_][i_10_ - 1]) {
+						heights[i][i_9_][i_10_] = heights[i][i_9_][i_10_ - 1];
+					} else if (i_9_ > 0 && i_10_ > 0 && 0 != heights[i][i_9_ - 1][i_10_ - 1]) {
+						heights[i][i_9_][i_10_] = heights[i][i_9_ - 1][i_10_ - 1];
 					}
-				} else if (sizeY > 0 && heights[plane][sizeY - 1][sizeX] != heights[plane - 1][sizeY - 1][sizeX]) {
-					heights[plane][sizeY][sizeX] = heights[plane][sizeY - 1][sizeX];
-				} else if (sizeX > 0 && heights[plane][sizeY][sizeX - 1] != heights[plane - 1][sizeY][sizeX - 1]) {
-					heights[plane][sizeY][sizeX] = heights[plane][sizeY][sizeX - 1];
-				} else if (sizeY > 0 && sizeX > 0 && heights[plane][sizeY - 1][sizeX - 1] != heights[plane - 1][sizeY - 1][sizeX - 1]) {
-					heights[plane][sizeY][sizeX] = heights[plane][sizeY - 1][sizeX - 1];
+				} else if (i_9_ > 0 && heights[i][i_9_ - 1][i_10_] != heights[i - 1][i_9_ - 1][i_10_]) {
+					heights[i][i_9_][i_10_] = heights[i][i_9_ - 1][i_10_];
+				} else if (i_10_ > 0 && heights[i][i_9_][i_10_ - 1] != heights[i - 1][i_9_][i_10_ - 1]) {
+					heights[i][i_9_][i_10_] = heights[i][i_9_][i_10_ - 1];
+				} else if (i_9_ > 0 && i_10_ > 0 && heights[i][i_9_ - 1][i_10_ - 1] != heights[i - 1][i_9_ - 1][i_10_ - 1]) {
+					heights[i][i_9_][i_10_] = heights[i][i_9_ - 1][i_10_ - 1];
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.p(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.p(").append(')').toString());
 		}
 	}
 
-	public final void method2215(Packet buffer, int xOffset, int yOffset, int i_19_, int i_20_, Region[] regions, boolean osrs) {
-		if (!isUnderwater) {
-			for (int plane = 0; plane < 4; plane++) {
-				Region region = regions[plane];
-				for (int tileX = 0; tileX < 64; tileX++) {
-					for (int tileY = 0; tileY < 64; tileY++) {
-						int x = xOffset + tileX;
-						int y = tileY + yOffset;
-						if (x >= 0 && x < -954368823 * anInt2627 && y >= 0 && y < anInt2628 * 181474463) {
-							region.removeClip(x, y, -1001372278);
+	public final void method2215(Packet class298_sub53, int i, int i_18_, int i_19_, int i_20_, Region[] Regions, boolean osrs) {
+		if (!aBoolean2629) {
+			for (int i_22_ = 0; i_22_ < 4; i_22_++) {
+				Region region = Regions[i_22_];
+				for (int i_23_ = 0; i_23_ < 64; i_23_++) {
+					for (int i_24_ = 0; i_24_ < 64; i_24_++) {
+						int i_25_ = i + i_23_;
+						int i_26_ = i_24_ + i_18_;
+						if (i_25_ >= 0 && i_25_ < -954368823 * anInt2627 && i_26_ >= 0 && i_26_ < anInt2628 * 181474463) {
+							region.removeClip(i_25_, i_26_);
 						}
 					}
 				}
 			}
 		}
-		int worldX = xOffset + i_19_;
-		int worldY = i_20_ + yOffset;
-		for (int plane = 0; plane < planesHeight * 1551623871; plane++) {
-			for (int tileX = 0; tileX < 64; tileX++) {
-				for (int tileY = 0; tileY < 64; tileY++) {
-					deserialize_tile(buffer, plane, tileX + xOffset, yOffset + tileY, 0, 0, tileX + worldX, worldY + tileY, 0, false, osrs);
+		int i_27_ = i + i_19_;
+		int i_28_ = i_20_ + i_18_;
+		for (int i_29_ = 0; i_29_ < anInt2626 * 1551623871; i_29_++) {
+			for (int i_30_ = 0; i_30_ < 64; i_30_++) {
+				for (int i_31_ = 0; i_31_ < 64; i_31_++) {
+					deserialise_tile(class298_sub53, i_29_, i_30_ + i, i_18_ + i_31_, 0, 0, i_30_ + i_27_, i_28_ + i_31_, 0, false, osrs);
 				}
 			}
 		}
 	}
 
-	public final void deserialize_region(Packet buffer, int i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_, Region[] regions, boolean osrs) {
+	public final void deserialise_region(Packet class298_sub53, int i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_, Region[] Regions, boolean osrs) {
 		try {
 			int i_39_ = (i_35_ & 0x7) * 8;
 			int i_40_ = 8 * (i_36_ & 0x7);
-			if (!isUnderwater) {
-				Region region = regions[i];
-				for (int chunkX = 0; chunkX < 8; chunkX++) {
-					for (int chunkY = 0; chunkY < 8; chunkY++) {
-						int i_43_ = i_32_ + Class402.method4941(chunkX & 0x7, chunkY & 0x7, i_37_, -1280307862);
-						int i_44_ = i_33_ + Class472.method6064(chunkX & 0x7, chunkY & 0x7, i_37_, (byte) -111);
+			if (!aBoolean2629) {
+				Region region = Regions[i];
+				for (int i_41_ = 0; i_41_ < 8; i_41_++) {
+					for (int i_42_ = 0; i_42_ < 8; i_42_++) {
+						int i_43_ = i_32_ + Class402.method4941(i_41_ & 0x7, i_42_ & 0x7, i_37_, -1280307862);
+						int i_44_ = i_33_ + Class472.method6064(i_41_ & 0x7, i_42_ & 0x7, i_37_, (byte) -111);
 						if (i_43_ > 0 && i_43_ < anInt2627 * -954368823 - 1 && i_44_ > 0 && i_44_ < 181474463 * anInt2628 - 1) {
-							region.removeClip(i_43_, i_44_, -1032370407);
+							region.removeClip(i_43_, i_44_);
 						}
 					}
 				}
@@ -223,43 +223,43 @@ public class MapDecoder {
 			} else if (i_37_ == 3) {
 				i_47_ = 1;
 			}
-			for (int plane = 0; plane < 1551623871 * planesHeight; plane++) {
-				for (int x = 0; x < 64; x++) {
-					for (int y = 0; y < 64; y++) {
-						if (plane == i_34_ && x >= i_39_ && x <= i_39_ + 8 && y >= i_40_ && y <= i_40_ + 8) {
+			for (int i_49_ = 0; i_49_ < 1551623871 * anInt2626; i_49_++) {
+				for (int i_50_ = 0; i_50_ < 64; i_50_++) {
+					for (int i_51_ = 0; i_51_ < 64; i_51_++) {
+						if (i_49_ == i_34_ && i_50_ >= i_39_ && i_50_ <= i_39_ + 8 && i_51_ >= i_40_ && i_51_ <= i_40_ + 8) {
 							int i_52_;
 							int i_53_;
-							if (x == 8 + i_39_ || 8 + i_40_ == y) {
+							if (i_50_ == 8 + i_39_ || 8 + i_40_ == i_51_) {
 								if (0 == i_37_) {
-									i_52_ = i_32_ + x - i_39_;
-									i_53_ = i_33_ + y - i_40_;
+									i_52_ = i_32_ + i_50_ - i_39_;
+									i_53_ = i_33_ + i_51_ - i_40_;
 								} else if (1 == i_37_) {
-									i_52_ = i_32_ + y - i_40_;
-									i_53_ = i_33_ + 8 - (x - i_39_);
+									i_52_ = i_32_ + i_51_ - i_40_;
+									i_53_ = i_33_ + 8 - (i_50_ - i_39_);
 								} else if (2 == i_37_) {
-									i_52_ = i_32_ + 8 - (x - i_39_);
-									i_53_ = 8 + i_33_ - (y - i_40_);
+									i_52_ = i_32_ + 8 - (i_50_ - i_39_);
+									i_53_ = 8 + i_33_ - (i_51_ - i_40_);
 								} else {
-									i_52_ = 8 + i_32_ - (y - i_40_);
-									i_53_ = i_33_ + x - i_39_;
+									i_52_ = 8 + i_32_ - (i_51_ - i_40_);
+									i_53_ = i_33_ + i_50_ - i_39_;
 								}
-								deserialize_tile(buffer, i, i_52_, i_53_, 0, 0, i_45_ + x, y + i_46_, 0, true, osrs);
+								deserialise_tile(class298_sub53, i, i_52_, i_53_, 0, 0, i_45_ + i_50_, i_51_ + i_46_, 0, true, osrs);
 							} else {
-								i_52_ = i_32_ + Class402.method4941(x & 0x7, y & 0x7, i_37_, -1280307862);
-								i_53_ = i_33_ + Class472.method6064(x & 0x7, y & 0x7, i_37_, (byte) -33);
-								deserialize_tile(buffer, i, i_52_, i_53_, i_47_, i_48_, x + i_45_, y + i_46_, i_37_, false, osrs);
+								i_52_ = i_32_ + Class402.method4941(i_50_ & 0x7, i_51_ & 0x7, i_37_, -1280307862);
+								i_53_ = i_33_ + Class472.method6064(i_50_ & 0x7, i_51_ & 0x7, i_37_, (byte) -33);
+								deserialise_tile(class298_sub53, i, i_52_, i_53_, i_47_, i_48_, i_50_ + i_45_, i_51_ + i_46_, i_37_, false, osrs);
 							}
-							if (63 == x || 63 == y) {
+							if (63 == i_50_ || 63 == i_51_) {
 								int i_54_ = 1;
-								if (x == 63 && y == 63) {
+								if (i_50_ == 63 && i_51_ == 63) {
 									i_54_ = 3;
 								}
 								for (int i_55_ = 0; i_55_ < i_54_; i_55_++) {
-									int i_56_ = x;
-									int i_57_ = y;
+									int i_56_ = i_50_;
+									int i_57_ = i_51_;
 									if (0 == i_55_) {
-										i_56_ = x == 63 ? 64 : x;
-										i_57_ = 63 == y ? 64 : y;
+										i_56_ = i_50_ == 63 ? 64 : i_50_;
+										i_57_ = 63 == i_51_ ? 64 : i_51_;
 									} else if (1 == i_55_) {
 										i_56_ = 64;
 									} else if (2 == i_55_) {
@@ -286,13 +286,13 @@ public class MapDecoder {
 								}
 							}
 						} else {
-							deserialize_tile(buffer, 0, -1, -1, 0, 0, 0, 0, 0, false, osrs);
+							deserialise_tile(class298_sub53, 0, -1, -1, 0, 0, 0, 0, 0, false, osrs);
 						}
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.k(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.k(").append(')').toString());
 		}
 	}
 
@@ -305,37 +305,37 @@ public class MapDecoder {
 			anIntArray2642 = null;
 			aBoolean2632 = false;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.f(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.f(").append(')').toString());
 		}
 	}
 
-	public void method2218(GraphicsToolkit toolkit, int[][][] height_map, Region[] regions, byte i) {
+	public void method2218(GraphicsToolkit class_ra, int[][][] is, Region[] Regions, byte i) {
 		try {
-			if (!isUnderwater) {
-				for (int plane = 0; plane < 4; plane++) {
-					for (int x = 0; x < anInt2627 * -954368823; x++) {
-						for (int y = 0; y < anInt2628 * 181474463; y++) {
-							if (0 != (tile_flags.flags[plane][x][y] & 0x1)) {
-								int height = plane;
-								if (0 != (tile_flags.flags[1][x][y] & 0x2)) {
-									height--;
+			if (!aBoolean2629) {
+				for (int i_60_ = 0; i_60_ < 4; i_60_++) {
+					for (int i_61_ = 0; i_61_ < anInt2627 * -954368823; i_61_++) {
+						for (int i_62_ = 0; i_62_ < anInt2628 * 181474463; i_62_++) {
+							if (0 != (aTileFlags_2635.flags[i_60_][i_61_][i_62_] & 0x1)) {
+								int i_63_ = i_60_;
+								if (0 != (aTileFlags_2635.flags[1][i_61_][i_62_] & 0x2)) {
+									i_63_--;
 								}
-								if (height >= 0) {
-									regions[height].addClip(x, y, (byte) 4);
+								if (i_63_ >= 0) {
+									Regions[i_63_].addClip(i_61_, i_62_);
 								}
 							}
 						}
 					}
 				}
 			}
-			for (int plane = 0; plane < 1551623871 * planesHeight; plane++) {
+			for (int i_64_ = 0; i_64_ < 1551623871 * anInt2626; i_64_++) {
 				int i_65_ = 0;
 				int i_66_ = 0;
-				if (!isUnderwater) {
-					if (sceneryShadows) {
+				if (!aBoolean2629) {
+					if (aBoolean2622) {
 						i_66_ |= 0x8;
 					}
-					if (highDetailWater) {
+					if (aBoolean2697) {
 						i_65_ |= 0x2;
 					}
 					if (917702315 * anInt2621 != 0) {
@@ -343,17 +343,17 @@ public class MapDecoder {
 						i_66_ |= 0x10;
 					}
 				}
-				if (highDetailWater) {
+				if (aBoolean2697) {
 					i_66_ |= 0x7;
 				}
 				if (!aBoolean2625) {
 					i_66_ |= 0x20;
 				}
-				int[][] is_67_ = null != height_map && plane < height_map.length ? height_map[plane] : heights[plane];
-				aSceneGraph_2619.method4056(plane, toolkit.method5040(anInt2627 * -954368823, 181474463 * anInt2628, heights[plane], is_67_, 512, i_65_, i_66_), (byte) 32);
+				int[][] is_67_ = null != is && i_64_ < is.length ? is[i_64_] : heights[i_64_];
+				aSceneGraph_2619.method4056(i_64_, class_ra.method5040(anInt2627 * -954368823, 181474463 * anInt2628, heights[i_64_], is_67_, 512, i_65_, i_66_), (byte) 32);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.x(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.x(").append(')').toString());
 		}
 	}
 
@@ -367,7 +367,7 @@ public class MapDecoder {
 				anIntArray2641 = new int[anInt2628 * 181474463];
 				anIntArray2642 = new int[181474463 * anInt2628];
 			}
-			for (int i_69_ = 0; i_69_ < 1551623871 * planesHeight; i_69_++) {
+			for (int i_69_ = 0; i_69_ < 1551623871 * anInt2626; i_69_++) {
 				for (int i_70_ = 0; i_70_ < anInt2628 * 181474463; i_70_++) {
 					anIntArray2669[i_70_] = 0;
 					anIntArray2639[i_70_] = 0;
@@ -381,11 +381,11 @@ public class MapDecoder {
 						if (i_73_ < anInt2627 * -954368823) {
 							int i_74_ = underlays[i_69_][i_73_][i_72_] & 0xffff;
 							if (i_74_ > 0) {
-								FluType class443 = aClass451_2617.getUnderlay(i_74_ - 1, (byte) -1);
+								FluType class443 = aClass451_2617.method5932(i_74_ - 1, (byte) -1);
 								anIntArray2669[i_72_] += class443.anInt5598 * 838046775;
-								anIntArray2639[i_72_] += -620399085 * class443.saturation;
-								anIntArray2640[i_72_] += 656695887 * class443.lightness;
-								anIntArray2641[i_72_] += class443.hueMultiplier * -813159285;
+								anIntArray2639[i_72_] += -620399085 * class443.anInt5595;
+								anIntArray2640[i_72_] += 656695887 * class443.anInt5600;
+								anIntArray2641[i_72_] += class443.anInt5601 * -813159285;
 								anIntArray2642[i_72_]++;
 							}
 						}
@@ -393,11 +393,11 @@ public class MapDecoder {
 						if (i_75_ >= 0) {
 							int i_76_ = underlays[i_69_][i_75_][i_72_] & 0xffff;
 							if (i_76_ > 0) {
-								FluType class443 = aClass451_2617.getUnderlay(i_76_ - 1, (byte) -1);
+								FluType class443 = aClass451_2617.method5932(i_76_ - 1, (byte) -1);
 								anIntArray2669[i_72_] -= class443.anInt5598 * 838046775;
-								anIntArray2639[i_72_] -= -620399085 * class443.saturation;
-								anIntArray2640[i_72_] -= class443.lightness * 656695887;
-								anIntArray2641[i_72_] -= class443.hueMultiplier * -813159285;
+								anIntArray2639[i_72_] -= -620399085 * class443.anInt5595;
+								anIntArray2640[i_72_] -= class443.anInt5600 * 656695887;
+								anIntArray2641[i_72_] -= class443.anInt5601 * -813159285;
 								anIntArray2642[i_72_]--;
 							}
 						}
@@ -426,12 +426,12 @@ public class MapDecoder {
 								i_81_ -= anIntArray2642[i_84_];
 							}
 							if (i_82_ >= 0 && i_80_ > 0 && i_81_ > 0) {
-								is[i_71_][i_82_] = ReferenceTable.composeColor(256 * i_77_ / i_80_, i_78_ / i_81_, i_79_ / i_81_, -1708993857);
+								is[i_71_][i_82_] = ReferenceTable.method4933(256 * i_77_ / i_80_, i_78_ / i_81_, i_79_ / i_81_, -1708993857);
 							}
 						}
 					}
 				}
-				if (groundBlending) {
+				if (aBoolean2624) {
 					method2221(class_ra, aSceneGraph_2619.aGroundArray3517[i_69_], i_69_, is, 0 == i_69_ ? ground : null, i_69_ == 0 ? ground_68_ : null, (byte) 114);
 				} else {
 					method2220(class_ra, aSceneGraph_2619.aGroundArray3517[i_69_], i_69_, is, 0 == i_69_ ? ground : null, 0 == i_69_ ? ground_68_ : null, (byte) -8);
@@ -441,19 +441,19 @@ public class MapDecoder {
 				shapes[i_69_] = null;
 				rotations[i_69_] = null;
 			}
-			if (!isUnderwater) {
+			if (!aBoolean2629) {
 				if (917702315 * anInt2621 != 0) {
 					aSceneGraph_2619.method4024((byte) -114);
 				}
-				if (highDetailWater) {
+				if (aBoolean2697) {
 					aSceneGraph_2619.method4049((byte) -116);
 				}
 			}
-			for (int i_85_ = 0; i_85_ < 1551623871 * planesHeight; i_85_++) {
+			for (int i_85_ = 0; i_85_ < 1551623871 * anInt2626; i_85_++) {
 				aSceneGraph_2619.aGroundArray3517[i_85_].SA();
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.r(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.r(").append(')').toString());
 		}
 	}
 
@@ -465,13 +465,13 @@ public class MapDecoder {
 					byte rotation = rotations[i][i_89_][i_90_];
 					int floid = overlays[i][i_89_][i_90_] & 0xffff;
 					int fluid = underlays[i][i_89_][i_90_] & 0xffff;
-					OverlayType flo = floid != 0 ? aClass375_2651.getOverlayDefinition(floid - 1, -165601895) : null;
-					FluType flu = fluid != 0 ? aClass451_2617.getUnderlay(fluid - 1, (byte) -1) : null;
+					OverlayType flo = floid != 0 ? aClass375_2651.method4645(floid - 1, -165601895) : null;
+					FluType flu = fluid != 0 ? aClass451_2617.method5932(fluid - 1, (byte) -1) : null;
 					if (shape == 0 && null == flo) {
 						shape = (byte) 12;
 					}
 					OverlayType class373_95_ = flo;
-					if (flo != null && flo.color * -45966925 == -1 && -1 == flo.minimapColor * 1728947183) {
+					if (flo != null && flo.anInt4056 * -45966925 == -1 && -1 == flo.anInt4059 * 1728947183) {
 						class373_95_ = flo;
 						flo = null;
 					}
@@ -493,7 +493,7 @@ public class MapDecoder {
 						int[] is_102_ = new int[numFaces];
 						int[] is_103_ = new int[numFaces];
 						int[] is_104_ = new int[numFaces];
-						int[] is_105_ = null != flo && 1728947183 * flo.minimapColor != -1 ? new int[numFaces] : null;
+						int[] is_105_ = null != flo && 1728947183 * flo.anInt4059 != -1 ? new int[numFaces] : null;
 						if (flo != null) {
 							for (int i_106_ = 0; i_106_ < 1500080431 * numFloFaces; i_106_++) {
 								// flos
@@ -502,14 +502,14 @@ public class MapDecoder {
 								is_101_[i_97_] = anIntArrayArray2634[shape][anInt2688 * -875169383];
 								is_103_[i_97_] = anInt2703 * 1659854875;
 								is_104_[i_97_] = -1551409901 * flo.anInt4060;
-								is_102_[i_97_] = -45966925 * flo.color;
+								is_102_[i_97_] = -45966925 * flo.anInt4056;
 								if (is_105_ != null) {
-									is_105_[i_97_] = flo.minimapColor * 1728947183;
+									is_105_[i_97_] = flo.anInt4059 * 1728947183;
 								}
 								i_97_++;
 								anInt2688 += -1319613783;
 							}
-							if (!isUnderwater && 0 == i) {
+							if (!aBoolean2629 && 0 == i) {
 								aSceneGraph_2619.method4019(i_89_, i_90_, 1987637503 * flo.anInt4064, 1104862312 * flo.anInt4066, 2077360047 * flo.anInt4054, flo.anInt4067 * -986621081, flo.anInt4068 * 171987805, -589660893 * flo.anInt4069, (byte) 26);
 							}
 						} else {
@@ -582,7 +582,7 @@ public class MapDecoder {
 						int i_125_ = ground.method6341(1 + i_89_, i_90_, (byte) -111);
 						int i_126_ = ground.method6341(1 + i_89_, i_90_ + 1, (byte) -31);
 						int i_127_ = ground.method6341(i_89_, 1 + i_90_, (byte) -5);
-						boolean bool = tile_flags.method2320(i_89_, i_90_, 471001785);
+						boolean bool = aTileFlags_2635.method2320(i_89_, i_90_, 471001785);
 						if (bool && i > 1 || !bool && i > 0) {
 							boolean bool_128_ = true;
 							if (flu != null && !flu.aBoolean5596) {
@@ -597,7 +597,7 @@ public class MapDecoder {
 							}
 						}
 						Class78 class78 = new Class78();
-						if (isUnderwater) {
+						if (aBoolean2629) {
 							class78.anInt726 = aSceneGraph_2619.method4015(i_89_, i_90_, (byte) 76) * 614121861;
 							class78.anInt725 = aSceneGraph_2619.method4014(i_89_, i_90_, (byte) 47) * -885436027;
 							class78.anInt727 = aSceneGraph_2619.method4016(i_89_, i_90_, (byte) -105) * 399458545;
@@ -635,8 +635,8 @@ public class MapDecoder {
 							return;
 						}
 					} else {
-						OverlayType class373 = 0 != i_140_ ? aClass375_2651.getOverlayDefinition(i_140_ - 1, -165601895) : null;
-						FluType class443 = i_141_ != 0 ? aClass451_2617.getUnderlay(i_141_ - 1, (byte) -1) : null;
+						OverlayType class373 = 0 != i_140_ ? aClass375_2651.method4645(i_140_ - 1, -165601895) : null;
+						FluType class443 = i_141_ != 0 ? aClass451_2617.method5932(i_141_ - 1, (byte) -1) : null;
 						if (-1377184223 * anInt2687 == 0 && class373 == null) {
 							anInt2687 = -678025588;
 						}
@@ -651,7 +651,7 @@ public class MapDecoder {
 						bools_142_[0] = false;
 						OverlayType class373_145_ = class373;
 						if (null != class373) {
-							if (class373.color * -45966925 == -1 && class373.minimapColor * 1728947183 == -1) {
+							if (class373.anInt4056 * -45966925 == -1 && class373.anInt4059 * 1728947183 == -1) {
 								class373_145_ = class373;
 								class373 = null;
 							} else if (null != class443 && -1377184223 * anInt2687 != 0) {
@@ -700,7 +700,7 @@ public class MapDecoder {
 							method2226(class_ra, i, i_136_, i_138_, i_137_, i_139_, class443, i_141_, i_157_, i_158_, i_159_, bools, is_149_, is_150_, is_151_, is_152_, is_153_, is_154_, is_155_, is_156_, is, ground, ground_130_, ground_129_, (short) 9391);
 							method2229(ground, class443, class373_145_, i, i_136_, i_138_, i_137_, i_139_, i_141_, i_140_, 1222931725);
 							Class78 class78 = new Class78();
-							if (isUnderwater) {
+							if (aBoolean2629) {
 								class78.anInt726 = aSceneGraph_2619.method4015(i_136_, i_138_, (byte) 60) * 614121861;
 								class78.anInt725 = aSceneGraph_2619.method4014(i_136_, i_138_, (byte) 89) * -885436027;
 								class78.anInt727 = aSceneGraph_2619.method4016(i_136_, i_138_, (byte) -43) * 399458545;
@@ -715,7 +715,7 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.n(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.n(").append(')').toString());
 		}
 	}
 
@@ -780,7 +780,7 @@ public class MapDecoder {
 			}
 			return -875169383 * anInt2688;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.s(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.s(").append(')').toString());
 		}
 	}
 
@@ -788,7 +788,7 @@ public class MapDecoder {
 		try {
 			boolean[] bools_175_ = class373 != null && class373.aBoolean4063 ? aBooleanArrayArray2675[-1377184223 * anInt2687] : aBooleanArrayArray2695[anInt2687 * -1377184223];
 			method2227(class_ra, class373, class443, i, i_171_, -954368823 * anInt2627, 181474463 * anInt2628, is_173_, is, is_172_, bools, -2064335777);
-			aBoolean2677 = null != class373 && -45966925 * class373.color != 1728947183 * class373.minimapColor;
+			aBoolean2677 = null != class373 && -45966925 * class373.anInt4056 != 1728947183 * class373.anInt4059;
 			if (!aBoolean2677) {
 				for (int i_176_ = 0; i_176_ < 8; i_176_++) {
 					if (anIntArray2647[i_176_] >= 0 && anIntArray2682[i_176_] != anIntArray2681[i_176_]) {
@@ -845,7 +845,7 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.z(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.z(").append(')').toString());
 		}
 	}
 
@@ -873,7 +873,7 @@ public class MapDecoder {
 				anIntArray2618 = anIntArrayArray2671[-1377184223 * anInt2687];
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.y(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.y(").append(')').toString());
 		}
 	}
 
@@ -883,7 +883,7 @@ public class MapDecoder {
 			anInt2703 = 365069805;
 			anInt2692 = 1240828160;
 			if (class373 != null) {
-				anInt2693 = class373.color * 269878349;
+				anInt2693 = class373.anInt4056 * 269878349;
 				anInt2703 = -610197047 * class373.anInt4057;
 				anInt2692 = class373.anInt4060 * -1360069077;
 				int i_201_ = Class82_Sub9.method901(class_ra, class373, (byte) 16);
@@ -985,10 +985,10 @@ public class MapDecoder {
 					}
 					anInt2689 += 844235431;
 				}
-				if (!isUnderwater && 0 == i) {
+				if (!aBoolean2629 && 0 == i) {
 					aSceneGraph_2619.method4019(i_189_, i_190_, 1987637503 * class373.anInt4064, 1104862312 * class373.anInt4066, class373.anInt4054 * 2077360047, -986621081 * class373.anInt4067, 171987805 * class373.anInt4068, -589660893 * class373.anInt4069, (byte) -43);
 				}
-				if (anInt2687 * -1377184223 != 12 && -45966925 * class373.color != -1 && class373.aBoolean4061) {
+				if (anInt2687 * -1377184223 != 12 && -45966925 * class373.anInt4056 != -1 && class373.aBoolean4061) {
 					aBoolean2694 = true;
 				}
 			} else if (aBoolean2696) {
@@ -999,7 +999,7 @@ public class MapDecoder {
 				anInt2689 += 844235431 * anIntArray2659[anInt2687 * -1377184223];
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.t(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.t(").append(')').toString());
 		}
 	}
 
@@ -1015,10 +1015,10 @@ public class MapDecoder {
 				if (i_224_ == 0) {
 					i_224_ = i_221_;
 				}
-				FluType class443_236_ = aClass451_2617.getUnderlay(i_221_ - 1, (byte) -1);
-				FluType class443_237_ = aClass451_2617.getUnderlay(i_222_ - 1, (byte) -1);
-				FluType class443_238_ = aClass451_2617.getUnderlay(i_223_ - 1, (byte) -1);
-				FluType class443_239_ = aClass451_2617.getUnderlay(i_224_ - 1, (byte) -1);
+				FluType class443_236_ = aClass451_2617.method5932(i_221_ - 1, (byte) -1);
+				FluType class443_237_ = aClass451_2617.method5932(i_222_ - 1, (byte) -1);
+				FluType class443_238_ = aClass451_2617.method5932(i_223_ - 1, (byte) -1);
+				FluType class443_239_ = aClass451_2617.method5932(i_224_ - 1, (byte) -1);
 				for (int i_240_ = 0; i_240_ < numFluFaces * -299537109; i_240_++) {
 					boolean bool = false;
 					int i_241_;
@@ -1159,7 +1159,7 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.h(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.h(").append(')').toString());
 		}
 	}
 
@@ -1170,13 +1170,13 @@ public class MapDecoder {
 				if (i > 0) {
 					int i_264_ = is[i - 1][i_257_ - 1] & 0xffff;
 					if (i_264_ > 0) {
-						OverlayType class373_265_ = aClass375_2651.getOverlayDefinition(i_264_ - 1, -165601895);
-						if (-1 != -45966925 * class373_265_.color && class373_265_.aBoolean4063) {
+						OverlayType class373_265_ = aClass375_2651.method4645(i_264_ - 1, -165601895);
+						if (-1 != -45966925 * class373_265_.anInt4056 && class373_265_.aBoolean4063) {
 							byte i_266_ = is_260_[i - 1][i_257_ - 1];
 							int i_267_ = 2 * is_261_[i - 1][i_257_ - 1] + 4 & 0x7;
 							int i_268_ = Class82_Sub9.method901(class_ra, class373_265_, (byte) 16);
 							if (aBooleanArrayArray2665[i_266_][i_267_]) {
-								anIntArray2681[0] = class373_265_.color * -45966925;
+								anIntArray2681[0] = class373_265_.anInt4056 * -45966925;
 								anIntArray2682[0] = i_268_;
 								anIntArray2683[0] = class373_265_.anInt4057 * 324071475;
 								anIntArray2684[0] = -1551409901 * class373_265_.anInt4060;
@@ -1189,13 +1189,13 @@ public class MapDecoder {
 				if (i < i_258_ - 1) {
 					int i_269_ = is[1 + i][i_257_ - 1] & 0xffff;
 					if (i_269_ > 0) {
-						OverlayType class373_270_ = aClass375_2651.getOverlayDefinition(i_269_ - 1, -165601895);
-						if (-1 != class373_270_.color * -45966925 && class373_270_.aBoolean4063) {
+						OverlayType class373_270_ = aClass375_2651.method4645(i_269_ - 1, -165601895);
+						if (-1 != class373_270_.anInt4056 * -45966925 && class373_270_.aBoolean4063) {
 							byte i_271_ = is_260_[1 + i][i_257_ - 1];
 							int i_272_ = 6 + is_261_[i + 1][i_257_ - 1] * 2 & 0x7;
 							int i_273_ = Class82_Sub9.method901(class_ra, class373_270_, (byte) 16);
 							if (aBooleanArrayArray2665[i_271_][i_272_]) {
-								anIntArray2681[2] = class373_270_.color * -45966925;
+								anIntArray2681[2] = class373_270_.anInt4056 * -45966925;
 								anIntArray2682[2] = i_273_;
 								anIntArray2683[2] = class373_270_.anInt4057 * 324071475;
 								anIntArray2684[2] = class373_270_.anInt4060 * -1551409901;
@@ -1210,13 +1210,13 @@ public class MapDecoder {
 				if (i > 0) {
 					int i_274_ = is[i - 1][i_257_ + 1] & 0xffff;
 					if (i_274_ > 0) {
-						OverlayType class373_275_ = aClass375_2651.getOverlayDefinition(i_274_ - 1, -165601895);
-						if (class373_275_.color * -45966925 != -1 && class373_275_.aBoolean4063) {
+						OverlayType class373_275_ = aClass375_2651.method4645(i_274_ - 1, -165601895);
+						if (class373_275_.anInt4056 * -45966925 != -1 && class373_275_.aBoolean4063) {
 							byte i_276_ = is_260_[i - 1][i_257_ + 1];
 							int i_277_ = 2 + is_261_[i - 1][1 + i_257_] * 2 & 0x7;
 							int i_278_ = Class82_Sub9.method901(class_ra, class373_275_, (byte) 16);
 							if (aBooleanArrayArray2665[i_276_][i_277_]) {
-								anIntArray2681[6] = -45966925 * class373_275_.color;
+								anIntArray2681[6] = -45966925 * class373_275_.anInt4056;
 								anIntArray2682[6] = i_278_;
 								anIntArray2683[6] = class373_275_.anInt4057 * 324071475;
 								anIntArray2684[6] = -1551409901 * class373_275_.anInt4060;
@@ -1229,13 +1229,13 @@ public class MapDecoder {
 				if (i < i_258_ - 1) {
 					int i_279_ = is[i + 1][i_257_ + 1] & 0xffff;
 					if (i_279_ > 0) {
-						OverlayType class373_280_ = aClass375_2651.getOverlayDefinition(i_279_ - 1, -165601895);
-						if (class373_280_.color * -45966925 != -1 && class373_280_.aBoolean4063) {
+						OverlayType class373_280_ = aClass375_2651.method4645(i_279_ - 1, -165601895);
+						if (class373_280_.anInt4056 * -45966925 != -1 && class373_280_.aBoolean4063) {
 							byte i_281_ = is_260_[1 + i][i_257_ + 1];
 							int i_282_ = 0 + is_261_[1 + i][i_257_ + 1] * 2 & 0x7;
 							int i_283_ = Class82_Sub9.method901(class_ra, class373_280_, (byte) 16);
 							if (aBooleanArrayArray2665[i_281_][i_282_]) {
-								anIntArray2681[4] = -45966925 * class373_280_.color;
+								anIntArray2681[4] = -45966925 * class373_280_.anInt4056;
 								anIntArray2682[4] = i_283_;
 								anIntArray2683[4] = 324071475 * class373_280_.anInt4057;
 								anIntArray2684[4] = class373_280_.anInt4060 * -1551409901;
@@ -1249,8 +1249,8 @@ public class MapDecoder {
 			if (i_257_ > 0) {
 				int i_284_ = is[i][i_257_ - 1] & 0xffff;
 				if (i_284_ > 0) {
-					OverlayType class373_285_ = aClass375_2651.getOverlayDefinition(i_284_ - 1, -165601895);
-					if (-1 != class373_285_.color * -45966925) {
+					OverlayType class373_285_ = aClass375_2651.method4645(i_284_ - 1, -165601895);
+					if (-1 != class373_285_.anInt4056 * -45966925) {
 						byte i_286_ = is_260_[i][i_257_ - 1];
 						int i_287_ = is_261_[i][i_257_ - 1];
 						if (class373_285_.aBoolean4063) {
@@ -1261,7 +1261,7 @@ public class MapDecoder {
 								i_289_ &= 0x7;
 								i_288_ &= 0x7;
 								if (aBooleanArrayArray2665[i_286_][i_289_] && anIntArray2647[i_288_] <= 2109091647 * class373_285_.anInt4055) {
-									anIntArray2681[i_288_] = -45966925 * class373_285_.color;
+									anIntArray2681[i_288_] = -45966925 * class373_285_.anInt4056;
 									anIntArray2682[i_288_] = i_290_;
 									anIntArray2683[i_288_] = class373_285_.anInt4057 * 324071475;
 									anIntArray2684[i_288_] = -1551409901 * class373_285_.anInt4060;
@@ -1287,8 +1287,8 @@ public class MapDecoder {
 			if (i_257_ < i_259_ - 1) {
 				int i_292_ = is[i][i_257_ + 1] & 0xffff;
 				if (i_292_ > 0) {
-					OverlayType class373_293_ = aClass375_2651.getOverlayDefinition(i_292_ - 1, -165601895);
-					if (class373_293_.color * -45966925 != -1) {
+					OverlayType class373_293_ = aClass375_2651.method4645(i_292_ - 1, -165601895);
+					if (class373_293_.anInt4056 * -45966925 != -1) {
 						byte i_294_ = is_260_[i][1 + i_257_];
 						int i_295_ = is_261_[i][1 + i_257_];
 						if (class373_293_.aBoolean4063) {
@@ -1299,7 +1299,7 @@ public class MapDecoder {
 								i_297_ &= 0x7;
 								i_296_ &= 0x7;
 								if (aBooleanArrayArray2665[i_294_][i_297_] && anIntArray2647[i_296_] <= 2109091647 * class373_293_.anInt4055) {
-									anIntArray2681[i_296_] = class373_293_.color * -45966925;
+									anIntArray2681[i_296_] = class373_293_.anInt4056 * -45966925;
 									anIntArray2682[i_296_] = i_298_;
 									anIntArray2683[i_296_] = class373_293_.anInt4057 * 324071475;
 									anIntArray2684[i_296_] = class373_293_.anInt4060 * -1551409901;
@@ -1325,8 +1325,8 @@ public class MapDecoder {
 			if (i > 0) {
 				int i_300_ = is[i - 1][i_257_] & 0xffff;
 				if (i_300_ > 0) {
-					OverlayType class373_301_ = aClass375_2651.getOverlayDefinition(i_300_ - 1, -165601895);
-					if (-1 != -45966925 * class373_301_.color) {
+					OverlayType class373_301_ = aClass375_2651.method4645(i_300_ - 1, -165601895);
+					if (-1 != -45966925 * class373_301_.anInt4056) {
 						byte i_302_ = is_260_[i - 1][i_257_];
 						int i_303_ = is_261_[i - 1][i_257_];
 						if (class373_301_.aBoolean4063) {
@@ -1337,7 +1337,7 @@ public class MapDecoder {
 								i_305_ &= 0x7;
 								i_304_ &= 0x7;
 								if (aBooleanArrayArray2665[i_302_][i_305_] && anIntArray2647[i_304_] <= 2109091647 * class373_301_.anInt4055) {
-									anIntArray2681[i_304_] = class373_301_.color * -45966925;
+									anIntArray2681[i_304_] = class373_301_.anInt4056 * -45966925;
 									anIntArray2682[i_304_] = i_306_;
 									anIntArray2683[i_304_] = 324071475 * class373_301_.anInt4057;
 									anIntArray2684[i_304_] = class373_301_.anInt4060 * -1551409901;
@@ -1363,8 +1363,8 @@ public class MapDecoder {
 			if (i < i_258_ - 1) {
 				int i_308_ = is[1 + i][i_257_] & 0xffff;
 				if (i_308_ > 0) {
-					OverlayType class373_309_ = aClass375_2651.getOverlayDefinition(i_308_ - 1, -165601895);
-					if (-1 != class373_309_.color * -45966925) {
+					OverlayType class373_309_ = aClass375_2651.method4645(i_308_ - 1, -165601895);
+					if (-1 != class373_309_.anInt4056 * -45966925) {
 						byte i_310_ = is_260_[i + 1][i_257_];
 						int i_311_ = is_261_[i + 1][i_257_];
 						if (class373_309_.aBoolean4063) {
@@ -1375,7 +1375,7 @@ public class MapDecoder {
 								i_313_ &= 0x7;
 								i_312_ &= 0x7;
 								if (aBooleanArrayArray2665[i_310_][i_313_] && anIntArray2647[i_312_] <= class373_309_.anInt4055 * 2109091647) {
-									anIntArray2681[i_312_] = -45966925 * class373_309_.color;
+									anIntArray2681[i_312_] = -45966925 * class373_309_.anInt4056;
 									anIntArray2682[i_312_] = i_314_;
 									anIntArray2683[i_312_] = 324071475 * class373_309_.anInt4057;
 									anIntArray2684[i_312_] = class373_309_.anInt4060 * -1551409901;
@@ -1403,7 +1403,7 @@ public class MapDecoder {
 				for (int i_317_ = 0; i_317_ < 8; i_317_++) {
 					int i_318_ = i_317_ - -1750338766 * anInt2688 & 0x7;
 					if (aBooleanArrayArray2665[-1377184223 * anInt2687][i_317_] && anIntArray2647[i_318_] <= class373.anInt4055 * 2109091647) {
-						anIntArray2681[i_318_] = -45966925 * class373.color;
+						anIntArray2681[i_318_] = -45966925 * class373.anInt4056;
 						anIntArray2682[i_318_] = i_316_;
 						anIntArray2683[i_318_] = 324071475 * class373.anInt4057;
 						anIntArray2684[i_318_] = class373.anInt4060 * -1551409901;
@@ -1417,7 +1417,7 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.g(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.g(").append(')').toString());
 		}
 	}
 
@@ -1448,65 +1448,80 @@ public class MapDecoder {
 		anIntArrayArray2679 = new int[][] { { 12, 12, 12, 12 }, { 12, 12, 12, 12, 12, 5 }, { 5, 5, 1, 1 }, { 5, 1, 1, 5 }, { 5, 5, 5 }, { 5, 5, 5 }, { 12, 12, 12, 12, 12, 12 }, { 1, 12, 12, 12, 12, 12 }, { 1, 1, 7, 1 }, { 8, 9, 9, 8, 8, 3, 1, 9 }, { 8, 8, 9, 8, 9, 9 }, { 10, 10, 11, 11, 11, 7, 3, 7 }, { 12, 12, 12, 12 } };
 	}
 
-	public final void deserialize_tile(Packet buffer, int plane, int x, int y, int localX, int localY, int baseX, int baseY, int rotation, boolean hideUnderlay, boolean osrs) {
+	public final void deserialise_tile(Packet buffer, int level, int x, int y, int i_321_, int i_322_, int i_323_, int i_324_, int i_325_, boolean bool, boolean osrs) {
 		try {
-			if (rotation == 1) {
-				localY = 1;
-			} else if (2 == rotation) {
-				localX = 1;
-				localY = 1;
-			} else if (3 == rotation) {
-				localX = 1;
+			if (i_325_ == 1) {
+				i_322_ = 1;
+			} else if (2 == i_325_) {
+				i_321_ = 1;
+				i_322_ = 1;
+			} else if (3 == i_325_) {
+				i_321_ = 1;
 			}
 			if (x >= 0 && x < -954368823 * anInt2627 && y >= 0 && y < 181474463 * anInt2628) {
-				if (!isUnderwater && !hideUnderlay) {
-					tile_flags.flags[plane][x][y] = (byte) 0;
+				if (!aBoolean2629 && !bool) {
+					aTileFlags_2635.flags[level][x][y] = (byte) 0;
 				}
 				for (;;) {
-					int opcode = buffer.readUnsignedByte();
-					if (0 == opcode) {
-						if (isUnderwater) {
-							heights[0][x + localX][y + localY] = 0;
-						} else if (0 == plane) {
-							heights[0][localX + x][localY + y] = -Class412.method5581(baseX + 932731, baseY + 556238, (byte) -40) * 8 << 2;
+					int i_327_ = buffer.readUnsignedByte();
+					if (0 == i_327_) {
+						if (aBoolean2629) {
+							heights[0][x + i_321_][y + i_322_] = 0;
+						} else if (0 == level) {
+							heights[0][i_321_ + x][i_322_ + y] = -Class412.method5581(i_323_ + 932731, i_324_ + 556238, (byte) -40) * 8 << 2;
 						} else {
-							heights[plane][localX + x][y + localY] = heights[plane - 1][localX + x][y + localY] - 960;
+							heights[level][i_321_ + x][y + i_322_] = heights[level - 1][i_321_ + x][y + i_322_] - 960;
 						}
 						break;
 					}
-					if (1 == opcode) {
+					if (1 == i_327_) {
 						int i_328_ = buffer.readUnsignedByte();
-						if (!isUnderwater) {
+						if (!aBoolean2629) {
 							if (i_328_ == 1) {
 								i_328_ = 0;
 							}
-							if (0 == plane) {
-								heights[0][localX + x][localY + y] = -i_328_ * 8 << 2;
+							if (0 == level) {
+								heights[0][i_321_ + x][i_322_ + y] = -i_328_ * 8 << 2;
 							} else {
-								heights[plane][localX + x][localY + y] = heights[plane - 1][localX + x][localY + y] - (i_328_ * 8 << 2);
+								heights[level][i_321_ + x][i_322_ + y] = heights[level - 1][i_321_ + x][i_322_ + y] - (i_328_ * 8 << 2);
 							}
 						} else {
-							heights[0][localX + x][y + localY] = 8 * i_328_ << 2;
+							heights[0][i_321_ + x][y + i_322_] = 8 * i_328_ << 2;
 						}
 						break;
 					}
-					if (opcode <= 49) {
-						if (hideUnderlay)
+					if (i_327_ <= 49) {
+						if (bool) {
 							buffer.readUnsignedByte();
-						else {
-							overlays[plane][x][y] = (short) (buffer.readByte() & 0xff);
-							if (osrs)
-								overlays[plane][x][y] += (OSRSData.OVERLAYS_OFFSET);
-							shapes[plane][x][y] = (byte) ((opcode - 2) / 4);
-							rotations[plane][x][y] = (byte) (opcode - 2 + rotation & 0x3);
+						} else {
+							overlays[level][x][y] = (short) buffer.readUnsignedByte();
+							if (overlays[level][x][y] > 0 && osrs && OSRSData.HD_FLOORS) {
+								int override = -1;// no overrides atm
+								if (override != -1) {
+									overlays[level][x][y] = (short) override;
+								} else {
+									overlays[level][x][y] += (short) OSRSData.OVERLAYS_OFFSET;
+								}
+							}
+							shapes[level][x][y] = (byte) ((i_327_ - 2) / 4);
+							rotations[level][x][y] = (byte) (i_327_ - 2 + i_325_ & 0x3);
 						}
-					} else if (opcode <= 81) {
-						if (!isUnderwater && !hideUnderlay)
-							tile_flags.flags[plane][x][y] = (byte) (opcode - 49);
-					} else if (!hideUnderlay) {
-						underlays[plane][x][y] = (short) (((opcode - 81) & 0xff));
-						if (osrs)
-							underlays[plane][x][y] += (OSRSData.UNDERLAYS_OFFSET);
+					} else if (i_327_ <= 81) {
+						if (!aBoolean2629 && !bool) {
+							aTileFlags_2635.flags[level][x][y] = (byte) (i_327_ - 49);
+						}
+					} else if (bool) {
+						// NOOP
+					} else {
+						underlays[level][x][y] = (short) (i_327_ - 81);
+						if (underlays[level][x][y] > 0 && osrs && OSRSData.HD_FLOORS) {
+							int override = -1;// no overrides atm
+							if (override != -1) {
+								underlays[level][x][y] = (short) override;
+							} else {
+								underlays[level][x][y] += OSRSData.UNDERLAYS_OFFSET;
+							}
+						}
 					}
 				}
 			} else {
@@ -1526,7 +1541,7 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.d(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.d(").append(')').toString());
 		}
 	}
 
@@ -1536,7 +1551,7 @@ public class MapDecoder {
 			int i_338_ = ground.method6341(i_332_, i_331_, (byte) -89);
 			int i_339_ = ground.method6341(i_332_, i_333_, (byte) -120);
 			int i_340_ = ground.method6341(i_330_, i_333_, (byte) -113);
-			boolean bool = tile_flags.method2320(i_330_, i_331_, 1693212331);
+			boolean bool = aTileFlags_2635.method2320(i_330_, i_331_, 1693212331);
 			if (bool && i > 1 || !bool && i > 0) {
 				boolean bool_341_ = true;
 				if (class443 != null && !class443.aBoolean5596) {
@@ -1551,12 +1566,12 @@ public class MapDecoder {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "kb.v(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kb.v(").append(')').toString());
 		}
 	}
 
 	MapDecoder(SceneGraph sceneGraph, int i, int i_342_, int i_343_, boolean bool, FloTypeList class375, UnderlayTypeList class451, TileFlags tileFlags) {
-		groundBlending = false;
+		aBoolean2624 = false;
 		aBoolean2625 = false;
 		anIntArray2680 = new int[6];
 		anIntArray2681 = new int[13];
@@ -1569,19 +1584,19 @@ public class MapDecoder {
 		anInt2685 = 0;
 		anIntArray2618 = null;
 		aSceneGraph_2619 = sceneGraph;
-		planesHeight = 142248255 * i;
+		anInt2626 = 142248255 * i;
 		anInt2627 = i_342_ * 325279097;
 		anInt2628 = i_343_ * 2072446815;
-		isUnderwater = bool;
+		aBoolean2629 = bool;
 		aClass375_2651 = class375;
 		aClass451_2617 = class451;
-		tile_flags = tileFlags;
-		underlays = new short[planesHeight * 1551623871][anInt2627 * -954368823][181474463 * anInt2628];
-		overlays = new short[1551623871 * planesHeight][-954368823 * anInt2627][181474463 * anInt2628];
-		shapes = new byte[1551623871 * planesHeight][-954368823 * anInt2627][anInt2628 * 181474463];
-		rotations = new byte[planesHeight * 1551623871][-954368823 * anInt2627][181474463 * anInt2628];
-		heights = new int[planesHeight * 1551623871][anInt2627 * -954368823 + 1][181474463 * anInt2628 + 1];
-		aByteArrayArrayArray2637 = new byte[1551623871 * planesHeight][1 + -954368823 * anInt2627][181474463 * anInt2628 + 1];
+		aTileFlags_2635 = tileFlags;
+		underlays = new short[anInt2626 * 1551623871][anInt2627 * -954368823][181474463 * anInt2628];
+		overlays = new short[1551623871 * anInt2626][-954368823 * anInt2627][181474463 * anInt2628];
+		shapes = new byte[1551623871 * anInt2626][-954368823 * anInt2627][anInt2628 * 181474463];
+		rotations = new byte[anInt2626 * 1551623871][-954368823 * anInt2627][181474463 * anInt2628];
+		heights = new int[anInt2626 * 1551623871][anInt2627 * -954368823 + 1][181474463 * anInt2628 + 1];
+		aByteArrayArrayArray2637 = new byte[1551623871 * anInt2626][1 + -954368823 * anInt2627][181474463 * anInt2628 + 1];
 	}
 
 	static final void method2230(IComponentDefinition class105, RSInterface RSInterface, ClientScript2 class403, int i) {
@@ -1691,9 +1706,9 @@ public class MapDecoder {
 						int i_354_ = -1;
 						int i_355_ = 1;
 						if (null == class503) {
-							Player class365_sub1_sub1_sub2_sub2 = GameClient.players[is[i_352_]];
+							Player player = GameClient.players[is[i_352_]];
 							i_354_ = class365_sub1_sub1_sub2.getDefinition(379142264).anInt3738 * 2108452425;
-							if (class365_sub1_sub1_sub2_sub2.isClickable) {
+							if (player.isClickable) {
 								i_355_ = 2;
 							}
 						} else {
@@ -1788,15 +1803,15 @@ public class MapDecoder {
 							i_353_ -= 2;
 						}
 						if (class503 == null) {
-							Player class365_sub1_sub1_sub2_sub2 = (Player) class365_sub1_sub1_sub2;
-							if (-1 != class365_sub1_sub1_sub2_sub2.skillLevel * -1126079563) {
-								Class57 class57 = Class416.aClass57Array5334[class365_sub1_sub1_sub2_sub2.skillLevel * -1126079563];
+							Player player = (Player) class365_sub1_sub1_sub2;
+							if (-1 != player.skillLevel * -1126079563) {
+								Class57 class57 = Class416.aClass57Array5334[player.skillLevel * -1126079563];
 								i_353_ -= class57.method625();
 								class57.method645((int) (i + GameClient.aFloatArray8891[0] - 12.0F), i_353_);
 								i_353_ -= 2;
 							}
-							if (-1 != class365_sub1_sub1_sub2_sub2.combatLevel * -2031128911) {
-								Class57 class57 = IntegerPreferenceField.aClass57Array5351[-2031128911 * class365_sub1_sub1_sub2_sub2.combatLevel];
+							if (-1 != player.combatLevel * -2031128911) {
+								Class57 class57 = IntegerPreferenceField.aClass57Array5351[-2031128911 * player.combatLevel];
 								i_353_ -= class57.method625();
 								class57.method645((int) (GameClient.aFloatArray8891[0] + i - 12.0F), i_353_);
 								i_353_ -= 2;

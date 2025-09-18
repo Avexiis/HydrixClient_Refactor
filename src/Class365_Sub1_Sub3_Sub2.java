@@ -499,7 +499,7 @@ public class Class365_Sub1_Sub3_Sub2 extends Class365_Sub1_Sub3 implements Inter
 
 	static void method4515(int i, byte i_35_) {
 		try {
-			Class419.anInt5341 = -249626013 * i;
+			ConsoleCommands.anInt5341 = -249626013 * i;
 			synchronized (Class462.aClass348_5682) {
 				Class462.aClass348_5682.method4187();
 			}

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class MapIconTypeList {
+public class Class487 {
 	CachingHashMap aClass348_6064 = new CachingHashMap(64);
 	CachingHashMap aClass348_6065 = new CachingHashMap(64);
 	public static int anInt6066 = 64;
@@ -13,21 +13,21 @@ public class MapIconTypeList {
 	public Class496 method6159(int i, int i_0_) {
 		try {
 			Class496 class496;
-			synchronized (((MapIconTypeList) this).aClass348_6064) {
-				class496 = (Class496) ((MapIconTypeList) this).aClass348_6064.get((long) i);
+			synchronized (((Class487) this).aClass348_6064) {
+				class496 = (Class496) ((Class487) this).aClass348_6064.get((long) i);
 			}
 			if (class496 != null)
 				return class496;
 			byte[] is;
-			synchronized (((MapIconTypeList) this).aClass243_6067) {
-				is = (((MapIconTypeList) this).aClass243_6067.getFileFromArchive(Js5ConfigGroup.aClass120_1419.anInt1460 * -1006924897, i, (byte) -51));
+			synchronized (((Class487) this).aClass243_6067) {
+				is = (((Class487) this).aClass243_6067.getFileFromArchive(Js5ConfigGroup.aClass120_1419.anInt1460 * -1006924897, i, (byte) -51));
 			}
 			class496 = new Class496();
-			((Class496) class496).aMapIconTypeList_6095 = this;
+			((Class496) class496).aClass487_6095 = this;
 			if (is != null)
 				class496.method6196(new Packet(is), -1377008682);
-			synchronized (((MapIconTypeList) this).aClass348_6064) {
-				((MapIconTypeList) this).aClass348_6064.put(class496, (long) i);
+			synchronized (((Class487) this).aClass348_6064) {
+				((Class487) this).aClass348_6064.put(class496, (long) i);
 			}
 			return class496;
 		} catch (RuntimeException runtimeexception) {
@@ -37,8 +37,8 @@ public class MapIconTypeList {
 
 	public void method6160(int i, int i_1_, int i_2_) {
 		try {
-			((MapIconTypeList) this).aClass348_6064 = new CachingHashMap(i);
-			((MapIconTypeList) this).aClass348_6065 = new CachingHashMap(i_1_);
+			((Class487) this).aClass348_6064 = new CachingHashMap(i);
+			((Class487) this).aClass348_6065 = new CachingHashMap(i_1_);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ub.f(").append(')').toString());
 		}
@@ -46,11 +46,11 @@ public class MapIconTypeList {
 
 	public void method6161(byte i) {
 		try {
-			synchronized (((MapIconTypeList) this).aClass348_6064) {
-				((MapIconTypeList) this).aClass348_6064.method4187();
+			synchronized (((Class487) this).aClass348_6064) {
+				((Class487) this).aClass348_6064.method4187();
 			}
-			synchronized (((MapIconTypeList) this).aClass348_6065) {
-				((MapIconTypeList) this).aClass348_6065.method4187();
+			synchronized (((Class487) this).aClass348_6065) {
+				((Class487) this).aClass348_6065.method4187();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ub.b(").append(')').toString());
@@ -59,21 +59,21 @@ public class MapIconTypeList {
 
 	public void method6162(byte i) {
 		try {
-			synchronized (((MapIconTypeList) this).aClass348_6064) {
-				((MapIconTypeList) this).aClass348_6064.method4189();
+			synchronized (((Class487) this).aClass348_6064) {
+				((Class487) this).aClass348_6064.method4189();
 			}
-			synchronized (((MapIconTypeList) this).aClass348_6065) {
-				((MapIconTypeList) this).aClass348_6065.method4189();
+			synchronized (((Class487) this).aClass348_6065) {
+				((Class487) this).aClass348_6065.method4189();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ub.i(").append(')').toString());
 		}
 	}
 
-	public MapIconTypeList(GameContext gameContext, Language language, Js5 class243, Js5 class243_3_) {
-		((MapIconTypeList) this).aClass243_6067 = class243;
-		((MapIconTypeList) this).aClass243_6068 = class243_3_;
-		((MapIconTypeList) this).aClass243_6067.method2316((Js5ConfigGroup.aClass120_1419.anInt1460) * -1006924897, 1339445894);
+	public Class487(GameContext gameContext, Language language, Js5 class243, Js5 class243_3_) {
+		((Class487) this).aClass243_6067 = class243;
+		((Class487) this).aClass243_6068 = class243_3_;
+		((Class487) this).aClass243_6067.method2316((Js5ConfigGroup.aClass120_1419.anInt1460) * -1006924897, 1339445894);
 		Math.random();
 		Math.random();
 		Math.random();
@@ -82,11 +82,11 @@ public class MapIconTypeList {
 
 	public void method6163(int i, int i_4_) {
 		try {
-			synchronized (((MapIconTypeList) this).aClass348_6064) {
-				((MapIconTypeList) this).aClass348_6064.method4186(i, -2105806073);
+			synchronized (((Class487) this).aClass348_6064) {
+				((Class487) this).aClass348_6064.method4186(i, -2105806073);
 			}
-			synchronized (((MapIconTypeList) this).aClass348_6065) {
-				((MapIconTypeList) this).aClass348_6065.method4186(i, -1191128609);
+			synchronized (((Class487) this).aClass348_6065) {
+				((Class487) this).aClass348_6065.method4186(i, -1191128609);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ub.p(").append(')').toString());

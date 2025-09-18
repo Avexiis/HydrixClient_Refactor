@@ -2,6 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Class255 implements Runnable {
@@ -21,7 +22,7 @@ public class Class255 implements Runnable {
 			method2432(class298_sub37_sub16_sub2, (byte) 103);
 			return class298_sub37_sub16_sub2;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.b(" + ')');
 		}
 	}
 
@@ -44,7 +45,7 @@ public class Class255 implements Runnable {
 			((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2).aBoolean9672 = true;
 			return class298_sub37_sub16_sub2;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.a(" + ')');
 		}
 	}
 
@@ -59,7 +60,7 @@ public class Class255 implements Runnable {
 			method2432(class298_sub37_sub16_sub2, (byte) 39);
 			return class298_sub37_sub16_sub2;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.f(" + ')');
 		}
 	}
 
@@ -71,7 +72,7 @@ public class Class255 implements Runnable {
 				((Class255) this).aClass461_2794.notifyAll();
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.p(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.p(" + ')');
 		}
 	}
 
@@ -103,7 +104,7 @@ public class Class255 implements Runnable {
 				((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2).aBoolean9670 = false;
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.run(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.run(" + ')');
 		}
 	}
 
@@ -129,7 +130,7 @@ public class Class255 implements Runnable {
 			}
 			((Class255) this).aThread2792 = null;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.i(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.i(" + ')');
 		}
 	}
 
@@ -137,7 +138,7 @@ public class Class255 implements Runnable {
 		try {
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5725((byte) 12) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.anz(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.anz(" + ')');
 		}
 	}
 
@@ -145,19 +146,19 @@ public class Class255 implements Runnable {
 		try {
 			if (Class8.aStringArray107 == null)
 				Class372_Sub3.method4599(-219758847);
-			GameClient.aCalendar8758.setTime(new Date(TimeUtils.getTime((byte) 1)));
-			int i_5_ = GameClient.aCalendar8758.get(11);
-			int i_6_ = GameClient.aCalendar8758.get(12);
-			int i_7_ = GameClient.aCalendar8758.get(13);
-			String string_8_ = new StringBuilder().append(Integer.toString(i_5_ / 10)).append(i_5_ % 10).append(":").append(i_6_ / 10).append(i_6_ % 10).append(":").append(i_7_ / 10).append(i_7_ % 10).toString();
+			GameClient.date.setTime(new Date(TimeUtils.getTime((byte) 1)));
+			int hour = GameClient.date.get(Calendar.HOUR_OF_DAY);
+			int minute = GameClient.date.get(Calendar.MINUTE);
+			int second = GameClient.date.get(Calendar.SECOND);
+			String time = Integer.toString(hour / 10) + hour % 10 + ":" + minute / 10 + minute % 10 + ":" + second / 10 + second % 10;
 			String[] strings = Class365_Sub1_Sub3_Sub1.method4508(string, '\n', 1593698305);
 			for (int i_9_ = 0; i_9_ < strings.length; i_9_++) {
 				for (int i_10_ = -2035787443 * Class8.anInt102; i_10_ > 0; i_10_--)
 					Class8.aStringArray107[i_10_] = Class8.aStringArray107[i_10_ - 1];
-				Class8.aStringArray107[0] = new StringBuilder().append(string_8_).append(": ").append(strings[i_9_]).toString();
+				Class8.aStringArray107[0] = time + ": " + strings[i_9_];
 				if (null != Class78.aFileOutputStream731) {
 					try {
-						Class78.aFileOutputStream731.write(Class77.method840(new StringBuilder().append(Class8.aStringArray107[0]).append("\n").toString(), 6758905));
+						Class78.aFileOutputStream731.write(Class77.method840(Class8.aStringArray107[0] + "\n", 6758905));
 					} catch (IOException ioexception) {
 						/* empty */
 					}
@@ -169,7 +170,7 @@ public class Class255 implements Runnable {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.n(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.n(" + ')');
 		}
 	}
 
@@ -184,7 +185,7 @@ public class Class255 implements Runnable {
 			}
 			return null;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.f(" + ')');
 		}
 	}
 
@@ -193,7 +194,7 @@ public class Class255 implements Runnable {
 			long l = (long) (i | (bool ? -2147483648 : 0));
 			return (Class298_Sub9) Class298_Sub9.aClass437_7224.get(l);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.k(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.k(" + ')');
 		}
 	}
 
@@ -204,7 +205,7 @@ public class Class255 implements Runnable {
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
 			Class499.method6218(class105, RSInterface, class403, (byte) 20);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.le(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.le(" + ')');
 		}
 	}
 
@@ -215,7 +216,7 @@ public class Class255 implements Runnable {
 				return null;
 			return new Class505(is);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.f(" + ')');
 		}
 	}
 
@@ -223,7 +224,7 @@ public class Class255 implements Runnable {
 		try {
 			Class82_Sub21.method936(class365_sub1, i, false, -630739459);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("kr.ju(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "kr.ju(" + ')');
 		}
 	}
 }

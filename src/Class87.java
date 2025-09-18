@@ -91,7 +91,7 @@ public class Class87 {
 			if (GameClient.aBoolean8835) {
 				Class497 class497 = (Class132.anInt1508 * 831522399 != -1 ? Class92.aClass504_905.method6251((831522399 * (Class132.anInt1508)), -1080440130) : null);
 				if (GameClient.method2801(class105).method3495(1299208806) && 0 != (Node.anInt3192 * -112110875 & 0x20) && (null == class497 || (class105.method1117(Class132.anInt1508 * 831522399, (class497.anInt6100 * -388931549), -659898667) != -388931549 * class497.anInt6100)))
-					Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Class26.aString351).append(" ").append(class105.aString1228).toString(), MapDecoder.anInt2704 * 697885143, 58, class105.zds3 * -1232467723, 0L, class105.component * -1309843523, -440872681 * class105.interfacehash, true, false, (long) (class105.component * -1309843523 << 32 | class105.interfacehash * -440872681), false, -1876457786);
+					Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(class105.aString1228).toString(), MapDecoder.anInt2704 * 697885143, 58, class105.zds3 * -1232467723, 0L, class105.component * -1309843523, -440872681 * class105.interfacehash, true, false, (long) (class105.component * -1309843523 << 32 | class105.interfacehash * -440872681), false, -1876457786);
 			}
 			for (int i_8_ = 9; i_8_ >= 5; i_8_--) {
 				String string = Class380.method4682(class105, i_8_, (byte) 123);

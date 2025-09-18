@@ -70,7 +70,7 @@ public class VarPlayerType {
 				return i_5_ - i_6_;
 			}
 			if (i == 2)
-				return Class26.method397((class343_sub1.method4163(1486003850).aString3819), (class343_sub1_3_.method4163(1779443598).aString3819), Class321.ACTIVE_LANGUAGE, -1018238154);
+				return Symbol.method397((class343_sub1.method4163(1486003850).aString3819), (class343_sub1_3_.method4163(1779443598).aString3819), Class321.ACTIVE_LANGUAGE, -1018238154);
 			if (3 == i) {
 				if (class343_sub1.aString7719.equals("-")) {
 					if (class343_sub1_3_.aString7719.equals("-"))
@@ -79,7 +79,7 @@ public class VarPlayerType {
 				}
 				if (class343_sub1_3_.aString7719.equals("-"))
 					return bool ? 1 : -1;
-				return Class26.method397(class343_sub1.aString7719, class343_sub1_3_.aString7719, Class321.ACTIVE_LANGUAGE, -1275230374);
+				return Symbol.method397(class343_sub1.aString7719, class343_sub1_3_.aString7719, Class321.ACTIVE_LANGUAGE, -1275230374);
 			}
 			if (i == 4)
 				return (class343_sub1.method4157(-963368374) ? class343_sub1_3_.method4157(740881863) ? 0 : 1 : class343_sub1_3_.method4157(229552705) ? -1 : 0);

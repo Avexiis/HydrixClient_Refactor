@@ -5,7 +5,7 @@ public class Zoom {
 	private static final int MAX_ZOOM = 738;
 
 	public static void zoom(int amount) {
-	//	System.out.println("Zoom: " + amount);
+		//System.out.println("Zoom: " + amount);
 		int zoom = GameClient.aShort8929;
 		int step = 5;
 		if (zoom >= 400) {

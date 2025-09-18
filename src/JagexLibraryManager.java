@@ -543,12 +543,12 @@ public class JagexLibraryManager implements Interface27 {
 
 	static void method3751(byte i) {
 		try {
-			Class360.aClass25_3905.method383((short) 8191);
-			((Class25) Class360.aClass25_3905).aClass298_Sub53_Sub2_333.pos = 0;
-			((Class25) Class360.aClass25_3905).aClass202_344 = null;
-			((Class25) Class360.aClass25_3905).aClass202_345 = null;
-			((Class25) Class360.aClass25_3905).aClass202_348 = null;
-			((Class25) Class360.aClass25_3905).anInt338 = 0;
+			LoginData.aClass25_3905.method383((short) 8191);
+			((Class25) LoginData.aClass25_3905).aClass298_Sub53_Sub2_333.pos = 0;
+			((Class25) LoginData.aClass25_3905).aClass202_344 = null;
+			((Class25) LoginData.aClass25_3905).aClass202_345 = null;
+			((Class25) LoginData.aClass25_3905).aClass202_348 = null;
+			((Class25) LoginData.aClass25_3905).anInt338 = 0;
 			GameClient.anInt8669 = 0;
 			Class_ta.method5998(1477186028);
 			GameClient.anInt8942 = 0;

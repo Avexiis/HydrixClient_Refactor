@@ -78,9 +78,9 @@ public class Class124 implements Runnable {
 	public static void method1385(int i, byte i_0_) {
 		try {
 			if (Class400.method4931((byte) 71)) {
-				if (2084404473 * Class360.anInt3873 != i)
-					Class360.aLong3874 = 2742373017286080113L;
-				Class360.anInt3873 = i * 2035975497;
+				if (2084404473 * LoginData.anInt3873 != i)
+					LoginData.aLong3874 = 2742373017286080113L;
+				LoginData.anInt3873 = i * 2035975497;
 				Class439.method5851(3, 1633403726);
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -90,9 +90,9 @@ public class Class124 implements Runnable {
 
 	static void method1386(byte i) {
 		try {
-			Class360.anInt3868 = -1058684408;
-			Class360.aClass25_3905 = GameClient.aClass25_8693;
-			Class460.method5981((-1L == 122690138525332847L * Class360.aLong3874), true, "", "", Class360.aLong3874 * 122690138525332847L);
+			LoginData.anInt3868 = -1058684408;
+			LoginData.aClass25_3905 = GameClient.aClass25_8693;
+			LoginPacket.method5981((-1L == 122690138525332847L * LoginData.aLong3874), true, "", "", LoginData.aLong3874 * 122690138525332847L);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("f.g(").append(')').toString());
 		}

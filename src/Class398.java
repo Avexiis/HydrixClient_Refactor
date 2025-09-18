@@ -39,9 +39,9 @@ public class Class398 {
 	void method4916(Packet class298_sub53, int i, int i_1_) {
 		try {
 			if (1 == i)
-				((Class398) this).anInt5204 = class298_sub53.gSmart2or4n() * 422607467;
+				((Class398) this).anInt5204 = class298_sub53.readBigSmart() * 422607467;
 			else if (i == 2)
-				anInt5205 = class298_sub53.gSmart2or4n() * 761293581;
+				anInt5205 = class298_sub53.readBigSmart() * 761293581;
 			else if (4 == i)
 				((Class398) this).anInt5217 = class298_sub53.readUnsignedShort() * -1420991257;
 			else if (i == 5)
@@ -204,7 +204,7 @@ public class Class398 {
 			if (c > 0 && c < '\u0080' || c >= '\u00a0' && c <= '\u00ff')
 				return true;
 			if (c != 0) {
-				char[] cs = Class419.aCharArray5340;
+				char[] cs = ConsoleCommands.aCharArray5340;
 				for (int i_20_ = 0; i_20_ < cs.length; i_20_++) {
 					char c_21_ = cs[i_20_];
 					if (c_21_ == c)

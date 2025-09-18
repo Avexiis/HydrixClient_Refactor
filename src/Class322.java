@@ -89,16 +89,16 @@ public class Class322 {
 	static Packet method3933(int i) {
 		try {
 			Packet class298_sub53 = new Packet(518);
-			Class360.anIntArray3889 = new int[4];
-			Class360.anIntArray3889[0] = (int) (Math.random() * 9.9999999E7);
-			Class360.anIntArray3889[1] = (int) (Math.random() * 9.9999999E7);
-			Class360.anIntArray3889[2] = (int) (Math.random() * 9.9999999E7);
-			Class360.anIntArray3889[3] = (int) (Math.random() * 9.9999999E7);
+			LoginData.anIntArray3889 = new int[4];
+			LoginData.anIntArray3889[0] = (int) (Math.random() * 9.9999999E7);
+			LoginData.anIntArray3889[1] = (int) (Math.random() * 9.9999999E7);
+			LoginData.anIntArray3889[2] = (int) (Math.random() * 9.9999999E7);
+			LoginData.anIntArray3889[3] = (int) (Math.random() * 9.9999999E7);
 			class298_sub53.writeByte(10);
-			class298_sub53.writeInt(Class360.anIntArray3889[0], -805516494);
-			class298_sub53.writeInt(Class360.anIntArray3889[1], -2077289504);
-			class298_sub53.writeInt(Class360.anIntArray3889[2], 699745273);
-			class298_sub53.writeInt(Class360.anIntArray3889[3], -753217368);
+			class298_sub53.writeInt(LoginData.anIntArray3889[0], -805516494);
+			class298_sub53.writeInt(LoginData.anIntArray3889[1], -2077289504);
+			class298_sub53.writeInt(LoginData.anIntArray3889[2], 699745273);
+			class298_sub53.writeInt(LoginData.anIntArray3889[3], -753217368);
 			return class298_sub53;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("nk.m(").append(')').toString());

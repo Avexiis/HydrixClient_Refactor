@@ -104,7 +104,7 @@ public abstract class Class52 {
 						throw new IllegalStateException();
 				} else {
 					if (i_5_ >= 128 && i_5_ < 160) {
-						int i_6_ = Class419.aCharArray5340[i_5_ - 128];
+						int i_6_ = ConsoleCommands.aCharArray5340[i_5_ - 128];
 						if (0 == i_6_)
 							i_6_ = 63;
 						i_5_ = i_6_;

@@ -76,7 +76,7 @@ public class Class298_Sub37_Sub8 extends Class298_Sub37 {
 		try {
 			do {
 				if (1 == i)
-					aString9596 = class298_sub53.gstr();
+					aString9596 = class298_sub53.getString();
 				else if (2 == i) {
 					int i_6_ = class298_sub53.readUnsignedByte();
 					anIntArray9599 = new int[i_6_];

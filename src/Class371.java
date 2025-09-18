@@ -42,7 +42,7 @@ public class Class371 {
 					}
 					bool = true;
 				} else if (opcode == 2)
-					anInt4035 = class298_sub53.gSmart2or4n() * 39715579;
+					anInt4035 = class298_sub53.readBigSmart() * 39715579;
 				else if (opcode == 3) {
 					anInt4032 = class298_sub53.readUnsignedByte() * -1837748075;
 					anIntArray4033 = new int[-942466371 * anInt4032];
@@ -175,7 +175,7 @@ public class Class371 {
 			ErrorContext.method4173(OverlayType.activeToolkit, Class158.aClass243_6364, 556232880);
 			Class92.method1007(886607379);
 			Class_ta_Sub2.method6001(Class130_Sub2.aClass57Array6959, -1865975129);
-			Class360.method4301(-1533729788);
+			LoginData.method4301(-1533729788);
 			Class359.method4294(272313527);
 			if (GameClient.anInt8752 * -1233866115 == 19)
 				Class439.method5851(1, 1559775234);

@@ -148,9 +148,9 @@ public class MovementType implements Interface21 {
 
 	static void method2625(int i) {
 		try {
-			Class360.anInt3868 = 471358088;
-			Class360.aClass25_3905 = GameClient.gameConnection;
-			Class460.method5981((122690138525332847L * Class360.aLong3874 == -1L), true, "", "", Class360.aLong3874 * 122690138525332847L);
+			LoginData.anInt3868 = 471358088;
+			LoginData.aClass25_3905 = GameClient.gameConnection;
+			LoginPacket.method5981((122690138525332847L * LoginData.aLong3874 == -1L), true, "", "", LoginData.aLong3874 * 122690138525332847L);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ls.v(").append(')').toString());
 		}

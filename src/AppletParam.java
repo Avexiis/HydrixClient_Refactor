@@ -107,16 +107,16 @@ public class AppletParam {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iu.r(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "iu.r(" + ')');
 		}
 	}
 
 	static void method1939(int i) {
 		try {
-			Class360.password = "";
-			Class360.username = "";
+			LoginData.password = "";
+			LoginData.username = "";
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iu.s(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "iu.s(" + ')');
 		}
 	}
 
@@ -127,7 +127,7 @@ public class AppletParam {
 			int i_13_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 1]);
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = i_12_ & -1 - (1 << i_13_);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iu.yi(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "iu.yi(" + ')');
 		}
 	}
 
@@ -140,7 +140,7 @@ public class AppletParam {
 			((Class336_Sub5) Class315.aClass336_Sub5_3304).routeType = -1073204575 * routeType;
 			return Class315.aClass336_Sub5_3304;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iu.p(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "iu.p(" + ')');
 		}
 	}
 }

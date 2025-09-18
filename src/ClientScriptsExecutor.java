@@ -44,7 +44,7 @@ public class ClientScriptsExecutor {
 							throw new RuntimeException("");
 						class394 = (((ClientScript2) class403).aClass394Array5258[(((ClientScript2) class403).integerPos += 286750741) * 1883543357]);
 						if (Class388.aBoolean4154 && (null == Class388.aString4155 || (null != (((ClientScript2) class403).aClass298_Sub37_Sub17_5260.aString9673) && (((ClientScript2) class403).aClass298_Sub37_Sub17_5260.aString9673.indexOf(Class388.aString4155) != -1))))
-							System.out.println(new StringBuilder().append(((ClientScript2) class403).aClass298_Sub37_Sub17_5260.aString9673).append(": ").append(class394).toString());
+							System.out.println(((ClientScript2) class403).aClass298_Sub37_Sub17_5260.aString9673 + ": " + class394);
 						if ((((ClientScript2) class403).integerstack[1883543357 * ((ClientScript2) class403).integerPos]) == 1)
 							((ClientScript2) class403).aBoolean5261 = true;
 						else

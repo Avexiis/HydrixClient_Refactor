@@ -136,10 +136,10 @@ public class VarClientType {
 		try {
 			if (GameClient.aByteArray8843 != null)
 				Class418.method5598((byte) -48);
-			else if (2084404473 * Class360.anInt3873 != -1)
+			else if (2084404473 * LoginData.anInt3873 != -1)
 				MovementType.method2625(1290556720);
 			else
-				Class86.method966(Class360.username, Class360.password, (short) 5737);
+				Class86.method966(LoginData.username, LoginData.password, (short) 5737);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "tm.a(" + ')');
 		}

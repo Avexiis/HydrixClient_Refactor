@@ -60,7 +60,7 @@ public class Class82_Sub6 extends Class82 {
 		super(class298_sub53);
 		((Class82_Sub6) this).anInt6840 = class298_sub53.readUnsignedShort() * 838347599;
 		((Class82_Sub6) this).anIntArray6841 = new int[Class522.method6325((byte) -63).length];
-		((Class82_Sub6) this).anInt6839 = class298_sub53.gSmart2or4n() * 1100678783;
+		((Class82_Sub6) this).anInt6839 = class298_sub53.readBigSmart() * 1100678783;
 		Arrays.fill(((Class82_Sub6) this).anIntArray6841, 0, ((Class82_Sub6) this).anIntArray6841.length, ((Class82_Sub6) this).anInt6839 * 2090514815);
 		((Class82_Sub6) this).anInt6838 = class298_sub53.readUnsignedInt() * -1086817115;
 	}
@@ -103,7 +103,7 @@ public class Class82_Sub6 extends Class82 {
 
 	static final void method888(String string, byte i) {
 		try {
-			System.out.println(new StringBuilder().append("Error: ").append(Class298_Sub31.method3115(string, "%0a", "\n", -2025331206)).toString());
+			System.out.println("Error: " + Class298_Sub31.method3115(string, "%0a", "\n", -2025331206));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("xm.p(").append(')').toString());
 		}

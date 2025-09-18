@@ -56,7 +56,7 @@ public class LocalizedString
     public static LocalizedString MESSAGE_FRIENDS_LIST_FULL;
     static LocalizedString LABEL_CHAT_DISABLED;
     static LocalizedString LABEL_FRIENDS_CHAT;
-    public static LocalizedString MESSAGE_LOADING_NEXUS;
+    public static LocalizedString MESSAGE_FETCHING_AWESOMENESS_PREFIX;
     static LocalizedString MESSAGE_ERROR_SENDING_TO_FRIENDS_CHAT;
     static LocalizedString MESSAGE_ERROR_SENDING_TO_FRIENDS_CHAT1;
     public static LocalizedString MESSAGE_CANT_ADD_YOURSELF_IGNORE_LIST;
@@ -100,7 +100,7 @@ public class LocalizedString
     static LocalizedString MESSAGE_NO_KICK_THIS_USER_PERMISSION;
     public static LocalizedString MESSAGE_CONNECTION_LOST;
     static LocalizedString MESSAGE_REPORT_RECEIVED_THANK_YOU;
-    public static LocalizedString MESSAGE_CONNECTING_TO_NEXUS;
+    public static LocalizedString MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX;
     static LocalizedString MESSAGE_TOO_MANY_ABUSE_REPORTS;
     static LocalizedString MESSAGE_SET_DISPLAY_NAME_FIRST_SUFFIX;
     static LocalizedString MESSAGE_LOADED_WORLD_LIST_DATA;
@@ -176,7 +176,7 @@ public class LocalizedString
     Map stringMap;
     
     static {
-        LocalizedString.MESSAGE_WELCOME_CONSOLE_ALT = new LocalizedString("Welcome to the Nexus Developer Console.", "Das ist die Entwicklerkonsole. Zum Schließen, die Tasten `, ² or § drücken.", "Ceci est la console de développement. Pour la fermer, appuyez sur les touches `, ² ou §.", "Este é o painel de controle do desenvolvedor. Para fechar, pressione `, ² ou §.");
+        LocalizedString.MESSAGE_WELCOME_CONSOLE_ALT = new LocalizedString("Welcome to the " + Settings.SERVER_NAME + " Developer Console.", "Das ist die Entwicklerkonsole. Zum Schließen, die Tasten `, ² or § drücken.", "Ceci est la console de développement. Pour la fermer, appuyez sur les touches `, ² ou §.", "Este é o painel de controle do desenvolvedor. Para fechar, pressione `, ² ou §.");
         LocalizedString.MESSAGE_COMMAND_EXECUTION_ERROR = new LocalizedString("There was an error executing the command.", "Es gab einen Fehler beim Ausführen des Befehls.", "Une erreur s'est produite lors de l'exécution de la commande.", "Houve um erro quando o comando foi executado.");
         LocalizedString.MESSAGE_UNKNOWN_DEV_COMMAND_PREFIX = new LocalizedString("Unknown developer command: ", "Unbekannter Befehl: ", "Commande inconnue : ", "Comando desconhecido: ");
         LocalizedString.BUTTON_CANCEL = new LocalizedString("Cancel", "Abbrechen", "Annuler", "Cancelar");
@@ -206,9 +206,9 @@ public class LocalizedString
         LocalizedString.MESSAGE_INVALID_TELEPORT = new LocalizedString("Invalid teleport!", "Unzulässiger Teleport!", "Téléportation non valide !", "Teleporte inválido!");
         LocalizedString.MESSAGE_LOGIN_MEMBERS_ONLY_GO_HERE = new LocalizedString("To go here you must login to a members' server.", "Du musst auf einer Mitglieder-Welt sein, um dort hinzukommen.", "Vous devez vous connecter à un serveur d'abonnés pour aller à cet endroit.", "Para entrar aqui, acesse um servidor para membros.");
         LocalizedString.MESSAGE_FRIEND_ADD_SYSTEM_BUSY = new LocalizedString("Unable to add friend - system busy.", "Der Freund konnte nicht hinzugefügt werden, das System ist derzeit ausgelastet.", "Impossible d'ajouter un ami - système occupé.", "Não foi possível adicionar o amigo. O sistema está ocupado.");
-        LocalizedString.MESSAGE_FRIEND_ADD_UNKNOWN_PLAYER = new LocalizedString("Unable to add friend - unknown player.", "Spieler konnte nicht hinzugefügt werden - Spieler unbekannt.", "Impossible d'ajouter l'ami - joueur inconnu.", "Não foi possível adicionar um amigo - jogador desconhecido.");
+        LocalizedString.MESSAGE_FRIEND_ADD_UNKNOWN_PLAYER = new LocalizedString("Unable to add friend - RECEIVE_FRIENDS_CHAT_GUEST_MESSAGE_PACKET player.", "Spieler konnte nicht hinzugefügt werden - Spieler unbekannt.", "Impossible d'ajouter l'ami - joueur inconnu.", "Não foi possível adicionar um amigo - jogador desconhecido.");
         LocalizedString.MESSAGE_UNABLE_TO_ADD_NAME_SYSTEM_BUSY = new LocalizedString("Unable to add name - system busy.", "Der Name konnte nicht hinzugefügt werden, das System ist derzeit ausgelastet.", "Impossible d'ajouter un nom - système occupé.", "Não foi possível adicionar o nome. O sistema está ocupado.");
-        LocalizedString.MESSAGE_UNABLE_TO_ADD_NAME_UNKNOWN_PLAYER = new LocalizedString("Unable to add name - unknown player.", "Name konnte nicht hinzugefügt werden - Spieler unbekannt.", "Impossible d'ajouter le nom - joueur inconnu.", "Não foi possível adicionar um nome - jogador desconhecido.");
+        LocalizedString.MESSAGE_UNABLE_TO_ADD_NAME_UNKNOWN_PLAYER = new LocalizedString("Unable to add name - RECEIVE_FRIENDS_CHAT_GUEST_MESSAGE_PACKET player.", "Name konnte nicht hinzugefügt werden - Spieler unbekannt.", "Impossible d'ajouter le nom - joueur inconnu.", "Não foi possível adicionar um nome - jogador desconhecido.");
         LocalizedString.MESSAGE_FRIENDS_LIST_FULL = new LocalizedString("Your friends list is full (200 names maximum)", "Deine Freunde-Liste ist voll, du hast das Maximum von 200 erreicht.", "Votre liste d'amis est pleine (200 noms maximum).", "Sua lista de amigos está cheia. O limite é 200.");
         LocalizedString.MESSAGE_FRIEND_DELETE_SYSTEM_BUSY = new LocalizedString("Unable to delete friend - system busy.", "Der Freund konnte nicht entfernt werden, das System ist derzeit ausgelastet.", "Impossible de supprimer un ami - système occupé.", "Não foi possível excluir o amigo. O sistema está ocupado.");
         LocalizedString.MESSAGE_DELETE_NAME_SYSTEM_BUSY = new LocalizedString("Unable to delete name - system busy.", "Name konnte nicht gelöscht werden - Systemfehler.", "Impossible d'effacer le nom - système occupé.", "Não foi possível deletar o nome - sistema ocupado.");
@@ -273,8 +273,8 @@ public class LocalizedString
         LocalizedString.MESSAGE_PROFILING_ALT = new LocalizedString("Profiling...", "Profiling...", "Profilage...", "Profiling...");
         LocalizedString.MESSAGE_CONNECTION_LOST = new LocalizedString("Connection lost.", "Verbindung abgebrochen.", "Connexion perdue.", "Conexão perdida.");
         LocalizedString.MESSAGE_PLEASE_WAIT_REESTABLISH = new LocalizedString("Please wait - attempting to reestablish.", "Bitte warte - es wird versucht, die Verbindung wiederherzustellen.", "Veuillez patienter - tentative de rétablissement.", "Tentando reestabelecer conexão. Aguarde.");
-        LocalizedString.MESSAGE_CONNECTING_TO_NEXUS = new LocalizedString("Connecting To Nexus - ", "Suche nach Updates - ", "Vérification des mises à jour - ", "Verificando atualizações - ");
-        LocalizedString.MESSAGE_LOADING_NEXUS = new LocalizedString("Loading Nexus - ", "Lade Update - ", "Chargement des MAJ - ", "Carregando atualizações - ");
+        LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX = new LocalizedString("Checking for Updates - ", "Suche nach Updates - ", "Vérification des mises à jour - ", "Verificando atualizações - ");
+        LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX = new LocalizedString("Loading " + Settings.SERVER_NAME + " - ", "Lade Update - ", "Chargement des MAJ - ", "Carregando atualizações - ");
         LocalizedString.MESSAGE_PROFILING = new LocalizedString("Loading config - ", "Lade Konfiguration - ", "Chargement des fichiers config - ", "Carregando config - ");
         LocalizedString.MESSAGE_LOADED_CONFIG = new LocalizedString("Loaded config", "Konfig geladen.", "Fichiers config chargés", "Config carregada");
         LocalizedString.MESSAGE_LOADING_SPRITES_PREFIX = new LocalizedString("Loading sprites - ", "Lade Sprites - ", "Chargement des sprites - ", "Carregando sprites - ");
@@ -430,10 +430,10 @@ public class LocalizedString
                     final Class299 class299 = GameClient.aClass299Array8671[i_5_];
                 }
                 for (int i_6_ = 0; i_6_ < 2048; ++i_6_) {
-                    final Player class365_sub1_sub1_sub2_sub2 = GameClient.players[i_6_];
-                    if (class365_sub1_sub1_sub2_sub2 != null) {
-                        for (int i_7_ = 0; i_7_ < class365_sub1_sub1_sub2_sub2.modelParts.length; ++i_7_) {
-                            class365_sub1_sub1_sub2_sub2.modelParts[i_7_] = null;
+                    final Player player = GameClient.players[i_6_];
+                    if (player != null) {
+                        for (int i_7_ = 0; i_7_ < player.modelParts.length; ++i_7_) {
+                            player.modelParts[i_7_] = null;
                         }
                     }
                 }

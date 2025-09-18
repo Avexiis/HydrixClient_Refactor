@@ -33,7 +33,7 @@ public class Class82_Sub1 extends Class82 {
 			else if (i - i_1_ >= Class372_Sub1_Sub1.anInt4051 * -1424479739 && i + i_1_ <= Class372_Sub1_Sub1.anInt4048 * 1135094847 && (i_0_ - i_2_ >= Class372_Sub1_Sub1.anInt4049 * 1155384281) && (i_0_ + i_2_ <= -1062447355 * Class372_Sub1_Sub1.anInt4050))
 				Class108.method1153(i, i_0_, i_1_, i_2_, i_3_, -735376708);
 			else
-				MapKeys.method2834(i, i_0_, i_1_, i_2_, i_3_, 655524402);
+				Class296.method2834(i, i_0_, i_1_, i_2_, i_3_, 655524402);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("xb.ao(").append(')').toString());
 		}

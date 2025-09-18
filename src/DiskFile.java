@@ -71,7 +71,6 @@ public final class DiskFile {
 	protected void finalize() throws Throwable {
 		try {
 			if (null != aRandomAccessFile5984) {
-				System.out.println("");
 				close();
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -100,19 +99,19 @@ public final class DiskFile {
 
 	static final void method6082(ClientScript2 class403, byte i) {
 		try {
-			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1] = 707299179 * Class360.anInt3892;
+			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1] = 707299179 * LoginData.anInt3892;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.ahm(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.ahm(" + ')');
 		}
 	}
 
-	static final void method6083(int i, int i_5_, int i_6_, int i_7_) {
+	static final void method6083(int plane, int i_5_, int i_6_, int i_7_) {
 		try {
-			String string = new StringBuilder().append("tele ").append(i).append(Class26.COMMA).append(i_5_ >> 6).append(Class26.COMMA).append(i_6_ >> 6).append(Class26.COMMA).append(i_5_ & 0x3f).append(Class26.COMMA).append(i_6_ & 0x3f).toString();
-			System.out.println(string);
-			Class419.method5605(string, true, false, 1405738364);
+			String string = "tele " + plane + Symbol.COMMA + (i_5_ >> 6) + Symbol.COMMA + (i_6_ >> 6) + Symbol.COMMA + (i_5_ & 0x3f) + Symbol.COMMA + (i_6_ & 0x3f);
+			//System.out.println(string);
+			ConsoleCommands.method5605(string, true, false, 1405738364);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.gd(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.gd(" + ')');
 		}
 	}
 }

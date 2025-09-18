@@ -76,7 +76,7 @@ public class CPUUsagePreference extends IntegerPreferenceField {
 
 	static final void method5719(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1001535723 * Class360.anInt3908;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1001535723 * LoginData.anInt3908;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aen.ahx(").append(')').toString());
 		}

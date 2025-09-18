@@ -23,7 +23,7 @@ public class Class29 {
 			if (anIntArray367[1] > 1) {
 				byte[] is = new byte[anIntArray367[1]];
 				OpenGL.glGetProgramInfoLog(i, anIntArray367[1], anIntArray367, 0, is, 0);
-				System.out.println(new String(is));
+				//System.out.println(new String(is));
 			}
 			if (anIntArray367[0] == 0) {
 				for (int i_1_ = 0; i_1_ < class48s.length; i_1_++)

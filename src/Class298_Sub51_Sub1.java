@@ -6,9 +6,9 @@ public class Class298_Sub51_Sub1 extends Interface {
 	int anInt9776;
 
 	public boolean method3577() {
-		Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[-517743867 * ((Class298_Sub51_Sub1) this).anInt9776]);
-		if (class365_sub1_sub1_sub2_sub2 != null) {
-			overheadString.method729(Class502.aClass502_6719, -1617025021 * interfaceId, -1, class365_sub1_sub1_sub2_sub2, (-517743867 * ((Class298_Sub51_Sub1) this).anInt9776), (byte) -119);
+		Player player = (GameClient.players[-517743867 * ((Class298_Sub51_Sub1) this).anInt9776]);
+		if (player != null) {
+			overheadString.method729(Class502.aClass502_6719, -1617025021 * interfaceId, -1, player, (-517743867 * ((Class298_Sub51_Sub1) this).anInt9776), (byte) -119);
 			return true;
 		}
 		return false;
@@ -16,9 +16,9 @@ public class Class298_Sub51_Sub1 extends Interface {
 
 	public boolean method3573(int i) {
 		try {
-			Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[-517743867 * ((Class298_Sub51_Sub1) this).anInt9776]);
-			if (class365_sub1_sub1_sub2_sub2 != null) {
-				overheadString.method729(Class502.aClass502_6719, -1617025021 * interfaceId, -1, class365_sub1_sub1_sub2_sub2, (-517743867 * ((Class298_Sub51_Sub1) this).anInt9776), (byte) -83);
+			Player player = (GameClient.players[-517743867 * ((Class298_Sub51_Sub1) this).anInt9776]);
+			if (player != null) {
+				overheadString.method729(Class502.aClass502_6719, -1617025021 * interfaceId, -1, player, (-517743867 * ((Class298_Sub51_Sub1) this).anInt9776), (byte) -83);
 				return true;
 			}
 			return false;

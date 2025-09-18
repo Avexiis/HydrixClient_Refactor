@@ -55,7 +55,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 	static int anInt6495 = 1;
 	static long aLong6496;
 	static boolean aBoolean6497;
-	boolean aBoolean6498 = false;
+	boolean errorReported = false;
 	static Class484 aClass484_6499;
 	static File aFile6500;
 	boolean aBoolean6501 = false;
@@ -94,17 +94,17 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 					method2780(class311.method3814(1376340372), -260131528);
 				}
 				RuntimeException_Sub2.anApplet6306 = EnumType.mainApplet;
-				method2752(string, string_0_, i, i_1_, i_2_, i_3_, (byte) 95);
+				validateConfigsAndLoadCache(string, string_0_, i, i_1_, i_2_, i_3_, (byte) 95);
 			} catch (Throwable throwable) {
 				IPAddress.method6062(null, throwable, (short) -30442);
-				method2778("crash", 1946443012);
+				errorPrinter("crash", 1946443012);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "mc.a(" + ')');
 		}
 	}
 
-	final void method2752(String string, String string_5_, int i, int i_6_, int i_7_, int i_8_, byte i_9_)
+	final void validateConfigsAndLoadCache(String string, String string_5_, int i, int i_6_, int i_7_, int i_8_, byte i_9_)
 			throws Exception {
 		try {
 			Class310.anInt6512 = i_6_ * -652430819;
@@ -172,7 +172,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			Class216.aStringArray6657 = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",
 					Class83.aString765, "/tmp/", "" };
 			MagnetConfig.aStringArray679 = (new String[] {
-					".feather_cache_" + Class139.anInt1548 * -518493991,
+					"." + Settings.SERVER_NAME + "_cache_" + Class139.anInt1548 * -518493991,
 					".file_store_" + -518493991 * Class139.anInt1548});
 			while_73_: for (int i_10_ = 0; i_10_ < 4; i_10_++) {
 				aFile6500 = method2783(string, string_5_, i_10_, (short) 8683);
@@ -198,18 +198,11 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			}
 			Class365_Sub1_Sub5_Sub1.method4528(aFile6500, (byte) 113);
 			IsaacCipher.method5920(527600768);
-			aClass484_6476 = (new Class484(
-					new DiskFile(Class482.method6118("main_file_cache.dat2", (byte) -19), "rw", 1048576000L * 10L),
-					5200, 0));
-			aClass484_6475 = (new Class484(
-					new DiskFile(Class482.method6118("main_file_cache.idx255", (byte) -21), "rw", 1048576L * 10L), 6000,
-					0));
+			aClass484_6476 = (new Class484(new DiskFile(Class482.method6118("main_file_cache.dat2", (byte) -19), "rw", 1048576000L * 10L), 5200, 0));
+			aClass484_6475 = (new Class484(new DiskFile(Class482.method6118("main_file_cache.idx255", (byte) -21), "rw", 1048576L * 10L), 6000, 0));
 			Class497.aClass484Array6106 = new Class484[Class310.anInt6512 * 1210163253];
 			for (int i_13_ = 0; i_13_ < 1210163253 * Class310.anInt6512; i_13_++)
-				Class497.aClass484Array6106[i_13_] = new Class484(new DiskFile(
-						(Class482.method6118("main_file_cache.idx" + i_13_,
-								(byte) -49)),
-						"rw", 1048576L * 10L), 6000, 0);
+				Class497.aClass484Array6106[i_13_] = new Class484(new DiskFile((Class482.method6118("main_file_cache.idx" + i_13_, (byte) -49)), "rw", 1048576L * 10L), 6000, 0);
 			try {
 				SpotAnimTypeList.aClass457_4164 = new Class457();
 			} catch (Exception exception) {
@@ -217,9 +210,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			}
 			Class82_Sub23.aClass295_6921 = new Class295();
 			ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
-			for (ThreadGroup threadgroup_14_ = threadgroup
-					.getParent(); threadgroup_14_ != null; threadgroup_14_ = threadgroup.getParent())
-				threadgroup = threadgroup_14_;
+			for (ThreadGroup threadgroup_14_ = threadgroup.getParent(); threadgroup_14_ != null; threadgroup_14_ = threadgroup.getParent()) threadgroup = threadgroup_14_;
 			Thread[] threads = new Thread[1000];
 			threadgroup.enumerate(threads);
 			for (int i_15_ = 0; i_15_ < threads.length; i_15_++) {
@@ -308,7 +299,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 	}
 
 	public final void method203(Graphics graphics) {
-		method195(graphics);
+		paint(graphics);
 	}
 
 	void method2757(int i) {
@@ -330,11 +321,11 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				return true;
 			if (string.equals("runescape.com") || string.endsWith(".runescape.com"))
 				return true;
-			if (string.endsWith(Loader.IP))
+			if (string.endsWith(Loader.CONNECT_URL))
 				return true;
 			// if (string.endsWith("192.168.1."))
 			// return true;
-			method2778("invalidhost", 827144132);
+			errorPrinter("invalidhost", 827144132);
 			return false;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "mc.g(" + ')');
@@ -346,12 +337,12 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			do {
 				try {
 					try {
-						method2759((byte) 52);
+						javaVersionCheck((byte) 52);
 					} catch (ThreadDeath threaddeath) {
 						throw threaddeath;
 					} catch (Throwable throwable) {
 						IPAddress.method6062(method2761((byte) 7), throwable, (short) -23042);
-						method2778("crash", 1023949022);
+						errorPrinter("crash", 1023949022);
 						method2776(true, (byte) 127);
 						break;
 					}
@@ -366,18 +357,19 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		}
 	}
 
-	void method2759(byte i) {
+	void javaVersionCheck(byte i) {
 		try {
 			if (null != BASType.aString3759) {
 				String string = BASType.aString3759.toLowerCase();
-				if (string.indexOf("sun") != -1 || string.indexOf("apple") != -1) {
+				if (string.contains("sun") || string.contains("apple")) {
 					String string_19_ = Js5ConfigGroup.aString1462;
-					if (string_19_.equals("1.1") || string_19_.startsWith("1.1.") || string_19_.equals("1.2")
+					if (string_19_.equals("1.1")
+							|| string_19_.startsWith("1.1.") || string_19_.equals("1.2")
 							|| string_19_.startsWith("1.2.") || string_19_.equals("1.3")
 							|| string_19_.startsWith("1.3.") || string_19_.equals("1.4")
 							|| string_19_.startsWith("1.4.") || string_19_.equals("1.5")
 							|| string_19_.startsWith("1.5.") || string_19_.equals("1.6.0")) {
-						//method2778("wrongjava", -1275699738);
+						//errorPrinter("wrongjava", -1275699738);
 						return;
 					}
 					if (string_19_.startsWith("1.6.0_")) {
@@ -389,7 +381,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 						String string_21_ = string_19_.substring(6, i_20_);
 						if (Class51.method543(string_21_, 1847779492)
 								&& (Class216.method1998(string_21_, (short) -16539) < 10)) {
-							//method2778("wrongjava", 1520717461);
+							//errorPrinter("wrongjava", 1520717461);
 							return;
 						}
 					}
@@ -400,13 +392,10 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			availableCPU = Runtime.getRuntime().availableProcessors() * 1245045379;
 			method2756(-781587209);
 			method2763((byte) 1);
-			aClass309_6492 = Class360.method4302(-978847778);
-			while (0L == 2916456661870185289L * aLong6496
-					|| (TimeUtils.getTime((byte) 1) < aLong6496 * 2916456661870185289L)) {
-				RuntimeException_Sub1.anInt6303 = (aClass309_6492.method3787(aLong6484 * -4639622049358970979L)
-						* -2090388391);
-				for (int i_22_ = 0; i_22_ < RuntimeException_Sub1.anInt6303 * -1597189143; i_22_++)
-					method2764((byte) 1);
+			aClass309_6492 = LoginData.method4302(-978847778);
+			while (0L == 2916456661870185289L * aLong6496 || (TimeUtils.getTime((byte) 1) < aLong6496 * 2916456661870185289L)) {
+				RuntimeException_Sub1.anInt6303 = (aClass309_6492.method3787(aLong6484 * -4639622049358970979L) * -2090388391);
+				for (int i_22_ = 0; i_22_ < RuntimeException_Sub1.anInt6303 * -1597189143; i_22_++) method2764((byte) 1);
 				method2760(-454270165);
 				Class492.method6185(Class52_Sub2_Sub1.aCanvas9079, -2014187301);
 			}
@@ -428,13 +417,11 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			if ((anInt6477 += -2020246835) * 698024453 - 1 > 50) {
 				anInt6477 -= 2066873354;
 				aBoolean6471 = true;
-				Class52_Sub2_Sub1.aCanvas9079.setSize(Class462.canvasWidth * -2110394505,
-						Class298_Sub40_Sub9.anInt9716 * -1111710645);
+				Class52_Sub2_Sub1.aCanvas9079.setSize(Class462.canvasWidth * -2110394505, Class298_Sub40_Sub9.anInt9716 * -1111710645);
 				Class52_Sub2_Sub1.aCanvas9079.setVisible(true);
 				if (null != Class298_Sub36.aFrame7403 && Class231.aFrame2589 == null) {
 					Insets insets = Class298_Sub36.aFrame7403.getInsets();
-					Class52_Sub2_Sub1.aCanvas9079.setLocation(insets.left + anInt6473 * 1898544019,
-							540368727 * anInt6474 + insets.top);
+					Class52_Sub2_Sub1.aCanvas9079.setLocation(insets.left + anInt6473 * 1898544019, 540368727 * anInt6474 + insets.top);
 				} else
 					Class52_Sub2_Sub1.aCanvas9079.setLocation((anInt6473 * 1898544019), (540368727 * anInt6474));
 			}
@@ -460,15 +447,14 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				throw new IllegalStateException();
 			aClass292_6466 = class292;
 			if (aClass292_6466 != Class292.aClass292_3162) {
-				if (bool)
-					aClass292_6466 = Class292.aClass292_3164;
+				if (bool) aClass292_6466 = Class292.aClass292_3164;
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "mc.az(" + ')');
 		}
 	}
 
-	public void method192() {
+	public void stop() {
 		try {
 			if (!aBoolean6497)
 				aLong6496 = ((TimeUtils.getTime((byte) 1) + 4000L) * -5427437724707662087L);
@@ -477,15 +463,13 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		}
 	}
 
-	public final synchronized void method195(Graphics graphics) {
+	public final synchronized void paint(Graphics graphics) {
 		try {
 			if (!aBoolean6497) {
 				aBoolean6471 = true;
 				if ((TimeUtils.getTime((byte) 1) - -4623726814665285853L * aLong6491) > 1000L) {
 					Rectangle rectangle = graphics.getClipBounds();
-					if (rectangle == null || (rectangle.width >= -639974669 * Class78.anInt733
-							&& rectangle.height >= anInt6472 * 1282634425))
-						aBoolean6478 = true;
+					if (rectangle == null || (rectangle.width >= -639974669 * Class78.anInt733 && rectangle.height >= anInt6472 * 1282634425)) aBoolean6478 = true;
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -498,8 +482,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			aBoolean6481 = true;
 			aBoolean6471 = true;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.focusGained(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.focusGained(" + ')');
 		}
 	}
 
@@ -507,8 +490,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		try {
 			/* empty */
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.windowActivated(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.windowActivated(" + ')');
 		}
 	}
 
@@ -516,18 +498,16 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		try {
 			/* empty */
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.windowClosed(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.windowClosed(" + ')');
 		}
 	}
 
 	public final void windowClosing(WindowEvent windowevent) {
 		try {
 			aBoolean6480 = true;
-			method193();
+			destroy();
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.windowClosing(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.windowClosing(" + ')');
 		}
 	}
 
@@ -535,8 +515,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		try {
 			/* empty */
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.windowDeiconified(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.windowDeiconified(" + ')');
 		}
 	}
 
@@ -544,8 +523,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		try {
 			/* empty */
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.windowIconified(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.windowIconified(" + ')');
 		}
 	}
 
@@ -645,7 +623,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 
 	public final void method194(Graphics graphics) {
 		try {
-			method195(graphics);
+			paint(graphics);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception,
 					new StringBuilder().append("mc.update(").append(')').toString());
@@ -689,7 +667,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		}
 	}
 
-	public void method193() {
+	public void destroy() {
 		try {
 			if (!aBoolean6497) {
 				aLong6496 = TimeUtils.getTime((byte) 1) * -5427437724707662087L;
@@ -697,8 +675,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				method2776(false, (byte) 120);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception,
-					"mc.destroy(" + ')');
+			throw ErrorContext.info(runtimeexception, "mc.destroy(" + ')');
 		}
 	}
 
@@ -808,27 +785,20 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 	}
 
 	public final void method209(Graphics graphics) {
-		method195(graphics);
+		paint(graphics);
 	}
 
-	void method2778(String string, int i) {
+	void errorPrinter(String string, int i) {
 		try {
-			if (!((GameShell) this).aBoolean6498) {
-				((GameShell) this).aBoolean6498 = true;
+			if (!this.errorReported) {
+				this.errorReported = true;
 				System.out.println("error_game_" + string);
 				try {
-					Class466.method6021(EnumType.mainApplet, "loggedout", (short) 19911);
-				} catch (Throwable throwable) {
-					/* empty */
-				}
+					AppletJsBridge.callJsFunction(EnumType.mainApplet, "loggedout", (short) 19911);
+				} catch (Throwable ignored) {}
 				try {
-					EnumType.mainApplet.getAppletContext()
-							.showDocument(new URL(EnumType.mainApplet.getCodeBase(),
-											"error_game_" + string + ".ws"),
-									"_top");
-				} catch (Exception exception) {
-					/* empty */
-				}
+					EnumType.mainApplet.getAppletContext().showDocument(new URL(EnumType.mainApplet.getCodeBase(), "error_game_" + string + ".ws"), "_top");
+				} catch (Exception ignored) {}
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "mc.ah(" + ')');
@@ -846,7 +816,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			/* empty */
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception,
-					new StringBuilder().append("mc.windowDeactivated(").append(')').toString());
+					"mc.windowDeactivated(" + ')');
 		}
 	}
 
@@ -863,7 +833,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			Class298_Sub36.aFrame7403.setSize((insets.right + (Class78.anInt733 * -639974669 + insets.left)),
 					(anInt6472 * 1282634425 + insets.top + insets.bottom));
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.z(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.z(" + ')');
 		}
 	}
 
@@ -886,15 +856,14 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			aBoolean6481 = false;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception,
-					new StringBuilder().append("mc.focusLost(").append(')').toString());
+					"mc.focusLost(" + ')');
 		}
 	}
 
 	File method2783(String string, String string_27_, int i, short i_28_) {
 		try {
-			String string_29_ = (i == 0 ? "" : "" + i);
-			Class180.aFile6528 = new File(Class83.aString765, "feather_cl_" + string +
-					"_" + string_27_ + string_29_ + ".dat");
+			String string_29_ = (i == 0 ? "" : String.valueOf(i));
+			Class180.aFile6528 = new File(Class83.aString765, string + "_" + string_27_ + string_29_ + "_Client_Prefs.dat");
 			String string_30_ = null;
 			String string_31_ = null;
 			boolean bool = false;
@@ -913,7 +882,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 					class298_sub53.pos = 0;
 					i_32_ = class298_sub53.readUnsignedByte();
 					if (i_32_ < 1 || i_32_ > 2)
-						throw new IOException("" + i_32_);
+						throw new IOException(String.valueOf(i_32_));
 					int i_33_ = 0;
 					if (i_32_ > 1)
 						i_33_ = class298_sub53.readUnsignedByte();
@@ -938,9 +907,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			if (string_30_ == null && 0 == i) {
 				while_74_: for (int i_34_ = 0; i_34_ < MagnetConfig.aStringArray679.length; i_34_++) {
 					for (int i_35_ = 0; i_35_ < Class216.aStringArray6657.length; i_35_++) {
-						File file = new File(Class216.aStringArray6657[i_35_] +
-								MagnetConfig.aStringArray679[i_34_] + File.separatorChar + string +
-								File.separatorChar);
+						File file = new File(Class216.aStringArray6657[i_35_] + MagnetConfig.aStringArray679[i_34_] + File.separatorChar + string + File.separatorChar);
 						if (file.exists() && method2753(new File(file, "test.dat"), true, -1984790861)) {
 							string_30_ = file.toString();
 							bool = true;
@@ -950,7 +917,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				}
 			}
 			if (string_30_ == null) {
-				string_30_ = Class83.aString765 + File.separatorChar + "NexusCache" + string_29_ + File.separatorChar
+				string_30_ = Class83.aString765 + File.separatorChar + Settings.SERVER_NAME + "Cache" + string_29_ + File.separatorChar
 						+ string + File.separatorChar + string_27_ + File.separatorChar;
 				bool = true;
 			}
@@ -976,7 +943,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				method2755(new File(string_30_), null, 359278649);
 			return new File(string_30_);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.b(" + ')');
 		}
 	}
 
@@ -984,9 +951,9 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 
 	public static Class319 method2785(Component component, boolean bool, short i) {
 		try {
-			return new Class319_Sub1(component, bool);
+			return new MouseEvent(component, bool);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.a(" + ')');
 		}
 	}
 
@@ -998,7 +965,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
 			Class298_Sub43.method3527(class105, RSInterface, class403, (byte) -29);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.eq(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.eq(" + ')');
 		}
 	}
 
@@ -1008,7 +975,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 					* 681479919]) * 1158843261;
 			LocalizedString.markComponentForRedraw(class105, 510093055);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.fy(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.fy(" + ')');
 		}
 	}
 
@@ -1020,7 +987,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919
 					- 1)] = -1424956747 * class105.anInt1167;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.pz(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.pz(" + ')');
 		}
 	}
 
@@ -1034,7 +1001,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			}
 			return null;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.f(" + ')');
 		}
 	}
 
@@ -1045,7 +1012,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 							(byte) 4)[(((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239
 									* 681479919 - 1])]);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.xv(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.xv(" + ')');
 		}
 	}
 
@@ -1063,7 +1030,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte) -120);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mc.apk(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "mc.apk(" + ')');
 		}
 	}
 }

@@ -10,7 +10,7 @@ public class Class298_Sub40_Sub3 extends Class298_Sub40 {
 	void method3508(Packet class298_sub53, int i) {
 		try {
 			((Class298_Sub40_Sub3) this).anInt9695 = class298_sub53.readUnsignedInt() * 1400658899;
-			((Class298_Sub40_Sub3) this).aString9694 = class298_sub53.gstr();
+			((Class298_Sub40_Sub3) this).aString9694 = class298_sub53.getString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aga.a(").append(')').toString());
 		}
@@ -18,7 +18,7 @@ public class Class298_Sub40_Sub3 extends Class298_Sub40 {
 
 	void method3512(Packet class298_sub53) {
 		((Class298_Sub40_Sub3) this).anInt9695 = class298_sub53.readUnsignedInt() * 1400658899;
-		((Class298_Sub40_Sub3) this).aString9694 = class298_sub53.gstr();
+		((Class298_Sub40_Sub3) this).aString9694 = class298_sub53.getString();
 	}
 
 	void method3510(Class162 class162, byte i) {
@@ -40,6 +40,6 @@ public class Class298_Sub40_Sub3 extends Class298_Sub40 {
 
 	void method3509(Packet class298_sub53) {
 		((Class298_Sub40_Sub3) this).anInt9695 = class298_sub53.readUnsignedInt() * 1400658899;
-		((Class298_Sub40_Sub3) this).aString9694 = class298_sub53.gstr();
+		((Class298_Sub40_Sub3) this).aString9694 = class298_sub53.getString();
 	}
 }

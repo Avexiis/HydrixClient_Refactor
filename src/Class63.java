@@ -75,8 +75,8 @@ public class Class63 {
 
 	public static void method739(int i) {
 		try {
-			if (Class360.anInt3896 * -707576455 == 100)
-				Class360.anInt3896 = 928688093;
+			if (LoginData.anInt3896 * -707576455 == 100)
+				LoginData.anInt3896 = 928688093;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("co.d(").append(')').toString());
 		}
@@ -94,8 +94,8 @@ public class Class63 {
 		try {
 			if (string.length() <= 320 && Class400.method4931((byte) 36)) {
 				Class85.method957(1405885355);
-				Class360.username = string;
-				Class360.password = string_4_;
+				LoginData.username = string;
+				LoginData.password = string_4_;
 				Class439.method5851(3, 907269288);
 			}
 		} catch (RuntimeException runtimeexception) {

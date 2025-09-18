@@ -126,9 +126,9 @@ public class Class117 {
 				int i_15_ = Class10.anInt129 * 1168366243;
 				int[] is = Class10.anIntArray135;
 				for (int i_16_ = 0; i_16_ < i_15_; i_16_++) {
-					Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[is[i_16_]]);
-					if (class365_sub1_sub1_sub2_sub2 != null)
-						class365_sub1_sub1_sub2_sub2.method4442(i_13_, i_14_, bool, 1554634008);
+					Player player = (GameClient.players[is[i_16_]]);
+					if (player != null)
+						player.method4442(i_13_, i_14_, bool, 1554634008);
 				}
 				for (int i_17_ = 0; i_17_ < GameClient.npcCount * -1230451913; i_17_++) {
 					int i_18_ = GameClient.npcIndicies[i_17_];

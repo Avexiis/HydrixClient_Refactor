@@ -38,7 +38,7 @@ public class Class497 {
 			else if (i == 4)
 				aBoolean6102 = false;
 			else if (i == 5)
-				aString6101 = class298_sub53.gstr();
+				aString6101 = class298_sub53.getString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("um.f(").append(')').toString());
 		}
@@ -67,9 +67,9 @@ public class Class497 {
 
 	static void method6208(String string, String string_2_, int i) {
 		try {
-			Class360.anInt3868 = Loader.LOBBY_ENABLED ? -1058684408 : 471358088;
-			Class360.aClass25_3905 = Loader.LOBBY_ENABLED ? GameClient.aClass25_8693 : GameClient.gameConnection;
-			Class460.method5981(false, false, string, string_2_, -1L);
+			LoginData.anInt3868 = Loader.LOBBY_ENABLED ? -1058684408 : 471358088;
+			LoginData.aClass25_3905 = Loader.LOBBY_ENABLED ? GameClient.aClass25_8693 : GameClient.gameConnection;
+			LoginPacket.method5981(false, false, string, string_2_, -1L);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("um.z(").append(')').toString());
 		}

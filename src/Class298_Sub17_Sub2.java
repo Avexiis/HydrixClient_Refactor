@@ -14,7 +14,7 @@ public class Class298_Sub17_Sub2 extends Class298_Sub17 {
 		((Class298_Sub17_Sub2) this).aByte9195 = class298_sub53.readByte();
 		((Class298_Sub17_Sub2) this).anInt9198 = class298_sub53.readUnsignedShort() * -1333007471;
 		class298_sub53.readLong((short) 6536);
-		((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.gstr();
+		((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.getString();
 	}
 
 	void method2917(Packet class298_sub53, int i) {
@@ -23,7 +23,7 @@ public class Class298_Sub17_Sub2 extends Class298_Sub17 {
 			((Class298_Sub17_Sub2) this).aByte9195 = class298_sub53.readByte();
 			((Class298_Sub17_Sub2) this).anInt9198 = class298_sub53.readUnsignedShort() * -1333007471;
 			class298_sub53.readLong((short) 17752);
-			((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.gstr();
+			((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.getString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("agj.a(").append(')').toString());
 		}
@@ -57,7 +57,7 @@ public class Class298_Sub17_Sub2 extends Class298_Sub17 {
 		((Class298_Sub17_Sub2) this).aByte9195 = class298_sub53.readByte();
 		((Class298_Sub17_Sub2) this).anInt9198 = class298_sub53.readUnsignedShort() * -1333007471;
 		class298_sub53.readLong((short) 27860);
-		((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.gstr();
+		((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.getString();
 	}
 
 	void method2916(Packet class298_sub53) {
@@ -65,7 +65,7 @@ public class Class298_Sub17_Sub2 extends Class298_Sub17 {
 		((Class298_Sub17_Sub2) this).aByte9195 = class298_sub53.readByte();
 		((Class298_Sub17_Sub2) this).anInt9198 = class298_sub53.readUnsignedShort() * -1333007471;
 		class298_sub53.readLong((short) 23274);
-		((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.gstr();
+		((Class298_Sub17_Sub2) this).aString9196 = class298_sub53.getString();
 	}
 
 	void method2919(Class298_Sub25 class298_sub25) {

@@ -19,9 +19,9 @@ public abstract class Class_v extends Node {
 		}
 	}
 
-	public static void method3670(Player class365_sub1_sub1_sub2_sub2, byte i) {
+	public static void method3670(Player player, byte i) {
 		try {
-			Class298_Sub41 class298_sub41 = ((Class298_Sub41) (Class298_Sub41.aClass437_7440.get((long) (1888274983 * class365_sub1_sub1_sub2_sub2.entityIndex))));
+			Class298_Sub41 class298_sub41 = ((Class298_Sub41) (Class298_Sub41.aClass437_7440.get((long) (1888274983 * player.entityIndex))));
 			if (null != class298_sub41) {
 				if (null != (((Class298_Sub41) class298_sub41).aClass298_Sub19_Sub2_7447)) {
 					Class285.aClass298_Sub19_Sub4_3083.method3048(((Class298_Sub41) class298_sub41).aClass298_Sub19_Sub2_7447);
@@ -69,7 +69,7 @@ public abstract class Class_v extends Node {
 	static void method3673(int i) {
 		try {
 			Class8.aBoolean108 = false;
-			Class360.method4301(287742148);
+			LoginData.method4301(287742148);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("v.p(").append(')').toString());
 		}

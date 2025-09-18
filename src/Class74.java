@@ -113,7 +113,7 @@ public class Class74 {
 
 	static void method831(int i, int i_5_, int i_6_, int i_7_, int i_8_) {
 		try {
-			float f = ((float) Class301_Sub1.worldMapHeight / (float) Class301_Sub1.worldMapWidth);
+			float f = ((float) Class301_Sub1.anInt3240 / (float) Class301_Sub1.anInt3239);
 			int i_9_ = i_6_;
 			int i_10_ = i_7_;
 			if (f < 1.0F)
@@ -122,8 +122,8 @@ public class Class74 {
 				i_9_ = (int) ((float) i_7_ / f);
 			i -= (i_6_ - i_9_) / 2;
 			i_5_ -= (i_7_ - i_10_) / 2;
-			Class82_Sub14.anInt6875 = -2076584633 * (Class301_Sub1.worldMapWidth * i / i_9_);
-			VarClanSettings.anInt4090 = -435591305 * (Class301_Sub1.worldMapHeight - Class301_Sub1.worldMapHeight * i_5_ / i_10_);
+			Class82_Sub14.anInt6875 = -2076584633 * (Class301_Sub1.anInt3239 * i / i_9_);
+			VarClanSettings.anInt4090 = -435591305 * (Class301_Sub1.anInt3240 - Class301_Sub1.anInt3240 * i_5_ / i_10_);
 			Class301_Sub1.anInt7632 = 433609607;
 			Class301_Sub1.anInt7627 = 789877945;
 			Class225.method2103(65536);
@@ -156,9 +156,9 @@ public class Class74 {
 						Class397.method4914(class105, class117, i_12_, i_13_, i_18_, i_19_, (((HintIcon) hintIcon).anInt258 * -92466201), l);
 					}
 					if (10 == 958933333 * hintIcon.anInt266 && -841622081 * hintIcon.anInt256 >= 0 && (hintIcon.anInt256 * -841622081 < (GameClient.players).length)) {
-						Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[-841622081 * hintIcon.anInt256]);
-						if (null != class365_sub1_sub1_sub2_sub2) {
-							SceneObjectPosition sceneObjectPosition = (class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
+						Player player = (GameClient.players[-841622081 * hintIcon.anInt256]);
+						if (null != player) {
+							SceneObjectPosition sceneObjectPosition = (player.method4337().aSceneObjectPosition_2599);
 							int i_20_ = (int) sceneObjectPosition.x / 128 - i / 128;
 							int i_21_ = ((int) sceneObjectPosition.z / 128 - i_11_ / 128);
 							Class397.method4914(class105, class117, i_12_, i_13_, i_20_, i_21_, (((HintIcon) hintIcon).anInt258 * -92466201), 360000L);

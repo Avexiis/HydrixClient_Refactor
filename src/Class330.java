@@ -194,15 +194,15 @@ public class Class330 implements Runnable {
 			int i_15_ = 0;
 			Class285.routeFinderXArray[i_14_] = i_8_;
 			Class285.routeFinderYArray[i_14_++] = i_9_;
-			int[][] is = region.anIntArrayArray3155;
+			int[][] is = region.masks;
 			while (i_15_ != i_14_) {
 				i_8_ = Class285.routeFinderXArray[i_15_];
 				i_9_ = Class285.routeFinderYArray[i_15_];
 				i_15_ = 1 + i_15_ & 0xfff;
 				i_10_ = i_8_ - i_12_;
 				i_11_ = i_9_ - i_13_;
-				int i_16_ = i_8_ - 1487776559 * region.anInt3151;
-				int i_17_ = i_9_ - 1415525851 * region.anInt3152;
+				int i_16_ = i_8_ - 1487776559 * region.regionBaseX;
+				int i_17_ = i_9_ - 1415525851 * region.regionBaseY;
 				if (class336.method4090(1, i_8_, i_9_, region, -16711936)) {
 					Class285.anInt3078 = i_8_ * 1021042197;
 					Class163.anInt1684 = -575994451 * i_9_;

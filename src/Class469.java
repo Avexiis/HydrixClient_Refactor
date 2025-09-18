@@ -135,7 +135,7 @@ public class Class469 {
 	static MapDetails method6048(Js5 index, int archive, int file, int i_21_) {
 		try {
 			Packet buffer = new Packet(index.getFileFromArchive(archive, file, (byte) 3));
-			MapDetails mapDetails = (new MapDetails(file, buffer.gstr(), buffer.gstr(), buffer.readUnsignedInt(), buffer.readUnsignedInt(), buffer.readUnsignedByte() == 1, buffer.readUnsignedByte(), buffer.readUnsignedByte()));
+			MapDetails mapDetails = (new MapDetails(file, buffer.getString(), buffer.getString(), buffer.readUnsignedInt(), buffer.readUnsignedInt(), buffer.readUnsignedByte() == 1, buffer.readUnsignedByte(), buffer.readUnsignedByte()));
 			int hotlinkCount = buffer.readUnsignedByte();
 			for (int i_23_ = 0; i_23_ < hotlinkCount; i_23_++) {
 				mapDetails.aLinkedNodeList_9642.addlast(new Class298_Sub42(buffer.readUnsignedByte(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort(), buffer.readUnsignedShort()), 2080542038);

@@ -128,7 +128,7 @@ public class Class223 implements Interface24 {
 				Class99.aVarClanTypeList_951.method6305(-1223470139);
 				Class299.aClanSettings_3199.method4574((byte) 63);
 				Class94.aClass349_913.method4199(-1850735168);
-				Js5ConfigGroup.aMapIconTypeList_1463.method6161((byte) 115);
+				Js5ConfigGroup.aClass487_1463.method6161((byte) 115);
 				Class363.aWorldMapLabelList_3931.method4118(478354698);
 				Class92.aClass504_905.method6250(-1692960093);
 				VarBitType.aClass317_3472.method3846((byte) -6);

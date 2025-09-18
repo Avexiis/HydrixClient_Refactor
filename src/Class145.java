@@ -220,7 +220,7 @@ public class Class145 implements Interface5 {
 							for (int i_38_ = 0; i_38_ < i_6_; i_38_++) {
 								int i_39_ = i_20_ + i_37_;
 								int i_40_ = i_21_ + i_38_;
-								int i_41_ = (region.anIntArrayArray3155[i_39_ - (region.anInt3151 * 1487776559)][i_40_ - (1415525851 * region.anInt3152)]);
+								int i_41_ = (region.masks[i_39_ - (region.regionBaseX * 1487776559)][i_40_ - (1415525851 * region.regionBaseY)]);
 								if (0 != (i_41_ & 0x40240000))
 									class_ra.method5015(4 * i_37_ + i_22_, (i_23_ + 4 * (i_6_ - i_38_) - 4), 4, 4, -1713569622, (byte) 7);
 								else if (0 != (i_41_ & 0x800000))
@@ -263,7 +263,7 @@ public class Class145 implements Interface5 {
 			}
 			class_ra.L();
 			class_ra.ba(1, 1);
-			Class360.method4301(-1595877635);
+			LoginData.method4301(-1595877635);
 			ObjectTypeList class433 = GameClient.map.method2641(-106767927);
 			Class3.anInt67 = 0;
 			Class3.aLinkedNodeList_61.method5943((byte) 1);
@@ -306,9 +306,9 @@ public class Class145 implements Interface5 {
 											int i_49_ = i_42_;
 											int i_50_ = i_43_;
 											if (bool_48_) {
-												int[][] is_51_ = (GameClient.map.getSceneClipDataPlane(i_44_).anIntArrayArray3155);
-												int i_52_ = ((GameClient.map.getSceneClipDataPlane(i_44_).anInt3151) * 1487776559);
-												int i_53_ = ((GameClient.map.getSceneClipDataPlane(i_44_).anInt3152) * 1415525851);
+												int[][] is_51_ = (GameClient.map.getSceneClipDataPlane(i_44_).masks);
+												int i_52_ = ((GameClient.map.getSceneClipDataPlane(i_44_).regionBaseX) * 1487776559);
+												int i_53_ = ((GameClient.map.getSceneClipDataPlane(i_44_).regionBaseY) * 1415525851);
 												for (int i_54_ = 0; i_54_ < 10; i_54_++) {
 													int i_55_ = (int) (Math.random() * 4.0);
 													if (i_55_ == 0 && i_49_ > i_7_ && i_49_ > i_42_ - 3 && 0 == ((is_51_[(i_49_ - 1 - i_52_)][(i_50_ - i_53_)]) & 0x2c0108))
@@ -332,19 +332,19 @@ public class Class145 implements Interface5 {
 						}
 					}
 				}
-				MapKeys mapKeys = GameClient.map.method2631(1336735501);
-				if (null != mapKeys) {
+				Class296 class296 = GameClient.map.method2631(1336735501);
+				if (null != class296) {
 					Class363.aWorldMapLabelList_3931.method4119(1024, 64, 1140719584);
 					WorldTile worldTile = GameClient.map.getRegionStart(681479919);
-					for (int i_56_ = 0; i_56_ < mapKeys.anInt3169 * -1407078377; i_56_++) {
-						int i_57_ = mapKeys.anIntArray3168[i_56_];
+					for (int i_56_ = 0; i_56_ < class296.anInt3169 * -1407078377; i_56_++) {
+						int i_57_ = class296.anIntArray3168[i_56_];
 						if ((Class287.myPlayer.plane) == i_57_ >> 28) {
 							int i_58_ = ((i_57_ >> 14 & 0x3fff) - worldTile.x * -1760580017);
 							int i_59_ = ((i_57_ & 0x3fff) - worldTile.y * 283514611);
 							if (i_58_ >= 0 && i_58_ < i_4_ && i_59_ >= 0 && i_59_ < i_5_)
 								Class3.aLinkedNodeList_61.addlast(new Class298_Sub35(i_56_), 1131322080);
 							else {
-								WorldMapLabel worldMapLabel = (Class363.aWorldMapLabelList_3931.method4116(mapKeys.anIntArray3170[i_56_], -1340224758));
+								WorldMapLabel worldMapLabel = (Class363.aWorldMapLabelList_3931.method4116(class296.anIntArray3170[i_56_], -1340224758));
 								if (null != worldMapLabel.anIntArray3803 && (i_58_ + 968926443 * worldMapLabel.anInt3793 >= 0)) {
 									if (i_58_ + 1281846757 * worldMapLabel.anInt3804 >= i_4_) {
 										if (i_3_ != 1177065502) {

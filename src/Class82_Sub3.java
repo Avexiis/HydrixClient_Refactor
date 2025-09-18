@@ -10,7 +10,7 @@ public class Class82_Sub3 extends Class82 {
 	Class82_Sub3(Packet class298_sub53) {
 		super(class298_sub53);
 		((Class82_Sub3) this).anInt6824 = class298_sub53.readUnsignedShort() * -40183047;
-		((Class82_Sub3) this).anInt6823 = class298_sub53.gSmart2or4n() * -1186011313;
+		((Class82_Sub3) this).anInt6823 = class298_sub53.readBigSmart() * -1186011313;
 	}
 
 	public void method866(int i) {

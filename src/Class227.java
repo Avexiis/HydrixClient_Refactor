@@ -12,7 +12,7 @@ public class Class227 {
 	static Class227 aClass227_2535;
 	static Class227 aClass227_2536;
 	static Class227 aClass227_2537;
-	static Class227 aClass227_2538 = new Class227(0, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 2);
+	static Class227 aClass227_2538 = new Class227(0, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 2);
 	static Class227 aClass227_2539;
 	static Class227 aClass227_2540;
 	static Class227 aClass227_2541;
@@ -38,7 +38,7 @@ public class Class227 {
 		try {
 			return (new Class227[] { aClass227_2538, aClass227_2531, aClass227_2532, aClass227_2533, aClass227_2534, aClass227_2535, aClass227_2536, aClass227_2539, aClass227_2541, aClass227_2530, aClass227_2537, aClass227_2540, aClass227_2542, aClass227_2554, aClass227_2544, aClass227_2545, aClass227_2546, aClass227_2547 });
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "jp.a(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jp.a(").append(')').toString());
 		}
 	}
 
@@ -57,23 +57,23 @@ public class Class227 {
 	}
 
 	static {
-		aClass227_2531 = new Class227(1, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 2, 3);
-		aClass227_2532 = new Class227(2, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 3);
-		aClass227_2533 = new Class227(3, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 3, 4);
-		aClass227_2534 = new Class227(4, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 4);
-		aClass227_2535 = new Class227(5, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 4, 5);
-		aClass227_2536 = new Class227(6, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 5, 98, true, true);
-		aClass227_2539 = new Class227(7, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 99);
-		aClass227_2541 = new Class227(8, LocalizedString.MESSAGE_CONNECTING_TO_NEXUS, 100);
-		aClass227_2530 = new Class227(9, LocalizedString.MESSAGE_LOADING_NEXUS, LocalizedString.MESSAGE_LOADING_NEXUS, 0, 92, true, true);
-		aClass227_2537 = new Class227(10, LocalizedString.MESSAGE_LOADING_NEXUS, LocalizedString.MESSAGE_LOADING_NEXUS, 92, 93);
-		aClass227_2540 = new Class227(11, LocalizedString.MESSAGE_LOADING_NEXUS, LocalizedString.MESSAGE_LOADING_NEXUS, 94, 95);
-		aClass227_2542 = new Class227(12, LocalizedString.MESSAGE_LOADING_NEXUS, LocalizedString.MESSAGE_LOADING_NEXUS, 96, 97);
-		aClass227_2554 = new Class227(13, LocalizedString.MESSAGE_LOADING_NEXUS, 97);
-		aClass227_2544 = new Class227(14, LocalizedString.MESSAGE_LOADING_NEXUS, 97);
-		aClass227_2545 = new Class227(15, LocalizedString.MESSAGE_LOADING_NEXUS, 100);
-		aClass227_2546 = new Class227(16, LocalizedString.MESSAGE_LOADING_NEXUS, 100);
-		aClass227_2547 = new Class227(17, LocalizedString.MESSAGE_LOADING_NEXUS, 100);
+		aClass227_2531 = new Class227(1, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 2, 3);
+		aClass227_2532 = new Class227(2, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 3);
+		aClass227_2533 = new Class227(3, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 3, 4);
+		aClass227_2534 = new Class227(4, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 4);
+		aClass227_2535 = new Class227(5, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 4, 5);
+		aClass227_2536 = new Class227(6, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 5, 98, true, true);
+		aClass227_2539 = new Class227(7, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 99);
+		aClass227_2541 = new Class227(8, LocalizedString.MESSAGE_CHECKING_FOR_AWESOMENESS_PREFIX, 100);
+		aClass227_2530 = new Class227(9, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 0, 92, true, true);
+		aClass227_2537 = new Class227(10, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 92, 93);
+		aClass227_2540 = new Class227(11, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 94, 95);
+		aClass227_2542 = new Class227(12, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 96, 97);
+		aClass227_2554 = new Class227(13, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 97);
+		aClass227_2544 = new Class227(14, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 97);
+		aClass227_2545 = new Class227(15, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 100);
+		aClass227_2546 = new Class227(16, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 100);
+		aClass227_2547 = new Class227(17, LocalizedString.MESSAGE_FETCHING_AWESOMENESS_PREFIX, 100);
 	}
 
 	static final void method2110(ClientScript2 class403, byte i) {
@@ -83,7 +83,7 @@ public class Class227 {
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
 			Class478.method6097(class105, RSInterface, class403, 924787839);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "jp.ie(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jp.ie(").append(')').toString());
 		}
 	}
 
@@ -94,7 +94,7 @@ public class Class227 {
 			int i_9_ = (((ClientScript2) class403).anIntArray5244[1 + 681479919 * ((ClientScript2) class403).anInt5239]);
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = ObjectDeque.method2845(i_8_, i_9_, true, false, 1482071907);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "jp.ub(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jp.ub(").append(')').toString());
 		}
 	}
 
@@ -106,7 +106,7 @@ public class Class227 {
 					GameClient.aBooleanArray8900[i_14_] = true;
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "jp.kr(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jp.kr(").append(')').toString());
 		}
 	}
 
@@ -118,7 +118,7 @@ public class Class227 {
 			else
 				((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393) - 1] = "";
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "jp.wn(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jp.wn(").append(')').toString());
 		}
 	}
 
@@ -129,7 +129,7 @@ public class Class227 {
 				string = "";
 			return string;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "jp.p(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("jp.p(").append(')').toString());
 		}
 	}
 }

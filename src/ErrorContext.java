@@ -34,33 +34,33 @@ public class ErrorContext {
 			int i_4_ = Class10.anInt129 * 1168366243;
 			int[] is = Class10.anIntArray135;
 			for (int i_5_ = 0; i_5_ < i_4_; i_5_++) {
-				Player class365_sub1_sub1_sub2_sub2 = GameClient.players[is[i_5_]];
-				if (null != class365_sub1_sub1_sub2_sub2 && class365_sub1_sub1_sub2_sub2.method4477(526198823) && !class365_sub1_sub1_sub2_sub2.hidden && (class365_sub1_sub1_sub2_sub2 != Class287.myPlayer) && (class365_sub1_sub1_sub2_sub2.plane == (Class287.myPlayer.plane))) {
-					SceneObjectPosition sceneObjectPosition = (class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
+				Player player = GameClient.players[is[i_5_]];
+				if (null != player && player.method4477(526198823) && !player.hidden && (player != Class287.myPlayer) && (player.plane == (Class287.myPlayer.plane))) {
+					SceneObjectPosition sceneObjectPosition = (player.method4337().aSceneObjectPosition_2599);
 					int i_6_ = (int) sceneObjectPosition.x / 128 - i / 128;
 					int i_7_ = (int) sceneObjectPosition.z / 128 - i_0_ / 128;
 					boolean bool = false;
 					for (int i_8_ = 0; i_8_ < GameClient.anInt8941 * -1054937867; i_8_++) {
-						if (class365_sub1_sub1_sub2_sub2.username.equals(GameClient.aStringArray8704[i_8_]) && GameClient.anIntArray8946[i_8_] != 0) {
+						if (player.username.equals(GameClient.aStringArray8704[i_8_]) && GameClient.anIntArray8946[i_8_] != 0) {
 							bool = true;
 							break;
 						}
 					}
 					boolean bool_9_ = false;
 					for (int i_10_ = 0; i_10_ < -1801543887 * Class489.anInt6071; i_10_++) {
-						if (class365_sub1_sub1_sub2_sub2.username.equals(Class82_Sub6.aClass7Array6846[i_10_].aString93)) {
+						if (player.username.equals(Class82_Sub6.aClass7Array6846[i_10_].aString93)) {
 							bool_9_ = true;
 							break;
 						}
 					}
 					boolean bool_11_ = false;
-					if (0 != -1473655357 * (Class287.myPlayer.teamId) && 0 != (-1473655357 * class365_sub1_sub1_sub2_sub2.teamId) && ((class365_sub1_sub1_sub2_sub2.teamId * -1473655357) == (Class287.myPlayer.teamId) * -1473655357))
+					if (0 != -1473655357 * (Class287.myPlayer.teamId) && 0 != (-1473655357 * player.teamId) && ((player.teamId * -1473655357) == (Class287.myPlayer.teamId) * -1473655357))
 						bool_11_ = true;
-					if (class365_sub1_sub1_sub2_sub2.isClickable)
+					if (player.isClickable)
 						FluType.method5883(class105, class_ta, i_1_, i_2_, i_6_, i_7_, SubIncommingPacket.aClass57Array2349[6], (byte) 52);
 					else if (bool_11_)
 						FluType.method5883(class105, class_ta, i_1_, i_2_, i_6_, i_7_, SubIncommingPacket.aClass57Array2349[4], (byte) -19);
-					else if (class365_sub1_sub1_sub2_sub2.isInCombat)
+					else if (player.isInCombat)
 						FluType.method5883(class105, class_ta, i_1_, i_2_, i_6_, i_7_, SubIncommingPacket.aClass57Array2349[7], (byte) -81);
 					else if (bool)
 						FluType.method5883(class105, class_ta, i_1_, i_2_, i_6_, i_7_, SubIncommingPacket.aClass57Array2349[3], (byte) 25);

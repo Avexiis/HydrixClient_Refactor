@@ -342,7 +342,7 @@ public class Class126 implements Interface6 {
 							if (GameClient.aBoolean8866) {
 								Class298_Sub36 class298_sub36 = Class18.method359((OutgoingPacket.WORLD_MAP_CLICK_PACKET), (GameClient.gameConnection.aClass449_330), (byte) 91);
 								class298_sub36.buffer.writeInt((924378211 * Class241.anInt2706 << 28 | Class98.anInt950 * -537916961 << 14 | Class221.anInt6663 * -605610561), -1116555169);
-								System.out.println(Class221.anInt6663);
+								//System.out.println(Class221.anInt6663);
 								GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte) -83);
 								GameClient.aBoolean8866 = false;
 							}

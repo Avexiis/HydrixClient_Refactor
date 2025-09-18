@@ -77,14 +77,14 @@ public class Class431 implements Interface15 {
 
 	static void method5766(int i) {
 		try {
-			Class360.aClass25_3905.method383((short) 8191);
-			((Class25) Class360.aClass25_3905).aClass298_Sub53_Sub2_333.pos = 0;
-			((Class25) Class360.aClass25_3905).INCOMMING_PACKET = null;
-			((Class25) Class360.aClass25_3905).aClass202_344 = null;
-			((Class25) Class360.aClass25_3905).aClass202_345 = null;
-			((Class25) Class360.aClass25_3905).aClass202_348 = null;
-			((Class25) Class360.aClass25_3905).anInt336 = 0;
-			((Class25) Class360.aClass25_3905).anInt338 = 0;
+			LoginData.aClass25_3905.method383((short) 8191);
+			((Class25) LoginData.aClass25_3905).aClass298_Sub53_Sub2_333.pos = 0;
+			((Class25) LoginData.aClass25_3905).INCOMMING_PACKET = null;
+			((Class25) LoginData.aClass25_3905).aClass202_344 = null;
+			((Class25) LoginData.aClass25_3905).aClass202_345 = null;
+			((Class25) LoginData.aClass25_3905).aClass202_348 = null;
+			((Class25) LoginData.aClass25_3905).anInt336 = 0;
+			((Class25) LoginData.aClass25_3905).anInt338 = 0;
 			GameClient.anInt8669 = 0;
 			Class447.method5905(2108312995);
 			Class271.method2547(385051775);

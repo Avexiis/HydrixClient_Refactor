@@ -77,7 +77,7 @@ public class Class493 {
 			if (0 == i_4_)
 				throw new IllegalArgumentException(new StringBuilder().append("").append(Integer.toString(i_4_, 16)).toString());
 			if (i_4_ >= 128 && i_4_ < 160) {
-				int i_5_ = Class419.aCharArray5340[i_4_ - 128];
+				int i_5_ = ConsoleCommands.aCharArray5340[i_4_ - 128];
 				if (i_5_ == 0)
 					i_5_ = 63;
 				i_4_ = i_5_;

@@ -62,7 +62,7 @@ public class Class7 {
 			if ((ContextMenu.actionCount * -278777595 >= 2 || GameClient.aBoolean8835) && null == GameClient.aClass105_8850) {
 				String string;
 				if (GameClient.aBoolean8835 && -278777595 * ContextMenu.actionCount < 2)
-					string = new StringBuilder().append(GameClient.aString8838).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(GameClient.aString8754).append(" ").append(Class26.aString351).toString();
+					string = new StringBuilder().append(GameClient.aString8838).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).toString();
 				else if (Class117.method1275((byte) 122) && -278777595 * ContextMenu.actionCount > 2)
 					string = Class8.method315((Class298_Sub45.aClass298_Sub37_Sub15_7522), 2135114234);
 				else {

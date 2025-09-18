@@ -52,7 +52,7 @@ public class Class298_Sub37_Sub7 extends Class298_Sub37 {
 					int i_7_ = class298_sub53.g3();
 					Node node;
 					if (bool)
-						node = new LinkableObject(class298_sub53.gstr());
+						node = new LinkableObject(class298_sub53.getString());
 					else
 						node = new Class298_Sub35(class298_sub53.readUnsignedInt());
 					((Class298_Sub37_Sub7) this).aClass437_9594.method5817(node, (long) i_7_);

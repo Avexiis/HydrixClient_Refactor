@@ -241,6 +241,7 @@ public class IComponentDefinition {
 	}
 
 	void method1110(Packet class298_sub53, int i) {
+		String name = Settings.SERVER_NAME;
 		try {
 			int i_1_ = class298_sub53.readUnsignedByte();
 			if (i_1_ == 255) {
@@ -249,7 +250,7 @@ public class IComponentDefinition {
 			type = class298_sub53.readUnsignedByte() * -800405999;
 			if ((-1215239439 * type & 0x80) != 0) {
 				type = -800405999 * (type * -1215239439 & 0x7f);
-				aString1259 = class298_sub53.gstr();
+				aString1259 = class298_sub53.getString();
 			}
 			contentType = class298_sub53.readUnsignedShort() * -680446123;
 			anInt1286 = class298_sub53.readShort(1719356411) * 2145953887;
@@ -296,7 +297,7 @@ public class IComponentDefinition {
 			}
 			if (6 == -1215239439 * type) {
 				anInt1184 = -1530138943;
-				anInt1151 = class298_sub53.gSmart2or4n() * -1825442367;
+				anInt1151 = class298_sub53.readBigSmart() * -1825442367;
 				int i_4_ = class298_sub53.readUnsignedByte();
 				boolean bool = 1 == (i_4_ & 0x1);
 				aBoolean1187 = (i_4_ & 0x2) == 2;
@@ -319,7 +320,7 @@ public class IComponentDefinition {
 					anInt1192 = class298_sub53.readUnsignedShort() * -2064327287;
 					tempZoomDistance = class298_sub53.readShort(1622637773) * -1066050969;
 				}
-				anInt1290 = class298_sub53.gSmart2or4n() * 1587382585;
+				anInt1290 = class298_sub53.readBigSmart() * 1587382585;
 				if (0 != aByte1148) {
 					anInt1221 = class298_sub53.readUnsignedShort() * 1811727251;
 				}
@@ -328,15 +329,15 @@ public class IComponentDefinition {
 				}
 			}
 			if (type * -1215239439 == 4) {
-				anInt1210 = class298_sub53.gSmart2or4n() * -2074006897;
+				anInt1210 = class298_sub53.readBigSmart() * -2074006897;
 				if (i_1_ >= 2) {
 					aBoolean1211 = class298_sub53.readUnsignedByte() == 1;
 				}
-				aString1212 = class298_sub53.gstr();
+				aString1212 = class298_sub53.getString();
 				if (aString1212.toLowerCase().contains("runescape")) {
-					aString1212 = aString1212.replace("runescape", "Nexus");
-					aString1212 = aString1212.replace("RuneScape", "Nexus");
-					aString1212 = aString1212.replace("Runescape", "Nexus");
+					aString1212 = aString1212.replace("runescape", name);
+					aString1212 = aString1212.replace("RuneScape", name);
+					aString1212 = aString1212.replace("Runescape", name);
 				}
 				anInt1191 = class298_sub53.readUnsignedByte() * 1629063197;
 				anInt1214 = class298_sub53.readUnsignedByte() * -1733811909;
@@ -381,14 +382,14 @@ public class IComponentDefinition {
 					aByteArray1222[i_7_] = i_9_;
 				}
 			}
-			aString1228 = class298_sub53.gstr();
+			aString1228 = class298_sub53.getString();
 			int i_10_ = class298_sub53.readUnsignedByte();
 			int i_11_ = i_10_ & 0xf;
 			int i_12_ = i_10_ >> 4;
 			if (i_11_ > 0) {
 				aStringArray1195 = new String[i_11_];
 				for (int i_13_ = 0; i_13_ < i_11_; i_13_++) {
-					aStringArray1195[i_13_] = class298_sub53.gstr();
+					aStringArray1195[i_13_] = class298_sub53.getString();
 				}
 			}
 			if (i_12_ > 0) {
@@ -403,14 +404,14 @@ public class IComponentDefinition {
 				int i_16_ = class298_sub53.readUnsignedByte();
 				anIntArray1231[i_16_] = class298_sub53.readUnsignedShort();
 			}
-			aString1230 = class298_sub53.gstr();
+			aString1230 = class298_sub53.getString();
 			if (aString1230.equals("")) {
 				aString1230 = null;
 			}
 			anInt1239 = class298_sub53.readUnsignedByte() * 476443207;
 			anInt1235 = class298_sub53.readUnsignedByte() * -978869921;
 			anInt1236 = class298_sub53.readUnsignedByte() * 2138287179;
-			aString1237 = class298_sub53.gstr();
+			aString1237 = class298_sub53.getString();
 			int i_17_ = -1;
 			if (MagnetConfig.method784(i_5_, (byte) 111) != 0) {
 				i_17_ = class298_sub53.readUnsignedShort();
@@ -492,7 +493,7 @@ public class IComponentDefinition {
 				if (i_27_ == 0) {
 					objects[i_26_] = new Integer(class298_sub53.readUnsignedInt());
 				} else if (i_27_ == 1) {
-					objects[i_26_] = class298_sub53.gstr();
+					objects[i_26_] = class298_sub53.getString();
 				}
 			}
 			hasScripts = true;
@@ -1077,7 +1078,7 @@ public class IComponentDefinition {
 
 	public static void method1129(int[] is, Object[] objects, byte i) {
 		try {
-			Class419.method5602(is, objects, 0, is.length - 1, -641027314);
+			ConsoleCommands.method5602(is, objects, 0, is.length - 1, -641027314);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("eg.u(").append(')').toString());
 		}

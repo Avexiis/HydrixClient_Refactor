@@ -80,16 +80,17 @@ public class ClientScript extends Class298_Sub37 {
 	}
 
 	void method3475(Packet class298_sub53, int i, Class394 class394, byte i_10_) {
+		String name = Settings.SERVER_NAME;
 		try {
 			int i_11_ = aClass394Array9675.length;
 			if (class394 == Class394.aClass394_4925) {
 				if (null == anObjectArray9683)
 					anObjectArray9683 = new String[i_11_];
-				String string = class298_sub53.gstr();
+				String string = class298_sub53.getString();
 				if (string.toLowerCase().contains("runescape")) {
-					string = string.replace("runescape", "Nexus");
-					string = string.replace("RuneScape", "Nexus");
-					string = string.replace("Runescape", "Nexus");
+					string = string.replace("runescape", name);
+					string = string.replace("RuneScape", name);
+					string = string.replace("Runescape", name);
 				}
 				anObjectArray9683[i] = string.intern();
 			} else if (Class394.aClass394_4227 == class394) {
@@ -106,7 +107,7 @@ public class ClientScript extends Class298_Sub37 {
 			}
 			aClass394Array9675[i] = class394;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aiz.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "aiz.b(" + ')');
 		}
 	}
 }

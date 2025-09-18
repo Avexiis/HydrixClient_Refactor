@@ -111,12 +111,12 @@ public class Class140 implements Runnable {
 				if (class503.aBoolean6163) {
 					if (1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189 != 0) {
 						String string_3_ = GameClient.aGameContext_8944 == GameContext.stellar_dawn ? LocalizedString.LABEL_RATING_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210) : LocalizedString.LABEL_LEVEL_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-						string = new StringBuilder().append(string).append(Class18.method358(1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189, Class287.myPlayer.maxHitpoints * 696798311, (byte) 4)).append(Class26.aString349).append(string_3_).append(1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189).append(Class26.aString352).toString();
+						string = new StringBuilder().append(string).append(Class18.method358(1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189, Class287.myPlayer.maxHitpoints * 696798311, (byte) 4)).append(Symbol.OPEN_PARENTHESES).append(string_3_).append(1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189).append(Symbol.CLOSE_PARENTHESES).toString();
 					}
 					if (GameClient.aBoolean8835 && !bool) {
 						Class497 class497 = 831522399 * Class132.anInt1508 != -1 ? Class92.aClass504_905.method6251(831522399 * Class132.anInt1508, 1875400558) : null;
 						if ((Node.anInt3192 * -112110875 & 0x2) != 0 && (null == class497 || class503.method6239(Class132.anInt1508 * 831522399, -388931549 * class497.anInt6100, (byte) 47) != class497.anInt6100 * -388931549)) {
-							Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Class26.aString351).append(" ").append(Class285.method2709(16776960, -2021390481)).append(string).toString(), 697885143 * MapDecoder.anInt2704, 8, -1, 1888274983 * class365_sub1_sub1_sub2_sub1.entityIndex, 0, 0, true, false, 1888274983 * class365_sub1_sub1_sub2_sub1.entityIndex, false, -1507413924);
+							Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(Class285.method2709(16776960, -2021390481)).append(string).toString(), 697885143 * MapDecoder.anInt2704, 8, -1, 1888274983 * class365_sub1_sub1_sub2_sub1.entityIndex, 0, 0, true, false, 1888274983 * class365_sub1_sub1_sub2_sub1.entityIndex, false, -1507413924);
 						}
 					}
 					if (!bool) {

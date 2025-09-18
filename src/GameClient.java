@@ -141,7 +141,7 @@ public final class GameClient extends GameShell {
 	public static int anInt8755;
 	static int anInt8756;
 	public static float aFloat8757;
-	static Calendar aCalendar8758;
+	static Calendar date;
 	static float aFloat8759;
 	static float aFloat8760;
 	static boolean aBoolean8761;
@@ -375,7 +375,7 @@ public final class GameClient extends GameShell {
 							Class73.anInt689 = Integer.parseInt(mainAppletParameter) * -2071496301;
 							break;
 						case 23:
-							if (mainAppletParameter.equals(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equals(Symbol.STRING_TRUE)) {
 								aBoolean8643 = true;
 							} else {
 								aBoolean8643 = false;
@@ -398,26 +398,26 @@ public final class GameClient extends GameShell {
 							aString8655 = mainAppletParameter;
 							break;
 						case 12:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8651 = true;
 							} else {
 								aBoolean8651 = false;
 							}
 							break;
 						case 18:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8807 = true;
 							}
 							break;
 						case 17:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8958 = true;
 							} else {
 								aBoolean8958 = false;
 							}
 							break;
 						case 11:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8638 = true;
 							} else {
 								aBoolean8638 = false;
@@ -430,14 +430,14 @@ public final class GameClient extends GameShell {
 							Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(mainAppletParameter), 615406105);
 							break;
 						case 30:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8653 = true;
 							} else {
 								aBoolean8653 = false;
 							}
 							break;
 						case 22:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8639 = true;
 							} else {
 								aBoolean8639 = false;
@@ -490,7 +490,7 @@ public final class GameClient extends GameShell {
 							Class241.aClass471_2705.worldId = Integer.parseInt(mainAppletParameter) * 348739329;
 							break;
 						case 31:
-							if (mainAppletParameter.equalsIgnoreCase(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 								aBoolean8867 = true;
 							} else {
 								aBoolean8867 = false;
@@ -519,7 +519,7 @@ public final class GameClient extends GameShell {
 							}
 							break;
 						case 16:
-							if (mainAppletParameter.equals(Class26.STRING_TRUE)) {
+							if (mainAppletParameter.equals(Symbol.STRING_TRUE)) {
 								aBoolean8680 = true;
 							} else {
 								aBoolean8680 = false;
@@ -586,8 +586,8 @@ public final class GameClient extends GameShell {
 				Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
 				Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
 			} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
-				Class474.aClass471_5976.address = Class26.IP;
-				Class241.aClass471_2705.address = Class26.IP;
+				Class474.aClass471_5976.address = Symbol.IP;
+				Class241.aClass471_2705.address = Symbol.IP;
 				Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
 				Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
 				Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
@@ -706,7 +706,7 @@ public final class GameClient extends GameShell {
 					Class148.method1614((byte) -3);
 				}
 				if (OverlayType.activeToolkit != null && OverlayType.activeToolkit.method5074() || MagnetDefinitions.method1859((byte) -122) != 1) {
-					Class360.method4301(-1789306490);
+					LoginData.method4301(-1789306490);
 				}
 				if (Class88.method976(-1233866115 * anInt8752, -1448819665)) {
 					Class60.method710(bool_4_, 430993133);
@@ -717,17 +717,17 @@ public final class GameClient extends GameShell {
 				} else if (HitType.method4287(anInt8752 * -1233866115, 361133550)) {
 					if (map.method2627((byte) 103) == Class273.aClass273_2906) {
 						int i_5_ = map.method2662(-471108411) / 2;
-						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Class26.aString350 + "(" + i_5_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 20);
+						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + "(" + i_5_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 20);
 					} else if (map.method2627((byte) 65) == Class273.aClass273_2904) {
 						int i_6_ = 50 + map.method2670((byte) -20) / 2;
-						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Class26.aString350 + "(" + i_6_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 38);
+						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + "(" + i_6_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 38);
 					} else {
 						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 64);
 					}
 				} else if (-1233866115 * anInt8752 == 0) {
 					Class322.method3932(l);
 				} else if (5 == -1233866115 * anInt8752) {
-					Class139.method1548(LocalizedString.MESSAGE_CONNECTION_LOST.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Class26.aString350 + LocalizedString.MESSAGE_PLEASE_WAIT_REESTABLISH.getText(Class321.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369,
+					Class139.method1548(LocalizedString.MESSAGE_CONNECTION_LOST.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + LocalizedString.MESSAGE_PLEASE_WAIT_REESTABLISH.getText(Class321.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369,
 							(byte) -78);
 				} else if (-1233866115 * anInt8752 == 13) {
 					Class139.method1548(LocalizedString.MESSAGE_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) -34);
@@ -937,9 +937,9 @@ public final class GameClient extends GameShell {
 						}
 					}
 				} else if (958933333 * hintIcon.anInt266 == 10) {
-					Player class365_sub1_sub1_sub2_sub2 = players[-841622081 * hintIcon.anInt256];
-					if (class365_sub1_sub1_sub2_sub2 != null && Class287.myPlayer != class365_sub1_sub1_sub2_sub2 && 648883167 * class365_sub1_sub1_sub2_sub2.anInt10071 >= 0) {
-						class365_sub1_sub1_sub2_sub2.anInt10071 += 1921054720;
+					Player player = players[-841622081 * hintIcon.anInt256];
+					if (player != null && Class287.myPlayer != player && 648883167 * player.anInt10071 >= 0) {
+						player.anInt10071 += 1921054720;
 					}
 				}
 			}
@@ -1221,7 +1221,7 @@ public final class GameClient extends GameShell {
 						GameContext.method5577(class105, -1954843749);
 					}
 				} else if (!method2802(class105)) {
-					if (aClass105_8850 == class105 && Class419.method5603(aClass105_8850, 1205106518)) {
+					if (aClass105_8850 == class105 && ConsoleCommands.method5603(aClass105_8850, 1205106518)) {
 						aBoolean8938 = true;
 						anInt8861 = i_62_ * -1501079155;
 						anInt8862 = -1873720993 * i_63_;
@@ -1385,10 +1385,10 @@ public final class GameClient extends GameShell {
 									int i_82_ = Class10.anInt129 * 1168366243;
 									int[] is = Class10.anIntArray135;
 									for (int i_83_ = 0; i_83_ < i_82_; i_83_++) {
-										Player class365_sub1_sub1_sub2_sub2 = players[is[i_83_]];
-										if (null != class365_sub1_sub1_sub2_sub2) {
-											overheadString.method729(Class502.aClass502_6716, -1, -1, class365_sub1_sub1_sub2_sub2, is[i_83_], (byte) -7);
-											class365_sub1_sub1_sub2_sub2.drawOverheadText(i_64_, i_65_, i_66_, i_67_, i_62_ - class105.anInt1166 * 684246511, i_63_ - class105.anInt1167 * -1424956747, i_59_, i_60_, 744800283);
+										Player player = players[is[i_83_]];
+										if (null != player) {
+											overheadString.method729(Class502.aClass502_6716, -1, -1, player, is[i_83_], (byte) -7);
+											player.drawOverheadText(i_64_, i_65_, i_66_, i_67_, i_62_ - class105.anInt1166 * 684246511, i_63_ - class105.anInt1167 * -1424956747, i_59_, i_60_, 744800283);
 										}
 									}
 									for (int i_84_ = 0; i_84_ < -1230451913 * npcCount; i_84_++) {
@@ -1438,7 +1438,7 @@ public final class GameClient extends GameShell {
 											if (aBoolean8835 && (-112110875 * Node.anInt3192 & 0x40) != 0) {
 												IComponentDefinition class105_97_ = Class140.method1558(1262526353 * Class379.anInt4099, 392084321 * anInt8836, -156511736);
 												if (class105_97_ != null) {
-													Class234.method2174(aString8838, " " + Class26.aString351, 697885143 * MapDecoder.anInt2704, 59, -1232467723 * class105.zds3, 1L, i_94_, i_95_, true, false, -1309843523 * class105.component << 32 | class105.interfacehash * -440872681, true,
+													Class234.method2174(aString8838, " " + Symbol.RIGHT_ARROW, 697885143 * MapDecoder.anInt2704, 59, -1232467723 * class105.zds3, 1L, i_94_, i_95_, true, false, -1309843523 * class105.component << 32 | class105.interfacehash * -440872681, true,
 															-1552213884);
 												} else {
 													IdentityKitTypeList.method1587((byte) 4);
@@ -2135,7 +2135,7 @@ public final class GameClient extends GameShell {
 		aStringArray8955 = new String[100];
 		aStringArray8773 = new String[100];
 		aBooleanArray8957 = new boolean[100];
-		aCalendar8758 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
+		date = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 		aByte8959 = (byte) -6;
 		anInterface17_8960 = new Class523();
 		anIntArray8977 = new int[4];
@@ -2153,7 +2153,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -2176,26 +2176,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -2208,14 +2208,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1796181193);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -2268,7 +2268,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -2297,7 +2297,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;
@@ -2360,8 +2360,8 @@ public final class GameClient extends GameShell {
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
 			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
-			Class474.aClass471_5976.address = Class26.IP;
-			Class241.aClass471_2705.address = Class26.IP;
+			Class474.aClass471_5976.address = Symbol.IP;
+			Class241.aClass471_2705.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
 			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
@@ -2399,7 +2399,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -2422,26 +2422,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -2454,14 +2454,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 2129104581);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -2514,7 +2514,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -2543,7 +2543,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;
@@ -2606,8 +2606,8 @@ public final class GameClient extends GameShell {
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
 			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
-			Class474.aClass471_5976.address = Class26.IP;
-			Class241.aClass471_2705.address = Class26.IP;
+			Class474.aClass471_5976.address = Symbol.IP;
+			Class241.aClass471_2705.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
 			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
@@ -2676,8 +2676,8 @@ public final class GameClient extends GameShell {
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
 			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
-			Class474.aClass471_5976.address = Class26.IP;
-			Class241.aClass471_2705.address = Class26.IP;
+			Class474.aClass471_5976.address = Symbol.IP;
+			Class241.aClass471_2705.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
 			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
@@ -2707,14 +2707,14 @@ public final class GameClient extends GameShell {
 		String string = " ";
 		try {
 			WorldTile worldTile = map.getRegionStart(681479919);
-			string = string + worldTile.x * -1760580017 + Class26.COMMA + 283514611 * worldTile.y + Class26.COMMA + map.upperX(-2128021636) + Class26.COMMA + map.upperY(-1076815167) + " ";
+			string = string + worldTile.x * -1760580017 + Symbol.COMMA + 283514611 * worldTile.y + Symbol.COMMA + map.upperX(-2128021636) + Symbol.COMMA + map.upperY(-1076815167) + " ";
 			if (Class287.myPlayer != null) {
-				string = string + 1855729883 * Class99.anInt952 + Class26.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Class26.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
+				string = string + 1855729883 * Class99.anInt952 + Symbol.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Symbol.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
 			} else {
-				string = string + Class99.anInt952 * 1855729883 + Class26.COMMA + Class99.anInt952 * 1855729883 + Class26.COMMA + 1855729883 * Class99.anInt952 + Class26.COMMA + " ";
+				string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 			}
 			string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-682947587) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-723955200) + " " + MagnetDefinitions.method1859((byte) -61) + " " + Class462.canvasWidth * -2110394505 +
-					Class26.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
+					Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2018199679) + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-90347626) + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-1374891617) + " ";
@@ -2732,7 +2732,7 @@ public final class GameClient extends GameShell {
 			if (aString8655 != null) {
 				string = string + aString8655;
 			} else {
-				string = string + Class26.COMMA;
+				string = string + Symbol.COMMA;
 			}
 			try {
 				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1738416059) == 2) {
@@ -2777,14 +2777,14 @@ public final class GameClient extends GameShell {
 		String string = " ";
 		try {
 			WorldTile worldTile = map.getRegionStart(681479919);
-			string = string + worldTile.x * -1760580017 + Class26.COMMA + 283514611 * worldTile.y + Class26.COMMA + map.upperX(-2102644604) + Class26.COMMA + map.upperY(-955929187) + " ";
+			string = string + worldTile.x * -1760580017 + Symbol.COMMA + 283514611 * worldTile.y + Symbol.COMMA + map.upperX(-2102644604) + Symbol.COMMA + map.upperY(-955929187) + " ";
 			if (Class287.myPlayer != null) {
-				string = string + 1855729883 * Class99.anInt952 + Class26.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Class26.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
+				string = string + 1855729883 * Class99.anInt952 + Symbol.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Symbol.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
 			} else {
-				string = string + Class99.anInt952 * 1855729883 + Class26.COMMA + Class99.anInt952 * 1855729883 + Class26.COMMA + 1855729883 * Class99.anInt952 + Class26.COMMA + " ";
+				string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 			}
 			string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-2069894035) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-980707631) + " " + MagnetDefinitions.method1859((byte) -68) + " " + Class462.canvasWidth * -2110394505 +
-					Class26.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
+					Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1869858699) + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-1501062841) + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(1402925605) + " ";
@@ -2802,7 +2802,7 @@ public final class GameClient extends GameShell {
 			if (aString8655 != null) {
 				string = string + aString8655;
 			} else {
-				string = string + Class26.COMMA;
+				string = string + Symbol.COMMA;
 			}
 			try {
 				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-578216379) == 2) {
@@ -2847,14 +2847,14 @@ public final class GameClient extends GameShell {
 		String string = " ";
 		try {
 			WorldTile worldTile = map.getRegionStart(681479919);
-			string = string + worldTile.x * -1760580017 + Class26.COMMA + 283514611 * worldTile.y + Class26.COMMA + map.upperX(-1917252704) + Class26.COMMA + map.upperY(-659381111) + " ";
+			string = string + worldTile.x * -1760580017 + Symbol.COMMA + 283514611 * worldTile.y + Symbol.COMMA + map.upperX(-1917252704) + Symbol.COMMA + map.upperY(-659381111) + " ";
 			if (Class287.myPlayer != null) {
-				string = string + 1855729883 * Class99.anInt952 + Class26.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Class26.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
+				string = string + 1855729883 * Class99.anInt952 + Symbol.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Symbol.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
 			} else {
-				string = string + Class99.anInt952 * 1855729883 + Class26.COMMA + Class99.anInt952 * 1855729883 + Class26.COMMA + 1855729883 * Class99.anInt952 + Class26.COMMA + " ";
+				string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 			}
 			string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-361845304) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-1338991605) + " " + MagnetDefinitions.method1859((byte) -87) + " " + Class462.canvasWidth * -2110394505 +
-					Class26.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
+					Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1870553527) + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-12224060) + " ";
 			string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-149412729) + " ";
@@ -2872,7 +2872,7 @@ public final class GameClient extends GameShell {
 			if (aString8655 != null) {
 				string = string + aString8655;
 			} else {
-				string = string + Class26.COMMA;
+				string = string + Symbol.COMMA;
 			}
 			try {
 				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1704140617) == 2) {
@@ -2914,6 +2914,7 @@ public final class GameClient extends GameShell {
 	}
 
 	void method2806(byte i) {
+		UiToGame.drain();
 		try {
 			if (10 != -1233866115 * anInt8752) {
 				if (aBoolean8717) {
@@ -3002,27 +3003,27 @@ public final class GameClient extends GameShell {
 				if (Class413.method5584(anInt8752 * -1233866115, 1989496806) && !HitType.method4287(-1233866115 * anInt8752, -1179252225)) {
 					method2809(-2054858271);
 					Class288_Sub1.method2730(-1664553677);
-					Class460.method5980((byte) 71);
+					LoginPacket.loginPayload((byte) 71);
 				} else if (Class299.method3682(anInt8752 * -1233866115, 1765230881) && !HitType.method4287(-1233866115 * anInt8752, 275834204)) {
 					method2809(-1772986224);
-					Class460.method5980((byte) 123);
+					LoginPacket.loginPayload((byte) 123);
 				} else if (6 == anInt8752 * -1233866115) {
-					Class460.method5980((byte) 42);
+					LoginPacket.loginPayload((byte) 42);
 				} else if (Class435.method5804(anInt8752 * -1233866115, (byte) 9) && !HitType.method4287(anInt8752 * -1233866115, 1200358903)) {
 					Class126.method1407((byte) 31);
 				} else if (-1233866115 * anInt8752 == 5 || 13 == -1233866115 * anInt8752) {
-					Class460.method5980((byte) 15);
-					if (-3 != Class360.anInt3871 * -1372893999 && 2 != -1372893999 * Class360.anInt3871 && Class360.anInt3871 * -1372893999 != 15) {
+					LoginPacket.loginPayload((byte) 15);
+					if (-3 != LoginData.anInt3871 * -1372893999 && 2 != -1372893999 * LoginData.anInt3871 && LoginData.anInt3871 * -1372893999 != 15) {
 						if (13 == anInt8752 * -1233866115) {
-							Class360.anInt3888 = 1522102865 * Class360.anInt3910;
-							Class360.anInt3906 = Class360.anInt3909 * -2096622051;
-							Class360.anInt3894 = Class360.anInt3871 * 1695357761;
+							LoginData.anInt3888 = 1522102865 * LoginData.anInt3910;
+							LoginData.anInt3906 = LoginData.anInt3909 * -2096622051;
+							LoginData.anInt3894 = LoginData.anInt3871 * 1695357761;
 							if (Class474.aBoolean5973) {
 								Class372.method4589(Class474.aClass471_5972.worldId * 1606920449, Class474.aClass471_5972.address, 955770805);
 								gameConnection.method385(1032485285);
 								Class439.method5851(5, 1513920408);
 							} else {
-								Class216.method2001(Class360.aBoolean3912, (byte) 127);
+								Class216.method2001(LoginData.aBoolean3912, (byte) 127);
 							}
 						} else {
 							Class216.method2001(false, (byte) 21);
@@ -3083,14 +3084,14 @@ public final class GameClient extends GameShell {
 			String string = " ";
 			try {
 				WorldTile worldTile = map.getRegionStart(681479919);
-				string = string + worldTile.x * -1760580017 + Class26.COMMA + 283514611 * worldTile.y + Class26.COMMA + map.upperX(-2133877490) + Class26.COMMA + map.upperY(-932420747) + " ";
+				string = string + worldTile.x * -1760580017 + Symbol.COMMA + 283514611 * worldTile.y + Symbol.COMMA + map.upperX(-2133877490) + Symbol.COMMA + map.upperY(-932420747) + " ";
 				if (Class287.myPlayer != null) {
-					string = string + 1855729883 * Class99.anInt952 + Class26.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Class26.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
+					string = string + 1855729883 * Class99.anInt952 + Symbol.COMMA + (-1760580017 * worldTile.x + Class287.myPlayer.scenePositionXQueue[0]) + Symbol.COMMA + (Class287.myPlayer.scenePositionYQueue[0] + worldTile.y * 283514611) + " ";
 				} else {
-					string = string + Class99.anInt952 * 1855729883 + Class26.COMMA + Class99.anInt952 * 1855729883 + Class26.COMMA + 1855729883 * Class99.anInt952 + Class26.COMMA + " ";
+					string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 				}
 				string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-719661759) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-1847382084) + " " + MagnetDefinitions.method1859((byte) -120) + " " +
-						Class462.canvasWidth * -2110394505 + Class26.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
+						Class462.canvasWidth * -2110394505 + Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
 				string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2046413432) + " ";
 				string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-1774221022) + " ";
 				string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-2036567589) + " ";
@@ -3108,7 +3109,7 @@ public final class GameClient extends GameShell {
 				if (aString8655 != null) {
 					string = string + aString8655;
 				} else {
-					string = string + Class26.COMMA;
+					string = string + Symbol.COMMA;
 				}
 				try {
 					if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1809803071) == 2) {
@@ -3224,8 +3225,8 @@ public final class GameClient extends GameShell {
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
 			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
-			Class474.aClass471_5976.address = Class26.IP;
-			Class241.aClass471_2705.address = Class26.IP;
+			Class474.aClass471_5976.address = Symbol.IP;
+			Class241.aClass471_2705.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
 			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
@@ -3271,7 +3272,7 @@ public final class GameClient extends GameShell {
 
 	final void method2809(int i) {
 		try {
-			if (14 == -1233866115 * anInt8752 && !Class315.method3837((byte) 34) || 18 == -1233866115 * anInt8752 && 42 == Class360.anInt3871 * -1372893999 || 8 == -1233866115 * anInt8752) {
+			if (14 == -1233866115 * anInt8752 && !Class315.method3837((byte) 34) || 18 == -1233866115 * anInt8752 && 42 == LoginData.anInt3871 * -1372893999 || 8 == -1233866115 * anInt8752) {
 				if (anInt8669 * 1592380953 > 1) {
 					anInt8669 -= -2090750423;
 					anInt8888 = 1991119277 * anInt8933;
@@ -3352,7 +3353,7 @@ public final class GameClient extends GameShell {
 					}
 				}
 			}
-			if ((19 == anInt8752 * -1233866115 || 18 == anInt8752 * -1233866115 || anInt8752 * -1233866115 == 14 || anInt8752 * -1233866115 == 8) && (!Class315.method3837((byte) 34) || anInt8752 * -1233866115 == 18 && -1372893999 * Class360.anInt3871 == 42) && !Class489.method6167(-391880689)) {
+			if ((19 == anInt8752 * -1233866115 || 18 == anInt8752 * -1233866115 || anInt8752 * -1233866115 == 14 || anInt8752 * -1233866115 == 8) && (!Class315.method3837((byte) 34) || anInt8752 * -1233866115 == 18 && -1372893999 * LoginData.anInt3871 == 42) && !Class489.method6167(-391880689)) {
 				if (ObjectDeque.anInt7164 * -863531439 == 3) {
 					Class298_Sub39.method3506(-887753775);
 				} else {
@@ -3437,7 +3438,7 @@ public final class GameClient extends GameShell {
 			if (443738891 * anInt8884 % 1500 == 0) {
 				Class141.method1567(-1874138850);
 			}
-			if (-1233866115 * anInt8752 == 14 && !Class315.method3837((byte) -38) || anInt8752 * -1233866115 == 18 && 42 == Class360.anInt3871 * -1372893999) {
+			if (-1233866115 * anInt8752 == 14 && !Class315.method3837((byte) -38) || anInt8752 * -1233866115 == 18 && 42 == LoginData.anInt3871 * -1372893999) {
 				SpotAnimation.method610(99949596);
 			}
 			Class308.method3784((byte) -37);
@@ -3455,7 +3456,7 @@ public final class GameClient extends GameShell {
 					class302_sub2.method3714(-250843172);
 				}
 			}
-			if (14 == anInt8752 * -1233866115 && !Class315.method3837((byte) -62) || -1233866115 * anInt8752 == 18 && -1372893999 * Class360.anInt3871 == 42 || 8 == anInt8752 * -1233866115) {
+			if (14 == anInt8752 * -1233866115 && !Class315.method3837((byte) -62) || -1233866115 * anInt8752 == 18 && -1372893999 * LoginData.anInt3871 == 42 || 8 == anInt8752 * -1233866115) {
 				if (anInt8752 * -1233866115 != 18 && aClass25_8693.method387(537308016) == null) {
 					Class216.method2001(false, (byte) 100);
 				} else if (null != aClass25_8693) {
@@ -3569,31 +3570,31 @@ public final class GameClient extends GameShell {
 					anInt8887 = 1385487896;
 				}
 				if (-1874843963 * Class248.aClass247_2752.anInt2735 >= 2 && 2071451041 * Class248.aClass247_2752.anInt2745 == 6) {
-					method2778("js5connect_outofdate", 1290969486);
+					errorPrinter("js5connect_outofdate", 1290969486);
 					anInt8752 = 1532912722;
 					return;
 				}
 				if (-1874843963 * Class248.aClass247_2752.anInt2735 >= 1 && 48 == Class248.aClass247_2752.anInt2745 * 2071451041) {
-					method2778("sessionexpired", -1620528831);
+					errorPrinter("sessionexpired", -1620528831);
 					anInt8752 = 1532912722;
 					return;
 				}
 				if (-1874843963 * Class248.aClass247_2752.anInt2735 >= 4 && Class248.aClass247_2752.anInt2745 * 2071451041 == -1) {
-					method2778("js5crc", -147236052);
+					errorPrinter("js5crc", -147236052);
 					anInt8752 = 1532912722;
 					return;
 				}
 				if (-1874843963 * Class248.aClass247_2752.anInt2735 >= 4 && Class88.method976(-1233866115 * anInt8752, -1528186124)) {
 					if (7 == Class248.aClass247_2752.anInt2745 * 2071451041 || Class248.aClass247_2752.anInt2745 * 2071451041 == 9) {
-						method2778("js5connect_full", -2072548353);
+						errorPrinter("js5connect_full", -2072548353);
 					} else if (2071451041 * Class248.aClass247_2752.anInt2745 > 0) {
 						if (null == aString8698) {
-							method2778("js5connect", 1739880113);
+							errorPrinter("js5connect", 1739880113);
 						} else {
-							method2778("js5proxy_" + aString8698.trim(), 846081998);
+							errorPrinter("js5proxy_" + aString8698.trim(), 846081998);
 						}
 					} else {
-						method2778("js5io", -534127401);
+						errorPrinter("js5io", -534127401);
 					}
 					anInt8752 = 1532912722;
 					return;
@@ -3605,7 +3606,7 @@ public final class GameClient extends GameShell {
 			} else {
 				try {
 					if (anInt8692 * -333700189 == 0) {
-						Class423.aSocket5355 = Class474.aClass471_5979.method6056(295506052);
+						Class423.aSocket5355 = Class474.aClass471_5979.createSocket(295506052);
 						anInt8692 += -244111349;
 					}
 					if (anInt8692 * -333700189 == 1) {
@@ -3691,7 +3692,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -3714,26 +3715,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -3746,14 +3747,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 422244563);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -3806,7 +3807,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -3835,7 +3836,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;
@@ -3867,7 +3868,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -3890,26 +3891,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -3922,14 +3923,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1006289259);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -3982,7 +3983,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -4011,7 +4012,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;
@@ -4043,7 +4044,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -4066,26 +4067,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -4098,14 +4099,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 2074884925);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -4158,7 +4159,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -4187,7 +4188,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;
@@ -4219,7 +4220,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -4242,26 +4243,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -4274,14 +4275,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 556012524);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -4334,7 +4335,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -4363,7 +4364,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;
@@ -4395,7 +4396,7 @@ public final class GameClient extends GameShell {
 						Class73.anInt689 = Integer.parseInt(string) * -2071496301;
 						break;
 					case 23:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8643 = true;
 						} else {
 							aBoolean8643 = false;
@@ -4418,26 +4419,26 @@ public final class GameClient extends GameShell {
 						aString8655 = string;
 						break;
 					case 12:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8651 = true;
 						} else {
 							aBoolean8651 = false;
 						}
 						break;
 					case 18:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8807 = true;
 						}
 						break;
 					case 17:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8958 = true;
 						} else {
 							aBoolean8958 = false;
 						}
 						break;
 					case 11:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8638 = true;
 						} else {
 							aBoolean8638 = false;
@@ -4450,14 +4451,14 @@ public final class GameClient extends GameShell {
 						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1190807224);
 						break;
 					case 30:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8653 = true;
 						} else {
 							aBoolean8653 = false;
 						}
 						break;
 					case 22:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8639 = true;
 						} else {
 							aBoolean8639 = false;
@@ -4510,7 +4511,7 @@ public final class GameClient extends GameShell {
 						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
-						if (string.equalsIgnoreCase(Class26.STRING_TRUE)) {
+						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
 							aBoolean8867 = true;
 						} else {
 							aBoolean8867 = false;
@@ -4539,7 +4540,7 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 16:
-						if (string.equals(Class26.STRING_TRUE)) {
+						if (string.equals(Symbol.STRING_TRUE)) {
 							aBoolean8680 = true;
 						} else {
 							aBoolean8680 = false;

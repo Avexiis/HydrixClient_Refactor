@@ -7,7 +7,7 @@ public class GameContext {
 	public String aString5317;
 	static GameContext aGameContext_5318;
 	static GameContext aGameContext_5319;
-	public static GameContext aGameContext_5320 = new GameContext("Nexus", "Nexus", 0);
+	public static GameContext aGameContext_5320 = new GameContext(Settings.SERVER_NAME, Settings.SERVER_NAME, 0);
 	static GameContext aGameContext_5321;
 	public String aString5322;
 	public int gameType;
@@ -76,7 +76,7 @@ public class GameContext {
 				class298_sub2.aLinkedNodeList_7166.addlast(class298_sub12, 1066004680);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "rb.jt(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rb.jt(").append(')').toString());
 		}
 	}
 
@@ -85,7 +85,7 @@ public class GameContext {
 			if (5 == -1215239439 * class105.type && -1 != class105.zds3 * -1232467723)
 				Class230.method2125(OverlayType.activeToolkit, class105, -1423422969);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "rb.lz(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rb.lz(").append(')').toString());
 		}
 	}
 
@@ -124,7 +124,7 @@ public class GameContext {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "rb.le(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rb.le(").append(')').toString());
 		}
 	}
 
@@ -215,7 +215,7 @@ public class GameContext {
 			Ground.aClass396_6291 = null;
 			Class365_Sub1_Sub2_Sub1.aLong9911 = 0L;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "rb.ak(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rb.ak(").append(')').toString());
 		}
 	}
 
@@ -223,7 +223,7 @@ public class GameContext {
 		try {
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (VertexNormal.jagexLibraryManager.method3747("jagtheora", -935061597) ? 1 : 0);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, "rb.and(" + ')');
+			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rb.and(").append(')').toString());
 		}
 	}
 }

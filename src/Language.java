@@ -147,8 +147,8 @@ public class Language implements Interface21 {
 				TimeUtils.getTime((byte) 1);
 				TimeUtils.getTime((byte) 1);
 				if (Class301_Sub1.anInt7624 * -1289394455 < 10) {
-					if (!Class301_Sub1.worldMapIndex.method2312(Class301_Sub1.currentWorldMapArea.fileName, -2140139718)) {
-						Class301_Sub1.anInt7624 = (Class_v.index_23_worldMap.method2305((Class301_Sub1.currentWorldMapArea.fileName), -1210672889)) / 10 * 1078186329;
+					if (!Class301_Sub1.worldMapIndex.method2312(Class301_Sub1.currentWorldMapArea.aString9640, -2140139718)) {
+						Class301_Sub1.anInt7624 = (Class_v.index_23_worldMap.method2305((Class301_Sub1.currentWorldMapArea.aString9640), -1210672889)) / 10 * 1078186329;
 						return;
 					}
 					Class318.method3873(16711935);
@@ -157,8 +157,8 @@ public class Language implements Interface21 {
 				if (10 == Class301_Sub1.anInt7624 * -1289394455) {
 					Class301_Sub1.mapX = (Class301_Sub1.currentWorldMapArea.anInt9650 * 1364716801) >> 6 << 6;
 					Class301_Sub1.mapY = (1345239131 * (Class301_Sub1.currentWorldMapArea.anInt9649) >> 6 << 6);
-					Class301_Sub1.worldMapWidth = ((Class301_Sub1.currentWorldMapArea.anInt9647 * -2052483955) >> 6 << 6) - Class301_Sub1.mapX + 64;
-					Class301_Sub1.worldMapHeight = 64 + (((Class301_Sub1.currentWorldMapArea.anInt9646) * 929385381 >> 6 << 6) - Class301_Sub1.mapY);
+					Class301_Sub1.anInt3239 = ((Class301_Sub1.currentWorldMapArea.anInt9647 * -2052483955) >> 6 << 6) - Class301_Sub1.mapX + 64;
+					Class301_Sub1.anInt3240 = 64 + (((Class301_Sub1.currentWorldMapArea.anInt9646) * 929385381 >> 6 << 6) - Class301_Sub1.mapY);
 					int[] is = new int[3];
 					int i_7_ = -1;
 					int i_8_ = -1;
@@ -168,7 +168,7 @@ public class Language implements Interface21 {
 						i_7_ = is[1] - Class301_Sub1.mapX;
 						i_8_ = is[2] - Class301_Sub1.mapY;
 					}
-					if (!Class301_Sub1.aBoolean7631 && i_7_ >= 0 && i_7_ < Class301_Sub1.worldMapWidth && i_8_ >= 0 && i_8_ < Class301_Sub1.worldMapHeight) {
+					if (!Class301_Sub1.aBoolean7631 && i_7_ >= 0 && i_7_ < Class301_Sub1.anInt3239 && i_8_ >= 0 && i_8_ < Class301_Sub1.anInt3240) {
 						i_7_ += (int) (Math.random() * 10.0) - 5;
 						i_8_ += (int) (Math.random() * 10.0) - 5;
 						Class82_Sub14.anInt6875 = i_7_ * -2076584633;
@@ -223,23 +223,23 @@ public class Language implements Interface21 {
 						Class301_Sub1.anInt3228 = 16;
 					Class301_Sub1.method3707(interface_ma, (Class301_Sub1.anInt3227 >> 2 << 10), Class301_Sub1.anInt3228 >> 1);
 					Class301_Sub1.aWorldMapLabelList_3251.method4119(1024, 256, 303697513);
-					Class301_Sub1.mapIconTypeList.method6160(256, 256, -1144646938);
+					Class301_Sub1.aClass487_3225.method6160(256, 256, -1144646938);
 					Class301_Sub1.objectTypeList.method5792(4096, (byte) 82);
 					Class472.configLoader.method3825(256, (byte) 85);
 					Class301_Sub1.anInt7624 = 88890100;
 				} else if (20 == Class301_Sub1.anInt7624 * -1289394455) {
 					VarClanTypeList.method6310(true, 1135939269);
-					Class301_Sub1.method3699(class_ra, Class301_Sub1.anInt3227, Class301_Sub1.anInt3228);
+					Class301_Sub1.loadWorldMapInterface(class_ra, Class301_Sub1.anInt3227, Class301_Sub1.anInt3228);
 					Class301_Sub1.anInt7624 = 266670300;
 					VarClanTypeList.method6310(true, -167716120);
 					Huffman.method1247(1781088902);
 				} else if (60 == -1289394455 * Class301_Sub1.anInt7624) {
-					if (Class301_Sub1.worldMapIndex.method2295(new StringBuilder().append(Class301_Sub1.currentWorldMapArea.fileName).append("_staticelements").toString(), -400372089)) {
-						if (!Class301_Sub1.worldMapIndex.method2312(new StringBuilder().append(Class301_Sub1.currentWorldMapArea.fileName).append("_staticelements").toString(), -2145213052))
+					if (Class301_Sub1.worldMapIndex.method2295(new StringBuilder().append(Class301_Sub1.currentWorldMapArea.aString9640).append("_staticelements").toString(), -400372089)) {
+						if (!Class301_Sub1.worldMapIndex.method2312(new StringBuilder().append(Class301_Sub1.currentWorldMapArea.aString9640).append("_staticelements").toString(), -2145213052))
 							return;
-						Class301_Sub1.mapAreaKeys = (Class237.method2192(Class301_Sub1.worldMapIndex, new StringBuilder().append(Class301_Sub1.currentWorldMapArea.fileName).append("_staticelements").toString(), GameClient.isMemberWorld, 565671699));
+						Class301_Sub1.aClass296_3235 = (Class237.method2192(Class301_Sub1.worldMapIndex, new StringBuilder().append(Class301_Sub1.currentWorldMapArea.aString9640).append("_staticelements").toString(), GameClient.isMemberWorld, 565671699));
 					} else
-						Class301_Sub1.mapAreaKeys = new MapKeys(0);
+						Class301_Sub1.aClass296_3235 = new Class296(0);
 					Class301_Sub1.method3697();
 					Class301_Sub1.anInt7624 = -1836368298;
 					VarClanTypeList.method6310(true, -425949519);

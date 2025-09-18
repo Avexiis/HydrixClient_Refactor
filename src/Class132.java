@@ -39,7 +39,7 @@ public class Class132 {
 				int i_2_ = class298_sub53.readUnsignedByte();
 				((Class132) this).anIntArray1507 = new int[i_2_];
 				for (int i_3_ = 0; i_3_ < i_2_; i_3_++)
-					((Class132) this).anIntArray1507[i_3_] = class298_sub53.gSmart2or4n();
+					((Class132) this).anIntArray1507[i_3_] = class298_sub53.readBigSmart();
 			} else if (3 == i) {
 				if (i_1_ != 2)
 					return;
@@ -60,7 +60,7 @@ public class Class132 {
 					((Class132) this).aShortArray1504[i_7_] = (short) class298_sub53.readUnsignedShort();
 				}
 			} else if (i >= 60 && i < 70)
-				((Class132) this).anIntArray1505[i - 60] = class298_sub53.gSmart2or4n();
+				((Class132) this).anIntArray1505[i - 60] = class298_sub53.readBigSmart();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fi.f(").append(')').toString());
 		}

@@ -30,7 +30,7 @@ public class Class423 {
 			Huffman.aClass105_1373 = null;
 			Class301_Sub1.method3691();
 			Class301_Sub1.aLinkedNodeList_3236.method5943((byte) 1);
-			Class301_Sub1.mapAreaKeys = null;
+			Class301_Sub1.aClass296_3235 = null;
 			Class274.aClass57_6539 = null;
 			Class301_Sub1.anInt7632 = 433609607;
 			Class301_Sub1.anInt7627 = 789877945;
@@ -46,8 +46,8 @@ public class Class423 {
 				Class301_Sub1.aWorldMapLabelList_3251.method4118(46936435);
 				Class301_Sub1.aWorldMapLabelList_3251.method4119(128, 64, 41639270);
 			}
-			if (Class301_Sub1.mapIconTypeList != null)
-				Class301_Sub1.mapIconTypeList.method6160(64, 64, -1144646938);
+			if (Class301_Sub1.aClass487_3225 != null)
+				Class301_Sub1.aClass487_3225.method6160(64, 64, -1144646938);
 			if (null != Class301_Sub1.objectTypeList)
 				Class301_Sub1.objectTypeList.method5792(256, (byte) 50);
 			Class472.configLoader.method3825(64, (byte) 42);

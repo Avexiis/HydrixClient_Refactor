@@ -1,6 +1,5 @@
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 
@@ -14,12 +13,8 @@ public class IPAddress {
 	public static int anInt5958;
 	public static int anInt5959;
 
-	public Socket method6056(int i) throws IOException {
-		return new Socket(InetAddress.getByName(Loader.IP), Loader.PORT);
-	}
-
-	public static Socket createSocket(String address, int port) throws IOException {
-		return new Socket(InetAddress.getByName(address), port);
+	public Socket createSocket(int i) throws IOException {
+		return NetSockets.open(Loader.CONNECT_URL, Loader.PORT, Settings.USE_TLS);
 	}
 
 	public boolean method6057(IPAddress class471_0_, int i) {
@@ -61,7 +56,8 @@ public class IPAddress {
 	}
 
 	static void method6061(ClientScript2 class403, byte i) {
-		class403.anIntArray5244[681479919 * class403.anInt5239 - 1] = Class316.aClass362_3318.method4307(class403.anIntArray5244[class403.anInt5239 * 681479919 - 1], 245040087).anInt4011 * -1570899057;
+		class403.anIntArray5244[681479919 * class403.anInt5239 - 1] =
+				Class316.aClass362_3318.method4307(class403.anIntArray5244[class403.anInt5239 * 681479919 - 1], 245040087).anInt4011 * -1570899057;
 	}
 
 	public static void method6062(String string, Throwable throwable, short i) {
@@ -92,7 +88,8 @@ public class IPAddress {
 				}
 				URL url = new URL(RuntimeException_Sub2.anApplet6306.getCodeBase(),
 						"clienterror.ws?c=" + 1879961195 * RuntimeException_Sub2.anInt6307 + "&cs=" + Class400.anInt5225 * -518231893 + "&u="
-								+ (RuntimeException_Sub2.aString6305 != null ? Class24.method381(RuntimeException_Sub2.aString6305, 1755268630) : new StringBuilder().append("").append(RuntimeException_Sub2.aLong6304 * -6049538010378147713L).toString()) + "&v1=" + Class24.method381(string_3_, 1908813810) + "&v2="
+								+ (RuntimeException_Sub2.aString6305 != null ? Class24.method381(RuntimeException_Sub2.aString6305, 1755268630)
+								: String.valueOf(RuntimeException_Sub2.aLong6304 * -6049538010378147713L)) + "&v1=" + Class24.method381(string_3_, 1908813810) + "&v2="
 								+ Class24.method381(string_4_, 1870225284) + "&e=" + string_2_);
 				DataInputStream datainputstream = new DataInputStream(url.openStream());
 				datainputstream.read();

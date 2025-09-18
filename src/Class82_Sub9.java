@@ -55,14 +55,14 @@ public class Class82_Sub9 extends Class82 {
 
 	static final int method901(GraphicsToolkit class_ra, OverlayType class373, byte i) {
 		try {
-			if (1728947183 * class373.minimapColor != -1)
-				return 1728947183 * class373.minimapColor;
+			if (1728947183 * class373.anInt4059 != -1)
+				return 1728947183 * class373.anInt4059;
 			if (class373.anInt4057 * 324071475 != -1) {
 				MaterialRaw materialRaw = class_ra.anInterface_ma5299.method174((class373.anInt4057 * 324071475), 1590345714);
 				if (!materialRaw.aBoolean524)
 					return materialRaw.aShort532;
 			}
-			return -45966925 * class373.color;
+			return -45966925 * class373.anInt4056;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("xt.e(").append(')').toString());
 		}

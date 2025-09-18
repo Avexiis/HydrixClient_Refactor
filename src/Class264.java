@@ -1,6 +1,12 @@
 /* Class264 - Decompiled by JODE
+ * Assumed real name - TextDrawingArea or RSFont
  * Visit http://jode.sourceforge.net/
  * @edits - Xeon
+ *
+ * Somehwere buried in this file is how we make the god damn chat crowns not have hue-shift
+ * If you're reading this, it means I gave up finding it before releasing this.
+ * If YOU find it, please tell me how by PMing me @ https://rune-server.org/members/x3on.167758/
+ * The reward for this will be the full server panel not released here or in my thread for it
  */
 import java.util.Random;
 
@@ -532,8 +538,8 @@ public abstract class Class264 {
 			if (string.length() <= 320 && Class400.method4931((byte) 115)) {
 				GameClient.aClass25_8693.method384((byte) 4);
 				Class85.method957(2087182163);
-				Class360.username = string;
-				Class360.password = string_139_;
+				LoginData.username = string;
+				LoginData.password = string_139_;
 				Class439.method5851(4, 1512716323);
 			}
 		} catch (RuntimeException runtimeexception) {

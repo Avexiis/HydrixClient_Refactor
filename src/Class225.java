@@ -178,8 +178,8 @@ public class Class225 {
 				Class301_Sub1.anInt7632 = 433609607;
 				Class301_Sub1.anInt7627 = 789877945;
 			}
-			if (1196508279 * Class82_Sub14.anInt6875 > Class301_Sub1.worldMapWidth) {
-				Class82_Sub14.anInt6875 = Class301_Sub1.worldMapWidth * -2076584633;
+			if (1196508279 * Class82_Sub14.anInt6875 > Class301_Sub1.anInt3239) {
+				Class82_Sub14.anInt6875 = Class301_Sub1.anInt3239 * -2076584633;
 				Class301_Sub1.anInt7632 = 433609607;
 				Class301_Sub1.anInt7627 = 789877945;
 			}
@@ -188,8 +188,8 @@ public class Class225 {
 				Class301_Sub1.anInt7632 = 433609607;
 				Class301_Sub1.anInt7627 = 789877945;
 			}
-			if (1882038855 * VarClanSettings.anInt4090 > Class301_Sub1.worldMapHeight) {
-				VarClanSettings.anInt4090 = Class301_Sub1.worldMapHeight * -435591305;
+			if (1882038855 * VarClanSettings.anInt4090 > Class301_Sub1.anInt3240) {
+				VarClanSettings.anInt4090 = Class301_Sub1.anInt3240 * -435591305;
 				Class301_Sub1.anInt7632 = 433609607;
 				Class301_Sub1.anInt7627 = 789877945;
 			}

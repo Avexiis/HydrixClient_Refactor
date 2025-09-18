@@ -134,11 +134,11 @@ public class AnimationController {
 		}
 	}
 
-	public static void method4725(Player class365_sub1_sub1_sub2_sub2, int i, int i_11_, int i_12_) {
+	public static void method4725(Player player, int i, int i_11_, int i_12_) {
 		try {
 			int[] is = new int[Class522.method6325((byte) -113).length];
 			Arrays.fill(is, 0, is.length, i);
-			Class431.method5768(class365_sub1_sub1_sub2_sub2, is, i_11_, false, (byte) -13);
+			Class431.method5768(player, is, i_11_, false, (byte) -13);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("q.ij(").append(')').toString());
 		}

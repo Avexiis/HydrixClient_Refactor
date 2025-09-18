@@ -78,7 +78,7 @@ public abstract class Class98 {
 						if (GameClient.aBoolean8835 && (-112110875 * Node.anInt3192 & 0x40) != 0) {
 							IComponentDefinition class105 = Class140.method1558((Class379.anInt4099 * 1262526353), (392084321 * GameClient.anInt8836), -156511736);
 							if (class105 != null)
-								Class234.method2174(GameClient.aString8838, new StringBuilder().append(" ").append(Class26.aString351).append(" ").toString(), MapDecoder.anInt2704 * 697885143, 59, -1, 0L, i_18_, i_19_, true, false, (long) (i_18_ << 32 | i_19_), true, -1555484950);
+								Class234.method2174(GameClient.aString8838, new StringBuilder().append(" ").append(Symbol.RIGHT_ARROW).append(" ").toString(), MapDecoder.anInt2704 * 697885143, 59, -1, 0L, i_18_, i_19_, true, false, (long) (i_18_ << 32 | i_19_), true, -1555484950);
 							else
 								IdentityKitTypeList.method1587((byte) 4);
 						} else {
@@ -116,12 +116,12 @@ public abstract class Class98 {
 							i_37_ = (int) sceneObjectPosition.z >> 9;
 						}
 						if (class335.aClass365_Sub1_3616 instanceof Player) {
-							Player class365_sub1_sub1_sub2_sub2 = ((Player) class335.aClass365_Sub1_3616);
-							int i_38_ = class365_sub1_sub1_sub2_sub2.getSize();
-							SceneObjectPosition sceneObjectPosition = (class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
+							Player player = ((Player) class335.aClass365_Sub1_3616);
+							int i_38_ = player.getSize();
+							SceneObjectPosition sceneObjectPosition = (player.method4337().aSceneObjectPosition_2599);
 							if ((0 == (i_38_ & 0x1) && 0 == ((int) sceneObjectPosition.x & 0x1ff) && ((int) sceneObjectPosition.z & 0x1ff) == 0) || ((i_38_ & 0x1) == 1 && (((int) sceneObjectPosition.x & 0x1ff) == 256) && 256 == ((int) sceneObjectPosition.z & 0x1ff))) {
-								int i_39_ = ((int) sceneObjectPosition.x - (class365_sub1_sub1_sub2_sub2.getSize() - 1 << 8));
-								int i_40_ = ((int) sceneObjectPosition.z - (class365_sub1_sub1_sub2_sub2.getSize() - 1 << 8));
+								int i_39_ = ((int) sceneObjectPosition.x - (player.getSize() - 1 << 8));
+								int i_40_ = ((int) sceneObjectPosition.z - (player.getSize() - 1 << 8));
 								for (int i_41_ = 0; i_41_ < -1230451913 * GameClient.npcCount; i_41_++) {
 									LinkableObject linkableObject = ((LinkableObject) (GameClient.npcs.get((long) GameClient.npcIndicies[i_41_])));
 									if (null == linkableObject) {
@@ -139,7 +139,7 @@ public abstract class Class98 {
 												SceneObjectPosition sceneObjectPosition_42_ = (class365_sub1_sub1_sub2_sub1.method4337().aSceneObjectPosition_2599);
 												int i_43_ = ((int) (sceneObjectPosition_42_.x) - (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) - 1 << 8));
 												int i_44_ = ((int) (sceneObjectPosition_42_.z) - ((-2095128707 * (class365_sub1_sub1_sub2_sub1.definition.size)) - 1 << 8));
-												if (i_43_ >= i_39_ && (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) <= ((class365_sub1_sub1_sub2_sub2.getSize()) - (i_43_ - i_39_ >> 9))) && i_44_ >= i_40_ && (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) <= ((class365_sub1_sub1_sub2_sub2.getSize()) - (i_44_ - i_40_ >> 9)))) {
+												if (i_43_ >= i_39_ && (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) <= ((player.getSize()) - (i_43_ - i_39_ >> 9))) && i_44_ >= i_40_ && (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) <= ((player.getSize()) - (i_44_ - i_40_ >> 9)))) {
 													Class140.method1555(class365_sub1_sub1_sub2_sub1, ((Class287.myPlayer.plane) != (class335.aClass365_Sub1_3616.plane)), (byte) -10);
 													class365_sub1_sub1_sub2_sub1.anInt10070 = (-339947553 * GameClient.anInt8884);
 												}
@@ -150,31 +150,31 @@ public abstract class Class98 {
 								int i_45_ = 1168366243 * Class10.anInt129;
 								int[] is = Class10.anIntArray135;
 								for (int i_46_ = 0; i_46_ < i_45_; i_46_++) {
-									Player class365_sub1_sub1_sub2_sub2_47_ = (GameClient.players[is[i_46_]]);
-									if ((null != class365_sub1_sub1_sub2_sub2_47_) && (443738891 * GameClient.anInt8884 != (335731285 * (class365_sub1_sub1_sub2_sub2_47_.anInt10070))) && (class365_sub1_sub1_sub2_sub2 != class365_sub1_sub1_sub2_sub2_47_)) {
-										if (!class365_sub1_sub1_sub2_sub2_47_.aBoolean10123) {
+									Player p = (GameClient.players[is[i_46_]]);
+									if ((null != p) && (443738891 * GameClient.anInt8884 != (335731285 * (p.anInt10070))) && (player != p)) {
+										if (!p.aBoolean10123) {
 											if (i_15_ == 202437353)
 												return;
 										} else {
-											SceneObjectPosition sceneObjectPosition_48_ = (class365_sub1_sub1_sub2_sub2_47_.method4337().aSceneObjectPosition_2599);
-											int i_49_ = ((int) (sceneObjectPosition_48_.x) - ((class365_sub1_sub1_sub2_sub2_47_.getSize()) - 1 << 8));
-											int i_50_ = ((int) (sceneObjectPosition_48_.z) - ((class365_sub1_sub1_sub2_sub2_47_.getSize()) - 1 << 8));
-											if (i_49_ >= i_39_ && (class365_sub1_sub1_sub2_sub2_47_.getSize() <= ((class365_sub1_sub1_sub2_sub2.getSize()) - (i_49_ - i_39_ >> 9))) && i_50_ >= i_40_ && (class365_sub1_sub1_sub2_sub2_47_.getSize() <= ((class365_sub1_sub1_sub2_sub2.getSize()) - (i_50_ - i_40_ >> 9)))) {
-												Class298_Sub47.method3535(class365_sub1_sub1_sub2_sub2_47_, ((Class287.myPlayer.plane) != (class335.aClass365_Sub1_3616.plane)), 875975417);
-												class365_sub1_sub1_sub2_sub2_47_.anInt10070 = (GameClient.anInt8884 * -339947553);
+											SceneObjectPosition sceneObjectPosition_48_ = (p.method4337().aSceneObjectPosition_2599);
+											int i_49_ = ((int) (sceneObjectPosition_48_.x) - ((p.getSize()) - 1 << 8));
+											int i_50_ = ((int) (sceneObjectPosition_48_.z) - ((p.getSize()) - 1 << 8));
+											if (i_49_ >= i_39_ && (p.getSize() <= ((player.getSize()) - (i_49_ - i_39_ >> 9))) && i_50_ >= i_40_ && (p.getSize() <= ((player.getSize()) - (i_50_ - i_40_ >> 9)))) {
+												Class298_Sub47.method3535(p, ((Class287.myPlayer.plane) != (class335.aClass365_Sub1_3616.plane)), 875975417);
+												p.anInt10070 = (GameClient.anInt8884 * -339947553);
 											}
 										}
 									}
 								}
 							}
-							if (443738891 * GameClient.anInt8884 == 335731285 * (class365_sub1_sub1_sub2_sub2.anInt10070)) {
+							if (443738891 * GameClient.anInt8884 == 335731285 * (player.anInt10070)) {
 								if (i_15_ == 202437353) {
 									/* empty */
 								}
 								continue;
 							}
-							Class298_Sub47.method3535(class365_sub1_sub1_sub2_sub2, ((Class287.myPlayer.plane) != class335.aClass365_Sub1_3616.plane), -554283505);
-							class365_sub1_sub1_sub2_sub2.anInt10070 = -339947553 * GameClient.anInt8884;
+							Class298_Sub47.method3535(player, ((Class287.myPlayer.plane) != class335.aClass365_Sub1_3616.plane), -554283505);
+							player.anInt10070 = -339947553 * GameClient.anInt8884;
 						}
 						if (class335.aClass365_Sub1_3616 instanceof NPC) {
 							NPC class365_sub1_sub1_sub2_sub1 = ((NPC) class335.aClass365_Sub1_3616);
@@ -210,18 +210,18 @@ public abstract class Class98 {
 									int i_58_ = 1168366243 * Class10.anInt129;
 									int[] is = Class10.anIntArray135;
 									for (int i_59_ = 0; i_59_ < i_58_; i_59_++) {
-										Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[is[i_59_]]);
-										if ((null != class365_sub1_sub1_sub2_sub2) && ((335731285 * (class365_sub1_sub1_sub2_sub2.anInt10070)) != (GameClient.anInt8884 * 443738891))) {
-											if (!class365_sub1_sub1_sub2_sub2.aBoolean10123) {
+										Player player = (GameClient.players[is[i_59_]]);
+										if ((null != player) && ((335731285 * (player.anInt10070)) != (GameClient.anInt8884 * 443738891))) {
+											if (!player.aBoolean10123) {
 												if (i_15_ == 202437353)
 													return;
 											} else {
-												SceneObjectPosition sceneObjectPosition_60_ = (class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
-												int i_61_ = ((int) (sceneObjectPosition_60_.x) - ((class365_sub1_sub1_sub2_sub2.getSize()) - 1 << 8));
-												int i_62_ = ((int) (sceneObjectPosition_60_.z) - ((class365_sub1_sub1_sub2_sub2.getSize()) - 1 << 8));
-												if (i_61_ >= i_51_ && ((class365_sub1_sub1_sub2_sub2.getSize()) <= (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) - (i_61_ - i_51_ >> 9))) && i_62_ >= i_52_ && ((class365_sub1_sub1_sub2_sub2.getSize()) <= ((-2095128707 * (class365_sub1_sub1_sub2_sub1.definition.size)) - (i_62_ - i_52_ >> 9)))) {
-													Class298_Sub47.method3535(class365_sub1_sub1_sub2_sub2, ((class335.aClass365_Sub1_3616.plane) != (Class287.myPlayer.plane)), 1713781703);
-													class365_sub1_sub1_sub2_sub2.anInt10070 = (-339947553 * GameClient.anInt8884);
+												SceneObjectPosition sceneObjectPosition_60_ = (player.method4337().aSceneObjectPosition_2599);
+												int i_61_ = ((int) (sceneObjectPosition_60_.x) - ((player.getSize()) - 1 << 8));
+												int i_62_ = ((int) (sceneObjectPosition_60_.z) - ((player.getSize()) - 1 << 8));
+												if (i_61_ >= i_51_ && ((player.getSize()) <= (((class365_sub1_sub1_sub2_sub1.definition.size) * -2095128707) - (i_61_ - i_51_ >> 9))) && i_62_ >= i_52_ && ((player.getSize()) <= ((-2095128707 * (class365_sub1_sub1_sub2_sub1.definition.size)) - (i_62_ - i_52_ >> 9)))) {
+													Class298_Sub47.method3535(player, ((class335.aClass365_Sub1_3616.plane) != (Class287.myPlayer.plane)), 1713781703);
+													player.anInt10070 = (-339947553 * GameClient.anInt8884);
 												}
 											}
 										}
@@ -255,7 +255,7 @@ public abstract class Class98 {
 									if (GameClient.aBoolean8835 && ((class335.aClass365_Sub1_3616.plane) == (Class287.myPlayer.plane))) {
 										Class497 class497 = ((Class132.anInt1508 * 831522399 != -1) ? (Class92.aClass504_905.method6251((Class132.anInt1508 * 831522399), 1640464070)) : null);
 										if (0 != ((Node.anInt3192 * -112110875) & 0x1) && (null == class497 || ((class468.method6037((831522399 * Class132.anInt1508), (-388931549 * class497.anInt6100), -2028636758)) != (-388931549 * (class497.anInt6100)))))
-											Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Class26.aString351).append(" ").append(Class285.method2709(i_66_, -1803338083)).append(class468.itemName).toString(), (MapDecoder.anInt2704 * 697885143), 17, -1, (long) ((class298_sub12.anInt7257) * 1768239597), i_36_, i_37_, true, false, (long) i_65_, false, -1282887596);
+											Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(Class285.method2709(i_66_, -1803338083)).append(class468.itemName).toString(), (MapDecoder.anInt2704 * 697885143), 17, -1, (long) ((class298_sub12.anInt7257) * 1768239597), i_36_, i_37_, true, false, (long) i_65_, false, -1282887596);
 									}
 									if (class335.aClass365_Sub1_3616.plane == (Class287.myPlayer.plane)) {
 										String[] strings = class468.aStringArray5723;
@@ -300,7 +300,7 @@ public abstract class Class98 {
 								if (GameClient.aBoolean8835 && (class335.aClass365_Sub1_3616.plane == (Class287.myPlayer.plane))) {
 									Class497 class497 = (831522399 * Class132.anInt1508 != -1 ? (Class92.aClass504_905.method6251(Class132.anInt1508 * 831522399, -616098570)) : null);
 									if (0 != (Node.anInt3192 * -112110875 & 0x4) && (class497 == null || ((class432.method5776((831522399 * Class132.anInt1508), (class497.anInt6100 * -388931549), (byte) 2)) != (-388931549 * class497.anInt6100))))
-										Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Class26.aString351).append(" ").append(Class285.method2709(65535, -1704073338)).append(class432.name).toString(), MapDecoder.anInt2704 * 697885143, 2, -1, RSInterface.method1301(interface3, i_36_, i_37_, 2139321433), i_36_, i_37_, true, false, (long) interface3.hashCode(), false, -978621849);
+										Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(Class285.method2709(65535, -1704073338)).append(class432.name).toString(), MapDecoder.anInt2704 * 697885143, 2, -1, RSInterface.method1301(interface3, i_36_, i_37_, 2139321433), i_36_, i_37_, true, false, (long) interface3.hashCode(), false, -978621849);
 								}
 								if (class335.aClass365_Sub1_3616.plane == (Class287.myPlayer.plane)) {
 									String[] strings = class432.aStringArray5394;

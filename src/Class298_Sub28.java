@@ -24,8 +24,8 @@ public class Class298_Sub28 extends Node {
 
 	public static final void method3109(byte i) {
 		try {
-			if (1 != -707576455 * Class360.anInt3896) {
-				Class360.aClass25_3905.method384((byte) 40);
+			if (1 != -707576455 * LoginData.anInt3896) {
+				LoginData.aClass25_3905.method384((byte) 40);
 				Class298_Sub38.method3503(-20644488);
 				ClientScriptsExecutor.method4693(1976641602);
 			}

@@ -624,8 +624,8 @@ public class Wall extends Class365_Sub1_Sub5 implements Interface3 {
 			Class10.anInt130 = 0;
 			for (int i_43_ = 1; i_43_ < 2048; i_43_++) {
 				Class10.aByteArray131[i_43_] >>= 1;
-				Player class365_sub1_sub1_sub2_sub2 = GameClient.players[i_43_];
-				if (null != class365_sub1_sub1_sub2_sub2)
+				Player player = GameClient.players[i_43_];
+				if (null != player)
 					Class10.anIntArray135[(Class10.anInt129 += -656365301) * 1168366243 - 1] = i_43_;
 				else
 					Class10.anIntArray134[(Class10.anInt130 += 854162319) * 1430471535 - 1] = i_43_;

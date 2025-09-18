@@ -50,7 +50,7 @@ public class Class304 {
 			Class128 class128 = SpotAnimation.method608(class298_sub53, -2147461076);
 			int i_5_ = class298_sub53.readUnsignedInt();
 			int i_6_ = class298_sub53.readUnsignedInt();
-			int i_7_ = class298_sub53.gSmart2or4n();
+			int i_7_ = class298_sub53.readBigSmart();
 			return new Class128_Sub1(class128.aClass139_6322, class128.aClass133_6323, class128.anInt6327 * -39975161, class128.anInt6325 * 1886882435, class128.anInt6326 * -944287579, class128.anInt6330 * -1387457793, -684094775 * class128.anInt6328, 955568089 * class128.anInt6329, class128.anInt6324 * 782326281, i_5_, i_6_, i_7_);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mq.i(").append(')').toString());

@@ -1,4 +1,4 @@
-/* Class342 - Decompiled by JODE
+/* ParticleEmitter - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 

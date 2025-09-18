@@ -80,7 +80,7 @@ public class VarClanTypeList {
 						Class298_Sub32_Sub14.aClass477_9400.method6086(class_ra, class_ra, (-1979936541 * ((Class298_Sub14) class298_sub14).anInt7264), (((Class298_Sub14) class298_sub14).anInt7261 * -751580615), (1613862267 * ((Class298_Sub14) class298_sub14).anInt7263), (((Class298_Sub14) class298_sub14).anInt7260 * -944151257), false, false, (-1216336855 * ((Class298_Sub14) class298_sub14).anInt7262), ScriptContext.aClass264_7534, (((Class298_Sub14) class298_sub14).aBoolean7265 ? (Class287.myPlayer.appearance) : null), 1788760477);
 						class298_sub14.unlink(-1460969981);
 					}
-					Class360.method4301(-1387034810);
+					LoginData.method4301(-1387034810);
 				} else {
 					if (null == Class522.aClass_ra6285) {
 						Canvas canvas = new Canvas();

@@ -37,7 +37,7 @@ public class UnderlayTypeList {
 		}
 	}
 
-	public FluType getUnderlay(int i, byte i_1_) {
+	public FluType method5932(int i, byte i_1_) {
 		try {
 			FluType class443;
 			synchronized (this.aClass348_5640) {
@@ -84,11 +84,11 @@ public class UnderlayTypeList {
 		}
 	}
 
-	public static void method5934(Player class365_sub1_sub1_sub2_sub2, byte i) {
+	public static void method5934(Player player, byte i) {
 		try {
-			Class298_Sub41 class298_sub41 = (Class298_Sub41) Class298_Sub41.aClass437_7440.get(1888274983 * class365_sub1_sub1_sub2_sub2.entityIndex);
+			Class298_Sub41 class298_sub41 = (Class298_Sub41) Class298_Sub41.aClass437_7440.get(1888274983 * player.entityIndex);
 			if (null == class298_sub41) {
-				SeqType.method4884(class365_sub1_sub1_sub2_sub2.plane, class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0], class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0], 0, null, null, class365_sub1_sub1_sub2_sub2, (byte) 58);
+				SeqType.method4884(player.plane, player.scenePositionXQueue[0], player.scenePositionYQueue[0], 0, null, null, player, (byte) 58);
 			} else {
 				class298_sub41.method3519(-1931224140);
 			}

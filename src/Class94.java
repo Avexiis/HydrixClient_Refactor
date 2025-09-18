@@ -19,7 +19,7 @@ public final class Class94 {
 		int i_0_ = class298_sub53.readUnsignedByte();
 		switch (i_0_) {
 		case 0:
-			anInt909 = class298_sub53.gSmart2or4n() * -44295909;
+			anInt909 = class298_sub53.readBigSmart() * -44295909;
 			break;
 		default:
 			anInt909 = 44295909;
@@ -27,7 +27,7 @@ public final class Class94 {
 		case 1:
 			anInt909 = 44295909;
 		}
-		class298_sub53.gstr();
+		class298_sub53.getString();
 	}
 
 	public Entity method1015(int i) {

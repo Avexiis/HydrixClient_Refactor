@@ -68,7 +68,7 @@ public class Class65 {
 			if (1 == i) {
 				boolean bool;
 				try {
-					Object object = Class466.method6022(EnumType.mainApplet, string_0_, (new Object[] { new URL(EnumType.mainApplet.getCodeBase(), string).toString() }), (byte) 44);
+					Object object = AppletJsBridge.callJsFunction(EnumType.mainApplet, string_0_, (new Object[] { new URL(EnumType.mainApplet.getCodeBase(), string).toString() }), (byte) 44);
 					bool = null != object;
 				} catch (Throwable throwable) {
 					return false;
@@ -87,7 +87,7 @@ public class Class65 {
 			}
 			if (i == 3) {
 				try {
-					Class466.method6021(EnumType.mainApplet, "loggedout", (short) 1853);
+					AppletJsBridge.callJsFunction(EnumType.mainApplet, "loggedout", (short) 1853);
 				} catch (Throwable throwable) {
 					/* empty */
 				}

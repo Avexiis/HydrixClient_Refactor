@@ -4,7 +4,7 @@
 
 public class MapDetails extends Class298_Sub37 {
 	int anInt9639 = 1105193455;
-	public String fileName;
+	public String aString9640;
 	public String aString9641;
 	LinkedNodeList aLinkedNodeList_9642;
 	public int anInt9643;
@@ -97,7 +97,7 @@ public class MapDetails extends Class298_Sub37 {
 		anInt9646 = 0;
 		((MapDetails) this).aBoolean9648 = true;
 		anInt9643 = -1929943701 * i;
-		fileName = string;
+		aString9640 = string;
 		aString9641 = string_9_;
 		anInt9644 = i_10_ * 350230413;
 		((MapDetails) this).anInt9639 = -1105193455 * i_11_;

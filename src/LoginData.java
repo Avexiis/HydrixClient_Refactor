@@ -1,51 +1,28 @@
-/* Class360 - Decompiled by JODE
+/* LoginData - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.awt.Point;
 
-public class Class360 {
+public class LoginData {
 	public static int anInt3866;
-	static int anInt3867 = 264;
 	static int anInt3868;
-	static int anInt3869 = 186;
 	static boolean aBoolean3870 = false;
 	public static int anInt3871;
-	static int anInt3872 = 176;
 	static int anInt3873;
 	static long aLong3874;
-	static int anInt3875 = 193;
-	static int anInt3876 = 1;
-	static int anInt3877 = 12;
-	static int anInt3878 = 30;
-	static int anInt3879 = 44;
-	static int anInt3880 = 58;
-	static int anInt3881 = 62;
-	static int anInt3882 = 72;
-	static int anInt3883 = 82;
-	static int anInt3884 = 94;
-	static int anInt3885 = 100;
 	static boolean aBoolean3886 = false;
-	static int anInt3887 = 125;
 	public static int anInt3888;
 	static int[] anIntArray3889;
-	static int anInt3890 = 158;
-	static int anInt3891 = 163;
 	public static int anInt3892;
-	static int anInt3893 = 117;
 	public static int anInt3894;
-	static int anInt3895 = 203;
 	static int anInt3896;
-	static int anInt3897 = 137;
 	static String username;
 	static String password;
 	static int anInt3900;
-	static int anInt3901 = 136;
 	static int loginConfigsSize;
-	static int anInt3903 = 4;
 	static int anInt3904;
 	static Class25 aClass25_3905;
 	public static int anInt3906;
-	static int anInt3907 = 148;
 	public static int anInt3908;
 	public static int anInt3909;
 	public static int anInt3910;
@@ -73,7 +50,7 @@ public class Class360 {
 		aBoolean3912 = false;
 	}
 
-	Class360() throws Throwable {
+	LoginData() throws Throwable {
 		throw new Error();
 	}
 
@@ -89,7 +66,7 @@ public class Class360 {
 				class390 = ((ClientScript2) class403).aClass390_5246;
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (i_1_ != -1 && class390.method4867(i_0_, i_1_, -574024132) ? 1 : 0);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("p.br(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "p.br(" + ')');
 		}
 	}
 
@@ -100,7 +77,7 @@ public class Class360 {
 			RSInterface RSInterface = SpotAnimTypeList.aRSInterfaceArray4165[i_2_ >> 16];
 			Class21.method365(class105, RSInterface, false, 2, class403, -1533080700);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("p.hl(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "p.hl(" + ')');
 		}
 	}
 
@@ -111,7 +88,7 @@ public class Class360 {
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
 			Class298_Sub39.method3507(class105, RSInterface, class403, -2106555824);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("p.mc(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "p.mc(" + ')');
 		}
 	}
 
@@ -153,7 +130,7 @@ public class Class360 {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("p.i(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "p.i(" + ')');
 		}
 	}
 
@@ -162,7 +139,7 @@ public class Class360 {
 			for (int i_4_ = 0; i_4_ < 113; i_4_++)
 				GameClient.aBooleanArray8900[i_4_] = true;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("p.lq(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "p.lq(" + ')');
 		}
 	}
 
@@ -176,7 +153,7 @@ public class Class360 {
 			}
 			return class309_sub2;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("p.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "p.a(" + ')');
 		}
 	}
 }

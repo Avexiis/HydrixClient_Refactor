@@ -27,7 +27,7 @@ public class Animator_Sub2 extends Animator {
 			LocType class432 = GameClient.map.method2641(1998541007).list(interface3.method32((byte) 21));
 			if (-1 == -1204256389 * class432.anInt5400)
 				return true;
-			Class496 class496 = Js5ConfigGroup.aMapIconTypeList_1463.method6159((class432.anInt5400 * -1204256389), -2130110173);
+			Class496 class496 = Js5ConfigGroup.aClass487_1463.method6159((class432.anInt5400 * -1204256389), -2130110173);
 			if (-1 == 1690480405 * class496.anInt6097)
 				return true;
 			return class496.method6197((byte) 7);

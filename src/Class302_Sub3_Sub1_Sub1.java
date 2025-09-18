@@ -1,4 +1,4 @@
-/* Class302_Sub3_Sub1_Sub1 - Decompiled by JODE
+/* Particle - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.util.Iterator;

@@ -97,13 +97,13 @@ public class Class14 {
 					}
 					if (1894383945 * class365_sub1_sub1_sub1.anInt10058 < 0) {
 						int i_3_ = (-(class365_sub1_sub1_sub1.anInt10058 * 1894383945) - 1);
-						Player class365_sub1_sub1_sub2_sub2;
+						Player player;
 						if (i_3_ == -442628795 * GameClient.playerIndex)
-							class365_sub1_sub1_sub2_sub2 = Class287.myPlayer;
+							player = Class287.myPlayer;
 						else
-							class365_sub1_sub1_sub2_sub2 = (GameClient.players[i_3_]);
-						if (null != class365_sub1_sub1_sub2_sub2) {
-							SceneObjectPosition sceneObjectPosition = (class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
+							player = (GameClient.players[i_3_]);
+						if (null != player) {
+							SceneObjectPosition sceneObjectPosition = (player.method4337().aSceneObjectPosition_2599);
 							if ((int) sceneObjectPosition.x >= 0 && ((int) sceneObjectPosition.x < GameClient.map.upperX(-1981087344) * 512) && (int) sceneObjectPosition.z >= 0 && ((int) sceneObjectPosition.z < GameClient.map.upperY(-1284142631) * 512))
 								class365_sub1_sub1_sub1.method4405((int) sceneObjectPosition.x, (int) sceneObjectPosition.z, ((Class356.method4271((int) sceneObjectPosition.x, (int) sceneObjectPosition.z, class365_sub1_sub1_sub1.plane, -1135065402)) - (class365_sub1_sub1_sub1.anInt10045 * 2134079017)), 443738891 * GameClient.anInt8884, 1831333850);
 						}

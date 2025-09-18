@@ -47,10 +47,10 @@ public class Class147 {
 		try {
 			if (GameClient.aByteArray8843 != null)
 				Js5ConfigGroup.method1311(-1491321338);
-			else if (2084404473 * Class360.anInt3873 != -1)
+			else if (2084404473 * LoginData.anInt3873 != -1)
 				Class124.method1386((byte) -89);
 			else
-				Class497.method6208(Class360.username, Class360.password, 712466234);
+				Class497.method6208(LoginData.username, LoginData.password, 712466234);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fy.f(").append(')').toString());
 		}

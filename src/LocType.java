@@ -109,14 +109,14 @@ public class LocType {
 					int i_3_ = buffer.readUnsignedByte();
 					models[i_2_] = new int[i_3_];
 					for (int i_4_ = 0; i_4_ < i_3_; i_4_++) {
-						models[i_2_][i_4_] = buffer.gSmart2or4n();
+						models[i_2_][i_4_] = buffer.readBigSmart();
 						if ((id * 1181652947) >= OSRSData.LOCS_OFFSET) {
 							models[i_2_][i_4_] += OSRSData.LOCS_OFFSET;
 						}
 					}
 				}
 			} else if (opcode == 2) {
-				name = buffer.gstr();
+				name = buffer.getString();
 			} else if (14 == opcode) {
 				sizeX = buffer.readUnsignedByte() * -2144855351;
 			} else if (opcode == 15) {
@@ -135,7 +135,7 @@ public class LocType {
 			} else if (opcode == 23) {
 				anInt5376 = -580315545;
 			} else if (24 == opcode) {
-				int i_5_ = buffer.gSmart2or4n();
+				int i_5_ = buffer.readBigSmart();
 
 				if ((id * 1181652947) >= OSRSData.LOCS_OFFSET) {
 					i_5_ += OSRSData.SEQUENCES_OFFSET;
@@ -153,7 +153,7 @@ public class LocType {
 			} else if (39 == opcode) {
 				anInt5393 = buffer.readByte() * -1530589831;
 			} else if (opcode >= 30 && opcode < 35) {
-				aStringArray5394[opcode - 30] = buffer.gstr();
+				aStringArray5394[opcode - 30] = buffer.getString();
 			} else if (opcode == 40) {
 				int i_6_ = buffer.readUnsignedByte();
 				aShortArray5369 = new short[i_6_];
@@ -243,7 +243,7 @@ public class LocType {
 				}
 				int i_12_ = -1;
 				if (92 == opcode) {
-					i_12_ = buffer.gSmart2or4n();
+					i_12_ = buffer.readBigSmart();
 					if ((id * 1181652947) >= OSRSData.LOCS_OFFSET) {
 						i_12_ += OSRSData.LOCS_OFFSET;
 					}
@@ -251,7 +251,7 @@ public class LocType {
 				int i_13_ = buffer.readUnsignedByte();
 				anIntArray5366 = new int[2 + i_13_];
 				for (int i_14_ = 0; i_14_ <= i_13_; i_14_++) {
-					anIntArray5366[i_14_] = buffer.gSmart2or4n();
+					anIntArray5366[i_14_] = buffer.readBigSmart();
 					if ((id * 1181652947) >= OSRSData.LOCS_OFFSET) {
 						anIntArray5366[i_14_] += OSRSData.LOCS_OFFSET;
 					}
@@ -314,7 +314,7 @@ public class LocType {
 				anIntArray5378 = new int[i_17_];
 				anIntArray5390 = new int[i_17_];
 				for (int i_19_ = 0; i_19_ < i_17_; i_19_++) {
-					anIntArray5378[i_19_] = buffer.gSmart2or4n();
+					anIntArray5378[i_19_] = buffer.readBigSmart();
 					i_18_ += anIntArray5390[i_19_] = buffer.readUnsignedByte();
 				}
 				for (int i_20_ = 0; i_20_ < i_17_; i_20_++) {
@@ -323,7 +323,7 @@ public class LocType {
 			} else if (opcode == 107) {
 				anInt5399 = buffer.readUnsignedShort() * -779127471;
 			} else if (opcode >= 150 && opcode < 155) {
-				aStringArray5394[opcode - 150] = buffer.gstr();
+				aStringArray5394[opcode - 150] = buffer.getString();
 				if (!aClass433_5403.aBoolean5445) {
 					aStringArray5394[opcode - 150] = null;
 				}
@@ -383,7 +383,7 @@ public class LocType {
 					int i_26_ = buffer.g3();
 					Node node;
 					if (bool) {
-						node = new LinkableObject(buffer.gstr());
+						node = new LinkableObject(buffer.getString());
 					} else {
 						node = new Class298_Sub35(buffer.readUnsignedInt());
 					}
@@ -406,7 +406,7 @@ public class LocType {
 			decodeOSRS(buffer, opcode);
 		}
 	}
-	/* added opcodes from rev 194, not all are used but they can't hurt to have */
+	
 	private void decodeOSRS(Packet buffer, int opcode) {
 	//	System.out.println("Decoding opcode " + opcode + " at pos " + (payload.pos * 385051775));
 		if (opcode == 1) {
@@ -418,9 +418,9 @@ public class LocType {
 				shapes[shape_index] = buffer.readByte();
 			}
 		} else if (opcode == 2) {
-			name = buffer.gstr();
+			name = buffer.getString();
 		} else if (opcode == 3) {
-			buffer.gstr(); // description, ignore
+			buffer.getString(); // description, ignore
 		} else if (opcode == 5) {
 			shapes = new byte[] { 10 };
 			int num_models = buffer.readUnsignedByte();
@@ -460,8 +460,8 @@ public class LocType {
 		} else if (opcode == 29) {
 			anInt5392 = buffer.readByte() * -62240291;
 		} else if (opcode >= 30 && opcode < 35) {
-			if (aStringArray5394 == null) aStringArray5394 = new String[5]; //this right here is what caused crashes in OSRS maps, it was set to 10 in the regular Hydrix client.
-			aStringArray5394[opcode - 30] = buffer.gstr();
+			if (aStringArray5394 == null) aStringArray5394 = new String[5]; // funny antileech yall had eh? labeling it "prevent null" while causing one. This value is 5! Not 10!
+			aStringArray5394[opcode - 30] = buffer.getString();
 			if (aStringArray5394[opcode - 30].equalsIgnoreCase("Hidden")) {
 				aStringArray5394[opcode - 30] = null;
 			}
@@ -570,18 +570,18 @@ public class LocType {
 				int i_26_ = buffer.g3();
 				Node node;
 				if (bool) {
-					node = new LinkableObject(buffer.gstr());
+					node = new LinkableObject(buffer.getString());
 				} else {
 					node = new Class298_Sub35(buffer.readUnsignedInt());
 				}
 				aClass437_5435.method5817(node, i_26_);
 			}
 		} else if (opcode == 3) {
-			buffer.gstr(); // description, ignore
+			buffer.getString(); // description, ignore
 		} else if (opcode == 60) {
 			buffer.readUnsignedShort(); // ignore minimap icon
 		}
-		// TODO
+		// --- ADD SKIP FOR UNKNOWN OPCODES ---
 		else {
 		//none
 		}
@@ -1156,7 +1156,7 @@ public class LocType {
 			boolean bool_79_ = anInt5412 * 945504799 != 0 || anInt5413 * 52797131 != 0 || 0 != anInt5419 * 1782732613;
 			if (bool_78_ || bool_79_) {
 				modelPart = modelPart.method4755((byte) 0, i_76_, true);
-				// if (bool_78_) { //OLD METHOD BEFORE TRYING BLACK SCREEN FIX
+				// if (bool_78_) { OLD METHOD BEFORE TRYING BLACK SCREEN FIX
 				// try {
 				// modelPart.pa(aByte5363, 1762198123 * anInt5384, ground, ground_71_, i_72_,
 				// i_73_, i_74_);

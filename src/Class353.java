@@ -23,7 +23,7 @@ public class Class353 {
 
 	static final void method4250(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class360.anInt3909 * -576042023;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = LoginData.anInt3909 * -576042023;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("os.aha(").append(')').toString());
 		}

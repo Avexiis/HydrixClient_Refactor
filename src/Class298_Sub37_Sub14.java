@@ -56,7 +56,7 @@ public class Class298_Sub37_Sub14 extends Class298_Sub37 {
 			if (null != ((Class298_Sub37_Sub14) this).anIntArray9656) {
 				for (int i_4_ = 0; (i_4_ < ((Class298_Sub37_Sub14) this).anIntArray9656.length); i_4_++) {
 					stringbuilder.append(((Class298_Sub37_Sub14) this).aStringArray9652[i_4_]);
-					stringbuilder.append(((Class298_Sub37_Sub14) this).aClass469_9651.method6044(method3460(i_4_, -237770641), (((Class298_Sub37_Sub14) this).anIntArrayArray9654[i_4_]), (class298_sub53.method3647((Class26.method398((((Class298_Sub37_Sub14) this).anIntArray9656[i_4_]), -818645984).anInt3998) * 153532243, (byte) 67))));
+					stringbuilder.append(((Class298_Sub37_Sub14) this).aClass469_9651.method6044(method3460(i_4_, -237770641), (((Class298_Sub37_Sub14) this).anIntArrayArray9654[i_4_]), (class298_sub53.method3647((Symbol.method398((((Class298_Sub37_Sub14) this).anIntArray9656[i_4_]), -818645984).anInt3998) * 153532243, (byte) 67))));
 				}
 			}
 			stringbuilder.append(((Class298_Sub37_Sub14) this).aStringArray9652[(((Class298_Sub37_Sub14) this).aStringArray9652).length - 1]);
@@ -70,7 +70,7 @@ public class Class298_Sub37_Sub14 extends Class298_Sub37 {
 		try {
 			if (((Class298_Sub37_Sub14) this).anIntArray9656 == null || i < 0 || i > ((Class298_Sub37_Sub14) this).anIntArray9656.length)
 				return null;
-			return Class26.method398((((Class298_Sub37_Sub14) this).anIntArray9656[i]), -1627067354);
+			return Symbol.method398((((Class298_Sub37_Sub14) this).anIntArray9656[i]), -1627067354);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aiv.d(").append(')').toString());
 		}
@@ -106,7 +106,7 @@ public class Class298_Sub37_Sub14 extends Class298_Sub37 {
 	void method3463(Packet class298_sub53, int i, int i_8_) {
 		try {
 			if (1 == i)
-				((Class298_Sub37_Sub14) this).aStringArray9652 = (Class365_Sub1_Sub3_Sub1.method4508(class298_sub53.gstr(), '<', 1942688210));
+				((Class298_Sub37_Sub14) this).aStringArray9652 = (Class365_Sub1_Sub3_Sub1.method4508(class298_sub53.getString(), '<', 1942688210));
 			else if (i == 2) {
 				int i_9_ = class298_sub53.readUnsignedByte();
 				anIntArray9653 = new int[i_9_];
@@ -118,7 +118,7 @@ public class Class298_Sub37_Sub14 extends Class298_Sub37 {
 				((Class298_Sub37_Sub14) this).anIntArrayArray9654 = new int[i_11_][];
 				for (int i_12_ = 0; i_12_ < i_11_; i_12_++) {
 					int i_13_ = class298_sub53.readUnsignedShort();
-					Class367 class367 = Class26.method398(i_13_, -1170894592);
+					Class367 class367 = Symbol.method398(i_13_, -1170894592);
 					if (null != class367) {
 						((Class298_Sub37_Sub14) this).anIntArray9656[i_12_] = i_13_;
 						((Class298_Sub37_Sub14) this).anIntArrayArray9654[i_12_] = new int[-213410761 * class367.anInt3985];

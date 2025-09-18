@@ -39,7 +39,7 @@ public class Class212 {
 
 	public Object method1953(Object[] objects, int i) throws Throwable {
 		try {
-			return Class466.method6022(EnumType.mainApplet, method1951(-1115089525), objects, (byte) 42);
+			return AppletJsBridge.callJsFunction(EnumType.mainApplet, method1951(-1115089525), objects, (byte) 42);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iy.f(").append(')').toString());
 		}
@@ -47,7 +47,7 @@ public class Class212 {
 
 	public Object method1954(int i) throws Throwable {
 		try {
-			return Class466.method6021(EnumType.mainApplet, method1951(-1685973242), (short) 7317);
+			return AppletJsBridge.callJsFunction(EnumType.mainApplet, method1951(-1685973242), (short) 7317);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iy.b(").append(')').toString());
 		}

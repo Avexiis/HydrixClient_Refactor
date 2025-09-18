@@ -272,7 +272,7 @@ public class Class422_Sub24 extends IntegerPreferenceField {
 											if (string == null)
 												string = "null";
 											if (((789409129 * class468.anInt5704) == 1 || 1 != (-66163287 * (class105.anInt1281))) && (-1 != (-66163287 * class105.anInt1281)))
-												string = new StringBuilder().append(Class285.method2709(16748608, -1499496225)).append(string).append(Class26.aString356).append(" x").append(Class441.method5866((class105.anInt1281 * -66163287), 1886400109)).toString();
+												string = new StringBuilder().append(Class285.method2709(16748608, -1499496225)).append(string).append(Symbol.CLOSE_COL_TAG).append(" x").append(Class441.method5866((class105.anInt1281 * -66163287), 1886400109)).toString();
 										}
 										if (-1 != (-324971993 * class105.anInt1289)) {
 											string = (Js5ConfigGroup.method1308((-324971993 * class105.anInt1289), (byte) -48));
@@ -362,9 +362,9 @@ public class Class422_Sub24 extends IntegerPreferenceField {
 									} else if (3 == (1548853569 * class105.anInt1184)) {
 										int i_37_ = class105.anInt1151 * 572201537;
 										if (i_37_ >= 0 && i_37_ < 2048) {
-											Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[i_37_]);
-											if ((null != class365_sub1_sub1_sub2_sub2) && (((-442628795 * GameClient.playerIndex) == i_37_) || ((Class525.method6379((class365_sub1_sub1_sub2_sub2.username), (byte) 125)) == (1148770405 * (class105.anInt1140))))) {
-												modelPart = (class105.method1124(OverlayType.activeToolkit, i_35_, Class94.aClass349_913, (Class212.aIdentityKitTypeList_2433), Class15.aClass507_224, (Class298_Sub32_Sub14.aClass477_9400), (Class501.aClass395_6122), (Class128.aClass148_6331), (class105.aAnimator_1152), (class365_sub1_sub1_sub2_sub2.appearance), -297118329));
+											Player player = (GameClient.players[i_37_]);
+											if ((null != player) && (((-442628795 * GameClient.playerIndex) == i_37_) || ((Class525.method6379((player.username), (byte) 125)) == (1148770405 * (class105.anInt1140))))) {
+												modelPart = (class105.method1124(OverlayType.activeToolkit, i_35_, Class94.aClass349_913, (Class212.aIdentityKitTypeList_2433), Class15.aClass507_224, (Class298_Sub32_Sub14.aClass477_9400), (Class501.aClass395_6122), (Class128.aClass148_6331), (class105.aAnimator_1152), (player.appearance), -297118329));
 												if (null == modelPart && IComponentDefinition.aBoolean1139)
 													LocalizedString.markComponentForRedraw(class105, 398619747);
 											}
@@ -372,9 +372,9 @@ public class Class422_Sub24 extends IntegerPreferenceField {
 									} else if (class105.anInt1184 * 1548853569 == 5) {
 										int i_38_ = 572201537 * class105.anInt1151;
 										if (i_38_ >= 0 && i_38_ < 2048) {
-											Player class365_sub1_sub1_sub2_sub2 = (GameClient.players[i_38_]);
-											if ((class365_sub1_sub1_sub2_sub2 != null) && (i_38_ == (GameClient.playerIndex * -442628795) || ((Class525.method6379((class365_sub1_sub1_sub2_sub2.username), (byte) 127)) == (class105.anInt1140 * 1148770405))))
-												modelPart = (class365_sub1_sub1_sub2_sub2.appearance.method4545(OverlayType.activeToolkit, i_35_, Class94.aClass349_913, (Class212.aIdentityKitTypeList_2433), Class15.aClass507_224, (Class298_Sub32_Sub14.aClass477_9400), (Class501.aClass395_6122), (Class128.aClass148_6331), (class105.aAnimator_1152), null, null, null, 0, true, (Class82_Sub18.aClass405_6892), -933937677));
+											Player player = (GameClient.players[i_38_]);
+											if ((player != null) && (i_38_ == (GameClient.playerIndex * -442628795) || ((Class525.method6379((player.username), (byte) 127)) == (class105.anInt1140 * 1148770405))))
+												modelPart = (player.appearance.method4545(OverlayType.activeToolkit, i_35_, Class94.aClass349_913, (Class212.aIdentityKitTypeList_2433), Class15.aClass507_224, (Class298_Sub32_Sub14.aClass477_9400), (Class501.aClass395_6122), (Class128.aClass148_6331), (class105.aAnimator_1152), null, null, null, 0, true, (Class82_Sub18.aClass405_6892), -933937677));
 										}
 									} else if (8 == (class105.anInt1184 * 1548853569) || (class105.anInt1184 * 1548853569) == 9) {
 										Class298_Sub9 class298_sub9 = (Class255.method2437(572201537 * class105.anInt1151, false, 2023314319));

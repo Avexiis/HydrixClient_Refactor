@@ -66,7 +66,7 @@ public class Class445 {
 	static void method5895(GraphicsToolkit class_ra, byte i) {
 		try {
 			class_ra.r(0, 0, -2110394505 * Class462.canvasWidth, 350);
-			class_ra.drawFilledBox(0, 0, -2110394505 * Class462.canvasWidth, 350, Class8.anInt98 * 256666041 << 24 | 0x940000, 1); //#940000 dev console background color
+			class_ra.drawFilledBox(0, 0, -2110394505 * Class462.canvasWidth, 350, Class8.anInt98 * 256666041 << 24 | Settings.DEV_CONSOLE_COLOR, 1);
 			int i_2_ = 350 / (376067837 * Class8.anInt110);
 			if (Class8.anInt102 * -2035787443 > 0) {
 				int i_3_ = 346 - 376067837 * Class8.anInt110 - 4;
@@ -74,7 +74,7 @@ public class Class445 {
 				int i_5_ = 4;
 				if (-2035787443 * Class8.anInt102 > 1)
 					i_5_ += ((-2035787443 * Class8.anInt102 - 1 - Class8.anInt103 * -1731316011) * (i_3_ - i_4_) / (Class8.anInt102 * -2035787443 - 1));
-				class_ra.drawFilledBox(Class462.canvasWidth * -2110394505 - 16, i_5_, 12, i_4_, Class8.anInt98 * 256666041 << 24 | 0xFF0000, 2); //#FF0000 dev console scroll bar color
+				class_ra.drawFilledBox(Class462.canvasWidth * -2110394505 - 16, i_5_, 12, i_4_, Class8.anInt98 * 256666041 << 24 | Settings.DEV_CONSOLE_SCR_COL, 2);
 				for (int i_6_ = -1731316011 * Class8.anInt103; (i_6_ < -1731316011 * Class8.anInt103 + i_2_ && i_6_ < -2035787443 * Class8.anInt102); i_6_++) {
 					String[] strings = Class365_Sub1_Sub3_Sub1.method4508((Class8.aStringArray107[i_6_]), '\010', 846052986);
 					int i_7_ = ((-2110394505 * Class462.canvasWidth - 8 - 16) / strings.length);

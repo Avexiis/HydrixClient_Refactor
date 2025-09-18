@@ -17,12 +17,12 @@ public class Atmosphere {
 	Skybox model;
 	public static GameClient gameClientInstance;
 	static Class89 scriptCache;
-	private int editorSunYaw;
-    private int editorSunPitch;
-    private int editorSunColor;
-    private int editorFogColor;
-    private int editorFogNearDistance;
-    private int editorFogFarDistance;
+	private int editorSunYaw; // horizontal sun direction
+    private int editorSunPitch; // vertical sun direction
+    private int editorSunColor; // sun color (0xRRGGBB)
+    private int editorFogColor; // fog color (0xRRGGBB)
+    private int editorFogNearDistance; // fog near distance
+    private int editorFogFarDistance; // fog far distance
 
 	public Atmosphere(Packet class298_sub53, AtmosphereManager atmosphereManager) {
 		readFromPacket(class298_sub53, atmosphereManager, (short) 9475);

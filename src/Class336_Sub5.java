@@ -7,18 +7,18 @@ public class Class336_Sub5 extends Class336 {
 
 	public boolean method4090(int i, int i_0_, int i_1_, Region region, int i_2_) {
 		try {
-			return region.method2739(i_0_, i_1_, i, toX * -1331662251, 1517720743 * toY, sizeX * -1900284579, 772610897 * sizeY, (((Class336_Sub5) this).routeType * -759942815), -86275969);
+			return region.canReachArea(i_0_, i_1_, i, toX * -1331662251, 1517720743 * toY, sizeX * -1900284579, 772610897 * sizeY, (((Class336_Sub5) this).routeType * -759942815));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("acp.a(").append(')').toString());
 		}
 	}
 
 	public boolean method4091(int i, int i_3_, int i_4_, Region region) {
-		return region.method2739(i_3_, i_4_, i, toX * -1331662251, 1517720743 * toY, sizeX * -1900284579, 772610897 * sizeY, (((Class336_Sub5) this).routeType * -759942815), -86275969);
+		return region.canReachArea(i_3_, i_4_, i, toX * -1331662251, 1517720743 * toY, sizeX * -1900284579, 772610897 * sizeY, (((Class336_Sub5) this).routeType * -759942815));
 	}
 
 	public boolean method4089(int i, int i_5_, int i_6_, Region region) {
-		return region.method2739(i_5_, i_6_, i, toX * -1331662251, 1517720743 * toY, sizeX * -1900284579, 772610897 * sizeY, (((Class336_Sub5) this).routeType * -759942815), -86275969);
+		return region.canReachArea(i_5_, i_6_, i, toX * -1331662251, 1517720743 * toY, sizeX * -1900284579, 772610897 * sizeY, (((Class336_Sub5) this).routeType * -759942815));
 	}
 
 	Class336_Sub5() {

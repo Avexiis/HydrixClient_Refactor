@@ -3,7 +3,7 @@
  */
 
 public class Class496 {
-	MapIconTypeList aMapIconTypeList_6095;
+	Class487 aClass487_6095;
 	public int anInt6096;
 	public int anInt6097;
 	public boolean aBoolean6098 = false;
@@ -27,7 +27,7 @@ public class Class496 {
 
 	public boolean method6197(byte i) {
 		try {
-			return ((MapIconTypeList) ((Class496) this).aMapIconTypeList_6095).aClass243_6068.method2310(anInt6097 * 1690480405, -457216440);
+			return ((Class487) ((Class496) this).aClass487_6095).aClass243_6068.method2310(anInt6097 * 1690480405, -457216440);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ul.p(").append(')').toString());
 		}
@@ -36,12 +36,12 @@ public class Class496 {
 	public Class57 method6198(GraphicsToolkit class_ra, int i, boolean bool, byte i_1_) {
 		try {
 			long l = (long) (anInt6097 * 1690480405 | i << 16 | (bool ? 262144 : 0) | class_ra.anInt5298 * 580915349 << 19);
-			Class57 class57 = (Class57) ((MapIconTypeList) ((Class496) this).aMapIconTypeList_6095).aClass348_6065.get(l);
+			Class57 class57 = (Class57) ((Class487) ((Class496) this).aClass487_6095).aClass348_6065.get(l);
 			if (class57 != null)
 				return class57;
-			if (!((MapIconTypeList) ((Class496) this).aMapIconTypeList_6095).aClass243_6068.method2310(anInt6097 * 1690480405, -457216440))
+			if (!((Class487) ((Class496) this).aClass487_6095).aClass243_6068.method2310(anInt6097 * 1690480405, -457216440))
 				return null;
-			Class89 class89 = Class89.method987((((MapIconTypeList) (((Class496) this).aMapIconTypeList_6095)).aClass243_6068), 1690480405 * anInt6097, 0);
+			Class89 class89 = Class89.method987((((Class487) (((Class496) this).aClass487_6095)).aClass243_6068), 1690480405 * anInt6097, 0);
 			if (null != class89) {
 				Class89 class89_2_ = class89;
 				Class89 class89_3_ = class89;
@@ -57,7 +57,7 @@ public class Class496 {
 			}
 			class57 = class_ra.method5125(class89, true);
 			if (class57 != null)
-				((MapIconTypeList) ((Class496) this).aMapIconTypeList_6095).aClass348_6065.put(class57, l);
+				((Class487) ((Class496) this).aClass487_6095).aClass348_6065.put(class57, l);
 			return class57;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ul.b(").append(')').toString());
@@ -67,7 +67,7 @@ public class Class496 {
 	void method6199(Packet class298_sub53, int i, int i_6_) {
 		try {
 			if (i == 1)
-				anInt6097 = class298_sub53.gSmart2or4n() * 24979517;
+				anInt6097 = class298_sub53.readBigSmart() * 24979517;
 			else if (2 == i)
 				anInt6096 = class298_sub53.g3() * 1870808461;
 			else if (3 == i)

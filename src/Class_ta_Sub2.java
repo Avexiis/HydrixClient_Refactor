@@ -49,8 +49,8 @@ public class Class_ta_Sub2 extends Class_ta {
 		try {
 			Packet class298_sub53 = Class322.method3933(-68618923);
 			class298_sub53.writeLong(0L);
-			class298_sub53.writeString(Class360.password, 2126310592);
-			class298_sub53.writeLong(Class360.aLong3911 * 6528380240290452803L);
+			class298_sub53.writeString(LoginData.password, 2126310592);
+			class298_sub53.writeLong(LoginData.aLong3911 * 6528380240290452803L);
 			class298_sub53.writeLong(GameClient.aLong8675 * -8380697455384249973L);
 			class298_sub53.applyRsa(Class50.aBigInteger500, Class50.aBigInteger503, 1411965819);
 			return class298_sub53;

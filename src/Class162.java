@@ -374,7 +374,7 @@ public class Class162 {
 				((Class162) this).anInt1655 += 1039784928;
 			anInt1661 = class298_sub53.readUnsignedShort() * -397756075;
 			anInt1669 = class298_sub53.readUnsignedByte() * 324877379;
-			aString1654 = class298_sub53.gstr();
+			aString1654 = class298_sub53.getString();
 			if (i_30_ >= 4)
 				class298_sub53.readUnsignedInt();
 			aBoolean1656 = class298_sub53.readUnsignedByte() == 1;
@@ -435,7 +435,7 @@ public class Class162 {
 							long l = class298_sub53.readLong((short) 2486);
 							((Class162) this).aClass437_1664.method5817(new Class298_Sub33(l), (long) i_36_);
 						} else if (i_37_ == 2) {
-							String string = class298_sub53.gstr();
+							String string = class298_sub53.getString();
 							((Class162) this).aClass437_1664.method5817(new LinkableObject(string), (long) i_36_);
 						}
 					}
@@ -560,9 +560,9 @@ public class Class162 {
 			int i_52_ = Class10.anInt129 * 1168366243;
 			int[] is = Class10.anIntArray135;
 			for (int i_53_ = 0; i_53_ < i_52_; i_53_++) {
-				Player class365_sub1_sub1_sub2_sub2 = GameClient.players[is[i_53_]];
-				if (null != class365_sub1_sub1_sub2_sub2)
-					Class135.method1494(class365_sub1_sub1_sub2_sub2, false, -1941477240);
+				Player player = GameClient.players[is[i_53_]];
+				if (null != player)
+					Class135.method1494(player, false, -1941477240);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("gp.hv(").append(')').toString());

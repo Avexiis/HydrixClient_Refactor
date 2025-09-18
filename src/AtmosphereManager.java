@@ -52,7 +52,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class AtmosphereManager {
 	private static final ConcurrentLinkedQueue<Runnable> renderTasks = new ConcurrentLinkedQueue<>();
-
 	public static void enqueueOnRenderThread(Runnable task) {
 		renderTasks.offer(task);
 	  }
@@ -61,21 +60,14 @@ public class AtmosphereManager {
 	long lastTransitionTimeNs;
 	static float DEFAULT_SUN_INTENSITY = 0.69921875F;
 	static float DEFAULT_SHADOW_INTENSITY = 1.2F;
-	static int MIN_SUN_PITCH = -50;
-	static int MIN_SUN_YAW = -60;
-	static int MIN_SUN_ROLL = -50;
-	static int ZERO = 0;
-	private int anInt9123; // horizontal sun direction
-    private int anInt9124; // vertical sun direction
-    private int anInt9125; // sun light color
-    private int anInt9126; // fog color
-    private int anInt9127; // fog near distance
-    private int anInt9128; // fog far distance
+	private final int SUN_COLOR;
+    private final int FOG_COLOR;
+    private final int FOG_NEAR_DIST;
+    private final int FOG_FAR_DIST;
 	private final int defaultColorSun;
     private final int defaultColorFog;
     private final int defaultFogNear;
     private final int defaultFogFar;
-	static float BASE_INTENSITY_MULTIPLIER = 1.1523438F;
 	static int DEFAULT_TRANSITION_DURATION;
 	GraphicsToolkit toolkit;
 	Atmosphere[][] atmosphereDefinitions;
@@ -94,7 +86,7 @@ public class AtmosphereManager {
 	private boolean editorActive = false;
 	private int overrideSunColor, overrideFogColor, overrideFogNear, overrideFogFar;
 	private Map<String,EnvPreset> presets = new LinkedHashMap<>();
-	private static final Path PRESET_DIR  = Paths.get("EnvPresets");
+	private static final Path PRESET_DIR = Paths.get("EnvPresets");
 	private static final Path PRESET_FILE = PRESET_DIR.resolve("presets.json");
 	private int overrideSkyId, overrideParam1, overrideParam2, overrideParam3, overrideParam4;
 
@@ -107,23 +99,27 @@ public class AtmosphereManager {
 		this.toolkit = class_ra;
 		this.atmosphereDefinitions = new Atmosphere[i][i_0_];
 		if (null != INITIAL_COLORS)
-			Class82_Sub12.defaultEnvironment = createSkybox(INITIAL_COLORS[0], INITIAL_COLORS[1], INITIAL_COLORS[2], INITIAL_COLORS[3], INITIAL_COLORS[4], INITIAL_COLORS[5], 2001255265);
+			Class82_Sub12.defaultEnvironment = createSkybox(
+					INITIAL_COLORS[0],
+					INITIAL_COLORS[1],
+					INITIAL_COLORS[2],
+					INITIAL_COLORS[3],
+					INITIAL_COLORS[4],
+					INITIAL_COLORS[5], 2001255265);
 		Class254.aSkybox_2789 = null;
 		this.fallbackAtmosphere = new Atmosphere();
 		this.currentAtmosphere = new Atmosphere();
 		this.previousAtmosphere = new Atmosphere();
 		this.targetAtmosphere = new Atmosphere();
 		forceUpdate(-1545496874);
-		anInt9123 = currentAtmosphere.sunColor;
-		anInt9124 = 0;
-		anInt9125 = currentAtmosphere.sunColor;
-		anInt9126 = currentAtmosphere.fogColor;
-		anInt9127 = currentAtmosphere.fogNearDistance;
-		anInt9128 = anInt9127 + 100;
-		defaultColorSun = anInt9125;
-        defaultColorFog  = anInt9126;
-        defaultFogNear   = anInt9127;
-        defaultFogFar    = anInt9128;
+		SUN_COLOR = currentAtmosphere.sunColor;
+		FOG_COLOR = currentAtmosphere.fogColor;
+		FOG_NEAR_DIST = currentAtmosphere.fogNearDistance;
+		FOG_FAR_DIST = FOG_NEAR_DIST + 100;
+		defaultColorSun = SUN_COLOR;
+        defaultColorFog  = FOG_COLOR;
+        defaultFogNear   = FOG_NEAR_DIST;
+        defaultFogFar    = FOG_FAR_DIST;
 		try {
 			Files.createDirectories(PRESET_DIR);
 			if (Files.exists(PRESET_FILE)) {
@@ -491,7 +487,7 @@ public class AtmosphereManager {
 				GraphicsAutoSetup.clientPreferences.fogPreference.method5633(1323547629) == 1
 					? i_24_
 					: -1,
-				currentAtmosphere.fogNearDistance
+				/*0*/ currentAtmosphere.fogNearDistance // 0 works but ?might? cause fog flickering? trying default currentAtmosphere.fogNearDistance...Update: Do NOT use 0, currentAtmosphere.fogNearDistance is correct
 			);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception,
@@ -554,13 +550,13 @@ public class AtmosphereManager {
 	}
 	
 	/**
-	 * Environment Editor
+	 * EnvEditor
 	 */
 	public void openEnvironmentEditor() {
-		final int openColorSun  = anInt9125;
-		final int openColorFog  = anInt9126;
-		final int openFogNear   = anInt9127;
-		final int openFogFar    = anInt9128;
+		final int openColorSun  = SUN_COLOR;
+		final int openColorFog  = FOG_COLOR;
+		final int openFogNear   = FOG_NEAR_DIST;
+		final int openFogFar    = FOG_FAR_DIST;
 
 		overrideSunColor = openColorSun;
 		overrideFogColor = openColorFog;
@@ -601,7 +597,7 @@ public class AtmosphereManager {
 				}
 			} catch (Exception ignore) {}
 
-			JFrame frame = new JFrame("Environment Editor");
+			JFrame frame = new JFrame("Environment Editor [BETA]");
 			frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			frame.setSize(680, 800);
 			frame.setResizable(false);
@@ -863,7 +859,7 @@ public class AtmosphereManager {
 				currentAtmosphere.sunColor = defaultColorSun;
 				currentAtmosphere.fogColor = defaultColorFog;
 				currentAtmosphere.fogNearDistance = defaultFogNear;
-				 //currentAtmosphere.anIntFogFar = defaultFogFar; //buggy
+				 //currentAtmosphere.anIntFogFar = defaultFogFar;
 				currentAtmosphere.sunIntensity = initialF4130;
 				currentAtmosphere.shadowIntensity = initialF4131;
 				currentAtmosphere.diffusion = initialF4137;
@@ -966,7 +962,8 @@ public class AtmosphereManager {
 
 				if (fc.showSaveDialog(frame) == JFileChooser.APPROVE_OPTION) {
 					File file = fc.getSelectedFile();
-					if (!file.getName().toLowerCase().endsWith(".json")) { //must be json
+					// enforce .json extension
+					if (!file.getName().toLowerCase().endsWith(".json")) {
 						file = new File(file.getParentFile(), file.getName() + ".json");
 					}
 					try (Writer w = Files.newBufferedWriter(file.toPath())) {

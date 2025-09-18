@@ -428,10 +428,10 @@ public class IcmpService_Sub1 extends IcmpService {
 				Class397.method4912((short) 255);
 				GameClient.WINDOW_PANE_ID = -391544995 * HashTable.aClass371_5520.anInt4031;
 				Class257.method2453(false, (byte) 8);
-				Class360.method4301(-1204145082);
+				LoginData.method4301(-1204145082);
 				Class14.method341(-257444687 * GameClient.WINDOW_PANE_ID, null, 188692666);
 			}
-			Class360.aBoolean3912 = true;
+			LoginData.aBoolean3912 = true;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adv.fr(").append(')').toString());
 		}

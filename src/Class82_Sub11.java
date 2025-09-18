@@ -18,7 +18,7 @@ public class Class82_Sub11 extends Class82 {
 
 	Class82_Sub11(Packet class298_sub53) {
 		super(class298_sub53);
-		((Class82_Sub11) this).aString6860 = class298_sub53.gstr();
+		((Class82_Sub11) this).aString6860 = class298_sub53.getString();
 		((Class82_Sub11) this).anInt6859 = class298_sub53.readUnsignedShort() * -602577027;
 	}
 

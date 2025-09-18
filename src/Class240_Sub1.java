@@ -34,7 +34,7 @@ public class Class240_Sub1 extends MapDecoder {
 					aSceneGraph_2619.method4025(i, i_1_, i_2_, -1330802605);
 					aSceneGraph_2619.method4026(i, i_1_, i_2_, (byte) -1);
 					if (0 != class432.anInt5380 * -2144543407) {
-						region.method2743(i_1_, i_2_, i_4_, i_5_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 108);
+						region.removeWall(i_1_, i_2_, i_4_, i_5_, class432.aBoolean5424, !class432.aBoolean5416);
 					}
 					if (-1508517619 * class432.anInt5376 == 1) {
 						if (0 == i_5_) {
@@ -53,7 +53,7 @@ public class Class240_Sub1 extends MapDecoder {
 				} else if (2 == i_0_) {
 					aSceneGraph_2619.method4028(i, i_1_, i_2_, GameClient.anInterface17_8960, (short) -414);
 					if (0 != class432.anInt5380 * -2144543407 && -1125834887 * class432.sizeX + i_1_ < anInt2627 * -954368823 && -1125834887 * class432.sizeX + i_2_ < anInt2628 * 181474463 && -565161399 * class432.sizeY + i_1_ < anInt2627 * -954368823 && -565161399 * class432.sizeY + i_2_ < 181474463 * anInt2628) {
-						region.method2736(i_1_, i_2_, class432.sizeX * -1125834887, -565161399 * class432.sizeY, i_5_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 38);
+						region.removeObject(i_1_, i_2_, class432.sizeX * -1125834887, -565161399 * class432.sizeY, i_5_, class432.aBoolean5424, !class432.aBoolean5416);
 					}
 					if (Class424.aClass424_6595.anInt6613 * -1976050083 == i_4_) {
 						if ((i_5_ & 0x1) == 0) {
@@ -65,7 +65,7 @@ public class Class240_Sub1 extends MapDecoder {
 				} else if (3 == i_0_) {
 					aSceneGraph_2619.method4009(i, i_1_, i_2_, 2008906043);
 					if (class432.anInt5380 * -2144543407 == 1) {
-						region.method2738(i_1_, i_2_, -1244104271);
+						region.removeFloor(i_1_, i_2_);
 					}
 				}
 			}
@@ -76,7 +76,7 @@ public class Class240_Sub1 extends MapDecoder {
 
 	public final void method2235(GraphicsToolkit class_ra, Packet class298_sub53, int i, int i_6_, byte i_7_) {
 		try {
-			if (!isUnderwater) {
+			if (!aBoolean2629) {
 				boolean bool = false;
 				Atmosphere atmosphere = null;
 				while_0_: do {
@@ -254,7 +254,7 @@ public class Class240_Sub1 extends MapDecoder {
 
 	public final void method2236(GraphicsToolkit class_ra, Packet class298_sub53, int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_) {
 		try {
-			if (!isUnderwater) {
+			if (!aBoolean2629) {
 				boolean bool = false;
 				Atmosphere atmosphere = null;
 				int i_46_ = 8 * (i_42_ & 0x7);
@@ -398,7 +398,7 @@ public class Class240_Sub1 extends MapDecoder {
 		}
 	}
 
-	public final void method2237(GraphicsToolkit class_ra, byte[] data, int i, int i_72_, Region[] regions, int i_73_) {
+	public final void method2237(GraphicsToolkit class_ra, byte[] data, int i, int i_72_, Region[] Regions, int i_73_) {
 		final boolean osrs = data[0] == 'O' && data[1] == 'S' && data[2] == 'R' && data[3] == 'S';
 		Packet buffer = new Packet(data);
 		if (osrs) {
@@ -428,13 +428,13 @@ public class Class240_Sub1 extends MapDecoder {
 				int i_85_ = i_78_ + i_72_;
 				if (i_84_ > 0 && i_85_ > 0 && i_84_ < -954368823 * anInt2627 - 1 && i_85_ < anInt2628 * 181474463 - 1) {
 					Region region = null;
-					if (!isUnderwater) {
+					if (!aBoolean2629) {
 						int i_86_ = i_80_;
-						if (2 == (tile_flags.flags[1][i_84_][i_85_] & 0x2)) {
+						if (2 == (aTileFlags_2635.flags[1][i_84_][i_85_] & 0x2)) {
 							i_86_--;
 						}
-						if (i_86_ >= 0 && i_86_ < regions.length) {
-							region = regions[i_86_];
+						if (i_86_ >= 0 && i_86_ < Regions.length) {
+							region = Regions[i_86_];
 						} else {
 							region = null;
 						}
@@ -445,7 +445,7 @@ public class Class240_Sub1 extends MapDecoder {
 		}
 	}
 
-	public final void method2238(GraphicsToolkit class_ra, byte[] data, int i, int i_87_, int i_88_, int i_89_, int i_90_, int i_91_, int i_92_, Region[] regions, int i_93_) {
+	public final void method2238(GraphicsToolkit class_ra, byte[] data, int i, int i_87_, int i_88_, int i_89_, int i_90_, int i_91_, int i_92_, Region[] Regions, int i_93_) {
 		final boolean osrs = data[0] == 'O' && data[1] == 'S' && data[2] == 'R' && data[3] == 'S';
 		Packet buffer = new Packet(data);
 		if (osrs) {
@@ -476,15 +476,15 @@ public class Class240_Sub1 extends MapDecoder {
 					int i_104_ = i_87_ + Class415.method5587(i_99_ & 0x7, i_98_ & 0x7, i_92_, -1125834887 * class432.sizeX, class432.sizeY * -565161399, i_103_, 181137699);
 					int i_105_ = i_88_ + Class315.method3833(i_99_ & 0x7, i_98_ & 0x7, i_92_, class432.sizeX * -1125834887, class432.sizeY * -565161399, i_103_, 1981614763);
 					if (i_104_ > 0 && i_105_ > 0 && i_104_ < -954368823 * anInt2627 - 1 && i_105_ < 181474463 * anInt2628 - 1) {
-						if (i >= 0 && i < regions.length) {
+						if (i >= 0 && i < Regions.length) {
 							Region region = null;
-							if (!isUnderwater) {
+							if (!aBoolean2629) {
 								int i_106_ = i;
-								if (2 == (tile_flags.flags[1][i_104_][i_105_] & 0x2)) {
+								if (2 == (aTileFlags_2635.flags[1][i_104_][i_105_] & 0x2)) {
 									i_106_--;
 								}
-								if (i_106_ >= 0 && i_106_ < regions.length) {
-									region = regions[i_106_];
+								if (i_106_ >= 0 && i_106_ < Regions.length) {
+									region = Regions[i_106_];
 								}
 							}
 							add_loc(class_ra, i, i, i_104_, i_105_, locid + (osrs ? OSRSData.LOCS_OFFSET : 0), i_92_ + i_103_ & 0x3, i_102_, region, -1);
@@ -504,13 +504,13 @@ public class Class240_Sub1 extends MapDecoder {
 				}
 				Class365_Sub1_Sub5 class365_sub1_sub5;
 				if (bool) {
-					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_107_, bool_116_);
+					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_107_, bool_116_);
 					if (class365_sub1_sub5_sub1.method39(-1364237139)) {
 						class365_sub1_sub5_sub1.method33(class_ra, -2008903061);
 					}
 					class365_sub1_sub5 = class365_sub1_sub5_sub1;
 				} else {
-					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_107_, i_108_);
+					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_107_, i_108_);
 				}
 				aSceneGraph_2619.method4020(i_109_, i_114_, i_115_, class365_sub1_sub5, null, (byte) 53);
 				if (0 == i_107_) {
@@ -518,7 +518,7 @@ public class Class240_Sub1 extends MapDecoder {
 						ground.LA(i_114_, i_115_, 50);
 						ground.LA(i_114_, i_115_ + 1, 50);
 					}
-					if (i_120_ == 1 && !isUnderwater) {
+					if (i_120_ == 1 && !aBoolean2629) {
 						aSceneGraph_2619.aClass333_3512.method4067(1, i_109_, i_114_, i_115_, 201968507 * class432.anInt5387, -1994960695 * class432.anInt5388);
 					}
 				} else if (i_107_ == 1) {
@@ -526,7 +526,7 @@ public class Class240_Sub1 extends MapDecoder {
 						ground.LA(i_114_, 1 + i_115_, 50);
 						ground.LA(i_114_ + 1, i_115_ + 1, 50);
 					}
-					if (i_120_ == 1 && !isUnderwater) {
+					if (i_120_ == 1 && !aBoolean2629) {
 						aSceneGraph_2619.aClass333_3512.method4067(2, i_109_, i_114_, 1 + i_115_, class432.anInt5387 * 201968507, -(class432.anInt5388 * -1994960695));
 					}
 				} else if (i_107_ == 2) {
@@ -534,7 +534,7 @@ public class Class240_Sub1 extends MapDecoder {
 						ground.LA(i_114_ + 1, i_115_, 50);
 						ground.LA(1 + i_114_, 1 + i_115_, 50);
 					}
-					if (1 == i_120_ && !isUnderwater) {
+					if (1 == i_120_ && !aBoolean2629) {
 						aSceneGraph_2619.aClass333_3512.method4067(1, i_109_, 1 + i_114_, i_115_, class432.anInt5387 * 201968507, -(class432.anInt5388 * -1994960695));
 					}
 				} else if (i_107_ == 3) {
@@ -542,12 +542,12 @@ public class Class240_Sub1 extends MapDecoder {
 						ground.LA(i_114_, i_115_, 50);
 						ground.LA(1 + i_114_, i_115_, 50);
 					}
-					if (1 == i_120_ && !isUnderwater) {
+					if (1 == i_120_ && !aBoolean2629) {
 						aSceneGraph_2619.aClass333_3512.method4067(2, i_109_, i_114_, i_115_, class432.anInt5387 * 201968507, class432.anInt5388 * -1994960695);
 					}
 				}
 				if (0 != -2144543407 * class432.anInt5380 && region != null) {
-					region.method2732(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 0);
+					region.addWall(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416);
 				}
 				if (-448694871 * class432.anInt5391 != 64) {
 					aSceneGraph_2619.method4023(i_109_, i_114_, i_115_, class432.anInt5391 * -448694871, (byte) -54);
@@ -557,13 +557,13 @@ public class Class240_Sub1 extends MapDecoder {
 			if (i == -1976050083 * Class424.aClass424_6592.anInt6613) {
 				Class365_Sub1_Sub5 class365_sub1_sub5;
 				if (bool) {
-					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_107_, bool_116_);
+					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_107_, bool_116_);
 					if (class365_sub1_sub5_sub1.method39(-1749970817)) {
 						class365_sub1_sub5_sub1.method33(class_ra, -2130877816);
 					}
 					class365_sub1_sub5 = class365_sub1_sub5_sub1;
 				} else {
-					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_107_, i_108_);
+					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_107_, i_108_);
 				}
 				aSceneGraph_2619.method4020(i_109_, i_114_, i_115_, class365_sub1_sub5, null, (byte) 117);
 				if (class432.aBoolean5405 && aBoolean2632) {
@@ -578,7 +578,7 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 				}
 				if (-2144543407 * class432.anInt5380 != 0 && null != region) {
-					region.method2732(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 0);
+					region.addWall(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416);
 				}
 				return true;
 			}
@@ -587,8 +587,8 @@ public class Class240_Sub1 extends MapDecoder {
 				Class365_Sub1_Sub5 class365_sub1_sub5;
 				Class365_Sub1_Sub5 class365_sub1_sub5_122_;
 				if (bool) {
-					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, 4 + i_107_, bool_116_);
-					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1_123_ = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_121_, bool_116_);
+					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, 4 + i_107_, bool_116_);
+					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1_123_ = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_121_, bool_116_);
 					if (class365_sub1_sub5_sub1.method39(-1679564366)) {
 						class365_sub1_sub5_sub1.method33(class_ra, -2079126659);
 					}
@@ -598,11 +598,11 @@ public class Class240_Sub1 extends MapDecoder {
 					class365_sub1_sub5 = class365_sub1_sub5_sub1;
 					class365_sub1_sub5_122_ = class365_sub1_sub5_sub1_123_;
 				} else {
-					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, 4 + i_107_, i_108_);
-					class365_sub1_sub5_122_ = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_121_, i_108_);
+					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, 4 + i_107_, i_108_);
+					class365_sub1_sub5_122_ = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_121_, i_108_);
 				}
 				aSceneGraph_2619.method4020(i_109_, i_114_, i_115_, class365_sub1_sub5, class365_sub1_sub5_122_, (byte) 48);
-				if ((class432.anInt5376 * -1508517619 == 1 || aBoolean7073 && -1 == -1508517619 * class432.anInt5376) && !isUnderwater) {
+				if ((class432.anInt5376 * -1508517619 == 1 || aBoolean7073 && -1 == -1508517619 * class432.anInt5376) && !aBoolean2629) {
 					if (0 == i_107_) {
 						aSceneGraph_2619.aClass333_3512.method4067(1, i_109_, i_114_, i_115_, class432.anInt5387 * 201968507, class432.anInt5388 * -1994960695);
 						aSceneGraph_2619.aClass333_3512.method4067(2, i_109_, i_114_, 1 + i_115_, class432.anInt5387 * 201968507, class432.anInt5388 * -1994960695);
@@ -618,7 +618,7 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 				}
 				if (0 != -2144543407 * class432.anInt5380 && region != null) {
-					region.method2732(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 0);
+					region.addWall(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416);
 				}
 				if (class432.anInt5391 * -448694871 != 64) {
 					aSceneGraph_2619.method4023(i_109_, i_114_, i_115_, -448694871 * class432.anInt5391, (byte) 12);
@@ -628,13 +628,13 @@ public class Class240_Sub1 extends MapDecoder {
 			if (i == -1976050083 * Class424.aClass424_6594.anInt6613) {
 				Class365_Sub1_Sub5 class365_sub1_sub5;
 				if (bool) {
-					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_107_, bool_116_);
+					Class365_Sub1_Sub5_Sub1 class365_sub1_sub5_sub1 = new Class365_Sub1_Sub5_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_107_, bool_116_);
 					if (class365_sub1_sub5_sub1.method39(-1956737069)) {
 						class365_sub1_sub5_sub1.method33(class_ra, -2085613160);
 					}
 					class365_sub1_sub5 = class365_sub1_sub5_sub1;
 				} else {
-					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i, i_107_, i_108_);
+					class365_sub1_sub5 = new Wall(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i, i_107_, i_108_);
 				}
 				aSceneGraph_2619.method4020(i_109_, i_114_, i_115_, class365_sub1_sub5, null, (byte) 58);
 				if (class432.aBoolean5405 && aBoolean2632) {
@@ -649,23 +649,23 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 				}
 				if (class432.anInt5380 * -2144543407 != 0 && region != null) {
-					region.method2732(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 0);
+					region.addWall(i_114_, i_115_, i, i_107_, class432.aBoolean5424, !class432.aBoolean5416);
 				}
 				return true;
 			}
 			if (i == -1976050083 * Class424.aClass424_6595.anInt6613) {
 				Class365_Sub1_Sub1 class365_sub1_sub1;
 				if (bool) {
-					Class365_Sub1_Sub1_Sub6 class365_sub1_sub1_sub6 = new Class365_Sub1_Sub1_Sub6(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i_114_, i_114_, i_115_, i_115_, i, i_107_, bool_116_);
+					Class365_Sub1_Sub1_Sub6 class365_sub1_sub1_sub6 = new Class365_Sub1_Sub1_Sub6(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i_114_, i_114_, i_115_, i_115_, i, i_107_, bool_116_);
 					if (class365_sub1_sub1_sub6.method39(-2055372332)) {
 						class365_sub1_sub1_sub6.method33(class_ra, -2053499485);
 					}
 					class365_sub1_sub1 = class365_sub1_sub1_sub6;
 				} else {
-					class365_sub1_sub1 = new Class365_Sub1_Sub1_Sub5(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, isUnderwater, i_114_, i_117_ + i_114_ - 1, i_115_, i_115_ + i_118_ - 1, i, i_107_, i_108_);
+					class365_sub1_sub1 = new Class365_Sub1_Sub1_Sub5(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_109_, i_110_, i_111_, i_112_, i_113_, aBoolean2629, i_114_, i_117_ + i_114_ - 1, i_115_, i_115_ + i_118_ - 1, i, i_107_, i_108_);
 				}
 				aSceneGraph_2619.method4022(class365_sub1_sub1, false, (byte) 0);
-				if (1 == class432.anInt5376 * -1508517619 && !isUnderwater) {
+				if (1 == class432.anInt5376 * -1508517619 && !aBoolean2629) {
 					int i_124_;
 					if ((i_107_ & 0x1) == 0) {
 						i_124_ = 8;
@@ -675,7 +675,7 @@ public class Class240_Sub1 extends MapDecoder {
 					aSceneGraph_2619.aClass333_3512.method4067(i_124_, i_109_, i_114_, i_115_, class432.anInt5387 * 201968507, 0);
 				}
 				if (class432.anInt5380 * -2144543407 != 0 && null != region) {
-					region.method2741(i_114_, i_115_, i_117_, i_118_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 2);
+					region.addObject(i_114_, i_115_, i_117_, i_118_, class432.aBoolean5424, !class432.aBoolean5416);
 				}
 				if (class432.anInt5391 * -448694871 != 64) {
 					aSceneGraph_2619.method4023(i_109_, i_114_, i_115_, class432.anInt5391 * -448694871, (byte) 23);
@@ -693,13 +693,13 @@ public class Class240_Sub1 extends MapDecoder {
 			if (i == -1976050083 * Class424.aClass424_6596.anInt6613) {
 				Class365_Sub1_Sub3 class365_sub1_sub3;
 				if (bool) {
-					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, 0, 0, i, i_125_);
+					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_125_);
 					if (class365_sub1_sub3_sub2.method39(-1870688116)) {
 						class365_sub1_sub3_sub2.method33(class_ra, -2124402842);
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, 0, 0, i, i_125_, i_126_);
+					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_125_, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 861548591);
 				return true;
@@ -712,13 +712,13 @@ public class Class240_Sub1 extends MapDecoder {
 				}
 				Class365_Sub1_Sub3 class365_sub1_sub3;
 				if (bool) {
-					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, anIntArray7078[i_125_] * i_135_, anIntArray7075[i_125_] * i_135_, i, i_125_);
+					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, anIntArray7078[i_125_] * i_135_, anIntArray7075[i_125_] * i_135_, i, i_125_);
 					if (class365_sub1_sub3_sub2.method39(-1591018559)) {
 						class365_sub1_sub3_sub2.method33(class_ra, -2011263790);
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, i_135_ * anIntArray7078[i_125_], i_135_ * anIntArray7075[i_125_], i, i_125_, i_126_);
+					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_135_ * anIntArray7078[i_125_], i_135_ * anIntArray7075[i_125_], i, i_125_, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 1859376340);
 				return true;
@@ -731,13 +731,13 @@ public class Class240_Sub1 extends MapDecoder {
 				}
 				Class365_Sub1_Sub3 class365_sub1_sub3;
 				if (bool) {
-					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, i_136_ * anIntArray7078[i_125_], i_136_ * anIntArray7075[i_125_], i, i_125_ + 4);
+					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_136_ * anIntArray7078[i_125_], i_136_ * anIntArray7075[i_125_], i, i_125_ + 4);
 					if (class365_sub1_sub3_sub2.method39(-1847078642)) {
 						class365_sub1_sub3_sub2.method33(class_ra, -2043548826);
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, i_136_ * anIntArray7074[i_125_], anIntArray7081[i_125_] * i_136_, i, i_125_ + 4, i_126_);
+					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_136_ * anIntArray7074[i_125_], anIntArray7081[i_125_] * i_136_, i, i_125_ + 4, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 1431954302);
 				return true;
@@ -746,13 +746,13 @@ public class Class240_Sub1 extends MapDecoder {
 				int i_137_ = i_125_ + 2 & 0x3;
 				Class365_Sub1_Sub3 class365_sub1_sub3;
 				if (bool) {
-					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, 0, 0, i, i_137_ + 4);
+					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_137_ + 4);
 					if (class365_sub1_sub3_sub2.method39(-1553150372)) {
 						class365_sub1_sub3_sub2.method33(class_ra, -2133567145);
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, 0, 0, i, i_137_ + 4, i_126_);
+					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_137_ + 4, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 1921538390);
 				return true;
@@ -767,8 +767,8 @@ public class Class240_Sub1 extends MapDecoder {
 				Class365_Sub1_Sub3 class365_sub1_sub3;
 				Class365_Sub1_Sub3 class365_sub1_sub3_140_;
 				if (bool) {
-					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, i_139_ * anIntArray7074[i_125_], anIntArray7081[i_125_] * i_139_, i, i_125_ + 4);
-					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2_141_ = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, 0, 0, i, i_138_ + 4);
+					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2 = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_139_ * anIntArray7074[i_125_], anIntArray7081[i_125_] * i_139_, i, i_125_ + 4);
+					Class365_Sub1_Sub3_Sub2 class365_sub1_sub3_sub2_141_ = new Class365_Sub1_Sub3_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_138_ + 4);
 					if (class365_sub1_sub3_sub2.method39(-1237533744)) {
 						class365_sub1_sub3_sub2.method33(class_ra, -2074609967);
 					}
@@ -778,8 +778,8 @@ public class Class240_Sub1 extends MapDecoder {
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 					class365_sub1_sub3_140_ = class365_sub1_sub3_sub2_141_;
 				} else {
-					Class365_Sub1_Sub3_Sub1 class365_sub1_sub3_sub1 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, i_139_ * anIntArray7074[i_125_], i_139_ * anIntArray7081[i_125_], i, i_125_ + 4, i_126_);
-					Class365_Sub1_Sub3_Sub1 class365_sub1_sub3_sub1_142_ = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, isUnderwater, 0, 0, i, 4 + i_138_, i_126_);
+					Class365_Sub1_Sub3_Sub1 class365_sub1_sub3_sub1 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_139_ * anIntArray7074[i_125_], i_139_ * anIntArray7081[i_125_], i, i_125_ + 4, i_126_);
+					Class365_Sub1_Sub3_Sub1 class365_sub1_sub3_sub1_142_ = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, 4 + i_138_, i_126_);
 					class365_sub1_sub3 = class365_sub1_sub3_sub1;
 					class365_sub1_sub3_140_ = class365_sub1_sub3_sub1_142_;
 				}
@@ -817,16 +817,16 @@ public class Class240_Sub1 extends MapDecoder {
 		try {
 			aSceneGraph_2619.method4037();
 			if (!bool) {
-				if (1551623871 * planesHeight > 1) {
+				if (1551623871 * anInt2626 > 1) {
 					for (int i_147_ = 0; i_147_ < anInt2627 * -954368823; i_147_++) {
 						for (int i_148_ = 0; i_148_ < anInt2628 * 181474463; i_148_++) {
-							if ((tile_flags.flags[1][i_147_][i_148_] & 0x2) == 2) {
+							if ((aTileFlags_2635.flags[1][i_147_][i_148_] & 0x2) == 2) {
 								aSceneGraph_2619.method4011(i_147_, i_148_, -1135071672);
 							}
 						}
 					}
 				}
-				for (int i_149_ = 0; i_149_ < 1551623871 * planesHeight; i_149_++) {
+				for (int i_149_ = 0; i_149_ < 1551623871 * anInt2626; i_149_++) {
 					for (int i_150_ = 0; i_150_ <= anInt2628 * 181474463; i_150_++) {
 						for (int i_151_ = 0; i_151_ <= anInt2627 * -954368823; i_151_++) {
 							if ((aByteArrayArrayArray2637[i_149_][i_151_][i_150_] & 0x4) != 0) {
@@ -930,7 +930,7 @@ public class Class240_Sub1 extends MapDecoder {
 				int i_175_ = ground.method6341(i_171_, i_173_, (byte) -48) + ground.method6341(i_172_, i_173_, (byte) -81) + ground.method6341(i_171_, i_174_, (byte) -94) + ground.method6341(i_172_, i_174_, (byte) -87) >> 2;
 				int i_176_ = (i_169_ << 8) + (i_162_ << 9);
 				int i_177_ = (i_170_ << 8) + (i_163_ << 9);
-				boolean bool = aBoolean2632 && !isUnderwater && class432.aBoolean5385;
+				boolean bool = aBoolean2632 && !aBoolean2629 && class432.aBoolean5385;
 				if (class432.method5784(-1167401239)) {
 					SeqType.method4884(i_161_, i_162_, i_163_, i_165_, class432, null, null, (byte) 37);
 				}
@@ -940,17 +940,17 @@ public class Class240_Sub1 extends MapDecoder {
 						if (GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547.method5629(-807116560) != 0 || class432.anInt5382 * 1532834983 != 0 || -2144543407 * class432.anInt5380 == 1 || class432.aBoolean5410) {
 							Class365_Sub1_Sub2 class365_sub1_sub2;
 							if (bool_178_) {
-								Class365_Sub1_Sub2_Sub2 class365_sub1_sub2_sub2 = new Class365_Sub1_Sub2_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, isUnderwater, i_165_, bool);
+								Class365_Sub1_Sub2_Sub2 class365_sub1_sub2_sub2 = new Class365_Sub1_Sub2_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_165_, bool);
 								if (class365_sub1_sub2_sub2.method39(-1997643666)) {
 									class365_sub1_sub2_sub2.method33(class_ra, -2091324745);
 								}
 								class365_sub1_sub2 = class365_sub1_sub2_sub2;
 							} else {
-								class365_sub1_sub2 = new Class365_Sub1_Sub2_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, isUnderwater, i_165_, i_167_);
+								class365_sub1_sub2 = new Class365_Sub1_Sub2_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_165_, i_167_);
 							}
 							aSceneGraph_2619.method4057(i_161_, i_162_, i_163_, class365_sub1_sub2, 1853221006);
 							if (1 == class432.anInt5380 * -2144543407 && null != region) {
-								region.method2734(i_162_, i_163_, (byte) 2);
+								region.addFloor(i_162_, i_163_);
 							}
 						}
 					} else if (-1976050083 * Class424.aClass424_6611.anInt6613 == i_166_ || i_166_ == -1976050083 * Class424.aClass424_6604.anInt6613) {
@@ -958,12 +958,12 @@ public class Class240_Sub1 extends MapDecoder {
 						Class365_Sub1_Sub1 class365_sub1_sub1;
 						int i_179_;
 						if (bool_178_) {
-							Class365_Sub1_Sub1_Sub6 class365_sub1_sub1_sub6_180_ = new Class365_Sub1_Sub1_Sub6(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, isUnderwater, i_162_, i_162_ + i_169_ - 1, i_163_, i_170_ + i_163_ - 1, i_166_, i_165_, bool);
+							Class365_Sub1_Sub1_Sub6 class365_sub1_sub1_sub6_180_ = new Class365_Sub1_Sub1_Sub6(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_162_, i_162_ + i_169_ - 1, i_163_, i_170_ + i_163_ - 1, i_166_, i_165_, bool);
 							i_179_ = class365_sub1_sub1_sub6_180_.method4493((short) 230);
 							class365_sub1_sub1 = class365_sub1_sub1_sub6_180_;
 							class365_sub1_sub1_sub6 = class365_sub1_sub1_sub6_180_;
 						} else {
-							class365_sub1_sub1 = new Class365_Sub1_Sub1_Sub5(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, isUnderwater, i_162_, i_162_ + i_169_ - 1, i_163_, i_163_ + i_170_ - 1, i_166_, i_165_, i_167_);
+							class365_sub1_sub1 = new Class365_Sub1_Sub1_Sub5(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_162_, i_162_ + i_169_ - 1, i_163_, i_163_ + i_170_ - 1, i_166_, i_165_, i_167_);
 							i_179_ = 15;
 						}
 						if (aSceneGraph_2619.method4022(class365_sub1_sub1, false, (byte) 0)) {
@@ -982,25 +982,25 @@ public class Class240_Sub1 extends MapDecoder {
 							}
 						}
 						if (class432.anInt5380 * -2144543407 != 0 && null != region) {
-							region.method2741(i_162_, i_163_, i_169_, i_170_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 15);
+							region.addObject(i_162_, i_163_, i_169_, i_170_, class432.aBoolean5424, !class432.aBoolean5416);
 						}
 					} else if (Js5Archive.method1236(i_166_, -865214392) || VarPlayerType.method1930(i_166_, (byte) -21)) {
 						Class365_Sub1_Sub1 class365_sub1_sub1;
 						if (bool_178_) {
-							Class365_Sub1_Sub1_Sub6 class365_sub1_sub1_sub6 = new Class365_Sub1_Sub1_Sub6(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, isUnderwater, i_162_, i_169_ + i_162_ - 1, i_163_, i_170_ + i_163_ - 1, i_166_, i_165_, bool);
+							Class365_Sub1_Sub1_Sub6 class365_sub1_sub1_sub6 = new Class365_Sub1_Sub1_Sub6(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_162_, i_169_ + i_162_ - 1, i_163_, i_170_ + i_163_ - 1, i_166_, i_165_, bool);
 							if (class365_sub1_sub1_sub6.method39(-1419053588)) {
 								class365_sub1_sub1_sub6.method33(class_ra, -2081421218);
 							}
 							class365_sub1_sub1 = class365_sub1_sub1_sub6;
 						} else {
-							class365_sub1_sub1 = new Class365_Sub1_Sub1_Sub5(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, isUnderwater, i_162_, i_162_ + i_169_ - 1, i_163_, i_163_ + i_170_ - 1, i_166_, i_165_, i_167_);
+							class365_sub1_sub1 = new Class365_Sub1_Sub1_Sub5(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_162_, i_162_ + i_169_ - 1, i_163_, i_163_ + i_170_ - 1, i_166_, i_165_, i_167_);
 						}
 						aSceneGraph_2619.method4022(class365_sub1_sub1, false, (byte) 0);
-						if (aBoolean2632 && !isUnderwater && Js5Archive.method1236(i_166_, 1932287279) && -1976050083 * Class424.aClass424_6602.anInt6613 != i_166_ && i_161_ > 0 && class432.anInt5376 * -1508517619 != 0) {
+						if (aBoolean2632 && !aBoolean2629 && Js5Archive.method1236(i_166_, 1932287279) && -1976050083 * Class424.aClass424_6602.anInt6613 != i_166_ && i_161_ > 0 && class432.anInt5376 * -1508517619 != 0) {
 							aByteArrayArrayArray2637[i_161_][i_162_][i_163_] |= 0x4;
 						}
 						if (0 != class432.anInt5380 * -2144543407 && null != region) {
-							region.method2741(i_162_, i_163_, i_169_, i_170_, class432.aBoolean5424, !class432.aBoolean5416, (byte) 4);
+							region.addObject(i_162_, i_163_, i_169_, i_170_, class432.aBoolean5424, !class432.aBoolean5416);
 						}
 					} else if (method2239(class_ra, i_166_, i_165_, bool_178_, class432, i_167_, i_161_, i, i_176_, i_175_, i_177_, i_162_, i_163_, bool, ground, region, i_169_, i_170_, (byte) -37) || method2240(class_ra, i_166_, i_165_, bool_178_, class432, i_167_, i_161_, i, i_176_, i_175_, i_177_, i_162_, i_163_, -1189422227)) {
 						/* empty */

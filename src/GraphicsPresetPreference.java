@@ -118,7 +118,7 @@ public class GraphicsPresetPreference extends IntegerPreferenceField {
 									i_14_ = i_10_ - i_12_;
 								if (0 == i_13_ && 0 == i_14_ || i_13_ <= -GameClient.map.upperX(-1952640446) || i_13_ >= GameClient.map.upperX(-2135239698) || i_14_ <= -GameClient.map.upperY(115807107) || i_14_ >= GameClient.map.upperY(-1212701794)) {
 									WorldTile worldTile = GameClient.map.getRegionStart(681479919);
-									IPAddress.method6062(new StringBuilder().append(i_9_).append(Class26.COMMA).append(i_10_).append(" ").append(i_11_).append(Class26.COMMA).append(i_12_).append(" ").append(worldTile.x * -1760580017).append(Class26.COMMA).append(worldTile.y * 283514611).toString(), new RuntimeException(), (short) -16769);
+									IPAddress.method6062(new StringBuilder().append(i_9_).append(Symbol.COMMA).append(i_10_).append(" ").append(i_11_).append(Symbol.COMMA).append(i_12_).append(" ").append(worldTile.x * -1760580017).append(Symbol.COMMA).append(worldTile.y * 283514611).toString(), new RuntimeException(), (short) -16769);
 									break;
 								}
 								if (i_13_ > i_14_) {

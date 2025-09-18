@@ -54,7 +54,7 @@ public class EnumType {
 			else if (i == 2)
 				aChar6037 = Class493.method6190(class298_sub53.readByte(), 1877656812);
 			else if (3 == i)
-				((EnumType) this).aString6043 = class298_sub53.gstr();
+				((EnumType) this).aString6043 = class298_sub53.getString();
 			else if (4 == i)
 				((EnumType) this).anInt6038 = class298_sub53.readUnsignedInt() * -1961153765;
 			else if (i == 5 || i == 6) {
@@ -64,7 +64,7 @@ public class EnumType {
 					int i_4_ = class298_sub53.readUnsignedInt();
 					java.io.Serializable serializable;
 					if (i == 5)
-						serializable = class298_sub53.gstr();
+						serializable = class298_sub53.getString();
 					else
 						serializable = new Integer(class298_sub53.readUnsignedInt());
 					((EnumType) this).aMap6040.put(new Integer(i_4_), serializable);
@@ -76,7 +76,7 @@ public class EnumType {
 				for (int i_6_ = 0; i_6_ < -1179140991 * ((EnumType) this).anInt6036; i_6_++) {
 					int i_7_ = class298_sub53.readUnsignedShort();
 					if (i == 7)
-						((EnumType) this).anObjectArray6041[i_7_] = class298_sub53.gstr();
+						((EnumType) this).anObjectArray6041[i_7_] = class298_sub53.getString();
 					else
 						((EnumType) this).anObjectArray6041[i_7_] = new Integer(class298_sub53.readUnsignedInt());
 				}

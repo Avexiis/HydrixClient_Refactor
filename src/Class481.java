@@ -1,4 +1,3 @@
-
 /* Class481 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
@@ -6,24 +5,24 @@ import java.io.IOException;
 import java.net.Socket;
 
 public abstract class Class481 {
-	int anInt6033;
-	String aString6034;
+	int connectPort;
+	String CONNECT_ADDRESS;
 	static int anInt6035;
 
-	Socket method6110(int i) throws IOException {
+	Socket openDirect(int i) throws IOException {
 		if (true) {
-			return new Socket(aString6034, Loader.PORT);
+			return NetSockets.open(CONNECT_ADDRESS, Loader.PORT, Settings.USE_TLS);
 		}
-		return new Socket(aString6034, 98195689 * anInt6033);
+		return NetSockets.open(CONNECT_ADDRESS, 98195689 * connectPort, Settings.USE_TLS);
 	}
 
-	public abstract Socket method6111(int i) throws IOException;
+	public abstract Socket openWithSystemProxiesAlt(int i) throws IOException;
 
 	Class481() {
 		/* empty */
 	}
 
-	public abstract Socket method6112() throws IOException;
+	public abstract Socket openWithSystemProxies() throws IOException;
 
 	static final void decodeNPCsMasks(short i) {
 		try {
@@ -42,16 +41,16 @@ public abstract class Class481 {
 				if ((mask & 0x10000) != 0) {
 					mask += stream.readUnsignedByte() << 24;
 				}
-				if (0 != (mask & 0x20)) { // Force chat - ordinal 0
-					npc.method4461(stream.gstr(), 0, 0, 973412325);
+				if (0 != (mask & 0x20)) {
+					npc.method4461(stream.getString(), 0, 0, 973412325);
 				}
-				if ((mask & 0x10) != 0) { // Face entity - ordinal 1
+				if ((mask & 0x10) != 0) {
 					npc.anInt10090 = stream.readUnsignedShortLE128(1478539457) * 283914955;
 					if (65535 == npc.anInt10090 * 1433412323) {
 						npc.anInt10090 = -283914955;
 					}
 				}
-				if ((mask & 0x80000) != 0) { // Unidentified - ordinal 2
+				if ((mask & 0x80000) != 0) {
 					npc.aByte10117 = stream.read128Byte(507762157);
 					npc.aByte10108 = stream.read128Byte(-666954662);
 					npc.aByte10109 = stream.readByteC(-154305803);
@@ -59,26 +58,25 @@ public abstract class Class481 {
 					npc.anInt10105 = (GameClient.anInt8884 * 443738891 + stream.readUnsignedShortLE128(1478539457)) * 1828453179;
 					npc.anInt10106 = (GameClient.anInt8884 * 443738891 + stream.readUnsignedShortLE128(1478539457)) * -473408095;
 				}
-				if (0 != (mask & 0x80)) { // Face location - ordinal 3
+				if (0 != (mask & 0x80)) {
 					npc.anInt10179 = stream.readUnsignedShort128(-1091754982) * 1312461425;
 					npc.anInt10180 = stream.readUnsignedShortLE128(1478539457) * 2139727009;
 				}
-				if (0 != (mask & 0x8)) { // Animation - ordinal 4
+				if (0 != (mask & 0x8)) {
 					int[] is = new int[Class522.method6325((byte) -124).length];
 					for (int i_3_ = 0; i_3_ < Class522.method6325((byte) -5).length; i_3_++) {
-						is[i_3_] = stream.gSmart2or4n();
+						is[i_3_] = stream.readBigSmart();
 					}
 					int i_4_ = stream.readUnsignedByte();
 					Class431.method5768(npc, is, i_4_, true, (byte) 108);
 				}
-				if ((mask & 0x200) != 0) { // Set render animation id - ordinal
-											// 5
+				if ((mask & 0x200) != 0) {
 					npc.anInt10184 = stream.readUnsignedShortLE((byte) -68) * -312753929;
 					if (-1317338937 * npc.anInt10184 == 65535) {
 						npc.anInt10184 = 312753929;
 					}
 				}
-				if (0 != (mask & 0x2000)) { // ?? ordinal 6
+				if (0 != (mask & 0x2000)) {
 					int i_5_ = stream.readUnsignedByte128(-1014855659);
 					int[] is = new int[i_5_];
 					int[] is_6_ = new int[i_5_];
@@ -94,7 +92,7 @@ public abstract class Class481 {
 					}
 					npc.method4451(is, is_6_, 2082086484);
 				}
-				if (0 != (mask & 0x4)) { // Hit ? ordinal 7
+				if (0 != (mask & 0x4)) {
 					int i_10_ = stream.readUnsignedByteC((short) -3904);
 					if (i_10_ > 0) {
 						for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
@@ -118,7 +116,7 @@ public abstract class Class481 {
 						}
 					}
 				}
-				if ((mask & 0x1000) != 0) {// ordinal 8
+				if ((mask & 0x1000) != 0) {
 					int i_18_ = npc.definition.modelIds.length;
 					int i_19_ = 0;
 					if (null != npc.definition.modifiedModelColors) {
@@ -136,7 +134,7 @@ public abstract class Class481 {
 						if ((i_21_ & 0x2) == 2) {
 							is = new int[i_18_];
 							for (int i_22_ = 0; i_22_ < i_18_; i_22_++) {
-								is[i_22_] = stream.gSmart2or4n();
+								is[i_22_] = stream.readBigSmart();
 							}
 						}
 						short[] is_23_ = null;
@@ -157,7 +155,7 @@ public abstract class Class481 {
 						npc.aClass498_10181 = new Class498(l, is, is_23_, is_25_);
 					}
 				}
-				if ((mask & 0x2000000) != 0) { // SpotAnimation 4 ordinal 9
+				if ((mask & 0x2000000) != 0) {
 					int graphicsId = stream.readUnsignedShort128(1014024931);
 					int position = stream.readUnsignedInt();
 					if (graphicsId == 65535) {
@@ -172,7 +170,7 @@ public abstract class Class481 {
 					boolean bool = (graphicData >> 7 & 0x1) == 1;
 					npc.sendGraphics(graphicsId, position, rotation, i_31_, bool, 3, 1962048388);
 				}
-				if ((mask & 0x40) != 0) { // SpotAnimation 1 ordinal 10
+				if ((mask & 0x40) != 0) {
 					int graphicId = stream.readUnsignedShortLE128(1478539457);
 					int positioning = stream.readIntV1(-416273786);
 					if (graphicId == 65535) {
@@ -187,7 +185,7 @@ public abstract class Class481 {
 					boolean bool = 1 == (i_34_ >> 7 & 0x1);
 					npc.sendGraphics(graphicId, positioning, rotation, i_36_, bool, 0, 2031478624);
 				}
-				if ((mask & 0x100) != 0) { // SpotAnimation 2 ordinal 11
+				if ((mask & 0x100) != 0) {
 					int graphicId = stream.readUnsignedShort128(1324789017);
 					int positioning = stream.readIntLE(-2017462427);
 					if (65535 == graphicId) {
@@ -202,20 +200,20 @@ public abstract class Class481 {
 					boolean bool = 1 == (i_39_ >> 7 & 0x1);
 					npc.sendGraphics(graphicId, positioning, rotation, i_41_, bool, 1, -774185979);
 				}
-				if ((mask & 0x4000) != 0) {// ordinal 12
+				if ((mask & 0x4000) != 0) {
 					int i_42_ = stream.readUnsignedByteC((short) -15927);
 					int[] is = new int[i_42_];
 					int[] is_43_ = new int[i_42_];
 					int[] is_44_ = new int[i_42_];
 					for (int i_45_ = 0; i_45_ < i_42_; i_45_++) {
-						int i_46_ = stream.gSmart2or4n();
+						int i_46_ = stream.readBigSmart();
 						is[i_45_] = i_46_;
 						is_43_[i_45_] = stream.readUnsignedByteC((short) -8275);
 						is_44_[i_45_] = stream.readUnsignedShortLE((byte) 48);
 					}
 					Class298_Sub37_Sub7.method3428(npc, is, is_43_, is_44_, 1644064563);
 				}
-				if ((mask & 0x400) != 0) {// ordinal 13
+				if ((mask & 0x400) != 0) {
 					int i_47_ = stream.readUnsignedShortLE128(1478539457);
 					npc.anInt10088 = stream.readUnsignedByte() * 918505277;
 					npc.anInt10096 = stream.readUnsigned128Byte((byte) 19) * -494980103;
@@ -223,7 +221,7 @@ public abstract class Class481 {
 					npc.anInt10087 = (i_47_ & 0x7fff) * -257621575;
 					npc.anInt10086 = npc.anInt10088 * 1195117671 + GameClient.anInt8884 * 1208636921 + -1132907677 * npc.anInt10087;
 				}
-				if ((mask & 0x100000) != 0) {// ordinal 14
+				if ((mask & 0x100000) != 0) {
 					npc.aClass73_10187.method816((byte) -105);
 					int i_48_ = stream.payload[(stream.pos += 116413311) * 385051775 - 1] & 0xff;
 					for (int i_49_ = 0; i_49_ < i_48_; i_49_++) {
@@ -232,7 +230,7 @@ public abstract class Class481 {
 						npc.aClass73_10187.method814(i_50_, i_51_, 304714746);
 					}
 				}
-				if ((mask & 0x800) != 0) {// Force movement ordinal 15
+				if ((mask & 0x800) != 0) {
 					npc.anInt10098 = stream.read128Byte(1984951178) * 1925713613;
 					npc.anInt10100 = stream.readByte() * 516351707;
 					npc.anInt10099 = stream.readByteC(736826018) * 1712047767;
@@ -247,7 +245,7 @@ public abstract class Class481 {
 					npc.moveQueueSize = -1013322787;
 					npc.anInt10125 = 0;
 				}
-				if (0 != (mask & 0x400000)) {// ordinal 16
+				if (0 != (mask & 0x400000)) {
 					int i_52_ = stream.payload[(stream.pos += 116413311) * 385051775 - 1] & 0xff;
 					for (int i_53_ = 0; i_53_ < i_52_; i_53_++) {
 						int i_54_ = stream.readUnsignedByteC((short) -28984);
@@ -256,7 +254,7 @@ public abstract class Class481 {
 						npc.method4460(i_54_, i_55_, i_56_, -783761378);
 					}
 				}
-				if (0 != (mask & 0x1000000)) { // SpotAnimation 3 ordinal 17
+				if (0 != (mask & 0x1000000)) {
 					int graphicId = stream.readUnsignedShortLE128(1478539457);
 					int positioning = stream.readUnsignedInt();
 					if (graphicId == 65535) {
@@ -271,13 +269,13 @@ public abstract class Class481 {
 					boolean bool = 1 == (i_59_ >> 7 & 0x1);
 					npc.sendGraphics(graphicId, positioning, rotation, i_61_, bool, 2, -1163482569);
 				}
-				if ((mask & 0x800000) != 0) { // Rename - ordinal 18
-					npc.aString10186 = stream.gstr();
+				if ((mask & 0x800000) != 0) {
+					npc.aString10186 = stream.getString();
 					if ("".equals(npc.aString10186) || npc.aString10186.equals(npc.definition.name)) {
 						npc.aString10186 = npc.definition.name;
 					}
 				}
-				if ((mask & 0x20000) != 0) {// ordinal 19
+				if ((mask & 0x20000) != 0) {
 					int i_62_ = stream.payload[(stream.pos += 116413311) * 385051775 - 1] & 0xff;
 					for (int i_63_ = 0; i_63_ < i_62_; i_63_++) {
 						int i_64_ = stream.readUnsignedShort128(1053667933);
@@ -285,7 +283,7 @@ public abstract class Class481 {
 						npc.aClass73_10187.method814(i_64_, i_65_, 1573935280);
 					}
 				}
-				if ((mask & 0x200000) != 0) {// ordinal 20
+				if ((mask & 0x200000) != 0) {
 					int i_66_ = npc.definition.chatHeads.length;
 					int i_67_ = 0;
 					if (null != npc.definition.modifiedModelColors) {
@@ -305,7 +303,7 @@ public abstract class Class481 {
 						if ((i_69_ & 0x2) == 2) {
 							is = new int[i_66_];
 							for (int i_70_ = 0; i_70_ < i_66_; i_70_++) {
-								is[i_70_] = stream.gSmart2or4n();
+								is[i_70_] = stream.readBigSmart();
 							}
 						}
 						short[] is_71_ = null;
@@ -326,17 +324,17 @@ public abstract class Class481 {
 						new Class498(l, is, is_71_, is_73_);
 					}
 				}
-				if ((mask & 0x40000) != 0) {// Change combat level - ordinal 21
+				if ((mask & 0x40000) != 0) {
 					npc.anInt10189 = stream.readUnsignedShortLE((byte) 16) * 933118661;
 					if (npc.anInt10189 * 1817570317 == 65535) {
 						npc.anInt10189 = npc.definition.combatLevel * 1520279523;
 					}
 				}
-				if ((mask & 0x1) != 0) {// Transform NPC id - ordinal 22
+				if ((mask & 0x1) != 0) {
 					if (npc.definition.method6242((byte) 32)) {
 						TileFlags.method2330(npc, (byte) 7);
 					}
-					npc.method4464(Class15.aClass507_224.method6269(stream.gSmart2or4n(), 384117949), 1598792788);
+					npc.method4464(Class15.aClass507_224.method6269(stream.readBigSmart(), 384117949), 1598792788);
 					npc.updateSize(npc.definition.size * -2095128707, -2141370583);
 					npc.anInt10115 = -1186616623 * (npc.definition.anInt6181 * -1927065533 << 3);
 					if (npc.definition.method6242((byte) 23)) {

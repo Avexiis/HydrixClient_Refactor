@@ -60,7 +60,7 @@ public class Js5ConfigGroup {
 	public int anInt1460;
 	int anInt1461;
 	public static String aString1462;
-	public static MapIconTypeList aMapIconTypeList_1463;
+	public static Class487 aClass487_1463;
 
 	public int method1305(int i, int i_0_) {
 		try {
@@ -186,17 +186,17 @@ public class Js5ConfigGroup {
 
 	static void method1311(int i) {
 		try {
-			Class360.anInt3868 = -1058684408;
-			Class360.aClass25_3905 = GameClient.aClass25_8693;
+			LoginData.anInt3868 = -1058684408;
+			LoginData.aClass25_3905 = GameClient.aClass25_8693;
 			if (GameClient.aByteArray8843 != null) {
 				Packet class298_sub53 = new Packet(GameClient.aByteArray8843);
-				Class360.aLong3874 = (class298_sub53.readLong((short) 19840) * -2742373017286080113L);
-				Class360.aLong3911 = (class298_sub53.readLong((short) 15472) * 3207425516430892907L);
+				LoginData.aLong3874 = (class298_sub53.readLong((short) 19840) * -2742373017286080113L);
+				LoginData.aLong3911 = (class298_sub53.readLong((short) 15472) * 3207425516430892907L);
 			}
-			if (122690138525332847L * Class360.aLong3874 < 0L)
+			if (122690138525332847L * LoginData.aLong3874 < 0L)
 				Class78.method845(35, 1176559477);
 			else
-				Class460.method5981(false, true, "", "", Class360.aLong3874 * 122690138525332847L);
+				LoginPacket.method5981(false, true, "", "", LoginData.aLong3874 * 122690138525332847L);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ew.y(").append(')').toString());
 		}

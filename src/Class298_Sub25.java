@@ -67,7 +67,7 @@ public class Class298_Sub25 extends Node {
 				((Class298_Sub25) this).aBoolean7354 = true;
 			aLong3188 = (class298_sub53.readLong((short) 1568) * 4191220306876042991L);
 			((Class298_Sub25) this).aLong7361 = (class298_sub53.readLong((short) 25426) * 8816161044679006451L);
-			aString7358 = class298_sub53.gstr();
+			aString7358 = class298_sub53.getString();
 			class298_sub53.readUnsignedByte();
 			aByte7355 = class298_sub53.readByte();
 			aByte7360 = class298_sub53.readByte();
@@ -79,7 +79,7 @@ public class Class298_Sub25 extends Node {
 					if (((Class298_Sub25) this).aBoolean7353)
 						class298_sub53.readLong((short) 26032);
 					if (((Class298_Sub25) this).aBoolean7354)
-						class163.aString1681 = class298_sub53.gstr();
+						class163.aString1681 = class298_sub53.getString();
 					class163.aByte1683 = class298_sub53.readByte();
 					class163.anInt1682 = class298_sub53.readUnsignedShort() * -62810701;
 					aClass163Array7359[i_3_] = class163;

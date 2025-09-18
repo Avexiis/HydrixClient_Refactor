@@ -69,9 +69,9 @@ public class VarClanSettings {
 	public static void method4659(int i, int i_4_) {
 		try {
 			if (Class400.method4931((byte) 56)) {
-				if (2084404473 * Class360.anInt3873 != i)
-					Class360.aLong3874 = 2742373017286080113L;
-				Class360.anInt3873 = i * 2035975497;
+				if (2084404473 * LoginData.anInt3873 != i)
+					LoginData.aLong3874 = 2742373017286080113L;
+				LoginData.anInt3873 = i * 2035975497;
 				GameClient.aClass25_8693.method384((byte) 49);
 				Class439.method5851(4, 1551250847);
 			}

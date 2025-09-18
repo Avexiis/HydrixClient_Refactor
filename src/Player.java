@@ -103,7 +103,7 @@ public class Player extends Entity {
 						int i_8_ = stream.readUnsignedByte();
 						int i_9_ = (i_7_ << 8) + i_8_;
 						if (i_6_ == 0 && 65535 == i_9_) {
-							i_5_ = stream.gSmart2or4n();
+							i_5_ = stream.readBigSmart();
 							teamId = (stream.readUnsignedByte() * 1076333291);
 							break;
 						}
@@ -141,7 +141,7 @@ public class Player extends Entity {
 				is_14_[i_15_] = i_16_;
 			}
 			((Player) this).faceDirection = stream.readUnsignedShort() * 148972467;
-			displayName = stream.gstr();
+			displayName = stream.getString();
 			username = displayName;
 			if (this == Class287.myPlayer)
 				RuntimeException_Sub2.aString6305 = displayName;
@@ -276,9 +276,9 @@ public class Player extends Entity {
 							drawIcons(class_ra, class222, modelParts[0], l, l_33_, 408071539 * hintIcon.anInt263, l_34_);
 						}
 						if (10 == hintIcon.anInt266 * 958933333 && -841622081 * hintIcon.anInt256 >= 0 && (-841622081 * hintIcon.anInt256 < (GameClient.players).length)) {
-							Player class365_sub1_sub1_sub2_sub2_35_ = (GameClient.players[hintIcon.anInt256 * -841622081]);
-							if (class365_sub1_sub1_sub2_sub2_35_ != null) {
-								SceneObjectPosition sceneObjectPosition = (SceneObjectPosition.method2011(class365_sub1_sub1_sub2_sub2_35_.method4337().aSceneObjectPosition_2599, Class287.myPlayer.method4337().aSceneObjectPosition_2599));
+							Player player_35_ = (GameClient.players[hintIcon.anInt256 * -841622081]);
+							if (player_35_ != null) {
+								SceneObjectPosition sceneObjectPosition = (SceneObjectPosition.method2011(player_35_.method4337().aSceneObjectPosition_2599, Class287.myPlayer.method4337().aSceneObjectPosition_2599));
 								int i_36_ = (int) sceneObjectPosition.x;
 								int i_37_ = (int) sceneObjectPosition.z;
 								drawIcons(class_ra, class222, modelParts[0], (long) i_36_, (long) i_37_, 408071539 * hintIcon.anInt263, 92160000L);
@@ -633,9 +633,9 @@ public class Player extends Entity {
 						drawIcons(class_ra, class222, modelParts[0], l, l_80_, 408071539 * hintIcon.anInt263, l_81_);
 					}
 					if (10 == hintIcon.anInt266 * 958933333 && -841622081 * hintIcon.anInt256 >= 0 && (-841622081 * hintIcon.anInt256 < (GameClient.players).length)) {
-						Player class365_sub1_sub1_sub2_sub2_82_ = (GameClient.players[hintIcon.anInt256 * -841622081]);
-						if (class365_sub1_sub1_sub2_sub2_82_ != null) {
-							SceneObjectPosition sceneObjectPosition = (SceneObjectPosition.method2011(class365_sub1_sub1_sub2_sub2_82_.method4337().aSceneObjectPosition_2599, Class287.myPlayer.method4337().aSceneObjectPosition_2599));
+						Player player_82_ = (GameClient.players[hintIcon.anInt256 * -841622081]);
+						if (player_82_ != null) {
+							SceneObjectPosition sceneObjectPosition = (SceneObjectPosition.method2011(player_82_.method4337().aSceneObjectPosition_2599, Class287.myPlayer.method4337().aSceneObjectPosition_2599));
 							int i_83_ = (int) sceneObjectPosition.x;
 							int i_84_ = (int) sceneObjectPosition.z;
 							drawIcons(class_ra, class222, modelParts[0], (long) i_83_, (long) i_84_, 408071539 * hintIcon.anInt263, 92160000L);

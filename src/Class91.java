@@ -122,15 +122,15 @@ public class Class91 {
 		}
 	}
 
-	static void method1001(Entity class365_sub1_sub1_sub2, byte i) {
+	static void method1001(Entity entity, byte i) {
 		try {
-			if (class365_sub1_sub1_sub2 instanceof NPC) {
-				NPC class365_sub1_sub1_sub2_sub1 = (NPC) class365_sub1_sub1_sub2;
-				if (class365_sub1_sub1_sub2_sub1.definition != null)
-					Class140.method1555(class365_sub1_sub1_sub2_sub1, (class365_sub1_sub1_sub2_sub1.plane != (Class287.myPlayer.plane)), (byte) -64);
-			} else if (class365_sub1_sub1_sub2 instanceof Player) {
-				Player class365_sub1_sub1_sub2_sub2 = (Player) class365_sub1_sub1_sub2;
-				Class298_Sub47.method3535(class365_sub1_sub1_sub2_sub2, ((Class287.myPlayer.plane) != (class365_sub1_sub1_sub2_sub2.plane)), 1531362210);
+			if (entity instanceof NPC) {
+				NPC npc = (NPC) entity;
+				if (npc.definition != null)
+					Class140.method1555(npc, (npc.plane != (Class287.myPlayer.plane)), (byte) -64);
+			} else if (entity instanceof Player) {
+				Player player = (Player) entity;
+				Class298_Sub47.method3535(player, ((Class287.myPlayer.plane) != (player.plane)), 1531362210);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ds.g(").append(')').toString());

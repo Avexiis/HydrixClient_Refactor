@@ -204,7 +204,7 @@ public class Packet extends Node {
 		}
 	}
 
-	public String gstr() {
+	public String getString() {
 		try {
 			int i_13_ = 385051775 * pos;
 			while (payload[(pos += 116413311) * 385051775 - 1] != 0) {
@@ -762,7 +762,7 @@ public class Packet extends Node {
 		}
 	}
 
-	public int gSmart2or4n() {// readBigSmart
+	public int readBigSmart() {
 		try {
 			if (payload[385051775 * pos] < 0) {
 				return readUnsignedInt() & 0x7fffffff;
@@ -784,7 +784,7 @@ public class Packet extends Node {
 			}
 			int i_83_ = 8 * i;
 			long l = 0L;
-			for (/**/; i_83_ >= 0; i_83_ -= 8) {
+			for (; i_83_ >= 0; i_83_ -= 8) {
 				l |= (payload[(pos += 116413311) * 385051775 - 1] & 0xffL) << i_83_;
 			}
 			return l;
@@ -841,7 +841,7 @@ public class Packet extends Node {
 				pos += 116413311;
 				return null;
 			}
-			return gstr();
+			return getString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "acx.ap(" + ')');
 		}
@@ -869,7 +869,8 @@ public class Packet extends Node {
 
 	static final void method3655(ClientScript2 class403, int i) {
 		try {
-			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1] = GraphicsAutoSetup.clientPreferences.antialiasPreference.method5674(-484902399) && OverlayType.activeToolkit.method5032() ? 1 : 0;
+			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1]
+					= GraphicsAutoSetup.clientPreferences.antialiasPreference.method5674(-484902399) && OverlayType.activeToolkit.method5032() ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "acx.anb(" + ')');
 		}

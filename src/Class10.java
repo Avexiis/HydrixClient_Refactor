@@ -79,7 +79,7 @@ public class Class10 {
 
 	static final void method325(ClientScript2 class403, byte i) {
 		try {
-			System.out.println(((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 -= 969361751) * -203050393)]);
+			//System.out.println(((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 -= 969361751) * -203050393)]);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ak.afw(").append(')').toString());
 		}

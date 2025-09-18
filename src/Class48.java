@@ -22,12 +22,11 @@ public class Class48 {
 		OpenGL.glGetShaderiv(i_1_, 35713, anIntArray496, 0);
 		if (anIntArray496[0] == 0) {
 			if (anIntArray496[0] == 0)
-				System.out.println("");
-			OpenGL.glGetShaderiv(i_1_, 35716, anIntArray496, 1);
+				OpenGL.glGetShaderiv(i_1_, 35716, anIntArray496, 1);
 			if (anIntArray496[1] > 1) {
 				byte[] is = new byte[anIntArray496[1]];
 				OpenGL.glGetShaderInfoLog(i_1_, anIntArray496[1], anIntArray496, 0, is, 0);
-				System.out.println(new String(is));
+				//System.out.println(new String(is));
 			}
 			if (anIntArray496[0] == 0) {
 				OpenGL.glDeleteShader(i_1_);

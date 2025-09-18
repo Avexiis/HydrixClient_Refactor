@@ -51,7 +51,7 @@ public class Class273 {
 	static final void method2560(ClientScript2 class403, int i) {
 		try {
 			((ClientScript2) class403).anInt5241 -= 1938723502;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class26.method397((String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 * -203050393)]), ((String) (((ClientScript2) class403).anObjectArray5240[-203050393 * (((ClientScript2) class403).anInt5241) + 1])), Class321.ACTIVE_LANGUAGE, -1813623072);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Symbol.method397((String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 * -203050393)]), ((String) (((ClientScript2) class403).anObjectArray5240[-203050393 * (((ClientScript2) class403).anInt5241) + 1])), Class321.ACTIVE_LANGUAGE, -1813623072);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("li.zz(").append(')').toString());
 		}
@@ -143,8 +143,8 @@ public class Class273 {
 				try {
 					int i_20_ = class298_sub53.readUnsignedByte();
 					if (i_20_ == 0 || i_20_ == 1 || 2 == i_20_) {
-						String string = class298_sub53.gstr();
-						String string_21_ = class298_sub53.gstr();
+						String string = class298_sub53.getString();
+						String string_21_ = class298_sub53.getString();
 						int i_22_ = 0;
 						if (1 == i_20_)
 							i_22_ = class298_sub53.readUnsignedInt();
@@ -154,13 +154,13 @@ public class Class273 {
 							throw new SecurityException();
 						((Class298_Sub47) class298_sub47).aFieldArray7539[i_19_] = Class136.method1498(string, (byte) 81).getDeclaredField(string_21_);
 					} else if (i_20_ == 3 || 4 == i_20_) {
-						String string = class298_sub53.gstr();
-						String string_23_ = class298_sub53.gstr();
+						String string = class298_sub53.getString();
+						String string_23_ = class298_sub53.getString();
 						int i_24_ = class298_sub53.readUnsignedByte();
 						String[] strings = new String[i_24_];
 						for (int i_25_ = 0; i_25_ < i_24_; i_25_++)
-							strings[i_25_] = class298_sub53.gstr();
-						String string_26_ = class298_sub53.gstr();
+							strings[i_25_] = class298_sub53.getString();
+						String string_26_ = class298_sub53.getString();
 						byte[][] is = new byte[i_24_][];
 						if (i_20_ == 3) {
 							for (int i_27_ = 0; i_27_ < i_24_; i_27_++) {

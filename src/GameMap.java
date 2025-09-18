@@ -6,7 +6,7 @@ public class GameMap {
 	byte[][] aByteArrayArray3002;
 	Class115 aClass115_3003;
 	Class266 aClass266_3004;
-	MapKeys aMapKeys_3005;
+	Class296 aClass296_3005;
 	WorldTile aWorldTile_3006 = new WorldTile();
 	WorldTile aWorldTile_3007 = new WorldTile();
 	public boolean aBoolean3008;
@@ -80,9 +80,9 @@ public class GameMap {
 		}
 	}
 
-	public MapKeys method2631(int i) {
+	public Class296 method2631(int i) {
 		try {
-			return aMapKeys_3005;
+			return aClass296_3005;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lt.u(").append(')').toString());
 		}
@@ -122,7 +122,7 @@ public class GameMap {
 
 	void method2636(Class240_Sub1 class240_sub1, byte[][] datas, byte i) {
 		try {
-			for (int i_0_ = 0; i_0_ < 1551623871 * class240_sub1.planesHeight; i_0_++) {
+			for (int i_0_ = 0; i_0_ < 1551623871 * class240_sub1.anInt2626; i_0_++) {
 				if (!aBoolean3018) {
 					Class247.method2365(-286862514);
 				}
@@ -131,7 +131,7 @@ public class GameMap {
 						int i_3_ = anIntArrayArrayArray3043[i_0_][i_1_][i_2_];
 						if (-1 != i_3_) {
 							int i_4_ = i_3_ >> 24 & 0x3;
-							if (!class240_sub1.isUnderwater || i_4_ == 0) {
+							if (!class240_sub1.aBoolean2629 || i_4_ == 0) {
 								int i_5_ = i_3_ >> 1 & 0x3;
 								int i_6_ = i_3_ >> 14 & 0x3ff;
 								int i_7_ = i_3_ >> 3 & 0x7ff;
@@ -144,7 +144,7 @@ public class GameMap {
 										if (osrs) {
 											buffer.readUnsignedInt();
 										}
-										class240_sub1.deserialize_region(buffer, i_0_, i_1_ * 8, i_2_ * 8, i_4_, i_6_, i_7_, i_5_, SCENE_CLIP_DATA_PLANES, osrs);
+										class240_sub1.deserialise_region(buffer, i_0_, i_1_ * 8, i_2_ * 8, i_4_, i_6_, i_7_, i_5_, SCENE_CLIP_DATA_PLANES, osrs);
 										class240_sub1.method2236(OverlayType.activeToolkit, buffer, i_0_, 8 * i_1_, 8 * i_2_, i_4_, i_6_, i_7_, i_5_, -2145736118);
 										break;
 									}
@@ -154,7 +154,7 @@ public class GameMap {
 					}
 				}
 			}
-			for (int i_10_ = 0; i_10_ < 1551623871 * class240_sub1.planesHeight; i_10_++) {
+			for (int i_10_ = 0; i_10_ < 1551623871 * class240_sub1.anInt2626; i_10_++) {
 				if (!aBoolean3018) {
 					Class247.method2365(788826930);
 				}
@@ -162,7 +162,7 @@ public class GameMap {
 					for (int i_12_ = 0; i_12_ < anInt3011 * -1456212765 >> 3; i_12_++) {
 						int i_13_ = anIntArrayArrayArray3043[i_10_][i_11_][i_12_];
 						if (-1 == i_13_) {// XXX
-							class240_sub1.calculateMapHeights(i_10_, 8 * i_11_, 8 * i_12_, 8, 8);
+							class240_sub1.method2214(i_10_, 8 * i_11_, 8 * i_12_, 8, 8, 335584387);
 						}
 					}
 				}
@@ -572,7 +572,7 @@ public class GameMap {
 				}
 				aWorldTile_3006 = new WorldTile(0, 8 * (anInt3030 * 19679283 - (-991330803 * anInt3039 >> 4)), 8 * (306966675 * anInt3009 - (anInt3011 * -1456212765 >> 4)));
 				aMapDetails_3017 = WorldMap.method3708(-1760580017 * aWorldTile_3006.x, aWorldTile_3006.y * 283514611);
-				aMapKeys_3005 = null;
+				aClass296_3005 = null;
 				if (!aBoolean3018) {
 					method2663(i_58_, 1177231331);
 				}
@@ -630,7 +630,7 @@ public class GameMap {
 				if (!aBoolean3018) {
 					Class247.method2365(-918952780);
 				}
-				class240_sub1.calculateMapHeightPlanes(i_69_, i_70_, 64, 64, (byte) 0);
+				class240_sub1.method2213(i_69_, i_70_, 64, 64, (byte) 0);
 			}
 		}
 	}
@@ -789,16 +789,16 @@ public class GameMap {
 				}
 			}
 			for (int i_101_ = 0; i_101_ < 2048; i_101_++) {
-				Player class365_sub1_sub1_sub2_sub2 = GameClient.players[i_101_];
-				if (class365_sub1_sub1_sub2_sub2 != null) {
-					for (int i_102_ = 0; i_102_ < class365_sub1_sub1_sub2_sub2.scenePositionXQueue.length; i_102_++) {
-						class365_sub1_sub1_sub2_sub2.scenePositionXQueue[i_102_] -= i_91_;
-						class365_sub1_sub1_sub2_sub2.scenePositionYQueue[i_102_] -= i_92_;
+				Player player = GameClient.players[i_101_];
+				if (player != null) {
+					for (int i_102_ = 0; i_102_ < player.scenePositionXQueue.length; i_102_++) {
+						player.scenePositionXQueue[i_102_] -= i_91_;
+						player.scenePositionYQueue[i_102_] -= i_92_;
 					}
-					SceneObjectPosition sceneObjectPosition = SceneObjectPosition.method2005(class365_sub1_sub1_sub2_sub2.method4337().aSceneObjectPosition_2599);
+					SceneObjectPosition sceneObjectPosition = SceneObjectPosition.method2005(player.method4337().aSceneObjectPosition_2599);
 					sceneObjectPosition.x -= 512 * i_91_;
 					sceneObjectPosition.z -= i_92_ * 512;
-					class365_sub1_sub1_sub2_sub2.method4340(sceneObjectPosition);
+					player.method4340(sceneObjectPosition);
 					sceneObjectPosition.method2006();
 				}
 			}
@@ -884,7 +884,7 @@ public class GameMap {
 			aClass240_Sub1_3029 = null;
 			for (int i_109_ = 0; i_109_ < 4; i_109_++) {
 				if (null != SCENE_CLIP_DATA_PLANES[i_109_]) {
-					SCENE_CLIP_DATA_PLANES[i_109_].method2731(-2096339600);
+					SCENE_CLIP_DATA_PLANES[i_109_].reset(-2096339600);
 				}
 			}
 			if (aTileFlags_3012 != null) {
@@ -1047,7 +1047,7 @@ public class GameMap {
 				anInt3015 = 1 * gameMap_138_.anInt3015;
 				zFar = 1 * gameMap_138_.zFar;
 				aMapDetails_3017 = gameMap_138_.aMapDetails_3017;
-				aMapKeys_3005 = gameMap_138_.aMapKeys_3005;
+				aClass296_3005 = gameMap_138_.aClass296_3005;
 				anIntArrayArray3023 = gameMap_138_.anIntArrayArray3023;
 				anIntArrayArray3026 = gameMap_138_.anIntArrayArray3026;
 				aByteArrayArrayArray3032 = gameMap_138_.aByteArrayArrayArray3032;
@@ -1118,7 +1118,7 @@ public class GameMap {
 
 	void method2671(Class240_Sub1 class240_sub1, byte[][] is, int i) {
 		try {
-			for (int i_143_ = 0; i_143_ < class240_sub1.planesHeight * 1551623871; i_143_++) {
+			for (int i_143_ = 0; i_143_ < class240_sub1.anInt2626 * 1551623871; i_143_++) {
 				if (!aBoolean3018) {
 					Class247.method2365(140857778);
 				}
@@ -1127,7 +1127,7 @@ public class GameMap {
 						int i_146_ = anIntArrayArrayArray3043[i_143_][i_144_][i_145_];
 						if (-1 != i_146_) {
 							int i_147_ = i_146_ >> 24 & 0x3;
-							if (!class240_sub1.isUnderwater || 0 == i_147_) {
+							if (!class240_sub1.aBoolean2629 || 0 == i_147_) {
 								int i_148_ = i_146_ >> 1 & 0x3;
 								int i_149_ = i_146_ >> 14 & 0x3ff;
 								int i_150_ = i_146_ >> 3 & 0x7ff;
@@ -1189,15 +1189,15 @@ public class GameMap {
 					}
 				}
 			}
-			if (aMapKeys_3005 == null) {
-				if (null != aMapDetails_3017 && Class_v.index_23_worldMap.method2295(new StringBuilder().append(aMapDetails_3017.fileName).append("_staticelements").toString(), -400372089)) {
-					if (!Class_v.index_23_worldMap.method2312(new StringBuilder().append(aMapDetails_3017.fileName).append("_staticelements").toString(), -2144896080)) {
+			if (aClass296_3005 == null) {
+				if (null != aMapDetails_3017 && Class_v.index_23_worldMap.method2295(new StringBuilder().append(aMapDetails_3017.aString9640).append("_staticelements").toString(), -400372089)) {
+					if (!Class_v.index_23_worldMap.method2312(new StringBuilder().append(aMapDetails_3017.aString9640).append("_staticelements").toString(), -2144896080)) {
 						anInt3027 += -427342251;
 					} else {
-						aMapKeys_3005 = Class237.method2192(Class_v.index_23_worldMap, new StringBuilder().append(aMapDetails_3017.fileName).append("_staticelements").toString(), GameClient.isMemberWorld, 565671699);
+						aClass296_3005 = Class237.method2192(Class_v.index_23_worldMap, new StringBuilder().append(aMapDetails_3017.aString9640).append("_staticelements").toString(), GameClient.isMemberWorld, 565671699);
 					}
 				} else {
-					aMapKeys_3005 = new MapKeys(0);
+					aClass296_3005 = new Class296(0);
 				}
 			}
 			if (-528251139 * anInt3027 > 0) {
@@ -1244,7 +1244,7 @@ public class GameMap {
 				return false;
 			}
 			if (!aBoolean3018 && aClass273_3025 != Class273.aClass273_2905) {
-				Class139.method1548(new StringBuilder().append(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(Class26.aString350).append("(100%)").toString(), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) -16);
+				Class139.method1548(new StringBuilder().append(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(Symbol.LINE_BREAK).append("(100%)").toString(), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) -16);
 			}
 			aClass273_3025 = Class273.aClass273_2907;
 			if (!aBoolean3018) {
@@ -1252,9 +1252,9 @@ public class GameMap {
 			}
 			if (!aBoolean3018) {
 				for (int i_161_ = 0; i_161_ < 2048; i_161_++) {
-					Player class365_sub1_sub1_sub2_sub2 = GameClient.players[i_161_];
-					if (class365_sub1_sub1_sub2_sub2 != null) {
-						class365_sub1_sub1_sub2_sub2.aSceneGraph_7722 = null;
+					Player player = GameClient.players[i_161_];
+					if (player != null) {
+						player.aSceneGraph_7722 = null;
 					}
 				}
 				for (LinkableObject element : GameClient.aLinkableObjectArray8816) {
@@ -1298,9 +1298,9 @@ public class GameMap {
 			aClass240_Sub1_3029 = new Class240_Sub1(aSceneGraph_3037, aClass433_3040, 4, -991330803 * anInt3039, -1456212765 * anInt3011, false, aTileFlags_3012, aAtmosphereManager_3013);
 			aClass240_Sub1_3029.method2212(-403694446);
 			aClass240_Sub1_3029.anInt2621 = GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-809818345) * 275039235;
-			aClass240_Sub1_3029.sceneryShadows = GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-2131698628) == 2;
-			aClass240_Sub1_3029.highDetailWater = GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2037839529) == 1;
-			aClass240_Sub1_3029.groundBlending = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(1917266854) == 1;
+			aClass240_Sub1_3029.aBoolean2622 = GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-2131698628) == 2;
+			aClass240_Sub1_3029.aBoolean2697 = GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2037839529) == 1;
+			aClass240_Sub1_3029.aBoolean2624 = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(1917266854) == 1;
 			aClass240_Sub1_3029.aBoolean2625 = GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1803060969) == 1;
 			if (!aClass266_3001.allowDynamicMapScene(338257036)) {
 				method2659(aClass240_Sub1_3029, aByteArrayArray3038);
@@ -1317,9 +1317,9 @@ public class GameMap {
 				aClass240_Sub1_3000 = new Class240_Sub1(aSceneGraph_3037, aClass433_3040, 1, -991330803 * anInt3039, -1456212765 * anInt3011, true, aTileFlags_3012, aAtmosphereManager_3013);
 				aClass240_Sub1_3000.method2212(-1978540544);
 				aClass240_Sub1_3000.anInt2621 = GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-15786995) * 275039235;
-				aClass240_Sub1_3000.sceneryShadows = GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(864049094) == 2;
-				aClass240_Sub1_3000.highDetailWater = GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1853244696) == 1;
-				aClass240_Sub1_3000.groundBlending = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(281198825) == 1;
+				aClass240_Sub1_3000.aBoolean2622 = GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(864049094) == 2;
+				aClass240_Sub1_3000.aBoolean2697 = GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1853244696) == 1;
+				aClass240_Sub1_3000.aBoolean2624 = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(281198825) == 1;
 				aClass240_Sub1_3000.aBoolean2625 = GraphicsAutoSetup.clientPreferences.texturePreference.getValue(2103749887) == 1;
 				if (!aClass266_3001.allowDynamicMapScene(1753743768)) {
 					method2659(aClass240_Sub1_3000, aByteArrayArray3041);
@@ -1610,7 +1610,7 @@ public class GameMap {
 						}
 					}
 				}
-				modelPart_188_ = class_ra.method5037(class64, i_187_, 161976139 * Class419.anInt5341, 64, 768);
+				modelPart_188_ = class_ra.method5037(class64, i_187_, 161976139 * ConsoleCommands.anInt5341, 64, 768);
 				synchronized (Class462.aClass348_5682) {
 					Class462.aClass348_5682.put(modelPart_188_, l);
 				}

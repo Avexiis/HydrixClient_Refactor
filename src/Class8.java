@@ -16,9 +16,9 @@ public class Class8 {
 	static boolean aBoolean108;
 	static String[] aStringArray109;
 	static int anInt110;
-	static String aString111 = "\\/.:, _-+[]~@";
-	static String aString112 = "Success";
-	static String aString113 = "Failure";
+	static String SYMBOL_SEQUENCE = "\\/.:, _-+[]~@";
+	static String SUCCESS = "Success";
+	static String FAILURE = "Failure";
 	static boolean aBoolean114;
 
 	static {
@@ -38,14 +38,14 @@ public class Class8 {
 		try {
 			if ((((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669 == null) || ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669.length() == 0) {
 				if (null != (((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657) && ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657.length() > 0)
-					return new StringBuilder().append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657).toString();
+					return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657;
 				return (((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667);
 			}
 			if ((null != ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657) && ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657.length() > 0)
-				return new StringBuilder().append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669).toString();
-			return new StringBuilder().append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669).toString();
+				return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669;
+			return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.bf(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.bf(" + ')');
 		}
 	}
 
@@ -54,7 +54,7 @@ public class Class8 {
 			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
 			Class439.method5850(string, 1986272342);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.vh(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.vh(" + ')');
 		}
 	}
 
@@ -62,7 +62,7 @@ public class Class8 {
 		try {
 			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = ((ClientScript2) class403).aClass298_Sub25_5237.aString7358;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.xj(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.xj(" + ')');
 		}
 	}
 
@@ -72,7 +72,7 @@ public class Class8 {
 			class298_sub19_sub1_0_.method2962(9, 128, 346222187);
 			return class298_sub19_sub1_0_;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.f(" + ')');
 		}
 	}
 
@@ -83,7 +83,7 @@ public class Class8 {
 			IComponentDefinition.aClass348_1136.method4187();
 			IComponentDefinition.aClass348_1296.method4187();
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.g(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.g(" + ')');
 		}
 	}
 
@@ -95,7 +95,7 @@ public class Class8 {
 			else
 				((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393) - 1] = overheadString.method721((byte) 1);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.aok(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.aok(" + ')');
 		}
 	}
 
@@ -110,7 +110,7 @@ public class Class8 {
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ai.lu(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "ai.lu(" + ')');
 		}
 	}
 }

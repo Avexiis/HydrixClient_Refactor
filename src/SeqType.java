@@ -140,7 +140,7 @@ public class SeqType {
 				int i_21_ = buffer.g3();
 				Node node;
 				if (bool) {
-					node = new LinkableObject(buffer.gstr());
+					node = new LinkableObject(buffer.getString());
 				} else {
 					node = new Class298_Sub35(buffer.readUnsignedInt());
 				}
@@ -296,7 +296,7 @@ public class SeqType {
 	}
 
 	public static void method4884(int i, int i_27_, int i_28_, int i_29_, LocType class432,
-			NPC class365_sub1_sub1_sub2_sub1, Player class365_sub1_sub1_sub2_sub2, byte i_30_) {
+								  NPC class365_sub1_sub1_sub2_sub1, Player player, byte i_30_) {
 		try {
 			Class298_Sub41 class298_sub41 = new Class298_Sub41();
 			class298_sub41.anInt7424 = 2135210127 * i;
@@ -353,19 +353,19 @@ public class SeqType {
 					class298_sub41.anInt7429 = (-1422618341 * class503.anInt6175 << 9) * 406226903;
 				}
 				Class298_Sub41.aLinkedNodeList_7455.addlast(class298_sub41, 387904128);
-			} else if (null != class365_sub1_sub1_sub2_sub2) {
-				class298_sub41.aClass365_Sub1_Sub1_Sub2_Sub2_7434 = class365_sub1_sub1_sub2_sub2;
-				class298_sub41.anInt7427 = (i_27_ + class365_sub1_sub1_sub2_sub2.getSize() << 9) * 305826635;
-				class298_sub41.anInt7428 = (i_28_ + class365_sub1_sub1_sub2_sub2.getSize() << 9) * -1647445571;
-				class298_sub41.anInt7443 = FloTypeList.method4652(class365_sub1_sub1_sub2_sub2, 2035612836) * 502744039;
-				class298_sub41.aBoolean7444 = class365_sub1_sub1_sub2_sub2.isMale;
-				class298_sub41.anInt7430 = (780357347 * class365_sub1_sub1_sub2_sub2.turnLeftAnimation << 9) * 1644605369;
-				class298_sub41.anInt7449 = -1138033583 * class365_sub1_sub1_sub2_sub2.turnRightAnimation;
+			} else if (null != player) {
+				class298_sub41.aClass365_Sub1_Sub1_Sub2_Sub2_7434 = player;
+				class298_sub41.anInt7427 = (i_27_ + player.getSize() << 9) * 305826635;
+				class298_sub41.anInt7428 = (i_28_ + player.getSize() << 9) * -1647445571;
+				class298_sub41.anInt7443 = FloTypeList.method4652(player, 2035612836) * 502744039;
+				class298_sub41.aBoolean7444 = player.isMale;
+				class298_sub41.anInt7430 = (780357347 * player.turnLeftAnimation << 9) * 1644605369;
+				class298_sub41.anInt7449 = -1138033583 * player.turnRightAnimation;
 				class298_sub41.anInt7452 = -1197363456;
 				class298_sub41.anInt7441 = -900102912;
 				class298_sub41.anInt7429 = 0;
 				Class298_Sub41.aClass437_7440.method5817(class298_sub41,
-						class365_sub1_sub1_sub2_sub2.entityIndex * 1888274983);
+						player.entityIndex * 1888274983);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qe.p(").append(')').toString());
