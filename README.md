@@ -24,3 +24,22 @@ Java Swing environment editor features:
 - Experimental skybox adjustments (not fully functional)
 - Save/load/import/export presets from .JSON
 - Live preview/update to the game if selected
+
+Newest Update (Sept. 18, 2025) -
+New collapsible toolbar with some fun settings:
+- Website links
+- Toggle snow mode on/off - This puts snow on the ground in-game.
+- Open the environment editor straight from the toolbar
+- Discord status options - Set custom text to display on the "Playing" card, filtered.
+
+This update also adds support for SSL/TLS, configurable via the Settings class, which now has a good bit more options than before.
+- HWID tracking has been added alongside MAC tracking in what was Class360, now named LoginPacket.
+- HWID is computed via HW serials and a static salt.
+- It is recommended to change the salt before use, in the HardwareFingerprint class.
+- You will also need to add a decoder to your server to use the HWID payload.
+- At this time there is not a way to disable the HWID as being part of the payload without disabling the code directly. This may be addressed one day, but I use it so I may hold off.
+- Client now supports favicon/taskbar icon, loaded from an array of images in /src/img/
+- Toast notifications for frame buttons/switches
+- Client will now auto-configure cache folder name/runtimes to the server name set in settings
+- Configurable console colors
+- More that I forget
