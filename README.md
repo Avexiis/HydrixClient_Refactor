@@ -26,7 +26,7 @@ Java Swing environment editor features:
 - Live preview/update to the game if selected
 
 Newest Updates:
-- New collapsible toolbar with some fun settings:
+- New collapsible toolbar
 - Website links
 - Toggle snow mode on/off - This puts snow on the ground in-game.
 - Open the environment editor straight from the toolbar
