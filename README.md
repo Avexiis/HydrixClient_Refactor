@@ -25,8 +25,8 @@ Java Swing environment editor features:
 - Save/load/import/export presets from .JSON
 - Live preview/update to the game if selected
 
-Newest Updates -
-New collapsible toolbar with some fun settings:
+Newest Updates:
+- New collapsible toolbar with some fun settings:
 - Website links
 - Toggle snow mode on/off - This puts snow on the ground in-game.
 - Open the environment editor straight from the toolbar
