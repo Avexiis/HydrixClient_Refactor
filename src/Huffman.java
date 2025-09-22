@@ -311,7 +311,7 @@ public class Huffman {
 
 	static final void method1252(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aCompressionType_7578.method5700(-1397951801);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aCompressionType_7578.method5700(-1397951801);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ep.akj(").append(')').toString());
 		}
@@ -335,7 +335,7 @@ public class Huffman {
 			if (class298_sub51_45_ != null)
 				Class173.method1821(class298_sub51_45_, (class298_sub51_45_.interfaceId * -1617025021 != (-1617025021 * class298_sub51.interfaceId)), bool, -113822480);
 			GameClient.aClass437_8841.method5817(class298_sub51, (long) parentHash);
-			Class8.method321(-1617025021 * class298_sub51.interfaceId, is, 888891171);
+			DevConsoleState.method321(-1617025021 * class298_sub51.interfaceId, is, 888891171);
 			IComponentDefinition class105 = Class50.getIComponentDefinitions(parentHash, (byte) 49);
 			if (class105 != null)
 				LocalizedString.markComponentForRedraw(class105, -702811353);

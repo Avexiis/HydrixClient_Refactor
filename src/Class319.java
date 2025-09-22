@@ -59,7 +59,7 @@ public abstract class Class319 {
 
 	public abstract int method3899();
 
-	static void method3900(GraphicsToolkit class_ra, int i, int i_0_, int i_1_, int i_2_, int i_3_, Class264 class264, Class505 class505, String string, int i_4_) {
+	static void method3900(GraphicsToolkit class_ra, int i, int i_0_, int i_1_, int i_2_, int i_3_, Class264 class264, GameFont gameFont, String string, int i_4_) {
 		try {
 			int i_5_ = (255 - -1274801891 * Class82_Sub4.anInt6833 - ContextMenu.anInt5498 * 1868123923);
 			if (i_5_ < 0)
@@ -81,7 +81,7 @@ public abstract class Class319 {
 				Class423.aClass57_5356.method645(i, i_0_);
 				Class74.aClass57_700.method645(i_1_ + i - Class74.aClass57_700.method623(), i_0_);
 			}
-			class264.method2488(string, 3 + i, ((20 - 1110385787 * class505.anInt6202) / 2 + (i_0_ + 1110385787 * class505.anInt6202)), -1067973831 * Class343.anInt3674 | ~0xffffff, -1, 772459815);
+			class264.method2488(string, 3 + i, ((20 - 1110385787 * gameFont.ascent) / 2 + (i_0_ + 1110385787 * gameFont.ascent)), -1067973831 * Class343.anInt3674 | ~0xffffff, -1, 772459815);
 			class_ra.drawFilledBox(i, i_3_ + i_0_, i_1_, i_2_ - i_3_, i_5_ << 24 | IPAddress.anInt5958 * 1018380409, 1);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("nh.ac(").append(')').toString());

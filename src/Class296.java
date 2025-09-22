@@ -38,7 +38,7 @@ public class Class296 {
 
 	static final void method2831(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5693(-919235605) == 1 ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.characterShadowPreference.method5693(-919235605) == 1 ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mi.ajl(").append(')').toString());
 		}

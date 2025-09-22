@@ -61,7 +61,7 @@ public class Node {
 
 	static final void method2843(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569.method5716((byte) 23);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aGraphicsSetup_7569.method5716((byte) 23);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("mk.ajm(").append(')').toString());
 		}

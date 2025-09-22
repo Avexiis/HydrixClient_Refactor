@@ -95,7 +95,7 @@ public class Class422_Sub21 extends IntegerPreferenceField {
 
 	static final void method5704(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.flickeringPreference.method5655(1918406179) == 1 ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.flickeringPreference.method5655(1918406179) == 1 ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aee.ajj(").append(')').toString());
 		}

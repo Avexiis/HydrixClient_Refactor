@@ -44,20 +44,20 @@ public abstract class Class_v extends Node {
 
 	static void method3672(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
 		try {
-			int i_7_ = Class463.method6012(i_2_, Class372_Sub3.anInt4049 * 1155384281, Class372_Sub3.anInt4050 * -1062447355, -1212608691);
-			int i_8_ = Class463.method6012(i_3_, Class372_Sub3.anInt4049 * 1155384281, Class372_Sub3.anInt4050 * -1062447355, -1212608691);
-			int i_9_ = Class463.method6012(i, Class372_Sub3.anInt4051 * -1424479739, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
-			int i_10_ = Class463.method6012(i_1_, -1424479739 * Class372_Sub3.anInt4051, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
-			int i_11_ = Class463.method6012(i_2_ + i_5_, 1155384281 * Class372_Sub3.anInt4049, Class372_Sub3.anInt4050 * -1062447355, -1212608691);
-			int i_12_ = Class463.method6012(i_3_ - i_5_, Class372_Sub3.anInt4049 * 1155384281, -1062447355 * Class372_Sub3.anInt4050, -1212608691);
+			int i_7_ = Class463.method6012(i_2_, DevConsoleInit.anInt4049 * 1155384281, DevConsoleInit.anInt4050 * -1062447355, -1212608691);
+			int i_8_ = Class463.method6012(i_3_, DevConsoleInit.anInt4049 * 1155384281, DevConsoleInit.anInt4050 * -1062447355, -1212608691);
+			int i_9_ = Class463.method6012(i, DevConsoleInit.anInt4051 * -1424479739, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
+			int i_10_ = Class463.method6012(i_1_, -1424479739 * DevConsoleInit.anInt4051, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
+			int i_11_ = Class463.method6012(i_2_ + i_5_, 1155384281 * DevConsoleInit.anInt4049, DevConsoleInit.anInt4050 * -1062447355, -1212608691);
+			int i_12_ = Class463.method6012(i_3_ - i_5_, DevConsoleInit.anInt4049 * 1155384281, -1062447355 * DevConsoleInit.anInt4050, -1212608691);
 			for (int i_13_ = i_7_; i_13_ < i_11_; i_13_++)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_13_]), i_9_, i_10_, i_4_, 1527963052);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_13_]), i_9_, i_10_, i_4_, 1527963052);
 			for (int i_14_ = i_8_; i_14_ > i_12_; i_14_--)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_14_]), i_9_, i_10_, i_4_, 1517942288);
-			int i_15_ = Class463.method6012(i_5_ + i, -1424479739 * Class372_Sub3.anInt4051, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
-			int i_16_ = Class463.method6012(i_1_ - i_5_, Class372_Sub3.anInt4051 * -1424479739, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_14_]), i_9_, i_10_, i_4_, 1517942288);
+			int i_15_ = Class463.method6012(i_5_ + i, -1424479739 * DevConsoleInit.anInt4051, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
+			int i_16_ = Class463.method6012(i_1_ - i_5_, DevConsoleInit.anInt4051 * -1424479739, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
 			for (int i_17_ = i_11_; i_17_ <= i_12_; i_17_++) {
-				int[] is = Class372_Sub3.anIntArrayArray4047[i_17_];
+				int[] is = DevConsoleInit.anIntArrayArray4047[i_17_];
 				Class82_Sub22.method940(is, i_9_, i_15_, i_4_, 1913708715);
 				Class82_Sub22.method940(is, i_16_, i_10_, i_4_, -1275020335);
 			}
@@ -68,7 +68,7 @@ public abstract class Class_v extends Node {
 
 	static void method3673(int i) {
 		try {
-			Class8.aBoolean108 = false;
+			DevConsoleState.aBoolean108 = false;
 			LoginData.method4301(287742148);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("v.p(").append(')').toString());

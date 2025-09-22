@@ -91,7 +91,7 @@ public class TimeUtils {
 
 	static final void method1321(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aGroundDecorPreference_7548.method5661((byte) 92);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aGroundDecorPreference_7548.method5661((byte) 92);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ey.akg(").append(')').toString());
 		}

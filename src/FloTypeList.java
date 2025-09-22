@@ -109,7 +109,7 @@ public class FloTypeList {
 	static final void method4651(ClientScript2 class403, int i) {
 		try {
 			if (Class452.aBoolean5642 && Class231.aFrame2589 != null) {
-				Class357.method4276(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 70), -1, -1, false, -489329335);
+				Class357.method4276(GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 70), -1, -1, false, -489329335);
 			}
 			if (SpotAnimTypeList.method4865((byte) 35) == Class292.aClass292_3162) {
 				Class52_Sub2.writeVarcs(1556288352);
@@ -143,11 +143,11 @@ public class FloTypeList {
 	static void method4653(int i) {
 		try {
 			if (Class394.method4897(-185972710)) {
-				if (null == Class8.aStringArray107) {
-					Class372_Sub3.method4599(-219758847);
+				if (null == DevConsoleState.lines) {
+					DevConsoleInit.initConsoleState();
 				}
-				Class8.aBoolean108 = true;
-				Class8.anInt98 = 0;
+				DevConsoleState.aBoolean108 = true;
+				DevConsoleState.anInt98 = 0;
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("pp.f(").append(')').toString());

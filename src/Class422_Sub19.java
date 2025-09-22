@@ -86,7 +86,7 @@ public class Class422_Sub19 extends IntegerPreferenceField {
 			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
 			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
-			overheadString.method730(class105, RSInterface, class403, 424095579);
+			OverheadString.method730(class105, RSInterface, class403, 424095579);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adz.gg(").append(')').toString());
 		}

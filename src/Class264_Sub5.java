@@ -73,8 +73,8 @@ public class Class264_Sub5 extends Class264 {
 		/* empty */
 	}
 
-	Class264_Sub5(Class_ra_Sub3 class_ra_sub3, Class505 class505, Class89[] class89s, boolean bool) {
-		super(class_ra_sub3, class505);
+	Class264_Sub5(Class_ra_Sub3 class_ra_sub3, GameFont gameFont, Class89[] class89s, boolean bool) {
+		super(class_ra_sub3, gameFont);
 		((Class264_Sub5) this).aClass_ra_Sub3_7139 = class_ra_sub3;
 		int i = 0;
 		for (int i_17_ = 0; i_17_ < 256; i_17_++) {
@@ -111,7 +111,7 @@ public class Class264_Sub5 extends Class264 {
 					}
 				}
 			}
-			if (!class_ra_sub3.method5348(Class55.aClass55_567, Class77.aClass77_717)) {
+			if (!class_ra_sub3.method5348(Class55.aClass55_567, TextEncoder.aTextEncoder_717)) {
 				int[] is_32_ = new int[is.length];
 				for (int i_33_ = 0; i_33_ < is.length; i_33_++)
 					is_32_[i_33_] = is[i_33_] << 24;

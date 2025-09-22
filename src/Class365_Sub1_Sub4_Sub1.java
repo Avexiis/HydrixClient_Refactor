@@ -115,7 +115,7 @@ public class Class365_Sub1_Sub4_Sub1 extends Class365_Sub1_Sub4 {
 			((Class365_Sub1_Sub4_Sub1) this).anInt10151 = (32 + (int) (Math.random() * 4.0)) * 2009949505;
 			((Class365_Sub1_Sub4_Sub1) this).anInt10148 = (3 + (int) (Math.random() * 2.0)) * 880372431;
 			((Class365_Sub1_Sub4_Sub1) this).anInt10153 = (16 + (int) (Math.random() * 3.0)) * -1003661399;
-			if (GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1941334276) == 1)
+			if (GraphicsSetup.clientPreferences.texturePreference.getValue(1941334276) == 1)
 				((Class365_Sub1_Sub4_Sub1) this).anInt10154 = (int) (Math.random() * 10.0) * 1183208523;
 			else
 				((Class365_Sub1_Sub4_Sub1) this).anInt10154 = (int) (Math.random() * 20.0) * 1183208523;

@@ -1,8 +1,8 @@
-/* Class422_Sub12 - Decompiled by JODE
+/* WindowModePreference - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class422_Sub12 extends IntegerPreferenceField {
+public class WindowModePreference extends IntegerPreferenceField {
 	public static int anInt8393 = 2;
 	public static int anInt8394 = 1;
 	public static int anInt8395 = 3;
@@ -15,11 +15,11 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 		try {
 			return (aGamePreferences_5346.method3543(-1069375007).method5593(900768224) ? 3 : 2);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.a(" + ')');
 		}
 	}
 
-	public Class422_Sub12(int i, GamePreferences gamePreferences) {
+	public WindowModePreference(int i, GamePreferences gamePreferences) {
 		super(i, gamePreferences);
 	}
 
@@ -27,7 +27,7 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 		try {
 			anInt5350 = i * 1886334997;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.p(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.p(" + ')');
 		}
 	}
 
@@ -35,15 +35,15 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 		try {
 			return 1;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.f(" + ')');
 		}
 	}
 
-	public int method5669(byte i) {
+	public int getWindowMode(byte i) {
 		try {
 			return -1598873795 * anInt5350;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.z(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.z(" + ')');
 		}
 	}
 
@@ -56,7 +56,7 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 			if (anInt5350 * -1598873795 < 1 || -1598873795 * anInt5350 > 3)
 				anInt5350 = method5611(691543956) * 1886334997;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.s(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.s(" + ')');
 		}
 	}
 
@@ -64,7 +64,7 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 		anInt5350 = i * 1886334997;
 	}
 
-	public Class422_Sub12(GamePreferences gamePreferences) {
+	public WindowModePreference(GamePreferences gamePreferences) {
 		super(gamePreferences);
 	}
 
@@ -73,7 +73,7 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 			int i_2_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Character.toLowerCase((char) i_2_);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.aav(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.aav(" + ')');
 		}
 	}
 
@@ -83,7 +83,7 @@ public class Class422_Sub12 extends IntegerPreferenceField {
 			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
 			Class69.method793(i_3_, string, 16711680);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adn.sx(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adn.sx(" + ')');
 		}
 	}
 }

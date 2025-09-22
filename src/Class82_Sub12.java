@@ -59,7 +59,7 @@ public class Class82_Sub12 extends Class82 {
 					}
 				}
 				if (!bool)
-					Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_UNABLE_TO_FIND_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(string).toString(), (byte) -81);
+					Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_UNABLE_TO_FIND_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(string).toString(), (byte) -81);
 				if (GameClient.aBoolean8835)
 					IdentityKitTypeList.method1587((byte) 4);
 			}

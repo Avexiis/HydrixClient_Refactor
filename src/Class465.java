@@ -164,7 +164,7 @@ public class Class465 implements Interface18 {
 			int i_7_ = calendar.get(11);
 			int i_8_ = calendar.get(12);
 			if (i == 3)
-				return Class422_Sub2.method5631(l, i, bool, (byte) 1);
+				return RemoveRoofPreference.method5631(l, i, bool, (byte) 1);
 			return new StringBuilder().append(Integer.toString(i_4_ / 10)).append(i_4_ % 10).append("-").append(Class490.aStringArrayArray6074[i][i_5_]).append("-").append(i_6_).append(" ").append(i_7_ / 10).append(i_7_ % 10).append(":").append(i_8_ / 10).append(i_8_ % 10).toString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("te.f(").append(')').toString());

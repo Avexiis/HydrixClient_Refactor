@@ -13,8 +13,8 @@ public class i extends Ground implements Interface25 {
 		G(((i) this).aJa6678, var_ba, i, i_0_, anIntArrayArray6290, is_1_, i_2_, i_3_, i_4_);
 	}
 
-	public final void method6359(int i, int i_5_, int[] is, int[] is_6_, int[] is_7_, int[] is_8_, int[] is_9_, int[] is_10_, int[] is_11_, int[] is_12_, Class78 class78, boolean bool) {
-		ya(i, i_5_, is, is_6_, is_7_, is_8_, is_9_, is_10_, is_11_, is_12_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+	public final void method6359(int i, int i_5_, int[] is, int[] is_6_, int[] is_7_, int[] is_8_, int[] is_9_, int[] is_10_, int[] is_11_, int[] is_12_, DisplayMode displayMode, boolean bool) {
+		ya(i, i_5_, is, is_6_, is_7_, is_8_, is_9_, is_10_, is_11_, is_12_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	native void ay(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int[] is);
@@ -29,7 +29,7 @@ public class i extends Ground implements Interface25 {
 
 	native void ab(int i, int i_31_, int[] is, int[] is_32_, int[] is_33_, int[] is_34_, int[] is_35_, int[] is_36_, int[] is_37_, int[] is_38_, int i_39_, int i_40_, int i_41_, boolean bool);
 
-	public void method6336(int i, int i_42_, int[] is, int[] is_43_, int[] is_44_, int[] is_45_, int[] is_46_, int[] is_47_, int[] is_48_, int[] is_49_, int[] is_50_, int[] is_51_, int[] is_52_, Class78 class78, boolean bool) {
+	public void method6336(int i, int i_42_, int[] is, int[] is_43_, int[] is_44_, int[] is_45_, int[] is_46_, int[] is_47_, int[] is_48_, int[] is_49_, int[] is_50_, int[] is_51_, int[] is_52_, DisplayMode displayMode, boolean bool) {
 		boolean bool_53_ = false;
 		if (is_49_ != null) {
 			int[] is_54_ = is_49_;
@@ -93,7 +93,7 @@ public class i extends Ground implements Interface25 {
 			i_66_++;
 		}
 		if (bool_53_ || is_63_ != null)
-			ya(i, i_42_, is_58_, is_64_, is_59_, is_65_, is_60_, is_63_, is_61_, is_62_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+			ya(i, i_42_, is_58_, is_64_, is_59_, is_65_, is_60_, is_63_, is_61_, is_62_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	public void method6338(int i, int i_71_, int i_72_, boolean[][] bools, boolean bool, int i_73_) {
@@ -139,22 +139,22 @@ public class i extends Ground implements Interface25 {
 
 	native void t(float[] fs);
 
-	public final void method6346(int i, int i_103_, int[] is, int[] is_104_, int[] is_105_, int[] is_106_, int[] is_107_, int[] is_108_, int[] is_109_, int[] is_110_, Class78 class78, boolean bool) {
-		ya(i, i_103_, is, is_104_, is_105_, is_106_, is_107_, is_108_, is_109_, is_110_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+	public final void method6346(int i, int i_103_, int[] is, int[] is_104_, int[] is_105_, int[] is_106_, int[] is_107_, int[] is_108_, int[] is_109_, int[] is_110_, DisplayMode displayMode, boolean bool) {
+		ya(i, i_103_, is, is_104_, is_105_, is_106_, is_107_, is_108_, is_109_, is_110_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	public native void z(boolean bool);
 
 	public native void ak(Class_na class_na, int i, int i_111_, int i_112_, int i_113_, boolean bool);
 
-	public final void method6335(int i, int i_114_, int[] is, int[] is_115_, int[] is_116_, int[] is_117_, int[] is_118_, int[] is_119_, int[] is_120_, int[] is_121_, Class78 class78, boolean bool) {
-		ya(i, i_114_, is, is_115_, is_116_, is_117_, is_118_, is_119_, is_120_, is_121_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+	public final void method6335(int i, int i_114_, int[] is, int[] is_115_, int[] is_116_, int[] is_117_, int[] is_118_, int[] is_119_, int[] is_120_, int[] is_121_, DisplayMode displayMode, boolean bool) {
+		ya(i, i_114_, is, is_115_, is_116_, is_117_, is_118_, is_119_, is_120_, is_121_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	native void an(float[] fs);
 
-	public final void method6345(int i, int i_122_, int[] is, int[] is_123_, int[] is_124_, int[] is_125_, int[] is_126_, int[] is_127_, int[] is_128_, int[] is_129_, Class78 class78, boolean bool) {
-		ya(i, i_122_, is, is_123_, is_124_, is_125_, is_126_, is_127_, is_128_, is_129_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+	public final void method6345(int i, int i_122_, int[] is, int[] is_123_, int[] is_124_, int[] is_125_, int[] is_126_, int[] is_127_, int[] is_128_, int[] is_129_, DisplayMode displayMode, boolean bool) {
+		ya(i, i_122_, is, is_123_, is_124_, is_125_, is_126_, is_127_, is_128_, is_129_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	public native void h();
@@ -195,7 +195,7 @@ public class i extends Ground implements Interface25 {
 		}
 	}
 
-	public void method6337(int i, int i_146_, int[] is, int[] is_147_, int[] is_148_, int[] is_149_, int[] is_150_, int[] is_151_, int[] is_152_, int[] is_153_, int[] is_154_, int[] is_155_, int[] is_156_, Class78 class78, boolean bool) {
+	public void method6337(int i, int i_146_, int[] is, int[] is_147_, int[] is_148_, int[] is_149_, int[] is_150_, int[] is_151_, int[] is_152_, int[] is_153_, int[] is_154_, int[] is_155_, int[] is_156_, DisplayMode displayMode, boolean bool) {
 		boolean bool_157_ = false;
 		if (is_153_ != null) {
 			int[] is_158_ = is_153_;
@@ -259,7 +259,7 @@ public class i extends Ground implements Interface25 {
 			i_170_++;
 		}
 		if (bool_157_ || is_167_ != null)
-			ya(i, i_146_, is_162_, is_168_, is_163_, is_169_, is_164_, is_167_, is_165_, is_166_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+			ya(i, i_146_, is_162_, is_168_, is_163_, is_169_, is_164_, is_167_, is_165_, is_166_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	public native void ad(Class_na class_na, int i, int i_175_, int i_176_, int i_177_, boolean bool);
@@ -282,7 +282,7 @@ public class i extends Ground implements Interface25 {
 
 	public native Class_na aa(int i, int i_198_, Class_na class_na);
 
-	public void method6356(int i, int i_199_, int[] is, int[] is_200_, int[] is_201_, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, int[] is_208_, int[] is_209_, Class78 class78, boolean bool) {
+	public void method6356(int i, int i_199_, int[] is, int[] is_200_, int[] is_201_, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, int[] is_208_, int[] is_209_, DisplayMode displayMode, boolean bool) {
 		boolean bool_210_ = false;
 		if (is_206_ != null) {
 			int[] is_211_ = is_206_;
@@ -346,7 +346,7 @@ public class i extends Ground implements Interface25 {
 			i_223_++;
 		}
 		if (bool_210_ || is_220_ != null)
-			ya(i, i_199_, is_215_, is_221_, is_216_, is_222_, is_217_, is_220_, is_218_, is_219_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+			ya(i, i_199_, is_215_, is_221_, is_216_, is_222_, is_217_, is_220_, is_218_, is_219_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	public boolean method6354(Class_na class_na, int i, int i_228_, int i_229_, int i_230_, boolean bool) {
@@ -359,7 +359,7 @@ public class i extends Ground implements Interface25 {
 		return true;
 	}
 
-	public void method6343(int i, int i_237_, int[] is, int[] is_238_, int[] is_239_, int[] is_240_, int[] is_241_, int[] is_242_, int[] is_243_, int[] is_244_, int[] is_245_, int[] is_246_, int[] is_247_, Class78 class78, boolean bool) {
+	public void method6343(int i, int i_237_, int[] is, int[] is_238_, int[] is_239_, int[] is_240_, int[] is_241_, int[] is_242_, int[] is_243_, int[] is_244_, int[] is_245_, int[] is_246_, int[] is_247_, DisplayMode displayMode, boolean bool) {
 		boolean bool_248_ = false;
 		if (is_244_ != null) {
 			int[] is_249_ = is_244_;
@@ -423,7 +423,7 @@ public class i extends Ground implements Interface25 {
 			i_261_++;
 		}
 		if (bool_248_ || is_258_ != null)
-			ya(i, i_237_, is_253_, is_259_, is_254_, is_260_, is_255_, is_258_, is_256_, is_257_, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183, bool);
+			ya(i, i_237_, is_253_, is_259_, is_254_, is_260_, is_255_, is_258_, is_256_, is_257_, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183, bool);
 	}
 
 	public void method6344(Class298_Sub10 class298_sub10, int[] is) {

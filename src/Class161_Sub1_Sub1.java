@@ -124,7 +124,7 @@ public class Class161_Sub1_Sub1 extends Class161_Sub1 {
 	static Class82 method1740(Packet class298_sub53, byte i) {
 		try {
 			int i_5_ = class298_sub53.readUnsignedByte();
-			Class516 class516 = Class255.method2436(i_5_, -707576455);
+			Class516 class516 = DevConsole.method2436(i_5_, -707576455);
 			Class82 class82 = null;
 			switch (class516.anInt6266 * -1646556509) {
 			case 30:
@@ -211,7 +211,7 @@ public class Class161_Sub1_Sub1 extends Class161_Sub1 {
 				class82 = new Class82_Sub11(class298_sub53);
 				break;
 			case 27:
-				class82 = new Class82_Sub19_Sub1(class298_sub53);
+				class82 = new GroundSpotAnimUpdate(class298_sub53);
 			}
 			return class82;
 		} catch (RuntimeException runtimeexception) {

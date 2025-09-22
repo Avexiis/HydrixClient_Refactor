@@ -112,7 +112,7 @@ public class Class404 implements Runnable {
 
 	static final void method4951(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570.getValue(-1832021198);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aToolkitPreference_7570.getValue(-1832021198);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qu.akf(").append(')').toString());
 		}

@@ -113,9 +113,9 @@ public class Class237 implements Interface24 {
 	public static void method2196(int i) {
 		try {
 			Class523.method6332(2037731231);
-			Class390.method4876(22050, GraphicsAutoSetup.clientPreferences.aClass422_Sub22_7586.method5706((byte) 39) == 1, 2, 1903660565);
+			Class390.method4876(22050, GraphicsSetup.clientPreferences.aClass422_Sub22_7586.method5706((byte) 39) == 1, 2, 1903660565);
 			Class300.aClass284_3212 = Class75.method834(Class52_Sub2_Sub1.aCanvas9079, 0, 22050, -1188056324);
-			MagnetConfig.method777(true, Class8.method318(null, -1296770048), 1539003934);
+			MagnetConfig.method777(true, DevConsoleState.method318(null, -1296770048), 1539003934);
 			Class3.aClass284_68 = Class75.method834(Class52_Sub2_Sub1.aCanvas9079, 1, 2048, -1833287234);
 			Class3.aClass284_68.method2679(Class285.aClass298_Sub19_Sub4_3083, 2098926435);
 		} catch (RuntimeException runtimeexception) {

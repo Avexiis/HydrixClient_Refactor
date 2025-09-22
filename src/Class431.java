@@ -120,7 +120,7 @@ public class Class431 implements Interface15 {
 			Class79.anInt746 = -956029523 * i_19_;
 			Class79.aClass298_Sub19_Sub1_748 = null;
 			Class79.anInt739 = i_20_ * -2102749749;
-			Class8.aBoolean114 = bool;
+			DevConsoleState.aBoolean114 = bool;
 			Class298_Sub24_Sub1.anInt9276 = 771950311 * i;
 			Class313.aClass97_3300 = null;
 		} catch (RuntimeException runtimeexception) {

@@ -28,8 +28,8 @@ public abstract class Class298_Sub8 extends Node {
 		((Class298_Sub8) this).aClass_ra_Sub2_7222 = class_ra_sub2;
 	}
 
-	Class77 method2875() {
-		return Class77.aClass77_717;
+	TextEncoder method2875() {
+		return TextEncoder.aTextEncoder_717;
 	}
 
 	abstract boolean method2876();

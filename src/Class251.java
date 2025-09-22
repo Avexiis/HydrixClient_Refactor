@@ -132,7 +132,7 @@ public class Class251 {
 	static final void method2407(ClientScript2 class403, byte i) {
 		try {
 			int i_10_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.texturePreference.method5612(i_10_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.texturePreference.method5612(i_10_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("km.aor(").append(')').toString());
 		}

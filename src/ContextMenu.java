@@ -112,8 +112,8 @@ public class ContextMenu {
 			if (i_0_ > 255 || i_0_ < 0) {
 				i_0_ = 0;
 			}
-			if (i_0_ != GraphicsAutoSetup.clientPreferences.aCompressionType_7578.method5700(-1514807660)) {
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aCompressionType_7578, i_0_, -1997480653);
+			if (i_0_ != GraphicsSetup.clientPreferences.aCompressionType_7578.method5700(-1514807660)) {
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aCompressionType_7578, i_0_, -1997480653);
 				Class3.writePreferences();
 				GameClient.aBoolean8666 = false;
 			}

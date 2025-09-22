@@ -200,9 +200,9 @@ public class Class47_Sub3 extends Class47 {
 				}
 			}
 			((Class47_Sub3) this).aClass30_Sub1Array6761 = new Class30_Sub1[3];
-			((Class47_Sub3) this).aClass30_Sub1Array6761[0] = new Class30_Sub1(((Class47_Sub3) this).aClass_ra_Sub2_491, Class55.aClass55_567, Class77.aClass77_717, 64, false, is_2_, Class55.aClass55_567);
-			((Class47_Sub3) this).aClass30_Sub1Array6761[1] = new Class30_Sub1(((Class47_Sub3) this).aClass_ra_Sub2_491, Class55.aClass55_567, Class77.aClass77_717, 64, false, is_3_, Class55.aClass55_567);
-			((Class47_Sub3) this).aClass30_Sub1Array6761[2] = new Class30_Sub1(((Class47_Sub3) this).aClass_ra_Sub2_491, Class55.aClass55_567, Class77.aClass77_717, 64, false, is, Class55.aClass55_567);
+			((Class47_Sub3) this).aClass30_Sub1Array6761[0] = new Class30_Sub1(((Class47_Sub3) this).aClass_ra_Sub2_491, Class55.aClass55_567, TextEncoder.aTextEncoder_717, 64, false, is_2_, Class55.aClass55_567);
+			((Class47_Sub3) this).aClass30_Sub1Array6761[1] = new Class30_Sub1(((Class47_Sub3) this).aClass_ra_Sub2_491, Class55.aClass55_567, TextEncoder.aTextEncoder_717, 64, false, is_3_, Class55.aClass55_567);
+			((Class47_Sub3) this).aClass30_Sub1Array6761[2] = new Class30_Sub1(((Class47_Sub3) this).aClass_ra_Sub2_491, Class55.aClass55_567, TextEncoder.aTextEncoder_717, 64, false, is, Class55.aClass55_567);
 			method521();
 		}
 	}

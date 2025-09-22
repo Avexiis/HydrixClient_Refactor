@@ -94,7 +94,7 @@ public class Class82_Sub13 extends Class82 {
 					int i_14_ = i_10_ + i_0_;
 					if (i_13_ > 0 && i_14_ > 0 && i_13_ < i_1_ - 1 && i_14_ < i_2_ - 1) {
 						LocType class432 = class433.list(locid + (osrs ? OSRSData.LOCS_OFFSET : 0));
-						if (-1976050083 * Class424.aClass424_6610.anInt6613 == i_12_ && GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547.method5629(-1915667162) == 0 && 0 == 1532834983 * class432.anInt5382 && -2144543407 * class432.anInt5380 != 1 && !class432.aBoolean5410) {
+						if (-1976050083 * Class424.aClass424_6610.anInt6613 == i_12_ && GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547.method5629(-1915667162) == 0 && 0 == 1532834983 * class432.anInt5382 && -2144543407 * class432.anInt5380 != 1 && !class432.aBoolean5410) {
 							if (i_3_ == 3) {
 								/* empty */
 							}

@@ -51,7 +51,7 @@ public class Class273 {
 	static final void method2560(ClientScript2 class403, int i) {
 		try {
 			((ClientScript2) class403).anInt5241 -= 1938723502;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Symbol.method397((String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 * -203050393)]), ((String) (((ClientScript2) class403).anObjectArray5240[-203050393 * (((ClientScript2) class403).anInt5241) + 1])), Class321.ACTIVE_LANGUAGE, -1813623072);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Symbol.method397((String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 * -203050393)]), ((String) (((ClientScript2) class403).anObjectArray5240[-203050393 * (((ClientScript2) class403).anInt5241) + 1])), DynamicLight.ACTIVE_LANGUAGE, -1813623072);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("li.zz(").append(')').toString());
 		}

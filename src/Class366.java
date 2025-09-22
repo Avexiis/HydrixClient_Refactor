@@ -503,7 +503,7 @@ public class Class366 {
 		try {
 			GameClient.aClass25_8693.method384((byte) 4);
 			if (-1868526275 * Class525.anInt6297 < 2) {
-				Class241.aClass471_2705.method6058(-1528906992);
+				Class241.lobbyAddress.method6058(-1528906992);
 				Class525.anInt6295 = 0;
 				Class525.anInt6297 += -853495275;
 			} else {

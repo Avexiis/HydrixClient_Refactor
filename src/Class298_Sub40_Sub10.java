@@ -56,9 +56,9 @@ public class Class298_Sub40_Sub10 extends Class298_Sub40 {
 			((ClientScript2) class403).anInt5239 -= -783761378;
 			int i_0_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]);
 			boolean bool = 1 == (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 1]);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570, i_0_, -1223609921);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aToolkitPreference_7570, i_0_, -1223609921);
 			if (!bool)
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsPresetPreference_7576, 0, 335720109);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsPresetPreference_7576, 0, 335720109);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {

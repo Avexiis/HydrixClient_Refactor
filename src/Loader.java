@@ -19,7 +19,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 
 /**
- * Loader - Main entrypoint, handles Swing frame around applet
+ * Loader - Main entrypoint, handles Swing frame around applet.
  * @author Xeon
  */
 public class Loader extends Applet {
@@ -48,37 +48,50 @@ public class Loader extends Applet {
 	public static final String ANTI_DEBUG_WEBHOOK  = "https://discord.com/api/webhooks/removed/removed";
 
 	/** Link bar config */
-	private static final Color LINK_COLOR          = new Color(255, 154, 0);   // orange (ON color for RPC)
-	private static final Color LINK_HOVER          = new Color(255, 195, 0);   // bright orange
-	private static final Color BOND_COLOR          = new Color(46, 204, 113);  // green (kept for "Buy Bond" label)
-	private static final Color BOND_HOVER          = new Color(111, 243, 162); // light green (kept for "Buy Bond" label)
-	private static final Color PIPE_COLOR          = new Color(85, 85, 85);    // divider color, gray
-	private static final Color BAR_BG              = new Color(32, 32, 32);    // matches FlatDark tone
-	private static final Color BTN_BG              = new Color(24, 24, 24);    // darker than BAR_BG
-	private static final Color BTN_HOVER_BG        = new Color(40, 40, 40);    // mid-gray
-	private static final Color BTN_PRESSED_BG      = new Color(20, 20, 20);    // nearly black
-	private static final Color BTN_BORDER          = new Color(70, 70, 70);    // lighter gray
-	private static final Color TOGGLE_OFF_TRACK    = new Color(70, 70, 70);    // off state track
-	private static final Color TOGGLE_OFF_HOVER    = new Color(90, 90, 90);    // off hover track
-	private static final Color TOGGLE_THUMB        = new Color(220, 220, 220); // light gray thumb (does not blend into off gray)
-	private static final Font LINK_FONT            = new Font("Segoe UI", Font.PLAIN, 11);
-	private static final int ICON_SIZE_EXPANDED    = 14;
-	private static final int ICON_SIZE_COLLAPSED   = 10;
-	private static final int BAR_PAD_V_EXPANDED    = 6;
-	private static final int BAR_PAD_V_COLLAPSED   = 2;
-	private static final int BAR_SIDE_PAD          = 10;
-	private static final int BAR_BOTTOM_LINE       = 1;
-	private TopBar topBar;
+	private static final Color LINK_COLOR            = new Color(255, 154, 0); // orange
+	private static final Color LINK_HOVER            = new Color(255, 195, 0); // bright orange
+	private static final Color BOND_COLOR            = new Color(46, 204, 113); // green
+	private static final Color BOND_HOVER            = new Color(111, 243, 162); // light green
+	private static final Color PIPE_COLOR            = new Color(85, 85, 85); // divider color, gray
+	private static final Color BAR_BG                = new Color(32, 32, 32); // matches FlatDark tone
+	private static final Color BTN_BG                = new Color(24, 24, 24); // darker than BAR_BG
+	private static final Color BTN_HOVER_BG          = new Color(40, 40, 40); // mid gray
+	private static final Color BTN_PRESSED_BG        = new Color(20, 20, 20); // nearly black
+	private static final Color BTN_BORDER            = new Color(70, 70, 70); // lighter gray
+	private static final Color TOGGLE_OFF_TRACK      = new Color(70, 70, 70); // off state
+	private static final Color TOGGLE_OFF_HOVER      = new Color(90, 90, 90); // off hover
+	private static final Color TOGGLE_THUMB          = new Color(220, 220, 220); // light gray
+	private static final Font LINK_FONT              = new Font("Segoe UI", Font.PLAIN, 11);
+	private static final int ICON_SIZE_EXPANDED      = 14;
+	private static final int ICON_SIZE_COLLAPSED     = 10;
+	private static final int BAR_PAD_V_EXPANDED      = 6;
+	private static final int BAR_PAD_V_COLLAPSED     = 2;
+	private static final int BAR_SIDE_PAD            = 10;
+	private static final int BAR_BOTTOM_LINE         = 1;
+
+	/**Fixed client settings*/
+	private static final Dimension FIXED_CLIENT_AREA = new Dimension(765, 503);
+	private static final int ENV_EXPAND_PX           = 240;
+	private volatile boolean fixedLocked             = false;
 
 	/** Link bar URLs */
 	private static final LinkSpec[] LINKS = new LinkSpec[] {
-			new LinkSpec("Discord",    "https://"),
-			new LinkSpec("Website",    "https://"),
-			new LinkSpec("Highscores", "https://"),
-			new LinkSpec("Buy Bond",   "https://") //Can be changed to "Donate" but replace all usages of "Buy Bond" in strings
+			new LinkSpec("Discord",    Settings.DISCORD_INVITE),
+			new LinkSpec("Website",    ""),
+			new LinkSpec("Highscores", ""),
+			new LinkSpec("Buy Bond",   "")
 	};
 
-	public static void main(String[] args) { //Opens client, loads swing frame before applet loads
+	private JPanel center;
+	private SlidingSidebar envSidebar;
+	private EnvEditorPanel envPanel;
+	private boolean envVisible = false;
+	private static final int ENV_SIDEBAR_MAX = 240;
+	private static final int ENV_SIDEBAR_MIN = 240;
+
+	private TopBar topBar;
+
+	public static void main(String[] args) { // Opens client, loads swing frame before applet loads
 		try { FlatDarkLaf.setup(); }
 		catch (Throwable t) {
 			try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
@@ -197,18 +210,33 @@ public class Loader extends Applet {
 		FRAME.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		FRAME.getContentPane().setBackground(BAR_BG);
 		FRAME.setLayout(new BorderLayout());
+		FRAME.addComponentListener(new java.awt.event.ComponentAdapter() {
+			@Override
+			public void componentResized(java.awt.event.ComponentEvent e) {
+				if (envSidebar != null) envSidebar.updateTargetFromFrame();
+			}
+			@Override
+			public void componentMoved(java.awt.event.ComponentEvent e) { }
+		});
 		topBar = new TopBar();
 		FRAME.add(topBar, BorderLayout.NORTH);
 		PANEL.setOpaque(true);
 		PANEL.setBackground(BAR_BG);
+		PANEL.setDoubleBuffered(true);
 		this.setBackground(BAR_BG);
+		this.setIgnoreRepaint(false);
 		PANEL.setLayout(new BorderLayout());
 		PANEL.add(this);
-		JPanel center = new JPanel(new BorderLayout());
+		center = new JPanel(new BorderLayout());
 		center.setOpaque(true);
 		center.setBackground(BAR_BG);
+		center.setDoubleBuffered(true);
 		center.add(PANEL, BorderLayout.CENTER);
-		center.setPreferredSize(new Dimension(765, 508));
+		center.setPreferredSize(new Dimension(765, 503));
+		envSidebar = new SlidingSidebar();
+		envSidebar.setOpaque(true);
+		envSidebar.setBackground(BAR_BG);
+		center.add(envSidebar, BorderLayout.EAST);
 		FRAME.add(center, BorderLayout.CENTER);
 		try {
 			List<Image> icons = loadIconImages();
@@ -217,14 +245,103 @@ public class Loader extends Applet {
 			if (Settings.DEBUG) e.printStackTrace();
 		}
 		FRAME.setBackground(BAR_BG);
-		FRAME.setSize(new Dimension(800, 600));
+		FRAME.setSize(new Dimension(770, 560));
 		FRAME.setLocationRelativeTo(null);
+		try {
+			GamePreferences gp = GraphicsSetup.clientPreferences;
+			if (gp != null && gp.windowMode != null && gp.windowModeShadow != null) {
+				int a = gp.windowMode.getWindowMode((byte)0);
+				int b = gp.windowModeShadow.getWindowMode((byte)0);
+				updateFixedPanelSizeFromPrefs(a, b, true);
+			}
+		} catch (Throwable ignored) {}
+
 		FRAME.setVisible(true);
+	}
+
+	public void updateFixedPanelSizeFromPrefs(int windowModePreference_A, int windowModePreference_B, boolean fromLaunch) {
+		final boolean wantUnlock = (windowModePreference_A == 2) || (windowModePreference_B == 2);
+		final boolean wantLock = (windowModePreference_A == 1) && (windowModePreference_B == 1);
+
+		SwingUtilities.invokeLater(() -> {
+			if (wantUnlock) {
+				unlockFrame();
+			} else if (wantLock) {
+				lockToFixed();
+			}
+		});
+	}
+
+	private boolean isFixedMode() {
+		try {
+			GamePreferences gp = GraphicsSetup.clientPreferences;
+			if (gp == null) return fixedLocked;
+			if (gp.windowMode == null || gp.windowModeShadow == null) return fixedLocked;
+			int a = gp.windowMode.getWindowMode((byte)0);
+			int b = gp.windowModeShadow.getWindowMode((byte)0);
+			return a == 1 && b == 1;
+		} catch (Throwable t) {
+			return fixedLocked;
+		}
+	}
+
+	private void expandFrameLeft(int pixels) {
+		if (FRAME == null) return;
+		Point p = FRAME.getLocation();
+		FRAME.setBounds(p.x - pixels, p.y, FRAME.getWidth() + pixels, FRAME.getHeight());
+	}
+
+	private void shrinkFrameRight(int pixels) {
+		if (FRAME == null) return;
+		Point p = FRAME.getLocation();
+		FRAME.setBounds(p.x + pixels, p.y, FRAME.getWidth() - pixels, FRAME.getHeight());
+	}
+
+	private void lockToFixed() {
+		if (FRAME == null) return;
+		if (fixedLocked) return;
+		fixedLocked = true;
+		if (center != null) {
+			center.setPreferredSize(FIXED_CLIENT_AREA);
+			center.setMinimumSize(FIXED_CLIENT_AREA);
+			center.setMaximumSize(FIXED_CLIENT_AREA);
+		}
+		if (PANEL != null) {
+			PANEL.setPreferredSize(FIXED_CLIENT_AREA);
+			PANEL.setMinimumSize(FIXED_CLIENT_AREA);
+			PANEL.setMaximumSize(FIXED_CLIENT_AREA);
+		}
+		this.setPreferredSize(FIXED_CLIENT_AREA);
+		FRAME.setResizable(false);
+		FRAME.pack();
+		FRAME.setLocationRelativeTo(null);
+	}
+
+	private void unlockFrame() {
+		if (FRAME == null) return;
+		if (!fixedLocked) return;
+		fixedLocked = false;
+
+		if (center != null) {
+			center.setPreferredSize(null);
+			center.setMinimumSize(new Dimension(0, 0));
+			center.setMaximumSize(null);
+		}
+		if (PANEL != null) {
+			PANEL.setPreferredSize(null);
+			PANEL.setMinimumSize(new Dimension(0, 0));
+			PANEL.setMaximumSize(null);
+		}
+		this.setPreferredSize(null);
+
+		FRAME.setResizable(true);
+		FRAME.setMinimumSize(new Dimension(0, 0));
+		FRAME.setSize(new Dimension(770, 560));
+		FRAME.setLocationRelativeTo(null);
 	}
 
 	private void showToast(String message, Component anchor) {
 		if (FRAME == null) return;
-
 		final int pad = 12;
 		final int arc = 10;
 		final int maxWidth = 360;
@@ -251,16 +368,18 @@ public class Loader extends Applet {
 		msg.setForeground(LINK_COLOR);
 		msg.setFont(new Font("Segoe UI", Font.PLAIN, 15));
 		msg.setBorder(BorderFactory.createEmptyBorder(6, 10, 6, 10));
-		int desiredH = msg.getFontMetrics(msg.getFont()).getHeight(); 
+		int desiredH = msg.getFontMetrics(msg.getFont()).getHeight();
 		ImageIcon icon = loadToastIcon(bestIconTarget(desiredH));
 		JLabel iconLabel = new JLabel(icon);
 		iconLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 10));
 		JComponent vline = new JComponent() {
-			@Override protected void paintComponent(Graphics g) {
+			@Override
+			protected void paintComponent(Graphics g) {
 				g.setColor(PIPE_COLOR);
 				g.fillRect(0, 0, 1, getHeight());
 			}
-			@Override public Dimension getPreferredSize() {
+			@Override
+			public Dimension getPreferredSize() {
 				return new Dimension(1, icon.getIconHeight());
 			}
 		};
@@ -379,12 +498,12 @@ public class Loader extends Applet {
 		Settings.SNOW = desiredOn;
 		try {
 			ClanSettings.method4578(1, false, 622850291);
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-957568446) == 1) {
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-957568446) == 1) {
 				String msg = desiredOn
 						? "Snow Activated! You may need to adjust your graphics settings!"
 						: "Snow Deactivated! You may need to adjust your graphics settings!";
-				GraphicsAutoSetup.clientPreferences.method3540(
-						GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570, 1, -72348841
+				GraphicsSetup.clientPreferences.method3540(
+						GraphicsSetup.clientPreferences.aToolkitPreference_7570, 1, -72348841
 				);
 				Class3.writePreferences();
 				GameClient.aBoolean8666 = false;
@@ -416,15 +535,10 @@ public class Loader extends Applet {
 		private final JPanel rightControls = new JPanel();
 		private final JLabel centerToggle = new JLabel();
 		private final JButton btnSetRpcText = createFlatButton("Set Discord Status");
-		private final ToggleSwitch rpcToggle = new ToggleSwitch(
-				RICH_PRESENCE.isEnabled(),
-				LINK_COLOR, LINK_HOVER, TOGGLE_THUMB,
-				TOGGLE_OFF_TRACK, TOGGLE_OFF_HOVER
-		);
+		private final ToggleSwitch rpcToggle = new ToggleSwitch(RICH_PRESENCE.isEnabled(), LINK_COLOR, LINK_HOVER, TOGGLE_THUMB, TOGGLE_OFF_TRACK, TOGGLE_OFF_HOVER);
 		private final JLabel snowLabel = new JLabel("Snow Mode: ");
 		private final JCheckBox snowCheck = new JCheckBox();
 		private Icon up, upOver, down, downOver;
-
 		TopBar() {
 			super(null);
 			setOpaque(true);
@@ -482,9 +596,16 @@ public class Loader extends Applet {
 			centerToggle.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			centerToggle.setOpaque(false);
 			centerToggle.addMouseListener(new MouseAdapter() {
-				@Override public void mouseEntered(MouseEvent e) { updateIcons(true); }
-				@Override public void mouseExited (MouseEvent e) { updateIcons(false); }
-				@Override public void mouseClicked(MouseEvent e) {
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					updateIcons(true);
+				}
+				@Override
+				public void mouseExited (MouseEvent e) {
+					updateIcons(false);
+				}
+				@Override
+				public void mouseClicked(MouseEvent e) {
 					collapsed = !collapsed;
 					updateIcons(false);
 					updateVisibility();
@@ -493,13 +614,14 @@ public class Loader extends Applet {
 				}
 			});
 			add(centerToggle);
-
 			setBorder(BorderFactory.createMatteBorder(0, 0, BAR_BOTTOM_LINE, 0, PIPE_COLOR));
 			loadIcons();
 			updateIcons(false);
 			updateVisibility();
 		}
-		JLabel getCenterToggle() { return centerToggle; }
+		JLabel getCenterToggle() {
+			return centerToggle;
+		}
 
 		private void onSetRpcText() {
 			if (!RICH_PRESENCE.isEnabled()) {
@@ -575,7 +697,6 @@ public class Loader extends Applet {
 		}
 	}
 
-
 	private final class ToggleSwitch extends JToggleButton {
 		private static final int W = 36;
 		private static final int H = 18;
@@ -601,6 +722,7 @@ public class Loader extends Applet {
 			setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			setToolTipText("Toggle");
 		}
+
 		@Override
 		protected void paintComponent(Graphics g) {
 			Graphics2D g2 = (Graphics2D) g.create();
@@ -608,7 +730,9 @@ public class Loader extends Applet {
 			boolean on = isSelected();
 			ButtonModel m = getModel();
 			Color track = on ? onTrack : offTrack;
-			if (m.isRollover()) track = on ? onTrackHover : offTrackHover;
+			if (m.isRollover()) {
+				track = on ? onTrackHover : offTrackHover;
+			}
 			g2.setColor(track);
 			g2.fillRoundRect(0, 0, getWidth(), getHeight(), H, H);
 			int pad = 2;
@@ -622,8 +746,14 @@ public class Loader extends Applet {
 
 	private static Icon fallbackTriangleIcon(final int size, final boolean down) {
 		return new Icon() {
-			@Override public int getIconWidth() { return size; }
-			@Override public int getIconHeight() { return size; }
+			@Override
+			public int getIconWidth() {
+				return size;
+			}
+			@Override
+			public int getIconHeight() {
+				return size;
+			}
 			@Override
 			public void paintIcon(Component c, Graphics g, int x, int y) {
 				Graphics2D g2 = (Graphics2D) g.create();
@@ -631,15 +761,19 @@ public class Loader extends Applet {
 				g2.setColor(Color.LIGHT_GRAY);
 				int w = size, h = size;
 				Polygon p = down
-						? new Polygon(new int[]{ x + 1, x + w - 1, x + w/2 }, new int[]{ y + 1, y + 1, y + h - 1 }, 3)
-						: new Polygon(new int[]{ x + w/2, x + w - 1, x + 1 }, new int[]{ y + 1,   y + h - 1, y + h - 1 }, 3);
+						? new Polygon(
+							new int[]{ x + 1, x + w - 1, x + w / 2 },
+							new int[]{ y + 1, y + 1, y + h - 1 }, 3)
+						: new Polygon(
+							new int[]{ x + w / 2, x + w - 1, x + 1 },
+							new int[]{ y + 1,   y + h - 1, y + h - 1 }, 3);
 				g2.fillPolygon(p);
 				g2.dispose();
 			}
 		};
 	}
 
-	private JButton createFlatButton(String text) {
+	public static JButton createFlatButton(String text) {
 		JButton btn = new JButton(text) {
 			@Override
 			protected void paintComponent(Graphics g) {
@@ -661,37 +795,176 @@ public class Loader extends Applet {
 		btn.setFocusPainted(false);
 		btn.setContentAreaFilled(false);
 		btn.setOpaque(false);
-		btn.setBorder(BorderFactory.createCompoundBorder(
-				BorderFactory.createLineBorder(BTN_BORDER),
-				BorderFactory.createEmptyBorder(3, 10, 3, 10)));
+		btn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(BTN_BORDER), BorderFactory.createEmptyBorder(3, 10, 3, 10)));
 		btn.addMouseListener(new MouseAdapter() {
-			@Override public void mouseEntered(MouseEvent e) { btn.setForeground(LINK_HOVER); }
-			@Override public void mouseExited (MouseEvent e) { btn.setForeground(LINK_COLOR); }
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btn.setForeground(LINK_HOVER);
+			}
+			@Override
+			public void mouseExited (MouseEvent e) {
+				btn.setForeground(LINK_COLOR);
+			}
 		});
 		return btn;
 	}
 
 	private JButton createEnvButton() {
 		JButton btn = createFlatButton("EnvEditor");
-		btn.addActionListener(e -> openEnvironmentEditor());
+		btn.addActionListener(e -> toggleEnvSidebar());
 		return btn;
 	}
 
-	private static void openEnvironmentEditor() {
+	private void toggleEnvSidebar() {
 		try {
 			AtmosphereManager atmosphere = GameClient.map.method2640((byte) 0);
-			if (atmosphere != null) {
-				atmosphere.openEnvironmentEditor();
-				if (instance != null && instance.topBar != null) {
-					instance.showToast(
-							"Welcome to the Environment editor! This tool is in BETA, some bugs may occur while using this!",
-							instance.topBar.getCenterToggle()
-					);
+			if (atmosphere == null) {
+				showToast("Environment system not ready.", topBar != null ? topBar.getCenterToggle() : null);
+				return;
+			}
+			boolean fixedFrame = isFixedMode();
+			if (!envVisible) {
+				if (fixedFrame) {
+					expandFrameLeft(ENV_EXPAND_PX);
+				}
+				envPanel = new EnvEditorPanel(atmosphere);
+				envSidebar.setContent(envPanel);
+				envSidebar.openInstant();
+				envVisible = true;
+				showToast("Welcome to the Environment editor! This tool is in BETA! Bugs are to be expected!", topBar != null ? topBar.getCenterToggle() : null);
+			} else {
+				atmosphere.setEditorActive(false);
+				envSidebar.closeInstant();
+				envVisible = false;
+				envSidebar.setContent(null);
+				envPanel = null;
+				if (fixedFrame) {
+					shrinkFrameRight(ENV_EXPAND_PX);
 				}
 			}
-		} catch (Exception e) {
-			if (Settings.DEBUG) e.printStackTrace();
+		} catch (Exception ex) {
+			if (Settings.DEBUG) ex.printStackTrace();
 		}
+	}
+
+
+	private final class SlidingSidebar extends JPanel {
+		private int targetWidth;
+		private int currentWidth = 0;
+
+		SlidingSidebar() {
+			super(new BorderLayout());
+			setOpaque(true);
+			setPreferredSize(new Dimension(0, 10));
+			setMinimumSize(new Dimension(0, 0));
+			setVisible(false);
+			updateTargetFromFrame();
+		}
+
+		void updateTargetFromFrame() {
+			int frameW = (FRAME != null) ? FRAME.getWidth() : 1100;
+			final int minCenter = 765;
+			final int gutter = 24;
+			final int hardMax = Math.max(ENV_SIDEBAR_MIN, frameW - (minCenter + gutter));
+			float frac = (frameW <= 960)  ? 0.28f : (frameW <= 1080) ? 0.30f : (frameW <= 1280) ? 0.32f : (frameW <= 1440) ? 0.34f : 0.36f;
+			int proposed = (int) (frameW * frac);
+			targetWidth = Math.min(Math.max(ENV_SIDEBAR_MIN, proposed), Math.min(ENV_SIDEBAR_MAX, hardMax));
+			if (targetWidth < ENV_SIDEBAR_MIN) targetWidth = ENV_SIDEBAR_MIN; // final guard
+			if (isVisible()) {
+				currentWidth = Math.min(currentWidth, targetWidth);
+				setPreferredSize(new Dimension(currentWidth, getHeight()));
+				revalidateLayout();
+			}
+		}
+
+		void setContent(Component c) {
+			removeAll();
+			if (c != null) add(c, BorderLayout.CENTER);
+			revalidate();
+			repaint();
+		}
+
+		void openInstant() {
+			updateTargetFromFrame();
+			currentWidth = targetWidth;
+			setPreferredSize(new Dimension(currentWidth, getHeight()));
+			setVisible(true);
+			revalidateLayout();
+			repaint();
+		}
+
+		void closeInstant() {
+			currentWidth = 0;
+			setPreferredSize(new Dimension(0, getHeight()));
+			setVisible(false);
+			revalidateLayout();
+			repaint();
+		}
+
+		private void revalidateLayout() {
+			if (center != null) {
+				center.revalidate();
+				center.repaint();
+			}
+			if (FRAME != null) {
+				FRAME.revalidate();
+				FRAME.repaint();
+			}
+		}
+
+		@Override
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+		}
+	}
+
+	private JLabel createLinkLabel(String text, String url) {
+		JLabel lbl = new JLabel(text);
+		lbl.setFont(LINK_FONT);
+		lbl.setForeground(LINK_COLOR);
+		lbl.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lbl.setOpaque(false);
+		lbl.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				lbl.setForeground(LINK_HOVER);
+			}
+			@Override public void mouseExited (MouseEvent e) {
+				lbl.setForeground(LINK_COLOR);
+			}
+			@Override public void mouseClicked(MouseEvent e) {
+				if (url != null && !url.trim().isEmpty()) {
+					try { if (Desktop.isDesktopSupported()) Desktop.getDesktop().browse(new URI(url)); }
+					catch (Exception ignored) {}
+				}
+			}
+		});
+		return lbl;
+	}
+
+	private JLabel createLinkLabelWithColors(String text, String url) {
+		JLabel lbl = new JLabel(text);
+		lbl.setFont(LINK_FONT);
+		lbl.setForeground(BOND_COLOR);
+		lbl.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lbl.setOpaque(false);
+		lbl.addMouseListener(new MouseAdapter() {
+			@Override public void mouseEntered(MouseEvent e) {
+				lbl.setForeground(BOND_HOVER);
+			}
+			@Override public void mouseExited (MouseEvent e) {
+				lbl.setForeground(BOND_COLOR);
+			}
+			@Override public void mouseClicked(MouseEvent e) {
+				if (url != null && !url.trim().isEmpty()) {
+					try {
+						if (Desktop.isDesktopSupported()) Desktop.getDesktop().browse(new URI(url));
+					}
+					catch (Exception ignored) {}
+				}
+			}
+		});
+		return lbl;
 	}
 
 	private static List<Image> loadIconImages() {
@@ -704,11 +977,18 @@ public class Loader extends Applet {
 				in = cl.getResourceAsStream(name);
 				if (in == null) in = Loader.class.getResourceAsStream("/img/" + name);
 				if (in != null) {
-					try { out.add(ImageIO.read(in)); }
-					finally { try { in.close(); } catch (Exception ignored) {} }
+					try {
+						out.add(ImageIO.read(in));
+					}
+					finally {
+						try { in.close();
+						} catch (Exception ignored) {}
+					}
 				}
 			} catch (Exception ignored) {
-				try { if (in != null) in.close(); } catch (Exception ignored2) {}
+				try {
+					if (in != null) in.close();
+				} catch (Exception ignored2) {}
 			}
 		}
 		if (out.isEmpty()) {
@@ -729,8 +1009,15 @@ public class Loader extends Applet {
 		return out;
 	}
 
-	@Override public String getParameter(String string) { return (String) CLIENT_PARAMS.get(string); }
-	@Override public URL getDocumentBase() { return getCodeBase(); }
+	@Override
+	public String getParameter(String string) {
+		return (String) CLIENT_PARAMS.get(string);
+	}
+
+	@Override
+	public URL getDocumentBase() {
+		return getCodeBase();
+	}
 
 	@Override
 	public URL getCodeBase() {
@@ -743,45 +1030,7 @@ public class Loader extends Applet {
 		}
 	}
 
-	private JLabel createLinkLabel(String text, String url) {
-		JLabel lbl = new JLabel(text);
-		lbl.setFont(LINK_FONT);
-		lbl.setForeground(LINK_COLOR);
-		lbl.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		lbl.setOpaque(false);
-		lbl.addMouseListener(new MouseAdapter() {
-			@Override public void mouseEntered(MouseEvent e) { lbl.setForeground(LINK_HOVER); }
-			@Override public void mouseExited (MouseEvent e) { lbl.setForeground(LINK_COLOR); }
-			@Override public void mouseClicked(MouseEvent e) {
-				if (url != null && !url.trim().isEmpty()) {
-					try { if (Desktop.isDesktopSupported()) Desktop.getDesktop().browse(new URI(url)); }
-					catch (Exception ignored) {}
-				}
-			}
-		});
-		return lbl;
-	}
-
-	private JLabel createLinkLabelWithColors(String text, String url) {
-		JLabel lbl = new JLabel(text);
-		lbl.setFont(LINK_FONT);
-		lbl.setForeground(BOND_COLOR);
-		lbl.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		lbl.setOpaque(false);
-		lbl.addMouseListener(new MouseAdapter() {
-			@Override public void mouseEntered(MouseEvent e) { lbl.setForeground(BOND_HOVER); }
-			@Override public void mouseExited (MouseEvent e) { lbl.setForeground(BOND_COLOR); }
-			@Override public void mouseClicked(MouseEvent e) {
-				if (url != null && !url.trim().isEmpty()) {
-					try { if (Desktop.isDesktopSupported()) Desktop.getDesktop().browse(new URI(url)); }
-					catch (Exception ignored) {}
-				}
-			}
-		});
-		return lbl;
-	}
-
-	void startClient() {
+	private void startClient() {
 		try {
 			GameClient client = new GameClient();
 			client.supplyApplet(this);

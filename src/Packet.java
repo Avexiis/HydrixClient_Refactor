@@ -870,7 +870,7 @@ public class Packet extends Node {
 	static final void method3655(ClientScript2 class403, int i) {
 		try {
 			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1]
-					= GraphicsAutoSetup.clientPreferences.antialiasPreference.method5674(-484902399) && OverlayType.activeToolkit.method5032() ? 1 : 0;
+					= GraphicsSetup.clientPreferences.antialiasPreference.method5674(-484902399) && OverlayType.activeToolkit.method5032() ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "acx.anb(" + ')');
 		}

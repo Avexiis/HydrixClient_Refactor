@@ -47,7 +47,7 @@ public class Class210 {
 
 	static final void method1944(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aClass422_Sub22_7586.method5706((byte) -7) == 1 ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aClass422_Sub22_7586.method5706((byte) -7) == 1 ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("iw.aji(").append(')').toString());
 		}

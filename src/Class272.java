@@ -142,7 +142,7 @@ public class Class272 {
 
 	static final void method2556(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 1 : 0, 1031457025);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 1 : 0, 1031457025);
 			GameClient.map.method2667(2089019629);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;

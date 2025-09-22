@@ -315,7 +315,7 @@ public class Class365_Sub1_Sub2_Sub2 extends Class365_Sub1_Sub2 implements Inter
 		aByte9917 = (byte) i_13_;
 		aBoolean9919 = class432.anInt5382 * 1532834983 != 0 && !bool;
 		aBoolean9912 = bool_14_;
-		aBoolean9921 = class_ra.method5082() && class432.aBoolean5433 && !aBoolean9916 && GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-1930969884) != 0;
+		aBoolean9921 = class_ra.method5082() && class432.aBoolean5433 && !aBoolean9916 && GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-1930969884) != 0;
 		int i_15_ = 2048;
 		if (aBoolean9912) {
 			i_15_ |= 0x10000;

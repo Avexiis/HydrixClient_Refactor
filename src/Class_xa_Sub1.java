@@ -336,7 +336,7 @@ public class Class_xa_Sub1 extends Ground {
 				((Class_xa_Sub1) this).aNodeArray8478[i_82_] = class298_sub16;
 				class298_sub16.method2914(((Class_xa_Sub1) this).anInt8454);
 			}
-			Class365_Sub1_Sub3_Sub1.method4507(ls, (((Class_xa_Sub1) this).aNodeArray8478), (byte) -43);
+			SceneObject.method4507(ls, (((Class_xa_Sub1) this).aNodeArray8478), (byte) -43);
 			if (((Class_xa_Sub1) this).aClass169_8452 != null)
 				((Class_xa_Sub1) this).aClass169_8452.method1799();
 		} else
@@ -365,7 +365,7 @@ public class Class_xa_Sub1 extends Ground {
 		return ((Class_xa_Sub1) this).aClass169_8452.method1807(class_na, i_86_, i_87_);
 	}
 
-	public void method6335(int i, int i_88_, int[] is, int[] is_89_, int[] is_90_, int[] is_91_, int[] is_92_, int[] is_93_, int[] is_94_, int[] is_95_, Class78 class78, boolean bool) {
+	public void method6335(int i, int i_88_, int[] is, int[] is_89_, int[] is_90_, int[] is_91_, int[] is_92_, int[] is_93_, int[] is_94_, int[] is_95_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299;
 		if (is_91_ != null && ((Class_xa_Sub1) this).anIntArrayArrayArray8465 == null)
 			((Class_xa_Sub1) this).anIntArrayArrayArray8465 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -387,15 +387,15 @@ public class Class_xa_Sub1 extends Ground {
 				i_98_ = 128;
 				i_97_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_98_ << 14) | (long) i_97_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_98_ << 14) | (long) i_97_);
 			Node node;
 			for (node = ((Class_xa_Sub1) this).aClass440_8479.method5852(l); node != null; node = ((Class_xa_Sub1) this).aClass440_8479.method5853(-1979022775)) {
 				Class298_Sub16 class298_sub16 = (Class298_Sub16) node;
-				if (((Class298_Sub16) class298_sub16).anInt7284 == i_97_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_98_) && ((Class298_Sub16) class298_sub16).aClass78_7286.method843(class78, (byte) 61))
+				if (((Class298_Sub16) class298_sub16).anInt7284 == i_97_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_98_) && ((Class298_Sub16) class298_sub16).aDisplayMode_7286.method843(displayMode, (byte) 61))
 					break;
 			}
 			if (node == null) {
-				class298_sub16s[i_96_] = new Class298_Sub16(this, i_97_, i_98_, class78);
+				class298_sub16s[i_96_] = new Class298_Sub16(this, i_97_, i_98_, displayMode);
 				((Class_xa_Sub1) this).aClass440_8479.method5858(class298_sub16s[i_96_], l);
 			} else
 				class298_sub16s[i_96_] = (Class298_Sub16) node;
@@ -468,7 +468,7 @@ public class Class_xa_Sub1 extends Ground {
 			((Class_xa_Sub1) this).aClass169_8452 = new Class169(((Class_xa_Sub1) this).aClass_ra_Sub3_8467, this);
 	}
 
-	public void method6346(int i, int i_112_, int[] is, int[] is_113_, int[] is_114_, int[] is_115_, int[] is_116_, int[] is_117_, int[] is_118_, int[] is_119_, Class78 class78, boolean bool) {
+	public void method6346(int i, int i_112_, int[] is, int[] is_113_, int[] is_114_, int[] is_115_, int[] is_116_, int[] is_117_, int[] is_118_, int[] is_119_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299;
 		if (is_115_ != null && ((Class_xa_Sub1) this).anIntArrayArrayArray8465 == null)
 			((Class_xa_Sub1) this).anIntArrayArrayArray8465 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -490,15 +490,15 @@ public class Class_xa_Sub1 extends Ground {
 				i_122_ = 128;
 				i_121_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_122_ << 14) | (long) i_121_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_122_ << 14) | (long) i_121_);
 			Node node;
 			for (node = ((Class_xa_Sub1) this).aClass440_8479.method5852(l); node != null; node = ((Class_xa_Sub1) this).aClass440_8479.method5853(-1981494486)) {
 				Class298_Sub16 class298_sub16 = (Class298_Sub16) node;
-				if (((Class298_Sub16) class298_sub16).anInt7284 == i_121_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_122_) && ((Class298_Sub16) class298_sub16).aClass78_7286.method843(class78, (byte) -65))
+				if (((Class298_Sub16) class298_sub16).anInt7284 == i_121_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_122_) && ((Class298_Sub16) class298_sub16).aDisplayMode_7286.method843(displayMode, (byte) -65))
 					break;
 			}
 			if (node == null) {
-				class298_sub16s[i_120_] = new Class298_Sub16(this, i_121_, i_122_, class78);
+				class298_sub16s[i_120_] = new Class298_Sub16(this, i_121_, i_122_, displayMode);
 				((Class_xa_Sub1) this).aClass440_8479.method5858(class298_sub16s[i_120_], l);
 			} else
 				class298_sub16s[i_120_] = (Class298_Sub16) node;
@@ -575,7 +575,7 @@ public class Class_xa_Sub1 extends Ground {
 		}
 	}
 
-	public void method6336(int i, int i_139_, int[] is, int[] is_140_, int[] is_141_, int[] is_142_, int[] is_143_, int[] is_144_, int[] is_145_, int[] is_146_, int[] is_147_, int[] is_148_, int[] is_149_, Class78 class78, boolean bool) {
+	public void method6336(int i, int i_139_, int[] is, int[] is_140_, int[] is_141_, int[] is_142_, int[] is_143_, int[] is_144_, int[] is_145_, int[] is_146_, int[] is_147_, int[] is_148_, int[] is_149_, DisplayMode displayMode, boolean bool) {
 		int i_150_ = is_146_.length;
 		int[] is_151_ = new int[i_150_ * 3];
 		int[] is_152_ = new int[i_150_ * 3];
@@ -624,7 +624,7 @@ public class Class_xa_Sub1 extends Ground {
 				is_158_[i_159_] = is_142_[i_163_];
 			i_159_++;
 		}
-		method6335(i, i_139_, is_151_, is_157_, is_152_, is_158_, is_153_, is_154_, is_155_, is_156_, class78, bool);
+		method6335(i, i_139_, is_151_, is_157_, is_152_, is_158_, is_153_, is_154_, is_155_, is_156_, displayMode, bool);
 	}
 
 	void method6365(Class_na_Sub2 class_na_sub2, int i, int i_164_) {
@@ -676,7 +676,7 @@ public class Class_xa_Sub1 extends Ground {
 		}
 	}
 
-	public void method6345(int i, int i_190_, int[] is, int[] is_191_, int[] is_192_, int[] is_193_, int[] is_194_, int[] is_195_, int[] is_196_, int[] is_197_, Class78 class78, boolean bool) {
+	public void method6345(int i, int i_190_, int[] is, int[] is_191_, int[] is_192_, int[] is_193_, int[] is_194_, int[] is_195_, int[] is_196_, int[] is_197_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299;
 		if (is_193_ != null && ((Class_xa_Sub1) this).anIntArrayArrayArray8465 == null)
 			((Class_xa_Sub1) this).anIntArrayArrayArray8465 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -698,15 +698,15 @@ public class Class_xa_Sub1 extends Ground {
 				i_200_ = 128;
 				i_199_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_200_ << 14) | (long) i_199_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_200_ << 14) | (long) i_199_);
 			Node node;
 			for (node = ((Class_xa_Sub1) this).aClass440_8479.method5852(l); node != null; node = ((Class_xa_Sub1) this).aClass440_8479.method5853(-2025134225)) {
 				Class298_Sub16 class298_sub16 = (Class298_Sub16) node;
-				if (((Class298_Sub16) class298_sub16).anInt7284 == i_199_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_200_) && ((Class298_Sub16) class298_sub16).aClass78_7286.method843(class78, (byte) -112))
+				if (((Class298_Sub16) class298_sub16).anInt7284 == i_199_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_200_) && ((Class298_Sub16) class298_sub16).aDisplayMode_7286.method843(displayMode, (byte) -112))
 					break;
 			}
 			if (node == null) {
-				class298_sub16s[i_198_] = new Class298_Sub16(this, i_199_, i_200_, class78);
+				class298_sub16s[i_198_] = new Class298_Sub16(this, i_199_, i_200_, displayMode);
 				((Class_xa_Sub1) this).aClass440_8479.method5858(class298_sub16s[i_198_], l);
 			} else
 				class298_sub16s[i_198_] = (Class298_Sub16) node;
@@ -722,7 +722,7 @@ public class Class_xa_Sub1 extends Ground {
 		anIntArray8471 = new int[1];
 	}
 
-	public void method6356(int i, int i_201_, int[] is, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, int[] is_208_, int[] is_209_, int[] is_210_, int[] is_211_, Class78 class78, boolean bool) {
+	public void method6356(int i, int i_201_, int[] is, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, int[] is_208_, int[] is_209_, int[] is_210_, int[] is_211_, DisplayMode displayMode, boolean bool) {
 		int i_212_ = is_208_.length;
 		int[] is_213_ = new int[i_212_ * 3];
 		int[] is_214_ = new int[i_212_ * 3];
@@ -771,10 +771,10 @@ public class Class_xa_Sub1 extends Ground {
 				is_220_[i_221_] = is_204_[i_225_];
 			i_221_++;
 		}
-		method6335(i, i_201_, is_213_, is_219_, is_214_, is_220_, is_215_, is_216_, is_217_, is_218_, class78, bool);
+		method6335(i, i_201_, is_213_, is_219_, is_214_, is_220_, is_215_, is_216_, is_217_, is_218_, displayMode, bool);
 	}
 
-	public void method6343(int i, int i_226_, int[] is, int[] is_227_, int[] is_228_, int[] is_229_, int[] is_230_, int[] is_231_, int[] is_232_, int[] is_233_, int[] is_234_, int[] is_235_, int[] is_236_, Class78 class78, boolean bool) {
+	public void method6343(int i, int i_226_, int[] is, int[] is_227_, int[] is_228_, int[] is_229_, int[] is_230_, int[] is_231_, int[] is_232_, int[] is_233_, int[] is_234_, int[] is_235_, int[] is_236_, DisplayMode displayMode, boolean bool) {
 		int i_237_ = is_233_.length;
 		int[] is_238_ = new int[i_237_ * 3];
 		int[] is_239_ = new int[i_237_ * 3];
@@ -823,10 +823,10 @@ public class Class_xa_Sub1 extends Ground {
 				is_245_[i_246_] = is_229_[i_250_];
 			i_246_++;
 		}
-		method6335(i, i_226_, is_238_, is_244_, is_239_, is_245_, is_240_, is_241_, is_242_, is_243_, class78, bool);
+		method6335(i, i_226_, is_238_, is_244_, is_239_, is_245_, is_240_, is_241_, is_242_, is_243_, displayMode, bool);
 	}
 
-	public void method6337(int i, int i_251_, int[] is, int[] is_252_, int[] is_253_, int[] is_254_, int[] is_255_, int[] is_256_, int[] is_257_, int[] is_258_, int[] is_259_, int[] is_260_, int[] is_261_, Class78 class78, boolean bool) {
+	public void method6337(int i, int i_251_, int[] is, int[] is_252_, int[] is_253_, int[] is_254_, int[] is_255_, int[] is_256_, int[] is_257_, int[] is_258_, int[] is_259_, int[] is_260_, int[] is_261_, DisplayMode displayMode, boolean bool) {
 		int i_262_ = is_258_.length;
 		int[] is_263_ = new int[i_262_ * 3];
 		int[] is_264_ = new int[i_262_ * 3];
@@ -875,7 +875,7 @@ public class Class_xa_Sub1 extends Ground {
 				is_270_[i_271_] = is_254_[i_275_];
 			i_271_++;
 		}
-		method6335(i, i_251_, is_263_, is_269_, is_264_, is_270_, is_265_, is_266_, is_267_, is_268_, class78, bool);
+		method6335(i, i_251_, is_263_, is_269_, is_264_, is_270_, is_265_, is_266_, is_267_, is_268_, displayMode, bool);
 	}
 
 	public Class_na ax(int i, int i_276_, Class_na class_na) {
@@ -1218,7 +1218,7 @@ public class Class_xa_Sub1 extends Ground {
 				((Class_xa_Sub1) this).aNodeArray8478[i_367_] = class298_sub16;
 				class298_sub16.method2914(((Class_xa_Sub1) this).anInt8454);
 			}
-			Class365_Sub1_Sub3_Sub1.method4507(ls, (((Class_xa_Sub1) this).aNodeArray8478), (byte) -13);
+			SceneObject.method4507(ls, (((Class_xa_Sub1) this).aNodeArray8478), (byte) -13);
 			if (((Class_xa_Sub1) this).aClass169_8452 != null)
 				((Class_xa_Sub1) this).aClass169_8452.method1799();
 		} else
@@ -1299,10 +1299,10 @@ public class Class_xa_Sub1 extends Ground {
 						Class298_Sub16 class298_sub16 = (Class298_Sub16) (((Class_xa_Sub1) this).aNodeArray8478[i_384_]);
 						if (((Class298_Sub16) class298_sub16).anInt7282 != 0) {
 							if (((Class_ra_Sub3) ((Class_xa_Sub1) this).aClass_ra_Sub3_8467).aBoolean8326) {
-								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aClass78_7286));
-								class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, ((float) (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).anInt8328) + ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt727) * -1475891183) / 255.0F * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669))));
-								class137.aClass232_1523.method2139(1.0F / (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669));
-								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
+								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aDisplayMode_7286));
+								class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, ((float) (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).anInt8328) + ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt727) * -1475891183) / 255.0F * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669))));
+								class137.aClass232_1523.method2139(1.0F / (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669));
+								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
 							} else {
 								class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 								class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);
@@ -1335,10 +1335,10 @@ public class Class_xa_Sub1 extends Ground {
 						Class298_Sub16 class298_sub16 = (Class298_Sub16) (((Class_xa_Sub1) this).aNodeArray8478[i_387_]);
 						if (((Class298_Sub16) class298_sub16).anInt7282 > 0) {
 							if (((Class_ra_Sub3) ((Class_xa_Sub1) this).aClass_ra_Sub3_8467).aBoolean8326) {
-								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aClass78_7286));
+								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aDisplayMode_7286));
 								float f = 0.15F;
-								class137.aClass232_1523.method2135(0.0F, 1.0F / ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669) * f), 0.0F, 256.0F / ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669) * f));
-								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
+								class137.aClass232_1523.method2135(0.0F, 1.0F / ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669) * f), 0.0F, 256.0F / ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669) * f));
+								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
 							} else {
 								class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 								class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);
@@ -1372,7 +1372,7 @@ public class Class_xa_Sub1 extends Ground {
 								if (!(((Class_xa_Sub1) this).aClass_ra_Sub3_8467.aBoolean8214) && (((Class_xa_Sub1) this).anInt8482 & 0x8) != 0) {
 									Class161_Sub1_Sub2 class161_sub1_sub2 = (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass161_Sub1_Sub2_8319);
 									class161_sub1_sub2.aClass233_9140.method2142(((Class_xa_Sub1) this).aClass_ra_Sub3_8467.aClass233_8251);
-									class161_sub1_sub2.aClass233_9142.method2147(1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt729) * -28774789)), 1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt729) * -28774789)), 1.0F, 1.0F);
+									class161_sub1_sub2.aClass233_9142.method2147(1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt729) * -28774789)), 1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt729) * -28774789)), 1.0F, 1.0F);
 									class161_sub1_sub2.aSceneObjectPosition_9144.method2007((((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[12]), (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[13]), (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[14]));
 									MaterialRaw materialRaw = (((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299.method174((((Class298_Sub16) class298_sub16).anInt7284), 191676686));
 									class161_sub1_sub2.anInt9145 = materialRaw.aByte536 * -1021876967;
@@ -1479,10 +1479,10 @@ public class Class_xa_Sub1 extends Ground {
 						Class298_Sub16 class298_sub16 = (Class298_Sub16) (((Class_xa_Sub1) this).aNodeArray8478[i_405_]);
 						if (((Class298_Sub16) class298_sub16).anInt7282 != 0) {
 							if (((Class_ra_Sub3) ((Class_xa_Sub1) this).aClass_ra_Sub3_8467).aBoolean8326) {
-								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aClass78_7286));
-								class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, ((float) (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).anInt8328) + ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt727) * -1475891183) / 255.0F * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669))));
-								class137.aClass232_1523.method2139(1.0F / (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669));
-								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
+								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aDisplayMode_7286));
+								class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, ((float) (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).anInt8328) + ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt727) * -1475891183) / 255.0F * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669))));
+								class137.aClass232_1523.method2139(1.0F / (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669));
+								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
 							} else {
 								class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 								class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);
@@ -1515,10 +1515,10 @@ public class Class_xa_Sub1 extends Ground {
 						Class298_Sub16 class298_sub16 = (Class298_Sub16) (((Class_xa_Sub1) this).aNodeArray8478[i_408_]);
 						if (((Class298_Sub16) class298_sub16).anInt7282 > 0) {
 							if (((Class_ra_Sub3) ((Class_xa_Sub1) this).aClass_ra_Sub3_8467).aBoolean8326) {
-								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aClass78_7286));
+								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aDisplayMode_7286));
 								float f = 0.15F;
-								class137.aClass232_1523.method2135(0.0F, 1.0F / ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669) * f), 0.0F, 256.0F / ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669) * f));
-								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
+								class137.aClass232_1523.method2135(0.0F, 1.0F / ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669) * f), 0.0F, 256.0F / ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669) * f));
+								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
 							} else {
 								class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 								class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);
@@ -1552,7 +1552,7 @@ public class Class_xa_Sub1 extends Ground {
 								if (!(((Class_xa_Sub1) this).aClass_ra_Sub3_8467.aBoolean8214) && (((Class_xa_Sub1) this).anInt8482 & 0x8) != 0) {
 									Class161_Sub1_Sub2 class161_sub1_sub2 = (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass161_Sub1_Sub2_8319);
 									class161_sub1_sub2.aClass233_9140.method2142(((Class_xa_Sub1) this).aClass_ra_Sub3_8467.aClass233_8251);
-									class161_sub1_sub2.aClass233_9142.method2147(1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt729) * -28774789)), 1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt729) * -28774789)), 1.0F, 1.0F);
+									class161_sub1_sub2.aClass233_9142.method2147(1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt729) * -28774789)), 1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt729) * -28774789)), 1.0F, 1.0F);
 									class161_sub1_sub2.aSceneObjectPosition_9144.method2007((((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[12]), (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[13]), (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[14]));
 									MaterialRaw materialRaw = (((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299.method174((((Class298_Sub16) class298_sub16).anInt7284), 1144477529));
 									class161_sub1_sub2.anInt9145 = materialRaw.aByte536 * -1021876967;
@@ -1854,10 +1854,10 @@ public class Class_xa_Sub1 extends Ground {
 						Class298_Sub16 class298_sub16 = (Class298_Sub16) (((Class_xa_Sub1) this).aNodeArray8478[i_474_]);
 						if (((Class298_Sub16) class298_sub16).anInt7282 != 0) {
 							if (((Class_ra_Sub3) ((Class_xa_Sub1) this).aClass_ra_Sub3_8467).aBoolean8326) {
-								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aClass78_7286));
-								class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, ((float) (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).anInt8328) + ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt727) * -1475891183) / 255.0F * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669))));
-								class137.aClass232_1523.method2139(1.0F / (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669));
-								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
+								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aDisplayMode_7286));
+								class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, ((float) (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).anInt8328) + ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt727) * -1475891183) / 255.0F * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669))));
+								class137.aClass232_1523.method2139(1.0F / (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669));
+								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
 							} else {
 								class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 								class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);
@@ -1890,10 +1890,10 @@ public class Class_xa_Sub1 extends Ground {
 						Class298_Sub16 class298_sub16 = (Class298_Sub16) (((Class_xa_Sub1) this).aNodeArray8478[i_477_]);
 						if (((Class298_Sub16) class298_sub16).anInt7282 > 0) {
 							if (((Class_ra_Sub3) ((Class_xa_Sub1) this).aClass_ra_Sub3_8467).aBoolean8326) {
-								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aClass78_7286));
+								((Class_xa_Sub1) this).aClass_ra_Sub3_8467.method5058(0, (((Class298_Sub16) class298_sub16).aDisplayMode_7286));
 								float f = 0.15F;
-								class137.aClass232_1523.method2135(0.0F, 1.0F / ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669) * f), 0.0F, 256.0F / ((float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt725) * 1996750669) * f));
-								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aClass78_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
+								class137.aClass232_1523.method2135(0.0F, 1.0F / ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669) * f), 0.0F, 256.0F / ((float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt725) * 1996750669) * f));
+								class137.aSceneObjectPosition_1524.method2007((float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 16 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 8 & 0xff) / 255.0F, (float) (((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt726) * -1212608691) >> 0 & 0xff) / 255.0F);
 							} else {
 								class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 								class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);
@@ -1927,7 +1927,7 @@ public class Class_xa_Sub1 extends Ground {
 								if (!(((Class_xa_Sub1) this).aClass_ra_Sub3_8467.aBoolean8214) && (((Class_xa_Sub1) this).anInt8482 & 0x8) != 0) {
 									Class161_Sub1_Sub2 class161_sub1_sub2 = (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass161_Sub1_Sub2_8319);
 									class161_sub1_sub2.aClass233_9140.method2142(((Class_xa_Sub1) this).aClass_ra_Sub3_8467.aClass233_8251);
-									class161_sub1_sub2.aClass233_9142.method2147(1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt729) * -28774789)), 1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aClass78_7286.anInt729) * -28774789)), 1.0F, 1.0F);
+									class161_sub1_sub2.aClass233_9142.method2147(1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt729) * -28774789)), 1.0F / (((Class298_Sub16) class298_sub16).aFloat7294 * (float) ((((Class298_Sub16) class298_sub16).aDisplayMode_7286.anInt729) * -28774789)), 1.0F, 1.0F);
 									class161_sub1_sub2.aSceneObjectPosition_9144.method2007((((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[12]), (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[13]), (((Class_ra_Sub3) (((Class_xa_Sub1) this).aClass_ra_Sub3_8467)).aClass233_8231.aFloatArray2594[14]));
 									MaterialRaw materialRaw = (((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299.method174((((Class298_Sub16) class298_sub16).anInt7284), 1719353613));
 									class161_sub1_sub2.anInt9145 = materialRaw.aByte536 * -1021876967;
@@ -2108,7 +2108,7 @@ public class Class_xa_Sub1 extends Ground {
 		((Class_xa_Sub1) this).aClass458_8468.method5968(new Class298_Sub18(((Class_xa_Sub1) this).aClass_ra_Sub3_8467, this, class298_sub10, is), 847764960);
 	}
 
-	public void method6359(int i, int i_511_, int[] is, int[] is_512_, int[] is_513_, int[] is_514_, int[] is_515_, int[] is_516_, int[] is_517_, int[] is_518_, Class78 class78, boolean bool) {
+	public void method6359(int i, int i_511_, int[] is, int[] is_512_, int[] is_513_, int[] is_514_, int[] is_515_, int[] is_516_, int[] is_517_, int[] is_518_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub1) this).aClass_ra_Sub3_8467.anInterface_ma5299;
 		if (is_514_ != null && ((Class_xa_Sub1) this).anIntArrayArrayArray8465 == null)
 			((Class_xa_Sub1) this).anIntArrayArrayArray8465 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -2130,15 +2130,15 @@ public class Class_xa_Sub1 extends Ground {
 				i_521_ = 128;
 				i_520_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_521_ << 14) | (long) i_520_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_521_ << 14) | (long) i_520_);
 			Node node;
 			for (node = ((Class_xa_Sub1) this).aClass440_8479.method5852(l); node != null; node = ((Class_xa_Sub1) this).aClass440_8479.method5853(-1980491334)) {
 				Class298_Sub16 class298_sub16 = (Class298_Sub16) node;
-				if (((Class298_Sub16) class298_sub16).anInt7284 == i_520_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_521_) && ((Class298_Sub16) class298_sub16).aClass78_7286.method843(class78, (byte) -64))
+				if (((Class298_Sub16) class298_sub16).anInt7284 == i_520_ && (((Class298_Sub16) class298_sub16).aFloat7294 == (float) i_521_) && ((Class298_Sub16) class298_sub16).aDisplayMode_7286.method843(displayMode, (byte) -64))
 					break;
 			}
 			if (node == null) {
-				class298_sub16s[i_519_] = new Class298_Sub16(this, i_520_, i_521_, class78);
+				class298_sub16s[i_519_] = new Class298_Sub16(this, i_520_, i_521_, displayMode);
 				((Class_xa_Sub1) this).aClass440_8479.method5858(class298_sub16s[i_519_], l);
 			} else
 				class298_sub16s[i_519_] = (Class298_Sub16) node;

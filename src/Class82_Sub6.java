@@ -79,7 +79,7 @@ public class Class82_Sub6 extends Class82 {
 
 	public static int method886(int i, int i_0_, boolean bool, int i_1_) {
 		try {
-			Class298_Sub9 class298_sub9 = Class255.method2437(i, bool, 692761742);
+			Class298_Sub9 class298_sub9 = DevConsole.method2437(i, bool, 692761742);
 			if (null == class298_sub9)
 				return -1;
 			if (i_0_ < 0 || i_0_ >= (((Class298_Sub9) class298_sub9).anIntArray7226).length)

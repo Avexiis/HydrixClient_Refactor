@@ -358,7 +358,7 @@ public class Class_xa_Sub3 extends Ground {
 				ls[i_89_] = class298_sub5.aLong3188 * 7051297995265073167L;
 				class298_sub5.method2860(((Class_xa_Sub3) this).anInt8526);
 			}
-			Class365_Sub1_Sub3_Sub1.method4507(ls, (((Class_xa_Sub3) this).aNodeArray8534), (byte) -115);
+			SceneObject.method4507(ls, (((Class_xa_Sub3) this).aNodeArray8534), (byte) -115);
 			if (((Class_xa_Sub3) this).aClass44_8541 != null)
 				((Class_xa_Sub3) this).aClass44_8541.method489();
 		} else
@@ -690,7 +690,7 @@ public class Class_xa_Sub3 extends Ground {
 		method6374(i, i_153_, i_154_, bools, bool, i_155_);
 	}
 
-	public void method6335(int i, int i_156_, int[] is, int[] is_157_, int[] is_158_, int[] is_159_, int[] is_160_, int[] is_161_, int[] is_162_, int[] is_163_, Class78 class78, boolean bool) {
+	public void method6335(int i, int i_156_, int[] is, int[] is_157_, int[] is_158_, int[] is_159_, int[] is_160_, int[] is_161_, int[] is_162_, int[] is_163_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub3) this).aClass_ra_Sub2_8535.anInterface_ma5299;
 		if (is_159_ != null && ((Class_xa_Sub3) this).anIntArrayArrayArray8533 == null)
 			((Class_xa_Sub3) this).anIntArrayArrayArray8533 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -712,15 +712,15 @@ public class Class_xa_Sub3 extends Ground {
 				i_166_ = 128;
 				i_165_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_166_ << 14) | (long) i_165_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_166_ << 14) | (long) i_165_);
 			Node node;
 			for (node = ((Class_xa_Sub3) this).aClass440_8549.method5852(l); node != null; node = ((Class_xa_Sub3) this).aClass440_8549.method5853(-1829773748)) {
 				Class298_Sub5 class298_sub5 = (Class298_Sub5) node;
-				if (((Class298_Sub5) class298_sub5).anInt7199 == i_165_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_166_) && ((Class298_Sub5) class298_sub5).aClass78_7198.method843(class78, (byte) -48))
+				if (((Class298_Sub5) class298_sub5).anInt7199 == i_165_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_166_) && ((Class298_Sub5) class298_sub5).aDisplayMode_7198.method843(displayMode, (byte) -48))
 					break;
 			}
 			if (node == null) {
-				class298_sub5s[i_164_] = new Class298_Sub5(this, i_165_, i_166_, class78);
+				class298_sub5s[i_164_] = new Class298_Sub5(this, i_165_, i_166_, displayMode);
 				((Class_xa_Sub3) this).aClass440_8549.method5858(class298_sub5s[i_164_], l);
 			} else
 				class298_sub5s[i_164_] = (Class298_Sub5) node;
@@ -744,7 +744,7 @@ public class Class_xa_Sub3 extends Ground {
 		((Class_xa_Sub3) this).aClass458_8536.method5968(new Class298_Sub3(((Class_xa_Sub3) this).aClass_ra_Sub2_8535, this, class298_sub10, is), 136823922);
 	}
 
-	public void method6356(int i, int i_172_, int[] is, int[] is_173_, int[] is_174_, int[] is_175_, int[] is_176_, int[] is_177_, int[] is_178_, int[] is_179_, int[] is_180_, int[] is_181_, int[] is_182_, Class78 class78, boolean bool) {
+	public void method6356(int i, int i_172_, int[] is, int[] is_173_, int[] is_174_, int[] is_175_, int[] is_176_, int[] is_177_, int[] is_178_, int[] is_179_, int[] is_180_, int[] is_181_, int[] is_182_, DisplayMode displayMode, boolean bool) {
 		int i_183_ = is_179_.length;
 		int[] is_184_ = new int[i_183_ * 3];
 		int[] is_185_ = new int[i_183_ * 3];
@@ -796,10 +796,10 @@ public class Class_xa_Sub3 extends Ground {
 				is_191_[i_192_] = is_175_[i_196_];
 			i_192_++;
 		}
-		method6335(i, i_172_, is_184_, is_190_, is_185_, is_191_, is_186_, is_187_, is_188_, is_189_, class78, bool);
+		method6335(i, i_172_, is_184_, is_190_, is_185_, is_191_, is_186_, is_187_, is_188_, is_189_, displayMode, bool);
 	}
 
-	public void method6343(int i, int i_197_, int[] is, int[] is_198_, int[] is_199_, int[] is_200_, int[] is_201_, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, Class78 class78, boolean bool) {
+	public void method6343(int i, int i_197_, int[] is, int[] is_198_, int[] is_199_, int[] is_200_, int[] is_201_, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, DisplayMode displayMode, boolean bool) {
 		int i_208_ = is_204_.length;
 		int[] is_209_ = new int[i_208_ * 3];
 		int[] is_210_ = new int[i_208_ * 3];
@@ -851,7 +851,7 @@ public class Class_xa_Sub3 extends Ground {
 				is_216_[i_217_] = is_200_[i_221_];
 			i_217_++;
 		}
-		method6335(i, i_197_, is_209_, is_215_, is_210_, is_216_, is_211_, is_212_, is_213_, is_214_, class78, bool);
+		method6335(i, i_197_, is_209_, is_215_, is_210_, is_216_, is_211_, is_212_, is_213_, is_214_, displayMode, bool);
 	}
 
 	public void method6350(int i, int i_222_, int i_223_, int i_224_, int i_225_, int i_226_, int i_227_, boolean[][] bools) {
@@ -953,7 +953,7 @@ public class Class_xa_Sub3 extends Ground {
 		}
 	}
 
-	public void method6359(int i, int i_237_, int[] is, int[] is_238_, int[] is_239_, int[] is_240_, int[] is_241_, int[] is_242_, int[] is_243_, int[] is_244_, Class78 class78, boolean bool) {
+	public void method6359(int i, int i_237_, int[] is, int[] is_238_, int[] is_239_, int[] is_240_, int[] is_241_, int[] is_242_, int[] is_243_, int[] is_244_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub3) this).aClass_ra_Sub2_8535.anInterface_ma5299;
 		if (is_240_ != null && ((Class_xa_Sub3) this).anIntArrayArrayArray8533 == null)
 			((Class_xa_Sub3) this).anIntArrayArrayArray8533 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -975,15 +975,15 @@ public class Class_xa_Sub3 extends Ground {
 				i_247_ = 128;
 				i_246_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_247_ << 14) | (long) i_246_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_247_ << 14) | (long) i_246_);
 			Node node;
 			for (node = ((Class_xa_Sub3) this).aClass440_8549.method5852(l); node != null; node = ((Class_xa_Sub3) this).aClass440_8549.method5853(-2069832948)) {
 				Class298_Sub5 class298_sub5 = (Class298_Sub5) node;
-				if (((Class298_Sub5) class298_sub5).anInt7199 == i_246_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_247_) && ((Class298_Sub5) class298_sub5).aClass78_7198.method843(class78, (byte) 30))
+				if (((Class298_Sub5) class298_sub5).anInt7199 == i_246_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_247_) && ((Class298_Sub5) class298_sub5).aDisplayMode_7198.method843(displayMode, (byte) 30))
 					break;
 			}
 			if (node == null) {
-				class298_sub5s[i_245_] = new Class298_Sub5(this, i_246_, i_247_, class78);
+				class298_sub5s[i_245_] = new Class298_Sub5(this, i_246_, i_247_, displayMode);
 				((Class_xa_Sub3) this).aClass440_8549.method5858(class298_sub5s[i_245_], l);
 			} else
 				class298_sub5s[i_245_] = (Class298_Sub5) node;
@@ -995,7 +995,7 @@ public class Class_xa_Sub3 extends Ground {
 		((Class_xa_Sub3) this).anInt8543 += is_241_.length;
 	}
 
-	public void method6346(int i, int i_248_, int[] is, int[] is_249_, int[] is_250_, int[] is_251_, int[] is_252_, int[] is_253_, int[] is_254_, int[] is_255_, Class78 class78, boolean bool) {
+	public void method6346(int i, int i_248_, int[] is, int[] is_249_, int[] is_250_, int[] is_251_, int[] is_252_, int[] is_253_, int[] is_254_, int[] is_255_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub3) this).aClass_ra_Sub2_8535.anInterface_ma5299;
 		if (is_251_ != null && ((Class_xa_Sub3) this).anIntArrayArrayArray8533 == null)
 			((Class_xa_Sub3) this).anIntArrayArrayArray8533 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -1017,15 +1017,15 @@ public class Class_xa_Sub3 extends Ground {
 				i_258_ = 128;
 				i_257_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_258_ << 14) | (long) i_257_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_258_ << 14) | (long) i_257_);
 			Node node;
 			for (node = ((Class_xa_Sub3) this).aClass440_8549.method5852(l); node != null; node = ((Class_xa_Sub3) this).aClass440_8549.method5853(-1821853943)) {
 				Class298_Sub5 class298_sub5 = (Class298_Sub5) node;
-				if (((Class298_Sub5) class298_sub5).anInt7199 == i_257_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_258_) && ((Class298_Sub5) class298_sub5).aClass78_7198.method843(class78, (byte) -53))
+				if (((Class298_Sub5) class298_sub5).anInt7199 == i_257_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_258_) && ((Class298_Sub5) class298_sub5).aDisplayMode_7198.method843(displayMode, (byte) -53))
 					break;
 			}
 			if (node == null) {
-				class298_sub5s[i_256_] = new Class298_Sub5(this, i_257_, i_258_, class78);
+				class298_sub5s[i_256_] = new Class298_Sub5(this, i_257_, i_258_, displayMode);
 				((Class_xa_Sub3) this).aClass440_8549.method5858(class298_sub5s[i_256_], l);
 			} else
 				class298_sub5s[i_256_] = (Class298_Sub5) node;
@@ -1340,7 +1340,7 @@ public class Class_xa_Sub3 extends Ground {
 				ls[i_341_] = class298_sub5.aLong3188 * 7051297995265073167L;
 				class298_sub5.method2860(((Class_xa_Sub3) this).anInt8526);
 			}
-			Class365_Sub1_Sub3_Sub1.method4507(ls, (((Class_xa_Sub3) this).aNodeArray8534), (byte) -108);
+			SceneObject.method4507(ls, (((Class_xa_Sub3) this).aNodeArray8534), (byte) -108);
 			if (((Class_xa_Sub3) this).aClass44_8541 != null)
 				((Class_xa_Sub3) this).aClass44_8541.method489();
 		} else
@@ -1365,7 +1365,7 @@ public class Class_xa_Sub3 extends Ground {
 		method6374(i, i_342_, i_343_, bools, bool, i_344_);
 	}
 
-	public void method6345(int i, int i_345_, int[] is, int[] is_346_, int[] is_347_, int[] is_348_, int[] is_349_, int[] is_350_, int[] is_351_, int[] is_352_, Class78 class78, boolean bool) {
+	public void method6345(int i, int i_345_, int[] is, int[] is_346_, int[] is_347_, int[] is_348_, int[] is_349_, int[] is_350_, int[] is_351_, int[] is_352_, DisplayMode displayMode, boolean bool) {
 		Interface_ma interface_ma = ((Class_xa_Sub3) this).aClass_ra_Sub2_8535.anInterface_ma5299;
 		if (is_348_ != null && ((Class_xa_Sub3) this).anIntArrayArrayArray8533 == null)
 			((Class_xa_Sub3) this).anIntArrayArrayArray8533 = new int[anInt6287 * -506105871][anInt6286 * -1148794921][];
@@ -1387,15 +1387,15 @@ public class Class_xa_Sub3 extends Ground {
 				i_355_ = 128;
 				i_354_ = -1;
 			}
-			long l = ((long) (class78.anInt727 * -1475891183) << 48 | (long) (class78.anInt725 * 1996750669) << 42 | (long) (class78.anInt726 * -1212608691) << 28 | (long) (i_355_ << 14) | (long) i_354_);
+			long l = ((long) (displayMode.anInt727 * -1475891183) << 48 | (long) (displayMode.anInt725 * 1996750669) << 42 | (long) (displayMode.anInt726 * -1212608691) << 28 | (long) (i_355_ << 14) | (long) i_354_);
 			Node node;
 			for (node = ((Class_xa_Sub3) this).aClass440_8549.method5852(l); node != null; node = ((Class_xa_Sub3) this).aClass440_8549.method5853(-2112383276)) {
 				Class298_Sub5 class298_sub5 = (Class298_Sub5) node;
-				if (((Class298_Sub5) class298_sub5).anInt7199 == i_354_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_355_) && ((Class298_Sub5) class298_sub5).aClass78_7198.method843(class78, (byte) 12))
+				if (((Class298_Sub5) class298_sub5).anInt7199 == i_354_ && (((Class298_Sub5) class298_sub5).aFloat7196 == (float) i_355_) && ((Class298_Sub5) class298_sub5).aDisplayMode_7198.method843(displayMode, (byte) 12))
 					break;
 			}
 			if (node == null) {
-				class298_sub5s[i_353_] = new Class298_Sub5(this, i_354_, i_355_, class78);
+				class298_sub5s[i_353_] = new Class298_Sub5(this, i_354_, i_355_, displayMode);
 				((Class_xa_Sub3) this).aClass440_8549.method5858(class298_sub5s[i_353_], l);
 			} else
 				class298_sub5s[i_353_] = (Class298_Sub5) node;
@@ -1716,7 +1716,7 @@ public class Class_xa_Sub3 extends Ground {
 		}
 	}
 
-	public void method6337(int i, int i_406_, int[] is, int[] is_407_, int[] is_408_, int[] is_409_, int[] is_410_, int[] is_411_, int[] is_412_, int[] is_413_, int[] is_414_, int[] is_415_, int[] is_416_, Class78 class78, boolean bool) {
+	public void method6337(int i, int i_406_, int[] is, int[] is_407_, int[] is_408_, int[] is_409_, int[] is_410_, int[] is_411_, int[] is_412_, int[] is_413_, int[] is_414_, int[] is_415_, int[] is_416_, DisplayMode displayMode, boolean bool) {
 		int i_417_ = is_413_.length;
 		int[] is_418_ = new int[i_417_ * 3];
 		int[] is_419_ = new int[i_417_ * 3];
@@ -1768,7 +1768,7 @@ public class Class_xa_Sub3 extends Ground {
 				is_425_[i_426_] = is_409_[i_430_];
 			i_426_++;
 		}
-		method6335(i, i_406_, is_418_, is_424_, is_419_, is_425_, is_420_, is_421_, is_422_, is_423_, class78, bool);
+		method6335(i, i_406_, is_418_, is_424_, is_419_, is_425_, is_420_, is_421_, is_422_, is_423_, displayMode, bool);
 	}
 
 	public Class_na ax(int i, int i_431_, Class_na class_na) {
@@ -1845,7 +1845,7 @@ public class Class_xa_Sub3 extends Ground {
 		return ((Class_xa_Sub3) this).aClass44_8541.method492(class_na, i_456_, i_457_);
 	}
 
-	public void method6336(int i, int i_458_, int[] is, int[] is_459_, int[] is_460_, int[] is_461_, int[] is_462_, int[] is_463_, int[] is_464_, int[] is_465_, int[] is_466_, int[] is_467_, int[] is_468_, Class78 class78, boolean bool) {
+	public void method6336(int i, int i_458_, int[] is, int[] is_459_, int[] is_460_, int[] is_461_, int[] is_462_, int[] is_463_, int[] is_464_, int[] is_465_, int[] is_466_, int[] is_467_, int[] is_468_, DisplayMode displayMode, boolean bool) {
 		int i_469_ = is_465_.length;
 		int[] is_470_ = new int[i_469_ * 3];
 		int[] is_471_ = new int[i_469_ * 3];
@@ -1897,7 +1897,7 @@ public class Class_xa_Sub3 extends Ground {
 				is_477_[i_478_] = is_461_[i_482_];
 			i_478_++;
 		}
-		method6335(i, i_458_, is_470_, is_476_, is_471_, is_477_, is_472_, is_473_, is_474_, is_475_, class78, bool);
+		method6335(i, i_458_, is_470_, is_476_, is_471_, is_477_, is_472_, is_473_, is_474_, is_475_, displayMode, bool);
 	}
 
 	public void method6348(int i, int i_483_, int i_484_, boolean[][] bools, boolean bool, int i_485_) {

@@ -328,7 +328,7 @@ public class WorldTile {
 			Class79.anInt746 = i_39_ * -956029523;
 			Class79.aClass298_Sub19_Sub1_748 = null;
 			Class79.anInt739 = -2102749749 * i_40_;
-			Class8.aBoolean114 = bool;
+			DevConsoleState.aBoolean114 = bool;
 			Class298_Sub24_Sub1.anInt9276 = 1446879088;
 			Class515.aLong6233 = l * 7092526387081397629L;
 			ReferenceTable.anInt6559 = -420794947 * i_41_;

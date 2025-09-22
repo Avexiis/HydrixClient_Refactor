@@ -513,11 +513,11 @@ public class IComponentDefinition {
 		}
 	}
 
-	public Class505 method1113(Class197 class197, Interface10 interface10, byte i) {
+	public GameFont method1113(Class197 class197, Interface10 interface10, byte i) {
 		try {
-			Class505 class505 = class197.method1879(interface10, anInt1210 * 1508815983, 522165232);
-			aBoolean1139 = null == class505;
-			return class505;
+			GameFont gameFont = class197.method1879(interface10, anInt1210 * 1508815983, 522165232);
+			aBoolean1139 = null == gameFont;
+			return gameFont;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("eg.z(").append(')').toString());
 		}
@@ -1097,7 +1097,7 @@ public class IComponentDefinition {
 			Class390 class390 = class403.aBoolean5261 ? class403.aClass390_5247 : class403.aClass390_5246;
 			IComponentDefinition class105 = class390.aClass105_4168;
 			RSInterface RSInterface = class390.aRSInterface_4167;
-			Class321.method3925(class105, RSInterface, class403, (byte) -72);
+			DynamicLight.method3925(class105, RSInterface, class403, (byte) -72);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("eg.im(").append(')').toString());
 		}

@@ -301,13 +301,13 @@ public class Class127_Sub1 extends Class127 {
 		}
 	}
 
-	static int method1425(Class298_Sub37_Sub15 class298_sub37_sub15, Class505 class505, int i) {
+	static int method1425(Class298_Sub37_Sub15 class298_sub37_sub15, GameFont gameFont, int i) {
 		try {
-			String string = Class8.method315(class298_sub37_sub15, 2106133220);
+			String string = DevConsoleState.method315(class298_sub37_sub15, 2106133220);
 			int[] is = Class313.method3821(class298_sub37_sub15, (byte) -16);
 			if (null != is)
 				string = new StringBuilder().append(string).append(Class216.method1999(is, (byte) 1)).toString();
-			int i_71_ = class505.method6254(string, ContextMenu.aClass57Array5501, 1319235613);
+			int i_71_ = gameFont.method6254(string, ContextMenu.aClass57Array5501, 1319235613);
 			if (((Class298_Sub37_Sub15) class298_sub37_sub15).aBoolean9665)
 				i_71_ += SpotAnimation.aClass57_573.method623() + 4;
 			return i_71_;

@@ -14,10 +14,10 @@ public class Class298_Sub39 extends Node {
 	static void method3504(Class298_Sub37_Sub5 class298_sub37_sub5, int i, int i_1_) {
 		try {
 			if (ContextMenu.menuOpen) {
-				Class505 class505 = Class142.method1571(-2115678267);
+				GameFont gameFont = Class142.method1571(-2115678267);
 				int i_2_ = 0;
 				for (Class298_Sub37_Sub15 class298_sub37_sub15 = ((Class298_Sub37_Sub15) ((Class298_Sub37_Sub5) class298_sub37_sub5).aClass461_9584.method5984(2119881606)); class298_sub37_sub15 != null; class298_sub37_sub15 = ((Class298_Sub37_Sub15) ((Class298_Sub37_Sub5) class298_sub37_sub5).aClass461_9584.method5985(-758930912))) {
-					int i_3_ = Class127_Sub1.method1425(class298_sub37_sub15, class505, 692106883);
+					int i_3_ = Class127_Sub1.method1425(class298_sub37_sub15, gameFont, 692106883);
 					if (i_3_ > i_2_)
 						i_2_ = i_3_;
 				}
@@ -29,8 +29,8 @@ public class Class298_Sub39 extends Node {
 					i_5_ = -1347746885 * Class88.anInt806 - i_2_;
 				if (i_5_ < 0)
 					i_5_ = 0;
-				int i_6_ = (ContextMenu.aBoolean5496 ? 20 + class505.anInt6202 * 1110385787 + 1 : 31);
-				int i_7_ = 1 + (1110385787 * class505.anInt6202 + (i - i_6_));
+				int i_6_ = (ContextMenu.aBoolean5496 ? 20 + gameFont.ascent * 1110385787 + 1 : 31);
+				int i_7_ = 1 + (1110385787 * gameFont.ascent + (i - i_6_));
 				if (i_7_ + i_4_ > -1111710645 * Class298_Sub40_Sub9.anInt9716)
 					i_7_ = Class298_Sub40_Sub9.anInt9716 * -1111710645 - i_4_;
 				if (i_7_ < 0)

@@ -30,9 +30,9 @@ public class Class490 {
 	static void method6170(int i) {
 		try {
 			if (1090452523 * GameShell.availableCPU > 1)
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub26_7577, 4, 102316213);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub26_7577, 4, 102316213);
 			else
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub26_7577, 2, -437930362);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub26_7577, 2, -437930362);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ue.q(").append(')').toString());
 		}

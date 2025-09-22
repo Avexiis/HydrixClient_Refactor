@@ -58,15 +58,15 @@ public class Class139 {
 		}
 	}
 
-	public static void method1548(String string, boolean bool, GraphicsToolkit class_ra, Class264 class264, Class505 class505, byte i) {
+	public static void method1548(String string, boolean bool, GraphicsToolkit class_ra, Class264 class264, GameFont gameFont, byte i) {
 		try {
-			boolean bool_5_ = (!Class372_Sub3.aBoolean7730 || Class309.method3804(-2107815446));
+			boolean bool_5_ = (!DevConsoleInit.aBoolean7730 || Class309.method3804(-2107815446));
 			if (bool_5_) {
-				if (Class372_Sub3.aBoolean7730 && bool_5_) {
-					class505 = Class14.aClass505_176;
-					class264 = class_ra.method5092(class505, Class14.aClass89Array169, true);
-					int i_6_ = class505.method6259(string, 250, null, -2064618715);
-					int i_7_ = class505.method6260(string, 250, -2028004825 * class505.anInt6200, null, -804719139);
+				if (DevConsoleInit.aBoolean7730 && bool_5_) {
+					gameFont = Class14.aGameFont_176;
+					class264 = class_ra.method5092(gameFont, Class14.aClass89Array169, true);
+					int i_6_ = gameFont.method6259(string, 250, null, -2064618715);
+					int i_7_ = gameFont.method6260(string, 250, -2028004825 * gameFont.anInt6200, null, -804719139);
 					int i_8_ = CustomCursorPreference.aClass89_8437.anInt812;
 					int i_9_ = 4 + i_8_;
 					i_6_ += 2 * i_9_;
@@ -97,8 +97,8 @@ public class Class139 {
 					class264.method2475(string, i_9_ + i_10_, i_11_ + i_9_, i_6_ - i_9_ * 2, i_7_ - 2 * i_9_, (-617134757 * Class428.anInt6623 | ~0xffffff), -1, 1, 1, 0, null, null, null, 0, 0, -45995166);
 					Class227.method2112(i_10_, i_11_, i_6_, i_7_, (byte) 2);
 				} else {
-					int i_12_ = class505.method6259(string, 250, null, -570698918);
-					int i_13_ = (class505.method6262(string, 250, null, 1328812176) * 13);
+					int i_12_ = gameFont.method6259(string, 250, null, -570698918);
+					int i_13_ = (gameFont.method6262(string, 250, null, 1328812176) * 13);
 					int i_14_ = 4;
 					int i_15_ = 6 + i_14_;
 					int i_16_ = 6 + i_14_;

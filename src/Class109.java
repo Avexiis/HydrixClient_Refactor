@@ -70,7 +70,7 @@ public class Class109
   {
     try
     {
-      class403.anIntArray5244[((class403.anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508);
+      class403.anIntArray5244[((class403.anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508);
     }
     catch (RuntimeException runtimeexception)
     {

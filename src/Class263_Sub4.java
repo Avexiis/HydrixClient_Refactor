@@ -16,24 +16,24 @@ public class Class263_Sub4 extends Class263 implements Interface9_Impl2_Impl1 {
 	}
 
 	Class263_Sub4(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, int i, int i_0_, byte[] is, int i_1_, int i_2_) {
-		super(class_ra_sub3_sub1, 34037, class55, Class77.aClass77_717, i * i_0_, false);
+		super(class_ra_sub3_sub1, 34037, class55, TextEncoder.aTextEncoder_717, i * i_0_, false);
 		((Class263_Sub4) this).anInt9954 = i;
 		((Class263_Sub4) this).anInt9953 = i_0_;
 		((Class263_Sub4) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
 		OpenGL.glPixelStorei(3317, 1);
 		OpenGL.glPixelStorei(3314, i_2_);
-		OpenGL.glTexImage2Dub(((Class263_Sub4) this).anInt6415, 0, (Class_ra_Sub3_Sub1.method5533(((Class263_Sub4) this).aClass55_6419, ((Class263_Sub4) this).aClass77_6420)), i, i_0_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub4) this).aClass55_6419), 5121, is, i_1_);
+		OpenGL.glTexImage2Dub(((Class263_Sub4) this).anInt6415, 0, (Class_ra_Sub3_Sub1.method5533(((Class263_Sub4) this).aClass55_6419, ((Class263_Sub4) this).aTextEncoder_6420)), i, i_0_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub4) this).aClass55_6419), 5121, is, i_1_);
 		OpenGL.glPixelStorei(3314, 0);
 		OpenGL.glPixelStorei(3317, 4);
 	}
 
 	Class263_Sub4(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, int i, int i_3_, float[] fs, int i_4_, int i_5_) {
-		super(class_ra_sub3_sub1, 34037, class55, Class77.aClass77_721, i * i_3_, false);
+		super(class_ra_sub3_sub1, 34037, class55, TextEncoder.aTextEncoder_721, i * i_3_, false);
 		((Class263_Sub4) this).anInt9954 = i;
 		((Class263_Sub4) this).anInt9953 = i_3_;
 		((Class263_Sub4) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
 		OpenGL.glPixelStorei(3314, i_5_);
-		OpenGL.glTexImage2Df(((Class263_Sub4) this).anInt6415, 0, (Class_ra_Sub3_Sub1.method5533(((Class263_Sub4) this).aClass55_6419, ((Class263_Sub4) this).aClass77_6420)), i, i_3_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub4) this).aClass55_6419), 5126, fs, i_4_ * 4);
+		OpenGL.glTexImage2Df(((Class263_Sub4) this).anInt6415, 0, (Class_ra_Sub3_Sub1.method5533(((Class263_Sub4) this).aClass55_6419, ((Class263_Sub4) this).aTextEncoder_6420)), i, i_3_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub4) this).aClass55_6419), 5126, fs, i_4_ * 4);
 		OpenGL.glPixelStorei(3314, 0);
 	}
 
@@ -153,12 +153,12 @@ public class Class263_Sub4 extends Class263 implements Interface9_Impl2_Impl1 {
 		return f;
 	}
 
-	Class263_Sub4(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, Class77 class77, int i, int i_24_) {
-		super(class_ra_sub3_sub1, 34037, class55, class77, i * i_24_, false);
+	Class263_Sub4(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, TextEncoder textEncoder, int i, int i_24_) {
+		super(class_ra_sub3_sub1, 34037, class55, textEncoder, i * i_24_, false);
 		((Class263_Sub4) this).anInt9954 = i;
 		((Class263_Sub4) this).anInt9953 = i_24_;
 		((Class263_Sub4) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
-		OpenGL.glTexImage2Dub(((Class263_Sub4) this).anInt6415, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub4) this).aClass55_6419), (((Class263_Sub4) this).aClass77_6420)), i, i_24_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub4) this).aClass55_6419), Class_ra_Sub3_Sub1.method5537(((Class263_Sub4) this).aClass77_6420), null, 0);
+		OpenGL.glTexImage2Dub(((Class263_Sub4) this).anInt6415, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub4) this).aClass55_6419), (((Class263_Sub4) this).aTextEncoder_6420)), i, i_24_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub4) this).aClass55_6419), Class_ra_Sub3_Sub1.method5537(((Class263_Sub4) this).aTextEncoder_6420), null, 0);
 	}
 
 	public float method109(float f) {
@@ -199,7 +199,7 @@ public class Class263_Sub4 extends Class263 implements Interface9_Impl2_Impl1 {
 	}
 
 	Class263_Sub4(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, int i, int i_33_, int[] is, int i_34_, int i_35_) {
-		super(class_ra_sub3_sub1, 34037, Class55.aClass55_557, Class77.aClass77_717, i * i_33_, false);
+		super(class_ra_sub3_sub1, 34037, Class55.aClass55_557, TextEncoder.aTextEncoder_717, i * i_33_, false);
 		((Class263_Sub4) this).anInt9954 = i;
 		((Class263_Sub4) this).anInt9953 = i_33_;
 		((Class263_Sub4) this).aClass_ra_Sub3_Sub1_6422.method5358(this);

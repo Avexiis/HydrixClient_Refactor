@@ -21,7 +21,7 @@ public class Class313 {
 					Class125.method1395(i, bool, 1982223094);
 				else {
 					Class298_Sub49 class298_sub49 = (new Class298_Sub49(i, new Class308_Sub1(4096, VarClanTypeList.js5_index36, i), i_0_, bool));
-					((Class298_Sub49) class298_sub49).aClass308_Sub1_7591.method3764(Class321.ACTIVE_LANGUAGE.method5753(1748854882), (byte) 104);
+					((Class298_Sub49) class298_sub49).aClass308_Sub1_7591.method3764(DynamicLight.ACTIVE_LANGUAGE.method5753(1748854882), (byte) 104);
 					Class423.aClass437_5354.method5817(class298_sub49, (long) i);
 				}
 			}

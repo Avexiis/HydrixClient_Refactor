@@ -27,7 +27,7 @@ public final class ObjectDeque extends Node {
 
 	public static int method2845(int i, int i_0_, boolean bool, boolean bool_1_, int i_2_) {
 		try {
-			Class298_Sub9 class298_sub9 = Class255.method2437(i, bool_1_, 1819104649);
+			Class298_Sub9 class298_sub9 = DevConsole.method2437(i, bool_1_, 1819104649);
 			if (class298_sub9 == null)
 				return 0;
 			int i_3_ = 0;

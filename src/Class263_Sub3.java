@@ -27,14 +27,14 @@ public class Class263_Sub3 extends Class263 implements Interface9_Impl1 {
 	}
 
 	Class263_Sub3(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, int i, boolean bool, int[][] is) {
-		super(class_ra_sub3_sub1, 34067, Class55.aClass55_557, Class77.aClass77_717, i * i * 6, bool);
+		super(class_ra_sub3_sub1, 34067, Class55.aClass55_557, TextEncoder.aTextEncoder_717, i * i * 6, bool);
 		((Class263_Sub3) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
 		if (bool) {
 			for (int i_0_ = 0; i_0_ < 6; i_0_++)
 				method2468(34069 + i_0_, i, i, is[i_0_]);
 		} else {
 			for (int i_1_ = 0; i_1_ < 6; i_1_++)
-				OpenGL.glTexImage2Di(34069 + i_1_, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub3) this).aClass55_6419), (((Class263_Sub3) this).aClass77_6420)), i, i, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub3) this).aClass55_6419), (((Class_ra_Sub3_Sub1) ((Class263_Sub3) this).aClass_ra_Sub3_Sub1_6422).anInt9841), is[i_1_], 0);
+				OpenGL.glTexImage2Di(34069 + i_1_, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub3) this).aClass55_6419), (((Class263_Sub3) this).aTextEncoder_6420)), i, i, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub3) this).aClass55_6419), (((Class_ra_Sub3_Sub1) ((Class263_Sub3) this).aClass_ra_Sub3_Sub1_6422).anInt9841), is[i_1_], 0);
 		}
 	}
 

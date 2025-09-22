@@ -126,29 +126,29 @@ public class Class129 implements Interface6 {
 				}
 			}
 			if (i_6_ == 3 && (!Class452.aBoolean5642 || Class231.aFrame2589 == null))
-				method1446(i, GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 118), -1, -1, true, (byte) 24);
+				method1446(i, GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 118), -1, -1, true, (byte) 24);
 			else {
 				Container container = Class318.method3874((byte) 31);
 				if (Class231.aFrame2589 != null) {
-					Class78.anInt733 = i_7_ * 1325868603;
+					DisplayMode.anInt733 = i_7_ * 1325868603;
 					GameClient.anInt6472 = -2115832951 * i_8_;
 				} else if (null != Class298_Sub36.aFrame7403) {
 					Insets insets = Class298_Sub36.aFrame7403.getInsets();
-					Class78.anInt733 = (Class298_Sub36.aFrame7403.getSize().width - (insets.left + insets.right)) * 1325868603;
+					DisplayMode.anInt733 = (Class298_Sub36.aFrame7403.getSize().width - (insets.left + insets.right)) * 1325868603;
 					GameClient.anInt6472 = (Class298_Sub36.aFrame7403.getSize().height - (insets.top + insets.bottom)) * -2115832951;
 				} else {
-					Class78.anInt733 = container.getSize().width * 1325868603;
+					DisplayMode.anInt733 = container.getSize().width * 1325868603;
 					GameClient.anInt6472 = container.getSize().height * -2115832951;
 				}
-				if (Class78.anInt733 * -639974669 <= 0)
-					Class78.anInt733 = 1325868603;
+				if (DisplayMode.anInt733 * -639974669 <= 0)
+					DisplayMode.anInt733 = 1325868603;
 				if (1282634425 * GameClient.anInt6472 <= 0)
 					GameClient.anInt6472 = -2115832951;
 				if (1 != i_6_)
 					ChecksumTableEntry.method2283((byte) 3);
 				else {
 					Class462.canvasWidth = GameClient.anInt8794 * -1494558011;
-					GameClient.anInt6473 = (Class78.anInt733 * -639974669 - 775068819 * GameClient.anInt8794) / 2 * -753018213;
+					GameClient.anInt6473 = (DisplayMode.anInt733 * -639974669 - 775068819 * GameClient.anInt8794) / 2 * -753018213;
 					Class298_Sub40_Sub9.anInt9716 = -909258791 * GameClient.anInt8803;
 					GameClient.anInt6474 = 0;
 				}

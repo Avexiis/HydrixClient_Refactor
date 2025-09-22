@@ -243,7 +243,7 @@ public class HitType {
 		}
 	}
 
-	static void method4290(IComponentDefinition class105, Class_ta class_ta, int i, int i_9_, int i_10_, int i_11_, int i_12_, String string, Class264 class264, Class505 class505, int i_13_, int i_14_) {
+	static void method4290(IComponentDefinition class105, Class_ta class_ta, int i, int i_9_, int i_10_, int i_11_, int i_12_, String string, Class264 class264, GameFont gameFont, int i_13_, int i_14_) {
 		try {
 			int i_15_;
 			if (2 == -863531439 * ObjectDeque.anInt7164)
@@ -261,8 +261,8 @@ public class HitType {
 				}
 				int i_20_ = i_19_ * i_10_ + i_18_ * i_11_ >> 14;
 				int i_21_ = i_19_ * i_11_ - i_18_ * i_10_ >> 14;
-				int i_22_ = class505.method6259(string, 100, null, 1430172726);
-				int i_23_ = class505.method6260(string, 100, 0, null, -1739368935);
+				int i_22_ = gameFont.method6259(string, 100, null, 1430172726);
+				int i_23_ = gameFont.method6260(string, 100, 0, null, -1739368935);
 				i_20_ -= i_22_ / 2;
 				if (i_20_ >= -(class105.width * -2093041337) && i_20_ <= -2093041337 * class105.width && i_21_ >= -(457937409 * class105.height) && i_21_ <= 457937409 * class105.height)
 					class264.method2475(string, (-2093041337 * class105.width / 2 + (i_20_ + i)), (457937409 * class105.height / 2 + i_9_ - i_21_ - i_12_ - i_23_), i_22_, 50, i_13_, 0, 1, 0, 0, null, null, class_ta, i, i_9_, -45995166);

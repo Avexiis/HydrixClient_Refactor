@@ -16,7 +16,7 @@ public class Class211 {
 	public static Class211 aClass211_2417;
 	public int anInt2418;
 	public static Class211 aClass211_2419;
-	static Class505 aClass505_2420;
+	static GameFont aGameFont_2420;
 
 	Class211(int i, int i_0_) {
 		anInt2418 = i * 876548389;

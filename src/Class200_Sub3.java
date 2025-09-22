@@ -21,7 +21,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, int i, int i_0_, boolean bool, int[] is, int i_1_, int i_2_) {
-		super(class_ra_sub3_sub2, Class55.aClass55_557, Class77.aClass77_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9846, i * i_0_);
+		super(class_ra_sub3_sub2, Class55.aClass55_557, TextEncoder.aTextEncoder_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9846, i * i_0_);
 		if (!((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aBoolean9865) {
 			((Class200_Sub3) this).anInt8629 = Class416.method5590(i, (byte) 16);
 			((Class200_Sub3) this).anInt8630 = Class416.method5590(i_0_, (byte) 16);
@@ -42,7 +42,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, int i, int i_3_, boolean bool, byte[] is, int i_4_, int i_5_) {
-		super(class_ra_sub3_sub2, class55, Class77.aClass77_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9846, i * i_3_);
+		super(class_ra_sub3_sub2, class55, TextEncoder.aTextEncoder_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9846, i * i_3_);
 		if (!((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aBoolean9865) {
 			((Class200_Sub3) this).anInt8629 = Class416.method5590(i, (byte) 16);
 			((Class200_Sub3) this).anInt8630 = Class416.method5590(i_3_, (byte) 16);
@@ -51,9 +51,9 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 			((Class200_Sub3) this).anInt8630 = i_3_;
 		}
 		if (bool)
-			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 0, 1024, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), Class77.aClass77_717), 1));
+			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 0, 1024, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), TextEncoder.aTextEncoder_717), 1));
 		else
-			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 1, 0, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), Class77.aClass77_717), 1));
+			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 1, 0, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), TextEncoder.aTextEncoder_717), 1));
 		if (i_5_ == 0)
 			i_5_ = i;
 		ByteBuffer bytebuffer = ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410.aByteBuffer8216;
@@ -81,7 +81,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, int i, int i_8_, boolean bool, float[] fs, int i_9_, int i_10_) {
-		super(class_ra_sub3_sub2, class55, Class77.aClass77_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9846, i * i_8_);
+		super(class_ra_sub3_sub2, class55, TextEncoder.aTextEncoder_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9846, i * i_8_);
 		if (!((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aBoolean9865) {
 			((Class200_Sub3) this).anInt8629 = Class416.method5590(i, (byte) 16);
 			((Class200_Sub3) this).anInt8630 = Class416.method5590(i_8_, (byte) 16);
@@ -90,9 +90,9 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 			((Class200_Sub3) this).anInt8630 = i_8_;
 		}
 		if (bool)
-			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 0, 1024, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), Class77.aClass77_721), 1));
+			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 0, 1024, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), TextEncoder.aTextEncoder_721), 1));
 		else
-			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 1, 0, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), Class77.aClass77_721), 1));
+			((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub3) this).anInt8629, ((Class200_Sub3) this).anInt8630, 1, 0, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), TextEncoder.aTextEncoder_721), 1));
 		if (i_10_ == 0)
 			i_10_ = i;
 		ByteBuffer bytebuffer = ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410.aByteBuffer8216;
@@ -136,7 +136,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method101(int i, int i_13_, int i_14_, int i_15_, int[] is, int i_16_, int i_17_) {
-		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_17_ == 0)
 			i_17_ = i_14_;
@@ -147,7 +147,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method82(int i, int i_18_, int i_19_, int i_20_, byte[] is, Class55 class55, int i_21_, int i_22_) {
-		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_22_ == 0)
 			i_22_ = i_19_;
@@ -158,7 +158,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method83(int i, int i_23_, int i_24_, int i_25_, int[] is, int i_26_) {
-		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		ByteBuffer bytebuffer = ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410.aByteBuffer8216;
 		bytebuffer.clear();
@@ -171,7 +171,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method107(int i, int i_27_, int i_28_, int i_29_, int[] is, int i_30_) {
-		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		ByteBuffer bytebuffer = ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410.aByteBuffer8216;
 		bytebuffer.clear();
@@ -233,7 +233,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method93(int i, int i_32_, int i_33_, int i_34_, int[] is, int i_35_) {
-		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		ByteBuffer bytebuffer = ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410.aByteBuffer8216;
 		bytebuffer.clear();
@@ -263,8 +263,8 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 		((Class200_Sub3) this).aBoolean8632 = bool_37_;
 	}
 
-	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, Class77 class77, int i, int i_38_) {
-		this(class_ra_sub3_sub2, class55, class77, i, i_38_, 0, 1);
+	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_38_) {
+		this(class_ra_sub3_sub2, class55, textEncoder, i, i_38_, 0, 1);
 	}
 
 	public int method76() {
@@ -276,7 +276,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method100(int i, int i_39_, int i_40_, int i_41_, byte[] is, Class55 class55, int i_42_, int i_43_) {
-		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_43_ == 0)
 			i_43_ = i_40_;
@@ -287,7 +287,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method104(int i, int i_44_, int i_45_, int i_46_, byte[] is, Class55 class55, int i_47_, int i_48_) {
-		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_48_ == 0)
 			i_48_ = i_45_;
@@ -298,7 +298,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method87(int i, int i_49_, int i_50_, int i_51_, byte[] is, Class55 class55, int i_52_, int i_53_) {
-		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != class55 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_53_ == 0)
 			i_53_ = i_50_;
@@ -308,8 +308,8 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 		IDirect3DTexture.Upload(((Class200_Sub3) this).aLong6407, 0, i, i_49_, i_50_, i_51_, i_53_ * (((Class200_Sub3) this).aClass55_6409.anInt556 * 845115459), 0, ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410.aLong8217);
 	}
 
-	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, Class77 class77, int i, int i_54_, int i_55_, int i_56_) {
-		super(class_ra_sub3_sub2, class55, class77, false, i * i_54_);
+	Class200_Sub3(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_54_, int i_55_, int i_56_) {
+		super(class_ra_sub3_sub2, class55, textEncoder, false, i * i_54_);
 		if (!((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aBoolean9865) {
 			((Class200_Sub3) this).anInt8629 = Class416.method5590(i, (byte) 16);
 			((Class200_Sub3) this).anInt8630 = Class416.method5590(i_54_, (byte) 16);
@@ -317,7 +317,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 			((Class200_Sub3) this).anInt8629 = i;
 			((Class200_Sub3) this).anInt8630 = i_54_;
 		}
-		((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture(((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847, i, i_54_, 0, i_55_, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), (((Class200_Sub3) this).aClass77_6408)), i_56_));
+		((Class200_Sub3) this).aLong6407 = (IDirect3DDevice.CreateTexture(((Class_ra_Sub3_Sub2) ((Class200_Sub3) this).aClass_ra_Sub3_Sub2_6410).aLong9847, i, i_54_, 0, i_55_, Class_ra_Sub3_Sub2.method5546((((Class200_Sub3) this).aClass55_6409), (((Class200_Sub3) this).aTextEncoder_6408)), i_56_));
 	}
 
 	public void method96(boolean bool, boolean bool_57_) {
@@ -346,7 +346,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method102(int i, int i_58_, int i_59_, int i_60_, int[] is, int i_61_, int i_62_) {
-		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_62_ == 0)
 			i_62_ = i_59_;
@@ -361,7 +361,7 @@ public class Class200_Sub3 extends Class200 implements Interface9_Impl2 {
 	}
 
 	public void method81(int i, int i_63_, int i_64_, int i_65_, int[] is, int i_66_, int i_67_) {
-		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aClass77_6408 != Class77.aClass77_717)
+		if (((Class200_Sub3) this).aClass55_6409 != Class55.aClass55_557 || ((Class200_Sub3) this).aTextEncoder_6408 != TextEncoder.aTextEncoder_717)
 			throw new RuntimeException();
 		if (i_67_ == 0)
 			i_67_ = i_64_;

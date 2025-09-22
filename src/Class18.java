@@ -127,7 +127,7 @@ public class Class18 {
 			int i_9_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 1]);
 			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
 			if (99 == i_8_)
-				Class255.sendDevConsoleMsg(string, 1242487535);
+				DevConsole.sendDevConsoleMsg(string);
 			else if (i_8_ == 98)
 				CharacterShadowPreference.method5694(string, -1177455078);
 			else

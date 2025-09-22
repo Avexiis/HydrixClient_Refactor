@@ -58,11 +58,11 @@ public class Class426 {
 	public static void method5744(GraphicsToolkit class_ra, int i) {
 		try {
 			ScriptContext.aClass264_7534 = ((Class264) Class497.aClass197_6105.method1883((GameClient.anInterface10_8700), (399302739 * Class74.anInt691), true, true, -2063324548));
-			Class74.aClass505_695 = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, (399302739 * Class74.anInt691), 414059625);
+			Class74.aGameFont_695 = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, (399302739 * Class74.anInt691), 414059625);
 			Class343.aClass264_3673 = ((Class264) Class497.aClass197_6105.method1883((GameClient.anInterface10_8700), (1178461027 * Class74.anInt690), true, true, -2063324548));
-			Class422_Sub2.aClass505_8369 = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, (1178461027 * Class74.anInt690), 350969034);
+			RemoveRoofPreference.CONSOLE_SECONDARY_FONT = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, (1178461027 * Class74.anInt690), 350969034);
 			Class101.aClass264_1084 = ((Class264) Class497.aClass197_6105.method1883((GameClient.anInterface10_8700), (-1372765471 * Class74.anInt698), true, true, -2063324548));
-			Class82_Sub19_Sub1.aClass505_9111 = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, (Class74.anInt698 * -1372765471), -1335234186);
+			GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, (Class74.anInt698 * -1372765471), -1335234186);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rq.p(").append(')').toString());
 		}

@@ -80,8 +80,8 @@ public class Class264_Sub1 extends Class264 {
 		}
 	}
 
-	Class264_Sub1(Class_ra_Sub1 class_ra_sub1, Class505 class505, Class89[] class89s, int[] is, int[] is_24_) {
-		super(class_ra_sub1, class505);
+	Class264_Sub1(Class_ra_Sub1 class_ra_sub1, GameFont gameFont, Class89[] class89s, int[] is, int[] is_24_) {
+		super(class_ra_sub1, gameFont);
 		((Class264_Sub1) this).aClass_ra_Sub1_7119 = class_ra_sub1;
 		((Class264_Sub1) this).aClass_ra_Sub1_7119 = class_ra_sub1;
 		((Class264_Sub1) this).anIntArray7118 = is;
@@ -437,7 +437,7 @@ public class Class264_Sub1 extends Class264 {
 				if (i_147_ != 0)
 					MovementType.method2623(i, i_141_, i_143_, i_144_, -65962515);
 			} else if (i_147_ == 0)
-				Class321.method3926(i, i_142_, i_141_, i_144_, 1547095223);
+				DynamicLight.method3926(i, i_142_, i_141_, i_144_, 1547095223);
 			else {
 				int i_148_ = (i_147_ << 12) / i_146_;
 				int i_149_ = i_141_ - (i_148_ * i >> 12);

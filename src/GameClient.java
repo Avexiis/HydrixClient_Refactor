@@ -40,7 +40,7 @@ public final class GameClient extends GameShell {
 	static int anInt8654;
 	static String aString8655;
 	public static String aString8656;
-	static overheadString[] aOverheadStringArray8657;
+	static OverheadString[] aOverheadStringArray8657;
 	static Class233 aClass233_8658;
 	static int anInt8659;
 	static LinkedNodeList aLinkedNodeList_8660;
@@ -427,7 +427,7 @@ public final class GameClient extends GameShell {
 							aString8649 = mainAppletParameter;
 							break;
 						case 27:
-							Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(mainAppletParameter), 615406105);
+							DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(mainAppletParameter), 615406105);
 							break;
 						case 30:
 							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -467,10 +467,10 @@ public final class GameClient extends GameShell {
 							}
 							break;
 						case 20:
-							if (Class241.aClass471_2705 == null) {
-								Class241.aClass471_2705 = new IPAddress();
+							if (Class241.lobbyAddress == null) {
+								Class241.lobbyAddress = new IPAddress();
 							}
-							Class241.aClass471_2705.address = mainAppletParameter;
+							Class241.lobbyAddress.address = mainAppletParameter;
 							break;
 						case 8:
 							break;
@@ -484,10 +484,10 @@ public final class GameClient extends GameShell {
 							anInt8654 = Integer.parseInt(mainAppletParameter) * -431443955;
 							break;
 						case 4:
-							if (Class241.aClass471_2705 == null) {
-								Class241.aClass471_2705 = new IPAddress();
+							if (Class241.lobbyAddress == null) {
+								Class241.lobbyAddress = new IPAddress();
 							}
-							Class241.aClass471_2705.worldId = Integer.parseInt(mainAppletParameter) * 348739329;
+							Class241.lobbyAddress.worldId = Integer.parseInt(mainAppletParameter) * 348739329;
 							break;
 						case 31:
 							if (mainAppletParameter.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -550,7 +550,7 @@ public final class GameClient extends GameShell {
 			frame.dispose();
 			Class82_Sub3.aClass105_6825 = new IComponentDefinition();
 			Class229.method2124((byte) -66);
-			Class365_Sub1_Sub3.aClass255_9804 = new Class255();
+			Class365_Sub1_Sub3.aDevConsole_9804 = new DevConsole();
 			Class248.aClass247_2752 = new Class247_Sub1();
 			int[] is = { 20, 260 };
 			int[] is_0_ = { 1000, 100 };
@@ -573,8 +573,8 @@ public final class GameClient extends GameShell {
 			if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 				Class98.aByteArrayArray949 = new byte[50][];
 			}
-			GraphicsAutoSetup.clientPreferences = Class121.readPreferences(815058743);
-			if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -54) == 1) {
+			GraphicsSetup.clientPreferences = Class121.readPreferences(815058743);
+			if (GraphicsSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -54) == 1) {
 				SceneGraph.aBoolean3540 = false;
 			}
 			if (ReferenceTable.aReferenceTable_6557 == Class242.aReferenceTable_2708) {
@@ -582,18 +582,18 @@ public final class GameClient extends GameShell {
 			} else if (ReferenceTable.method4932(Class242.aReferenceTable_2708, 2144783357)) {
 				Class474.aClass471_5976.address = EnumType.mainApplet.getCodeBase().getHost();
 				Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-				Class241.aClass471_2705.anInt5954 = 815680320 + Class241.aClass471_2705.worldId * -1670427267;
+				Class241.lobbyAddress.anInt5954 = 815680320 + Class241.lobbyAddress.worldId * -1670427267;
 				Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-				Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
+				Class241.lobbyAddress.anInt5955 = Class241.lobbyAddress.worldId * 925746937 + -52655920;
 			} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
 				Class474.aClass471_5976.address = Symbol.IP;
-				Class241.aClass471_2705.address = Symbol.IP;
+				Class241.lobbyAddress.address = Symbol.IP;
 				Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-				Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
+				Class241.lobbyAddress.anInt5954 = -1670427267 * Class241.lobbyAddress.worldId + 815680320;
 				Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-				Class241.aClass471_2705.anInt5955 = -52655920 + Class241.aClass471_2705.worldId * 925746937;
+				Class241.lobbyAddress.anInt5955 = -52655920 + Class241.lobbyAddress.worldId * 925746937;
 			}
-			Class474.aClass471_5979 = Class474.aClass471_5976;
+			Class474.worldAddress = Class474.aClass471_5976;
 			if (aGameContext_8944 == GameContext.aGameContext_5320) {
 				aBoolean8674 = false;
 			}
@@ -608,9 +608,9 @@ public final class GameClient extends GameShell {
 			if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 				showingFPS = true;
 			}
-			aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-			overheadString.aClass248_612 = new Class248();
-			new Thread(overheadString.aClass248_612).start();
+			aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
+			OverheadString.aClass248_612 = new Class248();
+			new Thread(OverheadString.aClass248_612).start();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "GameClient.ak(" + ')');
 		}
@@ -619,7 +619,7 @@ public final class GameClient extends GameShell {
 	@Override
 	final void method2773(byte i) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-497578575) == 2) {
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-497578575) == 2) {
 				try {
 					method2806((byte) 0);
 				} catch (ThreadDeath threaddeath) {
@@ -640,7 +640,7 @@ public final class GameClient extends GameShell {
 	@Override
 	final void method2774(int i) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1358011800) == 2) {
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1358011800) == 2) {
 				try {
 					method2792((byte) 0);
 				} catch (ThreadDeath threaddeath) {
@@ -683,11 +683,11 @@ public final class GameClient extends GameShell {
 						i_2_ -= insets.right + insets.left;
 						i_3_ -= insets.bottom + insets.top;
 					}
-					if (Class78.anInt733 * -639974669 != i_2_ || i_3_ != 1282634425 * anInt6472 || aBoolean8676) {
+					if (DisplayMode.anInt733 * -639974669 != i_2_ || i_3_ != 1282634425 * anInt6472 || aBoolean8676) {
 						if (null == OverlayType.activeToolkit || OverlayType.activeToolkit.method4995()) {
 							Class229.method2124((byte) -98);
 						} else {
-							Class78.anInt733 = i_2_ * 1325868603;
+							DisplayMode.anInt733 = i_2_ * 1325868603;
 							anInt6472 = i_3_ * -2115832951;
 						}
 						aLong8798 = (TimeUtils.getTime((byte) 1) + 500L) * -1373096961092238601L;
@@ -695,7 +695,7 @@ public final class GameClient extends GameShell {
 					}
 				}
 				if (Class452.aBoolean5642 && null != Class231.aFrame2589 && !SceneryShadowPreference.aBoolean8385 && Class319.method3902(-1233866115 * anInt8752, 476312339)) {
-					Class357.method4276(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 34), -1, -1, false, 1694372474);
+					Class357.method4276(GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 34), -1, -1, false, 1694372474);
 				}
 				boolean bool_4_ = false;
 				if (aBoolean6471) {
@@ -717,20 +717,20 @@ public final class GameClient extends GameShell {
 				} else if (HitType.method4287(anInt8752 * -1233866115, 361133550)) {
 					if (map.method2627((byte) 103) == Class273.aClass273_2906) {
 						int i_5_ = map.method2662(-471108411) / 2;
-						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + "(" + i_5_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 20);
+						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + "(" + i_5_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) 20);
 					} else if (map.method2627((byte) 65) == Class273.aClass273_2904) {
 						int i_6_ = 50 + map.method2670((byte) -20) / 2;
-						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + "(" + i_6_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 38);
+						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + "(" + i_6_ + "%)", true, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) 38);
 					} else {
-						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 64);
+						Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) 64);
 					}
 				} else if (-1233866115 * anInt8752 == 0) {
 					Class322.method3932(l);
 				} else if (5 == -1233866115 * anInt8752) {
-					Class139.method1548(LocalizedString.MESSAGE_CONNECTION_LOST.getText(Class321.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + LocalizedString.MESSAGE_PLEASE_WAIT_REESTABLISH.getText(Class321.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369,
+					Class139.method1548(LocalizedString.MESSAGE_CONNECTION_LOST.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + Symbol.LINE_BREAK + LocalizedString.MESSAGE_PLEASE_WAIT_REESTABLISH.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT,
 							(byte) -78);
 				} else if (-1233866115 * anInt8752 == 13) {
-					Class139.method1548(LocalizedString.MESSAGE_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) -34);
+					Class139.method1548(LocalizedString.MESSAGE_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), false, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) -34);
 				}
 				if (anInt8956 * 2067224717 == 3) {
 					for (int i_7_ = 0; i_7_ < -112139815 * anInt8686; i_7_++) {
@@ -743,7 +743,7 @@ public final class GameClient extends GameShell {
 					}
 				}
 				if (Class423.method5734(-268540899)) {
-					Class445.method5895(OverlayType.activeToolkit, (byte) 127);
+					Class445.consoleUI(OverlayType.activeToolkit, (byte) 127);
 				}
 				if (!Class88.method976(anInt8752 * -1233866115, 797947023) && !HitType.method4287(-1233866115 * anInt8752, 1114719498) && -1 != WINDOW_PANE_ID * -257444687) {
 					try {
@@ -754,7 +754,7 @@ public final class GameClient extends GameShell {
 					}
 				}
 				Class292.method2817(-1025699241);
-				int i_8_ = GraphicsAutoSetup.clientPreferences.aClass422_Sub26_7577.method5717((byte) 1);
+				int i_8_ = GraphicsSetup.clientPreferences.aClass422_Sub26_7577.method5717((byte) 1);
 				if (0 == i_8_) {
 					IPAddress.method6060(15L);
 				} else if (i_8_ == 1) {
@@ -767,8 +767,8 @@ public final class GameClient extends GameShell {
 				if (aBoolean8672) {
 					Class442.method5879(1638092472);
 				}
-				if (GraphicsAutoSetup.clientPreferences.safemodePreference.getValue((byte) -31) == 1 && 19 == -1233866115 * anInt8752 && -257444687 * WINDOW_PANE_ID != -1) {
-					GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.safemodePreference, 0, 1020440405);
+				if (GraphicsSetup.clientPreferences.safemodePreference.getValue((byte) -31) == 1 && 19 == -1233866115 * anInt8752 && -257444687 * WINDOW_PANE_ID != -1) {
+					GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.safemodePreference, 0, 1020440405);
 					Class3.writePreferences();
 				}
 			}
@@ -797,7 +797,7 @@ public final class GameClient extends GameShell {
 			aClass25_8693.aClass124_340.method1382(-1769039718);
 			Class523.method6332(1722973256);
 			Class248.aClass247_2752.method2346((byte) -87);
-			Class365_Sub1_Sub3.aClass255_9804.method2433(-1838301690);
+			Class365_Sub1_Sub3.aDevConsole_9804.method2433(-1838301690);
 			if (null != aClass404_8715) {
 				aClass404_8715.method4948(876164724);
 				aClass404_8715 = null;
@@ -847,7 +847,7 @@ public final class GameClient extends GameShell {
 	static final void method2795() {
 		int i = 1168366243 * Class10.anInt129;
 		int[] is = Class10.anIntArray135;
-		int i_10_ = GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569.method5716((byte) -15);
+		int i_10_ = GraphicsSetup.clientPreferences.aGraphicsSetup_7569.method5716((byte) -15);
 		boolean bool = i_10_ == 1 && i > 200 || i_10_ == 0 && i > 50;
 		for (int index = 0; index < i; index++) {
 			Player player = players[is[index]];
@@ -1370,8 +1370,8 @@ public final class GameClient extends GameShell {
 								if (-451364727 * IComponentDefinition.anInt1269 == 907611645 * class105.contentType || 907611645 * class105.contentType == IComponentDefinition.anInt1123 * -1997023283) {
 									aClass105_8819 = class105;
 									Atmosphere atmosphere = map.method2640((byte) -11).getCurrentAtmosphere((byte) -85);
-									if (atmosphere.getSkybox((byte) -111) != null && !overheadString.aClass248_612.method2380(16777472)) {
-										atmosphere.getSkybox((byte) -126).method2588(OverlayType.activeToolkit, class105.height * 457937409, GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508), 1359487645);
+									if (atmosphere.getSkybox((byte) -111) != null && !OverheadString.aClass248_612.method2380(16777472)) {
+										atmosphere.getSkybox((byte) -126).method2588(OverlayType.activeToolkit, class105.height * 457937409, GraphicsSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508), 1359487645);
 									}
 									if (IComponentDefinition.anInt1269 * -451364727 == class105.contentType * 907611645 && !ContextMenu.menuOpen && i_59_ >= i_64_ && i_60_ >= i_65_ && i_59_ < i_66_ && i_60_ < i_67_) {
 										Class98.method1055(OverlayType.activeToolkit, i_59_, i_60_, 132816560);
@@ -1387,7 +1387,7 @@ public final class GameClient extends GameShell {
 									for (int i_83_ = 0; i_83_ < i_82_; i_83_++) {
 										Player player = players[is[i_83_]];
 										if (null != player) {
-											overheadString.method729(Class502.aClass502_6716, -1, -1, player, is[i_83_], (byte) -7);
+											OverheadString.method729(Class502.aClass502_6716, -1, -1, player, is[i_83_], (byte) -7);
 											player.drawOverheadText(i_64_, i_65_, i_66_, i_67_, i_62_ - class105.anInt1166 * 684246511, i_63_ - class105.anInt1167 * -1424956747, i_59_, i_60_, 744800283);
 										}
 									}
@@ -1395,7 +1395,7 @@ public final class GameClient extends GameShell {
 										int i_85_ = npcIndicies[i_84_];
 										LinkableObject linkableObject = (LinkableObject) npcs.get(i_85_);
 										if (null != linkableObject) {
-											overheadString.method729(Class502.aClass502_6720, -407713023 * ((NPC) linkableObject.anObject7366).definition.id, -1, (Entity) linkableObject.anObject7366, i_85_, (byte) -73);
+											OverheadString.method729(Class502.aClass502_6720, -407713023 * ((NPC) linkableObject.anObject7366).definition.id, -1, (Entity) linkableObject.anObject7366, i_85_, (byte) -73);
 											((Entity) linkableObject.anObject7366).drawOverheadText(i_64_, i_65_, i_66_, i_67_, i_62_ - class105.anInt1166 * 684246511, i_63_ - class105.anInt1167 * -1424956747, i_59_, i_60_, 744800283);
 										}
 									}
@@ -1445,7 +1445,7 @@ public final class GameClient extends GameShell {
 												}
 											} else {
 												if (GameContext.stellar_dawn == aGameContext_8944) {
-													Class234.method2174(LocalizedString.ACTION_FACE_HERE.getText(Class321.ACTIVE_LANGUAGE, -875414210), "", -1, 60, -1, 1L, i_94_, i_95_, true, false, 0L, true, -1517476672);
+													Class234.method2174(LocalizedString.ACTION_FACE_HERE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), "", -1, 60, -1, 1L, i_94_, i_95_, true, false, 0L, true, -1517476672);
 												}
 												Class234.method2174(Class82_Sub6.aString6845, "", -1471730241 * anInt8822, 23, -1, 1L, i_94_, i_95_, true, false, 0L, true, -1229159943);
 											}
@@ -1469,7 +1469,7 @@ public final class GameClient extends GameShell {
 											mapDetails.method3451(i_100_, i_101_, is, -1054516511);
 											if (null != is) {
 												if (Class372.aClass323_4052.method3936(82, 1232426176) && 1806357379 * playerRights > 0) {
-													DiskFile.method6083(is[0], is[1], is[2], 1774070906);
+													DiskFile.printCoordinates(is[0], is[1], is[2]);
 													continue;
 												}
 												aBoolean8866 = true;
@@ -1490,7 +1490,7 @@ public final class GameClient extends GameShell {
 										}
 										if (2 == -651858367 * anInt8864) {
 											aBoolean8865 = true;
-											Class77.method842(ReferenceTable.anInt6562 * 100354019 + (int) ((-98735103 * anInt8734 - Class165.recorder.getMouseX((byte) 13)) * 2.0 / WorldMap.aFloat3234), (short) 1347);
+											TextEncoder.method842(ReferenceTable.anInt6562 * 100354019 + (int) ((-98735103 * anInt8734 - Class165.recorder.getMouseX((byte) 13)) * 2.0 / WorldMap.aFloat3234), (short) 1347);
 											WorldMapLabel.method4246(-1026644091 * Class441.anInt5589 - (int) ((-938469429 * anInt8853 - Class165.recorder.getMouseY((byte) -70)) * 2.0 / WorldMap.aFloat3234), (byte) 44);
 										}
 									} else {
@@ -1790,7 +1790,7 @@ public final class GameClient extends GameShell {
 							}
 						}
 						if (class105.type * -1215239439 == 5 && -1 != 925824753 * class105.anInt1283) {
-							class105.method1121(VarBitType.aClass317_3472, Class138_Sub1.aClass131_7010, 1204090508).method2588(OverlayType.activeToolkit, class105.height * 457937409, GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508), 961658636);
+							class105.method1121(VarBitType.aClass317_3472, Class138_Sub1.aClass131_7010, 1204090508).method2588(OverlayType.activeToolkit, class105.height * 457937409, GraphicsSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508), 961658636);
 						}
 						GameContext.method5577(class105, -1825904339);
 						if (class105.type * -1215239439 == 0) {
@@ -2090,7 +2090,7 @@ public final class GameClient extends GameShell {
 		anIntArray8907 = new int[anInt8644 * 547709851];
 		anIntArray8908 = new int[547709851 * anInt8644];
 		anIntArray8909 = new int[547709851 * anInt8644];
-		aOverheadStringArray8657 = new overheadString[anInt8644 * 547709851];
+		aOverheadStringArray8657 = new OverheadString[anInt8644 * 547709851];
 		anIntArray8911 = new int[] { 16776960, 16711680, 65280, 65535, 16711935, 16777215 };
 		anInt8837 = 0;
 		anInt8913 = 0;
@@ -2205,7 +2205,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1796181193);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1796181193);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -2245,10 +2245,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -2262,10 +2262,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -2324,7 +2324,7 @@ public final class GameClient extends GameShell {
 		frame.dispose();
 		Class82_Sub3.aClass105_6825 = new IComponentDefinition();
 		Class229.method2124((byte) -73);
-		Class365_Sub1_Sub3.aClass255_9804 = new Class255();
+		Class365_Sub1_Sub3.aDevConsole_9804 = new DevConsole();
 		Class248.aClass247_2752 = new Class247_Sub1();
 		int[] is = { 20, 260 };
 		int[] is_121_ = { 1000, 100 };
@@ -2347,8 +2347,8 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			Class98.aByteArrayArray949 = new byte[50][];
 		}
-		GraphicsAutoSetup.clientPreferences = Class121.readPreferences(1281460883);
-		if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -114) == 1) {
+		GraphicsSetup.clientPreferences = Class121.readPreferences(1281460883);
+		if (GraphicsSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -114) == 1) {
 			SceneGraph.aBoolean3540 = false;
 		}
 		if (ReferenceTable.aReferenceTable_6557 == Class242.aReferenceTable_2708) {
@@ -2356,18 +2356,18 @@ public final class GameClient extends GameShell {
 		} else if (ReferenceTable.method4932(Class242.aReferenceTable_2708, 2144135205)) {
 			Class474.aClass471_5976.address = EnumType.mainApplet.getCodeBase().getHost();
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = 815680320 + Class241.aClass471_2705.worldId * -1670427267;
+			Class241.lobbyAddress.anInt5954 = 815680320 + Class241.lobbyAddress.worldId * -1670427267;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
+			Class241.lobbyAddress.anInt5955 = Class241.lobbyAddress.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
 			Class474.aClass471_5976.address = Symbol.IP;
-			Class241.aClass471_2705.address = Symbol.IP;
+			Class241.lobbyAddress.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
+			Class241.lobbyAddress.anInt5954 = -1670427267 * Class241.lobbyAddress.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = -52655920 + Class241.aClass471_2705.worldId * 925746937;
+			Class241.lobbyAddress.anInt5955 = -52655920 + Class241.lobbyAddress.worldId * 925746937;
 		}
-		Class474.aClass471_5979 = Class474.aClass471_5976;
+		Class474.worldAddress = Class474.aClass471_5976;
 		if (aGameContext_8944 == GameContext.aGameContext_5320) {
 			aBoolean8674 = false;
 		}
@@ -2382,9 +2382,9 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			showingFPS = true;
 		}
-		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-		overheadString.aClass248_612 = new Class248();
-		new Thread(overheadString.aClass248_612).start();
+		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
+		OverheadString.aClass248_612 = new Class248();
+		new Thread(OverheadString.aClass248_612).start();
 	}
 
 	@Override
@@ -2451,7 +2451,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 2129104581);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 2129104581);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -2491,10 +2491,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -2508,10 +2508,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -2570,7 +2570,7 @@ public final class GameClient extends GameShell {
 		frame.dispose();
 		Class82_Sub3.aClass105_6825 = new IComponentDefinition();
 		Class229.method2124((byte) -49);
-		Class365_Sub1_Sub3.aClass255_9804 = new Class255();
+		Class365_Sub1_Sub3.aDevConsole_9804 = new DevConsole();
 		Class248.aClass247_2752 = new Class247_Sub1();
 		int[] is = { 20, 260 };
 		int[] is_122_ = { 1000, 100 };
@@ -2593,8 +2593,8 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			Class98.aByteArrayArray949 = new byte[50][];
 		}
-		GraphicsAutoSetup.clientPreferences = Class121.readPreferences(1110000568);
-		if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -45) == 1) {
+		GraphicsSetup.clientPreferences = Class121.readPreferences(1110000568);
+		if (GraphicsSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -45) == 1) {
 			SceneGraph.aBoolean3540 = false;
 		}
 		if (ReferenceTable.aReferenceTable_6557 == Class242.aReferenceTable_2708) {
@@ -2602,18 +2602,18 @@ public final class GameClient extends GameShell {
 		} else if (ReferenceTable.method4932(Class242.aReferenceTable_2708, 2086746818)) {
 			Class474.aClass471_5976.address = EnumType.mainApplet.getCodeBase().getHost();
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = 815680320 + Class241.aClass471_2705.worldId * -1670427267;
+			Class241.lobbyAddress.anInt5954 = 815680320 + Class241.lobbyAddress.worldId * -1670427267;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
+			Class241.lobbyAddress.anInt5955 = Class241.lobbyAddress.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
 			Class474.aClass471_5976.address = Symbol.IP;
-			Class241.aClass471_2705.address = Symbol.IP;
+			Class241.lobbyAddress.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
+			Class241.lobbyAddress.anInt5954 = -1670427267 * Class241.lobbyAddress.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = -52655920 + Class241.aClass471_2705.worldId * 925746937;
+			Class241.lobbyAddress.anInt5955 = -52655920 + Class241.lobbyAddress.worldId * 925746937;
 		}
-		Class474.aClass471_5979 = Class474.aClass471_5976;
+		Class474.worldAddress = Class474.aClass471_5976;
 		if (aGameContext_8944 == GameContext.aGameContext_5320) {
 			aBoolean8674 = false;
 		}
@@ -2628,9 +2628,9 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			showingFPS = true;
 		}
-		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-		overheadString.aClass248_612 = new Class248();
-		new Thread(overheadString.aClass248_612).start();
+		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
+		OverheadString.aClass248_612 = new Class248();
+		new Thread(OverheadString.aClass248_612).start();
 	}
 
 	@Override
@@ -2640,7 +2640,7 @@ public final class GameClient extends GameShell {
 		frame.dispose();
 		Class82_Sub3.aClass105_6825 = new IComponentDefinition();
 		Class229.method2124((byte) -84);
-		Class365_Sub1_Sub3.aClass255_9804 = new Class255();
+		Class365_Sub1_Sub3.aDevConsole_9804 = new DevConsole();
 		Class248.aClass247_2752 = new Class247_Sub1();
 		int[] is = { 20, 260 };
 		int[] is_123_ = { 1000, 100 };
@@ -2663,8 +2663,8 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			Class98.aByteArrayArray949 = new byte[50][];
 		}
-		GraphicsAutoSetup.clientPreferences = Class121.readPreferences(719994704);
-		if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -48) == 1) {
+		GraphicsSetup.clientPreferences = Class121.readPreferences(719994704);
+		if (GraphicsSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -48) == 1) {
 			SceneGraph.aBoolean3540 = false;
 		}
 		if (ReferenceTable.aReferenceTable_6557 == Class242.aReferenceTable_2708) {
@@ -2672,18 +2672,18 @@ public final class GameClient extends GameShell {
 		} else if (ReferenceTable.method4932(Class242.aReferenceTable_2708, 2088050765)) {
 			Class474.aClass471_5976.address = EnumType.mainApplet.getCodeBase().getHost();
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = 815680320 + Class241.aClass471_2705.worldId * -1670427267;
+			Class241.lobbyAddress.anInt5954 = 815680320 + Class241.lobbyAddress.worldId * -1670427267;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
+			Class241.lobbyAddress.anInt5955 = Class241.lobbyAddress.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
 			Class474.aClass471_5976.address = Symbol.IP;
-			Class241.aClass471_2705.address = Symbol.IP;
+			Class241.lobbyAddress.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
+			Class241.lobbyAddress.anInt5954 = -1670427267 * Class241.lobbyAddress.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = -52655920 + Class241.aClass471_2705.worldId * 925746937;
+			Class241.lobbyAddress.anInt5955 = -52655920 + Class241.lobbyAddress.worldId * 925746937;
 		}
-		Class474.aClass471_5979 = Class474.aClass471_5976;
+		Class474.worldAddress = Class474.aClass471_5976;
 		if (aGameContext_8944 == GameContext.aGameContext_5320) {
 			aBoolean8674 = false;
 		}
@@ -2698,9 +2698,9 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			showingFPS = true;
 		}
-		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-		overheadString.aClass248_612 = new Class248();
-		new Thread(overheadString.aClass248_612).start();
+		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
+		OverheadString.aClass248_612 = new Class248();
+		new Thread(OverheadString.aClass248_612).start();
 	}
 
 	public String method2803() {
@@ -2713,13 +2713,13 @@ public final class GameClient extends GameShell {
 			} else {
 				string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 			}
-			string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-682947587) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-723955200) + " " + MagnetDefinitions.method1859((byte) -61) + " " + Class462.canvasWidth * -2110394505 +
+			string = string + GraphicsSetup.clientPreferences.graphicsPreference.getValue(-682947587) + " " + GraphicsSetup.clientPreferences.antialiasPreference.getValue(-723955200) + " " + MagnetDefinitions.method1859((byte) -61) + " " + Class462.canvasWidth * -2110394505 +
 					Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2018199679) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-90347626) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-1374891617) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1903704462) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.bloomPreference.method5647(-917787431) + " ";
+			string = string + GraphicsSetup.clientPreferences.lightingPreference.getValue(-2018199679) + " ";
+			string = string + GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-90347626) + " ";
+			string = string + GraphicsSetup.clientPreferences.waterDetailPreference.getValue(-1374891617) + " ";
+			string = string + GraphicsSetup.clientPreferences.texturePreference.getValue(1903704462) + " ";
+			string = string + GraphicsSetup.clientPreferences.bloomPreference.method5647(-917787431) + " ";
 			string = string + "0 ";
 			string = string + maximumMemory * 1126040225 + " ";
 			string = string + -1233866115 * anInt8752 + " ";
@@ -2735,7 +2735,7 @@ public final class GameClient extends GameShell {
 				string = string + Symbol.COMMA;
 			}
 			try {
-				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1738416059) == 2) {
+				if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1738416059) == 2) {
 					Class<ClassLoader> var_class = java.lang.ClassLoader.class;
 					Field field = var_class.getDeclaredField("nativeLibraries");
 					Class<AccessibleObject> var_class_124_ = java.lang.reflect.AccessibleObject.class;
@@ -2783,13 +2783,13 @@ public final class GameClient extends GameShell {
 			} else {
 				string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 			}
-			string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-2069894035) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-980707631) + " " + MagnetDefinitions.method1859((byte) -68) + " " + Class462.canvasWidth * -2110394505 +
+			string = string + GraphicsSetup.clientPreferences.graphicsPreference.getValue(-2069894035) + " " + GraphicsSetup.clientPreferences.antialiasPreference.getValue(-980707631) + " " + MagnetDefinitions.method1859((byte) -68) + " " + Class462.canvasWidth * -2110394505 +
 					Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1869858699) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-1501062841) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(1402925605) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.texturePreference.getValue(2098109554) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.bloomPreference.method5647(708887962) + " ";
+			string = string + GraphicsSetup.clientPreferences.lightingPreference.getValue(-1869858699) + " ";
+			string = string + GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-1501062841) + " ";
+			string = string + GraphicsSetup.clientPreferences.waterDetailPreference.getValue(1402925605) + " ";
+			string = string + GraphicsSetup.clientPreferences.texturePreference.getValue(2098109554) + " ";
+			string = string + GraphicsSetup.clientPreferences.bloomPreference.method5647(708887962) + " ";
 			string = string + "0 ";
 			string = string + maximumMemory * 1126040225 + " ";
 			string = string + -1233866115 * anInt8752 + " ";
@@ -2805,7 +2805,7 @@ public final class GameClient extends GameShell {
 				string = string + Symbol.COMMA;
 			}
 			try {
-				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-578216379) == 2) {
+				if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-578216379) == 2) {
 					Class<ClassLoader> var_class = java.lang.ClassLoader.class;
 					Field field = var_class.getDeclaredField("nativeLibraries");
 					Class<AccessibleObject> var_class_128_ = java.lang.reflect.AccessibleObject.class;
@@ -2853,13 +2853,13 @@ public final class GameClient extends GameShell {
 			} else {
 				string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 			}
-			string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-361845304) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-1338991605) + " " + MagnetDefinitions.method1859((byte) -87) + " " + Class462.canvasWidth * -2110394505 +
+			string = string + GraphicsSetup.clientPreferences.graphicsPreference.getValue(-361845304) + " " + GraphicsSetup.clientPreferences.antialiasPreference.getValue(-1338991605) + " " + MagnetDefinitions.method1859((byte) -87) + " " + Class462.canvasWidth * -2110394505 +
 					Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1870553527) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-12224060) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-149412729) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1908877980) + " ";
-			string = string + GraphicsAutoSetup.clientPreferences.bloomPreference.method5647(-1923698698) + " ";
+			string = string + GraphicsSetup.clientPreferences.lightingPreference.getValue(-1870553527) + " ";
+			string = string + GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-12224060) + " ";
+			string = string + GraphicsSetup.clientPreferences.waterDetailPreference.getValue(-149412729) + " ";
+			string = string + GraphicsSetup.clientPreferences.texturePreference.getValue(1908877980) + " ";
+			string = string + GraphicsSetup.clientPreferences.bloomPreference.method5647(-1923698698) + " ";
 			string = string + "0 ";
 			string = string + maximumMemory * 1126040225 + " ";
 			string = string + -1233866115 * anInt8752 + " ";
@@ -2875,7 +2875,7 @@ public final class GameClient extends GameShell {
 				string = string + Symbol.COMMA;
 			}
 			try {
-				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1704140617) == 2) {
+				if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1704140617) == 2) {
 					Class<ClassLoader> var_class = java.lang.ClassLoader.class;
 					Field field = var_class.getDeclaredField("nativeLibraries");
 					Class<AccessibleObject> var_class_132_ = java.lang.reflect.AccessibleObject.class;
@@ -2942,7 +2942,7 @@ public final class GameClient extends GameShell {
 				if (null != Class203.aClass225_2337) {
 					Class203.aClass225_2337.method2097(-741953209);
 				}
-				Class321.method3927(1528835992);
+				DynamicLight.method3927(1528835992);
 				Class510.method6289(1235750018);
 				Class372.aClass323_4052.method3942(-1098053107);
 				Class165.recorder.method3886(846408062);
@@ -3057,7 +3057,7 @@ public final class GameClient extends GameShell {
 		aClass25_8693.aClass124_340.method1382(-921770099);
 		Class523.method6332(1369308377);
 		Class248.aClass247_2752.method2346((byte) -34);
-		Class365_Sub1_Sub3.aClass255_9804.method2433(-854256441);
+		Class365_Sub1_Sub3.aDevConsole_9804.method2433(-854256441);
 		if (null != aClass404_8715) {
 			aClass404_8715.method4948(807433749);
 			aClass404_8715 = null;
@@ -3090,13 +3090,13 @@ public final class GameClient extends GameShell {
 				} else {
 					string = string + Class99.anInt952 * 1855729883 + Symbol.COMMA + Class99.anInt952 * 1855729883 + Symbol.COMMA + 1855729883 * Class99.anInt952 + Symbol.COMMA + " ";
 				}
-				string = string + GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-719661759) + " " + GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-1847382084) + " " + MagnetDefinitions.method1859((byte) -120) + " " +
+				string = string + GraphicsSetup.clientPreferences.graphicsPreference.getValue(-719661759) + " " + GraphicsSetup.clientPreferences.antialiasPreference.getValue(-1847382084) + " " + MagnetDefinitions.method1859((byte) -120) + " " +
 						Class462.canvasWidth * -2110394505 + Symbol.COMMA + Class298_Sub40_Sub9.anInt9716 * -1111710645 + " ";
-				string = string + GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2046413432) + " ";
-				string = string + GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-1774221022) + " ";
-				string = string + GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-2036567589) + " ";
-				string = string + GraphicsAutoSetup.clientPreferences.texturePreference.getValue(2062127023) + " ";
-				string = string + GraphicsAutoSetup.clientPreferences.bloomPreference.method5647(1830613279) + " ";
+				string = string + GraphicsSetup.clientPreferences.lightingPreference.getValue(-2046413432) + " ";
+				string = string + GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-1774221022) + " ";
+				string = string + GraphicsSetup.clientPreferences.waterDetailPreference.getValue(-2036567589) + " ";
+				string = string + GraphicsSetup.clientPreferences.texturePreference.getValue(2062127023) + " ";
+				string = string + GraphicsSetup.clientPreferences.bloomPreference.method5647(1830613279) + " ";
 				string = string + "0 ";
 				string = string + maximumMemory * 1126040225 + " ";
 				string = string + -1233866115 * anInt8752 + " ";
@@ -3112,7 +3112,7 @@ public final class GameClient extends GameShell {
 					string = string + Symbol.COMMA;
 				}
 				try {
-					if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1809803071) == 2) {
+					if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1809803071) == 2) {
 						Class<ClassLoader> var_class = java.lang.ClassLoader.class;
 						Field field = var_class.getDeclaredField("nativeLibraries");
 						Class<AccessibleObject> var_class_139_ = java.lang.reflect.AccessibleObject.class;
@@ -3155,7 +3155,7 @@ public final class GameClient extends GameShell {
 
 	@Override
 	final void method2779() {
-		if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-638897214) == 2) {
+		if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-638897214) == 2) {
 			try {
 				method2792((byte) 0);
 			} catch (ThreadDeath threaddeath) {
@@ -3189,7 +3189,7 @@ public final class GameClient extends GameShell {
 		frame.dispose();
 		Class82_Sub3.aClass105_6825 = new IComponentDefinition();
 		Class229.method2124((byte) -110);
-		Class365_Sub1_Sub3.aClass255_9804 = new Class255();
+		Class365_Sub1_Sub3.aDevConsole_9804 = new DevConsole();
 		Class248.aClass247_2752 = new Class247_Sub1();
 		int[] is = { 20, 260 };
 		int[] is_148_ = { 1000, 100 };
@@ -3212,8 +3212,8 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			Class98.aByteArrayArray949 = new byte[50][];
 		}
-		GraphicsAutoSetup.clientPreferences = Class121.readPreferences(1638033926);
-		if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -41) == 1) {
+		GraphicsSetup.clientPreferences = Class121.readPreferences(1638033926);
+		if (GraphicsSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -41) == 1) {
 			SceneGraph.aBoolean3540 = false;
 		}
 		if (ReferenceTable.aReferenceTable_6557 == Class242.aReferenceTable_2708) {
@@ -3221,18 +3221,18 @@ public final class GameClient extends GameShell {
 		} else if (ReferenceTable.method4932(Class242.aReferenceTable_2708, 2103536787)) {
 			Class474.aClass471_5976.address = EnumType.mainApplet.getCodeBase().getHost();
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = 815680320 + Class241.aClass471_2705.worldId * -1670427267;
+			Class241.lobbyAddress.anInt5954 = 815680320 + Class241.lobbyAddress.worldId * -1670427267;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = Class241.aClass471_2705.worldId * 925746937 + -52655920;
+			Class241.lobbyAddress.anInt5955 = Class241.lobbyAddress.worldId * 925746937 + -52655920;
 		} else if (Class242.aReferenceTable_2708 == ReferenceTable.aReferenceTable_6552) {
 			Class474.aClass471_5976.address = Symbol.IP;
-			Class241.aClass471_2705.address = Symbol.IP;
+			Class241.lobbyAddress.address = Symbol.IP;
 			Class474.aClass471_5976.anInt5954 = 815680320 + Class474.aClass471_5976.worldId * -1670427267;
-			Class241.aClass471_2705.anInt5954 = -1670427267 * Class241.aClass471_2705.worldId + 815680320;
+			Class241.lobbyAddress.anInt5954 = -1670427267 * Class241.lobbyAddress.worldId + 815680320;
 			Class474.aClass471_5976.anInt5955 = -52655920 + Class474.aClass471_5976.worldId * 925746937;
-			Class241.aClass471_2705.anInt5955 = -52655920 + Class241.aClass471_2705.worldId * 925746937;
+			Class241.lobbyAddress.anInt5955 = -52655920 + Class241.lobbyAddress.worldId * 925746937;
 		}
-		Class474.aClass471_5979 = Class474.aClass471_5976;
+		Class474.worldAddress = Class474.aClass471_5976;
 		if (aGameContext_8944 == GameContext.aGameContext_5320) {
 			aBoolean8674 = false;
 		}
@@ -3247,9 +3247,9 @@ public final class GameClient extends GameShell {
 		if (ReferenceTable.aReferenceTable_6557 != Class242.aReferenceTable_2708) {
 			showingFPS = true;
 		}
-		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-		overheadString.aClass248_612 = new Class248();
-		new Thread(overheadString.aClass248_612).start();
+		aString6485 = LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
+		OverheadString.aClass248_612 = new Class248();
+		new Thread(OverheadString.aClass248_612).start();
 	}
 
 	static IComponentDefinition method2808(IComponentDefinition class105) {
@@ -3294,7 +3294,7 @@ public final class GameClient extends GameShell {
 			anInt8961 += 512435497;
 			TextureOperation.method3138(-1, -1, (byte) -29);
 			Class82_Sub17.method918(null, -1, -1, -936647614);
-			overheadString.method732(-1860145091);
+			OverheadString.method732(-1860145091);
 			anInt8933 += -908761385;
 			for (int i_151_ = 0; i_151_ < anInt8772 * 1962237353; i_151_++) {
 				NPC npc = (NPC) aLinkableObjectArray8816[i_151_].anObject7366;
@@ -3448,10 +3448,10 @@ public final class GameClient extends GameShell {
 			for (Class302_Sub2 class302_sub2 = (Class302_Sub2) aClass442_8951.method5868(-16777216); class302_sub2 != null; class302_sub2 = (Class302_Sub2) aClass442_8951.method5872(-1698881635)) {
 				if (-1505693583 * class302_sub2.anInt7647 < TimeUtils.getTime((byte) 1) / 1000L - 5L) {
 					if (class302_sub2.aShort7646 > 0) {
-						ChecksumTableEntry.method2282(5, 0, "", "", "", class302_sub2.aString7648 + LocalizedString.MESSAGE_LOGGED_IN_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210), -1638737966);
+						ChecksumTableEntry.method2282(5, 0, "", "", "", class302_sub2.aString7648 + LocalizedString.MESSAGE_LOGGED_IN_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), -1638737966);
 					}
 					if (class302_sub2.aShort7646 == 0) {
-						ChecksumTableEntry.method2282(5, 0, "", "", "", class302_sub2.aString7648 + LocalizedString.MESSAGE_LOGGED_OUT_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210), 750491919);
+						ChecksumTableEntry.method2282(5, 0, "", "", "", class302_sub2.aString7648 + LocalizedString.MESSAGE_LOGGED_OUT_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), 750491919);
 					}
 					class302_sub2.method3714(-250843172);
 				}
@@ -3500,7 +3500,7 @@ public final class GameClient extends GameShell {
 		aClass25_8693.aClass124_340.method1382(-2132756692);
 		Class523.method6332(1169249273);
 		Class248.aClass247_2752.method2346((byte) -54);
-		Class365_Sub1_Sub3.aClass255_9804.method2433(-776756018);
+		Class365_Sub1_Sub3.aDevConsole_9804.method2433(-776756018);
 		if (null != aClass404_8715) {
 			aClass404_8715.method4948(566548824);
 			aClass404_8715 = null;
@@ -3540,7 +3540,7 @@ public final class GameClient extends GameShell {
 		aClass25_8693.aClass124_340.method1382(-1922574767);
 		Class523.method6332(1756987742);
 		Class248.aClass247_2752.method2346((byte) -25);
-		Class365_Sub1_Sub3.aClass255_9804.method2433(-2042019743);
+		Class365_Sub1_Sub3.aDevConsole_9804.method2433(-2042019743);
 		if (null != aClass404_8715) {
 			aClass404_8715.method4948(495769489);
 			aClass404_8715 = null;
@@ -3564,7 +3564,7 @@ public final class GameClient extends GameShell {
 	void method2810(int i) {
 		try {
 			if (-1874843963 * Class248.aClass247_2752.anInt2735 > 276316621 * anInt8694) {
-				Class474.aClass471_5979.method6058(-1472184385);
+				Class474.worldAddress.method6058(-1472184385);
 				anInt8887 = Class248.aClass247_2752.anInt2735 * 597723658 - -1674112382;
 				if (1634815037 * anInt8887 > 3000) {
 					anInt8887 = 1385487896;
@@ -3606,7 +3606,7 @@ public final class GameClient extends GameShell {
 			} else {
 				try {
 					if (anInt8692 * -333700189 == 0) {
-						Class423.aSocket5355 = Class474.aClass471_5979.createSocket(295506052);
+						Class423.aSocket5355 = Class474.worldAddress.createSocket(295506052);
 						anInt8692 += -244111349;
 					}
 					if (anInt8692 * -333700189 == 1) {
@@ -3665,7 +3665,7 @@ public final class GameClient extends GameShell {
 
 	@Override
 	final void method2784() {
-		if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1278701263) == 2) {
+		if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1278701263) == 2) {
 			try {
 				method2806((byte) 0);
 			} catch (ThreadDeath threaddeath) {
@@ -3744,7 +3744,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 422244563);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 422244563);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -3784,10 +3784,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -3801,10 +3801,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -3920,7 +3920,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1006289259);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1006289259);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -3960,10 +3960,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -3977,10 +3977,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4096,7 +4096,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 2074884925);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 2074884925);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4136,10 +4136,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -4153,10 +4153,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4272,7 +4272,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 556012524);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 556012524);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4312,10 +4312,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -4329,10 +4329,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4448,7 +4448,7 @@ public final class GameClient extends GameShell {
 						aString8649 = string;
 						break;
 					case 27:
-						Class321.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1190807224);
+						DynamicLight.ACTIVE_LANGUAGE = Language.getLanguage(Integer.parseInt(string), 1190807224);
 						break;
 					case 30:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4488,10 +4488,10 @@ public final class GameClient extends GameShell {
 						}
 						break;
 					case 20:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.address = string;
+						Class241.lobbyAddress.address = string;
 						break;
 					case 8:
 						break;
@@ -4505,10 +4505,10 @@ public final class GameClient extends GameShell {
 						anInt8654 = Integer.parseInt(string) * -431443955;
 						break;
 					case 4:
-						if (Class241.aClass471_2705 == null) {
-							Class241.aClass471_2705 = new IPAddress();
+						if (Class241.lobbyAddress == null) {
+							Class241.lobbyAddress = new IPAddress();
 						}
-						Class241.aClass471_2705.worldId = Integer.parseInt(string) * 348739329;
+						Class241.lobbyAddress.worldId = Integer.parseInt(string) * 348739329;
 						break;
 					case 31:
 						if (string.equalsIgnoreCase(Symbol.STRING_TRUE)) {
@@ -4562,7 +4562,7 @@ public final class GameClient extends GameShell {
 
 	@Override
 	final void method2781() {
-		if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1480003909) == 2) {
+		if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1480003909) == 2) {
 			try {
 				method2806((byte) 0);
 			} catch (ThreadDeath threaddeath) {

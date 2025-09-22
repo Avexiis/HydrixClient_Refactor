@@ -228,7 +228,7 @@ public class Class298_Sub19_Sub4 extends Class298_Sub19 {
 		for (/**/; ((node != ((Class298_Sub19_Sub4) this).aClass458_9267.aNode_5668) && (((Class298_Sub22) (Class298_Sub22) node).anInt7316 <= ((Class298_Sub22) class298_sub22).anInt7316)); node = node.aNode_3187) {
 			/* empty */
 		}
-		Class505.method6267(class298_sub22, node, (byte) 6);
+		GameFont.method6267(class298_sub22, node, (byte) 6);
 		((Class298_Sub19_Sub4) this).anInt9268 = ((Class298_Sub22) (Class298_Sub22) (((Class298_Sub19_Sub4) this).aClass458_9267.aNode_5668.aNode_3187)).anInt7316;
 	}
 

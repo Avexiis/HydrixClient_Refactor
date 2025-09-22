@@ -4,7 +4,7 @@
 import java.math.BigInteger;
 
 public class Class225 {
-	Class255 aClass255_2505;
+	DevConsole aDevConsole_2505;
 	BigInteger aBigInteger2506;
 	Class298_Sub37_Sub16_Sub1 aClass298_Sub37_Sub16_Sub1_2507;
 	BigInteger aBigInteger2508;
@@ -75,7 +75,7 @@ public class Class225 {
 			int i_10_ = ((Class225) this).aClass298_Sub53_2510.readUnsignedInt();
 			byte[] is = new byte[64];
 			((Class225) this).aClass298_Sub53_2510.readBytes(is, 0, 64, -953523806);
-			ChecksumTableEntry checksumTableEntry = new ChecksumTableEntry(i, class329, class329_7_, ((Class225) this).aClass247_2509, ((Class225) this).aClass255_2505, i_9_, is, i_10_, bool);
+			ChecksumTableEntry checksumTableEntry = new ChecksumTableEntry(i, class329, class329_7_, ((Class225) this).aClass247_2509, ((Class225) this).aDevConsole_2505, i_9_, is, i_10_, bool);
 			((Class225) this).aChecksumTableEntryArray2511[i] = checksumTableEntry;
 			return checksumTableEntry;
 		} catch (RuntimeException runtimeexception) {
@@ -100,9 +100,9 @@ public class Class225 {
 		}
 	}
 
-	public Class225(Class247 class247, Class255 class255, BigInteger biginteger, BigInteger biginteger_13_) {
+	public Class225(Class247 class247, DevConsole devConsole, BigInteger biginteger, BigInteger biginteger_13_) {
 		((Class225) this).aClass247_2509 = class247;
-		((Class225) this).aClass255_2505 = class255;
+		((Class225) this).aDevConsole_2505 = devConsole;
 		((Class225) this).aBigInteger2506 = biginteger;
 		((Class225) this).aBigInteger2508 = biginteger_13_;
 		if (!((Class225) this).aClass247_2509.method2340((byte) 14))

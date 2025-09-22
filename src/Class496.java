@@ -100,8 +100,8 @@ public class Class496 {
 		try {
 			int i_8_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			if (i_8_ >= 1 && i_8_ <= 2) {
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543, i_8_, 708632362);
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7574, i_8_, 837898760);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.windowMode, i_8_, 708632362);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.windowModeShadow, i_8_, 837898760);
 				Class3.writePreferences();
 			}
 		} catch (RuntimeException runtimeexception) {

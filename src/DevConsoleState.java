@@ -1,21 +1,21 @@
-/* Class8 - Decompiled by JODE
+/* DevConsoleState - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class8 {
+public class DevConsoleState {
 	static int anInt98;
 	static int anInt99;
 	static int anInt100 = 350;
 	static String aString101;
-	static int anInt102 = 0;
-	static int anInt103 = 0;
+	static int lineCount = 0;
+	static int scrollOffset = 0;
 	static int anInt104;
 	static int anInt105;
-	static int anInt106;
-	static String[] aStringArray107;
+	static int primaryLineHeight;
+	static String[] lines;
 	static boolean aBoolean108;
 	static String[] aStringArray109;
-	static int anInt110;
+	static int secondaryLineHeight;
 	static String SYMBOL_SEQUENCE = "\\/.:, _-+[]~@";
 	static String SUCCESS = "Success";
 	static String FAILURE = "Failure";
@@ -30,7 +30,7 @@ public class Class8 {
 		anInt104 = 1428832631;
 	}
 
-	Class8() throws Throwable {
+	DevConsoleState() throws Throwable {
 		throw new Error();
 	}
 
@@ -38,12 +38,12 @@ public class Class8 {
 		try {
 			if ((((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669 == null) || ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669.length() == 0) {
 				if (null != (((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657) && ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657.length() > 0)
-					return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657;
+					return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657;
 				return (((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667);
 			}
 			if ((null != ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657) && ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657.length() > 0)
-				return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669;
-			return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669;
+				return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9657 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669;
+			return ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9667 + LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) + ((Class298_Sub37_Sub15) class298_sub37_sub15).aString9669;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "ai.bf(" + ')');
 		}
@@ -89,7 +89,7 @@ public class Class8 {
 
 	static final void method320(ClientScript2 class403, int i) {
 		try {
-			overheadString overheadString = ((ClientScript2) class403).aClass365_Sub1_Sub1_Sub2_5242.method4437(658355638);
+			OverheadString overheadString = ((ClientScript2) class403).aClass365_Sub1_Sub1_Sub2_5242.method4437(658355638);
 			if (null == overheadString)
 				((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393) - 1] = "";
 			else

@@ -53,11 +53,11 @@ public class Class353 {
 				Class69.method788(true, -930644451);
 				i_2_ = 1;
 			}
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1158457222) != 2) {
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570, 2, 1051550423);
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1158457222) != 2) {
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aToolkitPreference_7570, 2, 1051550423);
 				ClanSettings.method4578(2, false, 622850291);
 			} else
-				GraphicsAutoSetup.clientPreferences.method3539(GraphicsAutoSetup.clientPreferences.graphicsPreference, true, -1871094786);
+				GraphicsSetup.clientPreferences.method3539(GraphicsSetup.clientPreferences.graphicsPreference, true, -1871094786);
 			Class3.writePreferences();
 			return i_2_;
 		} catch (RuntimeException runtimeexception) {

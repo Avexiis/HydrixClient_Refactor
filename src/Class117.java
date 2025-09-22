@@ -86,7 +86,7 @@ public class Class117 {
 	public static final void method1279(int i) {
 		try {
 			String string = (null != Class486.aString6063 ? Class486.aString6063 : EnumType.method6131((byte) -3));
-			ErrorContext.method4172(string, false, GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-2014540467) == 5, GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 37);
+			ErrorContext.method4172(string, false, GraphicsSetup.clientPreferences.graphicsPreference.getValue(-2014540467) == 5, GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 37);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("et.fb(").append(')').toString());
 		}

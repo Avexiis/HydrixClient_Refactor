@@ -82,8 +82,8 @@ public class Class264_Sub2 extends Class264 {
 		}
 	}
 
-	Class264_Sub2(Class_ra_Sub1 class_ra_sub1, Class505 class505, Class89[] class89s, int[] is, int[] is_40_) {
-		super(class_ra_sub1, class505);
+	Class264_Sub2(Class_ra_Sub1 class_ra_sub1, GameFont gameFont, Class89[] class89s, int[] is, int[] is_40_) {
+		super(class_ra_sub1, gameFont);
 		((Class264_Sub2) this).aClass_ra_Sub1_7122 = class_ra_sub1;
 		((Class264_Sub2) this).aClass_ra_Sub1_7122 = class_ra_sub1;
 		((Class264_Sub2) this).anIntArray7124 = is;

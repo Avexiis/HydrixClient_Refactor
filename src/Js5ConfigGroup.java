@@ -194,7 +194,7 @@ public class Js5ConfigGroup {
 				LoginData.aLong3911 = (class298_sub53.readLong((short) 15472) * 3207425516430892907L);
 			}
 			if (122690138525332847L * LoginData.aLong3874 < 0L)
-				Class78.method845(35, 1176559477);
+				DisplayMode.method845(35, 1176559477);
 			else
 				LoginPacket.method5981(false, true, "", "", LoginData.aLong3874 * 122690138525332847L);
 		} catch (RuntimeException runtimeexception) {
@@ -241,7 +241,7 @@ public class Js5ConfigGroup {
 
 	static final void method1313(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.flickeringPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 1 : 0, -1686668837);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.flickeringPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 1 : 0, -1686668837);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {

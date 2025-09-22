@@ -106,7 +106,7 @@ public class Class164 {
 				((Class164) this).anInt1693 = i;
 				int i_21_ = 0;
 				i_18_ = (((Class164) this).anInt1690 + ((Class164) this).anInt1688 * i_17_);
-				if (((Class164) this).aClass_ra_Sub3_1696.method5348(Class55.aClass55_567, Class77.aClass77_717)) {
+				if (((Class164) this).aClass_ra_Sub3_1696.method5348(Class55.aClass55_567, TextEncoder.aTextEncoder_717)) {
 					if (aByteArray1691 == null)
 						aByteArray1691 = new byte[16384];
 					byte[] is_22_ = aByteArray1691;

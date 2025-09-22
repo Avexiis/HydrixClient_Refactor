@@ -292,7 +292,7 @@ public abstract class Class247 {
 				Class298_Sub36 class298_sub36 = Class18.method359(OutgoingPacket.aClass198_2003, GameClient.gameConnection.aClass449_330, (byte) 9);
 				class298_sub36.buffer.writeByte(0);
 				int i_10_ = (385051775 * class298_sub36.buffer.pos);
-				Packet class298_sub53 = GraphicsAutoSetup.clientPreferences.createBuffer();
+				Packet class298_sub53 = GraphicsSetup.clientPreferences.createBuffer();
 				class298_sub36.buffer.writeBytes(class298_sub53.payload, 0, 385051775 * class298_sub53.pos, (short) -16962);
 				class298_sub36.buffer.method3649((class298_sub36.buffer.pos * 385051775) - i_10_, (byte) -113);
 				GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte) -84);
@@ -358,7 +358,7 @@ public abstract class Class247 {
 	static final void method2374(ClientScript2 class403, int i) {
 		try {
 			int i_23_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			int i_24_ = GraphicsAutoSetup.clientPreferences.aVolumePreference_7587.method5726(-2143149199);
+			int i_24_ = GraphicsSetup.clientPreferences.aVolumePreference_7587.method5726(-2143149199);
 			if (i_23_ != i_24_ && (Class300.anInt3210 * 782166935 == Class300.anInt3207 * -1256171511)) {
 				if (!Class435.method5804(GameClient.anInt8752 * -1233866115, (byte) 33)) {
 					if (0 == i_24_) {
@@ -371,7 +371,7 @@ public abstract class Class247 {
 					} else
 						Class70.method801(i_23_, -1911723714);
 				}
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aVolumePreference_7587, i_23_, -1422708524);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aVolumePreference_7587, i_23_, -1422708524);
 				Class3.writePreferences();
 				GameClient.aBoolean8666 = false;
 			}

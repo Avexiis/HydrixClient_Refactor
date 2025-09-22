@@ -36,7 +36,7 @@ public class Class82_Sub5 extends Class82 {
 		try {
 			if (bool)
 				return 0;
-			Class298_Sub9 class298_sub9 = Class255.method2437(i, bool, 547680225);
+			Class298_Sub9 class298_sub9 = DevConsole.method2437(i, bool, 547680225);
 			if (null == class298_sub9)
 				return ((Class300.aClass518_3217.method6311(i, 211542342).anInt9604) * 1317156085);
 			int i_1_ = 0;

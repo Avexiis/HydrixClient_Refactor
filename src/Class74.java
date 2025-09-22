@@ -8,7 +8,7 @@ public class Class74 {
 	static int anInt692;
 	static int anInt693;
 	static int anInt694;
-	static Class505 aClass505_695;
+	static GameFont aGameFont_695;
 	static int anInt696;
 	static int anInt697;
 	static int anInt698;
@@ -73,7 +73,7 @@ public class Class74 {
 
 	static final void method827(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5692((byte) 0) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.characterShadowPreference.method5692((byte) 0) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("d.anu(").append(')').toString());
 		}
@@ -81,7 +81,7 @@ public class Class74 {
 
 	static final void method828(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.fogPreference.method5632((byte) -40) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.fogPreference.method5632((byte) -40) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("d.ang(").append(')').toString());
 		}
@@ -97,8 +97,8 @@ public class Class74 {
 
 	public static void method830(int i, int i_2_, int i_3_, boolean bool, int i_4_) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1456138007) != 0) {
-				Class301_Sub1.anInt7626 = GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-993679742) * 485258093;
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1456138007) != 0) {
+				Class301_Sub1.anInt7626 = GraphicsSetup.clientPreferences.graphicsPreference.getValue(-993679742) * 485258093;
 				ClanSettings.method4578(0, true, 622850291);
 			} else
 				Class423.method5733(false, 1336561252);

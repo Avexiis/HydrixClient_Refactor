@@ -123,9 +123,9 @@ public abstract class Class309 {
 				else
 					bool = false;
 			}
-			if (Class14.aClass505_176 == null) {
+			if (Class14.aGameFont_176 == null) {
 				if (Class173.aClass243_1758.method2310(Class14.anInt168 * -227610265, -457216440))
-					Class14.aClass505_176 = Class255.method2439(Class173.aClass243_1758, Class14.anInt168 * -227610265, -1873768956);
+					Class14.aGameFont_176 = DevConsole.method2439(Class173.aClass243_1758, Class14.anInt168 * -227610265, -1873768956);
 				else
 					bool = false;
 			}

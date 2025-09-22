@@ -45,7 +45,7 @@ public class Class384 {
 	static final void method4697(ClientScript2 class403, int i) {
 		try {
 			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919
-					- 1] = GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 45);
+					- 1] = GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 45);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("py.afi(").append(')').toString());
 	}
@@ -54,7 +54,7 @@ public class Class384 {
 	static final void method4698(ClientScript2 class403, int i) {
 		try {
 			int i_5_ = class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919];
-			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1] = GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558.method5612(i_5_, 1352882135);
+			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919 - 1] = GraphicsSetup.clientPreferences.aMapSizePreference_7558.method5612(i_5_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("py.aoj(").append(')').toString());
 		}

@@ -23,8 +23,8 @@ public class Class126 implements Interface6 {
 	}
 
 	public void method55() {
-		Class505 class505 = Class255.method2439(((Class126) this).aClass243_6367, 180759529 * (((Class126) this).aClass151_6368.anInt6355), 1190428797);
-		((Class126) this).aClass264_6370 = (OverlayType.activeToolkit.method5092(class505, Class89.method981(((Class126) this).aClass243_6369, (((Class126) this).aClass151_6368.anInt6355 * 180759529)), true));
+		GameFont gameFont = DevConsole.method2439(((Class126) this).aClass243_6367, 180759529 * (((Class126) this).aClass151_6368.anInt6355), 1190428797);
+		((Class126) this).aClass264_6370 = (OverlayType.activeToolkit.method5092(gameFont, Class89.method981(((Class126) this).aClass243_6369, (((Class126) this).aClass151_6368.anInt6355 * 180759529)), true));
 	}
 
 	public void method58(boolean bool, byte i) {
@@ -67,8 +67,8 @@ public class Class126 implements Interface6 {
 
 	public void method53(int i) {
 		try {
-			Class505 class505 = Class255.method2439(((Class126) this).aClass243_6367, 180759529 * (((Class126) this).aClass151_6368.anInt6355), 1240803660);
-			((Class126) this).aClass264_6370 = (OverlayType.activeToolkit.method5092(class505, Class89.method981(((Class126) this).aClass243_6369, (((Class126) this).aClass151_6368.anInt6355) * 180759529), true));
+			GameFont gameFont = DevConsole.method2439(((Class126) this).aClass243_6367, 180759529 * (((Class126) this).aClass151_6368.anInt6355), 1240803660);
+			((Class126) this).aClass264_6370 = (OverlayType.activeToolkit.method5092(gameFont, Class89.method981(((Class126) this).aClass243_6369, (((Class126) this).aClass151_6368.anInt6355) * 180759529), true));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fc.a(").append(')').toString());
 		}
@@ -232,7 +232,7 @@ public class Class126 implements Interface6 {
 							Class365_Sub1_Sub2_Sub1.aLong9911 = ((TimeUtils.getTime((byte) 1) + 30000L) * -5619030756491206545L);
 						}
 					} else if (TimeUtils.getTime((byte) 1) >= (Class365_Sub1_Sub2_Sub1.aLong9911 * 416520701245947535L))
-						Ground.aClass396_6291 = GameClient.aClass404_8715.method4946((Class474.aClass471_5979.address), (byte) 25);
+						Ground.aClass396_6291 = GameClient.aClass404_8715.method4946((Class474.worldAddress.address), (byte) 25);
 					if (!Loader.DISABLE_USELESS_PACKETS)
 						Class247.method2371((byte) 82);
 					Class298_Sub50 class298_sub50 = ((Class298_Sub50) GameClient.aLinkedNodeList_8827.method5939(1766612795));
@@ -337,7 +337,7 @@ public class Class126 implements Interface6 {
 							Class82_Sub17.method918(null, -1, -1, -6089367);
 							if (!GameClient.aBoolean8835)
 								GameClient.anInt8937 = 280458557;
-							overheadString.method732(-640926851);
+							OverheadString.method732(-640926851);
 							GameClient.anInt8933 += -908761385;
 							if (GameClient.aBoolean8866) {
 								Class298_Sub36 class298_sub36 = Class18.method359((OutgoingPacket.WORLD_MAP_CLICK_PACKET), (GameClient.gameConnection.aClass449_330), (byte) 91);
@@ -421,7 +421,7 @@ public class Class126 implements Interface6 {
 								else if (i_14_ > 3)
 									i_14_ = 3;
 								WorldTile worldTile = GameClient.map.getRegionStart(681479919);
-								DiskFile.method6083(i_14_, ((Class287.myPlayer.scenePositionXQueue[0]) + -1760580017 * worldTile.x), ((Class287.myPlayer.scenePositionYQueue[0]) + 283514611 * worldTile.y), 1979698840);
+								DiskFile.printCoordinates(i_14_, ((Class287.myPlayer.scenePositionXQueue[0]) + -1760580017 * worldTile.x), ((Class287.myPlayer.scenePositionYQueue[0]) + 283514611 * worldTile.y));
 							}
 							SpotAnimation.method610(187981678);
 							for (int i_15_ = 0; i_15_ < 5; i_15_++)
@@ -431,9 +431,9 @@ public class Class126 implements Interface6 {
 							for (Class302_Sub2 class302_sub2 = ((Class302_Sub2) GameClient.aClass442_8951.method5868(-16777216)); null != class302_sub2; class302_sub2 = ((Class302_Sub2) GameClient.aClass442_8951.method5872(-1081988620))) {
 								if ((long) (-1505693583 * (((Class302_Sub2) class302_sub2).anInt7647)) < (TimeUtils.getTime((byte) 1) / 1000L - 5L)) {
 									if ((((Class302_Sub2) class302_sub2).aShort7646) > 0)
-										ChecksumTableEntry.method2282(5, 0, "", "", "", new StringBuilder().append(((Class302_Sub2) class302_sub2).aString7648).append(LocalizedString.MESSAGE_LOGGED_IN_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), 818502865);
+										ChecksumTableEntry.method2282(5, 0, "", "", "", new StringBuilder().append(((Class302_Sub2) class302_sub2).aString7648).append(LocalizedString.MESSAGE_LOGGED_IN_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), 818502865);
 									if ((((Class302_Sub2) class302_sub2).aShort7646) == 0)
-										ChecksumTableEntry.method2282(5, 0, "", "", "", new StringBuilder().append(((Class302_Sub2) class302_sub2).aString7648).append(LocalizedString.MESSAGE_LOGGED_OUT_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), -1731923786);
+										ChecksumTableEntry.method2282(5, 0, "", "", "", new StringBuilder().append(((Class302_Sub2) class302_sub2).aString7648).append(LocalizedString.MESSAGE_LOGGED_OUT_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), -1731923786);
 									class302_sub2.method3714(180959790);
 								}
 							}

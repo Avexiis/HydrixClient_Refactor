@@ -39,26 +39,18 @@ public class Class3 {
 	}
 
 	public static void writePreferences() {
-		DiskFile file = null;
-		try {
-			file = Class86.getPreferenceFile("", GameClient.aGameContext_8944.aString5317, true);
-			Packet buffer = GraphicsAutoSetup.clientPreferences.createBuffer();
-			file.write(buffer.payload, 0, buffer.pos * 385051775);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		try {
-			if (file != null) {
-				file.close();
-			}
+		try { //saves to json now
+			ClientPrefs prefs = GamePreferencesJsonBridge.fromGamePreferences(GraphicsSetup.clientPreferences);
+			PrefsIO.save(prefs);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
+
 	static final void method301(ClientScript2 class403, byte i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.texturePreference, class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919] == 1 ? 1 : 0, -223155318);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.texturePreference, class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919] == 1 ? 1 : 0, -223155318);
 			writePreferences();
 			Class359.method4294(1660250591);
 			GameClient.aBoolean8666 = false;

@@ -235,7 +235,7 @@ public final class CachingHashMap {
 	static final void method4195(ClientScript2 class403, int i) {
 		try {
 			int i_7_ = (class403.anIntArray5244[((class403.anInt5239 -= -391880689) * 681479919)]);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub1_7552, i_7_, 1144244334);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub1_7552, i_7_, 1144244334);
 			GameClient.map.method2667(458039847);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
@@ -254,7 +254,7 @@ public final class CachingHashMap {
 
 	public static int method4197(int i, int i_8_, boolean bool, byte i_9_) {
 		try {
-			Class298_Sub9 class298_sub9 = Class255.method2437(i, bool, 1780285943);
+			Class298_Sub9 class298_sub9 = DevConsole.method2437(i, bool, 1780285943);
 			if (null == class298_sub9) {
 				return 0;
 			}

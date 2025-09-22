@@ -53,7 +53,7 @@ public class Class522 {
 
 	public static Class343_Sub1 method6328(byte i) {
 		try {
-			return Class226.method2105((1606920449 * Class474.aClass471_5979.worldId), (byte) 52);
+			return Class226.method2105((1606920449 * Class474.worldAddress.worldId), (byte) 52);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("w.d(").append(')').toString());
 		}

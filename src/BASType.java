@@ -416,7 +416,7 @@ public class BASType {
 
 	static final void method4216(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsPresetPreference_7576, 0,
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsPresetPreference_7576, 0,
 					-1906997591);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
@@ -429,7 +429,7 @@ public class BASType {
 		try {
 			int i_32_ = class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919];
 			class403.anIntArray5244[(class403.anInt5239 += -391880689) * 681479919
-					- 1] = GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547.method5612(i_32_, 1352882135);
+					- 1] = GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547.method5612(i_32_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("op.aoc(").append(')').toString());
 		}
@@ -437,37 +437,37 @@ public class BASType {
 
 	static void method4218(int i) {
 		try {
-			if (Class8.anInt98 * 256666041 < 102) {
-				Class8.anInt98 += 879545142;
+			if (DevConsoleState.anInt98 * 256666041 < 102) {
+				DevConsoleState.anInt98 += 879545142;
 			}
-			if (-917301319 * Class8.anInt104 != -1
+			if (-917301319 * DevConsoleState.anInt104 != -1
 					&& 3224865510845692061L * Class146.aLong1576 < TimeUtils.getTime((byte) 1)) {
-				for (int i_33_ = Class8.anInt104 * -917301319; i_33_ < Class8.aStringArray109.length; i_33_++) {
-					if (Class8.aStringArray109[i_33_].startsWith("pause")) {
+				for (int i_33_ = DevConsoleState.anInt104 * -917301319; i_33_ < DevConsoleState.aStringArray109.length; i_33_++) {
+					if (DevConsoleState.aStringArray109[i_33_].startsWith("pause")) {
 						int i_34_ = 5;
 						try {
-							i_34_ = Integer.parseInt(Class8.aStringArray109[i_33_].substring(6));
+							i_34_ = Integer.parseInt(DevConsoleState.aStringArray109[i_33_].substring(6));
 						} catch (Exception exception) {
 							/* empty */
 						}
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Pausing for ").append(i_34_)
-								.append(" seconds...").toString(), 270683370);
-						Class8.anInt104 = (i_33_ + 1) * -1428832631;
+						DevConsole.sendDevConsoleMsg(new StringBuilder().append("Pausing for ").append(i_34_)
+								.append(" seconds...").toString());
+						DevConsoleState.anInt104 = (i_33_ + 1) * -1428832631;
 						Class146.aLong1576 = (TimeUtils.getTime((byte) 1) + 1000 * i_34_) * 6717445677357895093L;
 						return;
 					}
-					Class8.aString101 = Class8.aStringArray109[i_33_];
+					DevConsoleState.aString101 = DevConsoleState.aStringArray109[i_33_];
 					Class142.method1568(false, 1496417723);
 				}
-				Class8.anInt104 = 1428832631;
+				DevConsoleState.anInt104 = 1428832631;
 			}
 			if (0 != 1170859143 * GameClient.anInt8682) {
-				Class8.anInt103 -= GameClient.anInt8682 * 1787831191;
-				if (Class8.anInt103 * -1731316011 >= Class8.anInt102 * -2035787443) {
-					Class8.anInt103 = Class8.anInt102 * -1477098343 - 205738621;
+				DevConsoleState.scrollOffset -= GameClient.anInt8682 * 1787831191;
+				if (DevConsoleState.scrollOffset * -1731316011 >= DevConsoleState.lineCount * -2035787443) {
+					DevConsoleState.scrollOffset = DevConsoleState.lineCount * -1477098343 - 205738621;
 				}
-				if (-1731316011 * Class8.anInt103 < 0) {
-					Class8.anInt103 = 0;
+				if (-1731316011 * DevConsoleState.scrollOffset < 0) {
+					DevConsoleState.scrollOffset = 0;
 				}
 				GameClient.anInt8682 = 0;
 			}
@@ -484,9 +484,9 @@ public class BASType {
 				} else if (i_36_ == 66 && 0 != (i_37_ & 0x4)) {
 					if (Wall.aClipboard9941 != null) {
 						String string = "";
-						for (int i_38_ = Class8.aStringArray107.length - 1; i_38_ >= 0; i_38_--) {
-							if (Class8.aStringArray107[i_38_] != null && Class8.aStringArray107[i_38_].length() > 0) {
-								string = new StringBuilder().append(string).append(Class8.aStringArray107[i_38_])
+						for (int i_38_ = DevConsoleState.lines.length - 1; i_38_ >= 0; i_38_--) {
+							if (DevConsoleState.lines[i_38_] != null && DevConsoleState.lines[i_38_].length() > 0) {
+								string = new StringBuilder().append(string).append(DevConsoleState.lines[i_38_])
 										.append('\n').toString();
 							}
 						}
@@ -499,7 +499,7 @@ public class BASType {
 							if (transferable != null) {
 								String string = (String) transferable.getTransferData(DataFlavor.stringFlavor);
 								if (null != string) {
-									String[] strings = Class365_Sub1_Sub3_Sub1.method4508(string, '\n', 1017779885);
+									String[] strings = SceneObject.splitText(string, '\n', 1017779885);
 									Class55.method606(strings, 399274522);
 								}
 							}
@@ -507,37 +507,37 @@ public class BASType {
 							/* empty */
 						}
 					}
-				} else if (i_36_ == 85 && -1182747927 * Class8.anInt99 > 0) {
-					Class8.aString101 = new StringBuilder()
-							.append(Class8.aString101.substring(0, -1182747927 * Class8.anInt99 - 1))
-							.append(Class8.aString101.substring(Class8.anInt99 * -1182747927)).toString();
-					Class8.anInt99 -= 1914783065;
-				} else if (101 == i_36_ && -1182747927 * Class8.anInt99 < Class8.aString101.length()) {
-					Class8.aString101 = new StringBuilder()
-							.append(Class8.aString101.substring(0, -1182747927 * Class8.anInt99))
-							.append(Class8.aString101.substring(1 + Class8.anInt99 * -1182747927)).toString();
-				} else if (i_36_ == 96 && Class8.anInt99 * -1182747927 > 0) {
-					Class8.anInt99 -= 1914783065;
-				} else if (i_36_ == 97 && -1182747927 * Class8.anInt99 < Class8.aString101.length()) {
-					Class8.anInt99 += 1914783065;
+				} else if (i_36_ == 85 && -1182747927 * DevConsoleState.anInt99 > 0) {
+					DevConsoleState.aString101 = new StringBuilder()
+							.append(DevConsoleState.aString101.substring(0, -1182747927 * DevConsoleState.anInt99 - 1))
+							.append(DevConsoleState.aString101.substring(DevConsoleState.anInt99 * -1182747927)).toString();
+					DevConsoleState.anInt99 -= 1914783065;
+				} else if (101 == i_36_ && -1182747927 * DevConsoleState.anInt99 < DevConsoleState.aString101.length()) {
+					DevConsoleState.aString101 = new StringBuilder()
+							.append(DevConsoleState.aString101.substring(0, -1182747927 * DevConsoleState.anInt99))
+							.append(DevConsoleState.aString101.substring(1 + DevConsoleState.anInt99 * -1182747927)).toString();
+				} else if (i_36_ == 96 && DevConsoleState.anInt99 * -1182747927 > 0) {
+					DevConsoleState.anInt99 -= 1914783065;
+				} else if (i_36_ == 97 && -1182747927 * DevConsoleState.anInt99 < DevConsoleState.aString101.length()) {
+					DevConsoleState.anInt99 += 1914783065;
 				} else if (102 == i_36_) {
-					Class8.anInt99 = 0;
+					DevConsoleState.anInt99 = 0;
 				} else if (103 == i_36_) {
-					Class8.anInt99 = Class8.aString101.length() * 1914783065;
-				} else if (104 == i_36_ && -1217082313 * Class8.anInt105 < Class8.aStringArray107.length) {
-					Class8.anInt105 += -1305958009;
+					DevConsoleState.anInt99 = DevConsoleState.aString101.length() * 1914783065;
+				} else if (104 == i_36_ && -1217082313 * DevConsoleState.anInt105 < DevConsoleState.lines.length) {
+					DevConsoleState.anInt105 += -1305958009;
 					Class55.method607(-214283222);
-					Class8.anInt99 = Class8.aString101.length() * 1914783065;
-				} else if (105 == i_36_ && -1217082313 * Class8.anInt105 > 0) {
-					Class8.anInt105 -= -1305958009;
+					DevConsoleState.anInt99 = DevConsoleState.aString101.length() * 1914783065;
+				} else if (105 == i_36_ && -1217082313 * DevConsoleState.anInt105 > 0) {
+					DevConsoleState.anInt105 -= -1305958009;
 					Class55.method607(1763987987);
-					Class8.anInt99 = Class8.aString101.length() * 1914783065;
+					DevConsoleState.anInt99 = DevConsoleState.aString101.length() * 1914783065;
 				} else if (LocType.method5788(c, (short) 160) || "\\/.:, _-+[]~@".indexOf(c) != -1) {
-					Class8.aString101 = new StringBuilder()
-							.append(Class8.aString101.substring(0, -1182747927 * Class8.anInt99))
+					DevConsoleState.aString101 = new StringBuilder()
+							.append(DevConsoleState.aString101.substring(0, -1182747927 * DevConsoleState.anInt99))
 							.append(GameClient.anInterface16Array8710[i_35_].method217((byte) 9))
-							.append(Class8.aString101.substring(Class8.anInt99 * -1182747927)).toString();
-					Class8.anInt99 += 1914783065;
+							.append(DevConsoleState.aString101.substring(DevConsoleState.anInt99 * -1182747927)).toString();
+					DevConsoleState.anInt99 += 1914783065;
 				}
 			}
 			GameClient.anInt8894 = 0;

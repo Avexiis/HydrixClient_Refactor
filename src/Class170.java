@@ -52,7 +52,7 @@ public final class Class170 {
 				Class79.anInt746 = i_3_ * -956029523;
 				Class79.aClass298_Sub19_Sub1_748 = null;
 				Class79.anInt739 = i_4_ * -2102749749;
-				Class8.aBoolean114 = bool;
+				DevConsoleState.aBoolean114 = bool;
 				Class298_Sub24_Sub1.anInt9276 = (Class79.aClass298_Sub19_Sub1_737.method2953((byte) -72) / i * 771950311);
 				if (-1503744809 * Class298_Sub24_Sub1.anInt9276 < 1)
 					Class298_Sub24_Sub1.anInt9276 = 771950311;

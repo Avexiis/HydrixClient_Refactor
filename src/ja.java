@@ -252,7 +252,7 @@ public class ja extends GraphicsToolkit implements Interface25 {
 
 	public native void GA(float f, float f_74_);
 
-	public Class264 method5114(Class505 class505, Class89[] class89s, boolean bool) {
+	public Class264 method5114(GameFont gameFont, Class89[] class89s, boolean bool) {
 		int[] is = new int[class89s.length];
 		int[] is_75_ = new int[class89s.length];
 		boolean bool_76_ = false;
@@ -264,12 +264,12 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		}
 		if (bool) {
 			if (bool_76_)
-				return new ea(this, ((ja) this).aBa6682, class505, class89s, null);
-			return new m(this, ((ja) this).aBa6682, class505, class89s, null);
+				return new ea(this, ((ja) this).aBa6682, gameFont, class89s, null);
+			return new m(this, ((ja) this).aBa6682, gameFont, class89s, null);
 		}
 		if (bool_76_)
 			throw new IllegalArgumentException("");
-		return new ia(this, ((ja) this).aBa6682, class505, class89s, null);
+		return new ia(this, ((ja) this).aBa6682, gameFont, class89s, null);
 	}
 
 	public native int du();
@@ -322,7 +322,7 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		return ((ja) this).aClass233_6686;
 	}
 
-	public Class264 method5092(Class505 class505, Class89[] class89s, boolean bool) {
+	public Class264 method5092(GameFont gameFont, Class89[] class89s, boolean bool) {
 		int[] is = new int[class89s.length];
 		int[] is_142_ = new int[class89s.length];
 		boolean bool_143_ = false;
@@ -334,12 +334,12 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		}
 		if (bool) {
 			if (bool_143_)
-				return new ea(this, ((ja) this).aBa6682, class505, class89s, null);
-			return new m(this, ((ja) this).aBa6682, class505, class89s, null);
+				return new ea(this, ((ja) this).aBa6682, gameFont, class89s, null);
+			return new m(this, ((ja) this).aBa6682, gameFont, class89s, null);
 		}
 		if (bool_143_)
 			throw new IllegalArgumentException("");
-		return new ia(this, ((ja) this).aBa6682, class505, class89s, null);
+		return new ia(this, ((ja) this).aBa6682, gameFont, class89s, null);
 	}
 
 	public void method5059(float f, float f_144_, float f_145_, float[] fs) {
@@ -602,8 +602,8 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		return ((ja) this).aClass233_6690;
 	}
 
-	public final void method5057(int i, Class78 class78) {
-		M(i, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183);
+	public final void method5057(int i, DisplayMode displayMode) {
+		M(i, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183);
 	}
 
 	native void M(int i, int i_228_, int i_229_, int i_230_);
@@ -1007,7 +1007,7 @@ public class ja extends GraphicsToolkit implements Interface25 {
 
 	public native void fo(int i, int i_383_, int i_384_, int i_385_, int i_386_, int i_387_, byte[] is, int i_388_, int i_389_);
 
-	public Class264 method5113(Class505 class505, Class89[] class89s, boolean bool) {
+	public Class264 method5113(GameFont gameFont, Class89[] class89s, boolean bool) {
 		int[] is = new int[class89s.length];
 		int[] is_390_ = new int[class89s.length];
 		boolean bool_391_ = false;
@@ -1019,12 +1019,12 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		}
 		if (bool) {
 			if (bool_391_)
-				return new ea(this, ((ja) this).aBa6682, class505, class89s, null);
-			return new m(this, ((ja) this).aBa6682, class505, class89s, null);
+				return new ea(this, ((ja) this).aBa6682, gameFont, class89s, null);
+			return new m(this, ((ja) this).aBa6682, gameFont, class89s, null);
 		}
 		if (bool_391_)
 			throw new IllegalArgumentException("");
-		return new ia(this, ((ja) this).aBa6682, class505, class89s, null);
+		return new ia(this, ((ja) this).aBa6682, gameFont, class89s, null);
 	}
 
 	public boolean method5074() {
@@ -1292,16 +1292,16 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		/* empty */
 	}
 
-	public final void method5155(int i, Class78 class78) {
-		M(i, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183);
+	public final void method5155(int i, DisplayMode displayMode) {
+		M(i, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183);
 	}
 
-	public final void method5156(int i, Class78 class78) {
-		M(i, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183);
+	public final void method5156(int i, DisplayMode displayMode) {
+		M(i, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183);
 	}
 
-	public final void method5089(int i, Class78 class78) {
-		JA(i, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183);
+	public final void method5089(int i, DisplayMode displayMode) {
+		JA(i, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183);
 	}
 
 	public native void hu(float f);
@@ -1567,8 +1567,8 @@ public class ja extends GraphicsToolkit implements Interface25 {
 		/* empty */
 	}
 
-	public final void method5058(int i, Class78 class78) {
-		JA(i, class78.anInt726 * -1212608691, class78.anInt725 * 1996750669, class78.anInt727 * -1475891183);
+	public final void method5058(int i, DisplayMode displayMode) {
+		JA(i, displayMode.anInt726 * -1212608691, displayMode.anInt725 * 1996750669, displayMode.anInt727 * -1475891183);
 	}
 
 	native void wa(float[] fs);

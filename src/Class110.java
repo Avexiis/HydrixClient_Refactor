@@ -151,9 +151,9 @@ public abstract class Class110 implements Interface8 {
 
 	public static void method1223(int i) {
 		try {
-			Class390.method4876(22050, GraphicsAutoSetup.clientPreferences.aClass422_Sub22_7586.method5706((byte) -26) == 1, 2, 1957376607);
+			Class390.method4876(22050, GraphicsSetup.clientPreferences.aClass422_Sub22_7586.method5706((byte) -26) == 1, 2, 1957376607);
 			Class300.aClass284_3212 = Class75.method834(Class52_Sub2_Sub1.aCanvas9079, 0, 22050, -1310188777);
-			MagnetConfig.method777(true, Class8.method318(null, -1887308031), 1581194982);
+			MagnetConfig.method777(true, DevConsoleState.method318(null, -1887308031), 1581194982);
 			Class3.aClass284_68 = Class75.method834(Class52_Sub2_Sub1.aCanvas9079, 1, 2048, -139744037);
 			Class285.aClass298_Sub19_Sub4_3083 = new Class298_Sub19_Sub4();
 			Class3.aClass284_68.method2679(Class285.aClass298_Sub19_Sub4_3083, 1746054467);
@@ -186,13 +186,13 @@ public abstract class Class110 implements Interface8 {
 
 	static void method1226(int i, int i_61_, byte i_62_) {
 		try {
-			if (HashTable.aClass371_5520.aBoolean4038 || (ContextMenu.actionCount * -278777595 != 1 && (!Class396.aBoolean5196 || 2 != -278777595 * ContextMenu.actionCount || !(((Class298_Sub37_Sub15) ContextMenu.aClass298_Sub37_Sub15_5477).aString9667.equals(LocalizedString.ACTION_FACE_HERE.getText(Class321.ACTIVE_LANGUAGE, -875414210)))))) {
-				Class505 class505 = Class142.method1571(-2044946043);
-				int i_63_ = (class505.method6264(LocalizedString.BUTTON_CHOOSE_OPTION.getText(Class321.ACTIVE_LANGUAGE, -875414210), -917382772));
+			if (HashTable.aClass371_5520.aBoolean4038 || (ContextMenu.actionCount * -278777595 != 1 && (!Class396.aBoolean5196 || 2 != -278777595 * ContextMenu.actionCount || !(((Class298_Sub37_Sub15) ContextMenu.aClass298_Sub37_Sub15_5477).aString9667.equals(LocalizedString.ACTION_FACE_HERE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)))))) {
+				GameFont gameFont = Class142.method1571(-2044946043);
+				int i_63_ = (gameFont.method6264(LocalizedString.BUTTON_CHOOSE_OPTION.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), -917382772));
 				int i_64_;
 				if (!ContextMenu.aBoolean5471) {
 					for (Class298_Sub37_Sub15 class298_sub37_sub15 = ((Class298_Sub37_Sub15) ContextMenu.aLinkedNodeList_5480.method5939(1766612795)); null != class298_sub37_sub15; class298_sub37_sub15 = ((Class298_Sub37_Sub15) ContextMenu.aLinkedNodeList_5480.method5944(49146))) {
-						int i_65_ = Class127_Sub1.method1425(class298_sub37_sub15, class505, 692106883);
+						int i_65_ = Class127_Sub1.method1425(class298_sub37_sub15, gameFont, 692106883);
 						if (i_65_ > i_63_)
 							i_63_ = i_65_;
 					}
@@ -203,9 +203,9 @@ public abstract class Class110 implements Interface8 {
 					for (Class298_Sub37_Sub5 class298_sub37_sub5 = ((Class298_Sub37_Sub5) ContextMenu.aClass461_5482.method5984(-1195719541)); null != class298_sub37_sub5; class298_sub37_sub5 = ((Class298_Sub37_Sub5) ContextMenu.aClass461_5482.method5985(1977524177))) {
 						int i_66_;
 						if (1 == (((Class298_Sub37_Sub5) class298_sub37_sub5).anInt9583) * -628325139)
-							i_66_ = (Class127_Sub1.method1425(((Class298_Sub37_Sub15) (((Class298_Sub37_Sub5) class298_sub37_sub5).aClass461_9584.aClass298_Sub37_5679.aClass298_Sub37_7405)), class505, 692106883));
+							i_66_ = (Class127_Sub1.method1425(((Class298_Sub37_Sub15) (((Class298_Sub37_Sub5) class298_sub37_sub5).aClass461_9584.aClass298_Sub37_5679.aClass298_Sub37_7405)), gameFont, 692106883));
 						else
-							i_66_ = overheadString.method728(class298_sub37_sub5, class505, 1340388103);
+							i_66_ = OverheadString.method728(class298_sub37_sub5, gameFont, 1340388103);
 						if (i_66_ > i_63_)
 							i_63_ = i_66_;
 					}

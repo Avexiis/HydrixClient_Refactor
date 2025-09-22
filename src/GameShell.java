@@ -83,13 +83,13 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 		try {
 			try {
 				method2762(Class292.aClass292_3163, bool, (short) -2229);
-				Class78.anInt733 = ((Class462.canvasWidth = class311.method3811((byte) -35) * -2010408377) * 1228593773);
+				DisplayMode.anInt733 = ((Class462.canvasWidth = class311.method3811((byte) -35) * -2010408377) * 1228593773);
 				anInt6472 = ((Class298_Sub40_Sub9.anInt9716 = class311.method3815(2024501789) * 1445266787)
 						* 1864178979);
 				anInt6473 = 0;
 				anInt6474 = 0;
 				if (SpotAnimTypeList.method4865((byte) 35) == Class292.aClass292_3164) {
-					Class78.anInt733 += -1643230090 * class311.method3812((byte) 52);
+					DisplayMode.anInt733 += -1643230090 * class311.method3812((byte) 52);
 					anInt6472 += 63301394 * class311.method3813(-974427485);
 					method2780(class311.method3814(1376340372), -260131528);
 				}
@@ -469,7 +469,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 				aBoolean6471 = true;
 				if ((TimeUtils.getTime((byte) 1) - -4623726814665285853L * aLong6491) > 1000L) {
 					Rectangle rectangle = graphics.getClipBounds();
-					if (rectangle == null || (rectangle.width >= -639974669 * Class78.anInt733 && rectangle.height >= anInt6472 * 1282634425)) aBoolean6478 = true;
+					if (rectangle == null || (rectangle.width >= -639974669 * DisplayMode.anInt733 && rectangle.height >= anInt6472 * 1282634425)) aBoolean6478 = true;
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -614,7 +614,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			aBoolean6471 = true;
 			if ((TimeUtils.getTime((byte) 1) - -4623726814665285853L * aLong6491) > 1000L) {
 				Rectangle rectangle = graphics.getClipBounds();
-				if (rectangle == null || (rectangle.width >= -639974669 * Class78.anInt733
+				if (rectangle == null || (rectangle.width >= -639974669 * DisplayMode.anInt733
 						&& rectangle.height >= anInt6472 * 1282634425))
 					aBoolean6478 = true;
 			}
@@ -643,7 +643,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			aBoolean6471 = true;
 			if ((TimeUtils.getTime((byte) 1) - -4623726814665285853L * aLong6491) > 1000L) {
 				Rectangle rectangle = graphics.getClipBounds();
-				if (rectangle == null || (rectangle.width >= -639974669 * Class78.anInt733
+				if (rectangle == null || (rectangle.width >= -639974669 * DisplayMode.anInt733
 						&& rectangle.height >= anInt6472 * 1282634425))
 					aBoolean6478 = true;
 			}
@@ -830,7 +830,7 @@ public abstract class GameShell implements Interface14, Runnable, FocusListener,
 			Class298_Sub36.aFrame7403.setVisible(true);
 			Class298_Sub36.aFrame7403.toFront();
 			Insets insets = Class298_Sub36.aFrame7403.getInsets();
-			Class298_Sub36.aFrame7403.setSize((insets.right + (Class78.anInt733 * -639974669 + insets.left)),
+			Class298_Sub36.aFrame7403.setSize((insets.right + (DisplayMode.anInt733 * -639974669 + insets.left)),
 					(anInt6472 * 1282634425 + insets.top + insets.bottom));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "mc.z(" + ')');

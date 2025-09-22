@@ -18,12 +18,12 @@ public class Class30_Sub2_Sub1 extends Class30_Sub2 {
 		return new Class30_Sub2_Sub1(class_ra_sub2, i, i_0_, Class416.method5590(i, (byte) 16), Class416.method5590(i_0_, (byte) 16), is);
 	}
 
-	static Class30_Sub2_Sub1 method426(Class_ra_Sub2 class_ra_sub2, Class55 class55, Class77 class77, int i, int i_3_) {
+	static Class30_Sub2_Sub1 method426(Class_ra_Sub2 class_ra_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_3_) {
 		if (((Class_ra_Sub2) class_ra_sub2).aBoolean8031 || (Class486.method6152(i, 2054031633) && Class486.method6152(i_3_, 1814052546)))
-			return new Class30_Sub2_Sub1(class_ra_sub2, 3553, class55, class77, i, i_3_);
+			return new Class30_Sub2_Sub1(class_ra_sub2, 3553, class55, textEncoder, i, i_3_);
 		if (((Class_ra_Sub2) class_ra_sub2).aBoolean8179)
-			return new Class30_Sub2_Sub1(class_ra_sub2, 34037, class55, class77, i, i_3_);
-		return new Class30_Sub2_Sub1(class_ra_sub2, class55, class77, i, i_3_, Class416.method5590(i, (byte) 16), Class416.method5590(i_3_, (byte) 16));
+			return new Class30_Sub2_Sub1(class_ra_sub2, 34037, class55, textEncoder, i, i_3_);
+		return new Class30_Sub2_Sub1(class_ra_sub2, class55, textEncoder, i, i_3_, Class416.method5590(i, (byte) 16), Class416.method5590(i_3_, (byte) 16));
 	}
 
 	static Class30_Sub2_Sub1 method427(Class_ra_Sub2 class_ra_sub2, int i, int i_4_, int i_5_, int i_6_) {
@@ -50,8 +50,8 @@ public class Class30_Sub2_Sub1 extends Class30_Sub2 {
 		((Class30_Sub2_Sub1) this).aBoolean9046 = false;
 	}
 
-	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, Class77 class77, int i_11_, int i_12_, boolean bool, byte[] is, Class55 class55_13_) {
-		super(class_ra_sub2, i, class55, class77, i_11_, i_12_, bool, is, class55_13_, true);
+	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, TextEncoder textEncoder, int i_11_, int i_12_, boolean bool, byte[] is, Class55 class55_13_) {
+		super(class_ra_sub2, i, class55, textEncoder, i_11_, i_12_, bool, is, class55_13_, true);
 		((Class30_Sub2_Sub1) this).anInt9048 = i_11_;
 		((Class30_Sub2_Sub1) this).anInt9047 = i_12_;
 		if (((Class30_Sub2_Sub1) this).anInt372 == 34037) {
@@ -83,7 +83,7 @@ public class Class30_Sub2_Sub1 extends Class30_Sub2 {
 	}
 
 	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, int i, int i_18_, int i_19_, int i_20_, int[] is) {
-		super(class_ra_sub2, 3553, Class55.aClass55_557, Class77.aClass77_717, i_19_, i_20_);
+		super(class_ra_sub2, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_717, i_19_, i_20_);
 		((Class30_Sub2_Sub1) this).anInt9048 = i;
 		((Class30_Sub2_Sub1) this).anInt9047 = i_18_;
 		method422(0, i_20_ - i_18_, i, i_18_, is, 0, 0, true);
@@ -94,8 +94,8 @@ public class Class30_Sub2_Sub1 extends Class30_Sub2 {
 		method420(false, false);
 	}
 
-	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, Class55 class55, Class77 class77, int i, int i_21_, int i_22_, int i_23_, byte[] is, Class55 class55_24_) {
-		super(class_ra_sub2, 3553, class55, class77, i_22_, i_23_);
+	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_21_, int i_22_, int i_23_, byte[] is, Class55 class55_24_) {
+		super(class_ra_sub2, 3553, class55, textEncoder, i_22_, i_23_);
 		((Class30_Sub2_Sub1) this).anInt9048 = i;
 		((Class30_Sub2_Sub1) this).anInt9047 = i_21_;
 		method421(0, i_23_ - i_21_, i, i_21_, is, class55_24_, 0, 0, true);
@@ -121,8 +121,8 @@ public class Class30_Sub2_Sub1 extends Class30_Sub2 {
 		super.method410(bool && !((Class30_Sub2_Sub1) this).aBoolean9046);
 	}
 
-	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, Class55 class55, Class77 class77, int i, int i_30_, int i_31_, int i_32_) {
-		super(class_ra_sub2, 3553, class55, class77, i_31_, i_32_);
+	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_30_, int i_31_, int i_32_) {
+		super(class_ra_sub2, 3553, class55, textEncoder, i_31_, i_32_);
 		((Class30_Sub2_Sub1) this).anInt9048 = i;
 		((Class30_Sub2_Sub1) this).anInt9047 = i_30_;
 		((Class30_Sub2_Sub1) this).aFloat9051 = (float) i_30_ / (float) i_32_;
@@ -132,16 +132,16 @@ public class Class30_Sub2_Sub1 extends Class30_Sub2 {
 		method420(false, false);
 	}
 
-	static Class30_Sub2_Sub1 method428(Class_ra_Sub2 class_ra_sub2, Class55 class55, Class77 class77, int i, int i_33_, boolean bool, byte[] is, Class55 class55_34_) {
+	static Class30_Sub2_Sub1 method428(Class_ra_Sub2 class_ra_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_33_, boolean bool, byte[] is, Class55 class55_34_) {
 		if (((Class_ra_Sub2) class_ra_sub2).aBoolean8031 || (Class486.method6152(i, 2005734954) && Class486.method6152(i_33_, 1816892397)))
-			return new Class30_Sub2_Sub1(class_ra_sub2, 3553, class55, class77, i, i_33_, bool, is, class55_34_);
+			return new Class30_Sub2_Sub1(class_ra_sub2, 3553, class55, textEncoder, i, i_33_, bool, is, class55_34_);
 		if (((Class_ra_Sub2) class_ra_sub2).aBoolean8179)
-			return new Class30_Sub2_Sub1(class_ra_sub2, 34037, class55, class77, i, i_33_, bool, is, class55_34_);
-		return new Class30_Sub2_Sub1(class_ra_sub2, class55, class77, i, i_33_, Class416.method5590(i, (byte) 16), Class416.method5590(i_33_, (byte) 16), is, class55_34_);
+			return new Class30_Sub2_Sub1(class_ra_sub2, 34037, class55, textEncoder, i, i_33_, bool, is, class55_34_);
+		return new Class30_Sub2_Sub1(class_ra_sub2, class55, textEncoder, i, i_33_, Class416.method5590(i, (byte) 16), Class416.method5590(i_33_, (byte) 16), is, class55_34_);
 	}
 
-	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, Class77 class77, int i_35_, int i_36_) {
-		super(class_ra_sub2, i, class55, class77, i_35_, i_36_);
+	Class30_Sub2_Sub1(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, TextEncoder textEncoder, int i_35_, int i_36_) {
+		super(class_ra_sub2, i, class55, textEncoder, i_35_, i_36_);
 		((Class30_Sub2_Sub1) this).anInt9048 = i_35_;
 		((Class30_Sub2_Sub1) this).anInt9047 = i_36_;
 		if (((Class30_Sub2_Sub1) this).anInt372 == 34037) {

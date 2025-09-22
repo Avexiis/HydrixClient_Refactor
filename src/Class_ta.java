@@ -4,7 +4,7 @@ public abstract class Class_ta
   {
     try
     {
-      class403.anIntArray5244[((class403.anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.antialiasPreference.getValue(-26344378);
+      class403.anIntArray5244[((class403.anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.antialiasPreference.getValue(-26344378);
     }
     catch (RuntimeException runtimeexception)
     {

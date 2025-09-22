@@ -91,7 +91,7 @@ public class Class469 {
 				class_ra.drawFilledBox(i, i_5_, i_6_, i_7_, -16777216, 0);
 				class_ra.method5019(i_10_ - 152, i_11_, 304, 34, GameClient.aColorArray8701[745003679 * GameClient.anInt8971].getRGB(), 0);
 				class_ra.drawFilledBox(i_10_ - 150, i_11_ + 2, Class301_Sub1.anInt7624 * 426783931, 30, GameClient.aColorArray8689[745003679 * GameClient.anInt8971].getRGB(), 0);
-				Class101.aClass264_1084.method2490(LocalizedString.MESSAGE_LOADING_ELLIPSIS.getText(Class321.ACTIVE_LANGUAGE, -875414210), i_10_, i_11_ + i_9_, GameClient.aColorArray8691[GameClient.anInt8971 * 745003679].getRGB(), -1, -863370132);
+				Class101.aClass264_1084.method2490(LocalizedString.MESSAGE_LOADING_ELLIPSIS.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), i_10_, i_11_ + i_9_, GameClient.aColorArray8691[GameClient.anInt8971 * 745003679].getRGB(), -1, -863370132);
 			} else {
 				int i_12_ = (1196508279 * Class82_Sub14.anInt6875 - (int) (i_6_ / WorldMap.aFloat3233));
 				int i_13_ = (1882038855 * VarClanSettings.anInt4090 + (int) (i_7_ / WorldMap.aFloat3233));

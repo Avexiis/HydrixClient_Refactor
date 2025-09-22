@@ -138,9 +138,9 @@ public class Class239 {
 
 	static final void method2209(IComponentDefinition class105, ClientScript2 class403, byte i) {
 		try {
-			Class505 class505 = class105.method1113(Class497.aClass197_6105, GameClient.anInterface10_8700, (byte) -46);
+			GameFont gameFont = class105.method1113(Class497.aClass197_6105, GameClient.anInterface10_8700, (byte) -46);
 			int i_12_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			Point point = class505.method6263(class105.aString1212, class105.width * -2093041337, class105.anInt1191 * 418216501, i_12_, Class130_Sub2.aClass57Array6959, 946663112);
+			Point point = gameFont.method6263(class105.aString1212, class105.width * -2093041337, class105.anInt1191 * 418216501, i_12_, Class130_Sub2.aClass57Array6959, 946663112);
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = point.x;
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = point.y;
 		} catch (RuntimeException runtimeexception) {
@@ -150,7 +150,7 @@ public class Class239 {
 
 	public static Class297 method2210(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.aVolumePreference_7553.method5726(-2141800162) != 0 && i_13_ != 0 && Class300.anInt3213 * -991384187 < 50 && -1 != i) {
+			if (GraphicsSetup.clientPreferences.aVolumePreference_7553.method5726(-2141800162) != 0 && i_13_ != 0 && Class300.anInt3213 * -991384187 < 50 && -1 != i) {
 				Class297 class297 = new Class297((byte) 1, i, i_13_, i_14_, i_15_, 0, i_16_, null);
 				Class300.aClass297Array3214[(Class300.anInt3213 += -598588595) * -991384187 - 1] = class297;
 				return class297;

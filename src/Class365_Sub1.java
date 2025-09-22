@@ -129,7 +129,7 @@ public abstract class Class365_Sub1 extends Class365 {
 				int i_21_ = (int) (l >> (int) l_19_ & 0xffffL);
 				if (i_21_ <= 0)
 					break;
-				class298_sub10s[i_20_++] = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[i_21_ - 1].aClass298_Sub10_3337);
+				class298_sub10s[i_20_++] = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[i_21_ - 1].lightHandle);
 			}
 			for (int i_22_ = i_20_; i_22_ < 4; i_22_++)
 				class298_sub10s[i_22_] = null;
@@ -180,8 +180,8 @@ public abstract class Class365_Sub1 extends Class365 {
 
 	static void method4403(byte i) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -114) == 1)
-				overheadString.aClass248_612.method2385(new Class267(Class266.aClass266_2852, null), -1108671657);
+			if (GraphicsSetup.clientPreferences.aClass422_Sub21_7580.getValue((byte) -114) == 1)
+				OverheadString.aClass248_612.method2385(new Class267(Class266.aClass266_2852, null), -1108671657);
 			else {
 				GameClient.map.method2667(1601177628);
 				InputStream_Sub1.method273(-119452364);

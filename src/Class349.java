@@ -83,7 +83,7 @@ public class Class349 {
 
 	static final void method4204(ClientScript2 class403, byte i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aVolumePreference_7583,
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aVolumePreference_7583,
 					class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919], 951880368);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;

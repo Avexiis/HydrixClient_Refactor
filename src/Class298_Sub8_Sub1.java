@@ -30,9 +30,9 @@ public class Class298_Sub8_Sub1
     if ((this.aClass_ra_Sub2_7222.aBoolean8170) && (this.aClass_ra_Sub2_7222.aBoolean8093) && (this.aClass_ra_Sub2_7222.aBoolean8133))
     {
       this.aClass52_Sub1_Sub2_9179 = new Class52_Sub1_Sub2(this.aClass_ra_Sub2_7222);
-      this.aClass30_Sub2_9180 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, 256, 256);
+      this.aClass30_Sub2_9180 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, 256, 256);
       this.aClass30_Sub2_9180.method420(false, false);
-      this.aClass30_Sub2_9181 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, 256, 256);
+      this.aClass30_Sub2_9181 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, 256, 256);
       this.aClass30_Sub2_9181.method420(false, false);
       this.aClass_ra_Sub2_7222.method5143(this.aClass52_Sub1_Sub2_9179, (byte)112);
       this.aClass52_Sub1_Sub2_9179.method563(0, this.aClass30_Sub2_9180.method423(0));
@@ -53,9 +53,9 @@ public class Class298_Sub8_Sub1
     return false;
   }
   
-  Class77 method2887()
+  TextEncoder method2887()
   {
-    return Class77.aClass77_714;
+    return TextEncoder.aTextEncoder_714;
   }
   
   boolean method2868()
@@ -68,9 +68,9 @@ public class Class298_Sub8_Sub1
     return this.aClass52_Sub1_Sub2_9179 != null;
   }
   
-  Class77 method2888()
+  TextEncoder method2888()
   {
-    return Class77.aClass77_714;
+    return TextEncoder.aTextEncoder_714;
   }
   
   void method2870()
@@ -127,7 +127,7 @@ public class Class298_Sub8_Sub1
         i_6_ = 0;
         while ((i_4_ > 256) || (i_5_ > 256))
         {
-          this.aClass30_Sub2Array9190[(i_6_++)] = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, i_4_, i_5_);
+          this.aClass30_Sub2Array9190[(i_6_++)] = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, i_4_, i_5_);
           if (i_4_ > 256) {
             i_4_ >>= 1;
           }
@@ -153,9 +153,9 @@ public class Class298_Sub8_Sub1
     this.aClass_ra_Sub2_7222.method5255(0);
   }
   
-  Class77 method2875()
+  TextEncoder method2875()
   {
-    return Class77.aClass77_714;
+    return TextEncoder.aTextEncoder_714;
   }
   
   void method2883(int i, int i_7_)
@@ -197,7 +197,7 @@ public class Class298_Sub8_Sub1
         i_13_ = 0;
         while ((i_11_ > 256) || (i_12_ > 256))
         {
-          this.aClass30_Sub2Array9190[(i_13_++)] = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, i_11_, i_12_);
+          this.aClass30_Sub2Array9190[(i_13_++)] = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, i_11_, i_12_);
           if (i_11_ > 256) {
             i_11_ >>= 1;
           }
@@ -358,9 +358,9 @@ public class Class298_Sub8_Sub1
     if ((this.aClass_ra_Sub2_7222.aBoolean8170) && (this.aClass_ra_Sub2_7222.aBoolean8093) && (this.aClass_ra_Sub2_7222.aBoolean8133))
     {
       this.aClass52_Sub1_Sub2_9179 = new Class52_Sub1_Sub2(this.aClass_ra_Sub2_7222);
-      this.aClass30_Sub2_9180 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, 256, 256);
+      this.aClass30_Sub2_9180 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, 256, 256);
       this.aClass30_Sub2_9180.method420(false, false);
-      this.aClass30_Sub2_9181 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, 256, 256);
+      this.aClass30_Sub2_9181 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, 256, 256);
       this.aClass30_Sub2_9181.method420(false, false);
       this.aClass_ra_Sub2_7222.method5143(this.aClass52_Sub1_Sub2_9179, (byte)-80);
       this.aClass52_Sub1_Sub2_9179.method563(0, this.aClass30_Sub2_9180.method423(0));
@@ -693,9 +693,9 @@ public class Class298_Sub8_Sub1
     if ((this.aClass_ra_Sub2_7222.aBoolean8170) && (this.aClass_ra_Sub2_7222.aBoolean8093) && (this.aClass_ra_Sub2_7222.aBoolean8133))
     {
       this.aClass52_Sub1_Sub2_9179 = new Class52_Sub1_Sub2(this.aClass_ra_Sub2_7222);
-      this.aClass30_Sub2_9180 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, 256, 256);
+      this.aClass30_Sub2_9180 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, 256, 256);
       this.aClass30_Sub2_9180.method420(false, false);
-      this.aClass30_Sub2_9181 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, 256, 256);
+      this.aClass30_Sub2_9181 = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, 256, 256);
       this.aClass30_Sub2_9181.method420(false, false);
       this.aClass_ra_Sub2_7222.method5143(this.aClass52_Sub1_Sub2_9179, (byte)8);
       this.aClass52_Sub1_Sub2_9179.method563(0, this.aClass30_Sub2_9180.method423(0));
@@ -716,9 +716,9 @@ public class Class298_Sub8_Sub1
     return false;
   }
   
-  Class77 method2889()
+  TextEncoder method2889()
   {
-    return Class77.aClass77_714;
+    return TextEncoder.aTextEncoder_714;
   }
   
   Class298_Sub8_Sub1(Class_ra_Sub2 class_ra_sub2)
@@ -765,7 +765,7 @@ public class Class298_Sub8_Sub1
         i_44_ = 0;
         while ((i_42_ > 256) || (i_43_ > 256))
         {
-          this.aClass30_Sub2Array9190[(i_44_++)] = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, Class77.aClass77_714, i_42_, i_43_);
+          this.aClass30_Sub2Array9190[(i_44_++)] = new Class30_Sub2(this.aClass_ra_Sub2_7222, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, i_42_, i_43_);
           if (i_42_ > 256) {
             i_42_ >>= 1;
           }

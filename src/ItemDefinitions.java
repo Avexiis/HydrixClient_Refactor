@@ -1044,15 +1044,15 @@ public class ItemDefinitions {
 		try {
 			if (HashTable.aClass371_5520.anInt4035 * -1919698893 == -1)
 				return 1;
-			if (i != GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-2106508116)) {
-				Class371.method4584(i, (LocalizedString.MESSAGE_PROFILING_ALT.getText(Class321.ACTIVE_LANGUAGE, -875414210)), true, (byte) 53);
-				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1001808225) != i)
+			if (i != GraphicsSetup.clientPreferences.graphicsPreference.getValue(-2106508116)) {
+				Class371.method4584(i, (LocalizedString.MESSAGE_PROFILING_ALT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), true, (byte) 53);
+				if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1001808225) != i)
 					return -1;
 			}
 			int i_92_;
 			try {
 				Dimension dimension = Class52_Sub2_Sub1.aCanvas9079.getSize();
-				Class139.method1548(LocalizedString.MESSAGE_PROFILING_ALT.getText(Class321.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 5);
+				Class139.method1548(LocalizedString.MESSAGE_PROFILING_ALT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) 5);
 				Model class64 = Model.method751(WorldTile.js5_models, (-1919698893 * HashTable.aClass371_5520.anInt4035), 0);
 				long l = TimeUtils.getTime((byte) 1);
 				OverlayType.activeToolkit.L();

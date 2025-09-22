@@ -137,7 +137,7 @@ public class Class223 implements Interface24 {
 				Class_na.aClass491_9686.method6171((byte) 37);
 				Class500.aClass347_6117.method4177((short) 16742);
 				Class251.method2402((byte) -99);
-				Class8.method319(1407497429);
+				DevConsoleState.method319(1407497429);
 				Class497.aClass197_6105.method1880(575838917);
 				Js5ConfigGroup.method1309((byte) -57);
 				if (Class242.aReferenceTable_2708 != ReferenceTable.aReferenceTable_6557) {

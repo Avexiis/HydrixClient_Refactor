@@ -67,12 +67,12 @@ public class Class136 implements Interface6 {
 
 	public static void method1495(int i, int i_3_, int i_4_, int i_5_) {
 		try {
-			i_4_ = (i_4_ * GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2142096131) >> 8);
+			i_4_ = (i_4_ * GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2142096131) >> 8);
 			if (0 != i_4_ && i != -1) {
 				if (!Class300.aBoolean3208 && -1256171511 * Class300.anInt3207 != -1 && MagnetConfig.method781(87442639) && !Class82_Sub9.method899((byte) 9)) {
 					Class298_Sub2.aClass298_Sub19_Sub1_7167 = Class173.method1819(34386078);
 					Class368.method4555((short) 1644);
-					Class298_Sub19_Sub1 class298_sub19_sub1 = Class8.method318((Class298_Sub2.aClass298_Sub19_Sub1_7167), -1213425929);
+					Class298_Sub19_Sub1 class298_sub19_sub1 = DevConsoleState.method318((Class298_Sub2.aClass298_Sub19_Sub1_7167), -1213425929);
 					MagnetConfig.method777(true, class298_sub19_sub1, 1899476415);
 				}
 				Class477.method6096(Class463.aClass243_5688, i, 0, i_4_, false, -1993911100);
@@ -132,7 +132,7 @@ public class Class136 implements Interface6 {
 
 	public static final void method1499(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
 		try {
-			if (i >= Class372_Sub3.anInt4051 * -1424479739 && i_6_ <= Class372_Sub3.anInt4048 * 1135094847 && i_7_ >= 1155384281 * Class372_Sub3.anInt4049 && i_8_ <= Class372_Sub3.anInt4050 * -1062447355) {
+			if (i >= DevConsoleInit.anInt4051 * -1424479739 && i_6_ <= DevConsoleInit.anInt4048 * 1135094847 && i_7_ >= 1155384281 * DevConsoleInit.anInt4049 && i_8_ <= DevConsoleInit.anInt4050 * -1062447355) {
 				if (1 == i_10_)
 					Class365_Sub1_Sub5_Sub1.method4529(i, i_6_, i_7_, i_8_, i_9_, -616636288);
 				else
@@ -158,7 +158,7 @@ public class Class136 implements Interface6 {
 
 	static final void method1501(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = ItemDefinitions.method6043(GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1033655497), 200, -564822941);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = ItemDefinitions.method6043(GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1033655497), 200, -564822941);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fm.akd(").append(')').toString());
 		}

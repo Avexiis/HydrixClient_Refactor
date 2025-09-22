@@ -242,7 +242,7 @@ public class Class86 {
 				class298_sub36.buffer.writeInt(-1, -735665420);
 				GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte) -21);
 			} else {
-				i_28_ = i_28_ * GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2143915756) >> 8;
+				i_28_ = i_28_ * GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2143915756) >> 8;
 				if (i == -1 && !Class300.aBoolean3208)
 					Class134.method1489((byte) -85);
 				else if (-1 != i && (-1256171511 * Class300.anInt3207 != i || !MagnetConfig.method781(-861777344)) && i_28_ != 0 && !Class300.aBoolean3208) {

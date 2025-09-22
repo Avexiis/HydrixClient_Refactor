@@ -16,8 +16,8 @@ public class Class521 {
 	static final void method6322(ClientScript2 class403, byte i) {
 		try {
 			boolean bool = ((((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7564, bool ? 2 : 1, 437258176);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565, bool ? 2 : 1, -618485822);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7564, bool ? 2 : 1, 437258176);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7565, bool ? 2 : 1, -618485822);
 			Class475.method6075((short) -10564);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;

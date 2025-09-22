@@ -1,20 +1,20 @@
-/* Class505 - Decompiled by JODE
+/* GameFont - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.awt.Point;
 
-public class Class505 {
-	public int anInt6197;
+public class GameFont {
+	public int descent;
 	byte[][] aByteArrayArray6198;
 	byte[] aByteArray6199;
 	public int anInt6200;
 	static String[] aStringArray6201 = new String[100];
-	public int anInt6202;
+	public int ascent;
 
 	public int method6253(int i, char c, int i_0_) {
 		try {
-			if (((Class505) this).aByteArrayArray6198 != null)
-				return ((Class505) this).aByteArrayArray6198[i][c];
+			if (((GameFont) this).aByteArrayArray6198 != null)
+				return ((GameFont) this).aByteArrayArray6198[i][c];
 			return 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("uw.p(").append(')').toString());
@@ -67,9 +67,9 @@ public class Class505 {
 						}
 					}
 					if (-1 == i_1_) {
-						i_3_ += ((((Class505) this).aByteArray6199[Class124.method1387(c, 1088430238) & 0xff]) & 0xff);
-						if (((Class505) this).aByteArrayArray6198 != null && i_2_ != -1)
-							i_3_ += (((Class505) this).aByteArrayArray6198[i_2_][c]);
+						i_3_ += ((((GameFont) this).aByteArray6199[Class124.method1387(c, 1088430238) & 0xff]) & 0xff);
+						if (((GameFont) this).aByteArrayArray6198 != null && i_2_ != -1)
+							i_3_ += (((GameFont) this).aByteArrayArray6198[i_2_][c]);
 						i_2_ = c;
 					}
 				}
@@ -82,7 +82,7 @@ public class Class505 {
 
 	public int method6255(int i, int i_8_) {
 		try {
-			return ((Class505) this).aByteArray6199[i] & 0xff;
+			return ((GameFont) this).aByteArray6199[i] & 0xff;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("uw.i(").append(')').toString());
 		}
@@ -129,7 +129,7 @@ public class Class505 {
 									i_12_ += interface28s[i_17_].method271();
 									i_11_ = -1;
 									if (i_12_ > i)
-										return new StringBuilder().append(string_14_).append("...").toString();
+										return string_14_ + "...";
 									string_14_ = string.substring(0, i_15_ + 1);
 								} catch (Exception exception) {
 									/* empty */
@@ -139,15 +139,15 @@ public class Class505 {
 						}
 					}
 					if (i_10_ == -1) {
-						i_12_ += ((((Class505) this).aByteArray6199[Class124.method1387(c, 1088430238) & 0xff]) & 0xff);
-						if (((Class505) this).aByteArrayArray6198 != null && i_11_ != -1)
-							i_12_ += (((Class505) this).aByteArrayArray6198[i_11_][c]);
+						i_12_ += ((((GameFont) this).aByteArray6199[Class124.method1387(c, 1088430238) & 0xff]) & 0xff);
+						if (((GameFont) this).aByteArrayArray6198 != null && i_11_ != -1)
+							i_12_ += (((GameFont) this).aByteArrayArray6198[i_11_][c]);
 						i_11_ = c;
 						int i_18_ = i_12_;
-						if (((Class505) this).aByteArrayArray6198 != null)
-							i_18_ += (((Class505) this).aByteArrayArray6198[c][46]);
+						if (((GameFont) this).aByteArrayArray6198 != null)
+							i_18_ += (((GameFont) this).aByteArrayArray6198[c][46]);
 						if (i_18_ > i)
-							return new StringBuilder().append(string_14_).append("...").toString();
+							return string_14_ + "...";
 						string_14_ = string.substring(0, 1 + i_15_);
 					}
 				}
@@ -208,43 +208,43 @@ public class Class505 {
 						}
 						if (string_32_.equals("lt")) {
 							i_30_ += method6255(60, 1793318064);
-							if (null != ((Class505) this).aByteArrayArray6198 && i_25_ != -1)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][60]);
+							if (null != ((GameFont) this).aByteArrayArray6198 && i_25_ != -1)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][60]);
 							i_25_ = 60;
 						} else if (string_32_.equals("gt")) {
 							i_30_ += method6255(62, 2036265548);
-							if (null != ((Class505) this).aByteArrayArray6198 && i_25_ != -1)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][62]);
+							if (null != ((GameFont) this).aByteArrayArray6198 && i_25_ != -1)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][62]);
 							i_25_ = 62;
 						} else if (string_32_.equals("nbsp")) {
 							i_30_ += method6255(160, 1914153156);
-							if (null != ((Class505) this).aByteArrayArray6198 && -1 != i_25_)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][160]);
+							if (null != ((GameFont) this).aByteArrayArray6198 && -1 != i_25_)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][160]);
 							i_25_ = 160;
 						} else if (string_32_.equals("shy")) {
 							i_30_ += method6255(173, 1038686003);
-							if (((Class505) this).aByteArrayArray6198 != null && i_25_ != -1)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][173]);
+							if (((GameFont) this).aByteArrayArray6198 != null && i_25_ != -1)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][173]);
 							i_25_ = 173;
 						} else if (string_32_.equals("times")) {
 							i_30_ += method6255(215, 1326596861);
-							if (null != ((Class505) this).aByteArrayArray6198 && -1 != i_25_)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][215]);
+							if (null != ((GameFont) this).aByteArrayArray6198 && -1 != i_25_)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][215]);
 							i_25_ = 215;
 						} else if (string_32_.equals("euro")) {
 							i_30_ += method6255(8364, 1505492652);
-							if (((Class505) this).aByteArrayArray6198 != null && -1 != i_25_)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][8364]);
+							if (((GameFont) this).aByteArrayArray6198 != null && -1 != i_25_)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][8364]);
 							i_25_ = 8364;
 						} else if (string_32_.equals("copy")) {
 							i_30_ += method6255(169, 1424701879);
-							if (null != ((Class505) this).aByteArrayArray6198 && i_25_ != -1)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][169]);
+							if (null != ((GameFont) this).aByteArrayArray6198 && i_25_ != -1)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][169]);
 							i_25_ = 169;
 						} else if (string_32_.equals("reg")) {
 							i_30_ += method6255(174, 1748502620);
-							if (null != ((Class505) this).aByteArrayArray6198 && -1 != i_25_)
-								i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][174]);
+							if (null != ((GameFont) this).aByteArrayArray6198 && -1 != i_25_)
+								i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][174]);
 							i_25_ = 174;
 						} else if (string_32_.startsWith("img=") && null != interface28s) {
 							try {
@@ -259,8 +259,8 @@ public class Class505 {
 					} else {
 						i_31_ = i_28_;
 						i_30_ += method6255(i_29_, 1755594476);
-						if (((Class505) this).aByteArrayArray6198 != null && i_25_ != -1)
-							i_30_ += (((Class505) this).aByteArrayArray6198[i_25_][i_29_]);
+						if (((GameFont) this).aByteArrayArray6198 != null && i_25_ != -1)
+							i_30_ += (((GameFont) this).aByteArrayArray6198[i_25_][i_29_]);
 						i_25_ = i_29_;
 					}
 					if (i_30_ > 0) {
@@ -330,20 +330,20 @@ public class Class505 {
 				i_39_ = -2028004825 * anInt6200;
 			int i_41_ = method6257(string, new int[] { i }, aStringArray6201, interface28s, (byte) 11);
 			int i_42_ = (i_41_ - 1) * i_39_;
-			return i_42_ + anInt6202 * 1110385787 + -1883958527 * anInt6197;
+			return i_42_ + ascent * 1110385787 + -1883958527 * descent;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("uw.s(").append(')').toString());
 		}
 	}
 
-	Class505(byte[] is) {
+	GameFont(byte[] is) {
 		Packet class298_sub53 = new Packet(is);
 		int i = class298_sub53.readUnsignedByte();
 		if (0 != i)
 			throw new RuntimeException("");
 		boolean bool = class298_sub53.readUnsignedByte() == 1;
-		((Class505) this).aByteArray6199 = new byte[256];
-		class298_sub53.readBytes(((Class505) this).aByteArray6199, 0, 256, -953523806);
+		((GameFont) this).aByteArray6199 = new byte[256];
+		class298_sub53.readBytes(((GameFont) this).aByteArray6199, 0, 256, -953523806);
 		if (bool) {
 			int[] is_43_ = new int[256];
 			int[] is_44_ = new int[256];
@@ -369,12 +369,12 @@ public class Class505 {
 					is_51_[i_52_][i_54_] = i_53_;
 				}
 			}
-			((Class505) this).aByteArrayArray6198 = new byte[256][256];
+			((GameFont) this).aByteArrayArray6198 = new byte[256][256];
 			for (int i_55_ = 0; i_55_ < 256; i_55_++) {
 				if (i_55_ != 32) {
 					for (int i_56_ = 0; i_56_ < 256; i_56_++) {
 						if (i_56_ != 32)
-							((Class505) this).aByteArrayArray6198[i_55_][i_56_] = (byte) Class25.method392(is_47_, is_51_, is_44_, (((Class505) this).aByteArray6199), is_43_, i_55_, i_56_, -2019008168);
+							((GameFont) this).aByteArrayArray6198[i_55_][i_56_] = (byte) Class25.method392(is_47_, is_51_, is_44_, (((GameFont) this).aByteArray6199), is_43_, i_55_, i_56_, -2019008168);
 					}
 				}
 			}
@@ -383,8 +383,8 @@ public class Class505 {
 			anInt6200 = class298_sub53.readUnsignedByte() * 1673966999;
 		class298_sub53.readUnsignedByte();
 		class298_sub53.readUnsignedByte();
-		anInt6202 = class298_sub53.readUnsignedByte() * -93381965;
-		anInt6197 = class298_sub53.readUnsignedByte() * -2068583167;
+		ascent = class298_sub53.readUnsignedByte() * -93381965;
+		descent = class298_sub53.readUnsignedByte() * -2068583167;
 	}
 
 	public int method6261(String string, int i, int i_57_, int i_58_, int i_59_, Interface28[] interface28s, byte i_60_) {
@@ -428,7 +428,7 @@ public class Class505 {
 	public Point method6263(String string, int i, int i_68_, int i_69_, Interface28[] interface28s, int i_70_) {
 		try {
 			if (i_69_ <= 0)
-				return new Point(0, i_68_ + 1110385787 * anInt6202);
+				return new Point(0, i_68_ + 1110385787 * ascent);
 			if (i_69_ > string.length())
 				i_69_ = string.length();
 			if (0 == i_68_)
@@ -445,7 +445,7 @@ public class Class505 {
 						i_73_++;
 					}
 					int i_76_ = method6254(string_75_, interface28s, 1319235613);
-					int i_77_ = i_73_ * i_68_ + 1110385787 * anInt6202;
+					int i_77_ = i_73_ * i_68_ + 1110385787 * ascent;
 					return new Point(i_76_, i_77_);
 				}
 				i_72_ += i_74_;
@@ -497,7 +497,7 @@ public class Class505 {
 			if (bool_79_) {
 				try {
 					i_82_ = ItemDefinitions.method6043(3, 1000, -2071277019);
-					if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-491668376) == 3) {
+					if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-491668376) == 3) {
 						Class58 class58 = OverlayType.activeToolkit.method4987();
 						long l = (class58.aLong583 * 703334160035735425L & 0xffffffffffffL);
 						switch (class58.anInt574 * 267107087) {

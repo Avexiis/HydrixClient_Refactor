@@ -139,7 +139,7 @@ public class Class326
     try
     {
       int i_22_ = class403.anIntArray5244[((class403.anInt5239 -= -391880689) * 681479919)];
-      class403.anIntArray5244[((class403.anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.waterDetailPreference.method5612(i_22_, 1352882135);
+      class403.anIntArray5244[((class403.anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.waterDetailPreference.method5612(i_22_, 1352882135);
     }
     catch (RuntimeException runtimeexception)
     {
@@ -185,7 +185,7 @@ public class Class326
       class298_sub36.buffer.writeByte(MagnetDefinitions.method1859((byte)-123));
       class298_sub36.buffer.writeShort(Class462.canvasWidth * -2110394505, 16711935);
       class298_sub36.buffer.writeShort(Class298_Sub40_Sub9.anInt9716 * -1111710645, 16711935);
-      class298_sub36.buffer.writeByte(GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550.getValue(-196354448));
+      class298_sub36.buffer.writeByte(GraphicsSetup.clientPreferences.aAntialiasPreference_7550.getValue(-196354448));
       GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte)-93);
     }
     catch (RuntimeException runtimeexception)

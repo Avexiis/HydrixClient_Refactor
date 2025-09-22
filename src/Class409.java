@@ -85,7 +85,7 @@ public class Class409 {
 
 	static final void method4975(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-192114923);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-192114923);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qz.aje(").append(')').toString());
 		}
@@ -118,7 +118,7 @@ public class Class409 {
 
 	static final void method4977(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), 417121289);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aMapSizePreference_7558, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), 417121289);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {
@@ -142,7 +142,7 @@ public class Class409 {
 		try {
 			boolean bool = ((((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) != 0);
 			int i_11_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = Class300.method3685((long) i_11_, 0, bool, Class321.ACTIVE_LANGUAGE, (short) 25477);
+			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = Class300.method3685((long) i_11_, 0, bool, DynamicLight.ACTIVE_LANGUAGE, (short) 25477);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qz.aac(").append(')').toString());
 		}

@@ -71,7 +71,7 @@ public class Class31 {
 					i_2_ += (((Class44) ((Class31) this).aClass44_387).anInt469 - 128);
 				}
 				if (((Class31) this).aClass30_Sub2_394 == null) {
-					((Class31) this).aClass30_Sub2_394 = new Class30_Sub2(((Class31) this).aClass_ra_Sub2_386, 3553, Class55.aClass55_567, Class77.aClass77_717, 128, 128, false, (((Class_ra_Sub2) (((Class31) this).aClass_ra_Sub2_386)).aByteArray8201), Class55.aClass55_567, false);
+					((Class31) this).aClass30_Sub2_394 = new Class30_Sub2(((Class31) this).aClass_ra_Sub2_386, 3553, Class55.aClass55_567, TextEncoder.aTextEncoder_717, 128, 128, false, (((Class_ra_Sub2) (((Class31) this).aClass_ra_Sub2_386)).aByteArray8201), Class55.aClass55_567, false);
 					((Class31) this).aClass30_Sub2_394.method420(false, false);
 					((Class31) this).aClass30_Sub2_394.method410(true);
 				} else

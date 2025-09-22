@@ -1,12 +1,12 @@
-/* Class365_Sub1_Sub3_Sub1 - Decompiled by JODE
+/* SceneObject - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Interface3 {
+public class SceneObject extends Class365_Sub1_Sub3 implements Interface3 {
 	boolean aBoolean9903 = true;
 	boolean aBoolean9904;
-	Class334 aClass334_9905;
-	public Class60 aClass60_9906;
+	Class334 bounds3D;
+	public Class60 pickBounds;
 
 	public void method34() {
 		/* empty */
@@ -14,7 +14,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	boolean method4376(short i) {
 		try {
-			return ((Class365_Sub1_Sub3_Sub1) this).aBoolean9903;
+			return ((SceneObject) this).aBoolean9903;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.be(").append(')').toString());
 		}
@@ -22,7 +22,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public Class334 method4358(GraphicsToolkit class_ra, byte i) {
 		try {
-			return ((Class365_Sub1_Sub3_Sub1) this).aClass334_9905;
+			return ((SceneObject) this).bounds3D;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.bc(").append(')').toString());
 		}
@@ -30,7 +30,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public int method4361(int i) {
 		try {
-			return aClass60_9906.method705(128726833);
+			return pickBounds.method705(128726833);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.bm(").append(')').toString());
 		}
@@ -38,7 +38,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public int method4363(byte i) {
 		try {
-			return aClass60_9906.method699(2145016917);
+			return pickBounds.method699(2145016917);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.bx(").append(')').toString());
 		}
@@ -46,25 +46,25 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public void method4504(Class435 class435, byte i) {
 		try {
-			aClass60_9906.method698(class435, -1138005946);
+			pickBounds.method698(class435, -1138005946);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.by(").append(')').toString());
 		}
 	}
 
 	boolean method4351() {
-		return ((Class365_Sub1_Sub3_Sub1) this).aBoolean9903;
+		return ((SceneObject) this).aBoolean9903;
 	}
 
 	void method4357(GraphicsToolkit class_ra, int i) {
 		try {
-			ModelPart modelPart = aClass60_9906.method700(class_ra, 262144, false, true, (byte) 75);
+			ModelPart modelPart = pickBounds.method700(class_ra, 262144, false, true, (byte) 75);
 			if (null != modelPart) {
 				Matrix43f class222 = method4347();
 				Class235 class235 = method4337();
 				int i_0_ = (int) class235.aSceneObjectPosition_2599.x >> 9;
 				int i_1_ = (int) class235.aSceneObjectPosition_2599.z >> 9;
-				aClass60_9906.method701(class_ra, modelPart, class222, i_0_, i_0_, i_1_, i_1_, false, 1852542070);
+				pickBounds.method701(class_ra, modelPart, class222, i_0_, i_0_, i_1_, i_1_, false, 1852542070);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.bb(").append(')').toString());
@@ -73,7 +73,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	boolean method4350(GraphicsToolkit class_ra, int i, int i_2_, byte i_3_) {
 		try {
-			ModelPart modelPart = aClass60_9906.method700(class_ra, 131072, false, false, (byte) 63);
+			ModelPart modelPart = pickBounds.method700(class_ra, 131072, false, false, (byte) 63);
 			if (null == modelPart)
 				return false;
 			return modelPart.method4787(i, i_2_, method4347(), false, 0);
@@ -84,7 +84,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public int method32(byte i) {
 		try {
-			return 1686561661 * ((Class60) aClass60_9906).anInt601;
+			return 1686561661 * ((Class60) pickBounds).anInt601;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.a(").append(')').toString());
 		}
@@ -92,7 +92,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public int method29(int i) {
 		try {
-			return ((Class60) aClass60_9906).anInt589 * -1598457753;
+			return ((Class60) pickBounds).anInt589 * -1598457753;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.f(").append(')').toString());
 		}
@@ -100,7 +100,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public int method30(short i) {
 		try {
-			return 748228569 * ((Class60) aClass60_9906).anInt590;
+			return 748228569 * ((Class60) pickBounds).anInt590;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.b(").append(')').toString());
 		}
@@ -116,7 +116,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public boolean method39(int i) {
 		try {
-			return aClass60_9906.method706(-1796811837);
+			return pickBounds.method706(-1796811837);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.i(").append(')').toString());
 		}
@@ -128,7 +128,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public void method37(GraphicsToolkit class_ra, int i) {
 		try {
-			aClass60_9906.method707(class_ra, -475225909);
+			pickBounds.method707(class_ra, -475225909);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.d(").append(')').toString());
 		}
@@ -136,30 +136,30 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 
 	public void method33(GraphicsToolkit class_ra, int i) {
 		try {
-			aClass60_9906.method702(class_ra, 174352681);
+			pickBounds.method702(class_ra, 174352681);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.k(").append(')').toString());
 		}
 	}
 
 	public int method36() {
-		return ((Class60) aClass60_9906).anInt589 * -1598457753;
+		return ((Class60) pickBounds).anInt589 * -1598457753;
 	}
 
 	boolean method4383() {
-		return ((Class365_Sub1_Sub3_Sub1) this).aBoolean9903;
+		return ((SceneObject) this).aBoolean9903;
 	}
 
 	public int method42() {
-		return 748228569 * ((Class60) aClass60_9906).anInt590;
+		return 748228569 * ((Class60) pickBounds).anInt590;
 	}
 
 	public int method38() {
-		return 748228569 * ((Class60) aClass60_9906).anInt590;
+		return 748228569 * ((Class60) pickBounds).anInt590;
 	}
 
 	boolean method4349() {
-		return ((Class365_Sub1_Sub3_Sub1) this).aBoolean9903;
+		return ((SceneObject) this).aBoolean9903;
 	}
 
 	boolean method4399(byte i) {
@@ -171,40 +171,40 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 	}
 
 	Class335 method4370(GraphicsToolkit class_ra) {
-		ModelPart modelPart = aClass60_9906.method700(class_ra, 2048, false, true, (byte) -76);
+		ModelPart modelPart = pickBounds.method700(class_ra, 2048, false, true, (byte) -76);
 		if (modelPart == null)
 			return null;
 		Matrix43f class222 = class_ra.method5178();
 		class222.method2070(method4347());
 		class222.method2064((float) aShort9802, 0.0F, (float) aShort9803);
 		Class235 class235 = method4337();
-		Class335 class335 = Class73.method818(((Class365_Sub1_Sub3_Sub1) this).aBoolean9904, 1290253643);
+		Class335 class335 = Class73.method818(((SceneObject) this).aBoolean9904, 1290253643);
 		int i = (int) class235.aSceneObjectPosition_2599.x >> 9;
 		int i_4_ = (int) class235.aSceneObjectPosition_2599.z >> 9;
-		aClass60_9906.method701(class_ra, modelPart, class222, i, i, i_4_, i_4_, true, 1549011469);
+		pickBounds.method701(class_ra, modelPart, class222, i, i, i_4_, i_4_, true, 1549011469);
 		modelPart.method4739(class222, aClass302_Sub1Array7726[0], 0);
-		if (null != ((Class60) aClass60_9906).aClickableGeometry_602) {
-			Class69 class69 = ((Class60) aClass60_9906).aClickableGeometry_602.method4229();
+		if (null != ((Class60) pickBounds).aClickableGeometry_602) {
+			Class69 class69 = ((Class60) pickBounds).aClickableGeometry_602.method4229();
 			class_ra.method5042(class69);
 		}
-		((Class365_Sub1_Sub3_Sub1) this).aBoolean9903 = modelPart.i() || null != ((Class60) aClass60_9906).aClickableGeometry_602;
-		if (null == ((Class365_Sub1_Sub3_Sub1) this).aClass334_9905)
-			((Class365_Sub1_Sub3_Sub1) this).aClass334_9905 = Class472.method6063((int) class235.aSceneObjectPosition_2599.x, (int) class235.aSceneObjectPosition_2599.y, (int) class235.aSceneObjectPosition_2599.z, modelPart, 1999311873);
+		((SceneObject) this).aBoolean9903 = modelPart.i() || null != ((Class60) pickBounds).aClickableGeometry_602;
+		if (null == ((SceneObject) this).bounds3D)
+			((SceneObject) this).bounds3D = Class472.method6063((int) class235.aSceneObjectPosition_2599.x, (int) class235.aSceneObjectPosition_2599.y, (int) class235.aSceneObjectPosition_2599.z, modelPart, 1999311873);
 		else
-			Class264_Sub2.method2507((((Class365_Sub1_Sub3_Sub1) this).aClass334_9905), (int) class235.aSceneObjectPosition_2599.x, (int) class235.aSceneObjectPosition_2599.y, (int) class235.aSceneObjectPosition_2599.z, modelPart, (byte) 74);
+			Class264_Sub2.method2507((((SceneObject) this).bounds3D), (int) class235.aSceneObjectPosition_2599.x, (int) class235.aSceneObjectPosition_2599.y, (int) class235.aSceneObjectPosition_2599.z, modelPart, (byte) 74);
 		return class335;
 	}
 
 	public void method43(GraphicsToolkit class_ra) {
-		aClass60_9906.method707(class_ra, -475225909);
+		pickBounds.method707(class_ra, -475225909);
 	}
 
 	public void method44(GraphicsToolkit class_ra) {
-		aClass60_9906.method707(class_ra, -475225909);
+		pickBounds.method707(class_ra, -475225909);
 	}
 
 	public void method40(GraphicsToolkit class_ra) {
-		aClass60_9906.method707(class_ra, -475225909);
+		pickBounds.method707(class_ra, -475225909);
 	}
 
 	boolean method4353() {
@@ -212,7 +212,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 	}
 
 	boolean method4369() {
-		return ((Class365_Sub1_Sub3_Sub1) this).aBoolean9903;
+		return ((SceneObject) this).aBoolean9903;
 	}
 
 	boolean method4374() {
@@ -220,62 +220,62 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 	}
 
 	void method4371(GraphicsToolkit class_ra) {
-		ModelPart modelPart = aClass60_9906.method700(class_ra, 262144, false, true, (byte) 34);
+		ModelPart modelPart = pickBounds.method700(class_ra, 262144, false, true, (byte) 34);
 		if (null != modelPart) {
 			Matrix43f class222 = method4347();
 			Class235 class235 = method4337();
 			int i = (int) class235.aSceneObjectPosition_2599.x >> 9;
 			int i_5_ = (int) class235.aSceneObjectPosition_2599.z >> 9;
-			aClass60_9906.method701(class_ra, modelPart, class222, i, i, i_5_, i_5_, false, 22822212);
+			pickBounds.method701(class_ra, modelPart, class222, i, i, i_5_, i_5_, false, 22822212);
 		}
 	}
 
 	public int method35() {
-		return ((Class60) aClass60_9906).anInt589 * -1598457753;
+		return ((Class60) pickBounds).anInt589 * -1598457753;
 	}
 
 	public int method4505() {
-		return aClass60_9906.method699(2068020131);
+		return pickBounds.method699(2068020131);
 	}
 
 	public int method4506() {
-		return aClass60_9906.method699(2094377016);
+		return pickBounds.method699(2094377016);
 	}
 
 	void method4373(GraphicsToolkit class_ra) {
-		ModelPart modelPart = aClass60_9906.method700(class_ra, 262144, false, true, (byte) 16);
+		ModelPart modelPart = pickBounds.method700(class_ra, 262144, false, true, (byte) 16);
 		if (null != modelPart) {
 			Matrix43f class222 = method4347();
 			Class235 class235 = method4337();
 			int i = (int) class235.aSceneObjectPosition_2599.x >> 9;
 			int i_6_ = (int) class235.aSceneObjectPosition_2599.z >> 9;
-			aClass60_9906.method701(class_ra, modelPart, class222, i, i, i_6_, i_6_, false, 386620711);
+			pickBounds.method701(class_ra, modelPart, class222, i, i, i_6_, i_6_, false, 386620711);
 		}
 	}
 
 	Class335 method4394(GraphicsToolkit class_ra, int i) {
 		try {
-			ModelPart modelPart = aClass60_9906.method700(class_ra, 2048, false, true, (byte) -55);
+			ModelPart modelPart = pickBounds.method700(class_ra, 2048, false, true, (byte) -55);
 			if (modelPart == null)
 				return null;
 			Matrix43f class222 = class_ra.method5178();
 			class222.method2070(method4347());
 			class222.method2064((float) aShort9802, 0.0F, (float) aShort9803);
 			Class235 class235 = method4337();
-			Class335 class335 = Class73.method818((((Class365_Sub1_Sub3_Sub1) this).aBoolean9904), 1881845078);
+			Class335 class335 = Class73.method818((((SceneObject) this).aBoolean9904), 1881845078);
 			int i_7_ = (int) class235.aSceneObjectPosition_2599.x >> 9;
 			int i_8_ = (int) class235.aSceneObjectPosition_2599.z >> 9;
-			aClass60_9906.method701(class_ra, modelPart, class222, i_7_, i_7_, i_8_, i_8_, true, -43742513);
+			pickBounds.method701(class_ra, modelPart, class222, i_7_, i_7_, i_8_, i_8_, true, -43742513);
 			modelPart.method4739(class222, aClass302_Sub1Array7726[0], 0);
-			if (null != ((Class60) aClass60_9906).aClickableGeometry_602) {
-				Class69 class69 = ((Class60) aClass60_9906).aClickableGeometry_602.method4229();
+			if (null != ((Class60) pickBounds).aClickableGeometry_602) {
+				Class69 class69 = ((Class60) pickBounds).aClickableGeometry_602.method4229();
 				class_ra.method5042(class69);
 			}
-			((Class365_Sub1_Sub3_Sub1) this).aBoolean9903 = (modelPart.i() || null != ((Class60) aClass60_9906).aClickableGeometry_602);
-			if (null == ((Class365_Sub1_Sub3_Sub1) this).aClass334_9905)
-				((Class365_Sub1_Sub3_Sub1) this).aClass334_9905 = Class472.method6063((int) (class235.aSceneObjectPosition_2599.x), (int) (class235.aSceneObjectPosition_2599.y), (int) (class235.aSceneObjectPosition_2599.z), modelPart, 2072413227);
+			((SceneObject) this).aBoolean9903 = (modelPart.i() || null != ((Class60) pickBounds).aClickableGeometry_602);
+			if (null == ((SceneObject) this).bounds3D)
+				((SceneObject) this).bounds3D = Class472.method6063((int) (class235.aSceneObjectPosition_2599.x), (int) (class235.aSceneObjectPosition_2599.y), (int) (class235.aSceneObjectPosition_2599.z), modelPart, 2072413227);
 			else
-				Class264_Sub2.method2507(((Class365_Sub1_Sub3_Sub1) this).aClass334_9905, (int) class235.aSceneObjectPosition_2599.x, (int) class235.aSceneObjectPosition_2599.y, (int) class235.aSceneObjectPosition_2599.z, modelPart, (byte) 84);
+				Class264_Sub2.method2507(((SceneObject) this).bounds3D, (int) class235.aSceneObjectPosition_2599.x, (int) class235.aSceneObjectPosition_2599.y, (int) class235.aSceneObjectPosition_2599.z, modelPart, (byte) 84);
 			return class335;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.bo(").append(')').toString());
@@ -283,67 +283,67 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 	}
 
 	public Class334 method4368(GraphicsToolkit class_ra) {
-		return ((Class365_Sub1_Sub3_Sub1) this).aClass334_9905;
+		return ((SceneObject) this).bounds3D;
 	}
 
 	boolean method4372(GraphicsToolkit class_ra, int i, int i_9_) {
-		ModelPart modelPart = aClass60_9906.method700(class_ra, 131072, false, false, (byte) 4);
+		ModelPart modelPart = pickBounds.method700(class_ra, 131072, false, false, (byte) 4);
 		if (null == modelPart)
 			return false;
 		return modelPart.method4787(i, i_9_, method4347(), false, 0);
 	}
 
 	public void method28(GraphicsToolkit class_ra) {
-		aClass60_9906.method702(class_ra, 2051751369);
+		pickBounds.method702(class_ra, 2051751369);
 	}
 
 	boolean method4352(GraphicsToolkit class_ra, int i, int i_10_) {
-		ModelPart modelPart = aClass60_9906.method700(class_ra, 131072, false, false, (byte) -39);
+		ModelPart modelPart = pickBounds.method700(class_ra, 131072, false, false, (byte) -39);
 		if (null == modelPart)
 			return false;
 		return modelPart.method4787(i, i_10_, method4347(), false, 0);
 	}
 
 	public int method4379() {
-		return aClass60_9906.method705(1794626017);
+		return pickBounds.method705(1794626017);
 	}
 
 	public int method4380() {
-		return aClass60_9906.method705(-1950259661);
+		return pickBounds.method705(-1950259661);
 	}
 
 	public int method4381() {
-		return aClass60_9906.method705(-398878374);
+		return pickBounds.method705(-398878374);
 	}
 
-	public Class365_Sub1_Sub3_Sub1(SceneGraph sceneGraph, GraphicsToolkit class_ra, ObjectTypeList class433, LocType class432, int i, int i_11_, int i_12_, int i_13_, int i_14_, boolean bool, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_) {
+	public SceneObject(SceneGraph sceneGraph, GraphicsToolkit class_ra, ObjectTypeList class433, LocType class432, int i, int i_11_, int i_12_, int i_13_, int i_14_, boolean bool, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_) {
 		super(sceneGraph, i_12_, i_13_, i_14_, i, i_11_, i_15_, i_16_);
-		aClass60_9906 = new Class60(class_ra, class433, class432, i_17_, i_18_, plane, i_11_, this, bool, i_19_);
-		((Class365_Sub1_Sub3_Sub1) this).aBoolean9904 = 1532834983 * class432.anInt5382 != 0 && !bool;
+		pickBounds = new Class60(class_ra, class433, class432, i_17_, i_18_, plane, i_11_, this, bool, i_19_);
+		((SceneObject) this).aBoolean9904 = 1532834983 * class432.anInt5382 != 0 && !bool;
 		method4362(1, -659392218);
 	}
 
 	boolean method4382() {
-		return ((Class365_Sub1_Sub3_Sub1) this).aBoolean9903;
+		return ((SceneObject) this).aBoolean9903;
 	}
 
 	public int method45() {
-		return 1686561661 * ((Class60) aClass60_9906).anInt601;
+		return 1686561661 * ((Class60) pickBounds).anInt601;
 	}
 
 	public boolean method41() {
-		return aClass60_9906.method706(1916662090);
+		return pickBounds.method706(1916662090);
 	}
 
 	boolean method4385(GraphicsToolkit class_ra, int i, int i_20_) {
-		ModelPart modelPart = aClass60_9906.method700(class_ra, 131072, false, false, (byte) -72);
+		ModelPart modelPart = pickBounds.method700(class_ra, 131072, false, false, (byte) -72);
 		if (null == modelPart)
 			return false;
 		return modelPart.method4787(i, i_20_, method4347(), false, 0);
 	}
 
 	public Class334 method4367(GraphicsToolkit class_ra) {
-		return ((Class365_Sub1_Sub3_Sub1) this).aClass334_9905;
+		return ((SceneObject) this).bounds3D;
 	}
 
 	public static void method4507(long[] ls, Object[] objects, byte i) {
@@ -354,7 +354,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 		}
 	}
 
-	public static String[] method4508(String string, char c, int i) {
+	public static String[] splitText(String string, char c, int i) {
 		try {
 			int i_21_ = ConfigDefinitionLoader.method3831(string, c, -452041917);
 			String[] strings = new String[1 + i_21_];
@@ -371,7 +371,7 @@ public class Class365_Sub1_Sub3_Sub1 extends Class365_Sub1_Sub3 implements Inter
 			strings[i_21_] = string.substring(i_23_);
 			return strings;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wl.h(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "wl.h(" + ')');
 		}
 	}
 

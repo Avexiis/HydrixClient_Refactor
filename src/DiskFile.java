@@ -9,72 +9,72 @@ import java.io.RandomAccessFile;
 
 public final class DiskFile {
 	long aLong5983;
-	RandomAccessFile aRandomAccessFile5984;
+	RandomAccessFile randomAccessFile;
 	long aLong5985;
 	static LinkedNodeList aLinkedNodeList_5986;
 
 	final void method6077(long l) throws IOException {
 		try {
-			aRandomAccessFile5984.seek(l);
+			randomAccessFile.seek(l);
 			aLong5985 = 5892097441890682535L * l;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.a(" + ')');
 		}
 	}
 
 	public final void write(byte[] is, int i, int i_0_) throws IOException {
 		try {
 			if (-1855833292870549225L * aLong5985 + i_0_ > aLong5983 * -1095537870969537929L) {
-				aRandomAccessFile5984.seek(-1095537870969537929L * aLong5983);
-				aRandomAccessFile5984.write(1);
+				randomAccessFile.seek(-1095537870969537929L * aLong5983);
+				randomAccessFile.write(1);
 				throw new EOFException();
 			}
-			aRandomAccessFile5984.write(is, i, i_0_);
+			randomAccessFile.write(is, i, i_0_);
 			aLong5985 += 5892097441890682535L * i_0_;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.f(" + ')');
 		}
 	}
 
 	public final void close() throws IOException {
 		try {
-			if (null != aRandomAccessFile5984) {
-				aRandomAccessFile5984.close();
-				aRandomAccessFile5984 = null;
+			if (null != randomAccessFile) {
+				randomAccessFile.close();
+				randomAccessFile = null;
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.b(" + ')');
 		}
 	}
 
 	public final long method6080(int i) throws IOException {
 		try {
-			return aRandomAccessFile5984.length();
+			return randomAccessFile.length();
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.p(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.p(" + ')');
 		}
 	}
 
 	public final int method6081(byte[] is, int i, int i_2_, short i_3_) throws IOException {
 		try {
-			int i_4_ = aRandomAccessFile5984.read(is, i, i_2_);
+			int i_4_ = randomAccessFile.read(is, i, i_2_);
 			if (i_4_ > 0) {
 				aLong5985 += i_4_ * 5892097441890682535L;
 			}
 			return i_4_;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.i(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.i(" + ')');
 		}
 	}
 
 	@Override
 	protected void finalize() throws Throwable {
 		try {
-			if (null != aRandomAccessFile5984) {
+			if (null != randomAccessFile) {
 				close();
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tp.finalize(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tp.finalize(" + ')');
 		}
 	}
 
@@ -86,15 +86,15 @@ public final class DiskFile {
 			System.out.println("Error!" + file.getName() + " is corrupted. Deleting.");
 			file.delete();
 		}
-		aRandomAccessFile5984 = new RandomAccessFile(file, string);
+		randomAccessFile = new RandomAccessFile(file, string);
 		aLong5983 = l * 1728399846774964039L;
 		aLong5985 = 0L;
-		int i = aRandomAccessFile5984.read();
+		int i = randomAccessFile.read();
 		if (-1 != i && !string.equals("r")) {
-			aRandomAccessFile5984.seek(0L);
-			aRandomAccessFile5984.write(i);
+			randomAccessFile.seek(0L);
+			randomAccessFile.write(i);
 		}
-		aRandomAccessFile5984.seek(0L);
+		randomAccessFile.seek(0L);
 	}
 
 	static final void method6082(ClientScript2 class403, byte i) {
@@ -105,11 +105,11 @@ public final class DiskFile {
 		}
 	}
 
-	static final void method6083(int plane, int i_5_, int i_6_, int i_7_) {
+	static final void printCoordinates(int plane, int x, int y) {
 		try {
-			String string = "tele " + plane + Symbol.COMMA + (i_5_ >> 6) + Symbol.COMMA + (i_6_ >> 6) + Symbol.COMMA + (i_5_ & 0x3f) + Symbol.COMMA + (i_6_ & 0x3f);
+			String string = "tele " + plane + Symbol.COMMA + (x >> 6) + Symbol.COMMA + (y >> 6) + Symbol.COMMA + (x & 0x3f) + Symbol.COMMA + (y & 0x3f);
 			//System.out.println(string);
-			ConsoleCommands.method5605(string, true, false, 1405738364);
+			ConsoleCommands.clientCommands(string, true, false, 1405738364);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "tp.gd(" + ')');
 		}

@@ -59,7 +59,7 @@ public class SceneGraph {
 	int anInt3555 = 65391;
 	int anInt3556;
 	Class365_Sub1[] aClass365_Sub1Array3557;
-	Class321[] aClass321Array3558;
+	DynamicLight[] aDynamicLightArray3558;
 	boolean[] aBooleanArray3559;
 	int anInt3560;
 	boolean[][] aBooleanArrayArray3561;
@@ -500,7 +500,7 @@ public class SceneGraph {
 		}
 		if (bool_73_) {
 			((SceneGraph) this).aLongArrayArrayArray3554 = new long[i_69_][i_70_][i_71_];
-			((SceneGraph) this).aClass321Array3558 = new Class321[65391];
+			((SceneGraph) this).aDynamicLightArray3558 = new DynamicLight[65391];
 			((SceneGraph) this).aBooleanArray3559 = new boolean[65391];
 			((SceneGraph) this).anInt3556 = 0;
 		}
@@ -887,11 +887,11 @@ public class SceneGraph {
 		}
 		if (((SceneGraph) this).aBoolean3510) {
 			for (int i_153_ = 0; i_153_ < ((SceneGraph) this).anInt3556 * -2060364501; i_153_++)
-				((SceneGraph) this).aClass321Array3558[i_153_].method3918(i, bool, (byte) 1);
+				((SceneGraph) this).aDynamicLightArray3558[i_153_].updateIntensity(i, bool, (byte) 1);
 		}
 		if (aClass326ArrayArrayArray3520 != null) {
 			method4052(true, -740850409);
-			((SceneGraph) this).aClass_ra3508.method5057(-1, new Class78(1583160, 40, 127, 63, 0, 0, 0));
+			((SceneGraph) this).aClass_ra3508.method5057(-1, new DisplayMode(1583160, 40, 127, 63, 0, 0, 0));
 			method4041(true, is, i_132_, i_133_, i_137_);
 			((SceneGraph) this).aClass_ra3508.O();
 			method4052(false, -740850409);
@@ -1118,14 +1118,14 @@ public class SceneGraph {
 				i = (int) sceneObjectPosition.x >> anInt3504 * -1688804109;
 				i_195_ = (int) sceneObjectPosition.z >> anInt3504 * -1688804109;
 			}
-			Class78 class78 = new Class78();
-			class78.anInt726 = method4015(i, i_195_, (byte) 76) * 614121861;
-			class78.anInt725 = method4014(i, i_195_, (byte) -5) * -885436027;
-			class78.anInt727 = method4016(i, i_195_, (byte) 11) * 399458545;
-			class78.anInt729 = method4017(i, i_195_, (byte) 27) * 1507836083;
-			class78.anInt730 = method4060(i, i_195_, -1020454437) * -1927451111;
-			class78.anInt732 = method4018(i, i_195_, -1965414520) * -875460563;
-			((SceneGraph) this).aClass_ra3508.method5058(aGroundArray3519[0].method6340((int) sceneObjectPosition.x, (int) sceneObjectPosition.z, -1986155301), class78);
+			DisplayMode displayMode = new DisplayMode();
+			displayMode.anInt726 = method4015(i, i_195_, (byte) 76) * 614121861;
+			displayMode.anInt725 = method4014(i, i_195_, (byte) -5) * -885436027;
+			displayMode.anInt727 = method4016(i, i_195_, (byte) 11) * 399458545;
+			displayMode.anInt729 = method4017(i, i_195_, (byte) 27) * 1507836083;
+			displayMode.anInt730 = method4060(i, i_195_, -1020454437) * -1927451111;
+			displayMode.anInt732 = method4018(i, i_195_, -1965414520) * -875460563;
+			((SceneGraph) this).aClass_ra3508.method5058(aGroundArray3519[0].method6340((int) sceneObjectPosition.x, (int) sceneObjectPosition.z, -1986155301), displayMode);
 		}
 		Class335 class335 = class365_sub1.method4394(((SceneGraph) this).aClass_ra3508, -461368503);
 		if (null != class335) {
@@ -1196,9 +1196,9 @@ public class SceneGraph {
 		try {
 			for (int i_214_ = 0; i_214_ < -2060364501 * ((SceneGraph) this).anInt3556; i_214_++) {
 				if (!((SceneGraph) this).aBooleanArray3559[i_214_]) {
-					Class321 class321 = ((SceneGraph) this).aClass321Array3558[i_214_];
-					Class298_Sub10 class298_sub10 = class321.aClass298_Sub10_3337;
-					int i_215_ = class321.anInt3345 * -1565952249;
+					DynamicLight dynamicLight = ((SceneGraph) this).aDynamicLightArray3558[i_214_];
+					Class298_Sub10 class298_sub10 = dynamicLight.lightHandle;
+					int i_215_ = dynamicLight.amplitude * -1565952249;
 					int i_216_ = (class298_sub10.method2900(-2066581282) - ((SceneGraph) this).anInt3546 * 394962841);
 					int i_217_ = 1 + (2 * i_216_ >> -1688804109 * anInt3504);
 					int i_218_ = 0;
@@ -1213,7 +1213,7 @@ public class SceneGraph {
 					if (i_221_ >= anInt3549 * 1340714547)
 						i_221_ = 1340714547 * anInt3549 - 1;
 					for (int i_222_ = i_220_; i_222_ <= i_221_; i_222_++) {
-						int i_223_ = ((Class321) class321).aShortArray3350[i_218_];
+						int i_223_ = ((DynamicLight) dynamicLight).keyframes[i_218_];
 						int i_224_ = i_223_ >>> 8;
 						int i_225_ = i_217_ * i_218_ + i_224_;
 						int i_226_ = (i_223_ >>> 8) + i_219_;
@@ -1232,13 +1232,13 @@ public class SceneGraph {
 									boolean bool = i_228_ - 1 >= i_226_;
 									boolean bool_230_ = i_228_ + 1 <= i_227_;
 									if (!bool && i_222_ + 1 <= i_221_) {
-										int i_231_ = (((Class321) class321).aShortArray3350[i_218_ + 1]);
+										int i_231_ = (((DynamicLight) dynamicLight).keyframes[i_218_ + 1]);
 										int i_232_ = i_219_ + (i_231_ >>> 8);
 										int i_233_ = i_232_ + (i_231_ & 0xff);
 										bool = (i_228_ > i_232_ && i_228_ < i_233_);
 									}
 									if (!bool_230_ && i_222_ - 1 >= i_220_) {
-										int i_234_ = (((Class321) class321).aShortArray3350[i_218_ - 1]);
+										int i_234_ = (((DynamicLight) dynamicLight).keyframes[i_218_ - 1]);
 										int i_235_ = (i_234_ >>> 8) + i_219_;
 										int i_236_ = (i_234_ & 0xff) + i_235_;
 										bool_230_ = (i_228_ > i_235_ && i_228_ < i_236_);
@@ -1251,13 +1251,13 @@ public class SceneGraph {
 									boolean bool = i_228_ - 1 >= i_226_;
 									boolean bool_237_ = 1 + i_228_ <= i_227_;
 									if (!bool && i_222_ - 1 >= i_220_) {
-										int i_238_ = (((Class321) class321).aShortArray3350[i_218_ - 1]);
+										int i_238_ = (((DynamicLight) dynamicLight).keyframes[i_218_ - 1]);
 										int i_239_ = i_219_ + (i_238_ >>> 8);
 										int i_240_ = (i_238_ & 0xff) + i_239_;
 										bool = (i_228_ > i_239_ && i_228_ < i_240_);
 									}
 									if (!bool_237_ && i_222_ + 1 <= i_221_) {
-										int i_241_ = (((Class321) class321).aShortArray3350[1 + i_218_]);
+										int i_241_ = (((DynamicLight) dynamicLight).keyframes[1 + i_218_]);
 										int i_242_ = (i_241_ >>> 8) + i_219_;
 										int i_243_ = (i_241_ & 0xff) + i_242_;
 										bool_237_ = (i_228_ > i_242_ && i_228_ < i_243_);
@@ -1295,18 +1295,18 @@ public class SceneGraph {
 		}
 	}
 
-	public void method4051(Class321 class321, int i) {
+	public void method4051(DynamicLight dynamicLight, int i) {
 		try {
 			if (((SceneGraph) this).anInt3556 * -2060364501 < 65391) {
-				Class298_Sub10 class298_sub10 = class321.aClass298_Sub10_3337;
-				((SceneGraph) this).aClass321Array3558[-2060364501 * ((SceneGraph) this).anInt3556] = class321;
+				Class298_Sub10 class298_sub10 = dynamicLight.lightHandle;
+				((SceneGraph) this).aDynamicLightArray3558[-2060364501 * ((SceneGraph) this).anInt3556] = dynamicLight;
 				((SceneGraph) this).aBooleanArray3559[((SceneGraph) this).anInt3556 * -2060364501] = false;
 				((SceneGraph) this).anInt3556 += -979058301;
-				int i_246_ = -1565952249 * class321.anInt3345;
-				if (((Class321) class321).aBoolean3348)
+				int i_246_ = -1565952249 * dynamicLight.amplitude;
+				if (((DynamicLight) dynamicLight).aBoolean3348)
 					i_246_ = 0;
-				int i_247_ = class321.anInt3345 * -1565952249;
-				if (((Class321) class321).aBoolean3347)
+				int i_247_ = dynamicLight.amplitude * -1565952249;
+				if (((DynamicLight) dynamicLight).aBoolean3347)
 					i_247_ = anInt3548 * 1678382205 - 1;
 				for (int i_248_ = i_246_; i_248_ <= i_247_; i_248_++) {
 					int i_249_ = 0;
@@ -1319,7 +1319,7 @@ public class SceneGraph {
 					if (i_251_ >= 1340714547 * anInt3549)
 						i_251_ = anInt3549 * 1340714547 - 1;
 					for (int i_252_ = i_250_; i_252_ <= i_251_; i_252_++) {
-						int i_253_ = ((Class321) class321).aShortArray3350[i_249_++];
+						int i_253_ = ((DynamicLight) dynamicLight).keyframes[i_249_++];
 						int i_254_ = (((class298_sub10.method2895(823958259) - class298_sub10.method2900(-701525248) + ((SceneGraph) this).anInt3546 * 394962841) >> anInt3504 * -1688804109) + (i_253_ >>> 8));
 						int i_255_ = i_254_ + (i_253_ & 0xff) - 1;
 						if (i_254_ < 0)

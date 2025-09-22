@@ -93,7 +93,7 @@ public class Class116 {
 
 	public static void method1268(Class95 class95, int i, byte i_9_) {
 		try {
-			i = i * GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2144031703) >> 8;
+			i = i * GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2144031703) >> 8;
 			if (null == class95)
 				Class134.method1489((byte) -122);
 			else {
@@ -207,27 +207,27 @@ public class Class116 {
 
 	public static void method1272(int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7564, 2, 1364189431);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565, 2, 1428932926);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547, 1, -398332874);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.groundBlendingPreference, 1, 401268670);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569, 1, -225463890);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.flickeringPreference, 1, -1836206886);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.characterShadowPreference, 1, 370627212);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.texturePreference, 1, -408534755);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.sceneryShadowPreference, 2, 902985868);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.lightingPreference, 1, -598361107);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.waterDetailPreference, 2, -1383392801);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.fogPreference, 1, -906948807);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.antialiasPreference, 0, -33681458);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550, 0, 1421186288);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.particlePreference, 2, 540542372);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558, -160182505 * Class115.aClass115_1383.anInt1387, -1761179616);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.bloomPreference, 0, -224292435);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567, 1, -1095753213);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7564, 2, 1364189431);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7565, 2, 1428932926);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547, 1, -398332874);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.groundBlendingPreference, 1, 401268670);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsSetup_7569, 1, -225463890);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.flickeringPreference, 1, -1836206886);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.characterShadowPreference, 1, 370627212);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.texturePreference, 1, -408534755);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.sceneryShadowPreference, 2, 902985868);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.lightingPreference, 1, -598361107);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.waterDetailPreference, 2, -1383392801);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.fogPreference, 1, -906948807);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.antialiasPreference, 0, -33681458);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aAntialiasPreference_7550, 0, 1421186288);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.particlePreference, 2, 540542372);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aMapSizePreference_7558, -160182505 * Class115.aClass115_1383.anInt1387, -1761179616);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.bloomPreference, 0, -224292435);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub19_7567, 1, -1095753213);
 			Class490.method6170(1113089752);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566, 0, -255450456);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsPresetPreference_7576, 4, -1503000193);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aScreenSizePreference_7566, 0, -255450456);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsPresetPreference_7576, 4, -1503000193);
 			Class359.method4294(1109876610);
 			GameClient.map.method2640((byte) 54).forceUpdate(286817156);
 			GameClient.aBoolean8676 = true;

@@ -10,7 +10,7 @@ public class ChecksumTableEntry extends Class242 {
 	int anInt7088;
 	Class329 aClass329_7089;
 	Class298_Sub37_Sub16 aClass298_Sub37_Sub16_7090;
-	Class255 aClass255_7091;
+	DevConsole aDevConsole_7091;
 	int anInt7092 = 0;
 	Class329 aClass329_7093;
 	Class226 aClass226_7094;
@@ -85,7 +85,7 @@ public class ChecksumTableEntry extends Class242 {
 			if (null == class298_sub37_sub16) {
 				if (i_1_ == 0) {
 					if (((ChecksumTableEntry) this).aClass329_7093 != null && ((ChecksumTableEntry) this).aByteArray7098[i] != -1)
-						class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass255_7091.method2430(i, ((ChecksumTableEntry) this).aClass329_7093, -1787098666));
+						class298_sub37_sub16 = (((ChecksumTableEntry) this).aDevConsole_7091.method2430(i, ((ChecksumTableEntry) this).aClass329_7093, -1787098666));
 					else if (!((ChecksumTableEntry) this).aClass247_7086.method2340((byte) 14))
 						class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass247_7086.method2338(-553176479 * ((ChecksumTableEntry) this).anInt7088, i, (byte) 2, true, -393413622));
 					else
@@ -93,7 +93,7 @@ public class ChecksumTableEntry extends Class242 {
 				} else if (i_1_ == 1) {
 					if (((ChecksumTableEntry) this).aClass329_7093 == null)
 						throw new RuntimeException();
-					class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass255_7091.method2429(i, ((ChecksumTableEntry) this).aClass329_7093, (byte) -18));
+					class298_sub37_sub16 = (((ChecksumTableEntry) this).aDevConsole_7091.method2429(i, ((ChecksumTableEntry) this).aClass329_7093, (byte) -18));
 				} else if (2 == i_1_) {
 					if (null == ((ChecksumTableEntry) this).aClass329_7093)
 						throw new RuntimeException();
@@ -182,7 +182,7 @@ public class ChecksumTableEntry extends Class242 {
 			is[is.length - 2] = (byte) ((((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2514[i]) >>> 8);
 			is[is.length - 1] = (byte) (((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2514[i]);
 			if (((ChecksumTableEntry) this).aClass329_7093 != null) {
-				((ChecksumTableEntry) this).aClass255_7091.method2431(i, is, ((ChecksumTableEntry) this).aClass329_7093, -645332532);
+				((ChecksumTableEntry) this).aDevConsole_7091.method2431(i, is, ((ChecksumTableEntry) this).aClass329_7093, -645332532);
 				if (((ChecksumTableEntry) this).aByteArray7098[i] != 1) {
 					((ChecksumTableEntry) this).anInt7092 += 13538129;
 					((ChecksumTableEntry) this).aByteArray7098[i] = (byte) 1;
@@ -238,7 +238,7 @@ public class ChecksumTableEntry extends Class242 {
 						if (0 == (((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2525[(2044090087 * ((ChecksumTableEntry) this).anInt7101)]))
 							((ChecksumTableEntry) this).anInt7101 += -303145769;
 						else {
-							if ((-2031048721 * ((Class255) (((ChecksumTableEntry) this).aClass255_7091)).anInt2793) >= 250) {
+							if ((-2031048721 * ((DevConsole) (((ChecksumTableEntry) this).aDevConsole_7091)).anInt2793) >= 250) {
 								bool = false;
 								break;
 							}
@@ -313,7 +313,7 @@ public class ChecksumTableEntry extends Class242 {
 		}
 	}
 
-	ChecksumTableEntry(int i, Class329 class329, Class329 class329_16_, Class247 class247, Class255 class255, int i_17_, byte[] is, int i_18_, boolean bool) {
+	ChecksumTableEntry(int i, Class329 class329, Class329 class329_16_, Class247 class247, DevConsole devConsole, int i_17_, byte[] is, int i_18_, boolean bool) {
 		((ChecksumTableEntry) this).aClass437_7085 = new HashTable(16);
 		((ChecksumTableEntry) this).anInt7101 = 0;
 		((ChecksumTableEntry) this).aLinkedNodeList_7105 = new LinkedNodeList();
@@ -328,13 +328,13 @@ public class ChecksumTableEntry extends Class242 {
 		}
 		((ChecksumTableEntry) this).aClass329_7089 = class329_16_;
 		((ChecksumTableEntry) this).aClass247_7086 = class247;
-		((ChecksumTableEntry) this).aClass255_7091 = class255;
+		((ChecksumTableEntry) this).aDevConsole_7091 = devConsole;
 		((ChecksumTableEntry) this).anInt7108 = i_17_ * 235523743;
 		((ChecksumTableEntry) this).aByteArray7087 = is;
 		((ChecksumTableEntry) this).anInt7103 = 1761064455 * i_18_;
 		((ChecksumTableEntry) this).aBoolean7106 = bool;
 		if (null != ((ChecksumTableEntry) this).aClass329_7089)
-			((ChecksumTableEntry) this).aClass298_Sub37_Sub16_7090 = (((ChecksumTableEntry) this).aClass255_7091.method2430(((ChecksumTableEntry) this).anInt7088 * -553176479, ((ChecksumTableEntry) this).aClass329_7089, -1787098666));
+			((ChecksumTableEntry) this).aClass298_Sub37_Sub16_7090 = (((ChecksumTableEntry) this).aDevConsole_7091.method2430(((ChecksumTableEntry) this).anInt7088 * -553176479, ((ChecksumTableEntry) this).aClass329_7089, -1787098666));
 	}
 
 	public int method2274(byte i) {
@@ -412,7 +412,7 @@ public class ChecksumTableEntry extends Class242 {
 				return null;
 			}
 			if (((ChecksumTableEntry) this).aClass329_7089 != null)
-				((ChecksumTableEntry) this).aClass255_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, 628603077);
+				((ChecksumTableEntry) this).aDevConsole_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, 628603077);
 		} while (false);
 		((ChecksumTableEntry) this).aClass298_Sub37_Sub16_7090 = null;
 		if (((ChecksumTableEntry) this).aClass329_7093 != null) {
@@ -476,7 +476,7 @@ public class ChecksumTableEntry extends Class242 {
 				return null;
 			}
 			if (((ChecksumTableEntry) this).aClass329_7089 != null)
-				((ChecksumTableEntry) this).aClass255_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, -1430287423);
+				((ChecksumTableEntry) this).aDevConsole_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, -1430287423);
 		} while (false);
 		((ChecksumTableEntry) this).aClass298_Sub37_Sub16_7090 = null;
 		if (((ChecksumTableEntry) this).aClass329_7093 != null) {
@@ -517,7 +517,7 @@ public class ChecksumTableEntry extends Class242 {
 		if (null == class298_sub37_sub16) {
 			if (i_21_ == 0) {
 				if (((ChecksumTableEntry) this).aClass329_7093 != null && ((ChecksumTableEntry) this).aByteArray7098[i] != -1)
-					class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass255_7091.method2430(i, ((ChecksumTableEntry) this).aClass329_7093, -1787098666));
+					class298_sub37_sub16 = (((ChecksumTableEntry) this).aDevConsole_7091.method2430(i, ((ChecksumTableEntry) this).aClass329_7093, -1787098666));
 				else if (!((ChecksumTableEntry) this).aClass247_7086.method2340((byte) 14))
 					class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass247_7086.method2338(-553176479 * ((ChecksumTableEntry) this).anInt7088, i, (byte) 2, true, -418226880));
 				else
@@ -525,7 +525,7 @@ public class ChecksumTableEntry extends Class242 {
 			} else if (i_21_ == 1) {
 				if (((ChecksumTableEntry) this).aClass329_7093 == null)
 					throw new RuntimeException();
-				class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass255_7091.method2429(i, ((ChecksumTableEntry) this).aClass329_7093, (byte) -52));
+				class298_sub37_sub16 = (((ChecksumTableEntry) this).aDevConsole_7091.method2429(i, ((ChecksumTableEntry) this).aClass329_7093, (byte) -52));
 			} else if (2 == i_21_) {
 				if (null == ((ChecksumTableEntry) this).aClass329_7093)
 					throw new RuntimeException();
@@ -614,7 +614,7 @@ public class ChecksumTableEntry extends Class242 {
 		is[is.length - 2] = (byte) ((((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2514[i]) >>> 8);
 		is[is.length - 1] = (byte) (((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2514[i]);
 		if (((ChecksumTableEntry) this).aClass329_7093 != null) {
-			((ChecksumTableEntry) this).aClass255_7091.method2431(i, is, ((ChecksumTableEntry) this).aClass329_7093, 408687877);
+			((ChecksumTableEntry) this).aDevConsole_7091.method2431(i, is, ((ChecksumTableEntry) this).aClass329_7093, 408687877);
 			if (((ChecksumTableEntry) this).aByteArray7098[i] != 1) {
 				((ChecksumTableEntry) this).anInt7092 += 13538129;
 				((ChecksumTableEntry) this).aByteArray7098[i] = (byte) 1;
@@ -657,7 +657,7 @@ public class ChecksumTableEntry extends Class242 {
 		if (null == class298_sub37_sub16) {
 			if (i_32_ == 0) {
 				if (((ChecksumTableEntry) this).aClass329_7093 != null && ((ChecksumTableEntry) this).aByteArray7098[i] != -1)
-					class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass255_7091.method2430(i, ((ChecksumTableEntry) this).aClass329_7093, -1787098666));
+					class298_sub37_sub16 = (((ChecksumTableEntry) this).aDevConsole_7091.method2430(i, ((ChecksumTableEntry) this).aClass329_7093, -1787098666));
 				else if (!((ChecksumTableEntry) this).aClass247_7086.method2340((byte) 14))
 					class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass247_7086.method2338(-553176479 * ((ChecksumTableEntry) this).anInt7088, i, (byte) 2, true, 1037407823));
 				else
@@ -665,7 +665,7 @@ public class ChecksumTableEntry extends Class242 {
 			} else if (i_32_ == 1) {
 				if (((ChecksumTableEntry) this).aClass329_7093 == null)
 					throw new RuntimeException();
-				class298_sub37_sub16 = (((ChecksumTableEntry) this).aClass255_7091.method2429(i, ((ChecksumTableEntry) this).aClass329_7093, (byte) -21));
+				class298_sub37_sub16 = (((ChecksumTableEntry) this).aDevConsole_7091.method2429(i, ((ChecksumTableEntry) this).aClass329_7093, (byte) -21));
 			} else if (2 == i_32_) {
 				if (null == ((ChecksumTableEntry) this).aClass329_7093)
 					throw new RuntimeException();
@@ -754,7 +754,7 @@ public class ChecksumTableEntry extends Class242 {
 		is[is.length - 2] = (byte) ((((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2514[i]) >>> 8);
 		is[is.length - 1] = (byte) (((Class226) ((ChecksumTableEntry) this).aClass226_7094).anIntArray2514[i]);
 		if (((ChecksumTableEntry) this).aClass329_7093 != null) {
-			((ChecksumTableEntry) this).aClass255_7091.method2431(i, is, ((ChecksumTableEntry) this).aClass329_7093, 1120335343);
+			((ChecksumTableEntry) this).aDevConsole_7091.method2431(i, is, ((ChecksumTableEntry) this).aClass329_7093, 1120335343);
 			if (((ChecksumTableEntry) this).aByteArray7098[i] != 1) {
 				((ChecksumTableEntry) this).anInt7092 += 13538129;
 				((ChecksumTableEntry) this).aByteArray7098[i] = (byte) 1;
@@ -808,7 +808,7 @@ public class ChecksumTableEntry extends Class242 {
 				return null;
 			}
 			if (((ChecksumTableEntry) this).aClass329_7089 != null)
-				((ChecksumTableEntry) this).aClass255_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, -1078065022);
+				((ChecksumTableEntry) this).aDevConsole_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, -1078065022);
 		} while (false);
 		((ChecksumTableEntry) this).aClass298_Sub37_Sub16_7090 = null;
 		if (((ChecksumTableEntry) this).aClass329_7093 != null) {
@@ -874,7 +874,7 @@ public class ChecksumTableEntry extends Class242 {
 					return null;
 				}
 				if (((ChecksumTableEntry) this).aClass329_7089 != null)
-					((ChecksumTableEntry) this).aClass255_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, -586951023);
+					((ChecksumTableEntry) this).aDevConsole_7091.method2431(-553176479 * ((ChecksumTableEntry) this).anInt7088, is, ((ChecksumTableEntry) this).aClass329_7089, -586951023);
 			} while (false);
 			((ChecksumTableEntry) this).aClass298_Sub37_Sub16_7090 = null;
 			if (((ChecksumTableEntry) this).aClass329_7093 != null) {
@@ -956,11 +956,11 @@ public class ChecksumTableEntry extends Class242 {
 	static final void method2281(ClientScript2 class403, short i) {
 		try {
 			if (Class452.aBoolean5642 && Class231.aFrame2589 != null)
-				Class357.method4276(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 4), -1, -1, false, 1414482658);
+				Class357.method4276(GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 4), -1, -1, false, 1414482658);
 			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
 			boolean bool = ((((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1);
 			String string_44_ = new StringBuilder().append(EnumType.method6131((byte) -59)).append(string).toString();
-			ErrorContext.method4172(string_44_, bool, GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1851684401) == 5, GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 49);
+			ErrorContext.method4172(string_44_, bool, GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1851684401) == 5, GameClient.aBoolean8867, GameClient.aBoolean8651, (byte) 49);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aaz.afo(").append(')').toString());
 		}
@@ -977,24 +977,24 @@ public class ChecksumTableEntry extends Class242 {
 	static void method2283(byte i) {
 		try {
 			int i_50_ = 0;
-			if (GraphicsAutoSetup.clientPreferences != null)
-				i_50_ = GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566.method5654(-1747444886);
+			if (GraphicsSetup.clientPreferences != null)
+				i_50_ = GraphicsSetup.clientPreferences.aScreenSizePreference_7566.method5654(-1747444886);
 			if (i_50_ == 2) {
-				int i_51_ = (-639974669 * Class78.anInt733 > 800 ? 800 : Class78.anInt733 * -639974669);
+				int i_51_ = (-639974669 * DisplayMode.anInt733 > 800 ? 800 : DisplayMode.anInt733 * -639974669);
 				int i_52_ = (GameClient.anInt6472 * 1282634425 > 600 ? 600 : 1282634425 * GameClient.anInt6472);
 				Class462.canvasWidth = -2010408377 * i_51_;
-				GameClient.anInt6473 = -753018213 * ((Class78.anInt733 * -639974669 - i_51_) / 2);
+				GameClient.anInt6473 = -753018213 * ((DisplayMode.anInt733 * -639974669 - i_51_) / 2);
 				Class298_Sub40_Sub9.anInt9716 = 1445266787 * i_52_;
 				GameClient.anInt6474 = 0;
 			} else if (i_50_ == 1) {
-				int i_53_ = (-639974669 * Class78.anInt733 > 1024 ? 1024 : Class78.anInt733 * -639974669);
+				int i_53_ = (-639974669 * DisplayMode.anInt733 > 1024 ? 1024 : DisplayMode.anInt733 * -639974669);
 				int i_54_ = (GameClient.anInt6472 * 1282634425 > 768 ? 768 : GameClient.anInt6472 * 1282634425);
 				Class462.canvasWidth = i_53_ * -2010408377;
-				GameClient.anInt6473 = -753018213 * ((-639974669 * Class78.anInt733 - i_53_) / 2);
+				GameClient.anInt6473 = -753018213 * ((-639974669 * DisplayMode.anInt733 - i_53_) / 2);
 				Class298_Sub40_Sub9.anInt9716 = 1445266787 * i_54_;
 				GameClient.anInt6474 = 0;
 			} else {
-				Class462.canvasWidth = Class78.anInt733 * -607961243;
+				Class462.canvasWidth = DisplayMode.anInt733 * -607961243;
 				GameClient.anInt6473 = 0;
 				Class298_Sub40_Sub9.anInt9716 = GameClient.anInt6472 * -1935672693;
 				GameClient.anInt6474 = 0;

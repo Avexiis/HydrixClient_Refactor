@@ -23,7 +23,7 @@ public class ErrorContext {
 
 	static final void method4170(ClientScript2 class403, short i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.texturePreference.method5686(-550588042) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.texturePreference.method5686(-550588042) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw info(runtimeexception, new StringBuilder().append("ol.anh(").append(')').toString());
 		}

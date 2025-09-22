@@ -75,7 +75,7 @@ public final class Class354 {
 
 	static final void method4257(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aGraphicsPresetPreference_7576.method5709(-1715403508);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aGraphicsPresetPreference_7576.method5709(-1715403508);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ot.anm(").append(')').toString());
 		}

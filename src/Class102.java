@@ -46,7 +46,7 @@ public class Class102 {
 	static final void method1083(ClientScript2 class403, byte i) {
 		try {
 			if (Class452.aBoolean5642 && null != Class231.aFrame2589)
-				Class357.method4276(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 92), -1, -1, false, 2006169742);
+				Class357.method4276(GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 92), -1, -1, false, 2006169742);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ed.aej(").append(')').toString());
 		}

@@ -374,44 +374,44 @@ public final class Class315 {
 
 	static void method3835(int i, int i_147_, int i_148_, int i_149_, int i_150_, byte i_151_) {
 		try {
-			if (i_148_ <= Class372_Sub3.anInt4050 * -1062447355 && i_149_ >= 1155384281 * Class372_Sub3.anInt4049) {
+			if (i_148_ <= DevConsoleInit.anInt4050 * -1062447355 && i_149_ >= 1155384281 * DevConsoleInit.anInt4049) {
 				boolean bool;
-				if (i < Class372_Sub3.anInt4051 * -1424479739) {
-					i = Class372_Sub3.anInt4051 * -1424479739;
+				if (i < DevConsoleInit.anInt4051 * -1424479739) {
+					i = DevConsoleInit.anInt4051 * -1424479739;
 					bool = false;
-				} else if (i > Class372_Sub3.anInt4048 * 1135094847) {
-					i = 1135094847 * Class372_Sub3.anInt4048;
+				} else if (i > DevConsoleInit.anInt4048 * 1135094847) {
+					i = 1135094847 * DevConsoleInit.anInt4048;
 					bool = false;
 				} else
 					bool = true;
 				boolean bool_152_;
-				if (i_147_ < -1424479739 * Class372_Sub3.anInt4051) {
-					i_147_ = -1424479739 * Class372_Sub3.anInt4051;
+				if (i_147_ < -1424479739 * DevConsoleInit.anInt4051) {
+					i_147_ = -1424479739 * DevConsoleInit.anInt4051;
 					bool_152_ = false;
-				} else if (i_147_ > Class372_Sub3.anInt4048 * 1135094847) {
-					i_147_ = 1135094847 * Class372_Sub3.anInt4048;
+				} else if (i_147_ > DevConsoleInit.anInt4048 * 1135094847) {
+					i_147_ = 1135094847 * DevConsoleInit.anInt4048;
 					bool_152_ = false;
 				} else
 					bool_152_ = true;
-				if (i_148_ >= Class372_Sub3.anInt4049 * 1155384281)
-					Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_148_++]), i, i_147_, i_150_, -1668539966);
+				if (i_148_ >= DevConsoleInit.anInt4049 * 1155384281)
+					Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_148_++]), i, i_147_, i_150_, -1668539966);
 				else
-					i_148_ = Class372_Sub3.anInt4049 * 1155384281;
-				if (i_149_ <= -1062447355 * Class372_Sub3.anInt4050)
-					Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_149_--]), i, i_147_, i_150_, 172166528);
+					i_148_ = DevConsoleInit.anInt4049 * 1155384281;
+				if (i_149_ <= -1062447355 * DevConsoleInit.anInt4050)
+					Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_149_--]), i, i_147_, i_150_, 172166528);
 				else
-					i_149_ = -1062447355 * Class372_Sub3.anInt4050;
+					i_149_ = -1062447355 * DevConsoleInit.anInt4050;
 				if (bool && bool_152_) {
 					for (int i_153_ = i_148_; i_153_ <= i_149_; i_153_++) {
-						int[] is = Class372_Sub3.anIntArrayArray4047[i_153_];
+						int[] is = DevConsoleInit.anIntArrayArray4047[i_153_];
 						is[i] = is[i_147_] = i_150_;
 					}
 				} else if (bool) {
 					for (int i_154_ = i_148_; i_154_ <= i_149_; i_154_++)
-						Class372_Sub3.anIntArrayArray4047[i_154_][i] = i_150_;
+						DevConsoleInit.anIntArrayArray4047[i_154_][i] = i_150_;
 				} else if (bool_152_) {
 					for (int i_155_ = i_148_; i_155_ <= i_149_; i_155_++)
-						Class372_Sub3.anIntArrayArray4047[i_155_][i_147_] = i_150_;
+						DevConsoleInit.anIntArrayArray4047[i_155_][i_147_] = i_150_;
 				}
 			}
 		} catch (RuntimeException runtimeexception) {

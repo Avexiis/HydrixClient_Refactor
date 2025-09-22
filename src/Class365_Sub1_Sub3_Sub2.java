@@ -250,7 +250,7 @@ public class Class365_Sub1_Sub3_Sub2 extends Class365_Sub1_Sub3 implements Inter
 		((Class365_Sub1_Sub3_Sub2) this).aByte9928 = (byte) i_10_;
 		((Class365_Sub1_Sub3_Sub2) this).aByte9927 = (byte) i_9_;
 		((Class365_Sub1_Sub3_Sub2) this).aBoolean9930 = 0 != class432.anInt5382 * 1532834983 && !bool;
-		((Class365_Sub1_Sub3_Sub2) this).aBoolean9931 = (class_ra.method5082() && class432.aBoolean5433 && !((Class365_Sub1_Sub3_Sub2) this).aBoolean9929 && GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-208809184) != 0);
+		((Class365_Sub1_Sub3_Sub2) this).aBoolean9931 = (class_ra.method5082() && class432.aBoolean5433 && !((Class365_Sub1_Sub3_Sub2) this).aBoolean9929 && GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-208809184) != 0);
 		int i_11_ = 2048;
 		if (class432.aBoolean5441)
 			i_11_ |= 0x80000;
@@ -452,7 +452,7 @@ public class Class365_Sub1_Sub3_Sub2 extends Class365_Sub1_Sub3 implements Inter
 			Class367.aClass57_4001 = null;
 			OverlayType.aClass57_4070 = null;
 			Class65.aClass264_664 = null;
-			Class211.aClass505_2420 = null;
+			Class211.aGameFont_2420 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wq.ak(").append(')').toString());
 		}
@@ -482,13 +482,13 @@ public class Class365_Sub1_Sub3_Sub2 extends Class365_Sub1_Sub3 implements Inter
 			int i_28_ = i_26_ + i_23_;
 			int i_29_ = i_24_ - i_26_;
 			for (int i_30_ = i_23_; i_30_ < i_28_; i_30_++)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_30_]), i, i_22_, i_25_, 1081395615);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_30_]), i, i_22_, i_25_, 1081395615);
 			for (int i_31_ = i_24_; i_31_ > i_29_; i_31_--)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_31_]), i, i_22_, i_25_, -1329971917);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_31_]), i, i_22_, i_25_, -1329971917);
 			int i_32_ = i + i_26_;
 			int i_33_ = i_22_ - i_26_;
 			for (int i_34_ = i_28_; i_34_ <= i_29_; i_34_++) {
-				int[] is = Class372_Sub3.anIntArrayArray4047[i_34_];
+				int[] is = DevConsoleInit.anIntArrayArray4047[i_34_];
 				Class82_Sub22.method940(is, i, i_32_, i_25_, -1691383948);
 				Class82_Sub22.method940(is, i_33_, i_22_, i_25_, -1133427569);
 			}

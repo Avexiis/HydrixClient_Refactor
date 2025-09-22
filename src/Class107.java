@@ -56,7 +56,7 @@ public class Class107 {
 
 	static final void method1140(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -2044130238);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsSetup_7569, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -2044130238);
 			Class3.writePreferences();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ej.aiu(").append(')').toString());

@@ -52,7 +52,7 @@ public class Class224 implements Interface12 {
 		try {
 			if (!((Class224) this).aBoolean6426 && null == ((Class224) this).aFont6435) {
 				try {
-					String[] strings = Class365_Sub1_Sub3_Sub1.method4508(GameClient.aString8649, ',', 1855531743);
+					String[] strings = SceneObject.splitText(GameClient.aString8649, ',', 1855531743);
 					if (strings.length != 23)
 						((Class224) this).aBoolean6426 = true;
 					((Class224) this).aBoolean6439 = Boolean.parseBoolean(strings[0]);
@@ -181,7 +181,7 @@ public class Class224 implements Interface12 {
 	public void method155(boolean bool) {
 		if (!((Class224) this).aBoolean6426 && null == ((Class224) this).aFont6435) {
 			try {
-				String[] strings = Class365_Sub1_Sub3_Sub1.method4508(GameClient.aString8649, ',', 1881820708);
+				String[] strings = SceneObject.splitText(GameClient.aString8649, ',', 1881820708);
 				if (strings.length != 23)
 					((Class224) this).aBoolean6426 = true;
 				((Class224) this).aBoolean6439 = Boolean.parseBoolean(strings[0]);
@@ -373,7 +373,7 @@ public class Class224 implements Interface12 {
 	public void method156(boolean bool) {
 		if (!((Class224) this).aBoolean6426 && null == ((Class224) this).aFont6435) {
 			try {
-				String[] strings = Class365_Sub1_Sub3_Sub1.method4508(GameClient.aString8649, ',', 1134178210);
+				String[] strings = SceneObject.splitText(GameClient.aString8649, ',', 1134178210);
 				if (strings.length != 23)
 					((Class224) this).aBoolean6426 = true;
 				((Class224) this).aBoolean6439 = Boolean.parseBoolean(strings[0]);

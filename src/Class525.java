@@ -39,7 +39,7 @@ public class Class525 {
 	static final void method6380(ClientScript2 class403, int i) {
 		try {
 			int i_3_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5612(i_3_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.characterShadowPreference.method5612(i_3_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("z.aoe(").append(')').toString());
 		}

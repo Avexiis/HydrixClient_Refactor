@@ -106,7 +106,7 @@ public class Class298_Sub37_Sub14 extends Class298_Sub37 {
 	void method3463(Packet class298_sub53, int i, int i_8_) {
 		try {
 			if (1 == i)
-				((Class298_Sub37_Sub14) this).aStringArray9652 = (Class365_Sub1_Sub3_Sub1.method4508(class298_sub53.getString(), '<', 1942688210));
+				((Class298_Sub37_Sub14) this).aStringArray9652 = (SceneObject.splitText(class298_sub53.getString(), '<', 1942688210));
 			else if (i == 2) {
 				int i_9_ = class298_sub53.readUnsignedByte();
 				anIntArray9653 = new int[i_9_];

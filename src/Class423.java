@@ -35,7 +35,7 @@ public class Class423 {
 			Class301_Sub1.anInt7632 = 433609607;
 			Class301_Sub1.anInt7627 = 789877945;
 			Class381.aClass4_4119 = null;
-			Class255.aClass4_2795 = null;
+			DevConsole.aClass4_2795 = null;
 			Class52.aClass4_508 = null;
 			Class414.aClass4_5326 = null;
 			Class355.aClass4_6525 = null;
@@ -58,7 +58,7 @@ public class Class423 {
 
 	static boolean method5734(int i) {
 		try {
-			return Class8.aBoolean108;
+			return DevConsoleState.aBoolean108;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rn.k(").append(')').toString());
 		}

@@ -141,7 +141,7 @@ public class ConfigDefinitionLoader {
 			int i_8_ = (class403.anIntArray5244[((class403.anInt5239 -= -391880689) * 681479919)]);
 			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_8_, (byte) -74);
 			RSInterface RSInterface = SpotAnimTypeList.aRSInterfaceArray4165[i_8_ >> 16];
-			Class365_Sub1_Sub3_Sub1.method4509(class105, RSInterface, class403, (byte) -34);
+			SceneObject.method4509(class105, RSInterface, class403, (byte) -34);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("nb.ka(").append(')').toString());
 		}

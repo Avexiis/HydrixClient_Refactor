@@ -11,7 +11,7 @@ public class Class_ta_Sub3 extends Class_ta {
 	}
 
 	static Class_ta_Sub3 method6007(Class_ra_Sub3 class_ra_sub3, int i, int i_1_, int[] is, int[] is_2_) {
-		if (class_ra_sub3.method5348(Class55.aClass55_567, Class77.aClass77_717)) {
+		if (class_ra_sub3.method5348(Class55.aClass55_567, TextEncoder.aTextEncoder_717)) {
 			byte[] is_3_ = new byte[i * i_1_];
 			for (int i_4_ = 0; i_4_ < i_1_; i_4_++) {
 				int i_5_ = i_4_ * i + is[i_4_];

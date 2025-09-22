@@ -44,7 +44,7 @@ public class Class55 {
 
 	static final void method604(ClientScript2 class403, byte i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -2054835114);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsSetup_7569, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -2054835114);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {
@@ -74,18 +74,18 @@ public class Class55 {
 						} catch (Exception exception) {
 							/* empty */
 						}
-						Class255.sendDevConsoleMsg(new StringBuilder().append("Pausing for ").append(i_2_).append(" seconds...").toString(), 357563950);
-						Class8.aStringArray109 = strings;
-						Class8.anInt104 = -1428832631 * (i_1_ + 1);
+						DevConsole.sendDevConsoleMsg(new StringBuilder().append("Pausing for ").append(i_2_).append(" seconds...").toString());
+						DevConsoleState.aStringArray109 = strings;
+						DevConsoleState.anInt104 = -1428832631 * (i_1_ + 1);
 						Class146.aLong1576 = (TimeUtils.getTime((byte) 1) + (long) (i_2_ * 1000)) * 6717445677357895093L;
 						break;
 					}
-					Class8.aString101 = strings[i_1_];
+					DevConsoleState.aString101 = strings[i_1_];
 					Class142.method1568(false, 1496417723);
 				}
 			} else {
-				Class8.aString101 = new StringBuilder().append(Class8.aString101).append(strings[0]).toString();
-				Class8.anInt99 += strings[0].length() * 1914783065;
+				DevConsoleState.aString101 = new StringBuilder().append(DevConsoleState.aString101).append(strings[0]).toString();
+				DevConsoleState.anInt99 += strings[0].length() * 1914783065;
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ce.d(").append(')').toString());
@@ -94,16 +94,16 @@ public class Class55 {
 
 	static void method607(int i) {
 		try {
-			if (-1217082313 * Class8.anInt105 > 0) {
+			if (-1217082313 * DevConsoleState.anInt105 > 0) {
 				int i_3_ = 0;
-				for (int i_4_ = 0; i_4_ < Class8.aStringArray107.length; i_4_++) {
-					if (Class8.aStringArray107[i_4_].indexOf("--> ") != -1 && ++i_3_ == Class8.anInt105 * -1217082313) {
-						Class8.aString101 = (Class8.aStringArray107[i_4_].substring(Class8.aStringArray107[i_4_].indexOf('>') + 2));
+				for (int i_4_ = 0; i_4_ < DevConsoleState.lines.length; i_4_++) {
+					if (DevConsoleState.lines[i_4_].indexOf("--> ") != -1 && ++i_3_ == DevConsoleState.anInt105 * -1217082313) {
+						DevConsoleState.aString101 = (DevConsoleState.lines[i_4_].substring(DevConsoleState.lines[i_4_].indexOf('>') + 2));
 						break;
 					}
 				}
 			} else
-				Class8.aString101 = "";
+				DevConsoleState.aString101 = "";
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ce.x(").append(')').toString());
 		}

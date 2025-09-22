@@ -39,7 +39,7 @@ public class Class475 {
 
 	public static final void method6075(short i) {
 		try {
-			int i_1_ = GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565.method5689(-2013953489);
+			int i_1_ = GraphicsSetup.clientPreferences.aClass422_Sub17_7565.method5689(-2013953489);
 			if (i_1_ == 0) {
 				GameClient.map.method2643(null, 1496940593);
 				Class136_Sub1.method1502(0, (byte) 0);

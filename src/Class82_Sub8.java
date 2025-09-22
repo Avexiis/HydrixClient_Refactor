@@ -68,7 +68,7 @@ public class Class82_Sub8 extends Class82 {
 	static final void method894(ClientScript2 class403, int i) {
 		try {
 			int i_2_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570.method5612(i_2_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aToolkitPreference_7570.method5612(i_2_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("xq.aoh(").append(')').toString());
 		}

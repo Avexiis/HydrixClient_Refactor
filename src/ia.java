@@ -23,8 +23,8 @@ public class ia extends Class264 implements Interface25 {
 
 	native void g(char c, int i, int i_21_, int i_22_, boolean bool);
 
-	ia(ja var_ja, ba var_ba, Class505 class505, Class89[] class89s, Class57[] class57s) {
-		super(var_ja, class505);
+	ia(ja var_ja, ba var_ba, GameFont gameFont, Class89[] class89s, Class57[] class57s) {
+		super(var_ja, gameFont);
 		byte[][] is = new byte[class89s.length][];
 		int[] is_23_ = new int[class89s.length];
 		int[] is_24_ = new int[class89s.length];

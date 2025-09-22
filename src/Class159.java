@@ -20,9 +20,9 @@ public class Class159 {
 	Class159(Class_ra_Sub3 class_ra_sub3) {
 		((Class159) this).aClass_ra_Sub3_1618 = class_ra_sub3;
 		aBoolean1621 = ((Class159) this).aClass_ra_Sub3_1618.aBoolean8365;
-		if (aBoolean1621 && !((Class159) this).aClass_ra_Sub3_1618.method5349(Class55.aClass55_565, Class77.aClass77_717))
+		if (aBoolean1621 && !((Class159) this).aClass_ra_Sub3_1618.method5349(Class55.aClass55_565, TextEncoder.aTextEncoder_717))
 			aBoolean1621 = false;
-		if (aBoolean1621 || ((Class159) this).aClass_ra_Sub3_1618.method5348(Class55.aClass55_565, Class77.aClass77_717)) {
+		if (aBoolean1621 || ((Class159) this).aClass_ra_Sub3_1618.method5348(Class55.aClass55_565, TextEncoder.aTextEncoder_717)) {
 			method1706();
 			if (!aBoolean1621) {
 				((Class159) this).anInterface9_Impl2Array1620 = new Interface9_Impl2[16];

@@ -26,7 +26,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 	static int anInt8210 = 55;
 	static int anInt8211 = 7;
 	protected static int anInt8212 = 100663296;
-	Class78 aClass78_8213;
+	DisplayMode aDisplayMode_8213;
 	protected boolean aBoolean8214;
 	int[] anIntArray8215;
 	public ByteBuffer aByteBuffer8216;
@@ -354,7 +354,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		((Class_ra_Sub3) this).aClass153_8337 = method5404(new Class181[] { new Class181(Class155.aClass155_1610) });
 	}
 
-	abstract boolean method5310(Class55 class55, Class77 class77);
+	abstract boolean method5310(Class55 class55, TextEncoder textEncoder);
 
 	boolean method5311(float f, float f_6_, float f_7_, float f_8_, float f_9_, float f_10_) {
 		aByteBuffer8216.clear();
@@ -761,8 +761,8 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		}
 	}
 
-	public final Class264 method5092(Class505 class505, Class89[] class89s, boolean bool) {
-		return new Class264_Sub5(this, class505, class89s, bool);
+	public final Class264 method5092(GameFont gameFont, Class89[] class89s, boolean bool) {
+		return new Class264_Sub5(this, gameFont, class89s, bool);
 	}
 
 	public Matrix43f method5171() {
@@ -1006,9 +1006,9 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract void method5347();
 
-	abstract boolean method5348(Class55 class55, Class77 class77);
+	abstract boolean method5348(Class55 class55, TextEncoder textEncoder);
 
-	abstract boolean method5349(Class55 class55, Class77 class77);
+	abstract boolean method5349(Class55 class55, TextEncoder textEncoder);
 
 	final Interface9_Impl2 method5350(int i, int i_114_, boolean bool, int[] is) {
 		return method5355(i, i_114_, bool, is, 0, 0);
@@ -1022,7 +1022,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		return method5453(class55, i, i_116_, bool, fs, 0, 0);
 	}
 
-	abstract Interface9_Impl2 method5353(Class55 class55, Class77 class77, int i, int i_117_);
+	abstract Interface9_Impl2 method5353(Class55 class55, TextEncoder textEncoder, int i, int i_117_);
 
 	public abstract void method5354(Class187 class187, int i, int i_118_, int i_119_, int i_120_);
 
@@ -1038,7 +1038,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		return false;
 	}
 
-	abstract Interface9_Impl2_Impl1 method5356(Class55 class55, Class77 class77, int i, int i_124_);
+	abstract Interface9_Impl2_Impl1 method5356(Class55 class55, TextEncoder textEncoder, int i, int i_124_);
 
 	public final void method5047(boolean bool) {
 		/* empty */
@@ -1115,9 +1115,9 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract void method5364(int i, Class183 class183, boolean bool);
 
-	public final void method5155(int i, Class78 class78) {
+	public final void method5155(int i, DisplayMode displayMode) {
 		((Class_ra_Sub3) this).anInt8328 = i;
-		((Class_ra_Sub3) this).aClass78_8213 = class78;
+		((Class_ra_Sub3) this).aDisplayMode_8213 = displayMode;
 		((Class_ra_Sub3) this).aBoolean8326 = true;
 	}
 
@@ -1154,8 +1154,8 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		return i | i_132_;
 	}
 
-	Class78 method5373() {
-		return ((Class_ra_Sub3) this).aClass78_8213;
+	DisplayMode method5373() {
+		return ((Class_ra_Sub3) this).aDisplayMode_8213;
 	}
 
 	public final void hj(int i, int i_133_, int i_134_) {
@@ -1219,9 +1219,9 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract void method5376();
 
-	public final void method5156(int i, Class78 class78) {
+	public final void method5156(int i, DisplayMode displayMode) {
 		((Class_ra_Sub3) this).anInt8328 = i;
-		((Class_ra_Sub3) this).aClass78_8213 = class78;
+		((Class_ra_Sub3) this).aDisplayMode_8213 = displayMode;
 		((Class_ra_Sub3) this).aBoolean8326 = true;
 	}
 
@@ -1424,7 +1424,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		method5398(class187, 0, i);
 	}
 
-	abstract Interface9_Impl2_Impl1 method5391(Class55 class55, Class77 class77, int i, int i_231_);
+	abstract Interface9_Impl2_Impl1 method5391(Class55 class55, TextEncoder textEncoder, int i, int i_231_);
 
 	public abstract void method5392(Class187 class187, int i, int i_232_, int i_233_, int i_234_);
 
@@ -1900,7 +1900,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract void method5405();
 
-	abstract boolean method5406(Class55 class55, Class77 class77);
+	abstract boolean method5406(Class55 class55, TextEncoder textEncoder);
 
 	public final void method5189(EnvironmentMap environmentMap) {
 		((Class_ra_Sub3) this).aClass66_Sub2_8284 = (Class66_Sub2) environmentMap;
@@ -1938,12 +1938,12 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		RA(true);
 	}
 
-	public final Class264 method5113(Class505 class505, Class89[] class89s, boolean bool) {
-		return new Class264_Sub5(this, class505, class89s, bool);
+	public final Class264 method5113(GameFont gameFont, Class89[] class89s, boolean bool) {
+		return new Class264_Sub5(this, gameFont, class89s, bool);
 	}
 
-	public final Class264 method5114(Class505 class505, Class89[] class89s, boolean bool) {
-		return new Class264_Sub5(this, class505, class89s, bool);
+	public final Class264 method5114(GameFont gameFont, Class89[] class89s, boolean bool) {
+		return new Class264_Sub5(this, gameFont, class89s, bool);
 	}
 
 	public final void method5115(int i) {
@@ -2151,7 +2151,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		return new Class66_Sub2_Sub1(this, i, i_378_, i_379_, i_380_, i_381_, i_382_);
 	}
 
-	abstract Interface9_Impl2_Impl1 method5413(Class55 class55, Class77 class77, int i, int i_383_);
+	abstract Interface9_Impl2_Impl1 method5413(Class55 class55, TextEncoder textEncoder, int i, int i_383_);
 
 	public final Class57 method5101(Class89 class89, boolean bool) {
 		Class57 class57;
@@ -2240,11 +2240,11 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract Interface9_Impl3 method5416(Class55 class55, int i, int i_396_, int i_397_, boolean bool, byte[] is);
 
-	public final void method5089(int i, Class78 class78) {
+	public final void method5089(int i, DisplayMode displayMode) {
 		if (!((Class_ra_Sub3) this).aBoolean8326)
 			throw new RuntimeException("");
 		((Class_ra_Sub3) this).anInt8328 = i;
-		((Class_ra_Sub3) this).aClass78_8213 = class78;
+		((Class_ra_Sub3) this).aDisplayMode_8213 = displayMode;
 		if (((Class_ra_Sub3) this).aBoolean8327) {
 			((Class_ra_Sub3) this).aClass161Array8315[3].method1716();
 			((Class_ra_Sub3) this).aClass161Array8315[3].method1723();
@@ -2486,7 +2486,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract void method5432();
 
-	abstract Interface9_Impl2 method5433(Class55 class55, Class77 class77, int i, int i_476_);
+	abstract Interface9_Impl2 method5433(Class55 class55, TextEncoder textEncoder, int i, int i_476_);
 
 	public abstract float method5434();
 
@@ -2545,11 +2545,11 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract Interface9_Impl2 method5439(Class55 class55, int i, int i_482_, boolean bool, byte[] is, int i_483_, int i_484_);
 
-	public final void method5058(int i, Class78 class78) {
+	public final void method5058(int i, DisplayMode displayMode) {
 		if (!((Class_ra_Sub3) this).aBoolean8326)
 			throw new RuntimeException("");
 		((Class_ra_Sub3) this).anInt8328 = i;
-		((Class_ra_Sub3) this).aClass78_8213 = class78;
+		((Class_ra_Sub3) this).aDisplayMode_8213 = displayMode;
 		if (((Class_ra_Sub3) this).aBoolean8327) {
 			((Class_ra_Sub3) this).aClass161Array8315[3].method1716();
 			((Class_ra_Sub3) this).aClass161Array8315[3].method1723();
@@ -2909,20 +2909,20 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		((Class_ra_Sub3) this).aClass57_Sub2_8320.method641((float) i - f_567_, (float) i_559_ - f_568_, (float) i_560_ - f_567_, (float) i_561_ - f_568_, (float) i + f_567_, (float) i_559_ + f_568_, 0, i_562_, i_564_);
 	}
 
-	abstract boolean method5461(Class55 class55, Class77 class77);
+	abstract boolean method5461(Class55 class55, TextEncoder textEncoder);
 
-	abstract boolean method5462(Class55 class55, Class77 class77);
+	abstract boolean method5462(Class55 class55, TextEncoder textEncoder);
 
 	void method5463() {
 		method5292(7);
 		method5450();
 	}
 
-	abstract boolean method5464(Class55 class55, Class77 class77);
+	abstract boolean method5464(Class55 class55, TextEncoder textEncoder);
 
-	abstract boolean method5465(Class55 class55, Class77 class77);
+	abstract boolean method5465(Class55 class55, TextEncoder textEncoder);
 
-	abstract boolean method5466(Class55 class55, Class77 class77);
+	abstract boolean method5466(Class55 class55, TextEncoder textEncoder);
 
 	public final void method5467() {
 		if (((Class_ra_Sub3) this).anInt8311 != 2) {
@@ -2972,7 +2972,7 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 
 	abstract Interface9_Impl3 method5478(Class55 class55, int i, int i_587_, int i_588_, boolean bool, byte[] is);
 
-	abstract Interface9_Impl2_Impl1 method5479(Class55 class55, Class77 class77, int i, int i_589_);
+	abstract Interface9_Impl2_Impl1 method5479(Class55 class55, TextEncoder textEncoder, int i, int i_589_);
 
 	public abstract void method5480();
 
@@ -3123,9 +3123,9 @@ public abstract class Class_ra_Sub3 extends GraphicsToolkit {
 		method5335(aClass233_8251);
 	}
 
-	public final void method5057(int i, Class78 class78) {
+	public final void method5057(int i, DisplayMode displayMode) {
 		((Class_ra_Sub3) this).anInt8328 = i;
-		((Class_ra_Sub3) this).aClass78_8213 = class78;
+		((Class_ra_Sub3) this).aDisplayMode_8213 = displayMode;
 		((Class_ra_Sub3) this).aBoolean8326 = true;
 	}
 

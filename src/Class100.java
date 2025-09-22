@@ -300,7 +300,7 @@ public class Class100 {
 			if (!OverlayType.activeToolkit.method5032())
 				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = 3;
 			else
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = GraphicsAutoSetup.clientPreferences.antialiasPreference.method5612(i_2_, 1352882135);
+				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = GraphicsSetup.clientPreferences.antialiasPreference.method5612(i_2_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("eb.aou(").append(')').toString());
 		}

@@ -5,7 +5,7 @@
 public abstract class Class365_Sub1_Sub3 extends Class365_Sub1 {
 	protected short aShort9802;
 	protected short aShort9803;
-	public static Class255 aClass255_9804;
+	public static DevConsole aDevConsole_9804;
 
 	final boolean method4384() {
 		return false;

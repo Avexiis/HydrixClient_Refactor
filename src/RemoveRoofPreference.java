@@ -1,12 +1,12 @@
-/* Class422_Sub2 - Decompiled by JODE
+/* RemoveRoofPreference - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.util.Calendar;
 
-public class Class422_Sub2 extends IntegerPreferenceField {
+public class RemoveRoofPreference extends IntegerPreferenceField {
 	public static int anInt8367 = 1;
 	public static int anInt8368 = 0;
-	public static Class505 aClass505_8369;
+	public static GameFont CONSOLE_SECONDARY_FONT;
 
 	public void method5627(int i) {
 		try {
@@ -19,7 +19,7 @@ public class Class422_Sub2 extends IntegerPreferenceField {
 		}
 	}
 
-	public Class422_Sub2(GamePreferences gamePreferences) {
+	public RemoveRoofPreference(GamePreferences gamePreferences) {
 		super(gamePreferences);
 	}
 
@@ -57,7 +57,7 @@ public class Class422_Sub2 extends IntegerPreferenceField {
 		}
 	}
 
-	public Class422_Sub2(int i, GamePreferences gamePreferences) {
+	public RemoveRoofPreference(int i, GamePreferences gamePreferences) {
 		super(i, gamePreferences);
 	}
 
@@ -87,14 +87,14 @@ public class Class422_Sub2 extends IntegerPreferenceField {
 
 	static final void method5630(ClientScript2 class403, int i) {
 		try {
-			int i_2_ = Class505.method6265(-1206667424);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (Class11.anInt156 = GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-460463412) * 1970440745) * -1111444967;
+			int i_2_ = GameFont.method6265(-1206667424);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (Class11.anInt156 = GraphicsSetup.clientPreferences.graphicsPreference.getValue(-460463412) * 1970440745) * -1111444967;
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = i_2_;
 			GameClient.map.method2667(1422757720);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adc.amy(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adc.amy(" + ')');
 		}
 	}
 
@@ -108,14 +108,15 @@ public class Class422_Sub2 extends IntegerPreferenceField {
 				FlickeringPreference.method5658(l);
 				calendar = Class490.aCalendar6073;
 			}
-			int i_4_ = calendar.get(5);
-			int i_5_ = calendar.get(2) + 1;
-			int i_6_ = calendar.get(1);
-			int i_7_ = calendar.get(11);
-			int i_8_ = calendar.get(12);
-			return new StringBuilder().append(Integer.toString(i_4_ / 10)).append(i_4_ % 10).append("/").append(i_5_ / 10).append(i_5_ % 10).append("/").append(i_6_ % 100 / 10).append(i_6_ % 10).append(" ").append(i_7_ / 10).append(i_7_ % 10).append(":").append(i_8_ / 10).append(i_8_ % 10).toString();
+			int DATE = calendar.get(Calendar.DATE);
+			int MONTH = calendar.get(Calendar.MONTH) + 1;
+			int YEAR = calendar.get(Calendar.YEAR);
+			int HOUR = calendar.get(Calendar.HOUR_OF_DAY);
+			int MINUTE = calendar.get(Calendar.MINUTE);
+			return Integer.toString(
+					DATE / 10) + DATE % 10 + "/" + MONTH / 10 + MONTH % 10 + "/" + YEAR % 100 / 10 + YEAR % 10 + " " + HOUR / 10 + HOUR % 10 + ":" + MINUTE / 10 + MINUTE % 10;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adc.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adc.b(" + ')');
 		}
 	}
 }

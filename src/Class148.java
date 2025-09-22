@@ -175,7 +175,7 @@ public class Class148 implements Interface23 {
 			int i_29_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_29_, (byte) -44);
 			RSInterface RSInterface = SpotAnimTypeList.aRSInterfaceArray4165[i_29_ >> 16];
-			Class372_Sub3.method4602(class105, RSInterface, class403, 2065875065);
+			DevConsoleInit.method4602(class105, RSInterface, class403, 2065875065);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("g.hc(").append(')').toString());
 		}
@@ -237,7 +237,7 @@ public class Class148 implements Interface23 {
 			if (null == Class231.aFrame2589) {
 				int i_34_ = 1898544019 * GameClient.anInt6473;
 				int i_35_ = 540368727 * GameClient.anInt6474;
-				int i_36_ = (Class78.anInt733 * -639974669 - Class462.canvasWidth * -2110394505 - i_34_);
+				int i_36_ = (DisplayMode.anInt733 * -639974669 - Class462.canvasWidth * -2110394505 - i_34_);
 				int i_37_ = (1282634425 * GameClient.anInt6472 - -1111710645 * Class298_Sub40_Sub9.anInt9716 - i_35_);
 				if (i_34_ > 0 || i_36_ > 0 || i_35_ > 0 || i_37_ > 0) {
 					try {
@@ -254,11 +254,11 @@ public class Class148 implements Interface23 {
 						if (i_34_ > 0)
 							graphics.fillRect(i_38_, i_39_, i_34_, GameClient.anInt6472 * 1282634425);
 						if (i_35_ > 0)
-							graphics.fillRect(i_38_, i_39_, -639974669 * Class78.anInt733, i_35_);
+							graphics.fillRect(i_38_, i_39_, -639974669 * DisplayMode.anInt733, i_35_);
 						if (i_36_ > 0)
-							graphics.fillRect((i_38_ + Class78.anInt733 * -639974669 - i_36_), i_39_, i_36_, GameClient.anInt6472 * 1282634425);
+							graphics.fillRect((i_38_ + DisplayMode.anInt733 * -639974669 - i_36_), i_39_, i_36_, GameClient.anInt6472 * 1282634425);
 						if (i_37_ > 0)
-							graphics.fillRect(i_38_, (GameClient.anInt6472 * 1282634425 + i_39_ - i_37_), -639974669 * Class78.anInt733, i_37_);
+							graphics.fillRect(i_38_, (GameClient.anInt6472 * 1282634425 + i_39_ - i_37_), -639974669 * DisplayMode.anInt733, i_37_);
 					} catch (Exception exception) {
 						/* empty */
 					}

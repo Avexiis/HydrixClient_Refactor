@@ -36,7 +36,7 @@ public class Class372 {
 
 	static final void method4588(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569.method5716((byte) -30);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aGraphicsSetup_7569.method5716((byte) -30);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("pl.aju(").append(')').toString());
 		}
@@ -44,12 +44,12 @@ public class Class372 {
 
 	public static boolean method4589(int i, String string, int i_4_) {
 		try {
-			Class474.aClass471_5979 = new IPAddress();
-			Class474.aClass471_5979.worldId = i * 348739329;
-			Class474.aClass471_5979.address = string;
+			Class474.worldAddress = new IPAddress();
+			Class474.worldAddress.worldId = i * 348739329;
+			Class474.worldAddress.address = string;
 			if (Class242.aReferenceTable_2708 != ReferenceTable.aReferenceTable_6557) {
-				Class474.aClass471_5979.anInt5954 = (815680320 + -1670427267 * Class474.aClass471_5979.worldId);
-				Class474.aClass471_5979.anInt5955 = (-52655920 + 925746937 * Class474.aClass471_5979.worldId);
+				Class474.worldAddress.anInt5954 = (815680320 + -1670427267 * Class474.worldAddress.worldId);
+				Class474.worldAddress.anInt5955 = (-52655920 + 925746937 * Class474.worldAddress.worldId);
 			}
 			return true;
 		} catch (RuntimeException runtimeexception) {

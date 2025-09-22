@@ -15,13 +15,13 @@ public class Class142 {
 
 	static void method1568(boolean bool, int i) {
 		try {
-			if (Class8.aString101.length() != 0) {
-				Class255.sendDevConsoleMsg(new StringBuilder().append("--> ").append(Class8.aString101).toString(), 1401138202);
-				ConsoleCommands.method5605(Class8.aString101, false, bool, 1788237828);
-				Class8.anInt105 = 0;
+			if (DevConsoleState.aString101.length() != 0) {
+				DevConsole.sendDevConsoleMsg(new StringBuilder().append("--> ").append(DevConsoleState.aString101).toString());
+				ConsoleCommands.clientCommands(DevConsoleState.aString101, false, bool, 1788237828);
+				DevConsoleState.anInt105 = 0;
 				if (!bool) {
-					Class8.anInt99 = 0;
-					Class8.aString101 = "";
+					DevConsoleState.anInt99 = 0;
+					DevConsoleState.aString101 = "";
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -141,8 +141,8 @@ public class Class142 {
 						OverlayType.activeToolkit.ba(3, i_18_);
 					Class298_Sub40_Sub13.method3518(GameClient.aClass222_8871, GameClient.aClass233_8658, i_3_, i_4_, -1854574289);
 					GameClient.map.method2640((byte) -11).updateAtmosphereScene(GameClient.map, -1036263435);
-					byte i_19_ = (GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565.method5689(-2013953489) == 2 ? (byte) (-1953789277 * GameClient.anInt8777) : (byte) 1);
-					GameClient.map.method2675(-1611682495).method4040(GameClient.anInt8884 * 443738891, Class367.anInt4000 * -1740717447, 1449634147 * Class110.anInt6403, Class146.anInt1575 * -299812095, GameClient.map.method2642(1646760373), GameClient.anIntArray8793, GameClient.anIntArray8670, GameClient.anIntArray8795, GameClient.anIntArray8641, GameClient.anIntArray8797, 1 + (Class287.myPlayer.plane), i_19_, (int) sceneObjectPosition.x >> 9, (int) sceneObjectPosition.z >> 9, GraphicsAutoSetup.clientPreferences.flickeringPreference.method5655(2137164627) == 0, true, 0, true);
+					byte i_19_ = (GraphicsSetup.clientPreferences.aClass422_Sub17_7565.method5689(-2013953489) == 2 ? (byte) (-1953789277 * GameClient.anInt8777) : (byte) 1);
+					GameClient.map.method2675(-1611682495).method4040(GameClient.anInt8884 * 443738891, Class367.anInt4000 * -1740717447, 1449634147 * Class110.anInt6403, Class146.anInt1575 * -299812095, GameClient.map.method2642(1646760373), GameClient.anIntArray8793, GameClient.anIntArray8670, GameClient.anIntArray8795, GameClient.anIntArray8641, GameClient.anIntArray8797, 1 + (Class287.myPlayer.plane), i_19_, (int) sceneObjectPosition.x >> 9, (int) sceneObjectPosition.z >> 9, GraphicsSetup.clientPreferences.flickeringPreference.method5655(2137164627) == 0, true, 0, true);
 					GameClient.anInt8723 += -2109562397;
 					Class247.method2365(170542119);
 					if (0 == -1233866115 * GameClient.anInt8752) {
@@ -162,7 +162,7 @@ public class Class142 {
 						GameClient.aBoolean8663 = false;
 					if (GameClient.aBoolean8663) {
 						OverlayType.activeToolkit.method5015(i, i_2_, i_3_, i_4_, -16777216, (byte) 7);
-						Class139.method1548((LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210)), false, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 34);
+						Class139.method1548((LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), false, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) 34);
 					}
 					Class82_Sub7.method889(GameClient.aClass233_8658, false, (float) (i_3_ / 2 + i), (float) (i_4_ / 2 + i_2_), (float) (-2134375937 * GameClient.anInt8940 << 1), (float) (-2134375937 * GameClient.anInt8940 << 1), i_3_, i_4_, -725589740);
 					OverlayType.activeToolkit.method5182(GameClient.aClass233_8658);
@@ -174,18 +174,18 @@ public class Class142 {
 		}
 	}
 
-	static Class505 method1571(int i) {
+	static GameFont method1571(int i) {
 		try {
-			Class505 class505;
+			GameFont gameFont;
 			if (ContextMenu.aBoolean5496) {
-				if (null != Class65.aClass264_664 && Class211.aClass505_2420 != null)
-					class505 = Class211.aClass505_2420;
+				if (null != Class65.aClass264_664 && Class211.aGameFont_2420 != null)
+					gameFont = Class211.aGameFont_2420;
 				else
-					class505 = Class82_Sub19_Sub1.aClass505_9111;
+					gameFont = GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT;
 			} else
-				class505 = Class82_Sub19_Sub1.aClass505_9111;
-			ContextMenu.anInt5467 = (1791243901 * class505.anInt6197 + 2030544143 * class505.anInt6202);
-			return class505;
+				gameFont = GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT;
+			ContextMenu.anInt5467 = (1791243901 * gameFont.descent + 2030544143 * gameFont.ascent);
+			return gameFont;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ft.n(").append(')').toString());
 		}

@@ -25,7 +25,7 @@ public class Class336_Sub4 extends Class336 {
 
 	public static Class297 method4103(int i, int i_7_, int i_8_, int i_9_, int i_10_, boolean bool, int i_11_, int i_12_) {
 		try {
-			if ((bool ? GraphicsAutoSetup.clientPreferences.aVolumePreference_7583.method5726(-2143588734) : GraphicsAutoSetup.clientPreferences.aVolumePreference_7553.method5726(-2141973598)) != 0 && i_7_ != 0 && -991384187 * Class300.anInt3213 < 50 && i != -1) {
+			if ((bool ? GraphicsSetup.clientPreferences.aVolumePreference_7583.method5726(-2143588734) : GraphicsSetup.clientPreferences.aVolumePreference_7553.method5726(-2141973598)) != 0 && i_7_ != 0 && -991384187 * Class300.anInt3213 < 50 && i != -1) {
 				Class297 class297 = new Class297(bool ? (byte) 3 : (byte) 2, i, i_7_, i_8_, i_9_, i_10_, i_11_, null);
 				Class300.aClass297Array3214[(Class300.anInt3213 += -598588595) * -991384187 - 1] = class297;
 				return class297;

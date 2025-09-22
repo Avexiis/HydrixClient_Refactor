@@ -98,7 +98,7 @@ public class AppletParam {
 						else
 							Class239.method2210(i_3_, i_4_, 0, i_8_, i_7_, 1846790975);
 					}
-				} else if (GraphicsAutoSetup.clientPreferences.aVolumePreference_7582.method5726(-2147180332) != 0) {
+				} else if (GraphicsSetup.clientPreferences.aVolumePreference_7582.method5726(-2147180332) != 0) {
 					SceneObjectPosition sceneObjectPosition = class365_sub1.method4337().aSceneObjectPosition_2599;
 					int i_9_ = (int) sceneObjectPosition.x - 256 >> 9;
 					int i_10_ = (int) sceneObjectPosition.z - 256 >> 9;

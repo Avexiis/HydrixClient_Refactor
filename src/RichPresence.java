@@ -14,7 +14,7 @@ public class RichPresence {
     private final String CLIENT_ID = "removed";
 
     /**RPC Image and default status config*/
-    private String customState = "Exploring " + Settings.SERVER_NAME; //Default if a user doesn't set their own
+    private String customState = "Exploring " + Settings.SERVER_NAME; //Default if a user doesn't set their own w/command
     private String largeImageKey = "default"; //Main image key, these are added in the Discord dev portal under Rich Presence > Art Assets
     private String smallImageKey = "rsps"; //Same as above
     private String largeImageText = Settings.SERVER_NAME; //This one is the text that shows when you hover over the large image

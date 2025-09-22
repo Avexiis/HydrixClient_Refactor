@@ -133,7 +133,7 @@ public class Class284 {
 		((Class284) this).anInt3072 -= i * -1831995011;
 		if (null != ((Class284) this).aClass298_Sub19_3054 && ((Class284) this).anInt3072 * -577697835 <= 0) {
 			((Class284) this).anInt3072 += -1831995011 * (anInt3059 * 1164070869 >> 4);
-			overheadString.method731(((Class284) this).aClass298_Sub19_3054, -1934060670);
+			OverheadString.method731(((Class284) this).aClass298_Sub19_3054, -1934060670);
 			method2691(((Class284) this).aClass298_Sub19_3054, ((Class284) this).aClass298_Sub19_3054.method2950(), (byte) -73);
 			int i_4_ = 0;
 			int i_5_ = 255;
@@ -369,7 +369,7 @@ public class Class284 {
 
 	static final void method2695(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.bloomPreference.method5647(207850013) == 1 ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.bloomPreference.method5647(207850013) == 1 ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lu.ajo(").append(')').toString());
 		}

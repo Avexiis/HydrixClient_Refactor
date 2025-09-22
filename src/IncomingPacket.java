@@ -369,7 +369,7 @@ public class IncomingPacket {
 
 	static final void method1905(ClientScript2 class403, byte i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.fogPreference, class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919] == 1 ? 1 : 0, -802327901);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.fogPreference, class403.anIntArray5244[(class403.anInt5239 -= -391880689) * 681479919] == 1 ? 1 : 0, -802327901);
 			GameClient.map.method2667(549218846);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;

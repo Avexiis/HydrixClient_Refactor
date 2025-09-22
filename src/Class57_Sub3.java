@@ -203,7 +203,7 @@ public class Class57_Sub3 extends Class57 {
 		((Class57_Sub3) this).anInt9044 = 0;
 		((Class57_Sub3) this).anInt9045 = 0;
 		((Class57_Sub3) this).aClass_ra_Sub2_9041 = class_ra_sub2;
-		((Class57_Sub3) this).aClass30_Sub2_Sub1_9043 = Class30_Sub2_Sub1.method426(class_ra_sub2, (bool ? Class55.aClass55_557 : Class55.aClass55_560), Class77.aClass77_717, i, i_66_);
+		((Class57_Sub3) this).aClass30_Sub2_Sub1_9043 = Class30_Sub2_Sub1.method426(class_ra_sub2, (bool ? Class55.aClass55_557 : Class55.aClass55_560), TextEncoder.aTextEncoder_717, i, i_66_);
 	}
 
 	void method689(int i) {

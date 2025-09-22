@@ -220,7 +220,7 @@ public class AbstractQueue_Sub1 extends AbstractQueue {
 
 	static final void method6386(ClientScript2 class403, byte i) {
 		try {
-			ConsoleCommands.method5605((String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]), false, false, 945299991);
+			ConsoleCommands.clientCommands((String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]), false, false, 945299991);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ajy.afx(").append(')').toString());
 		}

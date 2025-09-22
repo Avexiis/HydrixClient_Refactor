@@ -16,11 +16,11 @@ public class Class200_Sub1 extends Class200 implements Interface9_Impl3 {
 	}
 
 	Class200_Sub1(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, int i, int i_0_, int i_1_, boolean bool, byte[] is) {
-		super(class_ra_sub3_sub2, class55, Class77.aClass77_717, false, i * i_0_ * i_1_);
+		super(class_ra_sub3_sub2, class55, TextEncoder.aTextEncoder_717, false, i * i_0_ * i_1_);
 		((Class200_Sub1) this).anInt8625 = i;
 		((Class200_Sub1) this).anInt8626 = i_0_;
 		((Class200_Sub1) this).anInt8627 = i_1_;
-		((Class200_Sub1) this).aLong6407 = (IDirect3DDevice.CreateVolumeTexture(((Class_ra_Sub3_Sub2) ((Class200_Sub1) this).aClass_ra_Sub3_Sub2_6410).aLong9847, i, i_0_, i_1_, 1, 0, Class_ra_Sub3_Sub2.method5546(class55, ((Class200_Sub1) this).aClass77_6408), 1));
+		((Class200_Sub1) this).aLong6407 = (IDirect3DDevice.CreateVolumeTexture(((Class_ra_Sub3_Sub2) ((Class200_Sub1) this).aClass_ra_Sub3_Sub2_6410).aLong9847, i, i_0_, i_1_, 1, 0, Class_ra_Sub3_Sub2.method5546(class55, ((Class200_Sub1) this).aTextEncoder_6408), 1));
 		ByteBuffer bytebuffer = ((Class200_Sub1) this).aClass_ra_Sub3_Sub2_6410.aByteBuffer8216;
 		bytebuffer.clear();
 		bytebuffer.put(is);

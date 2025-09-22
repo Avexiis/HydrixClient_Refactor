@@ -34,7 +34,7 @@ public class Class200_Sub2 extends Class200 implements Interface9_Impl1 {
 	}
 
 	Class200_Sub2(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, int i, boolean bool, int[][] is) {
-		super(class_ra_sub3_sub2, Class55.aClass55_557, Class77.aClass77_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9857, i * i * 6);
+		super(class_ra_sub3_sub2, Class55.aClass55_557, TextEncoder.aTextEncoder_717, bool && ((Class_ra_Sub3_Sub2) class_ra_sub3_sub2).aBoolean9857, i * i * 6);
 		((Class200_Sub2) this).anInt8628 = i;
 		if (((Class200_Sub2) this).aBoolean6406)
 			((Class200_Sub2) this).aLong6407 = (IDirect3DDevice.CreateCubeTexture((((Class_ra_Sub3_Sub2) ((Class200_Sub2) this).aClass_ra_Sub3_Sub2_6410).aLong9847), ((Class200_Sub2) this).anInt8628, 0, 1024, 21, 1));

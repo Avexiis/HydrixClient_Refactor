@@ -240,10 +240,10 @@ public class Class398 {
 				if (GameClient.map.method2675(-1611682495) != null) {
 					GameClient.map.method2644(-1368274969).method2234(OverlayType.activeToolkit, i, i_22_, i_23_, i_24_, GameClient.map.getSceneClipDataPlane(i), 366084983);
 					if (i_25_ >= 0) {
-						int i_31_ = GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547.method5629(-810781268);
-						GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547), 1, 650835797);
+						int i_31_ = GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547.method5629(-810781268);
+						GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547), 1, 650835797);
 						GameClient.map.method2644(-630573167).add_loc(OverlayType.activeToolkit, i_30_, i, i_23_, i_24_, i_25_, i_26_, i_27_, GameClient.map.getSceneClipDataPlane(i), i_28_);
-						GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547), i_31_, 631929348);
+						GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547), i_31_, 631929348);
 					}
 				}
 			}
@@ -262,7 +262,7 @@ public class Class398 {
 
 	static final void method4925(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.groundBlendingPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) != 0 ? 1 : 0, -856880407);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.groundBlendingPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) != 0 ? 1 : 0, -856880407);
 			Class3.writePreferences();
 			GameClient.map.method2667(1778418334);
 		} catch (RuntimeException runtimeexception) {

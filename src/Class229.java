@@ -221,22 +221,22 @@ public class Class229 implements Interface12 {
 					if (container == null) {
 						/* empty */
 					} else {
-						Class78.anInt733 = container.getSize().width * 1325868603;
+						DisplayMode.anInt733 = container.getSize().width * 1325868603;
 						GameClient.anInt6472 = container.getSize().height * -2115832951;
 						if (Class298_Sub36.aFrame7403 == container) {
 							Insets insets = Class298_Sub36.aFrame7403.getInsets();
-							Class78.anInt733 -= 1325868603 * (insets.left + insets.right);
+							DisplayMode.anInt733 -= 1325868603 * (insets.left + insets.right);
 							GameClient.anInt6472 -= (insets.bottom + insets.top) * -2115832951;
 						}
-						if (-639974669 * Class78.anInt733 <= 0)
-							Class78.anInt733 = 1325868603;
+						if (-639974669 * DisplayMode.anInt733 <= 0)
+							DisplayMode.anInt733 = 1325868603;
 						if (1282634425 * GameClient.anInt6472 <= 0)
 							GameClient.anInt6472 = -2115832951;
 						if (MagnetDefinitions.method1859((byte) -55) != 1)
 							ChecksumTableEntry.method2283((byte) 3);
 						else {
 							Class462.canvasWidth = GameClient.anInt8794 * -1494558011;
-							GameClient.anInt6473 = ((-639974669 * Class78.anInt733 - 775068819 * GameClient.anInt8794) / 2 * -753018213);
+							GameClient.anInt6473 = ((-639974669 * DisplayMode.anInt733 - 775068819 * GameClient.anInt8794) / 2 * -753018213);
 							Class298_Sub40_Sub9.anInt9716 = -909258791 * GameClient.anInt8803;
 							GameClient.anInt6474 = 0;
 						}

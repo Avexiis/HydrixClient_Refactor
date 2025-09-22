@@ -110,7 +110,7 @@ public class Class140 implements Runnable {
 				}
 				if (class503.aBoolean6163) {
 					if (1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189 != 0) {
-						String string_3_ = GameClient.aGameContext_8944 == GameContext.stellar_dawn ? LocalizedString.LABEL_RATING_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210) : LocalizedString.LABEL_LEVEL_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210);
+						String string_3_ = GameClient.aGameContext_8944 == GameContext.stellar_dawn ? LocalizedString.LABEL_RATING_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210) : LocalizedString.LABEL_LEVEL_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
 						string = new StringBuilder().append(string).append(Class18.method358(1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189, Class287.myPlayer.maxHitpoints * 696798311, (byte) 4)).append(Symbol.OPEN_PARENTHESES).append(string_3_).append(1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189).append(Symbol.CLOSE_PARENTHESES).toString();
 					}
 					if (GameClient.aBoolean8835 && !bool) {
@@ -129,7 +129,7 @@ public class Class140 implements Runnable {
 								/**
 								 * This handles option slot 1?
 								 */
-								if (strings[i_4_] != null && (0 == class503.aByte6158 || !strings[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(Class321.ACTIVE_LANGUAGE, -875414210)) && !strings[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_EXAMINE.getText(Class321.ACTIVE_LANGUAGE, -875414210)))) {
+								if (strings[i_4_] != null && (0 == class503.aByte6158 || !strings[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)) && !strings[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_EXAMINE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)))) {
 									int i_5_ = 0;
 									int i_6_ = 1395924385 * GameClient.anInt8690;
 									if (i_4_ == 0) {
@@ -156,12 +156,12 @@ public class Class140 implements Runnable {
 									if (i_4_ == class503.anInt6146 * -598113659) {
 										i_6_ = class503.anInt6144 * -899602593;
 									}
-									Class234.method2174(strings[i_4_], new StringBuilder().append(Class285.method2709(16776960, -1768803512)).append(string).toString(), strings[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(Class321.ACTIVE_LANGUAGE, -875414210)) ? class503.anInt6147 * 1183282735 : i_6_, i_5_, -1, class365_sub1_sub1_sub2_sub1.entityIndex * 1888274983, 0, 0, true, false, class365_sub1_sub1_sub2_sub1.entityIndex * 1888274983, false, -1881687525);
+									Class234.method2174(strings[i_4_], new StringBuilder().append(Class285.method2709(16776960, -1768803512)).append(string).toString(), strings[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)) ? class503.anInt6147 * 1183282735 : i_6_, i_5_, -1, class365_sub1_sub1_sub2_sub1.entityIndex * 1888274983, 0, 0, true, false, class365_sub1_sub1_sub2_sub1.entityIndex * 1888274983, false, -1881687525);
 								}
 							}
 							if (class503.aByte6158 == 1) {
 								for (int i_7_ = 0; i_7_ < strings.length; i_7_++) {
-									if (strings[i_7_] != null && (strings[i_7_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(Class321.ACTIVE_LANGUAGE, -875414210)) || strings[i_7_].equalsIgnoreCase(LocalizedString.BUTTON_EXAMINE.getText(Class321.ACTIVE_LANGUAGE, -875414210)))) {
+									if (strings[i_7_] != null && (strings[i_7_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)) || strings[i_7_].equalsIgnoreCase(LocalizedString.BUTTON_EXAMINE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)))) {
 										short i_8_ = 0;
 										
 //										if (1817570317 * class365_sub1_sub1_sub2_sub1.anInt10189 > Class287.myPlayer.maxHitpoints * 696798311) {
@@ -199,7 +199,7 @@ public class Class140 implements Runnable {
 										if (-598113659 * class503.anInt6146 == i_7_) {
 											i_10_ = -899602593 * class503.anInt6144;
 										}
-										Class234.method2174(strings[i_7_], new StringBuilder().append(Class285.method2709(16776960, -1391055346)).append(string).toString(), strings[i_7_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(Class321.ACTIVE_LANGUAGE, -875414210)) ? class503.anInt6147 * 1183282735 : i_10_, i_9_, -1, class365_sub1_sub1_sub2_sub1.entityIndex * 1888274983, 0, 0, true, false, 1888274983 * class365_sub1_sub1_sub2_sub1.entityIndex, false, -1360691095);
+										Class234.method2174(strings[i_7_], new StringBuilder().append(Class285.method2709(16776960, -1391055346)).append(string).toString(), strings[i_7_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)) ? class503.anInt6147 * 1183282735 : i_10_, i_9_, -1, class365_sub1_sub1_sub2_sub1.entityIndex * 1888274983, 0, 0, true, false, 1888274983 * class365_sub1_sub1_sub2_sub1.entityIndex, false, -1360691095);
 									}
 								}
 							}

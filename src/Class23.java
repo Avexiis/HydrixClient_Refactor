@@ -117,7 +117,7 @@ public class Class23 {
 	public static int method379(Packet class298_sub53, String string, int i) {
 		try {
 			int i_6_ = 385051775 * class298_sub53.pos;
-			byte[] is = Class77.method840(string, 1241279576);
+			byte[] is = TextEncoder.encodeText(string, 1241279576);
 			class298_sub53.method3594(is.length, (byte) 34);
 			class298_sub53.pos += ((Class106.aHuffman_1308.method1246(is, 0, is.length, class298_sub53.payload, 385051775 * class298_sub53.pos, (byte) -45)) * 116413311);
 			return 385051775 * class298_sub53.pos - i_6_;

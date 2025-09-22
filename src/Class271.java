@@ -56,7 +56,7 @@ public class Class271 {
 				Class456[] class456s = Js5Archive.method1238(SpotAnimTypeList.aClass457_4164, (short) 486);
 				Class456[] class456s_3_ = new Class456[class456s.length];
 				int i_4_ = 0;
-				int i_5_ = GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566.method5654(-1747444886);
+				int i_5_ = GraphicsSetup.clientPreferences.aScreenSizePreference_7566.method5654(-1747444886);
 				while_69_: for (int i_6_ = 0; i_6_ < class456s.length; i_6_++) {
 					Class456 class456 = class456s[i_6_];
 					if (class456.anInt5664 * -1087459453 > 0 && -1087459453 * class456.anInt5664 < 24) {

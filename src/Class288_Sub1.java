@@ -54,7 +54,7 @@ public class Class288_Sub1 extends Class288 implements Runnable {
 					if (Class525.anInt6295 * -1864800463 > i_0_)
 						Class366.method4547(261104990);
 					if (Class525.aClass486_6298 == Class486.aClass486_6060) {
-						GameClient.aClass25_8693.method389((Class264_Sub4.method2515(Class241.aClass471_2705.createSocket(295506052), 15000, -649048480)), Class241.aClass471_2705.address, (byte) 0);
+						GameClient.aClass25_8693.method389((Class264_Sub4.method2515(Class241.lobbyAddress.createSocket(295506052), 15000, -649048480)), Class241.lobbyAddress.address, (byte) 0);
 						GameClient.aClass25_8693.method383((short) 8191);
 						Class298_Sub36 class298_sub36 = Class82_Sub6.method885(-1410195138);
 						class298_sub36.buffer.writeByte(-1813470547 * Class211.aClass211_2415.anInt2418);
@@ -67,7 +67,7 @@ public class Class288_Sub1 extends Class288 implements Runnable {
 						class298_sub36.buffer.writeString(GameClient.aString8655, 2134259589);
 						class298_sub36.buffer.writeShort(GameClient.anInt8665 * -1154804873, 16711935);
 						class298_sub36.buffer.writeLong(GameClient.aLong8645 * -5648129435911399733L);
-						class298_sub36.buffer.writeByte(Class321.ACTIVE_LANGUAGE.method242(694163818));
+						class298_sub36.buffer.writeByte(DynamicLight.ACTIVE_LANGUAGE.method242(694163818));
 						class298_sub36.buffer.writeByte(GameClient.aGameContext_8944.gameType * -937307905);
 						Class10.method322((class298_sub36.buffer), (byte) 1);
 						String string = GameClient.aString8648;

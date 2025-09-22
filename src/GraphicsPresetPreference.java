@@ -72,7 +72,7 @@ public class GraphicsPresetPreference extends IntegerPreferenceField {
 
 	static final void method5710(int i) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565.method5689(-2013953489) == 2) {
+			if (GraphicsSetup.clientPreferences.aClass422_Sub17_7565.method5689(-2013953489) == 2) {
 				byte[][][] is = GameClient.map.method2642(899241973);
 				byte i_2_ = (byte) (-1953789277 * GameClient.anInt8777 - 4 & 0xff);
 				int i_3_ = (-1953789277 * GameClient.anInt8777 % GameClient.map.upperX(-2129604944));

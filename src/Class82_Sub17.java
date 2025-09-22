@@ -48,7 +48,7 @@ public class Class82_Sub17 extends Class82 {
 
 	static final void method919(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.sceneryShadowPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -2102625264);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.sceneryShadowPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -2102625264);
 			GameClient.map.method2667(732894181);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;

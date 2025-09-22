@@ -343,9 +343,9 @@ public abstract class GraphicsToolkit {
 
 	public abstract void method5056(int i, int i_177_, int i_178_, int i_179_);
 
-	public abstract void method5057(int i, Class78 class78);
+	public abstract void method5057(int i, DisplayMode displayMode);
 
-	public abstract void method5058(int i, Class78 class78);
+	public abstract void method5058(int i, DisplayMode displayMode);
 
 	public abstract void O();
 
@@ -429,7 +429,7 @@ public abstract class GraphicsToolkit {
 
 	public abstract void ej(int i, int i_209_, int i_210_, int i_211_);
 
-	public abstract void method5089(int i, Class78 class78);
+	public abstract void method5089(int i, DisplayMode displayMode);
 
 	public abstract void ea(int i, int i_212_, int i_213_, int i_214_);
 
@@ -443,7 +443,7 @@ public abstract class GraphicsToolkit {
 
 	public abstract void fy(int i, int i_226_);
 
-	public abstract Class264 method5092(Class505 class505, Class89[] class89s, boolean bool);
+	public abstract Class264 method5092(GameFont gameFont, Class89[] class89s, boolean bool);
 
 	public abstract void fh(int i, int i_227_);
 
@@ -511,9 +511,9 @@ public abstract class GraphicsToolkit {
 
 	public abstract void gv(int i, Class_ta class_ta, int i_326_, int i_327_);
 
-	public abstract Class264 method5113(Class505 class505, Class89[] class89s, boolean bool);
+	public abstract Class264 method5113(GameFont gameFont, Class89[] class89s, boolean bool);
 
-	public abstract Class264 method5114(Class505 class505, Class89[] class89s, boolean bool);
+	public abstract Class264 method5114(GameFont gameFont, Class89[] class89s, boolean bool);
 
 	public abstract void method5115(int i);
 
@@ -659,9 +659,9 @@ public abstract class GraphicsToolkit {
 
 	public abstract void method5154();
 
-	public abstract void method5155(int i, Class78 class78);
+	public abstract void method5155(int i, DisplayMode displayMode);
 
-	public abstract void method5156(int i, Class78 class78);
+	public abstract void method5156(int i, DisplayMode displayMode);
 
 	public abstract void fb(int i, int i_398_);
 
@@ -793,7 +793,7 @@ public abstract class GraphicsToolkit {
 		try {
 			if (null != Class82_Sub6.aClass227_6843) {
 				Class288_Sub1.aClass219_7147 = new Class219();
-				Class288_Sub1.aClass219_7147.method2043(-4360787748556788915L * Class230.aLong2560, ((Class227) Class82_Sub6.aClass227_6843).aClass470_2549.getText(Class321.ACTIVE_LANGUAGE, -875414210), (360399239 * ((Class227) Class82_Sub6.aClass227_6843).anInt2551), Class82_Sub6.aClass227_6843, 180676280);
+				Class288_Sub1.aClass219_7147.method2043(-4360787748556788915L * Class230.aLong2560, ((Class227) Class82_Sub6.aClass227_6843).aClass470_2549.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), (360399239 * ((Class227) Class82_Sub6.aClass227_6843).anInt2551), Class82_Sub6.aClass227_6843, 180676280);
 				Class459.aThread5674 = new Thread(Class288_Sub1.aClass219_7147, "");
 				Class459.aThread5674.start();
 			}
@@ -802,17 +802,17 @@ public abstract class GraphicsToolkit {
 		}
 	}
 
-	static void method5192(int i, int i_484_, int i_485_, int i_486_, int i_487_, int i_488_, int i_489_, Class298_Sub37_Sub15 class298_sub37_sub15, Class264 class264, Class505 class505, int i_490_, int i_491_, int i_492_) {
+	static void method5192(int i, int i_484_, int i_485_, int i_486_, int i_487_, int i_488_, int i_489_, Class298_Sub37_Sub15 class298_sub37_sub15, Class264 class264, GameFont gameFont, int i_490_, int i_491_, int i_492_) {
 		try {
-			if (i > i_485_ && i < i_485_ + i_487_ && i_484_ > i_489_ - class505.anInt6202 * 1110385787 - 1 && i_484_ < i_489_ + -1883958527 * class505.anInt6197 && ((Class298_Sub37_Sub15) class298_sub37_sub15).aBoolean9664)
+			if (i > i_485_ && i < i_485_ + i_487_ && i_484_ > i_489_ - gameFont.ascent * 1110385787 - 1 && i_484_ < i_489_ + -1883958527 * gameFont.descent && ((Class298_Sub37_Sub15) class298_sub37_sub15).aBoolean9664)
 				i_490_ = i_491_;
 			int[] is = Class313.method3821(class298_sub37_sub15, (byte) -16);
-			String string = Class8.method315(class298_sub37_sub15, 1974058841);
+			String string = DevConsoleState.method315(class298_sub37_sub15, 1974058841);
 			if (is != null)
 				string = new StringBuilder().append(string).append(Class216.method1999(is, (byte) 1)).toString();
 			class264.method2480(string, 3 + i_485_, i_489_, i_490_, 0, GameClient.aRandom8702, Class368.anInt4005 * 1401020893, ContextMenu.aClass57Array5501, FogPreference.anIntArray8372, 65280);
 			if (((Class298_Sub37_Sub15) class298_sub37_sub15).aBoolean9665)
-				SpotAnimation.aClass57_573.method645(i_485_ + 5 + class505.method6264(string, 1318090489), i_489_ - 1110385787 * class505.anInt6202);
+				SpotAnimation.aClass57_573.method645(i_485_ + 5 + gameFont.method6264(string, 1318090489), i_489_ - 1110385787 * gameFont.ascent);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ra.an(").append(')').toString());
 		}

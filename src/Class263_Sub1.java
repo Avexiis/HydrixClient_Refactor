@@ -12,7 +12,7 @@ public class Class263_Sub1 extends Class263 implements Interface9_Impl2_Impl1 {
 	}
 
 	Class263_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, int i, int i_0_, boolean bool, int[] is, int i_1_, int i_2_) {
-		super(class_ra_sub3_sub1, 3553, Class55.aClass55_557, Class77.aClass77_717, i * i_0_, bool);
+		super(class_ra_sub3_sub1, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_717, i * i_0_, bool);
 		((Class263_Sub1) this).anInt9952 = i;
 		((Class263_Sub1) this).anInt9951 = i_0_;
 		((Class263_Sub1) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
@@ -25,7 +25,7 @@ public class Class263_Sub1 extends Class263 implements Interface9_Impl2_Impl1 {
 	}
 
 	Class263_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, int i, int i_3_, boolean bool, byte[] is, int i_4_, int i_5_) {
-		super(class_ra_sub3_sub1, 3553, class55, Class77.aClass77_717, i * i_3_, bool);
+		super(class_ra_sub3_sub1, 3553, class55, TextEncoder.aTextEncoder_717, i * i_3_, bool);
 		((Class263_Sub1) this).anInt9952 = i;
 		((Class263_Sub1) this).anInt9951 = i_3_;
 		((Class263_Sub1) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
@@ -46,7 +46,7 @@ public class Class263_Sub1 extends Class263 implements Interface9_Impl2_Impl1 {
 				if (class55_7_ == Class55.aClass55_558)
 					OpenGL.glCompressedTexImage2Dub((((Class263_Sub1) this).anInt6415), 0, 33779, i, i_3_, 0, i * i_3_, is, i_4_);
 				else
-					OpenGL.glTexImage2Dub(((Class263_Sub1) this).anInt6415, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub1) this).aClass55_6419), (((Class263_Sub1) this).aClass77_6420)), i, i_3_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub1) this).aClass55_6419), 5121, is, i_4_);
+					OpenGL.glTexImage2Dub(((Class263_Sub1) this).anInt6415, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub1) this).aClass55_6419), (((Class263_Sub1) this).aTextEncoder_6420)), i, i_3_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub1) this).aClass55_6419), 5121, is, i_4_);
 			}
 			OpenGL.glPixelStorei(3314, 0);
 		} else
@@ -243,12 +243,12 @@ public class Class263_Sub1 extends Class263 implements Interface9_Impl2_Impl1 {
 		super.method122(class179);
 	}
 
-	Class263_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, Class77 class77, int i, int i_50_) {
-		super(class_ra_sub3_sub1, 3553, class55, class77, i * i_50_, false);
+	Class263_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, TextEncoder textEncoder, int i, int i_50_) {
+		super(class_ra_sub3_sub1, 3553, class55, textEncoder, i * i_50_, false);
 		((Class263_Sub1) this).anInt9952 = i;
 		((Class263_Sub1) this).anInt9951 = i_50_;
 		((Class263_Sub1) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
-		OpenGL.glTexImage2Dub(((Class263_Sub1) this).anInt6415, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub1) this).aClass55_6419), (((Class263_Sub1) this).aClass77_6420)), i, i_50_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub1) this).aClass55_6419), Class_ra_Sub3_Sub1.method5537(((Class263_Sub1) this).aClass77_6420), null, 0);
+		OpenGL.glTexImage2Dub(((Class263_Sub1) this).anInt6415, 0, Class_ra_Sub3_Sub1.method5533((((Class263_Sub1) this).aClass55_6419), (((Class263_Sub1) this).aTextEncoder_6420)), i, i_50_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub1) this).aClass55_6419), Class_ra_Sub3_Sub1.method5537(((Class263_Sub1) this).aTextEncoder_6420), null, 0);
 	}
 
 	public void method87(int i, int i_51_, int i_52_, int i_53_, byte[] is, Class55 class55, int i_54_, int i_55_) {
@@ -327,13 +327,13 @@ public class Class263_Sub1 extends Class263 implements Interface9_Impl2_Impl1 {
 	}
 
 	Class263_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class55 class55, int i, int i_73_, boolean bool, float[] fs, int i_74_, int i_75_) {
-		super(class_ra_sub3_sub1, 3553, class55, Class77.aClass77_721, i * i_73_, bool);
+		super(class_ra_sub3_sub1, 3553, class55, TextEncoder.aTextEncoder_721, i * i_73_, bool);
 		((Class263_Sub1) this).anInt9952 = i;
 		((Class263_Sub1) this).anInt9951 = i_73_;
 		((Class263_Sub1) this).aClass_ra_Sub3_Sub1_6422.method5358(this);
 		if (!bool || i_75_ != 0 || i_74_ != 0) {
 			OpenGL.glPixelStorei(3314, i_75_);
-			OpenGL.glTexImage2Df(((Class263_Sub1) this).anInt6415, 0, (Class_ra_Sub3_Sub1.method5533(((Class263_Sub1) this).aClass55_6419, ((Class263_Sub1) this).aClass77_6420)), i, i_73_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub1) this).aClass55_6419), 5126, fs, i_74_ * 4);
+			OpenGL.glTexImage2Df(((Class263_Sub1) this).anInt6415, 0, (Class_ra_Sub3_Sub1.method5533(((Class263_Sub1) this).aClass55_6419, ((Class263_Sub1) this).aTextEncoder_6420)), i, i_73_, 0, Class_ra_Sub3_Sub1.method5532(((Class263_Sub1) this).aClass55_6419), 5126, fs, i_74_ * 4);
 			OpenGL.glPixelStorei(3314, 0);
 		} else
 			method2469(((Class263_Sub1) this).anInt6415, i, i_73_, fs);

@@ -10,18 +10,18 @@ public class Class196 implements Interface7_Impl2 {
 	int anInt8586;
 	int anInt8587;
 	boolean aBoolean8588;
-	Class77 aClass77_8589;
+	TextEncoder aTextEncoder_8589;
 	long aLong8590 = 0L;
 
-	Class196(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class77 class77, boolean bool) {
+	Class196(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, TextEncoder textEncoder, boolean bool) {
 		((Class196) this).aClass_ra_Sub3_Sub2_8585 = class_ra_sub3_sub2;
-		((Class196) this).aClass77_8589 = class77;
+		((Class196) this).aTextEncoder_8589 = textEncoder;
 		((Class196) this).aBoolean8588 = bool;
 		((Class196) this).aClass_ra_Sub3_Sub2_8585.method5323(this);
 	}
 
 	public void method113(int i) {
-		((Class196) this).anInt8587 = ((Class196) this).aClass77_8589.anInt724 * 685647847 * i;
+		((Class196) this).anInt8587 = ((Class196) this).aTextEncoder_8589.anInt724 * 685647847 * i;
 		if (((Class196) this).anInt8587 > ((Class196) this).anInt8586) {
 			if (((Class196) this).aLong8590 != 0L)
 				IUnknown.Release(((Class196) this).aLong8590);
@@ -32,13 +32,13 @@ public class Class196 implements Interface7_Impl2 {
 				i_0_ |= 0x200;
 			} else
 				i_1_ = 1;
-			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_0_, (((Class196) this).aClass77_8589 == Class77.aClass77_718 ? 101 : 102), i_1_));
+			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_0_, (((Class196) this).aTextEncoder_8589 == TextEncoder.aTextEncoder_718 ? 101 : 102), i_1_));
 			((Class196) this).anInt8586 = ((Class196) this).anInt8587;
 		}
 	}
 
 	public void method115(int i) {
-		((Class196) this).anInt8587 = ((Class196) this).aClass77_8589.anInt724 * 685647847 * i;
+		((Class196) this).anInt8587 = ((Class196) this).aTextEncoder_8589.anInt724 * 685647847 * i;
 		if (((Class196) this).anInt8587 > ((Class196) this).anInt8586) {
 			if (((Class196) this).aLong8590 != 0L)
 				IUnknown.Release(((Class196) this).aLong8590);
@@ -49,7 +49,7 @@ public class Class196 implements Interface7_Impl2 {
 				i_2_ |= 0x200;
 			} else
 				i_3_ = 1;
-			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_2_, (((Class196) this).aClass77_8589 == Class77.aClass77_718 ? 101 : 102), i_3_));
+			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_2_, (((Class196) this).aTextEncoder_8589 == TextEncoder.aTextEncoder_718 ? 101 : 102), i_3_));
 			((Class196) this).anInt8586 = ((Class196) this).anInt8587;
 		}
 	}
@@ -136,7 +136,7 @@ public class Class196 implements Interface7_Impl2 {
 	}
 
 	public void method112(int i) {
-		((Class196) this).anInt8587 = ((Class196) this).aClass77_8589.anInt724 * 685647847 * i;
+		((Class196) this).anInt8587 = ((Class196) this).aTextEncoder_8589.anInt724 * 685647847 * i;
 		if (((Class196) this).anInt8587 > ((Class196) this).anInt8586) {
 			if (((Class196) this).aLong8590 != 0L)
 				IUnknown.Release(((Class196) this).aLong8590);
@@ -147,13 +147,13 @@ public class Class196 implements Interface7_Impl2 {
 				i_9_ |= 0x200;
 			} else
 				i_10_ = 1;
-			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_9_, (((Class196) this).aClass77_8589 == Class77.aClass77_718 ? 101 : 102), i_10_));
+			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_9_, (((Class196) this).aTextEncoder_8589 == TextEncoder.aTextEncoder_718 ? 101 : 102), i_10_));
 			((Class196) this).anInt8586 = ((Class196) this).anInt8587;
 		}
 	}
 
 	public void method114(int i) {
-		((Class196) this).anInt8587 = ((Class196) this).aClass77_8589.anInt724 * 685647847 * i;
+		((Class196) this).anInt8587 = ((Class196) this).aTextEncoder_8589.anInt724 * 685647847 * i;
 		if (((Class196) this).anInt8587 > ((Class196) this).anInt8586) {
 			if (((Class196) this).aLong8590 != 0L)
 				IUnknown.Release(((Class196) this).aLong8590);
@@ -164,7 +164,7 @@ public class Class196 implements Interface7_Impl2 {
 				i_11_ |= 0x200;
 			} else
 				i_12_ = 1;
-			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_11_, (((Class196) this).aClass77_8589 == Class77.aClass77_718 ? 101 : 102), i_12_));
+			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_11_, (((Class196) this).aTextEncoder_8589 == TextEncoder.aTextEncoder_718 ? 101 : 102), i_12_));
 			((Class196) this).anInt8586 = ((Class196) this).anInt8587;
 		}
 	}
@@ -174,7 +174,7 @@ public class Class196 implements Interface7_Impl2 {
 	}
 
 	public void method116(int i) {
-		((Class196) this).anInt8587 = ((Class196) this).aClass77_8589.anInt724 * 685647847 * i;
+		((Class196) this).anInt8587 = ((Class196) this).aTextEncoder_8589.anInt724 * 685647847 * i;
 		if (((Class196) this).anInt8587 > ((Class196) this).anInt8586) {
 			if (((Class196) this).aLong8590 != 0L)
 				IUnknown.Release(((Class196) this).aLong8590);
@@ -185,7 +185,7 @@ public class Class196 implements Interface7_Impl2 {
 				i_13_ |= 0x200;
 			} else
 				i_14_ = 1;
-			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_13_, (((Class196) this).aClass77_8589 == Class77.aClass77_718 ? 101 : 102), i_14_));
+			((Class196) this).aLong8590 = (IDirect3DDevice.CreateIndexBuffer(((Class_ra_Sub3_Sub2) ((Class196) this).aClass_ra_Sub3_Sub2_8585).aLong9847, ((Class196) this).anInt8587, i_13_, (((Class196) this).aTextEncoder_8589 == TextEncoder.aTextEncoder_718 ? 101 : 102), i_14_));
 			((Class196) this).anInt8586 = ((Class196) this).anInt8587;
 		}
 	}

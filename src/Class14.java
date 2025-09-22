@@ -11,7 +11,7 @@ public class Class14 {
 	static int anInt173;
 	static int anInt174;
 	static int anInt175;
-	static Class505 aClass505_176;
+	static GameFont aGameFont_176;
 	static Class133 aClass133_177;
 
 	Class14() throws Throwable {
@@ -31,7 +31,7 @@ public class Class14 {
 
 	static final void method342(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.cursorPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) != 0 ? 1 : 0, -261887884);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.cursorPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) != 0 ? 1 : 0, -261887884);
 			Class3.writePreferences();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ao.air(").append(')').toString());

@@ -160,6 +160,6 @@ public class Class66_Sub1_Sub2 extends Class66_Sub1 {
 
 	Class66_Sub1_Sub2(Class_ra_Sub2 class_ra_sub2, int i) {
 		((Class66_Sub1_Sub2) this).aClass_ra_Sub2_9100 = class_ra_sub2;
-		((Class66_Sub1_Sub2) this).aClass30_Sub1_9099 = new Class30_Sub1(class_ra_sub2, Class55.aClass55_557, Class77.aClass77_717, i);
+		((Class66_Sub1_Sub2) this).aClass30_Sub1_9099 = new Class30_Sub1(class_ra_sub2, Class55.aClass55_557, TextEncoder.aTextEncoder_717, i);
 	}
 }

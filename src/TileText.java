@@ -20,8 +20,8 @@ public class TileText extends Class302 {
 		try {
 			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
 			int i_0_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			Class505 class505 = Class322.method3931(Class173.aClass243_1758, i_0_, 0, (byte) 11);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = class505.method6254(string, Class130_Sub2.aClass57Array6959, 1319235613);
+			GameFont gameFont = Class322.method3931(Class173.aClass243_1758, i_0_, 0, (byte) 11);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = gameFont.method6254(string, Class130_Sub2.aClass57Array6959, 1319235613);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "aav.aap(" + ')');
 		}

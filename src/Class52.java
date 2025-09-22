@@ -63,7 +63,7 @@ public abstract class Class52 {
 				if (3.0 == (double) Class301_Sub1.aFloat3233)
 					return Class381.aClass4_4119;
 				if (4.0 == (double) Class301_Sub1.aFloat3233)
-					return Class255.aClass4_2795;
+					return DevConsole.aClass4_2795;
 				if (6.0 == (double) Class301_Sub1.aFloat3233)
 					return aClass4_508;
 				if ((double) Class301_Sub1.aFloat3233 >= 8.0)

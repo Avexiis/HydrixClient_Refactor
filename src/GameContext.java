@@ -207,8 +207,8 @@ public class GameContext {
 			GameClient.map.method2640((byte) -46).forceUpdate(-1196946367);
 			GameClient.aBoolean8763 = true;
 			Class107.aShortArray1315 = LocType.aShortArray5423 = NPCType.aShortArray6182 = ItemDefinitions.aShortArray5757 = new short[256];
-			Class82_Sub6.aString6845 = LocalizedString.ACTION_WALK_HERE.getText(Class321.ACTIVE_LANGUAGE, -875414210);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565, GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7564.method5689(-2013953489), 185315871);
+			Class82_Sub6.aString6845 = LocalizedString.ACTION_WALK_HERE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7565, GraphicsSetup.clientPreferences.aClass422_Sub17_7564.method5689(-2013953489), 185315871);
 			GameClient.anInt8713 = 0;
 			Class447.method5905(2108312995);
 			Class326.method3974(-2137735375);

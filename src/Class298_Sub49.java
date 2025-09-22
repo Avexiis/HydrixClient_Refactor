@@ -23,7 +23,7 @@ public class Class298_Sub49 extends Node {
 			int i_1_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_1_, (byte) 49);
 			RSInterface RSInterface = SpotAnimTypeList.aRSInterfaceArray4165[i_1_ >> 16];
-			Class321.method3925(class105, RSInterface, class403, (byte) -38);
+			DynamicLight.method3925(class105, RSInterface, class403, (byte) -38);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("acq.it(").append(')').toString());
 		}

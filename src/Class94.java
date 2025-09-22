@@ -156,7 +156,7 @@ public final class Class94 {
 
 	static final void method1023(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.lightingPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 1 : 0, -1851948852);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.lightingPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 1 : 0, -1851948852);
 			Class359.method4294(-1900445314);
 			GameClient.map.method2640((byte) -42).forceUpdate(134111872);
 			Class3.writePreferences();

@@ -141,7 +141,7 @@ public class VarBitType {
 
 	static void method3983(int i) {
 		try {
-			ContextMenu.aClass298_Sub37_Sub15_5466 = (new Class298_Sub37_Sub15(LocalizedString.BUTTON_CANCEL.getText(Class321.ACTIVE_LANGUAGE, -875414210), "", -1808468501 * GameClient.anInt8937, 1006, -1, 0L, 0, 0, true, false, 0L, true));
+			ContextMenu.aClass298_Sub37_Sub15_5466 = (new Class298_Sub37_Sub15(LocalizedString.BUTTON_CANCEL.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), "", -1808468501 * GameClient.anInt8937, 1006, -1, 0L, 0, 0, true, false, 0L, true));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("nq.k(").append(')').toString());
 		}

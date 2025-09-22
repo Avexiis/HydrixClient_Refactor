@@ -101,8 +101,8 @@ public class Class516 {
 							((Class365_Sub1_Sub2_Sub1) interface3).method4495(class435, (byte) 0);
 						else if (interface3 instanceof Wall)
 							((Wall) interface3).method4530(class435, -772948139);
-						else if (interface3 instanceof Class365_Sub1_Sub3_Sub1)
-							((Class365_Sub1_Sub3_Sub1) interface3).method4504(class435, (byte) 11);
+						else if (interface3 instanceof SceneObject)
+							((SceneObject) interface3).method4504(class435, (byte) 11);
 					}
 				}
 			}

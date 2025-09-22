@@ -12,7 +12,7 @@ public class Class474 {
 	public static IPAddress aClass471_5976;
 	static int anInt5977 = 1105886704;
 	static Class396 aClass396_5978;
-	public static IPAddress aClass471_5979;
+	public static IPAddress worldAddress;
 	public static int anInt5980;
 
 	static {
@@ -30,7 +30,7 @@ public class Class474 {
 			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
 			Class12.method338(string, false, (short) 32562);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tn.vi(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tn.vi(" + ')');
 		}
 	}
 
@@ -41,17 +41,18 @@ public class Class474 {
 			else
 				Class82_Sub22.method940((Class372_Sub2.anIntArrayArray4047[i_1_]), i, i_0_, i_2_, 583868785);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tn.n(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tn.n(" + ')');
 		}
 	}
 
 	static final void method6073(ClientScript2 class403, short i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aVolumePreference_7553, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -877652668);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aVolumePreference_7553,
+					(((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -877652668);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tn.ais(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "tn.ais(" + ')');
 		}
 	}
 }

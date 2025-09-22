@@ -21,11 +21,11 @@ public class Class168 {
 	Interface8_Impl1_Impl1 anInterface8_Impl1_Impl1_1724;
 	int anInt1725 = 0;
 	Class153 aClass153_1726;
-	Class77 aClass77_1727;
+	TextEncoder aTextEncoder_1727;
 
 	Class168(Class_ra_Sub3 class_ra_sub3, int i, int i_0_) {
 		((Class168) this).aClass_ra_Sub3_1717 = class_ra_sub3;
-		((Class168) this).aClass77_1727 = Class77.aClass77_717;
+		((Class168) this).aTextEncoder_1727 = TextEncoder.aTextEncoder_717;
 		((Class168) this).anInt1720 = i;
 		((Class168) this).anInt1721 = i_0_;
 	}
@@ -86,20 +86,20 @@ public class Class168 {
 		default:
 			throw new RuntimeException();
 		case 0:
-			((Class168) this).aClass77_1727 = Class77.aClass77_717;
+			((Class168) this).aTextEncoder_1727 = TextEncoder.aTextEncoder_717;
 			break;
 		case 2:
-			((Class168) this).aClass77_1727 = Class77.aClass77_721;
+			((Class168) this).aTextEncoder_1727 = TextEncoder.aTextEncoder_721;
 			break;
 		case 1:
-			((Class168) this).aClass77_1727 = Class77.aClass77_714;
+			((Class168) this).aTextEncoder_1727 = TextEncoder.aTextEncoder_714;
 		}
 		((Class168) this).aClass52_Sub1_1712 = ((Class168) this).aClass_ra_Sub3_1717.method5094();
-		((Class168) this).anInterface9_Impl2_Impl1_1713 = (((Class168) this).aClass_ra_Sub3_1717.method5356(Class55.aClass55_557, ((Class168) this).aClass77_1727, ((Class168) this).anInt1720, ((Class168) this).anInt1721));
+		((Class168) this).anInterface9_Impl2_Impl1_1713 = (((Class168) this).aClass_ra_Sub3_1717.method5356(Class55.aClass55_557, ((Class168) this).aTextEncoder_1727, ((Class168) this).anInt1720, ((Class168) this).anInt1721));
 		((Class168) this).anInterface8_Impl1_Impl1_1716 = ((Class168) this).anInterface9_Impl2_Impl1_1713.method117(0);
-		((Class168) this).anInterface9_Impl2_Impl1_1714 = (((Class168) this).aClass_ra_Sub3_1717.method5356(Class55.aClass55_557, ((Class168) this).aClass77_1727, ((Class168) this).anInt1720, ((Class168) this).anInt1721));
+		((Class168) this).anInterface9_Impl2_Impl1_1714 = (((Class168) this).aClass_ra_Sub3_1717.method5356(Class55.aClass55_557, ((Class168) this).aTextEncoder_1727, ((Class168) this).anInt1720, ((Class168) this).anInt1721));
 		((Class168) this).anInterface8_Impl1_Impl1_1724 = ((Class168) this).anInterface9_Impl2_Impl1_1714.method117(0);
-		((Class168) this).anInterface9_Impl2_Impl1_1711 = (((Class168) this).aClass_ra_Sub3_1717.method5356(Class55.aClass55_557, ((Class168) this).aClass77_1727, ((Class168) this).anInt1720, ((Class168) this).anInt1721));
+		((Class168) this).anInterface9_Impl2_Impl1_1711 = (((Class168) this).aClass_ra_Sub3_1717.method5356(Class55.aClass55_557, ((Class168) this).aTextEncoder_1727, ((Class168) this).anInt1720, ((Class168) this).anInt1721));
 		((Class168) this).anInterface8_Impl1_Impl1_1718 = ((Class168) this).anInterface9_Impl2_Impl1_1711.method117(0);
 		((Class168) this).anInterface8_Impl1_Impl2_1719 = (((Class168) this).aClass_ra_Sub3_1717.method5186(((Class168) this).anInt1720, ((Class168) this).anInt1721));
 		int i = ((Class168) this).aVector1715.size();

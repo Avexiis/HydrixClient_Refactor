@@ -95,8 +95,8 @@ public abstract class Class82 {
 
 	static final void method875(ClientScript2 class403, byte i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -283253928);
-			ClanSettings.method4578(GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1637975360), false, 622850291);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aAntialiasPreference_7550, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -283253928);
+			ClanSettings.method4578(GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1637975360), false, 622850291);
 			Class3.writePreferences();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("di.aia(").append(')').toString());

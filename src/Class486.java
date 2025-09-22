@@ -144,7 +144,7 @@ public class Class486 {
 
 	static final void method6155(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class474.aClass471_5979.worldId * 1606920449;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class474.worldAddress.worldId * 1606920449;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("u.uj(").append(')').toString());
 		}

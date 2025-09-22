@@ -48,7 +48,7 @@ public final class Class418 {
 				LoginData.aLong3911 = (class298_sub53.readLong((short) 3310) * 3207425516430892907L);
 			}
 			if (LoginData.aLong3874 * 122690138525332847L < 0L)
-				Class78.method845(35, 1368689895);
+				DisplayMode.method845(35, 1368689895);
 			else
 				LoginPacket.method5981(false, true, "", "", LoginData.aLong3874 * 122690138525332847L);
 		} catch (RuntimeException runtimeexception) {

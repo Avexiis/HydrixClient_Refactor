@@ -79,7 +79,7 @@ public class ClanSettings {
 
 	public static void method4578(int i, boolean bool, int i_2_) {
 		try {
-			Class371.method4584(i, LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210), bool, (byte) 31);
+			Class371.method4584(i, LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), bool, (byte) 31);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("pj.fw(").append(')').toString());
 		}

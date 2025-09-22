@@ -103,7 +103,7 @@ public class Class298_Sub17_Sub4 extends Class298_Sub17 {
 					} else if (Class298_Sub45.aClass298_Sub37_Sub15_7522 != null)
 						return ((((Class298_Sub37_Sub15) Class298_Sub45.aClass298_Sub37_Sub15_7522).anInt9659) * -1988795597);
 				} else {
-					Class505 class505 = Class142.method1571(-2091565600);
+					GameFont gameFont = Class142.method1571(-2091565600);
 					int i_1_ = Class165.recorder.getMouseX((byte) -81);
 					int i_2_ = Class165.recorder.getMouseY((byte) -7);
 					if (!ContextMenu.aBoolean5471) {
@@ -111,12 +111,12 @@ public class Class298_Sub17_Sub4 extends Class298_Sub17 {
 							int i_3_ = -1;
 							for (int i_4_ = 0; i_4_ < ContextMenu.actionCount * -278777595; i_4_++) {
 								if (ContextMenu.aBoolean5496) {
-									int i_5_ = ((-411680299 * ContextMenu.anInt5467 * (-278777595 * ContextMenu.actionCount - 1 - i_4_)) + (1 + ((class505.anInt6202 * 1110385787) + (20 + (TileText.anInt7658 * 1089948687)))));
-									if (i_2_ > i_5_ - (class505.anInt6202 * 1110385787) - 1 && i_2_ < (class505.anInt6197 * -1883958527) + i_5_)
+									int i_5_ = ((-411680299 * ContextMenu.anInt5467 * (-278777595 * ContextMenu.actionCount - 1 - i_4_)) + (1 + ((gameFont.ascent * 1110385787) + (20 + (TileText.anInt7658 * 1089948687)))));
+									if (i_2_ > i_5_ - (gameFont.ascent * 1110385787) - 1 && i_2_ < (gameFont.descent * -1883958527) + i_5_)
 										i_3_ = i_4_;
 								} else {
 									int i_6_ = (((ContextMenu.actionCount * -278777595 - 1 - i_4_) * (ContextMenu.anInt5467 * -411680299)) + ((1089948687 * TileText.anInt7658) + 31));
-									if (i_2_ > i_6_ - (class505.anInt6202 * 1110385787) - 1 && i_2_ < (class505.anInt6197 * -1883958527) + i_6_)
+									if (i_2_ > i_6_ - (gameFont.ascent * 1110385787) - 1 && i_2_ < (gameFont.descent * -1883958527) + i_6_)
 										i_3_ = i_4_;
 								}
 							}
@@ -133,12 +133,12 @@ public class Class298_Sub17_Sub4 extends Class298_Sub17 {
 						int i_8_ = -1;
 						for (int i_9_ = 0; i_9_ < 1592446965 * ContextMenu.anInt5479; i_9_++) {
 							if (ContextMenu.aBoolean5496) {
-								int i_10_ = (i_9_ * (ContextMenu.anInt5467 * -411680299) + (1 + ((TileText.anInt7658 * 1089948687) + 20 + (class505.anInt6202 * 1110385787))));
-								if (i_2_ > (i_10_ - class505.anInt6202 * 1110385787 - 1) && i_2_ < (class505.anInt6197 * -1883958527 + i_10_))
+								int i_10_ = (i_9_ * (ContextMenu.anInt5467 * -411680299) + (1 + ((TileText.anInt7658 * 1089948687) + 20 + (gameFont.ascent * 1110385787))));
+								if (i_2_ > (i_10_ - gameFont.ascent * 1110385787 - 1) && i_2_ < (gameFont.descent * -1883958527 + i_10_))
 									i_8_ = i_9_;
 							} else {
 								int i_11_ = (TileText.anInt7658 * 1089948687 + 31 + i_9_ * (-411680299 * ContextMenu.anInt5467));
-								if (i_2_ > (i_11_ - class505.anInt6202 * 1110385787 - 1) && i_2_ < (-1883958527 * class505.anInt6197 + i_11_))
+								if (i_2_ > (i_11_ - gameFont.ascent * 1110385787 - 1) && i_2_ < (-1883958527 * gameFont.descent + i_11_))
 									i_8_ = i_9_;
 							}
 						}
@@ -154,12 +154,12 @@ public class Class298_Sub17_Sub4 extends Class298_Sub17 {
 						int i_13_ = -1;
 						for (int i_14_ = 0; i_14_ < (((Class298_Sub37_Sub5) ContextMenu.aClass298_Sub37_Sub5_5472).anInt9583) * -628325139; i_14_++) {
 							if (ContextMenu.aBoolean5496) {
-								int i_15_ = (1 + (1110385787 * class505.anInt6202 + (-1370784315 * Class501.anInt6119 + 20)) + i_14_ * (ContextMenu.anInt5467 * -411680299));
-								if (i_2_ > (i_15_ - 1110385787 * class505.anInt6202 - 1) && i_2_ < (-1883958527 * class505.anInt6197 + i_15_))
+								int i_15_ = (1 + (1110385787 * gameFont.ascent + (-1370784315 * Class501.anInt6119 + 20)) + i_14_ * (ContextMenu.anInt5467 * -411680299));
+								if (i_2_ > (i_15_ - 1110385787 * gameFont.ascent - 1) && i_2_ < (-1883958527 * gameFont.descent + i_15_))
 									i_13_ = i_14_;
 							} else {
 								int i_16_ = (-411680299 * ContextMenu.anInt5467 * i_14_ + (31 + -1370784315 * Class501.anInt6119));
-								if (i_2_ > (i_16_ - class505.anInt6202 * 1110385787 - 1) && i_2_ < (-1883958527 * class505.anInt6197 + i_16_))
+								if (i_2_ > (i_16_ - gameFont.ascent * 1110385787 - 1) && i_2_ < (-1883958527 * gameFont.descent + i_16_))
 									i_13_ = i_14_;
 							}
 						}

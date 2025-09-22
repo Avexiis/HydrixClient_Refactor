@@ -3,7 +3,7 @@
  */
 
 public class Class241 {
-	public static IPAddress aClass471_2705;
+	public static IPAddress lobbyAddress;
 	static int anInt2706;
 	static Class4 aClass4_2707;
 

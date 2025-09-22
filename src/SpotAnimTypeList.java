@@ -117,7 +117,7 @@ public class SpotAnimTypeList {
 
 	static final void method4863(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558.method5667(-369768513);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aMapSizePreference_7558.method5667(-369768513);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qc.ajk(").append(')').toString());
 		}

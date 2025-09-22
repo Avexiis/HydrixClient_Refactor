@@ -3,20 +3,20 @@
  */
 
 final class Class238 implements Interface10 {
-	public Object method131(byte[] is, Class505 class505, boolean bool, int i) {
+	public Object method131(byte[] is, GameFont gameFont, boolean bool, int i) {
 		try {
-			return OverlayType.activeToolkit.method5092(class505, Class89.method982(is), bool);
+			return OverlayType.activeToolkit.method5092(gameFont, Class89.method982(is), bool);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("k.a(").append(')').toString());
 		}
 	}
 
-	public Object method130(byte[] is, Class505 class505, boolean bool) {
-		return OverlayType.activeToolkit.method5092(class505, Class89.method982(is), bool);
+	public Object method130(byte[] is, GameFont gameFont, boolean bool) {
+		return OverlayType.activeToolkit.method5092(gameFont, Class89.method982(is), bool);
 	}
 
-	public Object method132(byte[] is, Class505 class505, boolean bool) {
-		return OverlayType.activeToolkit.method5092(class505, Class89.method982(is), bool);
+	public Object method132(byte[] is, GameFont gameFont, boolean bool) {
+		return OverlayType.activeToolkit.method5092(gameFont, Class89.method982(is), bool);
 	}
 
 	static Class322 method2199(Class365_Sub1_Sub1 class365_sub1_sub1, byte i) {
@@ -54,7 +54,7 @@ final class Class238 implements Interface10 {
 			Class428.anInt6623 = i_6_ * 1589600979;
 			Class14.anInt168 = i_7_ * -674457001;
 			Class309.method3804(-1268692886);
-			Class372_Sub3.aBoolean7730 = true;
+			DevConsoleInit.aBoolean7730 = true;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("k.a(").append(')').toString());
 		}

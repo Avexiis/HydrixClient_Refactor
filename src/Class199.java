@@ -6,7 +6,7 @@ import jagdx.IUnknown;
 
 public class Class199 implements Interface8_Impl1_Impl2_Impl1 {
 	int anInt10169;
-	Class77 aClass77_10170;
+	TextEncoder aTextEncoder_10170;
 	int anInt10171;
 	Class_ra_Sub3_Sub2 aClass_ra_Sub3_Sub2_10172;
 	long aLong10173;
@@ -61,12 +61,12 @@ public class Class199 implements Interface8_Impl1_Impl2_Impl1 {
 		return ((Class199) this).anInt10169;
 	}
 
-	Class199(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class77 class77, int i, int i_0_) {
+	Class199(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, TextEncoder textEncoder, int i, int i_0_) {
 		((Class199) this).aClass_ra_Sub3_Sub2_10172 = class_ra_sub3_sub2;
 		((Class199) this).anInt10171 = i;
 		((Class199) this).anInt10169 = i_0_;
-		((Class199) this).aClass77_10170 = class77;
-		((Class199) this).aLong10173 = (IDirect3DDevice.CreateDepthStencilSurface(((Class_ra_Sub3_Sub2) ((Class199) this).aClass_ra_Sub3_Sub2_10172).aLong9847, i, i_0_, Class_ra_Sub3_Sub2.method5550(((Class199) this).aClass77_10170), 0, 0, false));
+		((Class199) this).aTextEncoder_10170 = textEncoder;
+		((Class199) this).aLong10173 = (IDirect3DDevice.CreateDepthStencilSurface(((Class_ra_Sub3_Sub2) ((Class199) this).aClass_ra_Sub3_Sub2_10172).aLong9847, i, i_0_, Class_ra_Sub3_Sub2.method5550(((Class199) this).aTextEncoder_10170), 0, 0, false));
 		((Class199) this).aClass_ra_Sub3_Sub2_10172.method5323(this);
 	}
 

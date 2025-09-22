@@ -83,7 +83,7 @@ public abstract class Class98 {
 								IdentityKitTypeList.method1587((byte) 4);
 						} else {
 							if (Class396.aBoolean5196)
-								Class234.method2174((LocalizedString.ACTION_FACE_HERE.getText(Class321.ACTIVE_LANGUAGE, -875414210)), "", -1, 60, -1, 0L, i_18_, i_19_, true, false, (long) (i_18_ << 32 | i_19_), true, -1698149123);
+								Class234.method2174((LocalizedString.ACTION_FACE_HERE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), "", -1, 60, -1, 0L, i_18_, i_19_, true, false, (long) (i_18_ << 32 | i_19_), true, -1698149123);
 							Class234.method2174(Class82_Sub6.aString6845, "", GameClient.anInt8822 * -1471730241, 23, -1, 0L, i_18_, i_19_, true, false, (long) (i_18_ << 32 | i_19_), true, -1114825452);
 						}
 					}

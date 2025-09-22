@@ -29,8 +29,8 @@ public class m extends Class264 implements Interface25 {
 
 	public native void z(boolean bool);
 
-	m(ja var_ja, ba var_ba, Class505 class505, Class89[] class89s, Class57[] class57s) {
-		super(var_ja, class505);
+	m(ja var_ja, ba var_ba, GameFont gameFont, Class89[] class89s, Class57[] class57s) {
+		super(var_ja, gameFont);
 		byte[][] is = new byte[class89s.length][];
 		int[] is_26_ = new int[class89s.length];
 		int[] is_27_ = new int[class89s.length];

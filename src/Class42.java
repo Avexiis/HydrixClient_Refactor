@@ -24,7 +24,7 @@ public class Class42 {
 	Class298_Sub37_Sub18 aClass298_Sub37_Sub18_459;
 	Class52_Sub1_Sub2 aClass52_Sub1_Sub2_460;
 	int anInt461;
-	Class77 aClass77_462;
+	TextEncoder aTextEncoder_462;
 
 	boolean method481(int i, int i_0_, int i_1_, int i_2_) {
 		if (((Class42) this).aClass52_Sub1_Sub2_445 == null || ((Class42) this).aClass458_451.method5970((byte) 63))
@@ -128,7 +128,7 @@ public class Class42 {
 		((Class42) this).aClass30_Sub2Array448 = new Class30_Sub2[2];
 		((Class42) this).aBoolean458 = false;
 		((Class42) this).anInt461 = 0;
-		((Class42) this).aClass77_462 = Class77.aClass77_717;
+		((Class42) this).aTextEncoder_462 = TextEncoder.aTextEncoder_717;
 		((Class42) this).aClass_ra_Sub2_454 = class_ra_sub2;
 		if (((Class_ra_Sub2) ((Class42) this).aClass_ra_Sub2_454).aBoolean8170 && (((Class_ra_Sub2) ((Class42) this).aClass_ra_Sub2_454).aBoolean8179)) {
 			((Class42) this).aClass52_Sub1_Sub2_445 = ((Class42) this).aClass52_Sub1_Sub2_442 = new Class52_Sub1_Sub2(((Class42) this).aClass_ra_Sub2_454);
@@ -180,16 +180,16 @@ public class Class42 {
 	void method487() {
 		int i = 0;
 		boolean bool = false;
-		Class77 class77 = Class77.aClass77_717;
+		TextEncoder textEncoder = TextEncoder.aTextEncoder_717;
 		for (Class298_Sub8 class298_sub8 = ((Class298_Sub8) ((Class42) this).aClass458_451.method5967(1419681613)); class298_sub8 != null; class298_sub8 = (Class298_Sub8) ((Class42) this).aClass458_451.method5969((byte) -84)) {
-			Class77 class77_7_ = class298_sub8.method2875();
-			if (class77_7_.anInt724 * 685647847 > class77.anInt724 * 685647847)
-				class77 = class77_7_;
+			TextEncoder textEncoder_7_ = class298_sub8.method2875();
+			if (textEncoder_7_.anInt724 * 685647847 > textEncoder.anInt724 * 685647847)
+				textEncoder = textEncoder_7_;
 			bool |= class298_sub8.method2881();
 			i += class298_sub8.method2874();
 		}
-		if (class77 != ((Class42) this).aClass77_462) {
-			((Class42) this).aClass77_462 = class77;
+		if (textEncoder != ((Class42) this).aTextEncoder_462) {
+			((Class42) this).aTextEncoder_462 = textEncoder;
 			((Class42) this).aBoolean443 = true;
 		}
 		int i_8_ = ((Class42) this).anInt461 > 2 ? 2 : ((Class42) this).anInt461;
@@ -232,20 +232,20 @@ public class Class42 {
 		}
 		if (((Class42) this).aBoolean453) {
 			if (((Class42) this).aClass52_Sub1_Sub2_460 != null)
-				((Class42) this).aClass298_Sub37_Sub18_459 = (new Class298_Sub37_Sub18(((Class42) this).aClass_ra_Sub2_454, Class55.aClass55_561, Class77.aClass77_719, ((Class42) this).anInt456, ((Class42) this).anInt449, (((Class_ra_Sub2) ((Class42) this).aClass_ra_Sub2_454).anInt8051)));
+				((Class42) this).aClass298_Sub37_Sub18_459 = (new Class298_Sub37_Sub18(((Class42) this).aClass_ra_Sub2_454, Class55.aClass55_561, TextEncoder.aTextEncoder_719, ((Class42) this).anInt456, ((Class42) this).anInt449, (((Class_ra_Sub2) ((Class42) this).aClass_ra_Sub2_454).anInt8051)));
 			if (((Class42) this).aBoolean458)
-				((Class42) this).aClass30_Sub2_452 = new Class30_Sub2(((Class42) this).aClass_ra_Sub2_454, 34037, Class55.aClass55_561, Class77.aClass77_719, ((Class42) this).anInt456, ((Class42) this).anInt449);
+				((Class42) this).aClass30_Sub2_452 = new Class30_Sub2(((Class42) this).aClass_ra_Sub2_454, 34037, Class55.aClass55_561, TextEncoder.aTextEncoder_719, ((Class42) this).anInt456, ((Class42) this).anInt449);
 			else if (((Class42) this).aClass298_Sub37_Sub18_459 == null)
-				((Class42) this).aClass298_Sub37_Sub18_459 = new Class298_Sub37_Sub18((((Class42) this).aClass_ra_Sub2_454), Class55.aClass55_561, Class77.aClass77_719, ((Class42) this).anInt456, ((Class42) this).anInt449);
+				((Class42) this).aClass298_Sub37_Sub18_459 = new Class298_Sub37_Sub18((((Class42) this).aClass_ra_Sub2_454), Class55.aClass55_561, TextEncoder.aTextEncoder_719, ((Class42) this).anInt456, ((Class42) this).anInt449);
 			((Class42) this).aBoolean453 = false;
 			((Class42) this).aBoolean444 = true;
 			((Class42) this).aBoolean455 = true;
 		}
 		if (((Class42) this).aBoolean443) {
 			if (((Class42) this).aClass52_Sub1_Sub2_460 != null)
-				((Class42) this).aClass298_Sub37_Sub18_457 = (new Class298_Sub37_Sub18(((Class42) this).aClass_ra_Sub2_454, Class55.aClass55_557, ((Class42) this).aClass77_462, ((Class42) this).anInt456, ((Class42) this).anInt449, (((Class_ra_Sub2) ((Class42) this).aClass_ra_Sub2_454).anInt8051)));
-			((Class42) this).aClass30_Sub2Array448[0] = new Class30_Sub2(((Class42) this).aClass_ra_Sub2_454, 34037, Class55.aClass55_557, ((Class42) this).aClass77_462, ((Class42) this).anInt456, ((Class42) this).anInt449);
-			((Class42) this).aClass30_Sub2Array448[1] = (((Class42) this).anInt461 > 1 ? new Class30_Sub2(((Class42) this).aClass_ra_Sub2_454, 34037, Class55.aClass55_557, ((Class42) this).aClass77_462, ((Class42) this).anInt456, ((Class42) this).anInt449) : null);
+				((Class42) this).aClass298_Sub37_Sub18_457 = (new Class298_Sub37_Sub18(((Class42) this).aClass_ra_Sub2_454, Class55.aClass55_557, ((Class42) this).aTextEncoder_462, ((Class42) this).anInt456, ((Class42) this).anInt449, (((Class_ra_Sub2) ((Class42) this).aClass_ra_Sub2_454).anInt8051)));
+			((Class42) this).aClass30_Sub2Array448[0] = new Class30_Sub2(((Class42) this).aClass_ra_Sub2_454, 34037, Class55.aClass55_557, ((Class42) this).aTextEncoder_462, ((Class42) this).anInt456, ((Class42) this).anInt449);
+			((Class42) this).aClass30_Sub2Array448[1] = (((Class42) this).anInt461 > 1 ? new Class30_Sub2(((Class42) this).aClass_ra_Sub2_454, 34037, Class55.aClass55_557, ((Class42) this).aTextEncoder_462, ((Class42) this).anInt456, ((Class42) this).anInt449) : null);
 			((Class42) this).aBoolean443 = false;
 			((Class42) this).aBoolean444 = true;
 			((Class42) this).aBoolean455 = true;

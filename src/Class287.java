@@ -21,7 +21,7 @@ public class Class287 {
 		anInt3096 = (32 + (int) (Math.random() * 4.0)) * -236522629;
 		anInt3097 = (3 + (int) (Math.random() * 2.0)) * -831965479;
 		anInt3098 = (16 + (int) (Math.random() * 3.0)) * 1993464961;
-		if (GraphicsAutoSetup.clientPreferences.texturePreference.getValue(2133264539) == 1)
+		if (GraphicsSetup.clientPreferences.texturePreference.getValue(2133264539) == 1)
 			anInt3099 = (int) (Math.random() * 6.0) * -359546329;
 		else
 			anInt3099 = (int) (Math.random() * 12.0) * -359546329;

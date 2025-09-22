@@ -98,7 +98,7 @@ public class Language implements Interface21 {
 
 	static final void method5757(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547.method5628((byte) 103) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547.method5628((byte) 103) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("rt.ans(").append(')').toString());
 		}
@@ -250,7 +250,7 @@ public class Language implements Interface21 {
 					VarClanTypeList.method6310(true, 2032737613);
 					Huffman.method1247(1735117784);
 				} else if (Class301_Sub1.anInt7624 * -1289394455 == 73) {
-					Class255.aClass4_2795 = new Class4(class_ra, 12, true, Class52_Sub2_Sub1.aCanvas9079);
+					DevConsole.aClass4_2795 = new Class4(class_ra, 12, true, Class52_Sub2_Sub1.aCanvas9079);
 					Class301_Sub1.anInt7624 = 337782380;
 					VarClanTypeList.method6310(true, -1803108343);
 					Huffman.method1247(1554661852);

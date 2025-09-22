@@ -412,18 +412,18 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		return new Class200_Sub1(this, class55, i, i_29_, i_30_, bool, is);
 	}
 
-	boolean method5348(Class55 class55, Class77 class77) {
+	boolean method5348(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 3, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 3, method5546(class55, textEncoder))));
 	}
 
-	boolean method5349(Class55 class55, Class77 class77) {
+	boolean method5349(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, textEncoder))));
 	}
 
-	Interface9_Impl2 method5353(Class55 class55, Class77 class77, int i, int i_31_) {
-		return new Class200_Sub3(this, class55, class77, i, i_31_);
+	Interface9_Impl2 method5353(Class55 class55, TextEncoder textEncoder, int i, int i_31_) {
+		return new Class200_Sub3(this, class55, textEncoder, i, i_31_);
 	}
 
 	Interface9_Impl2 method5355(int i, int i_32_, boolean bool, int[] is, int i_33_, int i_34_) {
@@ -441,8 +441,8 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		return new Class200_Sub3(this, class55, i, i_35_, bool, fs, i_36_, i_37_);
 	}
 
-	Interface9_Impl2_Impl1 method5356(Class55 class55, Class77 class77, int i, int i_38_) {
-		return new Class200_Sub3_Sub1(this, class55, class77, i, i_38_);
+	Interface9_Impl2_Impl1 method5356(Class55 class55, TextEncoder textEncoder, int i, int i_38_) {
+		return new Class200_Sub3_Sub1(this, class55, textEncoder, i, i_38_);
 	}
 
 	final void method5543(long l) {
@@ -638,8 +638,8 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 			IDirect3DDevice.SetRenderState((((Class_ra_Sub3_Sub2) this).aLong9847), 60, anInt8274);
 	}
 
-	static final int method5546(Class55 class55, Class77 class77) {
-		switch (class77.anInt723 * -1857088243) {
+	static final int method5546(Class55 class55, TextEncoder textEncoder) {
+		switch (textEncoder.anInt723 * -1857088243) {
 		case 4:
 			if (class55 == Class55.aClass55_557)
 				return 113;
@@ -775,7 +775,7 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 	}
 
 	final Interface7_Impl2 method5381(boolean bool) {
-		return new Class196(this, Class77.aClass77_718, bool);
+		return new Class196(this, TextEncoder.aTextEncoder_718, bool);
 	}
 
 	final Interface7_Impl1 method5382(boolean bool) {
@@ -845,16 +845,16 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 			anInterface_ma5299.method176(1832776927);
 	}
 
-	static final int method5550(Class77 class77) {
-		if (class77 == Class77.aClass77_718)
+	static final int method5550(TextEncoder textEncoder) {
+		if (textEncoder == TextEncoder.aTextEncoder_718)
 			return 80;
-		if (class77 == Class77.aClass77_719)
+		if (textEncoder == TextEncoder.aTextEncoder_719)
 			return 77;
 		throw new IllegalArgumentException("");
 	}
 
 	public Interface8_Impl1_Impl2 method5165(int i, int i_59_) {
-		return new Class199(this, Class77.aClass77_719, i, i_59_);
+		return new Class199(this, TextEncoder.aTextEncoder_719, i, i_59_);
 	}
 
 	void method5394(int i) {
@@ -1479,33 +1479,33 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		}
 	}
 
-	boolean method5462(Class55 class55, Class77 class77) {
+	boolean method5462(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 3, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 3, method5546(class55, textEncoder))));
 	}
 
-	boolean method5310(Class55 class55, Class77 class77) {
+	boolean method5310(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, textEncoder))));
 	}
 
-	boolean method5465(Class55 class55, Class77 class77) {
+	boolean method5465(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, textEncoder))));
 	}
 
-	boolean method5464(Class55 class55, Class77 class77) {
+	boolean method5464(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, textEncoder))));
 	}
 
-	boolean method5466(Class55 class55, Class77 class77) {
+	boolean method5466(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, textEncoder))));
 	}
 
-	Interface9_Impl2 method5433(Class55 class55, Class77 class77, int i, int i_98_) {
-		return new Class200_Sub3(this, class55, class77, i, i_98_);
+	Interface9_Impl2 method5433(Class55 class55, TextEncoder textEncoder, int i, int i_98_) {
+		return new Class200_Sub3(this, class55, textEncoder, i, i_98_);
 	}
 
 	Interface9_Impl2 method5468(Class55 class55, int i, int i_99_, boolean bool, byte[] is, int i_100_, int i_101_) {
@@ -1579,8 +1579,8 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		return new Class200_Sub1(this, class55, i, i_118_, i_119_, bool, is);
 	}
 
-	Interface9_Impl2_Impl1 method5479(Class55 class55, Class77 class77, int i, int i_120_) {
-		return new Class200_Sub3_Sub1(this, class55, class77, i, i_120_);
+	Interface9_Impl2_Impl1 method5479(Class55 class55, TextEncoder textEncoder, int i, int i_120_) {
+		return new Class200_Sub3_Sub1(this, class55, textEncoder, i, i_120_);
 	}
 
 	void method5457() {
@@ -1593,8 +1593,8 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		}
 	}
 
-	Interface9_Impl2_Impl1 method5413(Class55 class55, Class77 class77, int i, int i_122_) {
-		return new Class200_Sub3_Sub1(this, class55, class77, i, i_122_);
+	Interface9_Impl2_Impl1 method5413(Class55 class55, TextEncoder textEncoder, int i, int i_122_) {
+		return new Class200_Sub3_Sub1(this, class55, textEncoder, i, i_122_);
 	}
 
 	public void method5480() {
@@ -1866,7 +1866,7 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 	}
 
 	final Interface7_Impl2 method5507(boolean bool) {
-		return new Class196(this, Class77.aClass77_718, bool);
+		return new Class196(this, TextEncoder.aTextEncoder_718, bool);
 	}
 
 	final Interface7_Impl1 method5509(boolean bool) {
@@ -1893,9 +1893,9 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		IDirect3DDevice.SetIndices(((Class_ra_Sub3_Sub2) this).aLong9847, (((Class196) (Class196) interface7_impl2).aLong8590));
 	}
 
-	boolean method5461(Class55 class55, Class77 class77) {
+	boolean method5461(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 3, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 3, method5546(class55, textEncoder))));
 	}
 
 	public EnvironmentMap method5142(EnvironmentMap environmentMap, EnvironmentMap environmentMap_134_, float f, EnvironmentMap environmentMap_135_) {
@@ -1920,9 +1920,9 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		IDirect3DDevice.DrawIndexedPrimitive((((Class_ra_Sub3_Sub2) this).aLong9847), method5567(class187), 0, i, i_140_, i_141_, i_142_);
 	}
 
-	boolean method5406(Class55 class55, Class77 class77) {
+	boolean method5406(Class55 class55, TextEncoder textEncoder) {
 		D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
-		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, class77))));
+		return (jagdx.a.f(IDirect3D.GetAdapterDisplayMode(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, d3ddisplaymode)) && jagdx.a.f(IDirect3D.CheckDeviceFormat(((Class_ra_Sub3_Sub2) this).aLong9852, ((Class_ra_Sub3_Sub2) this).anInt9844, ((Class_ra_Sub3_Sub2) this).anInt9871, d3ddisplaymode.Format, 0, 4, method5546(class55, textEncoder))));
 	}
 
 	Interface9_Impl2 method5473(int i, int i_143_, boolean bool, int[] is, int i_144_, int i_145_) {
@@ -2029,8 +2029,8 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 		IDirect3DDevice.DrawIndexedPrimitive((((Class_ra_Sub3_Sub2) this).aLong9847), method5567(class187), 0, i, i_151_, i_152_, i_153_);
 	}
 
-	Interface9_Impl2_Impl1 method5391(Class55 class55, Class77 class77, int i, int i_154_) {
-		return new Class200_Sub3_Sub1(this, class55, class77, i, i_154_);
+	Interface9_Impl2_Impl1 method5391(Class55 class55, TextEncoder textEncoder, int i, int i_154_) {
+		return new Class200_Sub3_Sub1(this, class55, textEncoder, i, i_154_);
 	}
 
 	void method5395() {
@@ -2051,7 +2051,7 @@ public class Class_ra_Sub3_Sub2 extends Class_ra_Sub3 {
 	}
 
 	public Interface8_Impl1_Impl2 method5186(int i, int i_155_) {
-		return new Class199(this, Class77.aClass77_719, i, i_155_);
+		return new Class199(this, TextEncoder.aTextEncoder_719, i, i_155_);
 	}
 
 	void method5452() {

@@ -1,14 +1,13 @@
-
 /* GamePreferences - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 public class GamePreferences extends Node {
-	public Class422_Sub12 aClass422_Sub12_7543;
+	public WindowModePreference windowMode;
 	static int anInt7544 = 23;
 	public static int anInt7545 = 245;
 	public static int anInt7546 = 500;
-	public Class422_Sub2 aClass422_Sub2_7547;
+	public RemoveRoofPreference aRemoveRoofPreference_7547;
 	public GroundDecorPreference aGroundDecorPreference_7548;
 	public AntialiasPreference antialiasPreference;
 	public AntialiasPreference aAntialiasPreference_7550;
@@ -30,12 +29,12 @@ public class GamePreferences extends Node {
 	public ScreenSizePreference aScreenSizePreference_7566;
 	public Class422_Sub19 aClass422_Sub19_7567;
 	GameContext aGameContext_7568;
-	public GraphicsAutoSetup aGraphicsAutoSetup_7569;
+	public GraphicsSetup aGraphicsSetup_7569;
 	public ToolkitPreference aToolkitPreference_7570;
 	public ToolkitPreference graphicsPreference;
 	public WaterDetailPreference waterDetailPreference;
 	public GroundBlendingPreference groundBlendingPreference;
-	public Class422_Sub12 aClass422_Sub12_7574;
+	public WindowModePreference windowModeShadow;
 	public CustomCursorPreference cursorPreference;
 	public GraphicsPresetPreference aGraphicsPresetPreference_7576;
 	public CPUUsagePreference aClass422_Sub26_7577;
@@ -49,8 +48,22 @@ public class GamePreferences extends Node {
 	static int anInt7585 = 27;
 	public Class422_Sub22 aClass422_Sub22_7586;
 	public VolumePreference aVolumePreference_7587;
+	private boolean jsonAppliedOnce = false;
 
-	void method3536(short i) {
+	private void applyJsonIfPresentOnce() {
+		if (jsonAppliedOnce) return;
+		try {
+			ClientPrefs json = PrefsIO.loadOrNull();
+			if (json != null) {
+				GamePreferencesJsonBridge.applyToGamePreferences(json, this);
+			}
+		} catch (Throwable t) {
+			t.printStackTrace();
+		}
+		jsonAppliedOnce = true;
+	}
+
+	void applyPreferences(short i) {
 		try {
 			antialiasPreference.method5673((byte) 52);
 			aAntialiasPreference_7550.method5673((byte) 99);
@@ -61,8 +74,8 @@ public class GamePreferences extends Node {
 			flickeringPreference.method5656(1954264806);
 			fogPreference.method5634((byte) -91);
 			groundBlendingPreference.method5723(-921904225);
-			aClass422_Sub2_7547.method5627(67108864);
-			aGraphicsAutoSetup_7569.method5715((byte) -33);
+			aRemoveRoofPreference_7547.method5627(67108864);
+			aGraphicsSetup_7569.method5715((byte) -33);
 			lightingPreference.method5683(-2119597982);
 			sceneryShadowPreference.method5649(-801698141);
 			aGroundDecorPreference_7548.method5659(-879410912);
@@ -76,8 +89,8 @@ public class GamePreferences extends Node {
 			aToolkitPreference_7570.method5678((byte) 28);
 			graphicsPreference.method5678((byte) -80);
 			waterDetailPreference.method5640(-500168009);
-			aClass422_Sub12_7543.method5670(1079042483);
-			aClass422_Sub12_7574.method5670(1079042483);
+			windowMode.method5670(1079042483);
+			windowModeShadow.method5670(1079042483);
 			cursorPreference.method5731(1430761433);
 			aGraphicsPresetPreference_7576.method5708(-604043841);
 			aClass422_Sub26_7577.method5718(316051104);
@@ -90,6 +103,13 @@ public class GamePreferences extends Node {
 			aVolumePreference_7584.method5727((byte) -1);
 			aVolumePreference_7587.method5727((byte) -15);
 			aClass422_Sub22_7586.method5707((byte) 124);
+			try {
+				if (Loader.instance != null) {
+					int a = (windowMode != null) ? windowMode.getWindowMode((byte)0) : -1;
+					int b = (windowModeShadow != null) ? windowModeShadow.getWindowMode((byte)0) : -1;
+					Loader.instance.updateFixedPanelSizeFromPrefs(a, b, false);
+				}
+			} catch (Throwable ignored) {}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "aco.d(" + ')');
 		}
@@ -124,11 +144,11 @@ public class GamePreferences extends Node {
 			if (bool || groundBlendingPreference == null) {
 				groundBlendingPreference = new GroundBlendingPreference(this);
 			}
-			if (bool || aClass422_Sub2_7547 == null) {
-				aClass422_Sub2_7547 = new Class422_Sub2(this);
+			if (bool || aRemoveRoofPreference_7547 == null) {
+				aRemoveRoofPreference_7547 = new RemoveRoofPreference(this);
 			}
-			if (bool || aGraphicsAutoSetup_7569 == null) {
-				aGraphicsAutoSetup_7569 = new GraphicsAutoSetup(this);
+			if (bool || aGraphicsSetup_7569 == null) {
+				aGraphicsSetup_7569 = new GraphicsSetup(this);
 			}
 			if (bool || lightingPreference == null) {
 				lightingPreference = new LightingPreference(this);
@@ -169,11 +189,11 @@ public class GamePreferences extends Node {
 			if (bool || waterDetailPreference == null) {
 				waterDetailPreference = new WaterDetailPreference(this);
 			}
-			if (bool || aClass422_Sub12_7543 == null) {
-				aClass422_Sub12_7543 = new Class422_Sub12(this);
+			if (bool || windowMode == null) {
+				windowMode = new WindowModePreference(this);
 			}
-			if (bool || aClass422_Sub12_7574 == null) {
-				aClass422_Sub12_7574 = new Class422_Sub12(aClass422_Sub12_7543.method5669((byte) 55), this);
+			if (bool || windowModeShadow == null) {
+				windowModeShadow = new WindowModePreference(windowMode.getWindowMode((byte) 55), this);
 			}
 			if (bool || null == cursorPreference) {
 				cursorPreference = new CustomCursorPreference(this);
@@ -221,9 +241,9 @@ public class GamePreferences extends Node {
 			aClass422_Sub1_7552 = new Class422_Sub1(packet.readUnsignedByte(), this);
 			packet.pos += 116413311;
 			aClass422_Sub17_7564 = new Class422_Sub17(packet.readUnsignedByte() + 1, this);
-			aClass422_Sub2_7547 = new Class422_Sub2(packet.readUnsignedByte(), this);
+			aRemoveRoofPreference_7547 = new RemoveRoofPreference(packet.readUnsignedByte(), this);
 			packet.pos += 116413311;
-			aGraphicsAutoSetup_7569 = new GraphicsAutoSetup(packet.readUnsignedByte(), this);
+			aGraphicsSetup_7569 = new GraphicsSetup(packet.readUnsignedByte(), this);
 			flickeringPreference = new FlickeringPreference(packet.readUnsignedByte(), this);
 			packet.readUnsignedByte();
 			characterShadowPreference = new CharacterShadowPreference(packet.readUnsignedByte(), this);
@@ -274,7 +294,7 @@ public class GamePreferences extends Node {
 			}
 			packet.readUnsignedInt();
 			if (size >= 6) {
-				aClass422_Sub12_7543 = new Class422_Sub12(packet.readUnsignedByte(), this);
+				windowMode = new WindowModePreference(packet.readUnsignedByte(), this);
 			}
 			if (size >= 7) {
 				safemodePreference = new SafemodePreference(packet.readUnsignedByte(), this);
@@ -292,7 +312,7 @@ public class GamePreferences extends Node {
 				cursorPreference = new CustomCursorPreference(packet.readUnsignedByte(), this);
 			}
 			if (size >= 12) {
-				aGraphicsAutoSetup_7569 = new GraphicsAutoSetup(packet.readUnsignedByte(), this);
+				aGraphicsSetup_7569 = new GraphicsSetup(packet.readUnsignedByte(), this);
 			}
 			if (size >= 13) {
 				groundBlendingPreference = new GroundBlendingPreference(packet.readUnsignedByte(), this);
@@ -323,7 +343,7 @@ public class GamePreferences extends Node {
 	public void method3539(ToolkitPreference toolkitPreference, boolean bool, int i) {
 		try {
 			toolkitPreference.method5680(bool, 987947106);
-			method3536((short) -12304);
+			applyPreferences((short) -12304);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aco.k(").append(')').toString());
 		}
@@ -332,7 +352,7 @@ public class GamePreferences extends Node {
 	public void method3540(IntegerPreferenceField integerPreferenceField, int i, int i_4_) {
 		try {
 			integerPreferenceField.method5613(i, -1130882310);
-			method3536((short) -7745);
+			applyPreferences((short) -7745);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aco.i(").append(')').toString());
 		}
@@ -357,8 +377,8 @@ public class GamePreferences extends Node {
 		buffer.writeByte(flickeringPreference.method5655(1995968381));
 		buffer.writeByte(fogPreference.method5633(-521957289));
 		buffer.writeByte(groundBlendingPreference.method5724(1089456139));
-		buffer.writeByte(aClass422_Sub2_7547.method5629(-952901154));
-		buffer.writeByte(aGraphicsAutoSetup_7569.method5716((byte) -44));
+		buffer.writeByte(aRemoveRoofPreference_7547.method5629(-952901154));
+		buffer.writeByte(aGraphicsSetup_7569.method5716((byte) -44));
 		buffer.writeByte(lightingPreference.getValue(-1895382088));
 		buffer.writeByte(sceneryShadowPreference.getValue(79813518));
 		buffer.writeByte(aGroundDecorPreference_7548.method5661((byte) 124));
@@ -371,7 +391,7 @@ public class GamePreferences extends Node {
 		buffer.writeByte(aToolkitPreference_7570.getValue(-605734712));
 		buffer.writeByte(0);
 		buffer.writeByte(waterDetailPreference.getValue(-1219854302));
-		buffer.writeByte(aClass422_Sub12_7543.method5669((byte) 99));
+		buffer.writeByte(windowMode.getWindowMode((byte) 99));
 		buffer.writeByte(cursorPreference.method5730(2045848485));
 		buffer.writeByte(aGraphicsPresetPreference_7576.method5709(594825158));
 		buffer.writeByte(aClass422_Sub26_7577.method5717((byte) 1));
@@ -391,7 +411,7 @@ public class GamePreferences extends Node {
 		try {
 			return aClass417_7562;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("aco.x(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "aco.x(" + ')');
 		}
 	}
 
@@ -421,8 +441,8 @@ public class GamePreferences extends Node {
 				flickeringPreference = new FlickeringPreference(packet.readUnsignedByte(), this);
 				fogPreference = new FogPreference(packet.readUnsignedByte(), this);
 				groundBlendingPreference = new GroundBlendingPreference(packet.readUnsignedByte(), this);
-				aClass422_Sub2_7547 = new Class422_Sub2(packet.readUnsignedByte(), this);
-				aGraphicsAutoSetup_7569 = new GraphicsAutoSetup(packet.readUnsignedByte(), this);
+				aRemoveRoofPreference_7547 = new RemoveRoofPreference(packet.readUnsignedByte(), this);
+				aGraphicsSetup_7569 = new GraphicsSetup(packet.readUnsignedByte(), this);
 				lightingPreference = new LightingPreference(packet.readUnsignedByte(), this);
 				sceneryShadowPreference = new SceneryShadowPreference(packet.readUnsignedByte(), this);
 				if (version >= 24) {
@@ -444,8 +464,8 @@ public class GamePreferences extends Node {
 				graphicsPreference = new ToolkitPreference(aToolkitPreference_7570.getValue(-1765693260), this);
 				packet.readUnsignedByte();
 				waterDetailPreference = new WaterDetailPreference(packet.readUnsignedByte(), this);
-				aClass422_Sub12_7543 = new Class422_Sub12(packet.readUnsignedByte(), this);
-				aClass422_Sub12_7574 = new Class422_Sub12(aClass422_Sub12_7543.method5669((byte) 124), this);
+				windowMode = new WindowModePreference(packet.readUnsignedByte(), this);
+				windowModeShadow = new WindowModePreference(windowMode.getWindowMode((byte) 124), this);
 				cursorPreference = new CustomCursorPreference(packet.readUnsignedByte(), this);
 				aGraphicsPresetPreference_7576 = new GraphicsPresetPreference(packet.readUnsignedByte(), this);
 				aClass422_Sub26_7577 = new CPUUsagePreference(packet.readUnsignedByte(), this);
@@ -463,7 +483,15 @@ public class GamePreferences extends Node {
 				method3537(false, 95343379);
 			}
 		}
-		method3536((short) -25361);
+		applyPreferences((short) -25361);
+		try {
+			if (Loader.instance != null) {
+				int a = (windowMode != null) ? windowMode.getWindowMode((byte)0) : -1;
+				int b = (windowModeShadow != null) ? windowModeShadow.getWindowMode((byte)0) : -1;
+				Loader.instance.updateFixedPanelSizeFromPrefs(a, b, true);
+			}
+		} catch (Throwable ignored) {}
+
 	}
 
 	public GamePreferences(GameContext gameContext, int i) {
@@ -471,6 +499,7 @@ public class GamePreferences extends Node {
 		aClass417_7562 = new Class417(GameShell.maximumMemory * 1126040225, GameShell.availableCPU * 1090452523, Class344.aString3687.toLowerCase().indexOf("arm") != -1);
 		graphicsPreference = new ToolkitPreference(i, this);
 		method3537(true, -214971626);
+		applyJsonIfPresentOnce();
 	}
 
 	public GamePreferences(Packet class298_sub53, GameContext gameContext, int i) {
@@ -478,5 +507,6 @@ public class GamePreferences extends Node {
 		aClass417_7562 = new Class417(GameShell.maximumMemory * 1126040225, 1090452523 * GameShell.availableCPU, Class344.aString3687.indexOf("arm") != -1);
 		graphicsPreference = new ToolkitPreference(i, this);
 		method3544(class298_sub53, -2103020083);
+		applyJsonIfPresentOnce();
 	}
 }

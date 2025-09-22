@@ -68,7 +68,7 @@ public class Class114 {
 			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
 			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
-			Class365_Sub1_Sub3_Sub1.method4509(class105, RSInterface, class403, (byte) -50);
+			SceneObject.method4509(class105, RSInterface, class403, (byte) -50);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("eq.kp(").append(')').toString());
 		}

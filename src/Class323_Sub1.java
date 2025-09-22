@@ -253,7 +253,7 @@ public final class Class323_Sub1 extends Class323 implements KeyListener, FocusL
 				    GameClient.zoom -= 15;
 				    JagexLibraryManager.method3752(184, GameClient.zoom, 644551429);
 				} else {
-//				    Class255.method2435("You can not zoom any farther outwards!", 93254474);
+//				    DevConsole.method2435("You can not zoom any farther outwards!", 93254474);
 				}
 				return;
 			    }
@@ -272,7 +272,7 @@ public final class Class323_Sub1 extends Class323 implements KeyListener, FocusL
 				    GameClient.zoom += 15;
 				    JagexLibraryManager.method3752(184, GameClient.zoom, 644551429);
 				} else {
-//				    Class255.method2435("You can not zoom any farther inwards!", 93254474);
+//				    DevConsole.method2435("You can not zoom any farther inwards!", 93254474);
 				}
 				return;
 			    }

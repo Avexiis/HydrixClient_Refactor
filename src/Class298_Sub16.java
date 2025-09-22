@@ -11,7 +11,7 @@ public class Class298_Sub16 extends Node {
 	Class_xa_Sub1 aClass_xa_Sub1_7283;
 	int anInt7284;
 	Stream aStream7285;
-	Class78 aClass78_7286;
+	DisplayMode aDisplayMode_7286;
 	Interface7_Impl1 anInterface7_Impl1_7287;
 	Class_ra_Sub3 aClass_ra_Sub3_7288;
 	int[] anIntArray7289;
@@ -142,7 +142,7 @@ public class Class298_Sub16 extends Node {
 		}
 	}
 
-	Class298_Sub16(Class_xa_Sub1 class_xa_sub1, int i, int i_23_, Class78 class78) {
+	Class298_Sub16(Class_xa_Sub1 class_xa_sub1, int i, int i_23_, DisplayMode displayMode) {
 		((Class298_Sub16) this).anInt7282 = 0;
 		((Class298_Sub16) this).anInt7291 = 0;
 		((Class298_Sub16) this).anInt7292 = 0;
@@ -150,7 +150,7 @@ public class Class298_Sub16 extends Node {
 		((Class298_Sub16) this).aClass_ra_Sub3_7288 = (((Class_xa_Sub1) ((Class298_Sub16) this).aClass_xa_Sub1_7283).aClass_ra_Sub3_8467);
 		((Class298_Sub16) this).anInt7284 = i;
 		((Class298_Sub16) this).aFloat7294 = (float) i_23_;
-		((Class298_Sub16) this).aClass78_7286 = class78;
+		((Class298_Sub16) this).aDisplayMode_7286 = displayMode;
 		((Class298_Sub16) this).anIntArray7289 = new int[(((Class298_Sub16) this).aClass_xa_Sub1_7283.anInt6287 * -506105871 * (((Class298_Sub16) this).aClass_xa_Sub1_7283.anInt6286 * -1148794921))];
 		byte i_24_ = 10;
 		if (i >= 0) {

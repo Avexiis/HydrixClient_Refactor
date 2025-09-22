@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class overheadString {
+public class OverheadString {
 	int anInt607;
 	String aString608;
 	int anInt609;
@@ -12,7 +12,7 @@ public class overheadString {
 
 	public int method719(int i) {
 		try {
-			return ((overheadString) this).anInt609 * -356113587;
+			return ((OverheadString) this).anInt609 * -356113587;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.b(").append(')').toString());
 		}
@@ -20,7 +20,7 @@ public class overheadString {
 
 	public int method720(int i) {
 		try {
-			return -1009994485 * ((overheadString) this).anInt607;
+			return -1009994485 * ((OverheadString) this).anInt607;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.f(").append(')').toString());
 		}
@@ -28,7 +28,7 @@ public class overheadString {
 
 	public String method721(byte i) {
 		try {
-			return ((overheadString) this).aString608;
+			return ((OverheadString) this).aString608;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.a(").append(')').toString());
 		}
@@ -36,19 +36,19 @@ public class overheadString {
 
 	public int method722(int i) {
 		try {
-			return -1542462711 * ((overheadString) this).anInt611;
+			return -1542462711 * ((OverheadString) this).anInt611;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.i(").append(')').toString());
 		}
 	}
 
-	overheadString() {
+	OverheadString() {
 		/* empty */
 	}
 
 	public int method723(short i) {
 		try {
-			return -1009911665 * ((overheadString) this).anInt610;
+			return -1009911665 * ((OverheadString) this).anInt610;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.p(").append(')').toString());
 		}
@@ -65,7 +65,7 @@ public class overheadString {
 
 	static final void method725(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aClass422_Sub1_7552.method5625(-134644277);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aClass422_Sub1_7552.method5625(-134644277);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.ajn(").append(')').toString());
 		}
@@ -73,7 +73,7 @@ public class overheadString {
 
 	static final void method726(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aClass422_Sub26_7577.method5717((byte) 1);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aClass422_Sub26_7577.method5717((byte) 1);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.akk(").append(')').toString());
 		}
@@ -88,10 +88,10 @@ public class overheadString {
 		}
 	}
 
-	static int method728(Class298_Sub37_Sub5 class298_sub37_sub5, Class505 class505, int i) {
+	static int method728(Class298_Sub37_Sub5 class298_sub37_sub5, GameFont gameFont, int i) {
 		try {
 			String string = ErrorContext.method4174(class298_sub37_sub5, (byte) 66);
-			return class505.method6254(string, ContextMenu.aClass57Array5501, 1319235613);
+			return gameFont.method6254(string, ContextMenu.aClass57Array5501, 1319235613);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cn.by(").append(')').toString());
 		}

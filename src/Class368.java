@@ -70,7 +70,7 @@ public class Class368 {
 				int i_10_ = 0;
 				int i_11_ = 0;
 				if (null != worldMapLabel.aString3792) {
-					i_9_ = Class74.aClass505_695.method6257((worldMapLabel.aString3792), null, (Class301_Sub1.aStringArray7638), null, (byte) 37);
+					i_9_ = Class74.aGameFont_695.method6257((worldMapLabel.aString3792), null, (Class301_Sub1.aStringArray7638), null, (byte) 37);
 					for (int i_12_ = 0; i_12_ < i_9_; i_12_++) {
 						String string = Class301_Sub1.aStringArray7638[i_12_];
 						if (i_12_ < i_9_ - 1)

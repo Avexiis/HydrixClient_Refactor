@@ -58,12 +58,12 @@ public class Class197 {
 		}
 	}
 
-	public Class505 method1879(Interface10 interface10, int i, int i_3_) {
+	public GameFont method1879(Interface10 interface10, int i, int i_3_) {
 		try {
 			Class454 class454 = method1885(interface10, i, true, true, -160012913);
 			if (null == class454)
 				return null;
-			return (Class505) class454.anObject5646;
+			return (GameFont) class454.anObject5646;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ii.d(").append(')').toString());
 		}
@@ -90,10 +90,10 @@ public class Class197 {
 			((Class197) this).aMap1990 = new HashMap(((Class197) this).anIntArray1991.length);
 			for (int i_5_ = 0; i_5_ < ((Class197) this).anIntArray1991.length; i_5_++) {
 				int i_6_ = ((Class197) this).anIntArray1991[i_5_];
-				Class505 class505 = Class255.method2439(((Class197) this).aClass243_1988, i_6_, -227622319);
+				GameFont gameFont = DevConsole.method2439(((Class197) this).aClass243_1988, i_6_, -227622319);
 				byte[] is = ((Class197) this).aClass243_1987.method2294(i_6_, (byte) 82);
-				Object object = interface10.method131(is, class505, true, -2012626904);
-				((Class197) this).aMap1990.put(Integer.valueOf(i_5_), new Class454(object, class505));
+				Object object = interface10.method131(is, gameFont, true, -2012626904);
+				((Class197) this).aMap1990.put(Integer.valueOf(i_5_), new Class454(object, gameFont));
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ii.a(").append(')').toString());
@@ -132,23 +132,23 @@ public class Class197 {
 			Class454 class454 = ((Class454) ((Class197) this).aClass348_1989.get((long) (i << 1 | (bool_9_ ? 1 : 0))));
 			if (null != class454) {
 				if (bool && class454.anObject5646 == null) {
-					Class505 class505 = Class255.method2439(((Class197) this).aClass243_1988, i, -221293891);
-					if (null == class505)
+					GameFont gameFont = DevConsole.method2439(((Class197) this).aClass243_1988, i, -221293891);
+					if (null == gameFont)
 						return null;
-					class454.anObject5646 = class505;
+					class454.anObject5646 = gameFont;
 				}
 				return class454;
 			}
 			byte[] is = ((Class197) this).aClass243_1987.method2294(i, (byte) 54);
 			if (null == is)
 				return null;
-			Class505 class505 = Class255.method2439(((Class197) this).aClass243_1988, i, 1718390038);
-			if (class505 == null)
+			GameFont gameFont = DevConsole.method2439(((Class197) this).aClass243_1988, i, 1718390038);
+			if (gameFont == null)
 				return null;
 			if (bool)
-				class454 = new Class454(interface10.method131(is, class505, bool_9_, -1761009560), class505);
+				class454 = new Class454(interface10.method131(is, gameFont, bool_9_, -1761009560), gameFont);
 			else
-				class454 = new Class454(interface10.method131(is, class505, bool_9_, -2090037397), null);
+				class454 = new Class454(interface10.method131(is, gameFont, bool_9_, -2090037397), null);
 			((Class197) this).aClass348_1989.put(class454, (long) (i << 1 | (bool_9_ ? 1 : 0)));
 			return class454;
 		} catch (RuntimeException runtimeexception) {
@@ -188,7 +188,7 @@ public class Class197 {
 
 	static void method1888(int i, boolean bool, int i_14_) {
 		try {
-			Class298_Sub9 class298_sub9 = Class255.method2437(i, bool, 1277483186);
+			Class298_Sub9 class298_sub9 = DevConsole.method2437(i, bool, 1277483186);
 			if (class298_sub9 != null)
 				class298_sub9.unlink(-1460969981);
 		} catch (RuntimeException runtimeexception) {

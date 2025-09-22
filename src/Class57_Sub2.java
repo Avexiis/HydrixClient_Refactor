@@ -674,11 +674,11 @@ public class Class57_Sub2 extends Class57 {
 		((Class57_Sub2) this).anInt9023 = i;
 		((Class57_Sub2) this).anInt9030 = i_205_;
 		if (bool_206_) {
-			Interface9_Impl2_Impl1 interface9_impl2_impl1 = class_ra_sub3.method5356((bool ? Class55.aClass55_557 : Class55.aClass55_560), Class77.aClass77_717, i, i_205_);
+			Interface9_Impl2_Impl1 interface9_impl2_impl1 = class_ra_sub3.method5356((bool ? Class55.aClass55_557 : Class55.aClass55_560), TextEncoder.aTextEncoder_717, i, i_205_);
 			((Class57_Sub2) this).anInterface8_Impl1_Impl1_9025 = interface9_impl2_impl1.method117(0);
 			((Class57_Sub2) this).anInterface9_Impl2_9024 = interface9_impl2_impl1;
 		} else {
-			((Class57_Sub2) this).anInterface9_Impl2_9024 = class_ra_sub3.method5353((bool ? Class55.aClass55_557 : Class55.aClass55_560), Class77.aClass77_717, i, i_205_);
+			((Class57_Sub2) this).anInterface9_Impl2_9024 = class_ra_sub3.method5353((bool ? Class55.aClass55_557 : Class55.aClass55_560), TextEncoder.aTextEncoder_717, i, i_205_);
 			((Class57_Sub2) this).anInterface8_Impl1_Impl1_9025 = null;
 		}
 		((Class57_Sub2) this).anInterface9_Impl2_9024.method80(true, true);

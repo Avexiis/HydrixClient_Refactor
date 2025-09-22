@@ -247,7 +247,7 @@ public final class Class138_Sub1 extends Class138 {
 	static final void method1541(ClientScript2 class403, int i) {
 		try {
 			int i_11_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5612(i_11_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.groundBlendingPreference.method5612(i_11_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("yi.aoz(").append(')').toString());
 		}

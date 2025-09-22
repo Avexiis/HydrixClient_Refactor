@@ -18,7 +18,7 @@ public abstract class Class264 {
 	static int anInt2830 = -2103918561;
 	public static int anInt2831 = 0;
 	static int anInt2832;
-	Class505 aClass505_2833;
+	GameFont aGameFont_2833;
 	static int anInt2834;
 	static int anInt2835;
 	static int anInt2836;
@@ -29,7 +29,7 @@ public abstract class Class264 {
 		try {
 			if (null != string) {
 				method2481(i_1_, i_2_, (byte) 14);
-				method2484(string, i - ((Class264) this).aClass505_2833.method6264(string, -1778440333), i_0_, null, null, null, 0, 0, 1766719318);
+				method2484(string, i - ((Class264) this).aGameFont_2833.method6264(string, -1778440333), i_0_, null, null, null, 0, 0, 1766719318);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("l.f(").append(')').toString());
@@ -50,45 +50,45 @@ public abstract class Class264 {
 				return 0;
 			method2481(i_18_, i_19_, (byte) 14);
 			if (0 == i_22_)
-				i_22_ = ((Class264) this).aClass505_2833.anInt6200 * -2028004825;
+				i_22_ = ((Class264) this).aGameFont_2833.anInt6200 * -2028004825;
 			int[] is_27_;
-			if (i_17_ < i_22_ + ((1110385787 * ((Class264) this).aClass505_2833.anInt6202) + -1883958527 * (((Class264) this).aClass505_2833.anInt6197)) && i_17_ < i_22_ + i_22_)
+			if (i_17_ < i_22_ + ((1110385787 * ((Class264) this).aGameFont_2833.ascent) + -1883958527 * (((Class264) this).aGameFont_2833.descent)) && i_17_ < i_22_ + i_22_)
 				is_27_ = null;
 			else
 				is_27_ = new int[] { i_16_ };
-			int i_28_ = ((Class264) this).aClass505_2833.method6257(string, is_27_, aStringArray2838, class57s, (byte) 12);
+			int i_28_ = ((Class264) this).aGameFont_2833.method6257(string, is_27_, aStringArray2838, class57s, (byte) 12);
 			if (-1 == i_23_) {
 				i_23_ = i_17_ / i_22_;
 				if (i_23_ <= 0)
 					i_23_ = 1;
 			}
 			if (i_23_ > 0 && i_28_ >= i_23_) {
-				aStringArray2838[i_23_ - 1] = (((Class264) this).aClass505_2833.method6256(aStringArray2838[i_23_ - 1], i_16_, class57s, (byte) -89));
+				aStringArray2838[i_23_ - 1] = (((Class264) this).aGameFont_2833.method6256(aStringArray2838[i_23_ - 1], i_16_, class57s, (byte) -89));
 				i_28_ = i_23_;
 			}
 			if (3 == i_21_ && 1 == i_28_)
 				i_21_ = 1;
 			int i_29_;
 			if (0 == i_21_)
-				i_29_ = i_15_ + (1110385787 * ((Class264) this).aClass505_2833.anInt6202);
+				i_29_ = i_15_ + (1110385787 * ((Class264) this).aGameFont_2833.ascent);
 			else if (1 == i_21_)
-				i_29_ = ((i_17_ - (((Class264) this).aClass505_2833.anInt6202 * 1110385787) - (-1883958527 * ((Class264) this).aClass505_2833.anInt6197) - i_22_ * (i_28_ - 1)) / 2 + ((((Class264) this).aClass505_2833.anInt6202 * 1110385787) + i_15_));
+				i_29_ = ((i_17_ - (((Class264) this).aGameFont_2833.ascent * 1110385787) - (-1883958527 * ((Class264) this).aGameFont_2833.descent) - i_22_ * (i_28_ - 1)) / 2 + ((((Class264) this).aGameFont_2833.ascent * 1110385787) + i_15_));
 			else if (i_21_ == 2)
-				i_29_ = (i_17_ + i_15_ - (((Class264) this).aClass505_2833.anInt6197 * -1883958527) - i_22_ * (i_28_ - 1));
+				i_29_ = (i_17_ + i_15_ - (((Class264) this).aGameFont_2833.descent * -1883958527) - i_22_ * (i_28_ - 1));
 			else {
-				int i_30_ = ((i_17_ - (((Class264) this).aClass505_2833.anInt6202 * 1110385787) - (-1883958527 * ((Class264) this).aClass505_2833.anInt6197) - (i_28_ - 1) * i_22_) / (i_28_ + 1));
+				int i_30_ = ((i_17_ - (((Class264) this).aGameFont_2833.ascent * 1110385787) - (-1883958527 * ((Class264) this).aGameFont_2833.descent) - (i_28_ - 1) * i_22_) / (i_28_ + 1));
 				if (i_30_ < 0)
 					i_30_ = 0;
-				i_29_ = i_30_ + (i_15_ + 1110385787 * (((Class264) this).aClass505_2833.anInt6202));
+				i_29_ = i_30_ + (i_15_ + 1110385787 * (((Class264) this).aGameFont_2833.ascent));
 				i_22_ += i_30_;
 			}
 			for (int i_31_ = 0; i_31_ < i_28_; i_31_++) {
 				if (0 == i_20_)
 					method2484(aStringArray2838[i_31_], i, i_29_, class57s, is, class_ta, i_24_, i_25_, 1522801503);
 				else if (i_20_ == 1)
-					method2484(aStringArray2838[i_31_], i + (i_16_ - (((Class264) this).aClass505_2833.method6264(aStringArray2838[i_31_], 1710279265))) / 2, i_29_, class57s, is, class_ta, i_24_, i_25_, 1985167681);
+					method2484(aStringArray2838[i_31_], i + (i_16_ - (((Class264) this).aGameFont_2833.method6264(aStringArray2838[i_31_], 1710279265))) / 2, i_29_, class57s, is, class_ta, i_24_, i_25_, 1985167681);
 				else if (2 == i_20_)
-					method2484(aStringArray2838[i_31_], (i + i_16_ - (((Class264) this).aClass505_2833.method6264(aStringArray2838[i_31_], -760283198))), i_29_, class57s, is, class_ta, i_24_, i_25_, 1845200281);
+					method2484(aStringArray2838[i_31_], (i + i_16_ - (((Class264) this).aGameFont_2833.method6264(aStringArray2838[i_31_], -760283198))), i_29_, class57s, is, class_ta, i_24_, i_25_, 1845200281);
 				else if (i_28_ - 1 == i_31_)
 					method2484(aStringArray2838[i_31_], i, i_29_, class57s, is, class_ta, i_24_, i_25_, 2147018921);
 				else {
@@ -112,7 +112,7 @@ public abstract class Class264 {
 				int[] is = new int[i_37_];
 				for (int i_38_ = 0; i_38_ < i_37_; i_38_++)
 					is[i_38_] = (int) (Math.sin((double) i_35_ / 5.0 + (double) i_38_ / 2.0) * 5.0);
-				method2487(string, i - ((Class264) this).aClass505_2833.method6264(string, 840724490) / 2, i_32_, null, null, null, is, 873938952);
+				method2487(string, i - ((Class264) this).aGameFont_2833.method6264(string, 840724490) / 2, i_32_, null, null, null, is, 873938952);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("l.k(").append(')').toString());
@@ -130,7 +130,7 @@ public abstract class Class264 {
 					is[i_46_] = (int) (Math.sin((double) i_46_ / 5.0 + (double) i_42_ / 5.0) * 5.0);
 					is_45_[i_46_] = (int) (Math.sin((double) i_46_ / 3.0 + (double) i_42_ / 5.0) * 5.0);
 				}
-				method2487(string, i - ((Class264) this).aClass505_2833.method6264(string, -748991968) / 2, i_39_, null, null, is, is_45_, 1570757467);
+				method2487(string, i - ((Class264) this).aGameFont_2833.method6264(string, -748991968) / 2, i_39_, null, null, is, is_45_, 1570757467);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("l.d(").append(')').toString());
@@ -148,7 +148,7 @@ public abstract class Class264 {
 				int[] is = new int[i_53_];
 				for (int i_54_ = 0; i_54_ < i_53_; i_54_++)
 					is[i_54_] = (int) (Math.sin((double) i_50_ / 1.0 + (double) i_54_ / 1.5) * d);
-				method2487(string, i - ((Class264) this).aClass505_2833.method6264(string, -795569792) / 2, i_47_, null, null, null, is, 1802136078);
+				method2487(string, i - ((Class264) this).aGameFont_2833.method6264(string, -795569792) / 2, i_47_, null, null, null, is, 1802136078);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("l.u(").append(')').toString());
@@ -247,7 +247,7 @@ public abstract class Class264 {
 					i_68_++;
 			}
 			if (i_68_ > 0)
-				anInt2836 = (i - ((Class264) this).aClass505_2833.method6264(string, 1926010004) << 8) / i_68_ * -1196619179;
+				anInt2836 = (i - ((Class264) this).aGameFont_2833.method6264(string, 1926010004) << 8) / i_68_ * -1196619179;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("l.y(").append(')').toString());
 		}
@@ -255,7 +255,7 @@ public abstract class Class264 {
 
 	void method2484(String string, int i, int i_70_, Class57[] class57s, int[] is, Class_ta class_ta, int i_71_, int i_72_, int i_73_) {
 		try {
-			i_70_ -= ((Class264) this).aClass505_2833.anInt6200 * -2028004825;
+			i_70_ -= ((Class264) this).aGameFont_2833.anInt6200 * -2028004825;
 			int i_74_ = -1;
 			int i_75_ = -1;
 			int i_76_ = string.length();
@@ -292,13 +292,13 @@ public abstract class Class264 {
 									if ((anInt2828 * -882366071 & ~0xffffff) == -16777216)
 										class57.method631(
 											i,
-											(i_70_ + (((Class264) this).aClass505_2833.anInt6200 * -2028004825) - i_80_) + 3, //+3px shift to make chat crowns in-line with text.
+											(i_70_ + (((Class264) this).aGameFont_2833.anInt6200 * -2028004825) - i_80_) + 3, //+3px shift to make chat crowns in-line with text.
 											1, 0, 1                                                                          //We love hunting down single digit ints in 1000+ file deobs, don't we? -Xeon
 										);
 									else
 										class57.method631(
 											i,
-											(((Class264) this).aClass505_2833.anInt6200 * -2028004825 + i_70_ - i_80_) + 3, //+3px shift to make chat crowns in-line with text.
+											(((Class264) this).aGameFont_2833.anInt6200 * -2028004825 + i_70_ - i_80_) + 3, //+3px shift to make chat crowns in-line with text.
 											0,
 											((anInt2828 * -882366071 & ~0xffffff) | 0xffffff),
 											1
@@ -315,7 +315,7 @@ public abstract class Class264 {
 					}
 					if (i_74_ == -1) {
 						if (i_75_ != -1)
-							i += ((Class264) this).aClass505_2833.method6253(i_75_, c, -1391207992);
+							i += ((Class264) this).aGameFont_2833.method6253(i_75_, c, -1391207992);
 						if (32 != c) {
 							if (class_ta == null) {
 								if ((anInt2835 * -675619733 & ~0xffffff) != 0)
@@ -331,11 +331,11 @@ public abstract class Class264 {
 							i += anInt2832 * 1199106873 >> 8;
 							anInt2832 = (anInt2832 * 1199106873 & 0xff) * 1696502537;
 						}
-						int i_81_ = ((Class264) this).aClass505_2833.method6255(c, 2062861193);
+						int i_81_ = ((Class264) this).aGameFont_2833.method6255(c, 2062861193);
 						if (anInt2830 * -1546042335 != -1)
 							((Class264) this).aClass_ra2827.method4990(
 								i,
-								i_70_ + (int) (((Class264) this).aClass505_2833.anInt6200 * -2028004825 * 0.7),
+								i_70_ + (int) (((Class264) this).aGameFont_2833.anInt6200 * -2028004825 * 0.7),
 								i_81_,
 								anInt2830 * -1546042335,
 								-1768183212
@@ -343,7 +343,7 @@ public abstract class Class264 {
 						if (anInt2837 * -1731221141 != -1)
 							((Class264) this).aClass_ra2827.method4990(
 								i,
-								(Class264.this).aClass505_2833.anInt6200 * -2028004825 + i_70_ + 1,
+								(Class264.this).aGameFont_2833.anInt6200 * -2028004825 + i_70_ + 1,
 								i_81_,
 								anInt2837 * -1731221141,
 								-1909269175
@@ -374,27 +374,27 @@ public abstract class Class264 {
 					i_95_++;
 			}
 			int i_97_ = i;
-			int i_98_ = (((Class264) this).aClass505_2833.anInt6202 * 1110385787 + i_82_);
+			int i_98_ = (((Class264) this).aGameFont_2833.ascent * 1110385787 + i_82_);
 			int i_99_ = -1;
 			if (1 == i_88_)
-				i_98_ += (i_84_ - (1110385787 * ((Class264) this).aClass505_2833.anInt6202) - -1883958527 * (((Class264) this).aClass505_2833.anInt6197)) / 2;
+				i_98_ += (i_84_ - (1110385787 * ((Class264) this).aGameFont_2833.ascent) - -1883958527 * (((Class264) this).aGameFont_2833.descent)) / 2;
 			else if (2 == i_88_)
-				i_98_ = i_84_ + i_82_ - (((Class264) this).aClass505_2833.anInt6197) * -1883958527;
+				i_98_ = i_84_ + i_82_ - (((Class264) this).aGameFont_2833.descent) * -1883958527;
 			if (1 == i_87_) {
-				i_99_ = (((Class264) this).aClass505_2833.method6264(string, 428489518) + i_95_);
+				i_99_ = (((Class264) this).aGameFont_2833.method6264(string, 428489518) + i_95_);
 				i_97_ += (i_83_ - i_99_) / 2;
 			} else if (i_87_ == 2) {
-				i_99_ = (((Class264) this).aClass505_2833.method6264(string, 366396585) + i_95_);
+				i_99_ = (((Class264) this).aGameFont_2833.method6264(string, 366396585) + i_95_);
 				i_97_ += i_83_ - i_99_;
 			}
 			method2487(string, i_97_, i_98_, class57s, is_90_, is_94_, null, 2007858452);
 			if (is != null) {
 				if (-1 == i_99_)
-					i_99_ = ((Class264) this).aClass505_2833.method6264(string, -1885906966) + i_95_;
+					i_99_ = ((Class264) this).aGameFont_2833.method6264(string, -1885906966) + i_95_;
 				is[0] = i_97_;
-				is[1] = i_98_ - (1110385787 * ((Class264) this).aClass505_2833.anInt6202);
+				is[1] = i_98_ - (1110385787 * ((Class264) this).aGameFont_2833.ascent);
 				is[2] = i_99_;
-				is[3] = (-1883958527 * ((Class264) this).aClass505_2833.anInt6197 + (1110385787 * ((Class264) this).aClass505_2833.anInt6202));
+				is[3] = (-1883958527 * ((Class264) this).aGameFont_2833.descent + (1110385787 * ((Class264) this).aGameFont_2833.ascent));
 			}
 			return i_95_;
 		} catch (RuntimeException runtimeexception) {
@@ -406,16 +406,16 @@ public abstract class Class264 {
 
 	abstract void g(char c, int i, int i_104_, int i_105_, boolean bool);
 
-	Class264(GraphicsToolkit class_ra, Class505 class505) {
+	Class264(GraphicsToolkit class_ra, GameFont gameFont) {
 		((Class264) this).aClass_ra2827 = class_ra;
-		((Class264) this).aClass505_2833 = class505;
+		((Class264) this).aGameFont_2833 = gameFont;
 	}
 
 	abstract void e(char c, int i, int i_106_, int i_107_, boolean bool);
 
 	void method2487(String string, int i, int i_108_, Class57[] class57s, int[] is, int[] is_109_, int[] is_110_, int i_111_) {
 		try {
-			i_108_ -= ((Class264) this).aClass505_2833.anInt6200 * -2028004825;
+			i_108_ -= ((Class264) this).aGameFont_2833.anInt6200 * -2028004825;
 			int i_112_ = -1;
 			int i_113_ = -1;
 			int i_114_ = 0;
@@ -438,7 +438,7 @@ public abstract class Class264 {
 								int i_121_ = (is != null ? is[i_120_] : class57.method626());
 								class57.method631(
 									i + i_118_,
-									(i_108_ + ((((Class264) this).aClass505_2833.anInt6200) * -2028004825)
+									(i_108_ + ((((Class264) this).aGameFont_2833.anInt6200) * -2028004825)
 										- i_121_
 										+ i_119_
 									) + 3, //+3px shift to make chat crowns in-line with text.
@@ -457,7 +457,7 @@ public abstract class Class264 {
 					}
 					if (i_112_ == -1) {
 						if (i_113_ != -1)
-							i += ((Class264) this).aClass505_2833.method6253(i_113_, c, -1391207992);
+							i += ((Class264) this).aGameFont_2833.method6253(i_113_, c, -1391207992);
 						int i_122_ = (is_109_ != null ? is_109_[i_114_] : 0);
 						int i_123_ = (is_110_ != null ? is_110_[i_114_] : 0);
 						i_114_++;
@@ -470,11 +470,11 @@ public abstract class Class264 {
 							i += anInt2832 * 1199106873 >> 8;
 							anInt2832 = (anInt2832 * 1199106873 & 0xff) * 1696502537;
 						}
-						int i_124_ = ((Class264) this).aClass505_2833.method6255(c, 901349390);
+						int i_124_ = ((Class264) this).aGameFont_2833.method6255(c, 901349390);
 						if (anInt2830 * -1546042335 != -1)
 							((Class264) this).aClass_ra2827.method4990(
 								i,
-								(int) (0.7 * ((Class264) this).aClass505_2833.anInt6200 * -2028004825) + i_108_,
+								(int) (0.7 * ((Class264) this).aGameFont_2833.anInt6200 * -2028004825) + i_108_,
 								i_124_,
 								anInt2830 * -1546042335,
 								-1291304845
@@ -482,7 +482,7 @@ public abstract class Class264 {
 						if (anInt2837 * -1731221141 != -1)
 							((Class264) this).aClass_ra2827.method4990(
 								i,
-								i_108_ + ((Class264) this).aClass505_2833.anInt6200 * -2028004825,
+								i_108_ + ((Class264) this).aGameFont_2833.anInt6200 * -2028004825,
 								i_124_,
 								anInt2837 * -1731221141,
 								-1265660857
@@ -526,7 +526,7 @@ public abstract class Class264 {
 		try {
 			if (string != null) {
 				method2481(i_136_, i_137_, (byte) 14);
-				method2484(string, i - ((Class264) this).aClass505_2833.method6264(string, 1243151471) / 2, i_135_, null, null, null, 0, 0, 2121400127);
+				method2484(string, i - ((Class264) this).aGameFont_2833.method6264(string, 1243151471) / 2, i_135_, null, null, null, 0, 0, 2121400127);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("l.b(").append(')').toString());
@@ -606,13 +606,13 @@ public abstract class Class264 {
 			int i_152_ = i_146_ + i_150_;
 			int i_153_ = i_147_ - i_150_;
 			for (int i_154_ = i_146_; i_154_ < i_152_; i_154_++)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_154_]), i, i_145_, i_149_, 1917920916);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_154_]), i, i_145_, i_149_, 1917920916);
 			for (int i_155_ = i_147_; i_155_ > i_153_; i_155_--)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_155_]), i, i_145_, i_149_, 1834727218);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_155_]), i, i_145_, i_149_, 1834727218);
 			int i_156_ = i_150_ + i;
 			int i_157_ = i_145_ - i_150_;
 			for (int i_158_ = i_152_; i_158_ <= i_153_; i_158_++) {
-				int[] is = Class372_Sub3.anIntArrayArray4047[i_158_];
+				int[] is = DevConsoleInit.anIntArrayArray4047[i_158_];
 				Class82_Sub22.method940(is, i, i_156_, i_149_, 1202396469);
 				Class82_Sub22.method940(is, i_156_, i_157_, i_148_, -1756468313);
 				Class82_Sub22.method940(is, i_157_, i_145_, i_149_, 1301704447);

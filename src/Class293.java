@@ -47,7 +47,7 @@ public class Class293 {
 	static final void method2822(ClientScript2 class403, int i) {
 		try {
 			int i_2_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567.method5612(i_2_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aClass422_Sub19_7567.method5612(i_2_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("me.aon(").append(')').toString());
 		}
@@ -55,7 +55,7 @@ public class Class293 {
 
 	static void method2823(int i, boolean bool, byte i_3_) {
 		try {
-			Class298_Sub9 class298_sub9 = Class255.method2437(i, bool, 1122460657);
+			Class298_Sub9 class298_sub9 = DevConsole.method2437(i, bool, 1122460657);
 			if (class298_sub9 != null) {
 				for (int i_4_ = 0; (i_4_ < ((Class298_Sub9) class298_sub9).anIntArray7226.length); i_4_++) {
 					((Class298_Sub9) class298_sub9).anIntArray7226[i_4_] = -1;

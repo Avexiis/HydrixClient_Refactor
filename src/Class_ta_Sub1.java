@@ -16,7 +16,7 @@ public class Class_ta_Sub1 extends Class_ta {
 	}
 
 	Class_ta_Sub1(Class_ra_Sub2 class_ra_sub2, int i, int i_6_, byte[] is) {
-		((Class_ta_Sub1) this).aClass30_Sub2_Sub1_8441 = Class30_Sub2_Sub1.method428(class_ra_sub2, Class55.aClass55_567, Class77.aClass77_717, i, i_6_, false, is, Class55.aClass55_567);
+		((Class_ta_Sub1) this).aClass30_Sub2_Sub1_8441 = Class30_Sub2_Sub1.method428(class_ra_sub2, Class55.aClass55_567, TextEncoder.aTextEncoder_717, i, i_6_, false, is, Class55.aClass55_567);
 		((Class_ta_Sub1) this).aClass30_Sub2_Sub1_8441.method420(false, false);
 	}
 }

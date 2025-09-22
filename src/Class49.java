@@ -12,7 +12,7 @@ public class Class49 {
 		if (!method528())
 			return false;
 		Class52_Sub1_Sub2 class52_sub1_sub2 = (((Class_ra_Sub2) ((Class49) this).aClass_ra_Sub2_497).aClass52_Sub1_Sub2_8148);
-		Class298_Sub37_Sub18 class298_sub37_sub18 = new Class298_Sub37_Sub18(((Class49) this).aClass_ra_Sub2_497, Class55.aClass55_557, Class77.aClass77_717, ((Class30_Sub4) class30_sub4).anInt6750, (((Class30_Sub4) class30_sub4).anInt6751));
+		Class298_Sub37_Sub18 class298_sub37_sub18 = new Class298_Sub37_Sub18(((Class49) this).aClass_ra_Sub2_497, Class55.aClass55_557, TextEncoder.aTextEncoder_717, ((Class30_Sub4) class30_sub4).anInt6750, (((Class30_Sub4) class30_sub4).anInt6751));
 		boolean bool = false;
 		((Class49) this).aClass_ra_Sub2_497.method5143(class52_sub1_sub2, (byte) 27);
 		class52_sub1_sub2.method563(0, class298_sub37_sub18);

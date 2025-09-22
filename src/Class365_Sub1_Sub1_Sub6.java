@@ -273,7 +273,7 @@ public class Class365_Sub1_Sub1_Sub6 extends Class365_Sub1_Sub1 implements Inter
 		((Class365_Sub1_Sub1_Sub6) this).aByte9885 = (byte) i_16_;
 		((Class365_Sub1_Sub1_Sub6) this).aBoolean9888 = 0 != 1532834983 * class432.anInt5382 && !bool;
 		((Class365_Sub1_Sub1_Sub6) this).aBoolean9889 = bool_17_;
-		((Class365_Sub1_Sub1_Sub6) this).aBoolean9887 = (class_ra.method5082() && class432.aBoolean5433 && !((Class365_Sub1_Sub1_Sub6) this).aBoolean9886 && GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(3122198) != 0);
+		((Class365_Sub1_Sub1_Sub6) this).aBoolean9887 = (class_ra.method5082() && class432.aBoolean5433 && !((Class365_Sub1_Sub1_Sub6) this).aBoolean9886 && GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(3122198) != 0);
 		int i_18_ = 2048;
 		if (((Class365_Sub1_Sub1_Sub6) this).aBoolean9889)
 			i_18_ |= 0x10000;

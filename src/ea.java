@@ -31,8 +31,8 @@ public class ea extends Class264 implements Interface25 {
 
 	native void am(ja var_ja, ba var_ba, byte[][] is, int[] is_26_, int[] is_27_, int[] is_28_, int[] is_29_);
 
-	ea(ja var_ja, ba var_ba, Class505 class505, Class89[] class89s, Class57[] class57s) {
-		super(var_ja, class505);
+	ea(ja var_ja, ba var_ba, GameFont gameFont, Class89[] class89s, Class57[] class57s) {
+		super(var_ja, gameFont);
 		byte[][] is = new byte[class89s.length][];
 		int[] is_30_ = new int[class89s.length];
 		int[] is_31_ = new int[class89s.length];

@@ -98,7 +98,7 @@ public class Class390 {
 	static void method4873(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
 		try {
 			for (int i_12_ = i_8_; i_12_ <= i_9_; i_12_++)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_12_]), i, i_7_, i_10_, -1334363034);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_12_]), i, i_7_, i_10_, -1334363034);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("qd.z(").append(')').toString());
 		}

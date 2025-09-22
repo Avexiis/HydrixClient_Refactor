@@ -305,7 +305,7 @@ public class Class365_Sub1_Sub5_Sub1 extends Class365_Sub1_Sub5 implements Inter
 		((Class365_Sub1_Sub5_Sub1) this).aByte9897 = (byte) i_14_;
 		((Class365_Sub1_Sub5_Sub1) this).aBoolean9900 = 0 != 1532834983 * class432.anInt5382 && !bool;
 		((Class365_Sub1_Sub5_Sub1) this).aBoolean9892 = bool_15_;
-		((Class365_Sub1_Sub5_Sub1) this).aBoolean9902 = (class_ra.method5082() && class432.aBoolean5433 && !((Class365_Sub1_Sub5_Sub1) this).aBoolean9901 && GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(57385915) != 0);
+		((Class365_Sub1_Sub5_Sub1) this).aBoolean9902 = (class_ra.method5082() && class432.aBoolean5433 && !((Class365_Sub1_Sub5_Sub1) this).aBoolean9901 && GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(57385915) != 0);
 		int i_16_ = 2048;
 		if (((Class365_Sub1_Sub5_Sub1) this).aBoolean9892)
 			i_16_ |= 0x10000;
@@ -538,7 +538,7 @@ public class Class365_Sub1_Sub5_Sub1 extends Class365_Sub1_Sub5 implements Inter
 				} else
 					OverlayType.activeToolkit.method5053();
 				if (bool != bool_26_) {
-					GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.bloomPreference), bool ? 1 : 0, -1863602535);
+					GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.bloomPreference), bool ? 1 : 0, -1863602535);
 					Class3.writePreferences();
 					return true;
 				}
@@ -586,10 +586,10 @@ public class Class365_Sub1_Sub5_Sub1 extends Class365_Sub1_Sub5 implements Inter
 
 	static void method4529(int i, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_) {
 		try {
-			Class82_Sub22.method940(Class372_Sub3.anIntArrayArray4047[i_30_++], i, i_29_, i_32_, 718097597);
-			Class82_Sub22.method940(Class372_Sub3.anIntArrayArray4047[i_31_--], i, i_29_, i_32_, 1200953445);
+			Class82_Sub22.method940(DevConsoleInit.anIntArrayArray4047[i_30_++], i, i_29_, i_32_, 718097597);
+			Class82_Sub22.method940(DevConsoleInit.anIntArrayArray4047[i_31_--], i, i_29_, i_32_, 1200953445);
 			for (int i_34_ = i_30_; i_34_ <= i_31_; i_34_++) {
-				int[] is = Class372_Sub3.anIntArrayArray4047[i_34_];
+				int[] is = DevConsoleInit.anIntArrayArray4047[i_34_];
 				is[i] = is[i_29_] = i_32_;
 			}
 		} catch (RuntimeException runtimeexception) {

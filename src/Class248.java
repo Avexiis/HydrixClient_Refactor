@@ -236,16 +236,16 @@ public class Class248 implements Runnable {
 					if (null != class57)
 						i_31_ = class57.method625();
 					Class264 class264 = ScriptContext.aClass264_7534;
-					Class505 class505 = Class74.aClass505_695;
+					GameFont gameFont = Class74.aGameFont_695;
 					if (worldMapLabel.anInt3783 * 1023000389 == 1) {
 						class264 = Class343.aClass264_3673;
-						class505 = Class422_Sub2.aClass505_8369;
+						gameFont = RemoveRoofPreference.CONSOLE_SECONDARY_FONT;
 					}
 					if (worldMapLabel.anInt3783 * 1023000389 == 2) {
 						class264 = Class101.aClass264_1084;
-						class505 = Class82_Sub19_Sub1.aClass505_9111;
+						gameFont = GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT;
 					}
-					HitType.method4290(class105, class_ta, i, i_6_, i_7_, i_8_, i_31_, worldMapLabel.aString3792, class264, class505, -1836991893 * worldMapLabel.anInt3781, 1768300509);
+					HitType.method4290(class105, class_ta, i, i_6_, i_7_, i_8_, i_31_, worldMapLabel.aString3792, class264, gameFont, -1836991893 * worldMapLabel.anInt3781, 1768300509);
 				}
 			}
 		} catch (RuntimeException runtimeexception) {

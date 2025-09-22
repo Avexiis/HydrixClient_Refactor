@@ -54,12 +54,12 @@ public class Class502 implements Interface26 {
 		try {
 			int i_0_ = Class462.canvasWidth * -2110394505;
 			int i_1_ = Class298_Sub40_Sub9.anInt9716 * -1111710645;
-			if (-639974669 * Class78.anInt733 < i_0_)
-				i_0_ = -639974669 * Class78.anInt733;
+			if (-639974669 * DisplayMode.anInt733 < i_0_)
+				i_0_ = -639974669 * DisplayMode.anInt733;
 			if (1282634425 * GameClient.anInt6472 < i_1_)
 				i_1_ = GameClient.anInt6472 * 1282634425;
 			try {
-				Class212.aClass212_2425.method1955((new Object[] { Integer.valueOf(i_0_), Integer.valueOf(i_1_), Integer.valueOf(MagnetDefinitions.method1859((byte) -5)), Integer.valueOf(GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566.method5654(-1747444886)) }), (short) 28321);
+				Class212.aClass212_2425.method1955((new Object[] { Integer.valueOf(i_0_), Integer.valueOf(i_1_), Integer.valueOf(MagnetDefinitions.method1859((byte) -5)), Integer.valueOf(GraphicsSetup.clientPreferences.aScreenSizePreference_7566.method5654(-1747444886)) }), (short) 28321);
 			} catch (Throwable throwable) {
 				/* empty */
 			}

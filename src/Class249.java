@@ -303,7 +303,7 @@ public class Class249 implements Interface_ma {
 				Skybox.method2596(class403, -778701321);
 				break;
 			case 869:
-				Class422_Sub2.method5630(class403, -2046295095);
+				RemoveRoofPreference.method5630(class403, -2046295095);
 				break;
 			case 800:
 				Class456.method5959(class403, 919959672);
@@ -336,7 +336,7 @@ public class Class249 implements Interface_ma {
 				IncomingPacket.method1903(class403, -1662998366);
 				break;
 			case 216:
-				Class505.method6266(class403, (byte) 49);
+				GameFont.method6266(class403, (byte) 49);
 				break;
 			case 571:
 				Class427.method5749(class403, -2141806690);
@@ -387,7 +387,7 @@ public class Class249 implements Interface_ma {
 				Class250.method2398(class403, 204743600);
 				break;
 			case 385:
-				Class422_Sub12.method5671(class403, -53605842);
+				WindowModePreference.method5671(class403, -53605842);
 				break;
 			case 881:
 				Class23.method375(class403, 1885494312);
@@ -546,7 +546,7 @@ public class Class249 implements Interface_ma {
 				Class372.method4588(class403, (byte) -56);
 				break;
 			case 971:
-				Class8.method316(class403, (byte) -83);
+				DevConsoleState.method316(class403, (byte) -83);
 				break;
 			case 828:
 				Class117.method1277(class403, (byte) 4);
@@ -945,7 +945,7 @@ public class Class249 implements Interface_ma {
 				JAGLib.method2826(class403, 1347279720);
 				break;
 			case 552:
-				Class372_Sub3.method4601(class403, (short) 4096);
+				DevConsoleInit.method4601(class403, (short) 4096);
 				break;
 			case 742:
 				Class414.method5585(class403, 1132221892);
@@ -996,7 +996,7 @@ public class Class249 implements Interface_ma {
 				Class329.method3995(class403, (byte) 16);
 				break;
 			case 227:
-				Class321.method3921(class403, -545924684);
+				DynamicLight.method3921(class403, -545924684);
 				break;
 			case 558:
 				Class486.method6158(class403, 497619825);
@@ -1023,10 +1023,10 @@ public class Class249 implements Interface_ma {
 				Class374.method4638(class403, (short) 23545);
 				break;
 			case 801:
-				Class321.method3922(class403, -861418612);
+				DynamicLight.method3922(class403, -861418612);
 				break;
 			case 644:
-				overheadString.method726(class403, 583840352);
+				OverheadString.method726(class403, 583840352);
 				break;
 			case 149:
 				OverlayType.method4607(class403, (byte) -28);
@@ -1035,7 +1035,7 @@ public class Class249 implements Interface_ma {
 				MaterialRaw.method600(class403, (byte) -100);
 				break;
 			case 957:
-				Class321.method3924(class403, -1588549216);
+				DynamicLight.method3924(class403, -1588549216);
 				break;
 			case 907:
 				Class525.method6378(class403, -1508997346);
@@ -1185,7 +1185,7 @@ public class Class249 implements Interface_ma {
 				Class313.method3822(class403, (byte) 3);
 				break;
 			case 336:
-				Class321.method3920(class403, -1892964721);
+				DynamicLight.method3920(class403, -1892964721);
 				break;
 			case 838:
 				Class420.method5607(class403, -1549389992);
@@ -1275,7 +1275,7 @@ public class Class249 implements Interface_ma {
 				Class406.method4960(class403, -1145564068);
 				break;
 			case 926:
-				Class82_Sub19_Sub1.method931(class403, (byte) 1);
+				GroundSpotAnimUpdate.method931(class403, (byte) 1);
 				break;
 			case 932:
 				Class427.method5751(class403, -766567275);
@@ -1485,7 +1485,7 @@ public class Class249 implements Interface_ma {
 				Class247.method2367(class403, 911404958);
 				break;
 			case 134:
-				Class505.method6268(class403, (byte) -2);
+				GameFont.method6268(class403, (byte) -2);
 				break;
 			case 341:
 				Class125.method1394(class403, 1103915043);
@@ -1626,7 +1626,7 @@ public class Class249 implements Interface_ma {
 				SpotAnimTypeList.method4861(class403, -329170988);
 				break;
 			case 515:
-				Class8.method317(class403, 1578867315);
+				DevConsoleState.method317(class403, 1578867315);
 				break;
 			case 537:
 				Class141.method1564(class403, 1517185146);
@@ -1764,7 +1764,7 @@ public class Class249 implements Interface_ma {
 				Class298_Sub32_Sub21.method3273(class403, -2073331694);
 				break;
 			case 846:
-				Class255.method2438(class403, 806715823);
+				DevConsole.method2438(class403, 806715823);
 				break;
 			case 464:
 				Class82.method873(class403, 1985942898);
@@ -1866,7 +1866,7 @@ public class Class249 implements Interface_ma {
 				Class228.method2118(class403, (byte) 0);
 				break;
 			case 179:
-				Class422_Sub12.method5672(class403, 790586565);
+				WindowModePreference.method5672(class403, 790586565);
 				break;
 			case 346:
 				Class356.method4273(class403, 1833702224);
@@ -1875,7 +1875,7 @@ public class Class249 implements Interface_ma {
 				Class260.method2459(class403, -1965462704);
 				break;
 			case 363:
-				Class8.method320(class403, -667200070);
+				DevConsoleState.method320(class403, -667200070);
 				break;
 			case 38:
 				Class418.method5599(class403, 1627929937);
@@ -1926,7 +1926,7 @@ public class Class249 implements Interface_ma {
 				Class298_Sub37_Sub7.method3429(class403, 1331175254);
 				break;
 			case 623:
-				Class321.method3919(class403, -46636878);
+				DynamicLight.method3919(class403, -46636878);
 				break;
 			case 14:
 				Class194.method1866(class403, 235162027);
@@ -2130,7 +2130,7 @@ public class Class249 implements Interface_ma {
 				Class298_Sub25.method3102(class403, 36160);
 				break;
 			case 671:
-				Class372_Sub3.method4600(class403, -2024594230);
+				DevConsoleInit.method4600(class403, -2024594230);
 				break;
 			case 129:
 				IComponentDefinition.method1133(class403, (short) -13358);
@@ -2187,7 +2187,7 @@ public class Class249 implements Interface_ma {
 				Class516.method6301(class403, 990309833);
 				break;
 			case 724:
-				overheadString.method725(class403, (byte) 3);
+				OverheadString.method725(class403, (byte) 3);
 				break;
 			case 404:
 				MagnetDefinitions.method1858(class403, -1921461819);
@@ -2406,7 +2406,7 @@ public class Class249 implements Interface_ma {
 				Class477.method6095(class403, -1927156197);
 				break;
 			case 746:
-				Class78.method846(class403, (short) 18840);
+				DisplayMode.method846(class403, (short) 18840);
 				break;
 			case 909:
 				Class486.method6150(class403, (byte) 8);
@@ -2738,7 +2738,7 @@ public class Class249 implements Interface_ma {
 				Class318.method3870(class403, -154562081);
 				break;
 			case 136:
-				Class255.method2434(class403, 2010644047);
+				DevConsole.method2434(class403, 2010644047);
 				break;
 			case 950:
 				AtmosphereManager.scriptOpCloseInterfaces(class403, 2001824513);
@@ -2867,7 +2867,7 @@ public class Class249 implements Interface_ma {
 				Class323.method3949(class403, (byte) 7);
 				break;
 			case 877:
-				Class77.method839(class403, -831062827);
+				TextEncoder.method839(class403, -831062827);
 				break;
 			case 952:
 				Class69.method792(class403, -2088416900);

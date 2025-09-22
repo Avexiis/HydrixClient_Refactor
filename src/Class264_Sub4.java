@@ -12,8 +12,8 @@ public class Class264_Sub4 extends Class264 {
 	int[] anIntArray7136;
 	Class_ra_Sub1 aClass_ra_Sub1_7137;
 
-	Class264_Sub4(Class_ra_Sub1 class_ra_sub1, Class505 class505, Class89[] class89s, int[] is, int[] is_0_) {
-		super(class_ra_sub1, class505);
+	Class264_Sub4(Class_ra_Sub1 class_ra_sub1, GameFont gameFont, Class89[] class89s, int[] is, int[] is_0_) {
+		super(class_ra_sub1, gameFont);
 		((Class264_Sub4) this).aClass_ra_Sub1_7137 = class_ra_sub1;
 		((Class264_Sub4) this).anIntArray7133 = is;
 		((Class264_Sub4) this).anIntArray7132 = is_0_;
@@ -484,8 +484,8 @@ public class Class264_Sub4 extends Class264 {
 	static final void method2516(ClientScript2 class403, int i) {
 		try {
 			int i_154_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			if (i_154_ != GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508)) {
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567, i_154_, -814728981);
+			if (i_154_ != GraphicsSetup.clientPreferences.aClass422_Sub19_7567.getValue(-1741518508)) {
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub19_7567, i_154_, -814728981);
 				Class3.writePreferences();
 				GameClient.aBoolean8666 = false;
 			}

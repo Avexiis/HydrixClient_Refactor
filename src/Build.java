@@ -4,7 +4,7 @@
  */
 public enum Build {
 	/* Revision, Subrevision, Port, Lobby IP, Game IP */
-	LIVE(718, 934834238, 2052, "your.site.com", "IP.works.too"),
+	LIVE(718, 934834238, 2052, "URL", "URL"),
 	BETA(718, 934834238, 43595, "127.0.0.1", "127.0.0.1"),
 	LOCAL(718, 934834238, 43595, "127.0.0.1", "127.0.0.1");
 	

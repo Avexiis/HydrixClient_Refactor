@@ -110,7 +110,7 @@ public class Class87 {
 				if (class105.aString1230 != null)
 					Class234.method2174(class105.aString1230, "", -1, 30, -1232467723 * class105.zds3, 0L, class105.component * -1309843523, -440872681 * class105.interfacehash, true, false, (long) (-1309843523 * class105.component << 32 | -440872681 * class105.interfacehash), false, -1225913379);
 				else
-					Class234.method2174(LocalizedString.BUTTON_CONTINUE.getText(Class321.ACTIVE_LANGUAGE, -875414210), "", -1, 30, class105.zds3 * -1232467723, 0L, -1309843523 * class105.component, -440872681 * class105.interfacehash, true, false, (long) (-1309843523 * class105.component << 32 | -440872681 * class105.interfacehash), false, -1304653626);
+					Class234.method2174(LocalizedString.BUTTON_CONTINUE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), "", -1, 30, class105.zds3 * -1232467723, 0L, -1309843523 * class105.component, -440872681 * class105.interfacehash, true, false, (long) (-1309843523 * class105.component << 32 | -440872681 * class105.interfacehash), false, -1304653626);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("dn.v(").append(')').toString());

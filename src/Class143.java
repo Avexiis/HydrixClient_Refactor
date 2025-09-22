@@ -75,7 +75,7 @@ public class Class143 {
 
 	static final void method1576(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class321.ACTIVE_LANGUAGE.method242(694163818);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = DynamicLight.ACTIVE_LANGUAGE.method242(694163818);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fu.up(").append(')').toString());
 		}

@@ -13,7 +13,7 @@ public abstract class Class263 implements Interface9 {
 	int anInt6417;
 	Class179 aClass179_6418 = Class179.aClass179_1812;
 	Class55 aClass55_6419;
-	Class77 aClass77_6420;
+	TextEncoder aTextEncoder_6420;
 	static int anInt6421 = 0;
 	Class_ra_Sub3_Sub1 aClass_ra_Sub3_Sub1_6422;
 	static int anInt6423 = 32879;
@@ -89,7 +89,7 @@ public abstract class Class263 implements Interface9 {
 		int[] is_8_ = is;
 		int[] is_9_ = new int[i_6_ * i_7_];
 		for (;;) {
-			OpenGL.glTexImage2Di(i, i_4_, Class_ra_Sub3_Sub1.method5533(((Class263) this).aClass55_6419, (((Class263) this).aClass77_6420)), i_2_, i_3_, 0, 32993, ((Class_ra_Sub3_Sub1) ((Class263) this).aClass_ra_Sub3_Sub1_6422).anInt9841, is_8_, 0);
+			OpenGL.glTexImage2Di(i, i_4_, Class_ra_Sub3_Sub1.method5533(((Class263) this).aClass55_6419, (((Class263) this).aTextEncoder_6420)), i_2_, i_3_, 0, 32993, ((Class_ra_Sub3_Sub1) ((Class263) this).aClass_ra_Sub3_Sub1_6422).anInt9841, is_8_, 0);
 			if (i_5_ <= 1)
 				break;
 			int i_10_ = 0;
@@ -147,7 +147,7 @@ public abstract class Class263 implements Interface9 {
 		float[] fs_31_ = fs;
 		float[] fs_32_ = new float[i_29_ * i_30_ * i_26_];
 		for (;;) {
-			OpenGL.glTexImage2Df(i, i_27_, Class_ra_Sub3_Sub1.method5533(((Class263) this).aClass55_6419, (((Class263) this).aClass77_6420)), i_24_, i_25_, 0, Class_ra_Sub3_Sub1.method5532(((Class263) this).aClass55_6419), 5126, fs_31_, 0);
+			OpenGL.glTexImage2Df(i, i_27_, Class_ra_Sub3_Sub1.method5533(((Class263) this).aClass55_6419, (((Class263) this).aTextEncoder_6420)), i_24_, i_25_, 0, Class_ra_Sub3_Sub1.method5532(((Class263) this).aClass55_6419), 5126, fs_31_, 0);
 			if (i_28_ <= 1)
 				break;
 			int i_33_ = i_24_ * i_26_;
@@ -190,7 +190,7 @@ public abstract class Class263 implements Interface9 {
 	}
 
 	int method2471() {
-		int i = (((Class263) this).aClass55_6419.anInt556 * 845115459 * (((Class263) this).aClass77_6420.anInt724 * 685647847) * ((Class263) this).anInt6416);
+		int i = (((Class263) this).aClass55_6419.anInt556 * 845115459 * (((Class263) this).aTextEncoder_6420.anInt724 * 685647847) * ((Class263) this).anInt6416);
 		return ((Class263) this).aBoolean6411 ? i * 4 / 3 : i;
 	}
 
@@ -277,7 +277,7 @@ public abstract class Class263 implements Interface9 {
 		byte[] is_50_ = is;
 		byte[] is_51_ = new byte[i_48_ * i_49_ * i_45_];
 		for (;;) {
-			OpenGL.glTexImage2Dub(i, i_46_, Class_ra_Sub3_Sub1.method5533(((Class263) this).aClass55_6419, (((Class263) this).aClass77_6420)), i_43_, i_44_, 0, Class_ra_Sub3_Sub1.method5532(((Class263) this).aClass55_6419), 5121, is_50_, 0);
+			OpenGL.glTexImage2Dub(i, i_46_, Class_ra_Sub3_Sub1.method5533(((Class263) this).aClass55_6419, (((Class263) this).aTextEncoder_6420)), i_43_, i_44_, 0, Class_ra_Sub3_Sub1.method5532(((Class263) this).aClass55_6419), 5121, is_50_, 0);
 			if (i_47_ <= 1)
 				break;
 			int i_52_ = i_43_ * i_45_;
@@ -314,11 +314,11 @@ public abstract class Class263 implements Interface9 {
 		}
 	}
 
-	Class263(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, int i, Class55 class55, Class77 class77, int i_61_, boolean bool) {
+	Class263(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, int i, Class55 class55, TextEncoder textEncoder, int i_61_, boolean bool) {
 		((Class263) this).aClass_ra_Sub3_Sub1_6422 = class_ra_sub3_sub1;
 		((Class263) this).anInt6415 = i;
 		((Class263) this).aClass55_6419 = class55;
-		((Class263) this).aClass77_6420 = class77;
+		((Class263) this).aTextEncoder_6420 = textEncoder;
 		((Class263) this).aBoolean6411 = bool;
 		((Class263) this).anInt6416 = i_61_;
 		OpenGL.glGenTextures(1, anIntArray6424, 0);

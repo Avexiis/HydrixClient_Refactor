@@ -66,7 +66,7 @@ public class Class518 {
 
 	static void method6314(int i, int i_3_) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.cursorPreference.method5730(1899706472) == 0)
+			if (GraphicsSetup.clientPreferences.cursorPreference.method5730(1899706472) == 0)
 				i = -1;
 			if (GameClient.anInt8834 * 1396956439 != i) {
 				if (-1 != i) {
@@ -103,7 +103,7 @@ public class Class518 {
 			if (!OverlayType.activeToolkit.method5050())
 				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = 3;
 			else
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = GraphicsAutoSetup.clientPreferences.bloomPreference.method5612(i_4_, 1352882135);
+				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = GraphicsSetup.clientPreferences.bloomPreference.method5612(i_4_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("vu.aof(").append(')').toString());
 		}

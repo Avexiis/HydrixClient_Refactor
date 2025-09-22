@@ -180,7 +180,7 @@ public class Class270 {
 
 	public static final void method2539(int i, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_) {
 		try {
-			if (i >= Class372_Sub3.anInt4051 * -1424479739 && i_37_ <= 1135094847 * Class372_Sub3.anInt4048 && i_38_ >= Class372_Sub3.anInt4049 * 1155384281 && i_39_ <= -1062447355 * Class372_Sub3.anInt4050)
+			if (i >= DevConsoleInit.anInt4051 * -1424479739 && i_37_ <= 1135094847 * DevConsoleInit.anInt4048 && i_38_ >= DevConsoleInit.anInt4049 * 1155384281 && i_39_ <= -1062447355 * DevConsoleInit.anInt4050)
 				Class390.method4873(i, i_37_, i_38_, i_39_, i_40_, -1435817713);
 			else
 				Class298_Sub20.method3052(i, i_37_, i_38_, i_39_, i_40_, 1926849708);
@@ -192,7 +192,7 @@ public class Class270 {
 	static final void method2540(ClientScript2 class403, int i) {
 		try {
 			int i_42_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566.method5612(i_42_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.aScreenSizePreference_7566.method5612(i_42_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lf.aox(").append(')').toString());
 		}
@@ -200,7 +200,7 @@ public class Class270 {
 
 	static final void method2541(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.particlePreference.method5638((byte) 78) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.particlePreference.method5638((byte) 78) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lf.ann(").append(')').toString());
 		}

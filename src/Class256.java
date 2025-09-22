@@ -57,7 +57,7 @@ public class Class256 {
 			int i_2_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_2_, (byte) 44);
 			RSInterface RSInterface = SpotAnimTypeList.aRSInterfaceArray4165[i_2_ >> 16];
-			overheadString.method724(class105, RSInterface, class403, (byte) 59);
+			OverheadString.method724(class105, RSInterface, class403, (byte) 59);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ks.jv(").append(')').toString());
 		}
@@ -80,8 +80,8 @@ public class Class256 {
 			((ClientScript2) class403).anInt5239 -= -783761378;
 			int i_4_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]);
 			int i_5_ = (((ClientScript2) class403).anIntArray5244[1 + ((ClientScript2) class403).anInt5239 * 681479919]);
-			Class505 class505 = Class322.method3931(Class173.aClass243_1758, i_5_, 0, (byte) 57);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = class505.method6262(string, i_4_, Class130_Sub2.aClass57Array6959, 1970071925);
+			GameFont gameFont = Class322.method3931(Class173.aClass243_1758, i_5_, 0, (byte) 57);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = gameFont.method6262(string, i_4_, Class130_Sub2.aClass57Array6959, 1970071925);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ks.zf(").append(')').toString());
 		}

@@ -12,7 +12,7 @@ public class Class298_Sub5 extends Node {
 	NativeHeapBuffer aNativeHeapBuffer7195;
 	float aFloat7196;
 	Class_ra_Sub2 aClass_ra_Sub2_7197;
-	Class78 aClass78_7198;
+	DisplayMode aDisplayMode_7198;
 	int anInt7199;
 	int[] anIntArray7200;
 	Class46_Sub1 aClass46_Sub1_7201;
@@ -104,12 +104,12 @@ public class Class298_Sub5 extends Node {
 		((Class298_Sub5) this).aStream7202 = null;
 	}
 
-	Class298_Sub5(Class_xa_Sub3 class_xa_sub3, int i, int i_15_, Class78 class78) {
+	Class298_Sub5(Class_xa_Sub3 class_xa_sub3, int i, int i_15_, DisplayMode displayMode) {
 		((Class298_Sub5) this).aClass_xa_Sub3_7194 = class_xa_sub3;
 		((Class298_Sub5) this).aClass_ra_Sub2_7197 = (((Class_xa_Sub3) ((Class298_Sub5) this).aClass_xa_Sub3_7194).aClass_ra_Sub2_8535);
 		((Class298_Sub5) this).anInt7199 = i;
 		((Class298_Sub5) this).aFloat7196 = (float) i_15_;
-		((Class298_Sub5) this).aClass78_7198 = class78;
+		((Class298_Sub5) this).aDisplayMode_7198 = displayMode;
 		((Class298_Sub5) this).anIntArray7200 = new int[(((Class298_Sub5) this).aClass_xa_Sub3_7194.anInt6287 * -506105871 * (((Class298_Sub5) this).aClass_xa_Sub3_7194.anInt6286 * -1148794921))];
 		((Class298_Sub5) this).aClass46_Sub1_7201 = new Class46_Sub1(((Class298_Sub5) this).aClass_ra_Sub2_7197, 5123, null, 1);
 	}
@@ -166,7 +166,7 @@ public class Class298_Sub5 extends Node {
 			((Class298_Sub5) this).aClass_ra_Sub2_7197.method5248((((Class_xa_Sub3) ((Class298_Sub5) this).aClass_xa_Sub3_7194).aClass32_8539), (((Class_xa_Sub3) ((Class298_Sub5) this).aClass_xa_Sub3_7194).aClass32_8519), ((Class298_Sub5) this).aClass32_7193, (((Class_xa_Sub3) ((Class298_Sub5) this).aClass_xa_Sub3_7194).aClass32_8517));
 			((Class298_Sub5) this).aClass_ra_Sub2_7197.method5278(((Class298_Sub5) this).anInt7199, ((((Class_xa_Sub3) ((Class298_Sub5) this).aClass_xa_Sub3_7194).anInt8523) & 0x7) != 0, ((((Class_xa_Sub3) ((Class298_Sub5) this).aClass_xa_Sub3_7194).anInt8523) & 0x8) != 0);
 			if (((Class_ra_Sub2) ((Class298_Sub5) this).aClass_ra_Sub2_7197).aBoolean8146)
-				((Class298_Sub5) this).aClass_ra_Sub2_7197.method5058(2147483647, ((Class298_Sub5) this).aClass78_7198);
+				((Class298_Sub5) this).aClass_ra_Sub2_7197.method5058(2147483647, ((Class298_Sub5) this).aDisplayMode_7198);
 			OpenGL.glMatrixMode(5890);
 			OpenGL.glPushMatrix();
 			OpenGL.glScalef(1.0F / ((Class298_Sub5) this).aFloat7196, 1.0F / ((Class298_Sub5) this).aFloat7196, 1.0F);

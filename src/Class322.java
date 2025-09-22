@@ -37,12 +37,12 @@ public class Class322 {
 		}
 	}
 
-	public static Class505 method3931(Js5 class243, int i, int i_1_, byte i_2_) {
+	public static GameFont method3931(Js5 class243, int i, int i_1_, byte i_2_) {
 		try {
 			byte[] is = class243.getFileFromArchive(i, i_1_, (byte) -42);
 			if (null == is)
 				return null;
-			return new Class505(is);
+			return new GameFont(is);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("nk.a(").append(')').toString());
 		}

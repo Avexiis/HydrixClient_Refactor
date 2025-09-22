@@ -193,7 +193,7 @@ public class AnimationController {
 			if (worldMapLabel.aString3792 != null) {
 				class4 = Class52.method555(worldMapLabel.anInt3783 * 1023000389, (byte) -97);
 				if (class4 != null) {
-					i_23_ = Class74.aClass505_695.method6257((worldMapLabel.aString3792), null, (Class301_Sub1.aStringArray7638), null, (byte) 20);
+					i_23_ = Class74.aGameFont_695.method6257((worldMapLabel.aString3792), null, (Class301_Sub1.aStringArray7638), null, (byte) 20);
 					i_24_ = ((-366520063 * worldMapLabel.anInt3812 * (Class301_Sub1.anInt3256 - Class301_Sub1.anInt3221) / (Class301_Sub1.anInt3252 - Class301_Sub1.anInt3230)) + worldMapArea.anInt7609 * 1333098669);
 					i_25_ = (-685779893 * worldMapArea.anInt7606 - (60900013 * worldMapLabel.anInt3813 * (Class301_Sub1.anInt3257 - Class301_Sub1.anInt3255) / (Class301_Sub1.anInt3241 - Class301_Sub1.anInt3242)));
 					if (null == class57)

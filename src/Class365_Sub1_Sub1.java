@@ -42,14 +42,14 @@ public abstract class Class365_Sub1_Sub1 extends Class365_Sub1 {
 						int i_13_ = (int) (l >>> (int) l_12_ & 0xffffL);
 						if (i_13_ <= 0)
 							break;
-						Class321 class321 = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[i_13_ - 1]);
+						DynamicLight dynamicLight = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[i_13_ - 1]);
 						for (int i_14_ = 0; i_14_ < i_9_; i_14_++) {
-							if (class321.aClass298_Sub10_3337 == class298_sub10s[i_14_]) {
+							if (dynamicLight.lightHandle == class298_sub10s[i_14_]) {
 								l_12_ += 16L;
 								continue while_43_;
 							}
 						}
-						class298_sub10s[i_9_++] = class321.aClass298_Sub10_3337;
+						class298_sub10s[i_9_++] = dynamicLight.lightHandle;
 						if (i_9_ == 4) {
 							if (i == -1150488077) {
 								/* empty */
@@ -96,13 +96,13 @@ public abstract class Class365_Sub1_Sub1 extends Class365_Sub1 {
 				while_48_: for (/**/; i_22_ < i_9_; i_22_++) {
 					long l = (((SceneGraph) aSceneGraph_7722).aLongArrayArrayArray3554[plane][i_18_][i_19_]);
 					while_45_: do {
-						Class321 class321;
+						DynamicLight dynamicLight;
 						do {
 							if (0L == l)
 								break while_45_;
-							class321 = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[(int) ((l & 0xffffL) - 1L)]);
+							dynamicLight = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[(int) ((l & 0xffffL) - 1L)]);
 							l >>>= 16;
-						} while (class321.aClass298_Sub10_3337 != class298_sub10s[i_22_]);
+						} while (dynamicLight.lightHandle != class298_sub10s[i_22_]);
 						if (i == -1150488077) {
 							/* empty */
 						}
@@ -110,13 +110,13 @@ public abstract class Class365_Sub1_Sub1 extends Class365_Sub1 {
 					} while (false);
 					l = (((SceneGraph) aSceneGraph_7722).aLongArrayArrayArray3554[plane][i_20_][i_21_]);
 					while_46_: do {
-						Class321 class321;
+						DynamicLight dynamicLight;
 						do {
 							if (0L == l)
 								break while_46_;
-							class321 = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[(int) ((l & 0xffffL) - 1L)]);
+							dynamicLight = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[(int) ((l & 0xffffL) - 1L)]);
 							l >>>= 16;
-						} while (class321.aClass298_Sub10_3337 != class298_sub10s[i_22_]);
+						} while (dynamicLight.lightHandle != class298_sub10s[i_22_]);
 						if (i == -1150488077) {
 							/* empty */
 						}
@@ -177,14 +177,14 @@ public abstract class Class365_Sub1_Sub1 extends Class365_Sub1 {
 					int i_31_ = (int) (l >>> (int) l_30_ & 0xffffL);
 					if (i_31_ <= 0)
 						break;
-					Class321 class321 = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[i_31_ - 1]);
+					DynamicLight dynamicLight = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[i_31_ - 1]);
 					for (int i_32_ = 0; i_32_ < i; i_32_++) {
-						if (class321.aClass298_Sub10_3337 == class298_sub10s[i_32_]) {
+						if (dynamicLight.lightHandle == class298_sub10s[i_32_]) {
 							l_30_ += 16L;
 							continue while_49_;
 						}
 					}
-					class298_sub10s[i++] = class321.aClass298_Sub10_3337;
+					class298_sub10s[i++] = dynamicLight.lightHandle;
 					if (i == 4)
 						break while_50_;
 					l_30_ += 16L;
@@ -227,24 +227,24 @@ public abstract class Class365_Sub1_Sub1 extends Class365_Sub1 {
 			while_54_: for (/**/; i_40_ < i; i_40_++) {
 				long l = (((SceneGraph) aSceneGraph_7722).aLongArrayArrayArray3554[plane][i_36_][i_37_]);
 				while_51_: do {
-					Class321 class321;
+					DynamicLight dynamicLight;
 					do {
 						if (0L == l)
 							break while_51_;
-						class321 = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[(int) ((l & 0xffffL) - 1L)]);
+						dynamicLight = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[(int) ((l & 0xffffL) - 1L)]);
 						l >>>= 16;
-					} while (class321.aClass298_Sub10_3337 != class298_sub10s[i_40_]);
+					} while (dynamicLight.lightHandle != class298_sub10s[i_40_]);
 					continue while_54_;
 				} while (false);
 				l = (((SceneGraph) aSceneGraph_7722).aLongArrayArrayArray3554[plane][i_38_][i_39_]);
 				while_52_: do {
-					Class321 class321;
+					DynamicLight dynamicLight;
 					do {
 						if (0L == l)
 							break while_52_;
-						class321 = (((SceneGraph) aSceneGraph_7722).aClass321Array3558[(int) ((l & 0xffffL) - 1L)]);
+						dynamicLight = (((SceneGraph) aSceneGraph_7722).aDynamicLightArray3558[(int) ((l & 0xffffL) - 1L)]);
 						l >>>= 16;
-					} while (class321.aClass298_Sub10_3337 != class298_sub10s[i_40_]);
+					} while (dynamicLight.lightHandle != class298_sub10s[i_40_]);
 					continue while_54_;
 				} while (false);
 				for (int i_41_ = i_40_; i_41_ < i - 1; i_41_++)

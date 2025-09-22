@@ -6,7 +6,7 @@ import jagdx.IUnknown;
 public abstract class Class200 implements Interface8 {
 	boolean aBoolean6406;
 	long aLong6407 = 0L;
-	Class77 aClass77_6408;
+	TextEncoder aTextEncoder_6408;
 	Class55 aClass55_6409;
 	Class_ra_Sub3_Sub2 aClass_ra_Sub3_Sub2_6410;
 
@@ -18,10 +18,10 @@ public abstract class Class200 implements Interface8 {
 		return ((Class200) this).aLong6407;
 	}
 
-	Class200(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, Class77 class77, boolean bool, int i) {
+	Class200(Class_ra_Sub3_Sub2 class_ra_sub3_sub2, Class55 class55, TextEncoder textEncoder, boolean bool, int i) {
 		((Class200) this).aClass_ra_Sub3_Sub2_6410 = class_ra_sub3_sub2;
 		((Class200) this).aClass55_6409 = class55;
-		((Class200) this).aClass77_6408 = class77;
+		((Class200) this).aTextEncoder_6408 = textEncoder;
 		((Class200) this).aBoolean6406 = bool;
 		((Class200) this).aClass_ra_Sub3_Sub2_6410.method5323(this);
 	}

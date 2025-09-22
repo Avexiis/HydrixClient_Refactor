@@ -30,7 +30,7 @@ public class Class99 {
 
 	static final void method1072(ClientScript2 class403, byte i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.waterDetailPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 2 : 0, 993124256);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.waterDetailPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1 ? 2 : 0, 993124256);
 			GameClient.map.method2667(475179125);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;

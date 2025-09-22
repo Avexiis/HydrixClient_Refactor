@@ -72,20 +72,20 @@ public final class Class439 {
 		try {
 			if (null != string) {
 				if ((-1054937867 * GameClient.anInt8941 >= 200 && !GameClient.aBoolean8807) || -1054937867 * GameClient.anInt8941 >= 200)
-					Class264.method2492(4, (LocalizedString.MESSAGE_FRIENDS_LIST_FULL.getText(Class321.ACTIVE_LANGUAGE, -875414210)), (byte) -99);
+					Class264.method2492(4, (LocalizedString.MESSAGE_FRIENDS_LIST_FULL.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), (byte) -99);
 				else {
 					String string_0_ = Class173.method1824(string, 554575211);
 					if (null != string_0_) {
 						for (int i_1_ = 0; i_1_ < GameClient.anInt8941 * -1054937867; i_1_++) {
 							String string_2_ = Class173.method1824((GameClient.aStringArray8704[i_1_]), 460678269);
 							if (null != string_2_ && string_2_.equals(string_0_)) {
-								Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_FRIENDS_LIST_SUFFIX.getText((Class321.ACTIVE_LANGUAGE), -875414210)).toString(), (byte) -72);
+								Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_FRIENDS_LIST_SUFFIX.getText((DynamicLight.ACTIVE_LANGUAGE), -875414210)).toString(), (byte) -72);
 								return;
 							}
 							if (GameClient.aStringArray8945[i_1_] != null) {
 								String string_3_ = Class173.method1824((GameClient.aStringArray8945[i_1_]), -1697709934);
 								if (string_3_ != null && string_3_.equals(string_0_)) {
-									Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_FRIENDS_LIST_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -22);
+									Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_FRIENDS_LIST_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -22);
 									return;
 								}
 							}
@@ -93,19 +93,19 @@ public final class Class439 {
 						for (int i_4_ = 0; i_4_ < -548972447 * GameClient.anInt8952; i_4_++) {
 							String string_5_ = Class173.method1824((GameClient.aStringArray8859[i_4_]), 629913933);
 							if (null != string_5_ && string_5_.equals(string_0_)) {
-								Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_IGNORE_LIST_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -89);
+								Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_IGNORE_LIST_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -89);
 								return;
 							}
 							if (null != GameClient.aStringArray8955[i_4_]) {
 								String string_6_ = Class173.method1824((GameClient.aStringArray8955[i_4_]), -1007795446);
 								if (string_6_ != null && string_6_.equals(string_0_)) {
-									Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_IGNORE_LIST_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -109);
+									Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_IGNORE_LIST_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -109);
 									return;
 								}
 							}
 						}
 						if (Class173.method1824((Class287.myPlayer.username), -712250197).equals(string_0_))
-							Class264.method2492(4, (LocalizedString.MESSAGE_CANT_ADD_YOURSELF_FRIENDS_LIST.getText(Class321.ACTIVE_LANGUAGE, -875414210)), (byte) -34);
+							Class264.method2492(4, (LocalizedString.MESSAGE_CANT_ADD_YOURSELF_FRIENDS_LIST.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), (byte) -34);
 						else {
 							Class25 class25 = Language.method5760((short) 512);
 							Class298_Sub36 class298_sub36 = Class18.method359(OutgoingPacket.ADD_FRIEND_PACKET, class25.aClass449_330, (byte) 14);
@@ -152,8 +152,8 @@ public final class Class439 {
 				if (bool != bool_8_) {
 					if (bool) {
 						Class300.anInt3207 = Class300.anInt3210 * 1701432991;
-						if (GraphicsAutoSetup.clientPreferences.aVolumePreference_7587.method5726(-2145576299) != 0) {
-							Class431.method5767(2, Class374_Sub1.aClass243_7731, 782166935 * Class300.anInt3210, 0, GraphicsAutoSetup.clientPreferences.aVolumePreference_7587.method5726(-2142499578), false, 1118626209);
+						if (GraphicsSetup.clientPreferences.aVolumePreference_7587.method5726(-2145576299) != 0) {
+							Class431.method5767(2, Class374_Sub1.aClass243_7731, 782166935 * Class300.anInt3210, 0, GraphicsSetup.clientPreferences.aVolumePreference_7587.method5726(-2142499578), false, 1118626209);
 							Class14.method344(-656326093);
 						} else
 							Class104.method1108(2, 2140319778);

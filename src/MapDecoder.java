@@ -596,16 +596,16 @@ public class MapDecoder {
 								aByteArrayArrayArray2637[i][i_89_][i_90_] |= 0x4;
 							}
 						}
-						Class78 class78 = new Class78();
+						DisplayMode displayMode = new DisplayMode();
 						if (aBoolean2629) {
-							class78.anInt726 = aSceneGraph_2619.method4015(i_89_, i_90_, (byte) 76) * 614121861;
-							class78.anInt725 = aSceneGraph_2619.method4014(i_89_, i_90_, (byte) 47) * -885436027;
-							class78.anInt727 = aSceneGraph_2619.method4016(i_89_, i_90_, (byte) -105) * 399458545;
-							class78.anInt729 = aSceneGraph_2619.method4017(i_89_, i_90_, (byte) 90) * 1507836083;
-							class78.anInt730 = aSceneGraph_2619.method4060(i_89_, i_90_, -374977085) * -1927451111;
-							class78.anInt732 = aSceneGraph_2619.method4018(i_89_, i_90_, -1965414520) * -875460563;
+							displayMode.anInt726 = aSceneGraph_2619.method4015(i_89_, i_90_, (byte) 76) * 614121861;
+							displayMode.anInt725 = aSceneGraph_2619.method4014(i_89_, i_90_, (byte) 47) * -885436027;
+							displayMode.anInt727 = aSceneGraph_2619.method4016(i_89_, i_90_, (byte) -105) * 399458545;
+							displayMode.anInt729 = aSceneGraph_2619.method4017(i_89_, i_90_, (byte) 90) * 1507836083;
+							displayMode.anInt730 = aSceneGraph_2619.method4060(i_89_, i_90_, -374977085) * -1927451111;
+							displayMode.anInt732 = aSceneGraph_2619.method4018(i_89_, i_90_, -1965414520) * -875460563;
 						}
-						ground.method6336(i_89_, i_90_, x_positions, is_111_, z_positions, y_positions, is_99_, is_100_, is_101_, is_102_, is_105_, is_103_, is_104_, class78, false);
+						ground.method6336(i_89_, i_90_, x_positions, is_111_, z_positions, y_positions, is_99_, is_100_, is_101_, is_102_, is_105_, is_103_, is_104_, displayMode, false);
 						aSceneGraph_2619.method4013(i, i_89_, i_90_, -239048224);
 					}
 				}
@@ -699,16 +699,16 @@ public class MapDecoder {
 							int i_159_ = _underlays[i_137_][i_138_] & 0xffff;
 							method2226(class_ra, i, i_136_, i_138_, i_137_, i_139_, class443, i_141_, i_157_, i_158_, i_159_, bools, is_149_, is_150_, is_151_, is_152_, is_153_, is_154_, is_155_, is_156_, is, ground, ground_130_, ground_129_, (short) 9391);
 							method2229(ground, class443, class373_145_, i, i_136_, i_138_, i_137_, i_139_, i_141_, i_140_, 1222931725);
-							Class78 class78 = new Class78();
+							DisplayMode displayMode = new DisplayMode();
 							if (aBoolean2629) {
-								class78.anInt726 = aSceneGraph_2619.method4015(i_136_, i_138_, (byte) 60) * 614121861;
-								class78.anInt725 = aSceneGraph_2619.method4014(i_136_, i_138_, (byte) 89) * -885436027;
-								class78.anInt727 = aSceneGraph_2619.method4016(i_136_, i_138_, (byte) -43) * 399458545;
-								class78.anInt729 = aSceneGraph_2619.method4017(i_136_, i_138_, (byte) 2) * 1507836083;
-								class78.anInt730 = aSceneGraph_2619.method4060(i_136_, i_138_, -37055227) * -1927451111;
-								class78.anInt732 = aSceneGraph_2619.method4018(i_136_, i_138_, -1965414520) * -875460563;
+								displayMode.anInt726 = aSceneGraph_2619.method4015(i_136_, i_138_, (byte) 60) * 614121861;
+								displayMode.anInt725 = aSceneGraph_2619.method4014(i_136_, i_138_, (byte) 89) * -885436027;
+								displayMode.anInt727 = aSceneGraph_2619.method4016(i_136_, i_138_, (byte) -43) * 399458545;
+								displayMode.anInt729 = aSceneGraph_2619.method4017(i_136_, i_138_, (byte) 2) * 1507836083;
+								displayMode.anInt730 = aSceneGraph_2619.method4060(i_136_, i_138_, -37055227) * -1927451111;
+								displayMode.anInt732 = aSceneGraph_2619.method4018(i_136_, i_138_, -1965414520) * -875460563;
 							}
-							ground.method6335(i_136_, i_138_, is_150_, is_155_, is_151_, is_156_, is_152_, is_149_, is_153_, is_154_, class78, aBoolean2694);
+							ground.method6335(i_136_, i_138_, is_150_, is_155_, is_151_, is_156_, is_152_, is_149_, is_153_, is_154_, displayMode, aBoolean2694);
 							aSceneGraph_2619.method4013(i, i_136_, i_138_, 200248008);
 						}
 					}
@@ -1685,16 +1685,16 @@ public class MapDecoder {
 						continue;
 					}
 				}
-				Class255.method2440(class365_sub1_sub1_sub2, class365_sub1_sub1_sub2.method4363((byte) -83), -1841539170);
+				DevConsole.method2440(class365_sub1_sub1_sub2, class365_sub1_sub1_sub2.method4363((byte) -83), -1841539170);
 				if (GameClient.aFloatArray8891[0] < 0.0F) {
 					if (i_349_ == 0) {
 						/* empty */
 					}
 				} else {
 					if (class365_sub1_sub1_sub2.method4429((byte) -114)) {
-						overheadString overheadString = class365_sub1_sub1_sub2.method4437(-593782084);
+						OverheadString overheadString = class365_sub1_sub1_sub2.method4437(-593782084);
 						if (overheadString != null && -559111197 * GameClient.anInt8905 < 547709851 * GameClient.anInt8644) {
-							GameClient.anIntArray8909[GameClient.anInt8905 * -559111197] = Class82_Sub19_Sub1.aClass505_9111.method6264(overheadString.method721((byte) 1), -1350600471) / 2;
+							GameClient.anIntArray8909[GameClient.anInt8905 * -559111197] = GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.method6264(overheadString.method721((byte) 1), -1350600471) / 2;
 							GameClient.anIntArray8907[-559111197 * GameClient.anInt8905] = (int) GameClient.aFloatArray8891[0];
 							GameClient.anIntArray8908[GameClient.anInt8905 * -559111197] = (int) GameClient.aFloatArray8891[1];
 							GameClient.aOverheadStringArray8657[-559111197 * GameClient.anInt8905] = overheadString;
@@ -1739,7 +1739,7 @@ public class MapDecoder {
 						}
 						Class57 class57 = class57s[0];
 						Class57 class57_358_ = class57s[i_355_];
-						i_353_ -= Math.max(Class82_Sub19_Sub1.aClass505_9111.anInt6202 * 1110385787, class57.method625());
+						i_353_ -= Math.max(GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.ascent * 1110385787, class57.method625());
 						int i_359_ = (int) (GameClient.aFloatArray8891[0] + i - (class57.method623() >> 1));
 						int i_360_ = class57.method623() * class365_sub1_sub1_sub2.anInt10063 * -766383861 / 255;
 						int i_361_ = class57.method625();
@@ -1751,7 +1751,7 @@ public class MapDecoder {
 						class57_358_.method645(i_359_, i_353_);
 						OverlayType.activeToolkit.r(i, i_344_, i_345_ + i, i_346_ + i_344_);
 					} else {
-						i_353_ -= Math.max(1110385787 * Class82_Sub19_Sub1.aClass505_9111.anInt6202, Class160.aClass57Array1646[0].method625());
+						i_353_ -= Math.max(1110385787 * GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.ascent, Class160.aClass57Array1646[0].method625());
 					}
 					i_353_ -= 2;
 					if (!class365_sub1_sub1_sub2.aBoolean10123) {
@@ -1906,7 +1906,7 @@ public class MapDecoder {
 								class365_sub1_sub1_sub2.graphicExpiry[i_375_] = -1;
 							} else {
 								int i_382_ = class365_sub1_sub1_sub2.method4363((byte) 64) / 2;
-								Class255.method2440(class365_sub1_sub1_sub2, i_382_, -1043067647);
+								DevConsole.method2440(class365_sub1_sub1_sub2, i_382_, -1043067647);
 								if (GameClient.aFloatArray8891[0] > -1.0F) {
 									GameClient.aFloatArray8891[0] += HashTable.aClass371_5520.anIntArray4033[i_375_];
 									GameClient.aFloatArray8891[1] += HashTable.aClass371_5520.anIntArray4034[i_375_];
@@ -2019,25 +2019,25 @@ public class MapDecoder {
 									}
 									Class264 class264 = ScriptContext.aClass264_7534;
 									Class264 class264_418_ = ScriptContext.aClass264_7534;
-									Class505 class505 = Class74.aClass505_695;
-									Class505 class505_419_ = Class74.aClass505_695;
+									GameFont gameFont = Class74.aGameFont_695;
+									GameFont gameFont_419_ = Class74.aGameFont_695;
 									int i_420_ = -160359777 * hitType.anInt3864;
 									if (i_420_ >= 0) {
 										Class264 class264_421_ = (Class264) Class497.aClass197_6105.method1883(GameClient.anInterface10_8700, i_420_, true, true, -2063324548);
-										Class505 class505_422_ = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, i_420_, -665127508);
-										if (class264_421_ != null && class505_422_ != null) {
+										GameFont gameFont_422_ = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, i_420_, -665127508);
+										if (class264_421_ != null && gameFont_422_ != null) {
 											class264 = class264_421_;
-											class505 = class505_422_;
+											gameFont = gameFont_422_;
 										}
 									}
 									if (hitType_380_ != null) {
 										i_420_ = hitType_380_.anInt3864 * -160359777;
 										if (i_420_ >= 0) {
 											Class264 class264_423_ = (Class264) Class497.aClass197_6105.method1883(GameClient.anInterface10_8700, i_420_, true, true, -2063324548);
-											Class505 class505_424_ = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, i_420_, -1834913337);
-											if (class264_423_ != null && null != class505_424_) {
+											GameFont gameFont_424_ = Class497.aClass197_6105.method1879(GameClient.anInterface10_8700, i_420_, -1834913337);
+											if (class264_423_ != null && null != gameFont_424_) {
 												class264_418_ = class264_423_;
-												class505_419_ = class505_424_;
+												gameFont_419_ = gameFont_424_;
 											}
 										}
 									}
@@ -2046,10 +2046,10 @@ public class MapDecoder {
 									boolean bool = false;
 									int i_426_ = 0;
 									String string_427_ = hitType.method4279(class365_sub1_sub1_sub2.graphicEndTime[i_375_], -794452403);
-									int i_428_ = class505.method6264(string_427_, 1512962528);
+									int i_428_ = gameFont.method6264(string_427_, 1512962528);
 									if (hitType_380_ != null) {
 										string = hitType_380_.method4279(class365_sub1_sub1_sub2.graphicFlags[i_375_], -794452403);
-										i_426_ = class505_419_.method6264(string, -1394241866);
+										i_426_ = gameFont_419_.method6264(string, -1394241866);
 									}
 									int i_429_ = 0;
 									int i_430_ = 0;
@@ -2120,8 +2120,8 @@ public class MapDecoder {
 									int i_449_ = i_448_;
 									int i_450_ = i_448_ + i_405_;
 									int i_451_ = -176522889 * hitType.anInt3862 + i_448_ + 15;
-									int i_452_ = i_451_ - class505.anInt6202 * 1110385787;
-									int i_453_ = i_451_ + class505.anInt6197 * -1883958527;
+									int i_452_ = i_451_ - gameFont.ascent * 1110385787;
+									int i_453_ = i_451_ + gameFont.descent * -1883958527;
 									if (i_452_ < i_449_) {
 										i_449_ = i_452_;
 									}
@@ -2131,8 +2131,8 @@ public class MapDecoder {
 									int i_454_ = 0;
 									if (hitType_380_ != null) {
 										i_454_ = hitType_380_.anInt3862 * -176522889 + i_448_ + 15;
-										int i_455_ = i_454_ - class505_419_.anInt6202 * 1110385787;
-										int i_456_ = i_454_ + -1883958527 * class505_419_.anInt6197;
+										int i_455_ = i_454_ - gameFont_419_.ascent * 1110385787;
+										int i_456_ = i_454_ + -1883958527 * gameFont_419_.descent;
 										if (i_455_ < i_449_) {
 											i_449_ = i_455_;
 										}
@@ -2236,7 +2236,7 @@ public class MapDecoder {
 				}
 				TimeUtils.method1320(class365_sub1_sub1_sub2, class365_sub1_sub1_sub2_467_, (class365_sub1_sub1_sub2.anInt10069 -= 512067143) * -152681609, i, i_344_, i_345_, i_346_, i_347_, i_348_, 1553464017);
 			}
-			int i_468_ = 1110385787 * Class82_Sub19_Sub1.aClass505_9111.anInt6202 + -1883958527 * Class82_Sub19_Sub1.aClass505_9111.anInt6197 + 2;
+			int i_468_ = 1110385787 * GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.ascent + -1883958527 * GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.descent + 2;
 			for (int i_469_ = 0; i_469_ < GameClient.anInt8905 * -559111197; i_469_++) {
 				int i_470_ = GameClient.anIntArray8907[i_469_];
 				int i_471_ = GameClient.anIntArray8908[i_469_];
@@ -2315,7 +2315,7 @@ public class MapDecoder {
 					}
 					if (i_480_ == 4) {
 						int i_482_ = 150 - GameClient.aOverheadStringArray8657[i_469_].method722(-1700086542) * 150 / GameClient.aOverheadStringArray8657[i_469_].method723((short) -15372);
-						int i_483_ = i_482_ * (Class82_Sub19_Sub1.aClass505_9111.method6264(string, 2139584778) + 100) / 150;
+						int i_483_ = i_482_ * (GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.method6264(string, 2139584778) + 100) / 150;
 						OverlayType.activeToolkit.o(i_470_ + i - 50, i_344_, i + i_470_ + 50, i_344_ + i_346_);
 						Class101.aClass264_1084.method2488(string, 50 + i_470_ + i - i_483_, i_344_ + i_471_, i_479_, -16777216, 766607406);
 						OverlayType.activeToolkit.r(i, i_344_, i + i_345_, i_346_ + i_344_);
@@ -2328,7 +2328,7 @@ public class MapDecoder {
 						} else if (i_484_ > 125) {
 							i_485_ = i_484_ - 125;
 						}
-						int i_486_ = Class82_Sub19_Sub1.aClass505_9111.anInt6202 * 1110385787 + -1883958527 * Class82_Sub19_Sub1.aClass505_9111.anInt6197;
+						int i_486_ = GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.ascent * 1110385787 + -1883958527 * GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.descent;
 						OverlayType.activeToolkit.o(i, i_344_ + i_471_ - i_486_ - 1, i_345_ + i, i_471_ + i_344_ + 5);
 						Class101.aClass264_1084.method2490(string, i + i_470_, i_485_ + i_344_ + i_471_, i_479_, -16777216, -773482636);
 						OverlayType.activeToolkit.r(i, i_344_, i_345_ + i, i_344_ + i_346_);

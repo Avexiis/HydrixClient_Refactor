@@ -48,14 +48,14 @@ public class ClientBuild {
 
 	static void method5890(byte i) {
 		try {
-			if (Class78.aFileOutputStream731 != null) {
+			if (DisplayMode.consoleLogStream != null) {
 				try {
-					Class78.aFileOutputStream731.close();
+					DisplayMode.consoleLogStream.close();
 				} catch (IOException ioexception) {
 					/* empty */
 				}
 			}
-			Class78.aFileOutputStream731 = null;
+			DisplayMode.consoleLogStream = null;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("si.i(").append(')').toString());
 		}

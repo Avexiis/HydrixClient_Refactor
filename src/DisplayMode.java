@@ -1,38 +1,38 @@
-/* Class78 - Decompiled by JODE
+/* DisplayMode - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.io.FileOutputStream;
 
-public class Class78 {
+public class DisplayMode {
 	public int anInt725;
 	public int anInt726;
 	public int anInt727;
 	int anInt728;
 	public int anInt729;
 	public int anInt730;
-	static FileOutputStream aFileOutputStream731;
+	static FileOutputStream consoleLogStream;
 	public int anInt732;
 	protected static int anInt733;
 
-	public Class78(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+	public DisplayMode(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
 		anInt726 = 614121861 * i;
 		anInt725 = -885436027 * i_0_;
 		anInt727 = i_1_ * 399458545;
-		((Class78) this).anInt728 = i_2_ * -2122084815;
+		((DisplayMode) this).anInt728 = i_2_ * -2122084815;
 		anInt729 = 1507836083 * i_3_;
 		anInt730 = i_4_ * -1927451111;
 		anInt732 = -875460563 * i_5_;
 	}
 
-	public boolean method843(Class78 class78_6_, byte i) {
+	public boolean method843(DisplayMode displayMode_6_, byte i) {
 		try {
-			return (class78_6_.anInt726 * -1212608691 == -1212608691 * anInt726 && (1996750669 * class78_6_.anInt725 == anInt725 * 1996750669) && (anInt727 * -1475891183 == -1475891183 * class78_6_.anInt727) && (((Class78) this).anInt728 * -1761932591 == ((Class78) class78_6_).anInt728 * -1761932591) && anInt729 * -28774789 == -28774789 * class78_6_.anInt729 && 484707881 * anInt730 == 484707881 * class78_6_.anInt730 && (class78_6_.anInt732 * -1637742683 == anInt732 * -1637742683));
+			return (displayMode_6_.anInt726 * -1212608691 == -1212608691 * anInt726 && (1996750669 * displayMode_6_.anInt725 == anInt725 * 1996750669) && (anInt727 * -1475891183 == -1475891183 * displayMode_6_.anInt727) && (((DisplayMode) this).anInt728 * -1761932591 == ((DisplayMode) displayMode_6_).anInt728 * -1761932591) && anInt729 * -28774789 == -28774789 * displayMode_6_.anInt729 && 484707881 * anInt730 == 484707881 * displayMode_6_.anInt730 && (displayMode_6_.anInt732 * -1637742683 == anInt732 * -1637742683));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("dd.a(").append(')').toString());
 		}
 	}
 
-	public Class78() {
+	public DisplayMode() {
 		/* empty */
 	}
 

@@ -8,7 +8,7 @@ public class Class298_Sub37_Sub18 extends Class298_Sub37 implements Interface8_I
 	int anInt10025;
 	int anInt10026;
 	static int[] anIntArray10027 = new int[1];
-	Class77 aClass77_10028;
+	TextEncoder aTextEncoder_10028;
 	Class55 aClass55_10029;
 	int anInt10030;
 	Class_ra_Sub2 aClass_ra_Sub2_10031;
@@ -53,17 +53,17 @@ public class Class298_Sub37_Sub18 extends Class298_Sub37 implements Interface8_I
 		return ((Class298_Sub37_Sub18) this).anInt10026;
 	}
 
-	Class298_Sub37_Sub18(Class_ra_Sub2 class_ra_sub2, Class55 class55, Class77 class77, int i, int i_0_, int i_1_) {
+	Class298_Sub37_Sub18(Class_ra_Sub2 class_ra_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_0_, int i_1_) {
 		((Class298_Sub37_Sub18) this).aClass_ra_Sub2_10031 = class_ra_sub2;
 		((Class298_Sub37_Sub18) this).anInt10026 = i;
 		((Class298_Sub37_Sub18) this).anInt10025 = i_0_;
 		((Class298_Sub37_Sub18) this).aClass55_10029 = class55;
-		((Class298_Sub37_Sub18) this).aClass77_10028 = class77;
+		((Class298_Sub37_Sub18) this).aTextEncoder_10028 = textEncoder;
 		OpenGL.glGenRenderbuffersEXT(1, anIntArray10027, 0);
 		((Class298_Sub37_Sub18) this).anInt10024 = anIntArray10027[0];
 		OpenGL.glBindRenderbufferEXT(36161, ((Class298_Sub37_Sub18) this).anInt10024);
-		OpenGL.glRenderbufferStorageMultisampleEXT(36161, i_1_, Class_ra_Sub2.method5274((((Class298_Sub37_Sub18) this).aClass55_10029), (((Class298_Sub37_Sub18) this).aClass77_10028)), ((Class298_Sub37_Sub18) this).anInt10026, ((Class298_Sub37_Sub18) this).anInt10025);
-		((Class298_Sub37_Sub18) this).anInt10030 = (((Class298_Sub37_Sub18) this).anInt10026 * ((Class298_Sub37_Sub18) this).anInt10025 * (((Class298_Sub37_Sub18) this).aClass55_10029.anInt556 * 845115459) * (((Class298_Sub37_Sub18) this).aClass77_10028.anInt724 * 685647847));
+		OpenGL.glRenderbufferStorageMultisampleEXT(36161, i_1_, Class_ra_Sub2.method5274((((Class298_Sub37_Sub18) this).aClass55_10029), (((Class298_Sub37_Sub18) this).aTextEncoder_10028)), ((Class298_Sub37_Sub18) this).anInt10026, ((Class298_Sub37_Sub18) this).anInt10025);
+		((Class298_Sub37_Sub18) this).anInt10030 = (((Class298_Sub37_Sub18) this).anInt10026 * ((Class298_Sub37_Sub18) this).anInt10025 * (((Class298_Sub37_Sub18) this).aClass55_10029.anInt556 * 845115459) * (((Class298_Sub37_Sub18) this).aTextEncoder_10028.anInt724 * 685647847));
 	}
 
 	public void d() {
@@ -105,16 +105,16 @@ public class Class298_Sub37_Sub18 extends Class298_Sub37 implements Interface8_I
 		OpenGL.glFramebufferRenderbufferEXT(36160, i, 36161, (((Class298_Sub37_Sub18) this).anInt10024));
 	}
 
-	Class298_Sub37_Sub18(Class_ra_Sub2 class_ra_sub2, Class55 class55, Class77 class77, int i, int i_2_) {
+	Class298_Sub37_Sub18(Class_ra_Sub2 class_ra_sub2, Class55 class55, TextEncoder textEncoder, int i, int i_2_) {
 		((Class298_Sub37_Sub18) this).aClass_ra_Sub2_10031 = class_ra_sub2;
 		((Class298_Sub37_Sub18) this).anInt10026 = i;
 		((Class298_Sub37_Sub18) this).anInt10025 = i_2_;
 		((Class298_Sub37_Sub18) this).aClass55_10029 = class55;
-		((Class298_Sub37_Sub18) this).aClass77_10028 = class77;
+		((Class298_Sub37_Sub18) this).aTextEncoder_10028 = textEncoder;
 		OpenGL.glGenRenderbuffersEXT(1, anIntArray10027, 0);
 		((Class298_Sub37_Sub18) this).anInt10024 = anIntArray10027[0];
 		OpenGL.glBindRenderbufferEXT(36161, ((Class298_Sub37_Sub18) this).anInt10024);
-		OpenGL.glRenderbufferStorageEXT(36161, Class_ra_Sub2.method5274((((Class298_Sub37_Sub18) this).aClass55_10029), (((Class298_Sub37_Sub18) this).aClass77_10028)), ((Class298_Sub37_Sub18) this).anInt10026, ((Class298_Sub37_Sub18) this).anInt10025);
-		((Class298_Sub37_Sub18) this).anInt10030 = (((Class298_Sub37_Sub18) this).anInt10026 * ((Class298_Sub37_Sub18) this).anInt10025 * (((Class298_Sub37_Sub18) this).aClass55_10029.anInt556 * 845115459) * (((Class298_Sub37_Sub18) this).aClass77_10028.anInt724 * 685647847));
+		OpenGL.glRenderbufferStorageEXT(36161, Class_ra_Sub2.method5274((((Class298_Sub37_Sub18) this).aClass55_10029), (((Class298_Sub37_Sub18) this).aTextEncoder_10028)), ((Class298_Sub37_Sub18) this).anInt10026, ((Class298_Sub37_Sub18) this).anInt10025);
+		((Class298_Sub37_Sub18) this).anInt10030 = (((Class298_Sub37_Sub18) this).anInt10026 * ((Class298_Sub37_Sub18) this).anInt10025 * (((Class298_Sub37_Sub18) this).aClass55_10029.anInt556 * 845115459) * (((Class298_Sub37_Sub18) this).aTextEncoder_10028.anInt724 * 685647847));
 	}
 }

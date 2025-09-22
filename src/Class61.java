@@ -30,7 +30,7 @@ public class Class61 {
 			class30_sub2 = new Class30_Sub2(((Class61) this).aClass_ra_Sub2_606, 3553, i_0_, i_0_, materialRaw.aByte537 != 0, is, 0, 0, false);
 		} else {
 			float[] fs = ((Class61) this).anInterface_ma604.method181(i, 0.7F, i_0_, i_0_, false, (byte) -119);
-			class30_sub2 = new Class30_Sub2(((Class61) this).aClass_ra_Sub2_606, 3553, Class55.aClass55_557, Class77.aClass77_714, i_0_, i_0_, materialRaw.aByte537 != 0, fs, Class55.aClass55_557);
+			class30_sub2 = new Class30_Sub2(((Class61) this).aClass_ra_Sub2_606, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_714, i_0_, i_0_, materialRaw.aByte537 != 0, fs, Class55.aClass55_557);
 		}
 		class30_sub2.method420(materialRaw.aBoolean540, materialRaw.aBoolean541);
 		((Class61) this).aClass348_605.put(class30_sub2, (long) i);

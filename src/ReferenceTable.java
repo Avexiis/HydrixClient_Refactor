@@ -154,20 +154,20 @@ public class ReferenceTable implements Interface21 {
 
 	static void method4938(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, byte i_18_) {
 		try {
-			int i_19_ = Class463.method6012(i_13_, 1155384281 * Class372_Sub3.anInt4049, -1062447355 * Class372_Sub3.anInt4050, -1212608691);
-			int i_20_ = Class463.method6012(i_14_, Class372_Sub3.anInt4049 * 1155384281, Class372_Sub3.anInt4050 * -1062447355, -1212608691);
-			int i_21_ = Class463.method6012(i, Class372_Sub3.anInt4051 * -1424479739, 1135094847 * Class372_Sub3.anInt4048, -1212608691);
-			int i_22_ = Class463.method6012(i_12_, -1424479739 * Class372_Sub3.anInt4051, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
-			int i_23_ = Class463.method6012(i_13_ + i_17_, 1155384281 * Class372_Sub3.anInt4049, Class372_Sub3.anInt4050 * -1062447355, -1212608691);
-			int i_24_ = Class463.method6012(i_14_ - i_17_, Class372_Sub3.anInt4049 * 1155384281, -1062447355 * Class372_Sub3.anInt4050, -1212608691);
+			int i_19_ = Class463.method6012(i_13_, 1155384281 * DevConsoleInit.anInt4049, -1062447355 * DevConsoleInit.anInt4050, -1212608691);
+			int i_20_ = Class463.method6012(i_14_, DevConsoleInit.anInt4049 * 1155384281, DevConsoleInit.anInt4050 * -1062447355, -1212608691);
+			int i_21_ = Class463.method6012(i, DevConsoleInit.anInt4051 * -1424479739, 1135094847 * DevConsoleInit.anInt4048, -1212608691);
+			int i_22_ = Class463.method6012(i_12_, -1424479739 * DevConsoleInit.anInt4051, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
+			int i_23_ = Class463.method6012(i_13_ + i_17_, 1155384281 * DevConsoleInit.anInt4049, DevConsoleInit.anInt4050 * -1062447355, -1212608691);
+			int i_24_ = Class463.method6012(i_14_ - i_17_, DevConsoleInit.anInt4049 * 1155384281, -1062447355 * DevConsoleInit.anInt4050, -1212608691);
 			for (int i_25_ = i_19_; i_25_ < i_23_; i_25_++)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_25_]), i_21_, i_22_, i_16_, -1884573988);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_25_]), i_21_, i_22_, i_16_, -1884573988);
 			for (int i_26_ = i_20_; i_26_ > i_24_; i_26_--)
-				Class82_Sub22.method940((Class372_Sub3.anIntArrayArray4047[i_26_]), i_21_, i_22_, i_16_, 712014890);
-			int i_27_ = Class463.method6012(i + i_17_, -1424479739 * Class372_Sub3.anInt4051, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
-			int i_28_ = Class463.method6012(i_12_ - i_17_, Class372_Sub3.anInt4051 * -1424479739, Class372_Sub3.anInt4048 * 1135094847, -1212608691);
+				Class82_Sub22.method940((DevConsoleInit.anIntArrayArray4047[i_26_]), i_21_, i_22_, i_16_, 712014890);
+			int i_27_ = Class463.method6012(i + i_17_, -1424479739 * DevConsoleInit.anInt4051, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
+			int i_28_ = Class463.method6012(i_12_ - i_17_, DevConsoleInit.anInt4051 * -1424479739, DevConsoleInit.anInt4048 * 1135094847, -1212608691);
 			for (int i_29_ = i_23_; i_29_ <= i_24_; i_29_++) {
-				int[] is = Class372_Sub3.anIntArrayArray4047[i_29_];
+				int[] is = DevConsoleInit.anIntArrayArray4047[i_29_];
 				Class82_Sub22.method940(is, i_21_, i_27_, i_16_, -665045806);
 				Class82_Sub22.method940(is, i_27_, i_28_, i_15_, -1572233497);
 				Class82_Sub22.method940(is, i_28_, i_22_, i_16_, -2046400935);
@@ -190,7 +190,7 @@ public class ReferenceTable implements Interface21 {
 				WorldTile worldTile = GameClient.map.getRegionStart(681479919);
 				if (23 == i_34_) {
 					if (1806357379 * GameClient.playerRights > 0 && Class434.method5802(1267311211))
-						DiskFile.method6083((Class287.myPlayer.plane), dstX + -1760580017 * worldTile.x, dstY + worldTile.y * 283514611, 2043472934);
+						DiskFile.printCoordinates((Class287.myPlayer.plane), dstX + -1760580017 * worldTile.x, dstY + worldTile.y * 283514611);
 					else {
 						Skybox.sendWalkPacket(walktype, BASType.method4214(dstX, dstY, (short) 808));
 						if (walktype == 0) {
@@ -517,7 +517,7 @@ public class ReferenceTable implements Interface21 {
 					}
 					if (i_34_ == 60) {
 						if (GameClient.playerRights * 1806357379 > 0 && Class434.method5802(838408640))
-							DiskFile.method6083((Class287.myPlayer.plane), worldTile.x * -1760580017 + dstX, 283514611 * worldTile.y + dstY, 1886787992);
+							DiskFile.printCoordinates((Class287.myPlayer.plane), worldTile.x * -1760580017 + dstX, 283514611 * worldTile.y + dstY);
 						else {
 							GameClient.anInt8784 = i * 143636043;
 							GameClient.anInt8785 = 381532777 * i_30_;

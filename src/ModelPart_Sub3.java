@@ -2812,10 +2812,10 @@ public class ModelPart_Sub3 extends ModelPart {
 			class137.method1506(aClass_ra_Sub3_7894.aClass233_8236);
 			class137.aClass233_1519.method2172();
 			if (aClass_ra_Sub3_7894.aBoolean8326) {
-				Class78 class78 = aClass_ra_Sub3_7894.method5373();
+				DisplayMode displayMode = aClass_ra_Sub3_7894.method5373();
 				class137.aClass232_1523.method2135(0.0F, 1.0F, 0.0F, -aClass_ra_Sub3_7894.anInt8328);
-				class137.aClass232_1523.method2139(3.0F / (class78.anInt725 * 1996750669));
-				class137.aSceneObjectPosition_1524.method2007((class78.anInt726 * -1212608691 >> 16 & 0xff) / 255.0F, (class78.anInt726 * -1212608691 >> 8 & 0xff) / 255.0F, (class78.anInt726 * -1212608691 >> 0 & 0xff) / 255.0F);
+				class137.aClass232_1523.method2139(3.0F / (displayMode.anInt725 * 1996750669));
+				class137.aSceneObjectPosition_1524.method2007((displayMode.anInt726 * -1212608691 >> 16 & 0xff) / 255.0F, (displayMode.anInt726 * -1212608691 >> 8 & 0xff) / 255.0F, (displayMode.anInt726 * -1212608691 >> 0 & 0xff) / 255.0F);
 			} else {
 				class137.aClass232_1523.method2135(0.0F, 0.0F, 0.0F, 0.0F);
 				class137.aSceneObjectPosition_1524.method2007(0.0F, 0.0F, 0.0F);

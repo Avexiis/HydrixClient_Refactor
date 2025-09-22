@@ -1,24 +1,29 @@
-/* Class372_Sub3 - Decompiled by JODE
+/* DevConsoleInit - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class372_Sub3 extends Class372 {
+import java.util.Arrays;
+
+public class DevConsoleInit extends Class372 {
 	static boolean aBoolean7730;
 
-	Class372_Sub3() throws Throwable {
+	DevConsoleInit() throws Throwable {
 		throw new Error();
 	}
 
-	static void method4599(int i) {
+	static void initConsoleState() {
 		try {
-			Class8.anInt106 = (-445162670 + (-123784141 * Class82_Sub19_Sub1.aClass505_9111.anInt6202 + (Class82_Sub19_Sub1.aClass505_9111.anInt6197 * -1877198679)));
-			Class8.anInt110 = (524676266 + (Class422_Sub2.aClass505_8369.anInt6202 * 294342359 + 1292125525 * Class422_Sub2.aClass505_8369.anInt6197));
-			Class8.aStringArray107 = new String[500];
-			for (int i_0_ = 0; i_0_ < Class8.aStringArray107.length; i_0_++)
-				Class8.aStringArray107[i_0_] = "";
-			Class255.sendDevConsoleMsg(LocalizedString.MESSAGE_WELCOME_CONSOLE_ALT.getText(Class321.ACTIVE_LANGUAGE, -875414210), 1099175264);
+			DevConsoleState.primaryLineHeight = (
+					-445162670 + (-123784141 * GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.ascent + (GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.descent * -1877198679))
+			);
+			DevConsoleState.secondaryLineHeight = (
+					524676266 + (RemoveRoofPreference.CONSOLE_SECONDARY_FONT.ascent * 294342359 + 1292125525 * RemoveRoofPreference.CONSOLE_SECONDARY_FONT.descent)
+			);
+			DevConsoleState.lines = new String[500];
+			Arrays.fill(DevConsoleState.lines, "");
+			DevConsole.sendDevConsoleMsg(LocalizedString.MESSAGE_WELCOME_CONSOLE_ALT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210));
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adx.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adx.b(" + ')');
 		}
 	}
 
@@ -26,7 +31,7 @@ public class Class372_Sub3 extends Class372 {
 		try {
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = -560594807 * Class388.anInt4152;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adx.amp(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adx.amp(" + ')');
 		}
 	}
 
@@ -37,7 +42,7 @@ public class Class372_Sub3 extends Class372 {
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
 			Class298_Sub45.method3533(class105, RSInterface, class403, (byte) 36);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adx.dk(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adx.dk(" + ')');
 		}
 	}
 
@@ -48,7 +53,7 @@ public class Class372_Sub3 extends Class372 {
 			if (-1309843523 * class105.component == -1 && !RSInterface.aBoolean1403)
 				IntegerPreferenceField.method5623(-440872681 * class105.interfacehash, 1454915163);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("adx.hq(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "adx.hq(" + ')');
 		}
 	}
 }

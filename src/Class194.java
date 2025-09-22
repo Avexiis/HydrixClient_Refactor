@@ -73,7 +73,7 @@ public class Class194 {
 	static final void method1866(ClientScript2 class403, int i) {
 		try {
 			int i_1_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.particlePreference, i_1_, 965049953);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.particlePreference, i_1_, 965049953);
 			Class3.writePreferences();
 			GameClient.aBoolean8666 = false;
 		} catch (RuntimeException runtimeexception) {

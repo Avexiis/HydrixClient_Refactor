@@ -236,7 +236,7 @@ public class Player extends Entity {
 			class222.method2064(0.0F, (float) (-20 - (-661498661 * ((Player) this).anInt10122)), 0.0F);
 			Class335 class335 = null;
 			((Player) this).aBoolean10129 = false;
-			if (GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5693(-591782935) == 1) {
+			if (GraphicsSetup.clientPreferences.characterShadowPreference.method5693(-591782935) == 1) {
 				BASType class350 = getDefinition(-97958061);
 				if (class350.aBoolean3756 && (164936249 * appearance.anInt3974 == -1 || (Class15.aClass507_224.method6269(appearance.anInt3974 * 164936249, -465726953).aBoolean6165))) {
 					Animator animator = ((projectileAnimator.method5819((byte) -70) && projectileAnimator.method5826(-65534)) ? projectileAnimator : null);
@@ -593,7 +593,7 @@ public class Player extends Entity {
 		class222.method2064(0.0F, (float) (-20 - (-661498661 * ((Player) this).anInt10122)), 0.0F);
 		Class335 class335 = null;
 		((Player) this).aBoolean10129 = false;
-		if (GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5693(-1650118723) == 1) {
+		if (GraphicsSetup.clientPreferences.characterShadowPreference.method5693(-1650118723) == 1) {
 			BASType class350 = getDefinition(-231420914);
 			if (class350.aBoolean3756 && (164936249 * appearance.anInt3974 == -1 || (Class15.aClass507_224.method6269(appearance.anInt3974 * 164936249, -824172978).aBoolean6165))) {
 				Animator animator = ((projectileAnimator.method5819((byte) -76) && projectileAnimator.method5826(-65534)) ? projectileAnimator : null);
@@ -679,10 +679,10 @@ public class Player extends Entity {
 		}
 	}
 
-	public overheadString method4437(int i) {
+	public OverheadString method4437(int i) {
 		try {
 			if (null != ((Player) this).overheadString) {
-				if (null == ((overheadString) (((Player) this).overheadString)).aString608)
+				if (null == ((OverheadString) (((Player) this).overheadString)).aString608)
 					return null;
 				if (0 == GameClient.anInt8837 * -1168328513 || -1168328513 * GameClient.anInt8837 == 3 || (GameClient.anInt8837 * -1168328513 == 1 && VarClientTypeList.method6192(username, -1511804216)))
 					return (((Player) this).overheadString);
@@ -844,9 +844,9 @@ public class Player extends Entity {
 		}
 	}
 
-	public overheadString method4443() {
+	public OverheadString method4443() {
 		if (null != ((Player) this).overheadString) {
-			if (null == ((overheadString) (((Player) this).overheadString)).aString608)
+			if (null == ((OverheadString) (((Player) this).overheadString)).aString608)
 				return null;
 			if (0 == GameClient.anInt8837 * -1168328513 || -1168328513 * GameClient.anInt8837 == 3 || (GameClient.anInt8837 * -1168328513 == 1 && VarClientTypeList.method6192(username, -1800657283)))
 				return ((Player) this).overheadString;

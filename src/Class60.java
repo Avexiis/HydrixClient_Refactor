@@ -67,7 +67,7 @@ public class Class60 {
 			}
 			method703(((Class60) this).aClass365_Sub1_587, 1121645041);
 			if (bool_1_)
-				bool_1_ = bool_1_ & (((Class60) this).aBoolean598 & !((Class60) this).aBoolean600 & GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-896655100) != 0);
+				bool_1_ = bool_1_ & (((Class60) this).aBoolean598 & !((Class60) this).aBoolean600 & GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-896655100) != 0);
 			if (bool && !bool_1_) {
 				((Class60) this).anInt595 = -722933511 * class432.id;
 				return null;
@@ -188,7 +188,7 @@ public class Class60 {
 		try {
 			if (((Class60) this).aAnimator_593.method5819((byte) -77)) {
 				if (((Class60) this).aAnimator_593.method5822((GameClient.anInt8884 * 443738891 - -735091231 * ((Class60) this).anInt594), 1976097000)) {
-					if (GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-184271029) == 2)
+					if (GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-184271029) == 2)
 						((Class60) this).aBoolean600 = false;
 					if (((Class60) this).aAnimator_593.method5832(-1768742219)) {
 						((Class60) this).aAnimator_593.method5821(-1, -1793536388);

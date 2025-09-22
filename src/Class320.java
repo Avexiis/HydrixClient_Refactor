@@ -34,27 +34,27 @@ public class Class320 implements Interface21 {
 
 	public static void method3910(int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7564, 1, -278860705);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565, 1, -1879075078);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547, 1, -144967877);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.groundBlendingPreference, 1, 3979787);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569, 0, -1267983813);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.flickeringPreference, 0, -479296878);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.characterShadowPreference, 0, 32404629);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.sceneryShadowPreference, 0, -1166259594);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.texturePreference, 0, 221140911);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.lightingPreference, 0, 609592986);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.waterDetailPreference, 0, -1791107075);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.fogPreference, 0, -240658138);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.antialiasPreference, 0, 737950253);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550, 0, -1008071138);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.particlePreference, 0, -1232122850);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558, -160182505 * Class115.aClass115_1383.anInt1387, 466531848);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.bloomPreference, 0, -1276228451);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567, 0, -23282776);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7564, 1, -278860705);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7565, 1, -1879075078);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547, 1, -144967877);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.groundBlendingPreference, 1, 3979787);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsSetup_7569, 0, -1267983813);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.flickeringPreference, 0, -479296878);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.characterShadowPreference, 0, 32404629);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.sceneryShadowPreference, 0, -1166259594);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.texturePreference, 0, 221140911);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.lightingPreference, 0, 609592986);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.waterDetailPreference, 0, -1791107075);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.fogPreference, 0, -240658138);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.antialiasPreference, 0, 737950253);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aAntialiasPreference_7550, 0, -1008071138);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.particlePreference, 0, -1232122850);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aMapSizePreference_7558, -160182505 * Class115.aClass115_1383.anInt1387, 466531848);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.bloomPreference, 0, -1276228451);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub19_7567, 0, -23282776);
 			Class490.method6170(1113089752);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566, 2, 1293702073);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsPresetPreference_7576, 2, 359344447);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aScreenSizePreference_7566, 2, 1293702073);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsPresetPreference_7576, 2, 359344447);
 			Class359.method4294(123459893);
 			GameClient.map.method2640((byte) -42).forceUpdate(-1416696139);
 			GameClient.aBoolean8676 = true;
@@ -77,7 +77,7 @@ public class Class320 implements Interface21 {
 	static final void method3912(ClientScript2 class403, int i) {
 		try {
 			int i_1_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.fogPreference.method5612(i_1_, 1352882135);
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.fogPreference.method5612(i_1_, 1352882135);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ni.aoy(").append(')').toString());
 		}
@@ -85,7 +85,7 @@ public class Class320 implements Interface21 {
 
 	public static Class297 method3913(int i, int i_2_, int i_3_, int i_4_, boolean bool, int i_5_, int i_6_) {
 		try {
-			if ((bool ? GraphicsAutoSetup.clientPreferences.aVolumePreference_7583.method5726(-2146212397) : GraphicsAutoSetup.clientPreferences.aVolumePreference_7553.method5726(-2145707047)) != 0 && i_2_ != 0 && -991384187 * Class300.anInt3213 < 50 && i != -1) {
+			if ((bool ? GraphicsSetup.clientPreferences.aVolumePreference_7583.method5726(-2146212397) : GraphicsSetup.clientPreferences.aVolumePreference_7553.method5726(-2145707047)) != 0 && i_2_ != 0 && -991384187 * Class300.anInt3213 < 50 && i != -1) {
 				Class297 class297 = new Class297(bool ? (byte) 3 : (byte) 2, i, i_2_, i_3_, i_4_, 0, i_5_, null);
 				Class300.aClass297Array3214[(Class300.anInt3213 += -598588595) * -991384187 - 1] = class297;
 				return class297;

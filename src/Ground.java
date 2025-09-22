@@ -15,11 +15,11 @@ public abstract class Ground {
 
 	public abstract void LA(int i, int i_3_, int i_4_);
 
-	public abstract void method6335(int i, int i_5_, int[] is, int[] is_6_, int[] is_7_, int[] is_8_, int[] is_9_, int[] is_10_, int[] is_11_, int[] is_12_, Class78 class78, boolean bool);
+	public abstract void method6335(int i, int i_5_, int[] is, int[] is_6_, int[] is_7_, int[] is_8_, int[] is_9_, int[] is_10_, int[] is_11_, int[] is_12_, DisplayMode displayMode, boolean bool);
 
-	public abstract void method6336(int i, int i_13_, int[] is, int[] is_14_, int[] is_15_, int[] is_16_, int[] is_17_, int[] is_18_, int[] is_19_, int[] is_20_, int[] is_21_, int[] is_22_, int[] is_23_, Class78 class78, boolean bool);
+	public abstract void method6336(int i, int i_13_, int[] is, int[] is_14_, int[] is_15_, int[] is_16_, int[] is_17_, int[] is_18_, int[] is_19_, int[] is_20_, int[] is_21_, int[] is_22_, int[] is_23_, DisplayMode displayMode, boolean bool);
 
-	public abstract void method6337(int i, int i_24_, int[] is, int[] is_25_, int[] is_26_, int[] is_27_, int[] is_28_, int[] is_29_, int[] is_30_, int[] is_31_, int[] is_32_, int[] is_33_, int[] is_34_, Class78 class78, boolean bool);
+	public abstract void method6337(int i, int i_24_, int[] is, int[] is_25_, int[] is_26_, int[] is_27_, int[] is_28_, int[] is_29_, int[] is_30_, int[] is_31_, int[] is_32_, int[] is_33_, int[] is_34_, DisplayMode displayMode, boolean bool);
 
 	public abstract void method6338(int i, int i_35_, int i_36_, boolean[][] bools, boolean bool, int i_37_);
 
@@ -70,13 +70,13 @@ public abstract class Ground {
 
 	public abstract void ad(Class_na class_na, int i, int i_64_, int i_65_, int i_66_, boolean bool);
 
-	public abstract void method6343(int i, int i_67_, int[] is, int[] is_68_, int[] is_69_, int[] is_70_, int[] is_71_, int[] is_72_, int[] is_73_, int[] is_74_, int[] is_75_, int[] is_76_, int[] is_77_, Class78 class78, boolean bool);
+	public abstract void method6343(int i, int i_67_, int[] is, int[] is_68_, int[] is_69_, int[] is_70_, int[] is_71_, int[] is_72_, int[] is_73_, int[] is_74_, int[] is_75_, int[] is_76_, int[] is_77_, DisplayMode displayMode, boolean bool);
 
 	public abstract void method6344(Class298_Sub10 class298_sub10, int[] is);
 
-	public abstract void method6345(int i, int i_78_, int[] is, int[] is_79_, int[] is_80_, int[] is_81_, int[] is_82_, int[] is_83_, int[] is_84_, int[] is_85_, Class78 class78, boolean bool);
+	public abstract void method6345(int i, int i_78_, int[] is, int[] is_79_, int[] is_80_, int[] is_81_, int[] is_82_, int[] is_83_, int[] is_84_, int[] is_85_, DisplayMode displayMode, boolean bool);
 
-	public abstract void method6346(int i, int i_86_, int[] is, int[] is_87_, int[] is_88_, int[] is_89_, int[] is_90_, int[] is_91_, int[] is_92_, int[] is_93_, Class78 class78, boolean bool);
+	public abstract void method6346(int i, int i_86_, int[] is, int[] is_87_, int[] is_88_, int[] is_89_, int[] is_90_, int[] is_91_, int[] is_92_, int[] is_93_, DisplayMode displayMode, boolean bool);
 
 	public abstract void SA();
 
@@ -108,7 +108,7 @@ public abstract class Ground {
 
 	public abstract boolean method6355(Class_na class_na, int i, int i_139_, int i_140_, int i_141_, boolean bool);
 
-	public abstract void method6356(int i, int i_142_, int[] is, int[] is_143_, int[] is_144_, int[] is_145_, int[] is_146_, int[] is_147_, int[] is_148_, int[] is_149_, int[] is_150_, int[] is_151_, int[] is_152_, Class78 class78, boolean bool);
+	public abstract void method6356(int i, int i_142_, int[] is, int[] is_143_, int[] is_144_, int[] is_145_, int[] is_146_, int[] is_147_, int[] is_148_, int[] is_149_, int[] is_150_, int[] is_151_, int[] is_152_, DisplayMode displayMode, boolean bool);
 
 	public abstract void at(int i, int i_153_, int i_154_);
 
@@ -116,7 +116,7 @@ public abstract class Ground {
 
 	public abstract void method6358(Class298_Sub10 class298_sub10, int[] is);
 
-	public abstract void method6359(int i, int i_158_, int[] is, int[] is_159_, int[] is_160_, int[] is_161_, int[] is_162_, int[] is_163_, int[] is_164_, int[] is_165_, Class78 class78, boolean bool);
+	public abstract void method6359(int i, int i_158_, int[] is, int[] is_159_, int[] is_160_, int[] is_161_, int[] is_162_, int[] is_163_, int[] is_164_, int[] is_165_, DisplayMode displayMode, boolean bool);
 
 	static final void method6360(ClientScript2 class403, int i) {
 		try {
@@ -156,7 +156,7 @@ public abstract class Ground {
 
 	static final void method6363(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (GraphicsAutoSetup.clientPreferences.bloomPreference.method5646((byte) -74) && OverlayType.activeToolkit.method5050()) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (GraphicsSetup.clientPreferences.bloomPreference.method5646((byte) -74) && OverlayType.activeToolkit.method5050()) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("xa.anp(").append(')').toString());
 		}

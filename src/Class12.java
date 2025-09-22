@@ -146,20 +146,20 @@ public class Class12 implements Interface8_Impl1_Impl2 {
 		try {
 			if (null != string) {
 				if (GameClient.anInt8952 * -548972447 >= 100)
-					Class264.method2492(4, (LocalizedString.MESSAGE_IGNORE_LIST_FULL.getText(Class321.ACTIVE_LANGUAGE, -875414210)), (byte) -66);
+					Class264.method2492(4, (LocalizedString.MESSAGE_IGNORE_LIST_FULL.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), (byte) -66);
 				else {
 					String string_10_ = Class173.method1824(string, 150647374);
 					if (null != string_10_) {
 						for (int i_11_ = 0; i_11_ < -548972447 * GameClient.anInt8952; i_11_++) {
 							String string_12_ = Class173.method1824((GameClient.aStringArray8859[i_11_]), 1138876802);
 							if (null != string_12_ && string_12_.equals(string_10_)) {
-								Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_IGNORE_LIST_SUFFIX.getText((Class321.ACTIVE_LANGUAGE), -875414210)).toString(), (byte) -117);
+								Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_IGNORE_LIST_SUFFIX.getText((DynamicLight.ACTIVE_LANGUAGE), -875414210)).toString(), (byte) -117);
 								return;
 							}
 							if (GameClient.aStringArray8955[i_11_] != null) {
 								String string_13_ = Class173.method1824((GameClient.aStringArray8955[i_11_]), 1588040861);
 								if (string_13_ != null && string_13_.equals(string_10_)) {
-									Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_IGNORE_LIST_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -12);
+									Class264.method2492(4, new StringBuilder().append(string).append(LocalizedString.MESSAGE_ALREADY_ON_IGNORE_LIST_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -12);
 									return;
 								}
 							}
@@ -167,19 +167,19 @@ public class Class12 implements Interface8_Impl1_Impl2 {
 						for (int i_14_ = 0; i_14_ < GameClient.anInt8941 * -1054937867; i_14_++) {
 							String string_15_ = Class173.method1824((GameClient.aStringArray8704[i_14_]), -916859931);
 							if (string_15_ != null && string_15_.equals(string_10_)) {
-								Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX_ALT.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_FRIENDS_LIST_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -7);
+								Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX_ALT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_FRIENDS_LIST_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -7);
 								return;
 							}
 							if (null != GameClient.aStringArray8945[i_14_]) {
 								String string_16_ = Class173.method1824((GameClient.aStringArray8945[i_14_]), 671636487);
 								if (string_16_ != null && string_16_.equals(string_10_)) {
-									Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX_ALT.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_FRIENDS_LIST_SUFFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -26);
+									Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_PLEASE_REMOVE_PREFIX_ALT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(string).append(LocalizedString.MESSAGE_REMOVE_FROM_FRIENDS_LIST_SUFFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), (byte) -26);
 									return;
 								}
 							}
 						}
 						if (Class173.method1824((Class287.myPlayer.username), 675816100).equals(string_10_))
-							Class264.method2492(4, (LocalizedString.MESSAGE_CANT_ADD_YOURSELF_IGNORE_LIST.getText(Class321.ACTIVE_LANGUAGE, -875414210)), (byte) -86);
+							Class264.method2492(4, (LocalizedString.MESSAGE_CANT_ADD_YOURSELF_IGNORE_LIST.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)), (byte) -86);
 						else {
 							Class25 class25 = Language.method5760((short) 512);
 							Class298_Sub36 class298_sub36 = Class18.method359(OutgoingPacket.ADD_IGNORE_PACKET, class25.aClass449_330, (byte) 110);

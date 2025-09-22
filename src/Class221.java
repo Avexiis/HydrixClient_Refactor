@@ -105,43 +105,43 @@ public class Class221 implements Interface24 {
 				} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW3.getText(Language.aLanguage_6624, -875414210))) {
 					i_2_ = 11;
 					string = string.substring(LocalizedString.EFFECT_GLOW3.getText(Language.aLanguage_6624, -875414210).length());
-				} else if (Class321.ACTIVE_LANGUAGE != Language.aLanguage_6624) {
-					if (string_1_.startsWith(LocalizedString.COLOR_YELLOW.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+				} else if (DynamicLight.ACTIVE_LANGUAGE != Language.aLanguage_6624) {
+					if (string_1_.startsWith(LocalizedString.COLOR_YELLOW.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 0;
-						string = string.substring(LocalizedString.COLOR_YELLOW.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.COLOR_RED.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.COLOR_YELLOW.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.COLOR_RED.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 1;
-						string = string.substring(LocalizedString.COLOR_RED.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.COLOR_GREEN.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.COLOR_RED.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.COLOR_GREEN.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 2;
-						string = string.substring(LocalizedString.COLOR_GREEN.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.COLOR_CYAN.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.COLOR_GREEN.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.COLOR_CYAN.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 3;
-						string = string.substring(LocalizedString.COLOR_CYAN.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_PURPLE.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.COLOR_CYAN.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_PURPLE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 4;
-						string = string.substring(LocalizedString.EFFECT_PURPLE.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.COLOR_WHITE.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_PURPLE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.COLOR_WHITE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 5;
-						string = string.substring(LocalizedString.COLOR_WHITE.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_FLASH1.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.COLOR_WHITE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_FLASH1.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 6;
-						string = string.substring(LocalizedString.EFFECT_FLASH1.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.MESSAGE_REPORT_UNKNOWN.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_FLASH1.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.MESSAGE_REPORT_UNKNOWN.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 7;
-						string = string.substring(LocalizedString.MESSAGE_REPORT_UNKNOWN.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_FLASH3.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.MESSAGE_REPORT_UNKNOWN.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_FLASH3.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 8;
-						string = string.substring(LocalizedString.EFFECT_FLASH3.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW1.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_FLASH3.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW1.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 9;
-						string = string.substring(LocalizedString.EFFECT_GLOW1.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW2.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_GLOW1.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW2.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 10;
-						string = string.substring(LocalizedString.EFFECT_GLOW2.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW3.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_GLOW2.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_GLOW3.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_2_ = 11;
-						string = string.substring(LocalizedString.EFFECT_GLOW3.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
+						string = string.substring(LocalizedString.EFFECT_GLOW3.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
 					}
 				}
 				string_1_ = string.toLowerCase();
@@ -161,22 +161,22 @@ public class Class221 implements Interface24 {
 				} else if (string_1_.startsWith(LocalizedString.EFFECT_SLIDE.getText(Language.aLanguage_6624, -875414210))) {
 					i_3_ = 5;
 					string = string.substring(LocalizedString.EFFECT_SLIDE.getText(Language.aLanguage_6624, -875414210).length());
-				} else if (Language.aLanguage_6624 != Class321.ACTIVE_LANGUAGE) {
-					if (string_1_.startsWith(LocalizedString.EFFECT_WAVE.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+				} else if (Language.aLanguage_6624 != DynamicLight.ACTIVE_LANGUAGE) {
+					if (string_1_.startsWith(LocalizedString.EFFECT_WAVE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_3_ = 1;
-						string = string.substring(LocalizedString.EFFECT_WAVE.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_WAVE2.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_WAVE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_WAVE2.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_3_ = 2;
-						string = string.substring(LocalizedString.EFFECT_WAVE2.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_SHAKE.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_WAVE2.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_SHAKE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_3_ = 3;
-						string = string.substring(LocalizedString.EFFECT_SHAKE.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_SCROLL.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_SHAKE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_SCROLL.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_3_ = 4;
-						string = string.substring(LocalizedString.EFFECT_SCROLL.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
-					} else if (string_1_.startsWith(LocalizedString.EFFECT_SLIDE.getText(Class321.ACTIVE_LANGUAGE, -875414210))) {
+						string = string.substring(LocalizedString.EFFECT_SCROLL.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
+					} else if (string_1_.startsWith(LocalizedString.EFFECT_SLIDE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210))) {
 						i_3_ = 5;
-						string = string.substring(LocalizedString.EFFECT_SLIDE.getText(Class321.ACTIVE_LANGUAGE, -875414210).length());
+						string = string.substring(LocalizedString.EFFECT_SLIDE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210).length());
 					}
 				}
 				Class25 class25 = Language.method5760((short) 512);

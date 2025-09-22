@@ -110,7 +110,7 @@ public class Class461 implements Iterable {
 		try {
 			if (-1 != ((Class298_Sub41) class298_sub41).anInt7443 * 391847895 || ((Class298_Sub41) class298_sub41).anIntArray7432 != null) {
 				int i_6_ = 0;
-				int i_7_ = ((((Class298_Sub41) class298_sub41).anInt7449 * 43235291 * GraphicsAutoSetup.clientPreferences.aVolumePreference_7582.method5726(-2144866042)) >> 8);
+				int i_7_ = ((((Class298_Sub41) class298_sub41).anInt7449 * 43235291 * GraphicsSetup.clientPreferences.aVolumePreference_7582.method5726(-2144866042)) >> 8);
 				if (i_2_ > (-1012062621 * ((Class298_Sub41) class298_sub41).anInt7427))
 					i_6_ += i_2_ - -1012062621 * ((Class298_Sub41) class298_sub41).anInt7427;
 				else if (i_2_ < (-1808325887 * ((Class298_Sub41) class298_sub41).anInt7425))
@@ -119,7 +119,7 @@ public class Class461 implements Iterable {
 					i_6_ += i_3_ - -720500331 * ((Class298_Sub41) class298_sub41).anInt7428;
 				else if (i_3_ < (((Class298_Sub41) class298_sub41).anInt7423 * 757346071))
 					i_6_ += 757346071 * (((Class298_Sub41) class298_sub41).anInt7423) - i_3_;
-				if ((826975881 * ((Class298_Sub41) class298_sub41).anInt7430 == 0) || i_6_ - 256 > 826975881 * ((Class298_Sub41) class298_sub41).anInt7430 || GraphicsAutoSetup.clientPreferences.aVolumePreference_7582.method5726(-2144778383) == 0 || (-1926928785 * ((Class298_Sub41) class298_sub41).anInt7424) != i) {
+				if ((826975881 * ((Class298_Sub41) class298_sub41).anInt7430 == 0) || i_6_ - 256 > 826975881 * ((Class298_Sub41) class298_sub41).anInt7430 || GraphicsSetup.clientPreferences.aVolumePreference_7582.method5726(-2144778383) == 0 || (-1926928785 * ((Class298_Sub41) class298_sub41).anInt7424) != i) {
 					if ((((Class298_Sub41) class298_sub41).aClass298_Sub19_Sub2_7447) != null) {
 						Class285.aClass298_Sub19_Sub4_3083.method3048(((Class298_Sub41) class298_sub41).aClass298_Sub19_Sub2_7447);
 						((Class298_Sub41) class298_sub41).aClass298_Sub19_Sub2_7447 = null;

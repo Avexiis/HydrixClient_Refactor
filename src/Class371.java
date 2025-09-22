@@ -141,7 +141,7 @@ public class Class371 {
 	static final void method4583(ClientScript2 class403, int i) {
 		try {
 			int i_9_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			int i_10_ = GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2143866938);
+			int i_10_ = GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2143866938);
 			if (i_9_ != i_10_) {
 				if (Class435.method5804(GameClient.anInt8752 * -1233866115, (byte) 44)) {
 					if (i_10_ == 0 && -1256171511 * Class300.anInt3207 != -1) {
@@ -154,7 +154,7 @@ public class Class371 {
 					} else
 						Class70.method801(i_9_, -1911723714);
 				}
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aVolumePreference_7584, i_9_, -2050981993);
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aVolumePreference_7584, i_9_, -2050981993);
 				Class3.writePreferences();
 				GameClient.aBoolean8666 = false;
 			}

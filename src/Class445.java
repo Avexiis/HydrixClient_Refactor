@@ -12,7 +12,7 @@ public class Class445 {
 				((Class445) this).aClass348_5610.method4189();
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.p(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.p(" + ')');
 		}
 	}
 
@@ -33,7 +33,7 @@ public class Class445 {
 			}
 			return class485;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.a(" + ')');
 		}
 	}
 
@@ -43,7 +43,7 @@ public class Class445 {
 				((Class445) this).aClass348_5610.method4187();
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.f(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.f(" + ')');
 		}
 	}
 
@@ -53,7 +53,7 @@ public class Class445 {
 				((Class445) this).aClass348_5610.method4186(i, 187343477);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.b(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.b(" + ')');
 		}
 	}
 
@@ -62,43 +62,43 @@ public class Class445 {
 		if (null != ((Class445) this).aClass243_5609)
 			((Class445) this).aClass243_5609.method2316(Js5ConfigGroup.aClass120_1411.anInt1460 * -1006924897, 1281975621);
 	}
-	/** Dev console UI - Edit the string that displays in tradution.java */
-	static void method5895(GraphicsToolkit class_ra, byte i) {
+
+	static void consoleUI(GraphicsToolkit toolkit, byte i) {
 		try {
-			class_ra.r(0, 0, -2110394505 * Class462.canvasWidth, 350);
-			class_ra.drawFilledBox(0, 0, -2110394505 * Class462.canvasWidth, 350, Class8.anInt98 * 256666041 << 24 | Settings.DEV_CONSOLE_COLOR, 1);
-			int i_2_ = 350 / (376067837 * Class8.anInt110);
-			if (Class8.anInt102 * -2035787443 > 0) {
-				int i_3_ = 346 - 376067837 * Class8.anInt110 - 4;
-				int i_4_ = i_3_ * i_2_ / (i_2_ + -2035787443 * Class8.anInt102 - 1);
-				int i_5_ = 4;
-				if (-2035787443 * Class8.anInt102 > 1)
-					i_5_ += ((-2035787443 * Class8.anInt102 - 1 - Class8.anInt103 * -1731316011) * (i_3_ - i_4_) / (Class8.anInt102 * -2035787443 - 1));
-				class_ra.drawFilledBox(Class462.canvasWidth * -2110394505 - 16, i_5_, 12, i_4_, Class8.anInt98 * 256666041 << 24 | Settings.DEV_CONSOLE_SCR_COL, 2);
-				for (int i_6_ = -1731316011 * Class8.anInt103; (i_6_ < -1731316011 * Class8.anInt103 + i_2_ && i_6_ < -2035787443 * Class8.anInt102); i_6_++) {
-					String[] strings = Class365_Sub1_Sub3_Sub1.method4508((Class8.aStringArray107[i_6_]), '\010', 846052986);
+			toolkit.r(0, 0, -2110394505 * Class462.canvasWidth, 350);
+			toolkit.drawFilledBox(0, 0, -2110394505 * Class462.canvasWidth, 350, DevConsoleState.anInt98 * 256666041 << 24 | Settings.CONSOLE_COLOR, 1);
+			int i_2_ = 350 / (376067837 * DevConsoleState.secondaryLineHeight);
+			if (DevConsoleState.lineCount * -2035787443 > 0) {
+				int i_3_ = 346 - 376067837 * DevConsoleState.secondaryLineHeight - 4;
+				int i_4_ = i_3_ * i_2_ / (i_2_ + -2035787443 * DevConsoleState.lineCount - 1);
+				int four = 4; //stupid shit lmao
+				if (-2035787443 * DevConsoleState.lineCount > 1)
+					four += ((-2035787443 * DevConsoleState.lineCount - 1 - DevConsoleState.scrollOffset * -1731316011) * (i_3_ - i_4_) / (DevConsoleState.lineCount * -2035787443 - 1));
+				toolkit.drawFilledBox(Class462.canvasWidth * -2110394505 - 16, four, 12, i_4_, DevConsoleState.anInt98 * 256666041 << 24 | Settings.CONSOLE_SCROLLBAR_COLOR, 2);
+				for (int i_6_ = -1731316011 * DevConsoleState.scrollOffset; (i_6_ < -1731316011 * DevConsoleState.scrollOffset + i_2_ && i_6_ < -2035787443 * DevConsoleState.lineCount); i_6_++) {
+					String[] strings = SceneObject.splitText((DevConsoleState.lines[i_6_]), '\010', 846052986);
 					int i_7_ = ((-2110394505 * Class462.canvasWidth - 8 - 16) / strings.length);
 					for (int i_8_ = 0; i_8_ < strings.length; i_8_++) {
 						int i_9_ = 8 + i_7_ * i_8_;
-						class_ra.r(i_9_, 0, i_9_ + i_7_ - 8, 350);
-						Class343.aClass264_3673.method2488(Class117.method1276(strings[i_8_], (byte) 76), i_9_, (350 - Class8.anInt106 * 1194411673 - 2 - (-1883958527 * Class422_Sub2.aClass505_8369.anInt6197) - (376067837 * Class8.anInt110 * (i_6_ - Class8.anInt103 * -1731316011))), -1, -16777216, 2087345638);
+						toolkit.r(i_9_, 0, i_9_ + i_7_ - 8, 350);
+						Class343.aClass264_3673.method2488(Class117.method1276(strings[i_8_], (byte) 76), i_9_, (350 - DevConsoleState.primaryLineHeight * 1194411673 - 2 - (-1883958527 * RemoveRoofPreference.CONSOLE_SECONDARY_FONT.descent) - (376067837 * DevConsoleState.secondaryLineHeight * (i_6_ - DevConsoleState.scrollOffset * -1731316011))), -1, -16777216, 2087345638);
 					}
 				}
 			}
-			ScriptContext.aClass264_7534.method2474("718 (Custom)", -2110394505 * Class462.canvasWidth - 25, 330, -1, -16777216, (byte) -63);
-			class_ra.r(0, 0, Class462.canvasWidth * -2110394505, 350);
-			class_ra.method4990(0, 350 - Class8.anInt106 * 1194411673, Class462.canvasWidth * -2110394505, -1, -2042566638);
-			Class101.aClass264_1084.method2488(new StringBuilder().append(">>> ").append(Class117.method1276(Class8.aString101, (byte) -1)).toString(), 10, (350 - Class82_Sub19_Sub1.aClass505_9111.anInt6197 * -1883958527 - 1), -1, -16777216, -10016873);
+			ScriptContext.aClass264_7534.method2474(Settings.CONSOLE_RIGHT_TEXT, -2110394505 * Class462.canvasWidth - 25, 330, -1, -16777216, (byte) -63);
+			toolkit.r(0, 0, Class462.canvasWidth * -2110394505, 350);
+			toolkit.method4990(0, 350 - DevConsoleState.primaryLineHeight * 1194411673, Class462.canvasWidth * -2110394505, -1, -2042566638);
+			Class101.aClass264_1084.method2488(Settings.CONSOLE_CARET + Class117.method1276(DevConsoleState.aString101, (byte) -1), 10, (350 - GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.descent * -1883958527 - 1), -1, -16777216, -10016873);
 			if (SceneryShadowPreference.aBoolean8385) {
 				int i_10_ = -1;
 				if (443738891 * GameClient.anInt8884 % 30 > 15)
 					i_10_ = 16777215;
-				class_ra.method5035((10 + (Class82_Sub19_Sub1.aClass505_9111.method6264(new StringBuilder().append(">>> ").append(Class117.method1276(Class8.aString101, (byte) 58).substring(0, Class8.anInt99 * -1182747927)).toString(), -949897299))), 350 - -1883958527 * (Class82_Sub19_Sub1.aClass505_9111.anInt6197) - 11, 12, i_10_, (short) 26562);
+				toolkit.method5035((10 + (GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.method6264(Settings.CONSOLE_CARET + Class117.method1276(DevConsoleState.aString101, (byte) 58).substring(0, DevConsoleState.anInt99 * -1182747927), -949897299))), 350 - -1883958527 * (GroundSpotAnimUpdate.CONSOLE_PRIMARY_FONT.descent) - 11, 12, i_10_, (short) 26562);
 			}
-			class_ra.L();
+			toolkit.L();
 			Class98_Sub2.method1061(-1132401323);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.s(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.s(" + ')');
 		}
 	}
 
@@ -109,7 +109,7 @@ public class Class445 {
 			RSInterface RSInterface = ((Class390) class390).aRSInterface_4167;
 			GameMap.method2677(class105, RSInterface, class403, (byte) 32);
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.mo(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.mo(" + ')');
 		}
 	}
 
@@ -125,7 +125,7 @@ public class Class445 {
 				Class298_Sub10.anIntArray7229[i_13_] = 255;
 			return true;
 		} catch (RuntimeException runtimeexception) {
-			throw ErrorContext.info(runtimeexception, new StringBuilder().append("sj.a(").append(')').toString());
+			throw ErrorContext.info(runtimeexception, "sj.a(" + ')');
 		}
 	}
 }

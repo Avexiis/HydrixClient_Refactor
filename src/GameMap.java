@@ -315,7 +315,7 @@ public class GameMap {
 
 	void method2651(int i) {
 		try {
-			method2655(Class94.method1020(GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558.method5667(-369768513), 2010588610), 226677224);
+			method2655(Class94.method1020(GraphicsSetup.clientPreferences.aMapSizePreference_7558.method5667(-369768513), 2010588610), 226677224);
 			int i_16_ = aWorldTile_3006.x * -1760580017;
 			int i_17_ = aWorldTile_3006.y * 283514611;
 			int i_18_ = (Class367.anInt4000 * -1740717447 >> 12) + (i_16_ >> 3);
@@ -563,7 +563,7 @@ public class GameMap {
 				anInt3009 = i_57_ * -1928942181;
 				if (!aBoolean3018) {
 					Class439.method5851(i_58_, 430070283);
-					Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) 103);
+					Class139.method1548(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210), true, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) 103);
 				}
 				if (aWorldTile_3006 != null) {
 					aWorldTile_3007 = aWorldTile_3006;
@@ -1244,7 +1244,7 @@ public class GameMap {
 				return false;
 			}
 			if (!aBoolean3018 && aClass273_3025 != Class273.aClass273_2905) {
-				Class139.method1548(new StringBuilder().append(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(Symbol.LINE_BREAK).append("(100%)").toString(), true, OverlayType.activeToolkit, Class343.aClass264_3673, Class422_Sub2.aClass505_8369, (byte) -16);
+				Class139.method1548(new StringBuilder().append(LocalizedString.MESSAGE_LOADING_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(Symbol.LINE_BREAK).append("(100%)").toString(), true, OverlayType.activeToolkit, Class343.aClass264_3673, RemoveRoofPreference.CONSOLE_SECONDARY_FONT, (byte) -16);
 			}
 			aClass273_3025 = Class273.aClass273_2907;
 			if (!aBoolean3018) {
@@ -1271,7 +1271,7 @@ public class GameMap {
 				Class117.method1278((byte) 84);
 			}
 			boolean bool = false;
-			if (GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-1598768408) == 2) {
+			if (GraphicsSetup.clientPreferences.waterDetailPreference.getValue(-1598768408) == 2) {
 				for (int i_163_ = 0; i_163_ < aByteArrayArray3038.length; i_163_++) {
 					if (aByteArrayArray3002[i_163_] != null || aByteArrayArray3041[i_163_] != null) {
 						bool = true;
@@ -1279,7 +1279,7 @@ public class GameMap {
 					}
 				}
 			}
-			int i_164_ = Class69.method787(GraphicsAutoSetup.clientPreferences.aClass422_Sub24_7554.method5713((byte) 73), (byte) 16).anInt1581 * 2098573928;
+			int i_164_ = Class69.method787(GraphicsSetup.clientPreferences.aClass422_Sub24_7554.method5713((byte) 73), (byte) 16).anInt1581 * 2098573928;
 			if (OverlayType.activeToolkit.method4998()) {
 				i_164_++;
 			}
@@ -1297,11 +1297,11 @@ public class GameMap {
 			aFloat3020 = -0.05F + (float) (Math.random() / 10.0);
 			aClass240_Sub1_3029 = new Class240_Sub1(aSceneGraph_3037, aClass433_3040, 4, -991330803 * anInt3039, -1456212765 * anInt3011, false, aTileFlags_3012, aAtmosphereManager_3013);
 			aClass240_Sub1_3029.method2212(-403694446);
-			aClass240_Sub1_3029.anInt2621 = GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-809818345) * 275039235;
-			aClass240_Sub1_3029.aBoolean2622 = GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(-2131698628) == 2;
-			aClass240_Sub1_3029.aBoolean2697 = GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-2037839529) == 1;
-			aClass240_Sub1_3029.aBoolean2624 = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(1917266854) == 1;
-			aClass240_Sub1_3029.aBoolean2625 = GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1803060969) == 1;
+			aClass240_Sub1_3029.anInt2621 = GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-809818345) * 275039235;
+			aClass240_Sub1_3029.aBoolean2622 = GraphicsSetup.clientPreferences.waterDetailPreference.getValue(-2131698628) == 2;
+			aClass240_Sub1_3029.aBoolean2697 = GraphicsSetup.clientPreferences.lightingPreference.getValue(-2037839529) == 1;
+			aClass240_Sub1_3029.aBoolean2624 = GraphicsSetup.clientPreferences.groundBlendingPreference.method5724(1917266854) == 1;
+			aClass240_Sub1_3029.aBoolean2625 = GraphicsSetup.clientPreferences.texturePreference.getValue(1803060969) == 1;
 			if (!aClass266_3001.allowDynamicMapScene(338257036)) {
 				method2659(aClass240_Sub1_3029, aByteArrayArray3038);
 			} else {
@@ -1316,11 +1316,11 @@ public class GameMap {
 				aSceneGraph_3037.method4052(true, -740850409);
 				aClass240_Sub1_3000 = new Class240_Sub1(aSceneGraph_3037, aClass433_3040, 1, -991330803 * anInt3039, -1456212765 * anInt3011, true, aTileFlags_3012, aAtmosphereManager_3013);
 				aClass240_Sub1_3000.method2212(-1978540544);
-				aClass240_Sub1_3000.anInt2621 = GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.getValue(-15786995) * 275039235;
-				aClass240_Sub1_3000.aBoolean2622 = GraphicsAutoSetup.clientPreferences.waterDetailPreference.getValue(864049094) == 2;
-				aClass240_Sub1_3000.aBoolean2697 = GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1853244696) == 1;
-				aClass240_Sub1_3000.aBoolean2624 = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(281198825) == 1;
-				aClass240_Sub1_3000.aBoolean2625 = GraphicsAutoSetup.clientPreferences.texturePreference.getValue(2103749887) == 1;
+				aClass240_Sub1_3000.anInt2621 = GraphicsSetup.clientPreferences.sceneryShadowPreference.getValue(-15786995) * 275039235;
+				aClass240_Sub1_3000.aBoolean2622 = GraphicsSetup.clientPreferences.waterDetailPreference.getValue(864049094) == 2;
+				aClass240_Sub1_3000.aBoolean2697 = GraphicsSetup.clientPreferences.lightingPreference.getValue(-1853244696) == 1;
+				aClass240_Sub1_3000.aBoolean2624 = GraphicsSetup.clientPreferences.groundBlendingPreference.method5724(281198825) == 1;
+				aClass240_Sub1_3000.aBoolean2625 = GraphicsSetup.clientPreferences.texturePreference.getValue(2103749887) == 1;
 				if (!aClass266_3001.allowDynamicMapScene(1753743768)) {
 					method2659(aClass240_Sub1_3000, aByteArrayArray3041);
 					if (!aBoolean3018) {
@@ -1406,7 +1406,7 @@ public class GameMap {
 			if (aBoolean3018) {
 				GameMap gameMap_166_ = GameClient.map;
 				method2668(gameMap_166_, (byte) -125);
-				overheadString.aClass248_612.method2381(gameMap_166_, -1651604);
+				OverheadString.aClass248_612.method2381(gameMap_166_, -1651604);
 				bool_165_ = true;
 				TimeUtils.getTime((byte) 1);
 				synchronized (GameClient.anObject8661) {
@@ -1482,7 +1482,7 @@ public class GameMap {
 			}
 			Class82_Sub19.method926(55767460);
 			if (aBoolean3008) {
-				Class255.sendDevConsoleMsg(Long.toString(TimeUtils.getTime((byte) 1) - aLong3045 * 4917044907588821591L), 180430926);
+				DevConsole.sendDevConsoleMsg(Long.toString(TimeUtils.getTime((byte) 1) - aLong3045 * 4917044907588821591L));
 				aBoolean3008 = false;
 			}
 			if (bool_165_) {

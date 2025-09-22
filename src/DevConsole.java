@@ -1,16 +1,40 @@
-/* Class255 - Decompiled by JODE
+/* DevConsole - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
-public class Class255 implements Runnable {
+
+public class DevConsole implements Runnable {
 	boolean aBoolean2791;
 	Thread aThread2792;
 	int anInt2793;
 	Class461 aClass461_2794 = new Class461();
 	static Class4 aClass4_2795;
+
+	private static boolean uses24HourClock() {
+		DateFormat df = DateFormat.getTimeInstance(DateFormat.SHORT, Locale.getDefault());
+		if (df instanceof SimpleDateFormat) {
+			String p = ((SimpleDateFormat) df).toPattern();
+			for (int i = 0; i < p.length(); i++) {
+				char c = p.charAt(i);
+				if (c == 'H' || c == 'k') return true;
+				if (c == 'h' || c == 'K') return false;
+			}
+		}
+		String sample = df.format(new Date(0));
+		String s = sample.toLowerCase(Locale.ROOT);
+		return !(s.contains("am") || s.contains("pm"));
+	}
+
+	private static String formatLocalizedTime(Date when) {
+		final boolean is24 = uses24HourClock();
+		final SimpleDateFormat fmt = new SimpleDateFormat(is24 ? "HH:mm:ss" : "hh:mm:ss a", Locale.getDefault());
+		return fmt.format(when);
+	}
 
 	Class298_Sub37_Sub16_Sub2 method2429(int i, Class329 class329, byte i_0_) {
 		try {
@@ -30,8 +54,8 @@ public class Class255 implements Runnable {
 		try {
 			Class298_Sub37_Sub16_Sub2 class298_sub37_sub16_sub2 = new Class298_Sub37_Sub16_Sub2();
 			((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2).anInt10006 = -248388453;
-			synchronized (((Class255) this).aClass461_2794) {
-				for (Class298_Sub37_Sub16_Sub2 class298_sub37_sub16_sub2_2_ = ((Class298_Sub37_Sub16_Sub2) ((Class255) this).aClass461_2794.method5984(686363137)); class298_sub37_sub16_sub2_2_ != null; class298_sub37_sub16_sub2_2_ = ((Class298_Sub37_Sub16_Sub2) ((Class255) this).aClass461_2794.method5985(-852978429))) {
+			synchronized (((DevConsole) this).aClass461_2794) {
+				for (Class298_Sub37_Sub16_Sub2 class298_sub37_sub16_sub2_2_ = ((Class298_Sub37_Sub16_Sub2) ((DevConsole) this).aClass461_2794.method5984(686363137)); class298_sub37_sub16_sub2_2_ != null; class298_sub37_sub16_sub2_2_ = ((Class298_Sub37_Sub16_Sub2) ((DevConsole) this).aClass461_2794.method5985(-852978429))) {
 					if ((long) i == (-5533549728640346679L * class298_sub37_sub16_sub2_2_.aLong7406) && class329 == (((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2_2_).aClass329_10010) && -1906220653 * (((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2_2_).anInt10006) == 2) {
 						((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2).aByteArray10011 = ((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2_2_).aByteArray10011;
 						((Class298_Sub37_Sub16_Sub2) class298_sub37_sub16_sub2).aBoolean9670 = false;
@@ -66,10 +90,10 @@ public class Class255 implements Runnable {
 
 	void method2432(Class298_Sub37_Sub16_Sub2 class298_sub37_sub16_sub2, byte i) {
 		try {
-			synchronized (((Class255) this).aClass461_2794) {
-				((Class255) this).aClass461_2794.method5982(class298_sub37_sub16_sub2, (byte) -98);
-				((Class255) this).anInt2793 += 872113935;
-				((Class255) this).aClass461_2794.notifyAll();
+			synchronized (((DevConsole) this).aClass461_2794) {
+				((DevConsole) this).aClass461_2794.method5982(class298_sub37_sub16_sub2, (byte) -98);
+				((DevConsole) this).anInt2793 += 872113935;
+				((DevConsole) this).aClass461_2794.notifyAll();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "kr.p(" + ')');
@@ -78,15 +102,15 @@ public class Class255 implements Runnable {
 
 	public void run() {
 		try {
-			while (!((Class255) this).aBoolean2791) {
+			while (!((DevConsole) this).aBoolean2791) {
 				Class298_Sub37_Sub16_Sub2 class298_sub37_sub16_sub2;
-				synchronized (((Class255) this).aClass461_2794) {
-					class298_sub37_sub16_sub2 = ((Class298_Sub37_Sub16_Sub2) ((Class255) this).aClass461_2794.method5983(-2118324639));
+				synchronized (((DevConsole) this).aClass461_2794) {
+					class298_sub37_sub16_sub2 = ((Class298_Sub37_Sub16_Sub2) ((DevConsole) this).aClass461_2794.method5983(-2118324639));
 					if (class298_sub37_sub16_sub2 != null)
-						((Class255) this).anInt2793 -= 872113935;
+						((DevConsole) this).anInt2793 -= 872113935;
 					else {
 						try {
-							((Class255) this).aClass461_2794.wait();
+							((DevConsole) this).aClass461_2794.wait();
 						} catch (InterruptedException interruptedexception) {
 							/* empty */
 						}
@@ -108,27 +132,27 @@ public class Class255 implements Runnable {
 		}
 	}
 
-	public Class255() {
-		((Class255) this).anInt2793 = 0;
-		((Class255) this).aBoolean2791 = false;
-		((Class255) this).aThread2792 = new Thread(this);
-		((Class255) this).aThread2792.setDaemon(true);
-		((Class255) this).aThread2792.start();
-		((Class255) this).aThread2792.setPriority(1);
+	public DevConsole() {
+		((DevConsole) this).anInt2793 = 0;
+		((DevConsole) this).aBoolean2791 = false;
+		((DevConsole) this).aThread2792 = new Thread(this);
+		((DevConsole) this).aThread2792.setDaemon(true);
+		((DevConsole) this).aThread2792.start();
+		((DevConsole) this).aThread2792.setPriority(1);
 	}
 
 	public void method2433(int i) {
 		try {
-			((Class255) this).aBoolean2791 = true;
-			synchronized (((Class255) this).aClass461_2794) {
-				((Class255) this).aClass461_2794.notifyAll();
+			((DevConsole) this).aBoolean2791 = true;
+			synchronized (((DevConsole) this).aClass461_2794) {
+				((DevConsole) this).aClass461_2794.notifyAll();
 			}
 			try {
-				((Class255) this).aThread2792.join();
+				((DevConsole) this).aThread2792.join();
 			} catch (InterruptedException interruptedexception) {
 				/* empty */
 			}
-			((Class255) this).aThread2792 = null;
+			((DevConsole) this).aThread2792 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "kr.i(" + ')');
 		}
@@ -136,37 +160,33 @@ public class Class255 implements Runnable {
 
 	static final void method2434(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5725((byte) 12) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.groundBlendingPreference.method5725((byte) 12) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "kr.anz(" + ')');
 		}
 	}
 
-	public static void sendDevConsoleMsg(String string, int i) {
+	public static void sendDevConsoleMsg(String string) {
 		try {
-			if (Class8.aStringArray107 == null)
-				Class372_Sub3.method4599(-219758847);
+			if (DevConsoleState.lines == null)
+				DevConsoleInit.initConsoleState();
 			GameClient.date.setTime(new Date(TimeUtils.getTime((byte) 1)));
-			int hour = GameClient.date.get(Calendar.HOUR_OF_DAY);
-			int minute = GameClient.date.get(Calendar.MINUTE);
-			int second = GameClient.date.get(Calendar.SECOND);
-			String time = Integer.toString(hour / 10) + hour % 10 + ":" + minute / 10 + minute % 10 + ":" + second / 10 + second % 10;
-			String[] strings = Class365_Sub1_Sub3_Sub1.method4508(string, '\n', 1593698305);
-			for (int i_9_ = 0; i_9_ < strings.length; i_9_++) {
-				for (int i_10_ = -2035787443 * Class8.anInt102; i_10_ > 0; i_10_--)
-					Class8.aStringArray107[i_10_] = Class8.aStringArray107[i_10_ - 1];
-				Class8.aStringArray107[0] = time + ": " + strings[i_9_];
-				if (null != Class78.aFileOutputStream731) {
+			String time = formatLocalizedTime(GameClient.date.getTime());
+			String[] strings = SceneObject.splitText(string, '\n', 1593698305);
+			for (String s : strings) {
+				for (int shiftIndex = -2035787443 * DevConsoleState.lineCount; shiftIndex > 0; shiftIndex--)
+					DevConsoleState.lines[shiftIndex] = DevConsoleState.lines[shiftIndex - 1];
+				DevConsoleState.lines[0] = time + ": " + s;
+				if (null != DisplayMode.consoleLogStream) {
 					try {
-						Class78.aFileOutputStream731.write(Class77.method840(Class8.aStringArray107[0] + "\n", 6758905));
-					} catch (IOException ioexception) {
-						/* empty */
+						DisplayMode.consoleLogStream.write(TextEncoder.encodeText(DevConsoleState.lines[0] + "\n", 6758905));
+					} catch (IOException ignored) {
 					}
 				}
-				if (Class8.anInt102 * -2035787443 < Class8.aStringArray107.length - 1) {
-					Class8.anInt102 += 674924421;
-					if (Class8.anInt103 * -1731316011 > 0)
-						Class8.anInt103 += 205738621;
+				if (DevConsoleState.lineCount * -2035787443 < DevConsoleState.lines.length - 1) {
+					DevConsoleState.lineCount += 674924421;
+					if (DevConsoleState.scrollOffset * -1731316011 > 0)
+						DevConsoleState.scrollOffset += 205738621;
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -209,12 +229,12 @@ public class Class255 implements Runnable {
 		}
 	}
 
-	public static Class505 method2439(Js5 class243, int i, int i_15_) {
+	public static GameFont method2439(Js5 class243, int i, int i_15_) {
 		try {
 			byte[] is = class243.method2294(i, (byte) 105);
 			if (null == is)
 				return null;
-			return new Class505(is);
+			return new GameFont(is);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, "kr.f(" + ')');
 		}

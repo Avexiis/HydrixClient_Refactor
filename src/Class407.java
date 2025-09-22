@@ -32,11 +32,11 @@ public class Class407 {
 				Class69.method788(true, -2081784265);
 				i_0_ = 1;
 			}
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1442149692) != 0) {
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570, 0, -912094662);
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1442149692) != 0) {
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aToolkitPreference_7570, 0, -912094662);
 				ClanSettings.method4578(0, false, 622850291);
 			} else
-				GraphicsAutoSetup.clientPreferences.method3539(GraphicsAutoSetup.clientPreferences.graphicsPreference, true, -1651026599);
+				GraphicsSetup.clientPreferences.method3539(GraphicsSetup.clientPreferences.graphicsPreference, true, -1651026599);
 			Class3.writePreferences();
 			return i_0_;
 		} catch (RuntimeException runtimeexception) {

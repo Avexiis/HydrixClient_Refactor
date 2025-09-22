@@ -77,8 +77,8 @@ public abstract class Class127 implements Interface6 {
 	}
 
 	public void method55() {
-		Class505 class505 = Class255.method2439(((Class127) this).aClass243_6374, 955568089 * (((Class127) this).aClass128_6375.anInt6329), 325683529);
-		((Class127) this).aClass264_6373 = (OverlayType.activeToolkit.method5092(class505, Class89.method981(((Class127) this).aClass243_6372, 955568089 * (((Class127) this).aClass128_6375.anInt6329)), true));
+		GameFont gameFont = DevConsole.method2439(((Class127) this).aClass243_6374, 955568089 * (((Class127) this).aClass128_6375.anInt6329), 325683529);
+		((Class127) this).aClass264_6373 = (OverlayType.activeToolkit.method5092(gameFont, Class89.method981(((Class127) this).aClass243_6372, 955568089 * (((Class127) this).aClass128_6375.anInt6329)), true));
 	}
 
 	public boolean method59() {
@@ -106,8 +106,8 @@ public abstract class Class127 implements Interface6 {
 
 	public void method53(int i) {
 		try {
-			Class505 class505 = Class255.method2439(((Class127) this).aClass243_6374, 955568089 * (((Class127) this).aClass128_6375.anInt6329), 1681337882);
-			((Class127) this).aClass264_6373 = (OverlayType.activeToolkit.method5092(class505, Class89.method981(((Class127) this).aClass243_6372, 955568089 * (((Class127) this).aClass128_6375.anInt6329)), true));
+			GameFont gameFont = DevConsole.method2439(((Class127) this).aClass243_6374, 955568089 * (((Class127) this).aClass128_6375.anInt6329), 1681337882);
+			((Class127) this).aClass264_6373 = (OverlayType.activeToolkit.method5092(gameFont, Class89.method981(((Class127) this).aClass243_6372, 955568089 * (((Class127) this).aClass128_6375.anInt6329)), true));
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fd.a(").append(')').toString());
 		}
@@ -153,7 +153,7 @@ public abstract class Class127 implements Interface6 {
 
 	static final void method1420(ClientScript2 class403, int i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.groundBlendingPreference.method5724(1673845033) == 1 ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.groundBlendingPreference.method5724(1673845033) == 1 ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("fd.ajr(").append(')').toString());
 		}

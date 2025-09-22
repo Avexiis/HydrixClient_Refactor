@@ -176,7 +176,7 @@ public class LocalizedString
     Map stringMap;
     
     static {
-        LocalizedString.MESSAGE_WELCOME_CONSOLE_ALT = new LocalizedString("Welcome to the " + Settings.SERVER_NAME + " Developer Console.", "Das ist die Entwicklerkonsole. Zum Schließen, die Tasten `, ² or § drücken.", "Ceci est la console de développement. Pour la fermer, appuyez sur les touches `, ² ou §.", "Este é o painel de controle do desenvolvedor. Para fechar, pressione `, ² ou §.");
+        LocalizedString.MESSAGE_WELCOME_CONSOLE_ALT = new LocalizedString(Settings.CONSOLE_MAIN_TEXT + "\n" + Settings.CONSOLE_WARN_MSG, "Das ist die Entwicklerkonsole. Zum Schließen, die Tasten `, ² or § drücken.", "Ceci est la console de développement. Pour la fermer, appuyez sur les touches `, ² ou §.", "Este é o painel de controle do desenvolvedor. Para fechar, pressione `, ² ou §.");
         LocalizedString.MESSAGE_COMMAND_EXECUTION_ERROR = new LocalizedString("There was an error executing the command.", "Es gab einen Fehler beim Ausführen des Befehls.", "Une erreur s'est produite lors de l'exécution de la commande.", "Houve um erro quando o comando foi executado.");
         LocalizedString.MESSAGE_UNKNOWN_DEV_COMMAND_PREFIX = new LocalizedString("Unknown developer command: ", "Unbekannter Befehl: ", "Commande inconnue : ", "Comando desconhecido: ");
         LocalizedString.BUTTON_CANCEL = new LocalizedString("Cancel", "Abbrechen", "Annuler", "Cancelar");
@@ -389,7 +389,7 @@ public class LocalizedString
             final int[] anIntArray5245 = class403.anIntArray5244;
             final int anInt5240 = class403.anInt5239 - 391880689;
             class403.anInt5239 = anInt5240;
-            anIntArray5245[anInt5240 * 681479919 - 1] = GraphicsAutoSetup.clientPreferences.sceneryShadowPreference.method5612(i_4_, 1352882135);
+            anIntArray5245[anInt5240 * 681479919 - 1] = GraphicsSetup.clientPreferences.sceneryShadowPreference.method5612(i_4_, 1352882135);
         }
         catch (RuntimeException runtimeexception) {
             throw ErrorContext.info(runtimeexception, "tj.aol(" + ')');
@@ -398,8 +398,8 @@ public class LocalizedString
     
     static final void scriptSetConfigOption(final ClientScript2 class403, final short i) {
         try {
-            final GamePreferences aGamePreferences_8425 = GraphicsAutoSetup.clientPreferences;
-            final ScreenSizePreference aScreenSizePreference_7566 = GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566;
+            final GamePreferences aGamePreferences_8425 = GraphicsSetup.clientPreferences;
+            final ScreenSizePreference aScreenSizePreference_7566 = GraphicsSetup.clientPreferences.aScreenSizePreference_7566;
             final int[] anIntArray5244 = class403.anIntArray5244;
             final int anInt5239 = class403.anInt5239 + 391880689;
             class403.anInt5239 = anInt5239;
@@ -492,8 +492,8 @@ public class LocalizedString
                 else if (i_12_ == 1) {
                     final Interface3 interface3 = (Interface3) GameClient.map.method2675(-1611682495).method4033(i, i_10_, i_11_, 1080081135);
                     if (interface3 != null) {
-                        if (interface3 instanceof Class365_Sub1_Sub3_Sub1) {
-                            ((Class365_Sub1_Sub3_Sub1)interface3).aClass60_9906.method697(i_15_, 1175058275);
+                        if (interface3 instanceof SceneObject) {
+                            ((SceneObject)interface3).pickBounds.method697(i_15_, 1175058275);
                         }
                         else {
                             final int i_18_ = interface3.method32((byte)51);

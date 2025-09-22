@@ -106,10 +106,10 @@ public class Js5Archive {
 
 	static final void method1235(IComponentDefinition class105, ClientScript2 class403, byte i) {
 		try {
-			Class505 class505 = class105.method1113(Class497.aClass197_6105, GameClient.anInterface10_8700, (byte) 88);
+			GameFont gameFont = class105.method1113(Class497.aClass197_6105, GameClient.anInterface10_8700, (byte) 88);
 			int i_2_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			int i_3_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			int i_4_ = class505.method6261(class105.aString1212, class105.width * -2093041337, class105.anInt1191 * 418216501, i_3_, i_2_, Class130_Sub2.aClass57Array6959, (byte) -62);
+			int i_4_ = gameFont.method6261(class105.aString1212, class105.width * -2093041337, class105.anInt1191 * 418216501, i_3_, i_2_, Class130_Sub2.aClass57Array6959, (byte) -62);
 			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = i_4_;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("en.qg(").append(')').toString());
@@ -126,7 +126,7 @@ public class Js5Archive {
 
 	static final void method1237(ClientScript2 class403, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.antialiasPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -800925761);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.antialiasPreference, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -800925761);
 			Class3.writePreferences();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("en.aix(").append(')').toString());

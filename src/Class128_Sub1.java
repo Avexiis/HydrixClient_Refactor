@@ -47,11 +47,11 @@ public class Class128_Sub1 extends Class128 {
 				Class69.method788(true, -1704666042);
 				i_11_ = 1;
 			}
-			if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1134958501) != i) {
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570, i, -1879623145);
+			if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1134958501) != i) {
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aToolkitPreference_7570, i, -1879623145);
 				ClanSettings.method4578(i, false, 622850291);
 			} else
-				GraphicsAutoSetup.clientPreferences.method3539(GraphicsAutoSetup.clientPreferences.graphicsPreference, true, -2138702215);
+				GraphicsSetup.clientPreferences.method3539(GraphicsSetup.clientPreferences.graphicsPreference, true, -2138702215);
 			Class3.writePreferences();
 			return i_11_;
 		} catch (RuntimeException runtimeexception) {
@@ -63,7 +63,7 @@ public class Class128_Sub1 extends Class128 {
 		try {
 			if (!bool || i < 0)
 				return Integer.toString(i);
-			return Class321.method3923(i, 10, bool, 1472954804);
+			return DynamicLight.method3923(i, 10, bool, 1472954804);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("zp.u(").append(')').toString());
 		}

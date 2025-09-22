@@ -119,18 +119,18 @@ public class Class359 implements Interface19 {
 	public static void method4294(int i) {
 		try {
 			int i_12_ = 0;
-			if (GraphicsAutoSetup.clientPreferences.lightingPreference.getValue(-1994790043) == 1) {
+			if (GraphicsSetup.clientPreferences.lightingPreference.getValue(-1994790043) == 1) {
 				i_12_ |= 0x1;
 				i_12_ |= 0x10;
 				i_12_ |= 0x20;
 				i_12_ |= 0x2;
 				i_12_ |= 0x4;
 			}
-			if (GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1870666602) == 0)
+			if (GraphicsSetup.clientPreferences.texturePreference.getValue(1870666602) == 0)
 				i_12_ |= 0x40;
 			Class369.method4572(i_12_, -1404267888);
 			GameClient.map.method2641(2004012946).method5791(i_12_, -1760580017);
-			overheadString.aClass248_612.method2384((short) 206).method2641(-1884844132).method5791(i_12_, -1760580017);
+			OverheadString.aClass248_612.method2384((short) 206).method2641(-1884844132).method5791(i_12_, -1760580017);
 			Class298_Sub32_Sub14.aClass477_9400.method6087(i_12_, 828561369);
 			Class15.aClass507_224.method6271(i_12_, 1252678892);
 			Class158_Sub1.aSpotAnimTypeList_8568.method4860(i_12_, -142554696);

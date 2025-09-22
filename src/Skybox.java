@@ -403,7 +403,7 @@ public class Skybox {
 
 	static final void method2600(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = new StringBuilder().append(Class465.method6017((long) (((ClientScript2) class403).anIntArray5244[(((ClientScript2) class403).anInt5239 -= -391880689) * 681479919]) * 60000L, Class321.ACTIVE_LANGUAGE.method242(694163818), true, -1759893587)).append(" UTC").toString();
+			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = new StringBuilder().append(Class465.method6017((long) (((ClientScript2) class403).anIntArray5244[(((ClientScript2) class403).anInt5239 -= -391880689) * 681479919]) * 60000L, DynamicLight.ACTIVE_LANGUAGE.method242(694163818), true, -1759893587)).append(" UTC").toString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("lm.aam(").append(')').toString());
 		}

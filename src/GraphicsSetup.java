@@ -1,14 +1,14 @@
-/* GraphicsAutoSetup - Decompiled by JODE
+/* GraphicsSetup - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class GraphicsAutoSetup extends IntegerPreferenceField {
+public class GraphicsSetup extends IntegerPreferenceField {
 	public static int anInt8422 = 1;
 	public static int anInt8423 = 0;
 	static int anInt8424 = 2;
 	public static GamePreferences clientPreferences;
 
-	public GraphicsAutoSetup(int i, GamePreferences gamePreferences) {
+	public GraphicsSetup(int i, GamePreferences gamePreferences) {
 		super(i, gamePreferences);
 	}
 
@@ -55,7 +55,7 @@ public class GraphicsAutoSetup extends IntegerPreferenceField {
 		return 1;
 	}
 
-	public GraphicsAutoSetup(GamePreferences gamePreferences) {
+	public GraphicsSetup(GamePreferences gamePreferences) {
 		super(gamePreferences);
 	}
 

@@ -80,7 +80,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			if ((((Class_ra_Sub3_Sub1) this).aString9833.indexOf("microsoft") != -1) || ((Class_ra_Sub3_Sub1) this).aString9833.indexOf("brian paul") != -1 || (((Class_ra_Sub3_Sub1) this).aString9833.indexOf("mesa") != -1))
 				throw new RuntimeException("");
 			String string = OpenGL.glGetString(7938);
-			String[] strings = Class365_Sub1_Sub3_Sub1.method4508(string.replace('.', ' '), ' ', 596361763);
+			String[] strings = SceneObject.splitText(string.replace('.', ' '), ' ', 596361763);
 			if (strings.length >= 2) {
 				try {
 					int i_0_ = Class216.method1998(strings[0], (short) -8751);
@@ -124,7 +124,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 				int i_2_ = 0;
 				boolean bool = false;
 				boolean bool_3_ = false;
-				String[] strings_4_ = (Class365_Sub1_Sub3_Sub1.method4508(((Class_ra_Sub3_Sub1) this).aString9834.replace('/', ' '), ' ', 1460614940));
+				String[] strings_4_ = (SceneObject.splitText(((Class_ra_Sub3_Sub1) this).aString9834.replace('/', ' '), ' ', 1460614940));
 				for (int i_5_ = 0; i_5_ < strings_4_.length; i_5_++) {
 					String string_6_ = strings_4_[i_5_];
 					try {
@@ -227,7 +227,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 	}
 
 	public Interface8_Impl1_Impl2 method5186(int i, int i_11_) {
-		return new Class262(this, Class55.aClass55_561, Class77.aClass77_719, i, i_11_);
+		return new Class262(this, Class55.aClass55_561, TextEncoder.aTextEncoder_719, i, i_11_);
 	}
 
 	public int[] aq(int i, int i_12_, int i_13_, int i_14_) {
@@ -386,11 +386,11 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			OpenGL.glDisable(16386 + i);
 	}
 
-	boolean method5348(Class55 class55, Class77 class77) {
+	boolean method5348(Class55 class55, TextEncoder textEncoder) {
 		return true;
 	}
 
-	boolean method5349(Class55 class55, Class77 class77) {
+	boolean method5349(Class55 class55, TextEncoder textEncoder) {
 		return aBoolean8365;
 	}
 
@@ -399,7 +399,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, i, i_32_, bool, is, i_33_, i_34_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, i, i_32_, is, i_33_, i_34_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, Class55.aClass55_557, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_32_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, Class55.aClass55_557, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_32_, (byte) 16));
 		class263_sub1.method81(0, 0, i, i_32_, is, i_33_, i_34_);
 		return class263_sub1;
 	}
@@ -409,7 +409,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_35_, bool, is, i_36_, i_37_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_35_, is, i_36_, i_37_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_35_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_35_, (byte) 16));
 		class263_sub1.method82(0, 0, i, i_35_, is, class55, i_36_, i_37_);
 		return class263_sub1;
 	}
@@ -418,12 +418,12 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 		return new Class153_Sub1(class181s);
 	}
 
-	Interface9_Impl2_Impl1 method5356(Class55 class55, Class77 class77, int i, int i_38_) {
+	Interface9_Impl2_Impl1 method5356(Class55 class55, TextEncoder textEncoder, int i, int i_38_) {
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9838 || (Class486.method6152(i, 2107127417) && Class486.method6152(i_38_, 2084635583)))
-			return new Class263_Sub1(this, class55, class77, i, i_38_);
+			return new Class263_Sub1(this, class55, textEncoder, i, i_38_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
-			return new Class263_Sub4(this, class55, class77, i, i_38_);
-		return new Class263_Sub1(this, class55, class77, Class416.method5590(i, (byte) 16), Class416.method5590(i_38_, (byte) 16));
+			return new Class263_Sub4(this, class55, textEncoder, i, i_38_);
+		return new Class263_Sub1(this, class55, textEncoder, Class416.method5590(i, (byte) 16), Class416.method5590(i_38_, (byte) 16));
 	}
 
 	Interface9_Impl1 method5415(int i, boolean bool, int[][] is) {
@@ -570,7 +570,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 		((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2333();
 	}
 
-	boolean method5465(Class55 class55, Class77 class77) {
+	boolean method5465(Class55 class55, TextEncoder textEncoder) {
 		return aBoolean8365;
 	}
 
@@ -601,8 +601,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			i_49_ = 0;
 			i_50_ = i_48_;
 		}
-		Class77 class77 = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
-		OpenGL.glDrawElements(i_49_, i_50_, method5537(class77), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_47_ * (class77.anInt724 * 685647847))));
+		TextEncoder textEncoder = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
+		OpenGL.glDrawElements(i_49_, i_50_, method5537(textEncoder), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_47_ * (textEncoder.anInt724 * 685647847))));
 	}
 
 	void method5494() {
@@ -724,7 +724,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 	}
 
 	final Interface7_Impl2 method5381(boolean bool) {
-		return new Class246_Sub1(this, Class77.aClass77_718, bool);
+		return new Class246_Sub1(this, TextEncoder.aTextEncoder_718, bool);
 	}
 
 	static int method5532(Class55 class55) {
@@ -746,8 +746,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 		}
 	}
 
-	static int method5533(Class55 class55, Class77 class77) {
-		if (class77 == Class77.aClass77_717) {
+	static int method5533(Class55 class55, TextEncoder textEncoder) {
+		if (textEncoder == TextEncoder.aTextEncoder_717) {
 			switch (class55.anInt566 * -976336893) {
 			case 8:
 				return 33777;
@@ -767,7 +767,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 				return 6409;
 			}
 		}
-		if (class77 == Class77.aClass77_718) {
+		if (textEncoder == TextEncoder.aTextEncoder_718) {
 			switch (class55.anInt566 * -976336893) {
 			case 9:
 				return 32859;
@@ -785,7 +785,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 				return 32830;
 			}
 		}
-		if (class77 == Class77.aClass77_719) {
+		if (textEncoder == TextEncoder.aTextEncoder_719) {
 			switch (class55.anInt566 * -976336893) {
 			default:
 				throw new IllegalArgumentException();
@@ -793,7 +793,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 				return 33190;
 			}
 		}
-		if (class77 == Class77.aClass77_714) {
+		if (textEncoder == TextEncoder.aTextEncoder_714) {
 			switch (class55.anInt566 * -976336893) {
 			case 1:
 				return 34846;
@@ -809,7 +809,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 				return 34847;
 			}
 		}
-		if (class77 == Class77.aClass77_721) {
+		if (textEncoder == TextEncoder.aTextEncoder_721) {
 			switch (class55.anInt566 * -976336893) {
 			case 5:
 				return 34837;
@@ -1138,7 +1138,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_92_, bool, fs, i_93_, i_94_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_92_, fs, i_93_, i_94_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_92_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_92_, (byte) 16));
 		class263_sub1.method2473(0, 0, i, i_92_, fs, class55, i_93_, i_94_);
 		return class263_sub1;
 	}
@@ -1174,7 +1174,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_97_, bool, is, i_98_, i_99_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_97_, is, i_98_, i_99_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_97_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_97_, (byte) 16));
 		class263_sub1.method82(0, 0, i, i_97_, is, class55, i_98_, i_99_);
 		return class263_sub1;
 	}
@@ -1188,7 +1188,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_100_, bool, is, i_101_, i_102_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_100_, is, i_101_, i_102_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_100_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_100_, (byte) 16));
 		class263_sub1.method82(0, 0, i, i_100_, is, class55, i_101_, i_102_);
 		return class263_sub1;
 	}
@@ -1206,7 +1206,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 	}
 
 	public Interface8_Impl1_Impl2 method5165(int i, int i_103_) {
-		return new Class262(this, Class55.aClass55_561, Class77.aClass77_719, i, i_103_);
+		return new Class262(this, Class55.aClass55_561, TextEncoder.aTextEncoder_719, i, i_103_);
 	}
 
 	public float method5396() {
@@ -1370,7 +1370,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_116_, bool, fs, i_117_, i_118_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_116_, fs, i_117_, i_118_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_116_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_116_, (byte) 16));
 		class263_sub1.method2473(0, 0, i, i_116_, fs, class55, i_117_, i_118_);
 		return class263_sub1;
 	}
@@ -1484,19 +1484,19 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			OpenGL.glDisable(16386 + i);
 	}
 
-	boolean method5461(Class55 class55, Class77 class77) {
+	boolean method5461(Class55 class55, TextEncoder textEncoder) {
 		return true;
 	}
 
-	boolean method5462(Class55 class55, Class77 class77) {
+	boolean method5462(Class55 class55, TextEncoder textEncoder) {
 		return true;
 	}
 
-	boolean method5310(Class55 class55, Class77 class77) {
+	boolean method5310(Class55 class55, TextEncoder textEncoder) {
 		return aBoolean8365;
 	}
 
-	boolean method5464(Class55 class55, Class77 class77) {
+	boolean method5464(Class55 class55, TextEncoder textEncoder) {
 		return aBoolean8365;
 	}
 
@@ -1504,16 +1504,16 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 		OpenGL.glColorMask((i & 0x1) != 0, (i & 0x2) != 0, (i & 0x4) != 0, (i & 0x8) != 0);
 	}
 
-	boolean method5406(Class55 class55, Class77 class77) {
+	boolean method5406(Class55 class55, TextEncoder textEncoder) {
 		return aBoolean8365;
 	}
 
-	boolean method5466(Class55 class55, Class77 class77) {
+	boolean method5466(Class55 class55, TextEncoder textEncoder) {
 		return aBoolean8365;
 	}
 
-	Interface9_Impl2 method5433(Class55 class55, Class77 class77, int i, int i_121_) {
-		return method5356(class55, class77, i, i_121_);
+	Interface9_Impl2 method5433(Class55 class55, TextEncoder textEncoder, int i, int i_121_) {
+		return method5356(class55, textEncoder, i, i_121_);
 	}
 
 	public void method5085(boolean bool) {
@@ -1525,7 +1525,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_122_, bool, is, i_123_, i_124_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_122_, is, i_123_, i_124_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_122_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_122_, (byte) 16));
 		class263_sub1.method82(0, 0, i, i_122_, is, class55, i_123_, i_124_);
 		return class263_sub1;
 	}
@@ -1545,7 +1545,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_126_, bool, fs, i_127_, i_128_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_126_, fs, i_127_, i_128_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_126_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_126_, (byte) 16));
 		class263_sub1.method2473(0, 0, i, i_126_, fs, class55, i_127_, i_128_);
 		return class263_sub1;
 	}
@@ -1632,7 +1632,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_130_, bool, fs, i_131_, i_132_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_130_, fs, i_131_, i_132_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_130_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_130_, (byte) 16));
 		class263_sub1.method2473(0, 0, i, i_130_, fs, class55, i_131_, i_132_);
 		return class263_sub1;
 	}
@@ -1642,7 +1642,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, i, i_133_, bool, is, i_134_, i_135_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, i, i_133_, is, i_134_, i_135_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, Class55.aClass55_557, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_133_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, Class55.aClass55_557, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_133_, (byte) 16));
 		class263_sub1.method81(0, 0, i, i_133_, is, i_134_, i_135_);
 		return class263_sub1;
 	}
@@ -1652,7 +1652,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, i, i_136_, bool, is, i_137_, i_138_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, i, i_136_, is, i_137_, i_138_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, Class55.aClass55_557, Class77.aClass77_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_136_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, Class55.aClass55_557, TextEncoder.aTextEncoder_717, Class416.method5590(i, (byte) 16), Class416.method5590(i_136_, (byte) 16));
 		class263_sub1.method81(0, 0, i, i_136_, is, i_137_, i_138_);
 		return class263_sub1;
 	}
@@ -1700,28 +1700,28 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			OpenGL.glDisable(3008);
 	}
 
-	Interface9_Impl2_Impl1 method5479(Class55 class55, Class77 class77, int i, int i_142_) {
+	Interface9_Impl2_Impl1 method5479(Class55 class55, TextEncoder textEncoder, int i, int i_142_) {
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9838 || (Class486.method6152(i, 2050497405) && Class486.method6152(i_142_, 1840822084)))
-			return new Class263_Sub1(this, class55, class77, i, i_142_);
+			return new Class263_Sub1(this, class55, textEncoder, i, i_142_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
-			return new Class263_Sub4(this, class55, class77, i, i_142_);
-		return new Class263_Sub1(this, class55, class77, Class416.method5590(i, (byte) 16), Class416.method5590(i_142_, (byte) 16));
+			return new Class263_Sub4(this, class55, textEncoder, i, i_142_);
+		return new Class263_Sub1(this, class55, textEncoder, Class416.method5590(i, (byte) 16), Class416.method5590(i_142_, (byte) 16));
 	}
 
-	Interface9_Impl2_Impl1 method5391(Class55 class55, Class77 class77, int i, int i_143_) {
+	Interface9_Impl2_Impl1 method5391(Class55 class55, TextEncoder textEncoder, int i, int i_143_) {
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9838 || (Class486.method6152(i, 2027556559) && Class486.method6152(i_143_, 2075532110)))
-			return new Class263_Sub1(this, class55, class77, i, i_143_);
+			return new Class263_Sub1(this, class55, textEncoder, i, i_143_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
-			return new Class263_Sub4(this, class55, class77, i, i_143_);
-		return new Class263_Sub1(this, class55, class77, Class416.method5590(i, (byte) 16), Class416.method5590(i_143_, (byte) 16));
+			return new Class263_Sub4(this, class55, textEncoder, i, i_143_);
+		return new Class263_Sub1(this, class55, textEncoder, Class416.method5590(i, (byte) 16), Class416.method5590(i_143_, (byte) 16));
 	}
 
-	Interface9_Impl2_Impl1 method5413(Class55 class55, Class77 class77, int i, int i_144_) {
+	Interface9_Impl2_Impl1 method5413(Class55 class55, TextEncoder textEncoder, int i, int i_144_) {
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9838 || (Class486.method6152(i, 2073016154) && Class486.method6152(i_144_, 2096946547)))
-			return new Class263_Sub1(this, class55, class77, i, i_144_);
+			return new Class263_Sub1(this, class55, textEncoder, i, i_144_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
-			return new Class263_Sub4(this, class55, class77, i, i_144_);
-		return new Class263_Sub1(this, class55, class77, Class416.method5590(i, (byte) 16), Class416.method5590(i_144_, (byte) 16));
+			return new Class263_Sub4(this, class55, textEncoder, i, i_144_);
+		return new Class263_Sub1(this, class55, textEncoder, Class416.method5590(i, (byte) 16), Class416.method5590(i_144_, (byte) 16));
 	}
 
 	void method5497() {
@@ -1846,8 +1846,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 		return new Class263_Sub2(this, class55, i, i_147_, i_148_, bool, is);
 	}
 
-	Interface9_Impl2 method5353(Class55 class55, Class77 class77, int i, int i_149_) {
-		return method5356(class55, class77, i, i_149_);
+	Interface9_Impl2 method5353(Class55 class55, TextEncoder textEncoder, int i, int i_149_) {
+		return method5356(class55, textEncoder, i, i_149_);
 	}
 
 	void method5502() {
@@ -1898,7 +1898,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			return new Class263_Sub1(this, class55, i, i_151_, bool, fs, i_152_, i_153_);
 		if (((Class_ra_Sub3_Sub1) this).aBoolean9837)
 			return new Class263_Sub4(this, class55, i, i_151_, fs, i_152_, i_153_);
-		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, Class77.aClass77_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_151_, (byte) 16));
+		Class263_Sub1 class263_sub1 = new Class263_Sub1(this, class55, TextEncoder.aTextEncoder_721, Class416.method5590(i, (byte) 16), Class416.method5590(i_151_, (byte) 16));
 		class263_sub1.method2473(0, 0, i, i_151_, fs, class55, i_152_, i_153_);
 		return class263_sub1;
 	}
@@ -1937,7 +1937,7 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 	}
 
 	final Interface7_Impl2 method5507(boolean bool) {
-		return new Class246_Sub1(this, Class77.aClass77_718, bool);
+		return new Class246_Sub1(this, TextEncoder.aTextEncoder_718, bool);
 	}
 
 	final Interface7_Impl1 method5508(boolean bool) {
@@ -2038,8 +2038,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			i_162_ = 0;
 			i_163_ = i_161_;
 		}
-		Class77 class77 = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
-		OpenGL.glDrawElements(i_162_, i_163_, method5537(class77), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_160_ * (class77.anInt724 * 685647847))));
+		TextEncoder textEncoder = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
+		OpenGL.glDrawElements(i_162_, i_163_, method5537(textEncoder), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_160_ * (textEncoder.anInt724 * 685647847))));
 	}
 
 	public final void method5449(Class187 class187, int i, int i_164_, int i_165_, int i_166_) {
@@ -2064,8 +2064,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			i_167_ = 0;
 			i_168_ = i_166_;
 		}
-		Class77 class77 = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
-		OpenGL.glDrawElements(i_167_, i_168_, method5537(class77), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_165_ * (class77.anInt724 * 685647847))));
+		TextEncoder textEncoder = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
+		OpenGL.glDrawElements(i_167_, i_168_, method5537(textEncoder), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_165_ * (textEncoder.anInt724 * 685647847))));
 	}
 
 	public final void method5362(Class187 class187, int i, int i_169_, int i_170_, int i_171_) {
@@ -2090,8 +2090,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			i_172_ = 0;
 			i_173_ = i_171_;
 		}
-		Class77 class77 = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
-		OpenGL.glDrawElements(i_172_, i_173_, method5537(class77), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_170_ * (class77.anInt724 * 685647847))));
+		TextEncoder textEncoder = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
+		OpenGL.glDrawElements(i_172_, i_173_, method5537(textEncoder), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_170_ * (textEncoder.anInt724 * 685647847))));
 	}
 
 	public final void method5516(Class187 class187, int i, int i_174_, int i_175_, int i_176_) {
@@ -2116,8 +2116,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 			i_177_ = 0;
 			i_178_ = i_176_;
 		}
-		Class77 class77 = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
-		OpenGL.glDrawElements(i_177_, i_178_, method5537(class77), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_175_ * (class77.anInt724 * 685647847))));
+		TextEncoder textEncoder = ((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2335();
+		OpenGL.glDrawElements(i_177_, i_178_, method5537(textEncoder), (((Class_ra_Sub3_Sub1) this).aClass246_Sub1_9827.method2332() + (long) (i_175_ * (textEncoder.anInt724 * 685647847))));
 	}
 
 	void method5303() {
@@ -2284,8 +2284,8 @@ public final class Class_ra_Sub3_Sub1 extends Class_ra_Sub3 {
 		return new Class263_Sub3(this, i, bool, is);
 	}
 
-	static final int method5537(Class77 class77) {
-		switch (class77.anInt723 * -1857088243) {
+	static final int method5537(TextEncoder textEncoder) {
+		switch (textEncoder.anInt723 * -1857088243) {
 		case 3:
 			return 5126;
 		case 5:

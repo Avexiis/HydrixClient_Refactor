@@ -196,10 +196,10 @@ public class Class125 {
 
 	static int method1401(byte i) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.safemodePreference.getValue((byte) -102) == 0) {
+			if (GraphicsSetup.clientPreferences.safemodePreference.getValue((byte) -102) == 0) {
 				for (int i_18_ = 0; i_18_ < GameClient.anInt8894 * 1351936279; i_18_++) {
 					if (GameClient.anInterface16Array8710[i_18_].method217((byte) -58) == 's' || GameClient.anInterface16Array8710[i_18_].method217((byte) -73) == 'S') {
-						GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.safemodePreference), 1, -669556569);
+						GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.safemodePreference), 1, -669556569);
 						GameClient.aBoolean8647 = true;
 						break;
 					}
@@ -207,11 +207,11 @@ public class Class125 {
 			}
 			if (Class82_Sub6.aClass227_6843 == Class227.aClass227_2538) {
 				if (Class203.aClass225_2337 == null)
-					Class203.aClass225_2337 = new Class225(Class248.aClass247_2752, Class365_Sub1_Sub3.aClass255_9804, Class50.aBigInteger502, Class50.aBigInteger501);
+					Class203.aClass225_2337 = new Class225(Class248.aClass247_2752, Class365_Sub1_Sub3.aDevConsole_9804, Class50.aBigInteger502, Class50.aBigInteger501);
 				if (!Class203.aClass225_2337.method2094(2031500180))
 					return 0;
 				Wall.method4533(0, null, true, (short) 256);
-				Class230.aBoolean2567 = !Class78.method844((byte) 3);
+				Class230.aBoolean2567 = !DisplayMode.method844((byte) 3);
 				TimeUtils.aClass243_1466 = Class372.loadIndex((Class230.aBoolean2567 ? Js5Archive.aClass111_1363 : Js5Archive.aClass111_1361), false, 1, true, 1414942231);
 				Class230.aClass243_2564 = Class372.loadIndex(Js5Archive.aClass111_1362, false, 1, true, 1414942231);
 				Class173.aClass243_1758 = Class372.loadIndex(Js5Archive.aClass111_1342, false, 1, true, 1414942231);
@@ -227,8 +227,8 @@ public class Class125 {
 				AnimationController.anInt4145 = (TimeUtils.aClass243_1466.method2285((byte) -31) * -1650604707);
 				Class118.anInt1401 = (Class230.aClass243_2564.method2285((byte) -108) * 1003249155);
 				Class70.method806(TimeUtils.aClass243_1466, (byte) 13);
-				int i_20_ = GraphicsAutoSetup.clientPreferences.aCompressionType_7578.method5700(-463949651);
-				Class420.aClass515_5344 = new Class515(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class230.aClass243_2564);
+				int i_20_ = GraphicsSetup.clientPreferences.aCompressionType_7578.method5700(-463949651);
+				Class420.aClass515_5344 = new Class515(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class230.aClass243_2564);
 				Class510[] class510s = Class420.aClass515_5344.method6294(i_20_, -957350299);
 				if (class510s.length == 0)
 					class510s = Class420.aClass515_5344.method6294(0, -2070003816);
@@ -339,47 +339,47 @@ public class Class125 {
 				if (-1919698893 * HashTable.aClass371_5520.anInt4035 != -1 && !WorldTile.js5_models.method2290((-1919698893 * (HashTable.aClass371_5520.anInt4035)), 0, -1803759646))
 					return 99;
 				Class253.anInterface_ma2785 = new Class249(UnderlayTypeList.aClass243_5641, Class127.aClass243_6377, Class158.aClass243_6364);
-				Class92.aClass504_905 = new Class504(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class94.aClass349_913 = new Class349(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class82_Sub18.aClass405_6892);
-				Class_na.aClass491_9686 = new Class491(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
-				Class51.aClass475_506 = new Class475(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class521.aClass243_6281);
-				Class504.aClass375_6196 = new FloTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class151.aClass451_6358 = new UnderlayTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class500.aClass347_6117 = new Class347(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
-				Class212.aIdentityKitTypeList_2433 = new IdentityKitTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, WorldTile.js5_models);
-				Class300.aClass518_3217 = new Class518(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class237.aClass499_6668 = new Class499(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class463.aClass433_5689 = new ObjectTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class354.aClass243_3826, WorldTile.js5_models);
+				Class92.aClass504_905 = new Class504(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class94.aClass349_913 = new Class349(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class82_Sub18.aClass405_6892);
+				Class_na.aClass491_9686 = new Class491(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
+				Class51.aClass475_506 = new Class475(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class521.aClass243_6281);
+				Class504.aClass375_6196 = new FloTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class151.aClass451_6358 = new UnderlayTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class500.aClass347_6117 = new Class347(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
+				Class212.aIdentityKitTypeList_2433 = new IdentityKitTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, WorldTile.js5_models);
+				Class300.aClass518_3217 = new Class518(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class237.aClass499_6668 = new Class499(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class463.aClass433_5689 = new ObjectTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, true, Class354.aClass243_3826, WorldTile.js5_models);
 				GameClient.map.method2645(Class463.aClass433_5689, -18361497);
-				overheadString.aClass248_612.method2379(new ObjectTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class354.aClass243_3826, WorldTile.js5_models), 681479919);
-				Class363.aWorldMapLabelList_3931 = new WorldMapLabelList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
-				Js5ConfigGroup.aClass487_1463 = new Class487(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
-				Class15.aClass507_224 = new Class507(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class133.aClass243_1512, WorldTile.js5_models);
-				Class298_Sub32_Sub14.aClass477_9400 = new Class477(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, true, Class92.aClass504_905, Class92.aClass243_904, WorldTile.js5_models);
-				Class316.aClass362_3318 = new Class362(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, true);
-				Class501.aClass395_6122 = new SeqTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class260.aClass243_2819, Class491.aClass243_6080, Class497.aClass243_6103);
-				VarBitType.aClass317_3472 = new Class317(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class138_Sub1.aClass131_7010 = new Class131(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class158_Sub1.aSpotAnimTypeList_8568 = new SpotAnimTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class23.aClass243_326, WorldTile.js5_models);
-				Class477.aClass500_6001 = new Class500(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, true);
-				Class412.aVarClientString_6574 = new VarClientString(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class320.aVarClientTypeList_6550 = new VarClientTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class472.configLoader = new ConfigDefinitionLoader(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class499.aClass243_6113);
-				Class440.aVarPlayerTypeList_5582 = new VarPlayerTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				SceneryShadowPreference.aClass445_8384 = new Class445(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class82_Sub16.aClass427_6886 = new Class427(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class99.aVarClanTypeList_951 = new VarClanTypeList(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
-				Class299.aClanSettings_3199 = new ClanSettings(GameClient.aGameContext_8944, Class321.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				OverheadString.aClass248_612.method2379(new ObjectTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, true, Class354.aClass243_3826, WorldTile.js5_models), 681479919);
+				Class363.aWorldMapLabelList_3931 = new WorldMapLabelList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
+				Js5ConfigGroup.aClass487_1463 = new Class487(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, Class158.aClass243_6364);
+				Class15.aClass507_224 = new Class507(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, true, Class133.aClass243_1512, WorldTile.js5_models);
+				Class298_Sub32_Sub14.aClass477_9400 = new Class477(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, true, Class92.aClass504_905, Class92.aClass243_904, WorldTile.js5_models);
+				Class316.aClass362_3318 = new Class362(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, true);
+				Class501.aClass395_6122 = new SeqTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class260.aClass243_2819, Class491.aClass243_6080, Class497.aClass243_6103);
+				VarBitType.aClass317_3472 = new Class317(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class138_Sub1.aClass131_7010 = new Class131(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class158_Sub1.aSpotAnimTypeList_8568 = new SpotAnimTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class23.aClass243_326, WorldTile.js5_models);
+				Class477.aClass500_6001 = new Class500(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5, true);
+				Class412.aVarClientString_6574 = new VarClientString(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class320.aVarClientTypeList_6550 = new VarClientTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class472.configLoader = new ConfigDefinitionLoader(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class499.aClass243_6113);
+				Class440.aVarPlayerTypeList_5582 = new VarPlayerTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				SceneryShadowPreference.aClass445_8384 = new Class445(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class82_Sub16.aClass427_6886 = new Class427(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class99.aVarClanTypeList_951 = new VarClanTypeList(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
+				Class299.aClanSettings_3199 = new ClanSettings(GameClient.aGameContext_8944, DynamicLight.ACTIVE_LANGUAGE, Class284_Sub1.configsJs5);
 				Class298_Sub24.method3080(Class160.aClass243_1647, WorldTile.js5_models, Class158.aClass243_6364, Class173.aClass243_1758, 995134055);
 				Class_ta.method5997(Skybox.aClass243_2965, (byte) 9);
-				GraphicsToolkit.aClass256_5315 = new Class256(Class321.ACTIVE_LANGUAGE, Class497.aClass243_6104, Class266.aClass243_2855);
-				Class447.aClass469_5618 = new Class469(Class321.ACTIVE_LANGUAGE, Class497.aClass243_6104, Class266.aClass243_2855, new Class180());
+				GraphicsToolkit.aClass256_5315 = new Class256(DynamicLight.ACTIVE_LANGUAGE, Class497.aClass243_6104, Class266.aClass243_2855);
+				Class447.aClass469_5618 = new Class469(DynamicLight.ACTIVE_LANGUAGE, Class497.aClass243_6104, Class266.aClass243_2855, new Class180());
 				Class165.method1783(-980237906);
 				Class128.aClass148_6331 = new Class148();
 				Class359.method4294(1884668010);
 				MapDecoder.method2231(Class501.aClass395_6122, 638864948);
 				Class493.method6188(Class51.aClass243_505, -1530430191);
-				overheadString.method727(WorldTile.js5_models, Class253.anInterface_ma2785, 2043056803);
+				OverheadString.method727(WorldTile.js5_models, Class253.anInterface_ma2785, 2043056803);
 				Huffman huffman = new Huffman(TimeUtils.js5_huffman.method2301("huffman", "", 1988047685));
 				Class336_Sub6.method4107(huffman, -1778895275);
 				GameShell.aClass309_6492 = LoginData.method4302(-1239681225);
@@ -440,18 +440,18 @@ public class Class125 {
 				Class420.aClass515_5344 = null;
 				Class230.anInterface12Array2562 = null;
 				Class507.method6276(1677071566);
-				GameClient.aBoolean8646 = GraphicsAutoSetup.clientPreferences.safemodePreference.getValue((byte) -47) == 1;
-				GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.safemodePreference, 1, 807460534);
+				GameClient.aBoolean8646 = GraphicsSetup.clientPreferences.safemodePreference.getValue((byte) -47) == 1;
+				GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.safemodePreference, 1, 807460534);
 				if (GameClient.aBoolean8646)
-					GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570), 0, -91524334);
-				else if ((GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570.aBoolean8398) && (399637415 * Class12.aClass298_Sub44_9946.cpuClockSpeed < 512) && (399637415 * Class12.aClass298_Sub44_9946.cpuClockSpeed != 0))
-					GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570), 0, -1214226075);
+					GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.aToolkitPreference_7570), 0, -91524334);
+				else if ((GraphicsSetup.clientPreferences.aToolkitPreference_7570.aBoolean8398) && (399637415 * Class12.aClass298_Sub44_9946.cpuClockSpeed < 512) && (399637415 * Class12.aClass298_Sub44_9946.cpuClockSpeed != 0))
+					GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.aToolkitPreference_7570), 0, -1214226075);
 				Class3.writePreferences();
 				if (GameClient.aBoolean8646)
 					ClanSettings.method4578(0, false, 622850291);
 				else
-					ClanSettings.method4578(GraphicsAutoSetup.clientPreferences.aToolkitPreference_7570.getValue(-1847672596), false, 622850291);
-				Class357.method4276(GraphicsAutoSetup.clientPreferences.aClass422_Sub12_7543.method5669((byte) 12), -1, -1, false, -107949513);
+					ClanSettings.method4578(GraphicsSetup.clientPreferences.aToolkitPreference_7570.getValue(-1847672596), false, 622850291);
+				Class357.method4276(GraphicsSetup.clientPreferences.windowMode.getWindowMode((byte) 12), -1, -1, false, -107949513);
 				Class497.aClass197_6105.method1882(GameClient.anInterface10_8700, (byte) 3);
 				Class426.method5744(OverlayType.activeToolkit, -1188868944);
 				ErrorContext.method4173(OverlayType.activeToolkit, Class158.aClass243_6364, 498152714);

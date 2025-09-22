@@ -3,7 +3,7 @@
  */
 
 public class Class246_Sub1 extends Class246 implements Interface7_Impl2 {
-	Class77 aClass77_8577;
+	TextEncoder aTextEncoder_8577;
 
 	public boolean method63(int i, int i_0_, long l) {
 		return super.method63(i, i_0_, l);
@@ -13,12 +13,12 @@ public class Class246_Sub1 extends Class246 implements Interface7_Impl2 {
 		super.b();
 	}
 
-	Class77 method2335() {
-		return ((Class246_Sub1) this).aClass77_8577;
+	TextEncoder method2335() {
+		return ((Class246_Sub1) this).aTextEncoder_8577;
 	}
 
 	public void method114(int i) {
-		super.method113(i * (((Class246_Sub1) this).aClass77_8577.anInt724 * 685647847));
+		super.method113(i * (((Class246_Sub1) this).aTextEncoder_8577.anInt724 * 685647847));
 	}
 
 	public void b() {
@@ -26,16 +26,16 @@ public class Class246_Sub1 extends Class246 implements Interface7_Impl2 {
 	}
 
 	public void method113(int i) {
-		super.method113(i * (((Class246_Sub1) this).aClass77_8577.anInt724 * 685647847));
+		super.method113(i * (((Class246_Sub1) this).aTextEncoder_8577.anInt724 * 685647847));
 	}
 
 	public void method66() {
 		super.method69();
 	}
 
-	Class246_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, Class77 class77, boolean bool) {
+	Class246_Sub1(Class_ra_Sub3_Sub1 class_ra_sub3_sub1, TextEncoder textEncoder, boolean bool) {
 		super(class_ra_sub3_sub1, 34963, bool);
-		((Class246_Sub1) this).aClass77_8577 = class77;
+		((Class246_Sub1) this).aTextEncoder_8577 = textEncoder;
 	}
 
 	public long method62(int i, int i_1_) {
@@ -75,7 +75,7 @@ public class Class246_Sub1 extends Class246 implements Interface7_Impl2 {
 	}
 
 	public void method112(int i) {
-		super.method113(i * (((Class246_Sub1) this).aClass77_8577.anInt724 * 685647847));
+		super.method113(i * (((Class246_Sub1) this).aTextEncoder_8577.anInt724 * 685647847));
 	}
 
 	public void method69() {
@@ -83,10 +83,10 @@ public class Class246_Sub1 extends Class246 implements Interface7_Impl2 {
 	}
 
 	public void method115(int i) {
-		super.method113(i * (((Class246_Sub1) this).aClass77_8577.anInt724 * 685647847));
+		super.method113(i * (((Class246_Sub1) this).aTextEncoder_8577.anInt724 * 685647847));
 	}
 
 	public void method116(int i) {
-		super.method113(i * (((Class246_Sub1) this).aClass77_8577.anInt724 * 685647847));
+		super.method113(i * (((Class246_Sub1) this).aTextEncoder_8577.anInt724 * 685647847));
 	}
 }

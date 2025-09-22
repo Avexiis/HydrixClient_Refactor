@@ -407,34 +407,34 @@ public class Wall extends Class365_Sub1_Sub5 implements Interface3 {
 		try {
 			while_108_: do {
 				if (i == 0) {
-					OverlayType.activeToolkit = Class523.method6334(0, Class52_Sub2_Sub1.aCanvas9079, Class253.anInterface_ma2785, Class82_Sub6.aClass243_6844, GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550.getValue(-497177413) * 2, -659449737);
+					OverlayType.activeToolkit = Class523.method6334(0, Class52_Sub2_Sub1.aCanvas9079, Class253.anInterface_ma2785, Class82_Sub6.aClass243_6844, GraphicsSetup.clientPreferences.aAntialiasPreference_7550.getValue(-497177413) * 2, -659449737);
 					if (null != string) {
 						OverlayType.activeToolkit.ba(1, 0);
-						Class505 class505 = Class322.method3931(Class173.aClass243_1758, (Class74.anInt690 * 1178461027), 0, (byte) 84);
-						Class264 class264 = (OverlayType.activeToolkit.method5092(class505, Class89.method993(Class158.aClass243_6364, (1178461027 * Class74.anInt690), 0), true));
+						GameFont gameFont = Class322.method3931(Class173.aClass243_1758, (Class74.anInt690 * 1178461027), 0, (byte) 84);
+						Class264 class264 = (OverlayType.activeToolkit.method5092(gameFont, Class89.method993(Class158.aClass243_6364, (1178461027 * Class74.anInt690), 0), true));
 						Class148.method1614((byte) 42);
-						Class139.method1548(string, true, OverlayType.activeToolkit, class264, class505, (byte) -38);
+						Class139.method1548(string, true, OverlayType.activeToolkit, class264, gameFont, (byte) -38);
 					}
 				} else {
 					GraphicsToolkit class_ra = null;
 					if (null != string) {
 						class_ra = Class523.method6334(0, (Class52_Sub2_Sub1.aCanvas9079), Class253.anInterface_ma2785, Class82_Sub6.aClass243_6844, 0, -199455021);
 						class_ra.ba(1, 0);
-						Class505 class505 = Class322.method3931(Class173.aClass243_1758, (Class74.anInt690 * 1178461027), 0, (byte) 29);
-						Class264 class264 = (class_ra.method5092(class505, Class89.method993(Class158.aClass243_6364, (Class74.anInt690 * 1178461027), 0), true));
+						GameFont gameFont = Class322.method3931(Class173.aClass243_1758, (Class74.anInt690 * 1178461027), 0, (byte) 29);
+						Class264 class264 = (class_ra.method5092(gameFont, Class89.method993(Class158.aClass243_6364, (Class74.anInt690 * 1178461027), 0), true));
 						Class148.method1614((byte) 9);
-						Class139.method1548(string, true, class_ra, class264, class505, (byte) 53);
+						Class139.method1548(string, true, class_ra, class264, gameFont, (byte) 53);
 					}
 					do {
 						try {
 							try {
-								OverlayType.activeToolkit = (Class523.method6334(i, Class52_Sub2_Sub1.aCanvas9079, Class253.anInterface_ma2785, Class82_Sub6.aClass243_6844, GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550.getValue(-1644099824) * 2, 1353555803));
+								OverlayType.activeToolkit = (Class523.method6334(i, Class52_Sub2_Sub1.aCanvas9079, Class253.anInterface_ma2785, Class82_Sub6.aClass243_6844, GraphicsSetup.clientPreferences.aAntialiasPreference_7550.getValue(-1644099824) * 2, 1353555803));
 								if (string != null) {
 									class_ra.ba(1, 0);
-									Class505 class505 = (Class322.method3931(Class173.aClass243_1758, Class74.anInt690 * 1178461027, 0, (byte) 32));
-									Class264 class264 = (class_ra.method5092(class505, (Class89.method993(Class158.aClass243_6364, Class74.anInt690 * 1178461027, 0)), true));
+									GameFont gameFont = (Class322.method3931(Class173.aClass243_1758, Class74.anInt690 * 1178461027, 0, (byte) 32));
+									Class264 class264 = (class_ra.method5092(gameFont, (Class89.method993(Class158.aClass243_6364, Class74.anInt690 * 1178461027, 0)), true));
 									Class148.method1614((byte) 0);
-									Class139.method1548(string, true, class_ra, class264, class505, (byte) -21);
+									Class139.method1548(string, true, class_ra, class264, gameFont, (byte) -21);
 								}
 								if (OverlayType.activeToolkit.method5001()) {
 									boolean bool_27_ = true;
@@ -451,10 +451,10 @@ public class Wall extends Class365_Sub1_Sub5 implements Interface3 {
 									OverlayType.activeToolkit.method5027(class_v);
 								}
 							} catch (Throwable throwable) {
-								int i_28_ = GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-1530002941);
+								int i_28_ = GraphicsSetup.clientPreferences.graphicsPreference.getValue(-1530002941);
 								if (i_28_ == 2)
 									GameClient.aBoolean8662 = true;
-								GraphicsAutoSetup.clientPreferences.method3540((GraphicsAutoSetup.clientPreferences.graphicsPreference), 0, -1712068885);
+								GraphicsSetup.clientPreferences.method3540((GraphicsSetup.clientPreferences.graphicsPreference), 0, -1712068885);
 								method4533(i_28_, string, bool, (short) 256);
 								break;
 							}
@@ -488,17 +488,17 @@ public class Wall extends Class365_Sub1_Sub5 implements Interface3 {
 				}
 			} while (false);
 			if (bool)
-				GraphicsAutoSetup.clientPreferences.method3539(GraphicsAutoSetup.clientPreferences.graphicsPreference, !bool, -1907250649);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.graphicsPreference, i, -1004506906);
+				GraphicsSetup.clientPreferences.method3539(GraphicsSetup.clientPreferences.graphicsPreference, !bool, -1907250649);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.graphicsPreference, i, -1004506906);
 			if (!bool)
-				GraphicsAutoSetup.clientPreferences.method3539(GraphicsAutoSetup.clientPreferences.graphicsPreference, !bool, -1748771368);
+				GraphicsSetup.clientPreferences.method3539(GraphicsSetup.clientPreferences.graphicsPreference, !bool, -1748771368);
 			Class513.method6293(-707841245);
 			OverlayType.activeToolkit.method5169(10000);
 			OverlayType.activeToolkit.J(32);
 			GameClient.map.method2648(-818859939);
 			OverlayType.activeToolkit.method5047(false);
 			if (OverlayType.activeToolkit.method5050())
-				Class365_Sub1_Sub5_Sub1.method4525(GraphicsAutoSetup.clientPreferences.bloomPreference.method5647(-1411340111) == 1, -1054485931);
+				Class365_Sub1_Sub5_Sub1.method4525(GraphicsSetup.clientPreferences.bloomPreference.method5647(-1411340111) == 1, -1054485931);
 			GameClient.map.method2647(526823496);
 			GameClient.map.method2640((byte) 64).forceUpdate(-1897479103);
 			GameClient.aBoolean8666 = false;
@@ -512,7 +512,7 @@ public class Wall extends Class365_Sub1_Sub5 implements Interface3 {
 
 	static final void method4534(ClientScript2 class403, byte i) {
 		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsAutoSetup.clientPreferences.waterDetailPreference.method5641(-1981564122) ? 1 : 0;
+			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = GraphicsSetup.clientPreferences.waterDetailPreference.method5641(-1981564122) ? 1 : 0;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("wr.any(").append(')').toString());
 		}

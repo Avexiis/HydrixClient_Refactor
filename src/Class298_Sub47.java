@@ -23,7 +23,7 @@ public class Class298_Sub47 extends Node {
 			if (-278777595 * ContextMenu.actionCount < 410) {
 				if (player == Class287.myPlayer) {
 					if (GameClient.aBoolean8835 && (Node.anInt3192 * -112110875 & 0x10) != 0)
-						Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(Class285.method2709(16777215, -1880818524)).append(LocalizedString.LABEL_SELF.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString(), MapDecoder.anInt2704 * 697885143, 16, -1, 0L, 0, 0, true, false, (long) (1888274983 * (player.entityIndex)), false, -1698066743);
+						Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(Class285.method2709(16777215, -1880818524)).append(LocalizedString.LABEL_SELF.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString(), MapDecoder.anInt2704 * 697885143, 16, -1, 0L, 0, 0, true, false, (long) (1888274983 * (player.entityIndex)), false, -1698066743);
 				} else {
 					String string;
 					if (player.currentHitpoints * 242930343 == 0) {
@@ -36,7 +36,7 @@ public class Class298_Sub47 extends Node {
 							if (i_2_ > i_1_)
 								bool_0_ = false;
 						}
-						String string_3_ = (GameClient.aGameContext_8944 == GameContext.stellar_dawn ? (LocalizedString.LABEL_RATING_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)) : (LocalizedString.LABEL_LEVEL_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)));
+						String string_3_ = (GameClient.aGameContext_8944 == GameContext.stellar_dawn ? (LocalizedString.LABEL_RATING_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)) : (LocalizedString.LABEL_LEVEL_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)));
 						if (player.maxHitpoints * 696798311 >= (player.turnAnimation * 1868645317))
 							string = new StringBuilder().append(player.getFullName(true, -1760788524)).append(bool_0_ ? (Class18.method358((player.maxHitpoints) * 696798311, (696798311 * (Class287.myPlayer.maxHitpoints)), (byte) 4)) : Class285.method2709(16777215, -1771684039)).append(Symbol.OPEN_PARENTHESES).append(string_3_).append(player.maxHitpoints * 696798311).append(Symbol.CLOSE_PARENTHESES).toString();
 						else
@@ -44,14 +44,14 @@ public class Class298_Sub47 extends Node {
 					} else if (-1 == (player.currentHitpoints * 242930343))
 						string = player.getFullName(true, -1641888806);
 					else
-						string = new StringBuilder().append(player.getFullName(true, -2028633086)).append(Symbol.OPEN_PARENTHESES).append(LocalizedString.LABEL_SKILL_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(242930343 * (player.currentHitpoints)).append(Symbol.CLOSE_PARENTHESES).toString();
+						string = new StringBuilder().append(player.getFullName(true, -2028633086)).append(Symbol.OPEN_PARENTHESES).append(LocalizedString.LABEL_SKILL_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(242930343 * (player.currentHitpoints)).append(Symbol.CLOSE_PARENTHESES).toString();
 					if (GameClient.aBoolean8835 && !bool && (-112110875 * Node.anInt3192 & 0x8) != 0)
 						Class234.method2174(GameClient.aString8838, new StringBuilder().append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).append(" ").append(Class285.method2709(16777215, -1806308451)).append(string).toString(), 697885143 * MapDecoder.anInt2704, 15, -1, (long) (1888274983 * (player.entityIndex)), 0, 0, true, false, (long) (1888274983 * (player.entityIndex)), false, -2028889244);
 					if (!bool) {
 						for (int i_4_ = 7; i_4_ >= 0; i_4_--) {
 							if (GameClient.aStringArray8820[i_4_] != null) {
 								short i_5_ = 0;
-								if ((GameClient.aGameContext_8944 == GameContext.aGameContext_5320) && (GameClient.aStringArray8820[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(Class321.ACTIVE_LANGUAGE, -875414210)))) {
+								if ((GameClient.aGameContext_8944 == GameContext.aGameContext_5320) && (GameClient.aStringArray8820[i_4_].equalsIgnoreCase(LocalizedString.BUTTON_ATTACK.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)))) {
 									if (GameClient.aBoolean8815 && ((player.maxHitpoints) * 696798311 > (Class287.myPlayer.maxHitpoints) * 696798311))
 										i_5_ = (short) 2000;
 									if ((0 != (Class287.myPlayer.teamId) * -1473655357) && (-1473655357 * (player.teamId)) != 0) {

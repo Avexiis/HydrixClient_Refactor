@@ -280,7 +280,7 @@ public class Class422_Sub24 extends IntegerPreferenceField {
 												string = "";
 										}
 										if (class105 == GameClient.aClass105_8652) {
-											string = (LocalizedString.MESSAGE_PLEASE_WAIT.getText(Class321.ACTIVE_LANGUAGE, -875414210));
+											string = (LocalizedString.MESSAGE_PLEASE_WAIT.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210));
 											i_27_ = (1045422783 * class105.anInt1170);
 										}
 										if (GameClient.aBoolean8849)
@@ -377,7 +377,7 @@ public class Class422_Sub24 extends IntegerPreferenceField {
 												modelPart = (player.appearance.method4545(OverlayType.activeToolkit, i_35_, Class94.aClass349_913, (Class212.aIdentityKitTypeList_2433), Class15.aClass507_224, (Class298_Sub32_Sub14.aClass477_9400), (Class501.aClass395_6122), (Class128.aClass148_6331), (class105.aAnimator_1152), null, null, null, 0, true, (Class82_Sub18.aClass405_6892), -933937677));
 										}
 									} else if (8 == (class105.anInt1184 * 1548853569) || (class105.anInt1184 * 1548853569) == 9) {
-										Class298_Sub9 class298_sub9 = (Class255.method2437(572201537 * class105.anInt1151, false, 2023314319));
+										Class298_Sub9 class298_sub9 = (DevConsole.method2437(572201537 * class105.anInt1151, false, 2023314319));
 										if (null != class298_sub9)
 											modelPart = (class298_sub9.method2891(OverlayType.activeToolkit, i_35_, class105.aAnimator_1152, (1148770405 * class105.anInt1140), 9 == (class105.anInt1184 * 1548853569), (class105.aBoolean1213 ? (Class287.myPlayer.appearance) : null), (byte) 1));
 									} else if (null == class105.aAnimator_1152 || !(class105.aAnimator_1152.method5819((byte) -99))) {

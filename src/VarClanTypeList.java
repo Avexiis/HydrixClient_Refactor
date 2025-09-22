@@ -75,7 +75,7 @@ public class VarClanTypeList {
 	static void method6308(GraphicsToolkit class_ra, int i) {
 		try {
 			if (Class522.aLinkedNodeList_6283.method5948(1828905535) != 0) {
-				if (GraphicsAutoSetup.clientPreferences.graphicsPreference.getValue(-627187888) == 0) {
+				if (GraphicsSetup.clientPreferences.graphicsPreference.getValue(-627187888) == 0) {
 					for (Class298_Sub14 class298_sub14 = (Class298_Sub14) Class522.aLinkedNodeList_6283.method5939(1766612795); null != class298_sub14; class298_sub14 = ((Class298_Sub14) Class522.aLinkedNodeList_6283.method5944(49146))) {
 						Class298_Sub32_Sub14.aClass477_9400.method6086(class_ra, class_ra, (-1979936541 * ((Class298_Sub14) class298_sub14).anInt7264), (((Class298_Sub14) class298_sub14).anInt7261 * -751580615), (1613862267 * ((Class298_Sub14) class298_sub14).anInt7263), (((Class298_Sub14) class298_sub14).anInt7260 * -944151257), false, false, (-1216336855 * ((Class298_Sub14) class298_sub14).anInt7262), ScriptContext.aClass264_7534, (((Class298_Sub14) class298_sub14).aBoolean7265 ? (Class287.myPlayer.appearance) : null), 1788760477);
 						class298_sub14.unlink(-1460969981);

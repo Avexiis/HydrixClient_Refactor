@@ -62,20 +62,20 @@ public class Class7 {
 			if ((ContextMenu.actionCount * -278777595 >= 2 || GameClient.aBoolean8835) && null == GameClient.aClass105_8850) {
 				String string;
 				if (GameClient.aBoolean8835 && -278777595 * ContextMenu.actionCount < 2)
-					string = new StringBuilder().append(GameClient.aString8838).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).toString();
+					string = new StringBuilder().append(GameClient.aString8838).append(LocalizedString.LABEL_SEPARATOR_SPACE_COLON_SPACE.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(GameClient.aString8754).append(" ").append(Symbol.RIGHT_ARROW).toString();
 				else if (Class117.method1275((byte) 122) && -278777595 * ContextMenu.actionCount > 2)
-					string = Class8.method315((Class298_Sub45.aClass298_Sub37_Sub15_7522), 2135114234);
+					string = DevConsoleState.method315((Class298_Sub45.aClass298_Sub37_Sub15_7522), 2135114234);
 				else {
 					Class298_Sub37_Sub15 class298_sub37_sub15 = Class298_Sub45.aClass298_Sub37_Sub15_7522;
 					if (class298_sub37_sub15 == null)
 						return;
-					string = Class8.method315(class298_sub37_sub15, 2142692033);
+					string = DevConsoleState.method315(class298_sub37_sub15, 2142692033);
 					int[] is = Class313.method3821(class298_sub37_sub15, (byte) -32);
 					if (is != null)
 						string = new StringBuilder().append(string).append(Class216.method1999(is, (byte) 1)).toString();
 				}
 				if (-278777595 * ContextMenu.actionCount > 2)
-					string = new StringBuilder().append(string).append(Class285.method2709(16777215, -1452738255)).append(" / ").append(ContextMenu.actionCount * -278777595 - 2).append(LocalizedString.LABEL_MORE_OPTIONS.getText(Class321.ACTIVE_LANGUAGE, -875414210)).toString();
+					string = new StringBuilder().append(string).append(Class285.method2709(16777215, -1452738255)).append(" / ").append(ContextMenu.actionCount * -278777595 - 2).append(LocalizedString.LABEL_MORE_OPTIONS.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).toString();
 				if (ContextMenu.aClass105_5486 != null) {
 					Class264 class264 = (ContextMenu.aClass105_5486.method1112(Class497.aClass197_6105, GameClient.anInterface10_8700, 2046154242));
 					if (null == class264)

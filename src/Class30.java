@@ -14,17 +14,17 @@ public abstract class Class30 {
 	static int anInt375 = 3552;
 	int anInt376;
 	Class55 aClass55_377;
-	Class77 aClass77_378;
+	TextEncoder aTextEncoder_378;
 	boolean aBoolean379;
 	int anInt380;
 	Class_ra_Sub2 aClass_ra_Sub2_381;
 	static int[] anIntArray382 = new int[1];
 
-	Class30(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, Class77 class77, int i_0_, boolean bool) {
+	Class30(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, TextEncoder textEncoder, int i_0_, boolean bool) {
 		((Class30) this).aClass_ra_Sub2_381 = class_ra_sub2;
 		((Class30) this).anInt372 = i;
 		((Class30) this).aClass55_377 = class55;
-		((Class30) this).aClass77_378 = class77;
+		((Class30) this).aTextEncoder_378 = textEncoder;
 		((Class30) this).aBoolean379 = bool;
 		((Class30) this).anInt380 = i_0_;
 		OpenGL.glGenTextures(1, anIntArray382, 0);
@@ -247,7 +247,7 @@ public abstract class Class30 {
 	}
 
 	int method416() {
-		int i = (((Class30) this).aClass55_377.anInt556 * 845115459 * (((Class30) this).aClass77_378.anInt724 * 685647847) * ((Class30) this).anInt380);
+		int i = (((Class30) this).aClass55_377.anInt556 * 845115459 * (((Class30) this).aTextEncoder_378.anInt724 * 685647847) * ((Class30) this).anInt380);
 		return ((Class30) this).aBoolean379 ? i * 4 / 3 : i;
 	}
 

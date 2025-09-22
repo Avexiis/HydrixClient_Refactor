@@ -51,7 +51,7 @@ public class Class275 {
 			Class227 class227 = Class82_Sub6.aClass227_6843;
 			int i_3_ = Class125.method1401((byte) -86);
 			if (Class82_Sub6.aClass227_6843 == class227) {
-				Class107.aString1314 = ((Class227) Class82_Sub6.aClass227_6843).aClass470_2549.getText(Class321.ACTIVE_LANGUAGE, -875414210);
+				Class107.aString1314 = ((Class227) Class82_Sub6.aClass227_6843).aClass470_2549.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
 				if (((Class227) Class82_Sub6.aClass227_6843).aBoolean2550)
 					Class230.anInt2566 = (360399239 * ((Class227) Class82_Sub6.aClass227_6843).anInt2551 + ((-1620354451 * (((Class227) Class82_Sub6.aClass227_6843).anInt2552)) - (360399239 * (((Class227) Class82_Sub6.aClass227_6843).anInt2551))) * i_3_ / 100) * -1030314565;
 				if (((Class227) Class82_Sub6.aClass227_6843).aBoolean2553)
@@ -60,7 +60,7 @@ public class Class275 {
 				Class288_Sub1.aClass219_7147 = null;
 				Class439.method5851(19, 732690062);
 			} else {
-				Class107.aString1314 = ((Class227) class227).aClass470_2543.getText(Class321.ACTIVE_LANGUAGE, -875414210);
+				Class107.aString1314 = ((Class227) class227).aClass470_2543.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210);
 				if (((Class227) Class82_Sub6.aClass227_6843).aBoolean2553)
 					Class107.aString1314 = new StringBuilder().append(Class107.aString1314).append(((Class227) class227).anInt2552 * -1620354451).append("%").toString();
 				Class230.anInt2566 = 982601375 * ((Class227) class227).anInt2552;

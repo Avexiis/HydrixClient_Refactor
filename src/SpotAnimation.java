@@ -87,7 +87,7 @@ public class SpotAnimation {
 									}
 									if (i_17_ < 0)
 										i_17_ = 0;
-									i_9_ = ((i_11_ - i_17_) * GraphicsAutoSetup.clientPreferences.aVolumePreference_7582.method5726(-2145949986) * (((Class297) class297).anInt3182 * -1716484165) / i_11_) >> 2;
+									i_9_ = ((i_11_ - i_17_) * GraphicsSetup.clientPreferences.aVolumePreference_7582.method5726(-2145949986) * (((Class297) class297).anInt3182 * -1716484165) / i_11_) >> 2;
 									if (-1 != (((Class297) class297).anInt3185 * -1271617995)) {
 										i_13_ = (((Class297) class297).anInt3185 * -1271617995);
 										i_15_ = (((Class297) class297).anInt3173 * -1577764425);
@@ -108,7 +108,7 @@ public class SpotAnimation {
 								} else
 									i_9_ = 0;
 							} else
-								i_9_ = ((((Class297) class297).anInt3182 * -1716484165 * (3 == ((Class297) class297).aByte3176 ? GraphicsAutoSetup.clientPreferences.aVolumePreference_7583.method5726(-2143768151) : GraphicsAutoSetup.clientPreferences.aVolumePreference_7553.method5726(-2142178675))) >> 2);
+								i_9_ = ((((Class297) class297).anInt3182 * -1716484165 * (3 == ((Class297) class297).aByte3176 ? GraphicsSetup.clientPreferences.aVolumePreference_7583.method5726(-2143768151) : GraphicsSetup.clientPreferences.aVolumePreference_7553.method5726(-2142178675))) >> 2);
 							if (i_9_ > 0) {
 								Class298_Sub26_Sub1 class298_sub26_sub1 = null;
 								if (1 == ((Class297) class297).aByte3176)
@@ -132,15 +132,15 @@ public class SpotAnimation {
 				}
 			}
 			if (Class300.aBoolean3208 && !MagnetConfig.method781(1966738730)) {
-				if (GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2143085623) != 0 && Class300.anInt3207 * -1256171511 != -1) {
+				if (GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2143085623) != 0 && Class300.anInt3207 * -1256171511 != -1) {
 					if (null != Class298_Sub2.aClass298_Sub19_Sub1_7167)
-						Class21.method364(Class374_Sub1.aClass243_7731, -1256171511 * Class300.anInt3207, 0, GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2142931520), false, (Class298_Sub2.aClass298_Sub19_Sub1_7167), 1987085103);
+						Class21.method364(Class374_Sub1.aClass243_7731, -1256171511 * Class300.anInt3207, 0, GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2142931520), false, (Class298_Sub2.aClass298_Sub19_Sub1_7167), 1987085103);
 					else
-						Class477.method6096(Class374_Sub1.aClass243_7731, Class300.anInt3207 * -1256171511, 0, GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2147082244), false, -2064254563);
+						Class477.method6096(Class374_Sub1.aClass243_7731, Class300.anInt3207 * -1256171511, 0, GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2147082244), false, -2064254563);
 				}
 				Class300.aBoolean3208 = false;
 				Class298_Sub2.aClass298_Sub19_Sub1_7167 = null;
-			} else if (GraphicsAutoSetup.clientPreferences.aVolumePreference_7584.method5726(-2142436770) != 0 && -1 != -1256171511 * Class300.anInt3207 && !MagnetConfig.method781(1908541019)) {
+			} else if (GraphicsSetup.clientPreferences.aVolumePreference_7584.method5726(-2142436770) != 0 && -1 != -1256171511 * Class300.anInt3207 && !MagnetConfig.method781(1908541019)) {
 				Class298_Sub36 class298_sub36 = Class18.method359(OutgoingPacket.aClass198_2032, GameClient.gameConnection.aClass449_330, (byte) 26);
 				class298_sub36.buffer.writeInt(-1256171511 * Class300.anInt3207, -1115837876);
 				GameClient.gameConnection.writeOutboundPacket(class298_sub36, (byte) -48);
@@ -154,7 +154,7 @@ public class SpotAnimation {
 	static void method610(int i) {
 		try {
 			if (GameClient.anInt8870 * 577335585 < 0) {
-				Class505 class505 = Class142.method1571(-2096843583);
+				GameFont gameFont = Class142.method1571(-2096843583);
 				if (!ContextMenu.menuOpen)
 					ContextMenu.aBoolean5471 = ((ContextMenu.anInt5499 * -1914913203 != -1 && (ContextMenu.actionCount * -278777595 >= -1914913203 * ContextMenu.anInt5499)) || (((ContextMenu.aBoolean5496 ? 26 : 22) + (-278777595 * ContextMenu.actionCount * (ContextMenu.anInt5467 * -411680299))) > -1111710645 * Class298_Sub40_Sub9.anInt9716));
 				ContextMenu.aLinkedNodeList_5511.method5943((byte) 1);
@@ -202,8 +202,8 @@ public class SpotAnimation {
 							int i_24_ = -1;
 							for (int i_25_ = 0; (i_25_ < (-628325139 * (((Class298_Sub37_Sub5) ContextMenu.aClass298_Sub37_Sub5_5472).anInt9583))); i_25_++) {
 								if (ContextMenu.aBoolean5496) {
-									int i_26_ = (class505.anInt6202 * 1110385787 + (-1370784315 * Class501.anInt6119 + 20) + 1 + i_25_ * (ContextMenu.anInt5467 * -411680299));
-									if (i_23_ > i_26_ - (class505.anInt6202 * 1110385787) - 1 && (i_23_ < (-1883958527 * class505.anInt6197 + i_26_)))
+									int i_26_ = (gameFont.ascent * 1110385787 + (-1370784315 * Class501.anInt6119 + 20) + 1 + i_25_ * (ContextMenu.anInt5467 * -411680299));
+									if (i_23_ > i_26_ - (gameFont.ascent * 1110385787) - 1 && (i_23_ < (-1883958527 * gameFont.descent + i_26_)))
 										i_24_ = i_25_;
 								} else {
 									int i_27_ = (-1370784315 * Class501.anInt6119 + 31 + (-411680299 * ContextMenu.anInt5467 * i_25_));
@@ -228,8 +228,8 @@ public class SpotAnimation {
 								int i_29_ = -1;
 								for (int i_30_ = 0; i_30_ < -278777595 * ContextMenu.actionCount; i_30_++) {
 									if (ContextMenu.aBoolean5496) {
-										int i_31_ = ((ContextMenu.anInt5467 * -411680299 * ((-278777595 * ContextMenu.actionCount) - 1 - i_30_)) + (1 + ((class505.anInt6202 * 1110385787) + (20 + ((TileText.anInt7658) * 1089948687)))));
-										if (i_23_ > i_31_ - (class505.anInt6202 * 1110385787) - 1 && i_23_ < ((-1883958527 * class505.anInt6197) + i_31_))
+										int i_31_ = ((ContextMenu.anInt5467 * -411680299 * ((-278777595 * ContextMenu.actionCount) - 1 - i_30_)) + (1 + ((gameFont.ascent * 1110385787) + (20 + ((TileText.anInt7658) * 1089948687)))));
+										if (i_23_ > i_31_ - (gameFont.ascent * 1110385787) - 1 && i_23_ < ((-1883958527 * gameFont.descent) + i_31_))
 											i_29_ = i_30_;
 									} else {
 										int i_32_ = ((-411680299 * ContextMenu.anInt5467 * ((ContextMenu.actionCount * -278777595) - 1 - i_30_)) + ((TileText.anInt7658 * 1089948687) + 31));
@@ -253,8 +253,8 @@ public class SpotAnimation {
 								int i_34_ = -1;
 								for (int i_35_ = 0; i_35_ < 1592446965 * ContextMenu.anInt5479; i_35_++) {
 									if (ContextMenu.aBoolean5496) {
-										int i_36_ = ((ContextMenu.anInt5467 * -411680299 * i_35_) + (1 + (20 + (TileText.anInt7658 * 1089948687) + (class505.anInt6202 * 1110385787))));
-										if (i_23_ > (i_36_ - (1110385787 * class505.anInt6202) - 1) && i_23_ < ((class505.anInt6197 * -1883958527) + i_36_)) {
+										int i_36_ = ((ContextMenu.anInt5467 * -411680299 * i_35_) + (1 + (20 + (TileText.anInt7658 * 1089948687) + (gameFont.ascent * 1110385787))));
+										if (i_23_ > (i_36_ - (1110385787 * gameFont.ascent) - 1) && i_23_ < ((gameFont.descent * -1883958527) + i_36_)) {
 											i_34_ = i_35_;
 											break;
 										}
@@ -296,10 +296,10 @@ public class SpotAnimation {
 								int i_40_ = -1;
 								for (int i_41_ = 0; i_41_ < 1592446965 * ContextMenu.anInt5479; i_41_++) {
 									if (ContextMenu.aBoolean5496) {
-										int i_42_ = (20 + (TileText.anInt7658 * 1089948687) + (1110385787 * class505.anInt6202) + 1 + (i_41_ * (-411680299 * ContextMenu.anInt5467)));
-										if (i_23_ > (i_42_ - (1110385787 * class505.anInt6202) - 1) && i_23_ < ((class505.anInt6197 * -1883958527) + i_42_)) {
+										int i_42_ = (20 + (TileText.anInt7658 * 1089948687) + (1110385787 * gameFont.ascent) + 1 + (i_41_ * (-411680299 * ContextMenu.anInt5467)));
+										if (i_23_ > (i_42_ - (1110385787 * gameFont.ascent) - 1) && i_23_ < ((gameFont.descent * -1883958527) + i_42_)) {
 											i_39_ = i_41_;
-											i_40_ = i_42_ - (class505.anInt6202 * 1110385787) - 1;
+											i_40_ = i_42_ - (gameFont.ascent * 1110385787) - 1;
 											break;
 										}
 									} else {

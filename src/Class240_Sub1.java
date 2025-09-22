@@ -95,20 +95,20 @@ public class Class240_Sub1 extends MapDecoder {
 							int i_9_ = class298_sub53.readUnsignedByte();
 							if (i_9_ > 0) {
 								for (int i_10_ = 0; i_10_ < i_9_; i_10_++) {
-									Class321 class321 = new Class321(class_ra, -1688804109 * aSceneGraph_2619.anInt3504, class298_sub53, 2);
-									if (589172669 * class321.anInt3351 == 31) {
+									DynamicLight dynamicLight = new DynamicLight(class_ra, -1688804109 * aSceneGraph_2619.anInt3504, class298_sub53, 2);
+									if (589172669 * dynamicLight.waveformID == 31) {
 										Class493 class493 = Class237.aClass499_6668.method6214(class298_sub53.readUnsignedShort(), -1728729634);
-										class321.method3917(class493.anInt6088 * 1438741121, class493.anInt6087 * -2095379959, 2096922993 * class493.anInt6085, 1418726113 * class493.anInt6086, 320507599);
+										dynamicLight.setAnimation(class493.anInt6088 * 1438741121, class493.anInt6087 * -2095379959, 2096922993 * class493.anInt6085, 1418726113 * class493.anInt6086, 320507599);
 									}
 									if (class_ra.method5048() > 0) {
-										Class298_Sub10 class298_sub10 = class321.aClass298_Sub10_3337;
+										Class298_Sub10 class298_sub10 = dynamicLight.lightHandle;
 										int i_11_ = class298_sub10.method2895(823958259) + (i << 9);
 										int i_12_ = class298_sub10.method2897((byte) 113) + (i_6_ << 9);
 										int i_13_ = i_11_ >> 9;
 										int i_14_ = i_12_ >> 9;
 										if (i_13_ >= 0 && i_14_ >= 0 && i_13_ < -954368823 * anInt2627 && i_14_ < 181474463 * anInt2628) {
-											class298_sub10.method2899(i_11_, heights[class321.anInt3345 * -1565952249][i_13_][i_14_] - class298_sub10.method2894(1382635254), i_12_, (byte) 37);
-											aSceneGraph_2619.method4051(class321, 763639750);
+											class298_sub10.method2899(i_11_, heights[dynamicLight.amplitude * -1565952249][i_13_][i_14_] - class298_sub10.method2894(1382635254), i_12_, (byte) 37);
+											aSceneGraph_2619.method4051(dynamicLight, 763639750);
 										}
 									}
 								}
@@ -275,23 +275,23 @@ public class Class240_Sub1 extends MapDecoder {
 							int i_49_ = class298_sub53.readUnsignedByte();
 							if (i_49_ > 0) {
 								for (int i_50_ = 0; i_50_ < i_49_; i_50_++) {
-									Class321 class321 = new Class321(class_ra, -1688804109 * aSceneGraph_2619.anInt3504, class298_sub53, 2);
-									if (31 == 589172669 * class321.anInt3351) {
+									DynamicLight dynamicLight = new DynamicLight(class_ra, -1688804109 * aSceneGraph_2619.anInt3504, class298_sub53, 2);
+									if (31 == 589172669 * dynamicLight.waveformID) {
 										Class493 class493 = Class237.aClass499_6668.method6214(class298_sub53.readUnsignedShort(), -1427443057);
-										class321.method3917(class493.anInt6088 * 1438741121, -2095379959 * class493.anInt6087, 2096922993 * class493.anInt6085, class493.anInt6086 * 1418726113, -1699648006);
+										dynamicLight.setAnimation(class493.anInt6088 * 1438741121, -2095379959 * class493.anInt6087, 2096922993 * class493.anInt6085, class493.anInt6086 * 1418726113, -1699648006);
 									}
 									if (class_ra.method5048() > 0) {
-										Class298_Sub10 class298_sub10 = class321.aClass298_Sub10_3337;
+										Class298_Sub10 class298_sub10 = dynamicLight.lightHandle;
 										int i_51_ = class298_sub10.method2895(823958259) >> 9;
 										int i_52_ = class298_sub10.method2897((byte) 113) >> 9;
-										if (i_41_ == class321.anInt3345 * -1565952249 && i_51_ >= i_46_ && i_51_ < i_46_ + 8 && i_52_ >= i_47_ && i_52_ < i_47_ + 8) {
+										if (i_41_ == dynamicLight.amplitude * -1565952249 && i_51_ >= i_46_ && i_51_ < i_46_ + 8 && i_52_ >= i_47_ && i_52_ < i_47_ + 8) {
 											int i_53_ = (i_39_ << 9) + Class219.method2045(class298_sub10.method2895(823958259) & 0xfff, class298_sub10.method2897((byte) 107) & 0xfff, i_44_, (byte) 91);
 											int i_54_ = (i_40_ << 9) + MapDecoder.method2233(class298_sub10.method2895(823958259) & 0xfff, class298_sub10.method2897((byte) 68) & 0xfff, i_44_, (short) 27107);
 											i_51_ = i_53_ >> 9;
 											i_52_ = i_54_ >> 9;
 											if (i_51_ >= 0 && i_52_ >= 0 && i_51_ < anInt2627 * -954368823 && i_52_ < anInt2628 * 181474463) {
 												class298_sub10.method2899(i_53_, heights[i_41_][i_51_][i_52_] - class298_sub10.method2894(-2061162182), i_54_, (byte) -72);
-												aSceneGraph_2619.method4051(class321, -1995203079);
+												aSceneGraph_2619.method4051(dynamicLight, -1995203079);
 											}
 										}
 									}
@@ -699,7 +699,7 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_125_, i_126_);
+					class365_sub1_sub3 = new SceneObject(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_125_, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 861548591);
 				return true;
@@ -718,7 +718,7 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_135_ * anIntArray7078[i_125_], i_135_ * anIntArray7075[i_125_], i, i_125_, i_126_);
+					class365_sub1_sub3 = new SceneObject(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_135_ * anIntArray7078[i_125_], i_135_ * anIntArray7075[i_125_], i, i_125_, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 1859376340);
 				return true;
@@ -737,7 +737,7 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_136_ * anIntArray7074[i_125_], anIntArray7081[i_125_] * i_136_, i, i_125_ + 4, i_126_);
+					class365_sub1_sub3 = new SceneObject(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_136_ * anIntArray7074[i_125_], anIntArray7081[i_125_] * i_136_, i, i_125_ + 4, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 1431954302);
 				return true;
@@ -752,7 +752,7 @@ public class Class240_Sub1 extends MapDecoder {
 					}
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 				} else {
-					class365_sub1_sub3 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_137_ + 4, i_126_);
+					class365_sub1_sub3 = new SceneObject(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, i_137_ + 4, i_126_);
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, null, 1921538390);
 				return true;
@@ -778,10 +778,10 @@ public class Class240_Sub1 extends MapDecoder {
 					class365_sub1_sub3 = class365_sub1_sub3_sub2;
 					class365_sub1_sub3_140_ = class365_sub1_sub3_sub2_141_;
 				} else {
-					Class365_Sub1_Sub3_Sub1 class365_sub1_sub3_sub1 = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_139_ * anIntArray7074[i_125_], i_139_ * anIntArray7081[i_125_], i, i_125_ + 4, i_126_);
-					Class365_Sub1_Sub3_Sub1 class365_sub1_sub3_sub1_142_ = new Class365_Sub1_Sub3_Sub1(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, 4 + i_138_, i_126_);
-					class365_sub1_sub3 = class365_sub1_sub3_sub1;
-					class365_sub1_sub3_140_ = class365_sub1_sub3_sub1_142_;
+					SceneObject sceneObject = new SceneObject(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, i_139_ * anIntArray7074[i_125_], i_139_ * anIntArray7081[i_125_], i, i_125_ + 4, i_126_);
+					SceneObject sceneObject_142_ = new SceneObject(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_127_, i_128_, i_129_, i_130_, i_131_, aBoolean2629, 0, 0, i, 4 + i_138_, i_126_);
+					class365_sub1_sub3 = sceneObject;
+					class365_sub1_sub3_140_ = sceneObject_142_;
 				}
 				aSceneGraph_2619.method4021(i_127_, i_132_, i_133_, class365_sub1_sub3, class365_sub1_sub3_140_, 1357750473);
 				return true;
@@ -898,7 +898,7 @@ public class Class240_Sub1 extends MapDecoder {
 				anInt7082 = 272172143 * i_161_;
 			}
 			LocType class432 = aClass433_7072.list(i_164_);
-			if (GraphicsAutoSetup.clientPreferences.texturePreference.getValue(1871358652) != 0 || !class432.aBoolean5432) {
+			if (GraphicsSetup.clientPreferences.texturePreference.getValue(1871358652) != 0 || !class432.aBoolean5432) {
 				int i_169_;
 				int i_170_;
 				if (1 == i_165_ || i_165_ == 3) {
@@ -937,7 +937,7 @@ public class Class240_Sub1 extends MapDecoder {
 				boolean bool_178_ = -1 == i_167_ && !class432.method5779(934270378) && class432.anIntArray5366 == null && !class432.aBoolean5381 && !class432.aBoolean5389;
 				if (!aBoolean7084 || (!Class82_Sub9.method900(i_166_, (byte) 13) || class432.anInt5376 * -1508517619 == 1) && (!Js5Archive.method1236(i_166_, 1378507148) || 0 != -1508517619 * class432.anInt5376)) {
 					if (i_166_ == -1976050083 * Class424.aClass424_6610.anInt6613) {
-						if (GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547.method5629(-807116560) != 0 || class432.anInt5382 * 1532834983 != 0 || -2144543407 * class432.anInt5380 == 1 || class432.aBoolean5410) {
+						if (GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547.method5629(-807116560) != 0 || class432.anInt5382 * 1532834983 != 0 || -2144543407 * class432.anInt5380 == 1 || class432.aBoolean5410) {
 							Class365_Sub1_Sub2 class365_sub1_sub2;
 							if (bool_178_) {
 								Class365_Sub1_Sub2_Sub2 class365_sub1_sub2_sub2 = new Class365_Sub1_Sub2_Sub2(aSceneGraph_2619, class_ra, aClass433_7072, class432, i_161_, i, i_176_, i_175_, i_177_, aBoolean2629, i_165_, bool);

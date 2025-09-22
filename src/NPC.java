@@ -29,7 +29,7 @@ public class NPC extends Entity {
 			((NPC) this).anInt10188 = (32 + (int) (Math.random() * 4.0)) * -1382184985;
 			((NPC) this).anInt10191 = (3 + (int) (Math.random() * 2.0)) * -1827850421;
 			((NPC) this).anInt10192 = (16 + (int) (Math.random() * 3.0)) * -1891288283;
-			if (GraphicsAutoSetup.clientPreferences.texturePreference.getValue(2100839354) == 1)
+			if (GraphicsSetup.clientPreferences.texturePreference.getValue(2100839354) == 1)
 				((NPC) this).anInt10193 = (int) (Math.random() * 6.0) * 818502475;
 			else
 				((NPC) this).anInt10193 = (int) (Math.random() * 12.0) * 818502475;
@@ -77,7 +77,7 @@ public class NPC extends Entity {
 			NPCType class503 = (definition.anIntArray6188 != null ? definition.method6240(Class128.aClass148_6331, 1631739764) : definition);
 			((NPC) this).aBoolean10129 = false;
 			Class335 class335 = null;
-			if (GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5693(-1104068428) == 1 && class503.aBoolean6165 && class350.aBoolean3756) {
+			if (GraphicsSetup.clientPreferences.characterShadowPreference.method5693(-1104068428) == 1 && class503.aBoolean6165 && class350.aBoolean3756) {
 				Animator animator = ((projectileAnimator.method5819((byte) -29) && projectileAnimator.method5826(-65534)) ? projectileAnimator : null);
 				Animator animator_5_ = ((spotAnimAnimator.method5819((byte) -63) && (!outlineDirty || animator == null)) ? spotAnimAnimator : null);
 				ModelPart modelPart = (GameMap.method2678(class_ra, i_3_, (((NPC) this).anInt10097 * -155466425), (-197572281 * ((NPC) this).anInt10073), (-104151209 * ((NPC) this).anInt10074), -2095128707 * definition.size, modelParts[0], definition.aShort6191 & 0xffff, definition.aShort6153 & 0xffff, definition.aByte6168 & 0xff, definition.aByte6152 & 0xff, null != animator_5_ ? animator_5_ : animator, 1812843484));
@@ -415,9 +415,9 @@ public class NPC extends Entity {
 		}
 	}
 
-	public overheadString method4437(int i) {
+	public OverheadString method4437(int i) {
 		try {
-			if (((NPC) this).overheadString != null && ((overheadString) (((NPC) this).overheadString)).aString608 == null)
+			if (((NPC) this).overheadString != null && ((OverheadString) (((NPC) this).overheadString)).aString608 == null)
 				return null;
 			return ((NPC) this).overheadString;
 		} catch (RuntimeException runtimeexception) {
@@ -479,7 +479,7 @@ public class NPC extends Entity {
 		NPCType class503 = (definition.anIntArray6188 != null ? definition.method6240(Class128.aClass148_6331, 1779938932) : definition);
 		((NPC) this).aBoolean10129 = false;
 		Class335 class335 = null;
-		if (GraphicsAutoSetup.clientPreferences.characterShadowPreference.method5693(-1718454976) == 1 && class503.aBoolean6165 && class350.aBoolean3756) {
+		if (GraphicsSetup.clientPreferences.characterShadowPreference.method5693(-1718454976) == 1 && class503.aBoolean6165 && class350.aBoolean3756) {
 			Animator animator = ((projectileAnimator.method5819((byte) -38) && projectileAnimator.method5826(-65534)) ? projectileAnimator : null);
 			Animator animator_43_ = ((spotAnimAnimator.method5819((byte) -86) && (!outlineDirty || animator == null)) ? spotAnimAnimator : null);
 			ModelPart modelPart = (GameMap.method2678(class_ra, i, (((NPC) this).anInt10097 * -155466425), (-197572281 * ((NPC) this).anInt10073), (-104151209 * ((NPC) this).anInt10074), -2095128707 * definition.size, modelParts[0], definition.aShort6191 & 0xffff, definition.aShort6153 & 0xffff, definition.aByte6168 & 0xff, definition.aByte6152 & 0xff, null != animator_43_ ? animator_43_ : animator, 1812843484));
@@ -680,8 +680,8 @@ public class NPC extends Entity {
 		return 363729791 * definition.anInt6178;
 	}
 
-	public overheadString method4443() {
-		if (((NPC) this).overheadString != null && ((overheadString) (((NPC) this).overheadString)).aString608 == null)
+	public OverheadString method4443() {
+		if (((NPC) this).overheadString != null && ((OverheadString) (((NPC) this).overheadString)).aString608 == null)
 			return null;
 		return ((NPC) this).overheadString;
 	}

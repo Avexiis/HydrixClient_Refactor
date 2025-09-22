@@ -154,7 +154,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 	boolean aBoolean8146;
 	boolean aBoolean8147;
 	Class52_Sub1_Sub2 aClass52_Sub1_Sub2_8148;
-	Class78 aClass78_8149;
+	DisplayMode aDisplayMode_8149;
 	Interface2 anInterface2_8150;
 	Interface1 anInterface1_8151;
 	int anInt8152;
@@ -230,7 +230,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		if (((Class_ra_Sub2) this).aString8022.indexOf("brian paul") != -1 || ((Class_ra_Sub2) this).aString8022.indexOf("mesa") != -1)
 			i |= 0x1;
 		String string = OpenGL.glGetString(7938);
-		String[] strings = Class365_Sub1_Sub3_Sub1.method4508(string.replace('.', ' '), ' ', 1456146944);
+		String[] strings = SceneObject.splitText(string.replace('.', ' '), ' ', 1456146944);
 		if (strings.length >= 2) {
 			try {
 				int i_3_ = Class216.method1998(strings[0], (short) -12183);
@@ -281,9 +281,9 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 
 	void method5222() {
 		((Class_ra_Sub2) this).aClass30Array8182 = new Class30[((Class_ra_Sub2) this).anInt8165];
-		((Class_ra_Sub2) this).aClass30_Sub2_8140 = new Class30_Sub2(this, 3553, Class55.aClass55_557, Class77.aClass77_717, 1, 1);
-		new Class30_Sub2(this, 3553, Class55.aClass55_557, Class77.aClass77_717, 1, 1);
-		new Class30_Sub2(this, 3553, Class55.aClass55_557, Class77.aClass77_717, 1, 1);
+		((Class_ra_Sub2) this).aClass30_Sub2_8140 = new Class30_Sub2(this, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_717, 1, 1);
+		new Class30_Sub2(this, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_717, 1, 1);
+		new Class30_Sub2(this, 3553, Class55.aClass55_557, TextEncoder.aTextEncoder_717, 1, 1);
 		for (int i = 0; i < 7; i++) {
 			((Class_ra_Sub2) this).aClass387_Sub2Array8189[i] = new ModelPart_Sub2(this);
 			((Class_ra_Sub2) this).aClass387_Sub2Array8084[i] = new ModelPart_Sub2(this);
@@ -850,8 +850,8 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		}
 	}
 
-	public Class264 method5092(Class505 class505, Class89[] class89s, boolean bool) {
-		return new Class264_Sub3(this, class505, class89s, bool);
+	public Class264 method5092(GameFont gameFont, Class89[] class89s, boolean bool) {
+		return new Class264_Sub3(this, gameFont, class89s, bool);
 	}
 
 	public void method5169(int i) {
@@ -892,11 +892,11 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 			method5277();
 	}
 
-	public void method5058(int i, Class78 class78) {
+	public void method5058(int i, DisplayMode displayMode) {
 		if (!((Class_ra_Sub2) this).aBoolean8146)
 			throw new RuntimeException("");
 		((Class_ra_Sub2) this).anInt8155 = i;
-		((Class_ra_Sub2) this).aClass78_8149 = class78;
+		((Class_ra_Sub2) this).aDisplayMode_8149 = displayMode;
 		if (((Class_ra_Sub2) this).aBoolean8147) {
 			((Class27) ((Class_ra_Sub2) this).aClass27_8054).aClass47_Sub5_358.method524();
 			((Class27) ((Class_ra_Sub2) this).aClass27_8054).aClass47_Sub5_358.method523();
@@ -938,7 +938,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		float f;
 		float f_154_;
 		if (((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 == null || (((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).anInt6746 < i_148_) || (((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).anInt6747 < i_149_)) {
-			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 = Class30_Sub2_Sub1.method428(this, Class55.aClass55_567, Class77.aClass77_717, i_148_, i_149_, false, is, Class55.aClass55_567);
+			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 = Class30_Sub2_Sub1.method428(this, Class55.aClass55_567, TextEncoder.aTextEncoder_717, i_148_, i_149_, false, is, Class55.aClass55_567);
 			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111.method420(false, false);
 			f = ((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).aFloat9051;
 			f_154_ = ((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).aFloat9049;
@@ -2408,7 +2408,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 				int i_331_ = 0;
 				boolean bool = false;
 				boolean bool_332_ = false;
-				String[] strings = (Class365_Sub1_Sub3_Sub1.method4508(((Class_ra_Sub2) this).aString8162.replace('/', ' '), ' ', 1272064462));
+				String[] strings = (SceneObject.splitText(((Class_ra_Sub2) this).aString8162.replace('/', ' '), ' ', 1272064462));
 				for (int i_333_ = 0; i_333_ < strings.length; i_333_++) {
 					String string = strings[i_333_];
 					try {
@@ -2566,7 +2566,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 	}
 
 	public Interface8_Impl1_Impl2 method5186(int i, int i_350_) {
-		return new Class298_Sub37_Sub18(this, Class55.aClass55_561, Class77.aClass77_719, i, i_350_);
+		return new Class298_Sub37_Sub18(this, Class55.aClass55_561, TextEncoder.aTextEncoder_719, i, i_350_);
 	}
 
 	public final void L() {
@@ -2583,7 +2583,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		float f;
 		float f_358_;
 		if (((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 == null || (((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).anInt6746 < i_352_) || (((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).anInt6747 < i_353_)) {
-			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 = Class30_Sub2_Sub1.method428(this, Class55.aClass55_567, Class77.aClass77_717, i_352_, i_353_, false, is, Class55.aClass55_567);
+			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 = Class30_Sub2_Sub1.method428(this, Class55.aClass55_567, TextEncoder.aTextEncoder_717, i_352_, i_353_, false, is, Class55.aClass55_567);
 			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111.method420(false, false);
 			f = ((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).aFloat9051;
 			f_358_ = ((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).aFloat9049;
@@ -2676,8 +2676,8 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		OpenGL.glEnd();
 	}
 
-	public Class264 method5114(Class505 class505, Class89[] class89s, boolean bool) {
-		return new Class264_Sub3(this, class505, class89s, bool);
+	public Class264 method5114(GameFont gameFont, Class89[] class89s, boolean bool) {
+		return new Class264_Sub3(this, gameFont, class89s, bool);
 	}
 
 	public void ft(int i, int i_376_, int i_377_, int i_378_, int i_379_) {
@@ -3102,8 +3102,8 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		method5259(0, 5890, 768);
 	}
 
-	public Class264 method5113(Class505 class505, Class89[] class89s, boolean bool) {
-		return new Class264_Sub3(this, class505, class89s, bool);
+	public Class264 method5113(GameFont gameFont, Class89[] class89s, boolean bool) {
+		return new Class264_Sub3(this, gameFont, class89s, bool);
 	}
 
 	public Class233 method5083() {
@@ -3142,8 +3142,8 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		return new Class_xa_Sub3(this, i_526_, i_527_, i, i_523_, is, is_524_, i_525_);
 	}
 
-	static int method5274(Class55 class55, Class77 class77) {
-		if (class77 == Class77.aClass77_717) {
+	static int method5274(Class55 class55, TextEncoder textEncoder) {
+		if (textEncoder == TextEncoder.aTextEncoder_717) {
 			switch (class55.anInt566 * -976336893) {
 			case 9:
 				return 6408;
@@ -3159,7 +3159,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 				return 6409;
 			}
 		}
-		if (class77 == Class77.aClass77_718) {
+		if (textEncoder == TextEncoder.aTextEncoder_718) {
 			switch (class55.anInt566 * -976336893) {
 			case 5:
 				return 32852;
@@ -3177,7 +3177,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 				return 32834;
 			}
 		}
-		if (class77 == Class77.aClass77_719) {
+		if (textEncoder == TextEncoder.aTextEncoder_719) {
 			switch (class55.anInt566 * -976336893) {
 			case 2:
 				return 33190;
@@ -3185,7 +3185,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 				throw new IllegalArgumentException();
 			}
 		}
-		if (class77 == Class77.aClass77_714) {
+		if (textEncoder == TextEncoder.aTextEncoder_714) {
 			switch (class55.anInt566 * -976336893) {
 			default:
 				throw new IllegalArgumentException();
@@ -3201,7 +3201,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 				return 34842;
 			}
 		}
-		if (class77 == Class77.aClass77_721) {
+		if (textEncoder == TextEncoder.aTextEncoder_721) {
 			switch (class55.anInt566 * -976336893) {
 			case 7:
 				return 34838;
@@ -3625,23 +3625,23 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		((Class_ra_Sub2) this).aClass42_8055.method483();
 	}
 
-	public void method5155(int i, Class78 class78) {
+	public void method5155(int i, DisplayMode displayMode) {
 		((Class_ra_Sub2) this).anInt8155 = i;
-		((Class_ra_Sub2) this).aClass78_8149 = class78;
+		((Class_ra_Sub2) this).aDisplayMode_8149 = displayMode;
 		((Class_ra_Sub2) this).aBoolean8146 = true;
 	}
 
-	public void method5156(int i, Class78 class78) {
+	public void method5156(int i, DisplayMode displayMode) {
 		((Class_ra_Sub2) this).anInt8155 = i;
-		((Class_ra_Sub2) this).aClass78_8149 = class78;
+		((Class_ra_Sub2) this).aDisplayMode_8149 = displayMode;
 		((Class_ra_Sub2) this).aBoolean8146 = true;
 	}
 
-	public void method5089(int i, Class78 class78) {
+	public void method5089(int i, DisplayMode displayMode) {
 		if (!((Class_ra_Sub2) this).aBoolean8146)
 			throw new RuntimeException("");
 		((Class_ra_Sub2) this).anInt8155 = i;
-		((Class_ra_Sub2) this).aClass78_8149 = class78;
+		((Class_ra_Sub2) this).aDisplayMode_8149 = displayMode;
 		if (((Class_ra_Sub2) this).aBoolean8147) {
 			((Class27) ((Class_ra_Sub2) this).aClass27_8054).aClass47_Sub5_358.method524();
 			((Class27) ((Class_ra_Sub2) this).aClass27_8054).aClass47_Sub5_358.method523();
@@ -3749,7 +3749,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 	}
 
 	public Interface8_Impl1_Impl2 method5165(int i, int i_671_) {
-		return new Class298_Sub37_Sub18(this, Class55.aClass55_561, Class77.aClass77_719, i, i_671_);
+		return new Class298_Sub37_Sub18(this, Class55.aClass55_561, TextEncoder.aTextEncoder_719, i, i_671_);
 	}
 
 	public boolean method5180() {
@@ -3836,9 +3836,9 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		OpenGL.glEnd();
 	}
 
-	public void method5057(int i, Class78 class78) {
+	public void method5057(int i, DisplayMode displayMode) {
 		((Class_ra_Sub2) this).anInt8155 = i;
-		((Class_ra_Sub2) this).aClass78_8149 = class78;
+		((Class_ra_Sub2) this).aDisplayMode_8149 = displayMode;
 		((Class_ra_Sub2) this).aBoolean8146 = true;
 	}
 
@@ -4119,7 +4119,7 @@ public class Class_ra_Sub2 extends GraphicsToolkit {
 		float f;
 		float f_734_;
 		if (((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 == null || (((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).anInt6746 < i_728_) || (((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).anInt6747 < i_729_)) {
-			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 = Class30_Sub2_Sub1.method428(this, Class55.aClass55_567, Class77.aClass77_717, i_728_, i_729_, false, is, Class55.aClass55_567);
+			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111 = Class30_Sub2_Sub1.method428(this, Class55.aClass55_567, TextEncoder.aTextEncoder_717, i_728_, i_729_, false, is, Class55.aClass55_567);
 			((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111.method420(false, false);
 			f = ((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).aFloat9051;
 			f_734_ = ((Class30_Sub2_Sub1) ((Class_ra_Sub2) this).aClass30_Sub2_Sub1_8111).aFloat9049;

@@ -37,7 +37,7 @@ public class Class66_Sub1_Sub1 extends Class66_Sub1 {
 			}
 			for (int i_2_ = 0; i_2_ < 6; i_2_++)
 				anIntArrayArray9097[i_2_] = interface_ma.method171(anIntArray9096[i_2_], 1.0F, i, i, false, -244439227);
-			((Class66_Sub1_Sub1) this).aClass30_Sub1_9089 = new Class30_Sub1((((Class66_Sub1_Sub1) this).aClass_ra_Sub2_9092), Class55.aClass55_560, Class77.aClass77_717, i, bool, anIntArrayArray9097);
+			((Class66_Sub1_Sub1) this).aClass30_Sub1_9089 = new Class30_Sub1((((Class66_Sub1_Sub1) this).aClass_ra_Sub2_9092), Class55.aClass55_560, TextEncoder.aTextEncoder_717, i, bool, anIntArrayArray9097);
 		}
 		return ((Class66_Sub1_Sub1) this).aClass30_Sub1_9089;
 	}
@@ -75,7 +75,7 @@ public class Class66_Sub1_Sub1 extends Class66_Sub1 {
 			}
 			for (int i_10_ = 0; i_10_ < 6; i_10_++)
 				anIntArrayArray9097[i_10_] = interface_ma.method171(anIntArray9096[i_10_], 1.0F, i, i, false, 1735234411);
-			((Class66_Sub1_Sub1) this).aClass30_Sub1_9089 = new Class30_Sub1((((Class66_Sub1_Sub1) this).aClass_ra_Sub2_9092), Class55.aClass55_560, Class77.aClass77_717, i, bool, anIntArrayArray9097);
+			((Class66_Sub1_Sub1) this).aClass30_Sub1_9089 = new Class30_Sub1((((Class66_Sub1_Sub1) this).aClass_ra_Sub2_9092), Class55.aClass55_560, TextEncoder.aTextEncoder_717, i, bool, anIntArrayArray9097);
 		}
 		return ((Class66_Sub1_Sub1) this).aClass30_Sub1_9089;
 	}

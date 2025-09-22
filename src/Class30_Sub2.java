@@ -7,8 +7,8 @@ public class Class30_Sub2 extends Class30 {
 	int anInt6746;
 	int anInt6747;
 
-	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, Class77 class77, int i_0_, int i_1_, boolean bool, byte[] is, Class55 class55_2_, boolean bool_3_) {
-		super(class_ra_sub2, i, class55, class77, i_0_ * i_1_, bool);
+	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, TextEncoder textEncoder, int i_0_, int i_1_, boolean bool, byte[] is, Class55 class55_2_, boolean bool_3_) {
+		super(class_ra_sub2, i, class55, textEncoder, i_0_ * i_1_, bool);
 		((Class30_Sub2) this).anInt6746 = i_0_;
 		((Class30_Sub2) this).anInt6747 = i_1_;
 		if (bool_3_) {
@@ -24,10 +24,10 @@ public class Class30_Sub2 extends Class30 {
 		((Class30_Sub2) this).aClass_ra_Sub2_381.method5256(this);
 		OpenGL.glPixelStorei(3317, 1);
 		if (bool && ((Class30_Sub2) this).anInt372 != 34037) {
-			method412(i, Class_ra_Sub2.method5274((((Class30_Sub2) this).aClass55_377), (((Class30_Sub2) this).aClass77_378)), i_0_, i_1_, class55_2_, is);
+			method412(i, Class_ra_Sub2.method5274((((Class30_Sub2) this).aClass55_377), (((Class30_Sub2) this).aTextEncoder_378)), i_0_, i_1_, class55_2_, is);
 			method414(true);
 		} else {
-			OpenGL.glTexImage2Dub(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aClass77_378), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 0, Class_ra_Sub2.method5228(class55_2_), 5121, is, 0);
+			OpenGL.glTexImage2Dub(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aTextEncoder_378), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 0, Class_ra_Sub2.method5228(class55_2_), 5121, is, 0);
 			method414(false);
 		}
 		OpenGL.glPixelStorei(3317, 4);
@@ -35,7 +35,7 @@ public class Class30_Sub2 extends Class30 {
 	}
 
 	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, int i_9_, int i_10_, boolean bool, int[] is, int i_11_, int i_12_, boolean bool_13_) {
-		super(class_ra_sub2, i, Class55.aClass55_557, Class77.aClass77_717, i_9_ * i_10_, bool);
+		super(class_ra_sub2, i, Class55.aClass55_557, TextEncoder.aTextEncoder_717, i_9_ * i_10_, bool);
 		((Class30_Sub2) this).anInt6746 = i_9_;
 		((Class30_Sub2) this).anInt6747 = i_10_;
 		if (bool_13_) {
@@ -51,11 +51,11 @@ public class Class30_Sub2 extends Class30 {
 		((Class30_Sub2) this).aClass_ra_Sub2_381.method5256(this);
 		if (((Class30_Sub2) this).anInt372 == 34037 || !bool || i_11_ != 0 || i_12_ != 0) {
 			OpenGL.glPixelStorei(3314, i_11_);
-			OpenGL.glTexImage2Di(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aClass77_378), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 0, 32993, (((Class_ra_Sub2) ((Class30_Sub2) this).aClass_ra_Sub2_381).anInt8186), is, i_12_ * 4);
+			OpenGL.glTexImage2Di(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aTextEncoder_378), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 0, 32993, (((Class_ra_Sub2) ((Class30_Sub2) this).aClass_ra_Sub2_381).anInt8186), is, i_12_ * 4);
 			OpenGL.glPixelStorei(3314, 0);
 			method414(false);
 		} else {
-			method411(((Class30_Sub2) this).anInt372, Class_ra_Sub2.method5274((((Class30_Sub2) this).aClass55_377), (((Class30_Sub2) this).aClass77_378)), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 32993, ((Class_ra_Sub2) ((Class30_Sub2) this).aClass_ra_Sub2_381).anInt8186, is);
+			method411(((Class30_Sub2) this).anInt372, Class_ra_Sub2.method5274((((Class30_Sub2) this).aClass55_377), (((Class30_Sub2) this).aTextEncoder_378)), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 32993, ((Class_ra_Sub2) ((Class30_Sub2) this).aClass_ra_Sub2_381).anInt8186, is);
 			method414(true);
 		}
 		method410(true);
@@ -71,16 +71,16 @@ public class Class30_Sub2 extends Class30 {
 		}
 	}
 
-	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, Class77 class77, int i_25_, int i_26_, boolean bool, float[] fs, Class55 class55_27_) {
-		super(class_ra_sub2, i, class55, class77, i_25_ * i_26_, bool);
+	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, TextEncoder textEncoder, int i_25_, int i_26_, boolean bool, float[] fs, Class55 class55_27_) {
+		super(class_ra_sub2, i, class55, textEncoder, i_25_ * i_26_, bool);
 		((Class30_Sub2) this).anInt6746 = i_25_;
 		((Class30_Sub2) this).anInt6747 = i_26_;
 		((Class30_Sub2) this).aClass_ra_Sub2_381.method5256(this);
 		if (bool && ((Class30_Sub2) this).anInt372 != 34037) {
-			method415(i, Class_ra_Sub2.method5274((((Class30_Sub2) this).aClass55_377), (((Class30_Sub2) this).aClass77_378)), i_25_, i_26_, class55_27_, fs);
+			method415(i, Class_ra_Sub2.method5274((((Class30_Sub2) this).aClass55_377), (((Class30_Sub2) this).aTextEncoder_378)), i_25_, i_26_, class55_27_, fs);
 			method414(true);
 		} else {
-			OpenGL.glTexImage2Df(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aClass77_378), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 0, Class_ra_Sub2.method5228(class55_27_), 5126, fs, 0);
+			OpenGL.glTexImage2Df(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aTextEncoder_378), ((Class30_Sub2) this).anInt6746, ((Class30_Sub2) this).anInt6747, 0, Class_ra_Sub2.method5228(class55_27_), 5126, fs, 0);
 			method414(false);
 		}
 		method410(true);
@@ -142,14 +142,14 @@ public class Class30_Sub2 extends Class30 {
 	}
 
 	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, int i_52_, int i_53_, int i_54_, int i_55_) {
-		super(class_ra_sub2, i, Class55.aClass55_560, Class77.aClass77_717, i_54_ * i_55_, false);
+		super(class_ra_sub2, i, Class55.aClass55_560, TextEncoder.aTextEncoder_717, i_54_ * i_55_, false);
 		((Class30_Sub2) this).anInt6746 = i_54_;
 		((Class30_Sub2) this).anInt6747 = i_55_;
 		((Class30_Sub2) this).aClass_ra_Sub2_381.method5256(this);
 		Class52 class52 = ((Class30_Sub2) this).aClass_ra_Sub2_381.method4992((short) -8855);
 		if (class52 != null) {
 			int i_56_ = class52.method552() - (i_53_ + i_55_);
-			int i_57_ = Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aClass77_378);
+			int i_57_ = Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aTextEncoder_378);
 			OpenGL.glCopyTexImage2D(((Class30_Sub2) this).anInt372, 0, i_57_, i_52_, i_56_, i_54_, i_55_, 0);
 		}
 		method410(true);
@@ -159,12 +159,12 @@ public class Class30_Sub2 extends Class30 {
 		return new Class72(this, i);
 	}
 
-	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, Class77 class77, int i_58_, int i_59_) {
-		super(class_ra_sub2, i, class55, class77, i_58_ * i_59_, false);
+	Class30_Sub2(Class_ra_Sub2 class_ra_sub2, int i, Class55 class55, TextEncoder textEncoder, int i_58_, int i_59_) {
+		super(class_ra_sub2, i, class55, textEncoder, i_58_ * i_59_, false);
 		((Class30_Sub2) this).anInt6746 = i_58_;
 		((Class30_Sub2) this).anInt6747 = i_59_;
 		((Class30_Sub2) this).aClass_ra_Sub2_381.method5256(this);
-		OpenGL.glTexImage2Dub(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aClass77_378), i_58_, i_59_, 0, Class_ra_Sub2.method5228(((Class30_Sub2) this).aClass55_377), 5121, null, 0);
+		OpenGL.glTexImage2Dub(((Class30_Sub2) this).anInt372, 0, Class_ra_Sub2.method5274(((Class30_Sub2) this).aClass55_377, ((Class30_Sub2) this).aTextEncoder_378), i_58_, i_59_, 0, Class_ra_Sub2.method5228(((Class30_Sub2) this).aClass55_377), 5121, null, 0);
 		method410(true);
 	}
 

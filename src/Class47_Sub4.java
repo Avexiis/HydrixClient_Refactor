@@ -47,7 +47,7 @@ public class Class47_Sub4 extends Class47 {
 		super(class_ra_sub2);
 		((Class47_Sub4) this).aClass45_6773 = class45;
 		method522();
-		((Class47_Sub4) this).aClass30_Sub3_6769 = new Class30_Sub3(((Class47_Sub4) this).aClass_ra_Sub2_491, Class55.aClass55_567, Class77.aClass77_717, 2, new byte[] { 0, -1 }, Class55.aClass55_567);
+		((Class47_Sub4) this).aClass30_Sub3_6769 = new Class30_Sub3(((Class47_Sub4) this).aClass_ra_Sub2_491, Class55.aClass55_567, TextEncoder.aTextEncoder_717, 2, new byte[] { 0, -1 }, Class55.aClass55_567);
 		((Class47_Sub4) this).aClass30_Sub3_6769.method430(false);
 	}
 

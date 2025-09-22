@@ -22,27 +22,27 @@ public class Class69 {
 
 	public static void method788(boolean bool, int i) {
 		try {
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7564, 1, -88613435);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub17_7565, 1, -1737662716);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub2_7547, 0, -1276472095);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.fogPreference, 0, 1091201372);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.groundBlendingPreference, 0, 768834217);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsAutoSetup_7569, 0, -439702695);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.flickeringPreference, 0, 574040425);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.characterShadowPreference, 0, 225296186);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.sceneryShadowPreference, 0, -333444087);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.texturePreference, 0, 588304620);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.lightingPreference, 0, -1305346186);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.waterDetailPreference, 0, -1914273282);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.antialiasPreference, 0, -1475894438);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aAntialiasPreference_7550, 0, -502768695);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.particlePreference, 0, 474163397);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aMapSizePreference_7558, Class115.aClass115_1383.anInt1387 * -160182505, -782084930);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.bloomPreference, 0, 302731106);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aClass422_Sub19_7567, 0, 1005723133);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7564, 1, -88613435);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub17_7565, 1, -1737662716);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aRemoveRoofPreference_7547, 0, -1276472095);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.fogPreference, 0, 1091201372);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.groundBlendingPreference, 0, 768834217);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsSetup_7569, 0, -439702695);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.flickeringPreference, 0, 574040425);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.characterShadowPreference, 0, 225296186);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.sceneryShadowPreference, 0, -333444087);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.texturePreference, 0, 588304620);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.lightingPreference, 0, -1305346186);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.waterDetailPreference, 0, -1914273282);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.antialiasPreference, 0, -1475894438);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aAntialiasPreference_7550, 0, -502768695);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.particlePreference, 0, 474163397);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aMapSizePreference_7558, Class115.aClass115_1383.anInt1387 * -160182505, -782084930);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.bloomPreference, 0, 302731106);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aClass422_Sub19_7567, 0, 1005723133);
 			Class490.method6170(1113089752);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aScreenSizePreference_7566, 2, 55764026);
-			GraphicsAutoSetup.clientPreferences.method3540(GraphicsAutoSetup.clientPreferences.aGraphicsPresetPreference_7576, 1, 777762630);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aScreenSizePreference_7566, 2, 55764026);
+			GraphicsSetup.clientPreferences.method3540(GraphicsSetup.clientPreferences.aGraphicsPresetPreference_7576, 1, 777762630);
 			Class359.method4294(-982122818);
 			GameClient.map.method2640((byte) 2).forceUpdate(-338889856);
 			GameClient.aBoolean8676 = true;
@@ -53,7 +53,7 @@ public class Class69 {
 
 	public static Class297 method789(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		try {
-			if (GraphicsAutoSetup.clientPreferences.aVolumePreference_7553.method5726(-2146999869) != 0 && 0 != i_2_ && Class300.anInt3213 * -991384187 < 50 && i != -1) {
+			if (GraphicsSetup.clientPreferences.aVolumePreference_7553.method5726(-2146999869) != 0 && 0 != i_2_ && Class300.anInt3213 * -991384187 < 50 && i != -1) {
 				Class297 class297 = new Class297((byte) 1, i, i_2_, i_3_, i_4_, i_5_, i_6_, null);
 				Class300.aClass297Array3214[(Class300.anInt3213 += -598588595) * -991384187 - 1] = class297;
 				return class297;
@@ -124,7 +124,7 @@ public class Class69 {
 				}
 			}
 			if (!bool)
-				Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_UNABLE_TO_FIND_PREFIX.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(string).toString(), (byte) -70);
+				Class264.method2492(4, new StringBuilder().append(LocalizedString.MESSAGE_UNABLE_TO_FIND_PREFIX.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(string).toString(), (byte) -70);
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("cu.ki(").append(')').toString());
 		}
@@ -178,9 +178,9 @@ public class Class69 {
 					}
 					if (null == Class79.aClass298_Sub19_Sub1_748) {
 						if (1808968524435561429L * Class515.aLong6233 > 0L)
-							Class79.aClass298_Sub19_Sub1_737.method2979(Class417.aClass298_Sub13_5337, Class8.aBoolean114, true, 1808968524435561429L * Class515.aLong6233);
+							Class79.aClass298_Sub19_Sub1_737.method2979(Class417.aClass298_Sub13_5337, DevConsoleState.aBoolean114, true, 1808968524435561429L * Class515.aLong6233);
 						else
-							Class79.aClass298_Sub19_Sub1_737.method2958(Class417.aClass298_Sub13_5337, Class8.aBoolean114, (byte) 22);
+							Class79.aClass298_Sub19_Sub1_737.method2958(Class417.aClass298_Sub13_5337, DevConsoleState.aBoolean114, (byte) 22);
 						if (null != Class313.aClass97_3300)
 							Class313.aClass97_3300.method1037(983998013);
 					}

@@ -215,7 +215,7 @@ public class EnumType {
 			if (GameClient.aString8927 != null)
 				string_13_ = new StringBuilder().append("/p=").append(GameClient.aString8927).toString();
 			String string_14_ = new StringBuilder().append(GameClient.aGameContext_8944.aString5317).append(".com").toString();
-			return new StringBuilder().append("http://").append(string).append(".").append(string_14_).append("/l=").append(Class321.ACTIVE_LANGUAGE).append("/a=").append(GameClient.anInt8665 * -1154804873).append(string_13_).append("/").toString();
+			return new StringBuilder().append("http://").append(string).append(".").append(string_14_).append("/l=").append(DynamicLight.ACTIVE_LANGUAGE).append("/a=").append(GameClient.anInt8665 * -1154804873).append(string_13_).append("/").toString();
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("tx.nn(").append(')').toString());
 		}

@@ -98,10 +98,10 @@ public class Class441 {
 				string = new StringBuilder().append(string.substring(0, i_3_)).append(Symbol.COMMA).append(string.substring(i_3_)).toString();
 			}
 			if (string.length() > 9) {
-				return new StringBuilder().append(" ").append(Class285.method2709(65408, -2039864554)).append(string.substring(0, string.length() - 8)).append(LocalizedString.LABEL_SHORT_M.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(" (").append(string).append(")").append(Symbol.CLOSE_COL_TAG).toString();
+				return new StringBuilder().append(" ").append(Class285.method2709(65408, -2039864554)).append(string.substring(0, string.length() - 8)).append(LocalizedString.LABEL_SHORT_M.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(" (").append(string).append(")").append(Symbol.CLOSE_COL_TAG).toString();
 			}
 			if (string.length() > 6) {
-				return new StringBuilder().append(" ").append(Class285.method2709(16777215, -1284566910)).append(string.substring(0, string.length() - 4)).append(LocalizedString.LABEL_SHORT_K.getText(Class321.ACTIVE_LANGUAGE, -875414210)).append(" (").append(string).append(")").append(Symbol.CLOSE_COL_TAG).toString();
+				return new StringBuilder().append(" ").append(Class285.method2709(16777215, -1284566910)).append(string.substring(0, string.length() - 4)).append(LocalizedString.LABEL_SHORT_K.getText(DynamicLight.ACTIVE_LANGUAGE, -875414210)).append(" (").append(string).append(")").append(Symbol.CLOSE_COL_TAG).toString();
 			}
 			return new StringBuilder().append(" ").append(Class285.method2709(16776960, -1902529284)).append(string).append(Symbol.CLOSE_COL_TAG).toString();
 		} catch (RuntimeException runtimeexception) {

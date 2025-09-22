@@ -77,8 +77,8 @@ public class CharacterShadowPreference extends IntegerPreferenceField {
 
 	public static void method5694(String string, int i) {
 		try {
-			Class8.aString101 = string;
-			Class8.anInt99 = Class8.aString101.length() * 1914783065;
+			DevConsoleState.aString101 = string;
+			DevConsoleState.anInt99 = DevConsoleState.aString101.length() * 1914783065;
 		} catch (RuntimeException runtimeexception) {
 			throw ErrorContext.info(runtimeexception, new StringBuilder().append("ady.r(").append(')').toString());
 		}
