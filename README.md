@@ -41,7 +41,7 @@ Newest Updates:
 - HWID tracking has been added alongside MAC tracking in what was Class360, now named LoginPacket.
 - HWID is computed via HW serials and a static salt.
 - It is recommended to change the salt before use, in the HardwareFingerprint class.
-- You will also need to add a decoder to your server to use the HWID payload.
+- You will also need to add a decoder to your server to use the HWID payload if not using the server release paired with this client on rune-server
 - At this time there is not a way to disable the HWID as being part of the payload without disabling the code directly. This may be addressed one day, but I use it so I may hold off.
 - Client now supports favicon/taskbar icon, loaded from an array of images in /src/img/
 - Toast notifications for frame buttons/switches
